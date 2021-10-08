@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:1076ef03d42a30f339cfd1e8a629b2aa:3bbfdb6df0d05ffcbcb1d74629d70c74:6025a0a874372462b6949f56504e893e$ -->
+<TextureAtlas imagePath="luci_sarv_miss.png" width="1129" height="1543">
+    <SubTexture name="LuciferSarvDown MISS0000" x="1" y="1" width="567" height="678"/>
+    <SubTexture name="LuciferSarvLeft MISS0000" x="1" y="722" width="600" height="736"/>
+    <SubTexture name="LuciferSarvRight MISS0000" x="570" y="1" width="521" height="719"/>
+    <SubTexture name="LuciferSarvUp MISS0000" x="603" y="722" width="525" height="820"/>
+</TextureAtlas>

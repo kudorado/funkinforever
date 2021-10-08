@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:c91cae23e7a77b394eb48643e419da62:5d026ff4faf33488f8d0783cfd6cd300:9a93f2da844d83a3bb381209871da3f6$ -->
+<TextureAtlas imagePath="carol_miss.png" width="321" height="2044">
+    <SubTexture name="BF NOTE DOWN MISS0000" x="1" y="1" width="319" height="501" frameX="-1" frameY="-1" frameWidth="321" frameHeight="503"/>
+    <SubTexture name="BF NOTE LEFT MISS0000" x="1" y="504" width="306" height="498" frameX="-1" frameY="-1" frameWidth="308" frameHeight="500"/>
+    <SubTexture name="BF NOTE RIGHT MISS0000" x="1" y="1004" width="306" height="512" frameX="-1" frameY="-1" frameWidth="308" frameHeight="514"/>
+    <SubTexture name="BF NOTE UP MISS0000" x="1" y="1518" width="296" height="525" frameX="-1" frameY="-1" frameWidth="298" frameHeight="527"/>
+</TextureAtlas>

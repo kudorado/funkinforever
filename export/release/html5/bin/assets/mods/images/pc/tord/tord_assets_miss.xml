@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:ae44ecfbd7e22cf8aac240ddefb4bfc9:12e7366594dcbc2a6fec039b4d6848b8:e3a42d1e277e90dfca65e9b90d4d30b5$ -->
+<TextureAtlas imagePath="tord_assets_miss.png" width="1474" height="698">
+    <SubTexture name="Tord down MISS0000" x="1" y="1" width="320" height="654" frameX="-1" frameY="-1" frameWidth="321" frameHeight="655"/>
+    <SubTexture name="Tord left MISS0000" x="323" y="1" width="378" height="664" frameX="-1" frameY="0" frameWidth="379" frameHeight="664"/>
+    <SubTexture name="Tord right MISS0000" x="703" y="1" width="395" height="669" frameX="-1" frameY="-1" frameWidth="397" frameHeight="670"/>
+    <SubTexture name="Tord up MISS0000" x="1100" y="1" width="373" height="696"/>
+</TextureAtlas>

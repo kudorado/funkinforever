@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:6d50206300a2f0fa894edc35a9d0310d:0a0db459057bbbef84e21ef7a15a9487:e8b74308da9e7ee352648e34a714a921$ -->
+<TextureAtlas imagePath="lazycat.png" width="512" height="512">
+    <SubTexture name="down_miss0000" x="229" y="1" width="245" height="132" frameX="-75" frameY="-32" frameWidth="320" frameHeight="164"/>
+    <SubTexture name="idle_miss0000" x="1" y="277" width="303" height="143" frameX="-17" frameY="-21" frameWidth="320" frameHeight="164"/>
+    <SubTexture name="left_miss0000" x="1" y="1" width="226" height="123" frameX="-94" frameY="-41" frameWidth="320" frameHeight="164"/>
+    <SubTexture name="right_miss0000" x="1" y="1" width="226" height="123" frameX="-94" frameY="-41" frameWidth="320" frameHeight="164"/>
+    <SubTexture name="up_miss0000" x="1" y="135" width="270" height="140" frameX="-50" frameY="-24" frameWidth="320" frameHeight="164"/>
+</TextureAtlas>

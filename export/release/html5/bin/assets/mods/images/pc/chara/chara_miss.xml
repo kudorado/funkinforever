@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:101c86bab54bfdeb5631d77fc76d97cd:f279f80295d8c7f6f4a15d45586171f3:7cf403374e271043dbf1b2c6c7fa07c2$ -->
+<TextureAtlas imagePath="chara_miss.png" width="930" height="930">
+    <SubTexture name="Chara down MISS0000" x="1" y="1" width="423" height="456"/>
+    <SubTexture name="Chara left MISS0000" x="1" y="459" width="423" height="457"/>
+    <SubTexture name="Chara right MISS0000" x="426" y="1" width="423" height="456"/>
+    <SubTexture name="Chara up MISS0000" x="426" y="459" width="423" height="470"/>
+</TextureAtlas>

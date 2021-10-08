@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:c7043f1ffcadb5a1fab346e74188f07b:6fb594a06f1a0a4ba75eff880e2d163f:c27d466ba2701a1f9a974a3fe7b493e6$ -->
+<TextureAtlas imagePath="menucharacter.png" width="1294" height="1294">
+    <SubTexture name="Matt idle0000" x="1" y="1" width="371" height="419"/>
+    <SubTexture name="Matt idle0001" x="374" y="1" width="368" height="421"/>
+    <SubTexture name="Matt idle0002" x="744" y="1" width="366" height="423"/>
+    <SubTexture name="Matt idle0003" x="1" y="426" width="363" height="425"/>
+    <SubTexture name="Matt idle0004" x="366" y="426" width="360" height="427"/>
+    <SubTexture name="Matt idle0005" x="728" y="426" width="358" height="429"/>
+    <SubTexture name="Matt idle0006" x="1" y="857" width="355" height="432"/>
+    <SubTexture name="Matt idle0007" x="358" y="857" width="351" height="434"/>
+    <SubTexture name="Matt idle0013" x="711" y="857" width="349" height="436"/>
+</TextureAtlas>

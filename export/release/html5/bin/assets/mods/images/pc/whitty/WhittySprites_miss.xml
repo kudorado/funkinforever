@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:aaa3f7c8e028ae2fb98a422c4400090e:96c01963df5eac43a41ade881ee312c0:216c632fe1b8e8939ba613c9122552c6$ -->
+<TextureAtlas imagePath="WhittySprites_miss.png" width="1024" height="2048">
+    <SubTexture name="Sing Down MISS0000" x="1" y="1" width="460" height="705"/>
+    <SubTexture name="Sing Left MISS0000" x="463" y="1" width="369" height="743" frameX="0" frameY="0" frameWidth="370" frameHeight="743"/>
+    <SubTexture name="Sing Right MISS0000" x="1" y="746" width="449" height="789"/>
+    <SubTexture name="Sing Up MISS0000" x="452" y="746" width="400" height="816" frameX="0" frameY="0" frameWidth="401" frameHeight="816"/>
+</TextureAtlas>

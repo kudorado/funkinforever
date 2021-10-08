@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:9f79538431ddda461943e274cb76ae48:4766921642116f3a1cd1e2327487d83f:a392df865858b9af6edd1cc0c4fb9ef6$ -->
+<TextureAtlas imagePath="AGOTI_miss.png" width="1024" height="1024">
+    <SubTexture name="Agoti_Down MISS10000" x="1" y="1" width="299" height="323" frameX="0" frameY="-1" frameWidth="299" frameHeight="324"/>
+    <SubTexture name="Agoti_Left MISS10000" x="1" y="404" width="405" height="436" frameX="0" frameY="-1" frameWidth="405" frameHeight="437"/>
+    <SubTexture name="Agoti_Right MISS10000" x="302" y="1" width="395" height="401" frameX="0" frameY="-1" frameWidth="395" frameHeight="402"/>
+    <SubTexture name="Agoti_Up MISS10000" x="408" y="404" width="252" height="464"/>
+</TextureAtlas>
