@@ -234,6 +234,9 @@ class SongPlayerManager
 			case 'nonsense' | 'nonsensical':
 				songPlayer = new NonsenseGod();
 
+			case 'godrays':
+				songPlayer = new Solazar();
+
 
 		}
 
