@@ -94,7 +94,7 @@ class EsManifest extends SongPlayer
 
 		playState.defaultCamZoom = 0.8;
 
-		var hallowTex = Paths.getSparrowAtlas('sky/bg', 'mods');
+		var hallowTex = Paths.getSparrowAtlas('bg/sky/bg', 'mods');
 		var bg = new FlxSprite(-200, -200);
 		bg.frames = hallowTex;
 		bg.animation.addByPrefix('idle', 'Bg_manifest0');

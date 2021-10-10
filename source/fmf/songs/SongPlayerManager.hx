@@ -72,14 +72,14 @@ class SongPlayerManager
 			case 'eeeaaaooo':
 				songPlayer = new Eeeeaaaooo("tf");
 
-			case 'target-practice':
-				songPlayer = new TargetPractice("target-practice");
+			case 'practice':
+				songPlayer = new Practice("practice");
 
-			case 'foolhardy':
-				songPlayer = new Foolhardy("foolhardy");
+			case 'fool':
+				songPlayer = new Fool("fool");
 
-			case 'manifest':
-				songPlayer = new Manifest('sky');
+			case 'trap':
+				songPlayer = new Trap('sky');
 
 			case 'incident':
 				songPlayer = new Incident();

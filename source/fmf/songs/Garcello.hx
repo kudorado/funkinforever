@@ -20,13 +20,13 @@ class Garcello extends SongPlayer
 	{
 		playState.defaultCamZoom = 0.85;
 		
-		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('garcello/garStagebg', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/garcello/garStagebg', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
 		playState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('garcello/garStage', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/garcello/garStage', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;

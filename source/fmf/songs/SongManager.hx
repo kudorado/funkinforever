@@ -69,7 +69,7 @@ class SongManager
 				folder: 'week_whitty',
 				character: 'whitty',
 				songTitle: 'V.S Whitty',
-				songList: ['Lo-fight', 'Overhead', 'Ballistic']
+				songList: ['Lo-fight', 'Overhead', 'Ballistic', 'Remorse']
 			}
 		),
 
@@ -89,7 +89,7 @@ class SongManager
 				folder: 'week_tricky',
 				character: 'tricky',
 				songTitle: 'V.S Clown',
-				songList: ['Improbable-outset', 'Madness', 'Hellclown', 'Expurgation', 'Reality-bender', 'Accelerant']
+				songList: ['Improbable-outset', 'Madness', 'Hellclown', 'Expurgation', 'Reality-bender']
 			}
 		),
 		
@@ -99,7 +99,7 @@ class SongManager
 				folder: 'week_trueform',
 				character: 'trueform',
 				songTitle: 'T.R.U.E.F.O.R.M',
-				songList: ['Eeeaaaooo', 'Taget-practice', 'Foolhardy', 'Manifest', 'Incident', 'Run']
+				songList: ['Eeeaaaooo', 'Practice', 'Fool', 'Trap', 'Incident', 'Run']
 			}
 		),
 

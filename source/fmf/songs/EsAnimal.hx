@@ -58,12 +58,12 @@ class EsAnimal extends SongPlayer
 		playState.defaultCamZoom = 0.8;
 
 		
-		var bg:FlxSprite = new FlxSprite(-600, -600).loadGraphic(Paths.image('annie/evilBG', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-600, -600).loadGraphic(Paths.image('bg/annie/evilBG', 'mods'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = false;
 
-		var stageFront:FlxSprite = new FlxSprite(-650, 700).loadGraphic(Paths.image('annie/evilSnow', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(-650, 700).loadGraphic(Paths.image('bg/annie/evilSnow', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
