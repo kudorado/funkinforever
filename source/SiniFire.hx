@@ -11,11 +11,11 @@ class SiniFire extends FlxSprite
 	{
 		super(xPos, yPos);
 		
-		var toUseString:String = 'tabi/fire/FireStage';
+		var toUseString:String = 'bg/tabi/fire/FireStage';
 
 		if (glow)
 		{
-			toUseString = 'tabi/fire/fireglow';
+			toUseString = 'bg/stabi/fire/fireglow';
 		}
 		
 		frames = Paths.getSparrowAtlas(toUseString, 'mods');

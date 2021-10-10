@@ -21,14 +21,14 @@ class TrickyMask extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.85;
-		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('clown/red', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/clown/red', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
 		playState.add(bg);
 
 		var fg:FlxSprite = new FlxSprite();
-		fg.frames =  Paths.getSparrowAtlas('clown/tricky_floor', 'mods');
+		fg.frames =  Paths.getSparrowAtlas('bg/clown/tricky_floor', 'mods');
 		fg.animation.addByPrefix('idle', 'Symbol 1');
 		fg.antialiasing = true;
 
@@ -114,15 +114,4 @@ class TrickyMask extends SongPlayer
 		icon.animation.play("dad");
 	}
 
-	public override function setDadMenuCharacter(dad:MenuCharacter)
-	{
-		super.setDadMenuCharacter(dad);
-
-		var frames = Paths.getSparrowAtlas('whitty/whitty', 'mods');
-		dad.frames = frames;
-
-		dad.animation.addByPrefix('dad', "Whitty idle dance BLACK LINE", 24);
-		dad.animation.play('dad');
-		setMenuCharacter(dad, new CharacterSetting(-200, 25, 1));
-	}
 }

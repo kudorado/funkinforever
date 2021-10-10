@@ -28,7 +28,7 @@ class Agoti extends SongPlayer
 
 		var bg:FlxSprite = new FlxSprite();
 
-		var tex = Paths.getSparrowAtlas('agoti/The_void', 'mods');
+		var tex = Paths.getSparrowAtlas('bg/agoti/The_void', 'mods');
 
 		bg.frames = tex;
 		bg.animation.addByPrefix('init', 'VoidShift', 24, true);
@@ -49,7 +49,7 @@ class Agoti extends SongPlayer
 
 		playState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('agoti/Void_Front', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/agoti/Void_Front', 'mods'));
 
 		stageFront.x -= 250;
 		stageFront.y -= 200;
@@ -96,7 +96,7 @@ class Agoti extends SongPlayer
 
 	override function getGFTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('agoti/GF_rock', 'mods');
+		var tex = Paths.getSparrowAtlas('gf_skins/agoti/GF_rock', 'mods');
 		gf.frames = tex;
 
 	}
@@ -167,17 +167,4 @@ class Agoti extends SongPlayer
 		icon.animation.play("dad");
 	}
 
-	public override function setDadMenuCharacter(dad:MenuCharacter)
-	{
-		super.setDadMenuCharacter(dad);
-
-		var frames = Paths.getSparrowAtlas('whitty/whitty', 'mods');
-		dad.frames = frames;
-
-		dad.animation.addByPrefix('dad', "Whitty idle dance BLACK LINE", 24);
-		dad.animation.play('dad');
-		setMenuCharacter(dad, new CharacterSetting(-200, 25, 1));
-
-		
-	}
 }

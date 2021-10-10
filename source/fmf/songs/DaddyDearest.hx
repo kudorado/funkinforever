@@ -111,15 +111,4 @@ class DaddyDearest extends SongPlayer
 		icon.animation.play("dad");
 	}
 
-	public override function setDadMenuCharacter(dad:MenuCharacter)
-	{
-		super.setDadMenuCharacter(dad);
-
-		var frames = Paths.getSparrowAtlas('menucharacter/dad');
-		dad.frames = frames;
-
-		dad.animation.addByPrefix('dad', "Dad idle dance BLACK LINE", 24);
-		dad.animation.play('dad');
-		setMenuCharacter(dad, new CharacterSetting(-15, 230, 0.45));
-	}
 }

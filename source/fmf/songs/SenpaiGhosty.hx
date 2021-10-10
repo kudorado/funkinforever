@@ -75,15 +75,4 @@ class SenpaiGhosty	 extends SongPlayer
 		icon.animation.play("dad");
 	}
 
-	public override function setDadMenuCharacter(dad:MenuCharacter)
-	{
-		super.setDadMenuCharacter(dad);
-
-		var frames = Paths.getSparrowAtlas('whitty/whitty', 'mods');
-		dad.frames = frames;
-
-		dad.animation.addByPrefix('dad', "Whitty idle dance BLACK LINE", 24);
-		dad.animation.play('dad');
-		setMenuCharacter(dad, new CharacterSetting(-200, 25, 1));
-	}
 }

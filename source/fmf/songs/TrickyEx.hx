@@ -22,13 +22,13 @@ class TrickyEx extends TrickyMask
 	{
 		playState.defaultCamZoom = 0.8;
 
-		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('clown/fourth/bg', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/clown/fourth/bg', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 3;
 		bg.scale.x = 3;
 		playState.add(bg);
 
-		var fg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('clown/fourth/daBackground', 'mods'));
+		var fg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('bg/clown/fourth/daBackground', 'mods'));
 		fg.antialiasing = true;
 		fg.x = -900;
 		fg.y = -175;
@@ -49,7 +49,7 @@ class TrickyEx extends TrickyMask
 
 	override function getGFTex()
 	{
-		var tex = Paths.getSparrowAtlas('clown/fourth/GF_tricky', 'mods');
+		var tex = Paths.getSparrowAtlas('gf_skins/tricky/GF_tricky', 'mods');
 		gf.frames = tex;
 	}
 
@@ -114,10 +114,10 @@ class TrickyEx extends TrickyMask
 		playState.add(bf);
 		
 
-		var hole = new FlxSprite(0, 0).loadGraphic(Paths.image('clown/fourth/Spawnhole_Ground_BACK', 'mods'));
+		var hole = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/clown/fourth/Spawnhole_Ground_BACK', 'mods'));
 		hole.antialiasing = true;
 		hole.x = dad.x;
-		hole.y = dad.y + 400;
+		hole.y = dad.y + 500;
 		hole.scale.y = 1.5;
 		hole.scale.x = 1;
 		playState.add(hole);

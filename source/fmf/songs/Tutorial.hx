@@ -13,11 +13,6 @@ class Tutorial extends SongPlayer
 		dad.scrollFactor.set(0.95, 0.95);
 	}
 
-	public override function setDadMenuCharacter(dad:MenuCharacter)
-	{
-		dad.visible = false;
-	}
-
 	override function getDadVersion():Character
 	{
 		return new GF(100, 100);

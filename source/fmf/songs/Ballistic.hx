@@ -17,7 +17,7 @@ class Ballistic extends Whitty
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.9;
-		var bgTex =  Paths.getSparrowAtlas('whitty/BallisticBackground', 'mods'); //Paths.getSparrowAtlas('BallisticBackground','week_whitty');
+		var bgTex =  Paths.getSparrowAtlas('bg/whitty/BallisticBackground', 'mods'); //Paths.getSparrowAtlas('BallisticBackground','week_whitty');
 	
 		var nwBg:FlxSprite = new FlxSprite(-48, 100);
 
@@ -35,7 +35,7 @@ class Ballistic extends Whitty
 		playState.add(nwBg);
 
 
-		var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('whitty/whittyFront', "mods"));
+		var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('bg/whitty/whittyFront', "mods"));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;

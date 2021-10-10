@@ -25,14 +25,14 @@ class GarcelloDead extends Garcello
 	{
 		playState.defaultCamZoom = 0.85;
 
-		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('garcello/garStagebgAlt', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/garcello/garStagebgAlt', 'mods'));
 		bg.antialiasing = true;
 		// bg.active = false;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
 		playState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('garcello/garStagealt', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/garcello/garStagealt', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
@@ -51,7 +51,7 @@ class GarcelloDead extends Garcello
 
 	private function createDeadBody()
 	{
-		var garcelloDead:FlxSprite = new FlxSprite(-150, 525).loadGraphic(Paths.image('garcello/gardead', 'mods'));
+		var garcelloDead:FlxSprite = new FlxSprite(-150, 525).loadGraphic(Paths.image('bg/garcello/gardead', 'mods'));
 		garcelloDead.setGraphicSize(Std.int(garcelloDead.width));
 		garcelloDead.updateHitbox();
 		garcelloDead.antialiasing = true;
@@ -63,7 +63,7 @@ class GarcelloDead extends Garcello
 	{
 
 		smoke = new FlxSprite();
-		var tex =  Paths.getSparrowAtlas('garcello/garSmoke', 'mods'); //.loadGraphic(Paths.image('garcello/garSmoke'));
+		var tex =  Paths.getSparrowAtlas('bg/garcello/garSmoke', 'mods'); //.loadGraphic(Paths.image('garcello/garSmoke'));
 		smoke.frames = tex;
 		smoke.animation.addByPrefix('init', 'Smokey instance', 18, true);
 		smoke.animation.play('init');

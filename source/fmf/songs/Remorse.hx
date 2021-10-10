@@ -15,21 +15,21 @@ class Remorse extends Whitty
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('whitty/remorse/updike_assets', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/updyke/updike_assets', 'mods');
 		dad.frames = tex;
 	}
 
 
 	override function loadMap()
 	{
-		var bg:FlxSprite = new FlxSprite(-600, -448).loadGraphic(Paths.image('whitty/remorse/wall', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-600, -448).loadGraphic(Paths.image('bg/whitty/remorse/wall', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.x = 1;
 		bg.scale.y = 1;
 		bg.scrollFactor.set(0.9, 0.9);
 		playState.add(bg);
 
-		bgRemorse = new FlxSprite(-600, -448).loadGraphic(Paths.image('whitty/remorse/wall-dark', 'mods'));
+		bgRemorse = new FlxSprite(-600, -448).loadGraphic(Paths.image('bg/whitty/remorse/wall-dark', 'mods'));
 		bgRemorse.antialiasing = true;
 		bgRemorse.scale.x = 1;
 		bgRemorse.scale.y = 1;
@@ -112,11 +112,13 @@ class Remorse extends Whitty
 
 		dad.dance();
 
+		dad.x -= 150;
+
 	}
 
 	override function getGFTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('whitty/remorse/gf_but_spicy', 'mods');
+		var tex = Paths.getSparrowAtlas('gf_skins/remorse/gf_but_spicy', 'mods');
 		gf.frames = tex;
 
 	}
@@ -162,7 +164,7 @@ class Remorse extends Whitty
 	
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('whitty/remorse/updike_icons', 'mods'), true, 172, 126);
+		icon.loadGraphic(Paths.image('bg/whitty/remorse/updike_icons', 'mods'), true, 172, 126);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}

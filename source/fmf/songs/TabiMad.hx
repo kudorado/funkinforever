@@ -27,7 +27,7 @@ class TabiMad extends Tabi
 
 	override function createFrontObject()
 	{
-		var sumsticks:FlxSprite = new FlxSprite(-600, -325).loadGraphic(Paths.image('tabi/mad/overlayingsticks', 'mods'));
+		var sumsticks:FlxSprite = new FlxSprite(-600, -325).loadGraphic(Paths.image('bg/tabi/mad/overlayingsticks', 'mods'));
 		sumsticks.antialiasing = true;
 		sumsticks.scrollFactor.set(0.95, 0.95);
 		playState.add(sumsticks);
@@ -40,7 +40,7 @@ class TabiMad extends Tabi
 
 	override function getGFTex()
 	{
-		var tex = Paths.getSparrowAtlas('tabi/mad/PostExpGF_Assets', 'mods');
+		var tex = Paths.getSparrowAtlas('gf_skins/tabimad/PostExpGF_Assets', 'mods');
 		gf.frames = tex;
 	}
 
@@ -52,10 +52,13 @@ class TabiMad extends Tabi
 
 	override function createGFAnimationOffsets()
 	{
-		gf.addOffset('danceLeft', -300, -250);
-		gf.addOffset('danceRight', -300, -250);
-
+		gf.addOffset('danceLeft', 0, -250);
+		gf.addOffset('danceRight', 0, -250);
 		gf.playAnim('danceRight');
+
+		gf.x -= 150;
+		gf.y -= 150;
+
 
 	}
 
@@ -67,7 +70,7 @@ class TabiMad extends Tabi
 		siniFireBehind = new FlxTypedGroup<SiniFire>();
 		siniFireFront = new FlxTypedGroup<SiniFire>();
 
-		genocideBG = new FlxSprite(-900, -300).loadGraphic(Paths.image('tabi/fire/wadsaaa', 'mods'));
+		genocideBG = new FlxSprite(-900, -300).loadGraphic(Paths.image('bg/tabi/fire/wadsaaa', 'mods'));
 		genocideBG.antialiasing = true;
 		genocideBG.scrollFactor.set(0.95, 0.95);
 		playState.add(genocideBG);
@@ -86,7 +89,7 @@ class TabiMad extends Tabi
 		playState.add(siniFireBehind);
 
 		// genocide board is already in genocidebg but u know shit layering for fire lol
-		genocideBoard = new FlxSprite(genocideBG.x, genocideBG.y).loadGraphic(Paths.image('tabi/fire/boards', 'mods'));
+		genocideBoard = new FlxSprite(genocideBG.x, genocideBG.y).loadGraphic(Paths.image('bg/tabi/fire/boards', 'mods'));
 		genocideBoard.antialiasing = true;
 		genocideBoard.scrollFactor.set(0.95, 0.95);
 		playState.add(genocideBoard);
@@ -126,7 +129,7 @@ class TabiMad extends Tabi
 		playState.add(siniFireFront);
 
 		// more layering shit
-		var fuckYouFurniture:FlxSprite = new FlxSprite(genocideBG.x, genocideBG.y).loadGraphic(Paths.image('tabi/fire/glowyfurniture', 'mods'));
+		var fuckYouFurniture:FlxSprite = new FlxSprite(genocideBG.x, genocideBG.y).loadGraphic(Paths.image('bg/tabi/fire/glowyfurniture', 'mods'));
 		fuckYouFurniture.antialiasing = true;
 		fuckYouFurniture.scrollFactor.set(0.95, 0.95);
 		playState.add(fuckYouFurniture);
@@ -173,13 +176,19 @@ class TabiMad extends Tabi
 	override function createBFAnimationOffsets()
 	{
 
-		bf.x -= 550;
+		bf.x -= 350;
 		bf.y -= 50;
 		bf.scrollFactor.set(0.95, 0.95);
-
 		super.createBFAnimationOffsets();
 
 	}
+
+	override function createBF()
+	{
+		super.createBF();
+		bf.scrollFactor.set(0.95, 0.95);
+	}
+
 	public override function createCharacters()
 	{
 		super.createCharacters();

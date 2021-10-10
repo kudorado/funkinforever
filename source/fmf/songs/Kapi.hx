@@ -62,7 +62,7 @@ class Kapi extends SongPlayer
 
 	override function getGFTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('kapi/GF_assets', 'mods');
+		var tex = Paths.getSparrowAtlas('gf_skins/kapi/GF_assets', 'mods');
 		gf.frames = tex;
 
 	}
@@ -121,20 +121,9 @@ class Kapi extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('kapi/iconGrid', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('bg/kapi/iconGrid', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [12, 13], 0, false, false);
 		icon.animation.play("dad");
 	}
-
-	public override function setDadMenuCharacter(dad:MenuCharacter)
-	{
-		super.setDadMenuCharacter(dad);
-
-		var frames = Paths.getSparrowAtlas('whitty/whitty', 'mods');
-		dad.frames = frames;
-
-		dad.animation.addByPrefix('dad', "Whitty idle dance BLACK LINE", 24);
-		dad.animation.play('dad');
-		setMenuCharacter(dad, new CharacterSetting(-200, 25, 1));
-	}
+ 
 }

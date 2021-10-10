@@ -18,7 +18,7 @@ class TrickyBen extends TrickyHell
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.25;
-		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('clown/red', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/clown/red', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.y = 3.5;
@@ -28,7 +28,7 @@ class TrickyBen extends TrickyHell
 
 		playState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('clown/rb/island_but_red', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/clown/rb/island_but_red', 'mods'));
 
 		stageFront.x -= 500;
 		stageFront.y = 200;
@@ -74,7 +74,7 @@ class TrickyBen extends TrickyHell
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('clown/ben', 'mods'), true, 172, 126);
+		icon.loadGraphic(Paths.image('bg/clown/ben', 'mods'), true, 172, 126);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 		icon.scale.x = 0.5;

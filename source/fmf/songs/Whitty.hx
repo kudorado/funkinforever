@@ -16,7 +16,7 @@ class Whitty extends SongPlayer
 
 	override function loadMap()
 	{
-		var bg:FlxSprite = new FlxSprite(-48, -448).loadGraphic(Paths.image('whitty/whittyBack', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-48, -448).loadGraphic(Paths.image('bg/whitty/whittyBack', 'mods'));
 		bg.antialiasing = true;
 		// bg.active = false;
 		bg.scale.x = 1.3;
@@ -24,7 +24,7 @@ class Whitty extends SongPlayer
 		bg.scrollFactor.set(0.9, 0.9);
 		playState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('whitty/whittyFront', "mods"));
+		var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('bg/whitty/whittyFront', "mods"));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
@@ -59,7 +59,7 @@ class Whitty extends SongPlayer
 
 	override function getGFTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('whitty/GF_Standing_Sway', 'mods');
+		var tex = Paths.getSparrowAtlas('gf_skins/whitty/GF_Standing_Sway', 'mods');
 		gf.frames = tex;
 
 	}
@@ -108,15 +108,4 @@ class Whitty extends SongPlayer
 		icon.animation.play("dad");
 	}
 
-	public override function setDadMenuCharacter(dad:MenuCharacter)
-	{
-		super.setDadMenuCharacter(dad);
-
-		var frames = Paths.getSparrowAtlas('whitty/whitty', 'mods');
-		dad.frames = frames;
-
-		dad.animation.addByPrefix('dad', "Whitty idle dance BLACK LINE", 24);
-		dad.animation.play('dad');
-		setMenuCharacter(dad, new CharacterSetting(-200, 25, 1));
-	}
 }

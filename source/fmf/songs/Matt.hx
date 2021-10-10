@@ -11,7 +11,7 @@ class Matt extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.8;
-		var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('matt/swordfight', "mods"));
+		var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bg/matt/swordfight', "mods"));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = true;
@@ -19,13 +19,13 @@ class Matt extends SongPlayer
 	}
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('matt/matt_assets', "mods");
+		var tex = Paths.getSparrowAtlas('pc/matt/matt_assets', "mods");
 		dad.frames = tex;
 	}
 
 	override function getGFTex()
 	{
-		var tex = Paths.getSparrowAtlas("matt/GF_MII_assets", "mods");
+		var tex = Paths.getSparrowAtlas("gf_skins/matt/GF_MII_assets", "mods");
 		gf.frames = tex;
 	}
 
@@ -33,10 +33,10 @@ class Matt extends SongPlayer
 	{
 		var animation = dad.animation;
 		animation.addByPrefix('idle', "matt idle", 24);
-		animation.addByPrefix('singUP', 'matt up note', 24, false);
-		animation.addByPrefix('singDOWN', 'matt down note', 24, false);
-		animation.addByPrefix('singLEFT', 'matt left note', 24, false);
-		animation.addByPrefix('singRIGHT', 'matt right note', 24, false);
+		animation.addByPrefix('singUP', 'matt up note0', 24, false);
+		animation.addByPrefix('singDOWN', 'matt down note0', 24, false);
+		animation.addByPrefix('singLEFT', 'matt left note0', 24, false);
+		animation.addByPrefix('singRIGHT', 'matt right note0', 24, false);
 
 		dad.animation = animation;
 	}
@@ -65,21 +65,8 @@ class Matt extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('matt/iconGrid', "mods"), true, 150, 150);
+		icon.loadGraphic(Paths.image('bg/matt/iconGrid', "mods"), true, 150, 150);
 		icon.animation.add('dad', [23, 24], 0, false, false);
 		icon.animation.play("dad");
-	}
-
-	public override function setDadMenuCharacter(dad:MenuCharacter)
-	{
-		super.setDadMenuCharacter(dad);
-
-		var frames = Paths.getSparrowAtlas('matt/menucharacter', 'mods');
-		dad.frames = frames;
-
-		dad.animation.addByPrefix('dad', "Matt idle", 12);
-		dad.animation.play('dad');
-		setMenuCharacter(dad, new CharacterSetting(0, 40, 0.65));
-	
 	}
 }

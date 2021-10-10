@@ -17,7 +17,7 @@ class Tabi extends SongPlayer
 
 	override function getGFTex()
 	{
-		var tex = Paths.getSparrowAtlas('tabi/GF_Tabi', 'mods');
+		var tex = Paths.getSparrowAtlas('gf_skins/tabi/GF_Tabi', 'mods');
 		gf.frames = tex;
 	}
 
@@ -43,7 +43,7 @@ class Tabi extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.8;
-		var bg:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('tabi/normal_stage', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('bg/tabi/normal_stage', 'mods'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.95, 0.95);
 
@@ -98,7 +98,7 @@ class Tabi extends SongPlayer
 
 	private function createFrontObject()
 	{
-		var sumtable:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('tabi/sumtable', 'mods'));
+		var sumtable:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('bg/tabi/sumtable', 'mods'));
 		sumtable.antialiasing = true;
 		sumtable.scrollFactor.set(0.95, 0.95);
 		playState.add(sumtable);

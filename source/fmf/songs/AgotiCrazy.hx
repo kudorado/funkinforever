@@ -25,7 +25,7 @@ class AgotiCrazy extends Agoti
 
 		playState.defaultCamZoom = 0.6;
 		
-		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('agoti/Pillar_1', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/agoti/Pillar_1', 'mods'));
 		bg.antialiasing = true;
 
 		var fx = bg.width / 2;
@@ -43,7 +43,7 @@ class AgotiCrazy extends Agoti
 		playState.add(bg);
 
 		var bg1:FlxSprite = new FlxSprite();
-		var tex1 =  Paths.getSparrowAtlas('agoti/Pillar_BG_Stage', 'mods');
+		var tex1 =  Paths.getSparrowAtlas('bg/agoti/Pillar_BG_Stage', 'mods');
 
 		bg1.frames = tex1;
 		bg1.animation.addByPrefix('init', 'Pillar_BG_Stage', 15, true);
@@ -67,7 +67,7 @@ class AgotiCrazy extends Agoti
 
 		var stageFront:FlxSprite = new FlxSprite(0, 0);
 
-		var tex2 =  Paths.getSparrowAtlas('agoti/LoudSpeaker_Moving', 'mods');
+		var tex2 =  Paths.getSparrowAtlas('bg/agoti/LoudSpeaker_Moving', 'mods');
 		stageFront.frames = tex2;
 
 		stageFront.animation.addByPrefix('init', 'StereoMoving', 15, true);
@@ -139,15 +139,4 @@ class AgotiCrazy extends Agoti
 		icon.animation.play("dad");
 	}
 
-	public override function setDadMenuCharacter(dad:MenuCharacter)
-	{
-		super.setDadMenuCharacter(dad);
-
-		var frames = Paths.getSparrowAtlas('whitty/whitty', 'mods');
-		dad.frames = frames;
-
-		dad.animation.addByPrefix('dad', "Whitty idle dance BLACK LINE", 24);
-		dad.animation.play('dad');
-		setMenuCharacter(dad, new CharacterSetting(-200, 25, 1));
-	}
 }

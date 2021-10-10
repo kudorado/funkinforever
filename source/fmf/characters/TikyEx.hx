@@ -76,7 +76,7 @@ class TikyEx extends TikyMask
 
 	override function characterCreatedEvent()
 	{
-		var hole = new FlxSprite(0, 0).loadGraphic(Paths.image('clown/fourth/Spawnhole_Ground_BACK', 'mods'));
+		var hole = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/clown/fourth/Spawnhole_Ground_BACK', 'mods'));
 		hole.antialiasing = true;
 		hole.x = this.x;
 		hole.y = this.y + 500;
@@ -89,10 +89,8 @@ class TikyEx extends TikyMask
 
 	override function noteEventBF(noteData:Note)
 	{
-
 		if (FlxG.random.bool(60) && !clown.spookyRendered && !noteData.isSustainNote) // create spooky text :flushed:
 			clown.noteEvent(noteData, x - 300, y - 50);
-
 	}
 	
 

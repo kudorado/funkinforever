@@ -67,11 +67,5 @@ class KapiAngry extends Kapi
 
 		}
 	}
-
-	public override function getDadIcon(icon:HealthIcon)
-	{
-		icon.loadGraphic(Paths.image('kapi/iconGrid', 'mods'), true, 150, 150);
-		icon.animation.add('dad', [22, 13], 0, false, false);
-		icon.animation.play("dad");
-	}
+	
 }

@@ -540,23 +540,6 @@ class BaseSong
 
 	//---------------------------------------------- Mxxxenu Character --------------------------------------------
 
-	public function setDadMenuCharacter(dad:MenuCharacter)
-	{
-		dad.visible = false; // temporary disable it
-
-		//---------------- Template ----------------
-
-		// var frames = Paths.getSparrowAtlas();
-		// dad.frames = frames;
-
-		// dad.animation.addByPrefix('dad', "Dad idle dance BLACK LINE", 24);
-		// dad.animation.play('dad');
-		// setMenuCharacter(dad, new CharacterSetting(-15, 230, 0.45));
-		// //set active it
-
-		//------------------------------------------
-	}
-
 	public function setBFMenuCharacter(bf:MenuCharacter)
 	{
 		var frames = Paths.getSparrowAtlas('menucharacter/campaign_menu_UI_characters');

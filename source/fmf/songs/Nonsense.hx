@@ -19,7 +19,7 @@ class Nonsense extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.6;
-		var bg:FlxSprite = new FlxSprite(-800, 0).loadGraphic(Paths.image('nonsense/Outside', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-800, 0).loadGraphic(Paths.image('bg/nonsense/Outside', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1;
@@ -29,7 +29,7 @@ class Nonsense extends SongPlayer
 		bg.active = false;
 		playState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(-1000, -475).loadGraphic(Paths.image('nonsense/BACKGROUND', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(-1000, -475).loadGraphic(Paths.image('bg/nonsense/BACKGROUND', 'mods'));
 		
 		stageFront.scale.x = 1;
 		stageFront.scale.y = 1;

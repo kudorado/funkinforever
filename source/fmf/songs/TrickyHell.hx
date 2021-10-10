@@ -18,7 +18,7 @@ class TrickyHell extends TrickyMask
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.5;
-		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('clown/red', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/clown/red', 'mods'));
 		bg.antialiasing = true;
 
 
@@ -26,7 +26,7 @@ class TrickyHell extends TrickyMask
 		bg.scale.x = 2.5;
 		playState.add(bg);
 		
-		var stageFront:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('clown/hellclown/island_but_red', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/clown/hellclown/island_but_red', 'mods'));
 
 		stageFront.x -= 500;
 		stageFront.y = 200; 
@@ -91,18 +91,6 @@ class TrickyHell extends TrickyMask
 	{
 		playState.camFollow.y = dad.getMidpoint().y + 250;
 		playState.camFollow.x = dad.getMidpoint().x;
-	}
-
-	public override function setDadMenuCharacter(dad:MenuCharacter)
-	{
-		super.setDadMenuCharacter(dad);
-
-		var frames = Paths.getSparrowAtlas('whitty/whitty', 'mods');
-		dad.frames = frames;
-
-		dad.animation.addByPrefix('dad', "Whitty idle dance BLACK LINE", 24);
-		dad.animation.play('dad');
-		setMenuCharacter(dad, new CharacterSetting(-200, 25, 1));
 	}
 
 	override function dadNoteEvent(noteData:Note)

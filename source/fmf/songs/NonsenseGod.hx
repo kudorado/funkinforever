@@ -19,7 +19,7 @@ class NonsenseGod extends Nonsense
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.6;
-		var bg:FlxSprite = new FlxSprite(-800, -375).loadGraphic(Paths.image('nonsense/Outside_Space', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-800, -375).loadGraphic(Paths.image('bg/nonsense/Outside_Space', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1;
@@ -29,7 +29,7 @@ class NonsenseGod extends Nonsense
 		bg.active = false;
 		playState.add(bg);
 
-		var hallowTex = Paths.getSparrowAtlas('nonsense/BACKGROUND_space', 'mods');
+		var hallowTex = Paths.getSparrowAtlas('bg/nonsense/BACKGROUND_space', 'mods');
 		var bg1 = new FlxSprite(-300, -400);
 		bg1.frames = hallowTex;
 		bg1.animation.addByPrefix('idle', 'Wall Broken anim0', 18);
