@@ -98,7 +98,7 @@ class SongManager
 			{
 				folder: 'week_trueform',
 				character: 'trueform',
-				songTitle: 'T.R.U.E.F.O.R.M',
+				songTitle: 'T.R.U.E.F.A.C.E',
 				songList: ['Eeeaaaooo', 'Practice', 'Fool', 'Trap', 'Incident', 'Run']
 			}
 		),
@@ -204,6 +204,16 @@ class SongManager
 				character: 'sky',
 				songTitle: 'V.S Sky',
 				songList: ['Wifeforever', 'Sky', 'Manifest']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_mfm',
+				character: 'mfm',
+				songTitle: 'Mid-Fight Masses',
+				songList: ['Parish', 'Worship', "Zavodila", 'Gospel', "Casanova"]
 			}
 		),
 
