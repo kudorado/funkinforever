@@ -180,7 +180,7 @@ class SongManager
 		(
 			{
 				folder: 'week_solazar',
-				character: 'solazar',
+				character: 'daidem',
 				songTitle: 'Entity Origins',
 				songList: ['Experimental-Phase', 'Perfection']
 			}
