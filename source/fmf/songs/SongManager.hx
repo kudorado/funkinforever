@@ -46,16 +46,6 @@ class SongManager
 		new SongData
 		(
 			{
-				folder: 'week_garcello',
-				character: 'garcello',
-				songTitle: 'SMOKE EM\' OUT STRUGGLE',
-				songList: ['Headache', 'Nerves', 'Release', 'Fading']
-			}
-		),
-
-		new SongData
-		(
-			{
 				folder: 'week_tabi',
 				character: 'tabi',
 				songTitle: 'V.S Ex',
@@ -63,6 +53,16 @@ class SongManager
 			}
 		),
 		
+		new SongData
+		(
+			{
+				folder: 'week_garcello',
+				character: 'garcello',
+				songTitle: 'SMOKE EM\' OUT STRUGGLE',
+				songList: ['Headache', 'Nerves', 'Release', 'Fading']
+			}
+		),
+
 		new SongData
 		(
 			{
@@ -113,18 +113,6 @@ class SongManager
 			}
 		),
 
-
-		new SongData
-		(
-			{
-				folder: 'week_hex',
-				character: 'hex',
-				songTitle: 'V.S Hex',
-				songList: ['Dunk', 'Ram', 'Hello-world', 'Glitcher', 'Encore']
-			}
-		),
-
-
 		new SongData
 		(
 			{
@@ -135,7 +123,6 @@ class SongManager
 			}
 		),
 
-
 		new SongData
 		(
 			{
@@ -145,6 +132,7 @@ class SongManager
 				songList: ['Popipo', 'Chug', 'Siu', "Aishite", "Disappearance"]
 			}
 		),
+
 
 		new SongData
 		(
@@ -159,13 +147,33 @@ class SongManager
 		new SongData
 		(
 			{
+				folder: 'week_hex',
+				character: 'hex',
+				songTitle: 'V.S Hex',
+				songList: ['Dunk', 'Ram', 'Hello-world', 'Glitcher', 'Encore']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_mfm',
+				character: 'mfm',
+				songTitle: 'Mid-Fight Masses',
+				songList: ['Parish', 'Worship', "Zavodila", 'Gospel', "Casanova"]
+			}
+		),
+
+		new SongData
+		(
+			{
 				folder: 'week_impostor',
 				character: 'red',
 				songTitle: 'V.S Red Impostor',
 				songList: ['Sussus-moogus', 'Sabotage', 'Meltdown']
 			}
 		),
-		
+
 		new SongData
 		(
 			{
@@ -175,6 +183,18 @@ class SongManager
 				songList: ['Sussus-toogus', 'Lights-down', 'Reactor', 'Ejected']
 			}
 		),
+
+	
+		new SongData
+		(
+			{
+				folder: 'week_bab',
+				character: 'bab',
+				songTitle: 'Bop & Bosip',
+				songList: ['Jump-in', 'Swing', 'Split']
+			}
+		),
+
 
 		new SongData
 		(
@@ -186,17 +206,6 @@ class SongManager
 			}
 		),
 
-
-		new SongData
-		(
-			{
-				folder: 'week_bab',
-				character: 'bab',
-				songTitle: 'Bop & Bosip',
-				songList: ['Jump-in', 'Swing', 'Split']
-			}
-		),
-
 		new SongData
 		(
 			{
@@ -204,16 +213,6 @@ class SongManager
 				character: 'sky',
 				songTitle: 'V.S Sky',
 				songList: ['Wifeforever', 'Sky', 'Manifest']
-			}
-		),
-
-		new SongData
-		(
-			{
-				folder: 'week_mfm',
-				character: 'mfm',
-				songTitle: 'Mid-Fight Masses',
-				songList: ['Parish', 'Worship', "Zavodila", 'Gospel', "Casanova"]
 			}
 		),
 
