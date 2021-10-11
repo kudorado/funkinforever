@@ -11,7 +11,7 @@ class Fool extends Trueform
 
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('trueform/zardy/GF', 'mods');
+		var tex = Paths.getSparrowAtlas('bg/trueform/zardy/GF', 'mods');
 		dad.frames = tex;
 	}
 
@@ -22,14 +22,14 @@ class Fool extends Trueform
 		playState.defaultCamZoom = 0.9;
 
 		hole = new FlxSprite(-650, 600);
-		hole.loadGraphic(Paths.image('trueform/zardy/gfshit', 'mods'), true, 512, 512);
+		hole.loadGraphic(Paths.image('bg/trueform/zardy/gfshit', 'mods'), true, 512, 512);
 		hole.scrollFactor.set(0.9, 0.9);
 
 		hole.animation.add('shit', getArray(5, 16), 16, true);
 		hole.animation.play('shit', true);
 
 		
-		var hallowTex = Paths.getSparrowAtlas('trueform/zardy/bg', 'mods');
+		var hallowTex = Paths.getSparrowAtlas('bg/trueform/zardy/bg', 'mods');
 		var bg = new FlxSprite(-200, -100);
 		bg.frames = hallowTex;
 		bg.animation.addByPrefix('idle', 'Stage0');

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:99b596d697b3d4bfb41d1ca3e78c016d:774e059c7d659e3233cf5bee0d5d2c1d:bc1a6eb80c3c5552dab205e690bf06f0$ -->
+<TextureAtlas imagePath="bg.png" width="2048" height="2048">
+    <SubTexture name="Bg_manifest0000" x="1" y="1" width="999" height="549"/>
+    <SubTexture name="Bg_manifest0001" x="1002" y="1" width="999" height="549"/>
+    <SubTexture name="Bg_manifest0002" x="1" y="552" width="999" height="549"/>
+    <SubTexture name="Bg_manifest0003" x="1002" y="552" width="999" height="549"/>
+    <SubTexture name="Bg_manifest0004" x="1002" y="552" width="999" height="549"/>
+    <SubTexture name="Bg_manifest0005" x="1002" y="552" width="999" height="549"/>
+    <SubTexture name="Bg_manifest0006" x="1002" y="552" width="999" height="549"/>
+    <SubTexture name="Bg_manifest0007" x="1002" y="552" width="999" height="549"/>
+</TextureAtlas>

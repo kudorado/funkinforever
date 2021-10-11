@@ -858,6 +858,8 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_frisk_frisk_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_nonsense_nonsense_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_nonsense_nonsense_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_kapifan_flatzone_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_kapifan_flatzone_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_mikumad_ev_miku_mad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_mikumad_ev_miku_mad_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_updyke_updike_assets_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1144,6 +1146,38 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_nonsense_background_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_nonsense_background_space_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_nonsense_background_space_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_sky_gf_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_sky_gf_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_sky_gfshit_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_sky_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_sky_bg_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_zardy_gf_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_zardy_gf_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_zardy_gfshit_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_zardy_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_zardy_bg_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_gf_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_gf_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_fg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_hellbob_assets_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_hellbob_assets_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_gfshit_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_ground_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_matt_arenanightbg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_matt_gf_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_matt_gf_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_gf_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_gf_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_trollge_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_trollge_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_gfshit_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_lila_gf_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_lila_gf_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_lila_gfshit_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_lila_halloween_bg_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_lila_halloween_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_sacredmass_church1_base_dark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_sacredmass_church1_base_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_sacredmass_sarv_to_demon_xml extends null { }
@@ -1245,19 +1279,9 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_bfthought_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_closed_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_icongrid_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_flatzone_xml extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_flatzone_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapifan_xml extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapifan_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapi_angry_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapi_angry_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_stagefront_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_fanclub_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_stageback_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_meow_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_meow_xml extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapi_assets_xml extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapi_assets_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_sunset_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_annie_evilbg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_annie_evilsnow_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -2060,6 +2084,8 @@ null
 @:keep @:image("assets/mods/images/pc/frisk/frisk.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_frisk_frisk_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/pc/nonsense/nonsense.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_nonsense_nonsense_png extends lime.graphics.Image {}
 @:keep @:file("assets/mods/images/pc/nonsense/nonsense.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_nonsense_nonsense_xml extends haxe.io.Bytes {}
+@:keep @:file("assets/mods/images/pc/kapifan/flatzone.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_kapifan_flatzone_xml extends haxe.io.Bytes {}
+@:keep @:image("assets/mods/images/pc/kapifan/flatzone.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_kapifan_flatzone_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/pc/mikumad/ev_miku_mad.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_mikumad_ev_miku_mad_png extends lime.graphics.Image {}
 @:keep @:file("assets/mods/images/pc/mikumad/ev_miku_mad.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_mikumad_ev_miku_mad_xml extends haxe.io.Bytes {}
 @:keep @:image("assets/mods/images/pc/updyke/updike_assets.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_updyke_updike_assets_png extends lime.graphics.Image {}
@@ -2346,6 +2372,38 @@ null
 @:keep @:image("assets/mods/images/bg/nonsense/BACKGROUND.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_nonsense_background_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/nonsense/BACKGROUND_space.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_nonsense_background_space_png extends lime.graphics.Image {}
 @:keep @:file("assets/mods/images/bg/nonsense/BACKGROUND_space.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_nonsense_background_space_xml extends haxe.io.Bytes {}
+@:keep @:file("assets/mods/images/bg/trueform/sky/GF.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_sky_gf_xml extends haxe.io.Bytes {}
+@:keep @:image("assets/mods/images/bg/trueform/sky/GF.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_sky_gf_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/sky/gfshit.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_sky_gfshit_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/sky/bg.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_sky_bg_png extends lime.graphics.Image {}
+@:keep @:file("assets/mods/images/bg/trueform/sky/bg.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_sky_bg_xml extends haxe.io.Bytes {}
+@:keep @:file("assets/mods/images/bg/trueform/zardy/GF.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_zardy_gf_xml extends haxe.io.Bytes {}
+@:keep @:image("assets/mods/images/bg/trueform/zardy/GF.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_zardy_gf_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/zardy/gfshit.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_zardy_gfshit_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/zardy/bg.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_zardy_bg_png extends lime.graphics.Image {}
+@:keep @:file("assets/mods/images/bg/trueform/zardy/bg.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_zardy_bg_xml extends haxe.io.Bytes {}
+@:keep @:file("assets/mods/images/bg/trueform/bob/GF.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_gf_xml extends haxe.io.Bytes {}
+@:keep @:image("assets/mods/images/bg/trueform/bob/GF.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_gf_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/bob/fg.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_fg_png extends lime.graphics.Image {}
+@:keep @:file("assets/mods/images/bg/trueform/bob/hellbob_assets.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_hellbob_assets_xml extends haxe.io.Bytes {}
+@:keep @:image("assets/mods/images/bg/trueform/bob/hellbob_assets.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_hellbob_assets_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/bob/gfshit.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_gfshit_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/bob/ground.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_ground_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/bob/bg.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_bob_bg_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/matt/arenanightbg.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_matt_arenanightbg_png extends lime.graphics.Image {}
+@:keep @:file("assets/mods/images/bg/trueform/matt/GF.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_matt_gf_xml extends haxe.io.Bytes {}
+@:keep @:image("assets/mods/images/bg/trueform/matt/GF.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_matt_gf_png extends lime.graphics.Image {}
+@:keep @:file("assets/mods/images/bg/trueform/trollge/GF.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_gf_xml extends haxe.io.Bytes {}
+@:keep @:image("assets/mods/images/bg/trueform/trollge/GF.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_gf_png extends lime.graphics.Image {}
+@:keep @:file("assets/mods/images/bg/trueform/trollge/trollge.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_trollge_xml extends haxe.io.Bytes {}
+@:keep @:image("assets/mods/images/bg/trueform/trollge/trollge.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_trollge_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/trollge/gfshit.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_gfshit_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/trollge/bg.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_trollge_bg_png extends lime.graphics.Image {}
+@:keep @:file("assets/mods/images/bg/trueform/lila/GF.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_lila_gf_xml extends haxe.io.Bytes {}
+@:keep @:image("assets/mods/images/bg/trueform/lila/GF.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_lila_gf_png extends lime.graphics.Image {}
+@:keep @:image("assets/mods/images/bg/trueform/lila/gfshit.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_lila_gfshit_png extends lime.graphics.Image {}
+@:keep @:file("assets/mods/images/bg/trueform/lila/halloween_bg.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_lila_halloween_bg_xml extends haxe.io.Bytes {}
+@:keep @:image("assets/mods/images/bg/trueform/lila/halloween_bg.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_trueform_lila_halloween_bg_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/sacredmass/church1/base-dark.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_sacredmass_church1_base_dark_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/sacredmass/church1/base.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_sacredmass_church1_base_png extends lime.graphics.Image {}
 @:keep @:file("assets/mods/images/bg/sacredmass/sarv_to_demon.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_sacredmass_sarv_to_demon_xml extends haxe.io.Bytes {}
@@ -2447,19 +2505,9 @@ null
 @:keep @:image("assets/mods/images/bg/kapi/bfThought.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_bfthought_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/kapi/closed.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_closed_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/kapi/iconGrid.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_icongrid_png extends lime.graphics.Image {}
-@:keep @:file("assets/mods/images/bg/kapi/flatzone.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_flatzone_xml extends haxe.io.Bytes {}
-@:keep @:image("assets/mods/images/bg/kapi/flatzone.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_flatzone_png extends lime.graphics.Image {}
-@:keep @:file("assets/mods/images/bg/kapi/kapifan.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapifan_xml extends haxe.io.Bytes {}
-@:keep @:image("assets/mods/images/bg/kapi/kapifan.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapifan_png extends lime.graphics.Image {}
-@:keep @:image("assets/mods/images/bg/kapi/KAPI_ANGRY.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapi_angry_png extends lime.graphics.Image {}
-@:keep @:file("assets/mods/images/bg/kapi/KAPI_ANGRY.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapi_angry_xml extends haxe.io.Bytes {}
 @:keep @:image("assets/mods/images/bg/kapi/stagefront.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_stagefront_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/kapi/fanclub.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_fanclub_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/kapi/stageback.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_stageback_png extends lime.graphics.Image {}
-@:keep @:image("assets/mods/images/bg/kapi/meow.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_meow_png extends lime.graphics.Image {}
-@:keep @:file("assets/mods/images/bg/kapi/meow.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_meow_xml extends haxe.io.Bytes {}
-@:keep @:file("assets/mods/images/bg/kapi/kapi_assets.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapi_assets_xml extends haxe.io.Bytes {}
-@:keep @:image("assets/mods/images/bg/kapi/kapi_assets.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_kapi_assets_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/kapi/sunset.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_kapi_sunset_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/annie/evilBG.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_annie_evilbg_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/annie/evilSnow.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_annie_evilsnow_png extends lime.graphics.Image {}

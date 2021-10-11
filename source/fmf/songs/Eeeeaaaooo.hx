@@ -15,7 +15,7 @@ class Eeeeaaaooo extends Trueform
 
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('trueform/lila/GF', 'mods');
+		var tex = Paths.getSparrowAtlas('bg/trueform/lila/GF', 'mods');
 		dad.frames = tex;
 	}
 
@@ -24,14 +24,14 @@ class Eeeeaaaooo extends Trueform
 		super.loadMap();
 
 		hole = new FlxSprite(-650, 600);
-		hole.loadGraphic(Paths.image('trueform/lila/gfshit', 'mods'), true, 512, 512);
+		hole.loadGraphic(Paths.image('bg/trueform/lila/gfshit', 'mods'), true, 512, 512);
 		hole.scrollFactor.set(0.9, 0.9);
 
 		hole.animation.add('shit', getArray(0, 16), 16, true);
 		hole.animation.play('shit', true);
 
 		
-		var hallowTex = Paths.getSparrowAtlas('trueform/lila/halloween_bg', 'mods');
+		var hallowTex = Paths.getSparrowAtlas('bg/trueform/lila/halloween_bg', 'mods');
 		halloweenBG = new FlxSprite(350, 400);
 		halloweenBG.setGraphicSize(Std.int(halloweenBG.width * 1.5));
 		halloweenBG.frames = hallowTex;

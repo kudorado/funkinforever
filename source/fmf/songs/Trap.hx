@@ -11,7 +11,7 @@ class Trap extends Trueform
 
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('trueform/sky/GF', 'mods');
+		var tex = Paths.getSparrowAtlas('bg/trueform/sky/GF', 'mods');
 		dad.frames = tex;
 	}
 
@@ -41,14 +41,14 @@ class Trap extends Trueform
 		playState.defaultCamZoom = 0.9;
 
 		hole = new FlxSprite(-650, 600);
-		hole.loadGraphic(Paths.image('trueform/sky/gfshit', 'mods'), true, 512, 512);
+		hole.loadGraphic(Paths.image('bg/trueform/sky/gfshit', 'mods'), true, 512, 512);
 		hole.scrollFactor.set(0.9, 0.9);
 
 		hole.animation.add('shit', getArray(5, 16), 16, true);
 		hole.animation.play('shit', true);
 
 		
-		var hallowTex = Paths.getSparrowAtlas('trueform/sky/bg', 'mods');
+		var hallowTex = Paths.getSparrowAtlas('bg/trueform/sky/bg', 'mods');
 		var bg = new FlxSprite(-200, -200);
 		bg.frames = hallowTex;
 		bg.animation.addByPrefix('idle', 'Bg_manifest0');

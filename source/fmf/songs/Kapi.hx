@@ -21,13 +21,13 @@ class Kapi extends SongPlayer
 		var daBG = PlayState.CURRENT_SONG == 'wocky' ? "stageback" : 'sunset';
 
 
-		var bg:FlxSprite = new FlxSprite(-500, -200).loadGraphic(Paths.image('kapi/' + daBG, 'mods'));
+		var bg:FlxSprite = new FlxSprite(-500, -200).loadGraphic(Paths.image('bg/kapi/' + daBG, 'mods'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = false;
 		playState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(-400, 550).loadGraphic(Paths.image('kapi/stagefront', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(-400, 550).loadGraphic(Paths.image('bg/kapi/stagefront', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
@@ -51,7 +51,7 @@ class Kapi extends SongPlayer
 	{
 
 		dad.addOffset('idle');
-		dad.addOffset("singUP", 1, 0);
+		dad.addOffset("singUP", 0, 0);
 		dad.addOffset("singRIGHT", 0, 0);
 		dad.addOffset("singLEFT", 0, 0);
 		dad.addOffset("singDOWN", 0, 0);
@@ -105,18 +105,19 @@ class Kapi extends SongPlayer
 		dad.scale.y = 0.65;
 
 		dad.scrollFactor.set(0.95, 0.95);
+
     }
 
 	override function createBFAnimationOffsets()
 	{
 
-		bf.x += 100;
-		bf.y += 50;
+		// bf.x += 100;
 
 		bf.scale.x *= 0.75;
 		bf.scale.y *= 0.75;
 
 		super.createBFAnimationOffsets();
+
 	}
 
 	public override function getDadIcon(icon:HealthIcon)

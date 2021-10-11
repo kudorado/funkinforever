@@ -11,20 +11,20 @@ class KapiAngry extends Kapi
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('kapi/meow', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/kapiangry/kapi_angry', 'mods');
 		dad.frames = tex;
 	}
 
 
 	override function loadMap()
 	{
-		var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('kapi/closed', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bg/kapi/closed', 'mods'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = false;
 		playState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(-400, 550).loadGraphic(Paths.image('kapi/stagefront', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(-400, 550).loadGraphic(Paths.image('bg/kapi/stagefront', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
@@ -37,11 +37,11 @@ class KapiAngry extends Kapi
 	{
 		var animation = dad.animation;
 		animation.addByPrefix('idle', 'Dad idle dance', 24);
-		animation.addByPrefix('singUP', 'Dad Sing Note UP', 24);
-		animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24);
-		animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24);
-		animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
-		animation.addByPrefix('meow', 'Dad meow', 24);
+		animation.addByPrefix('singUP', 'Dad Sing Note UP0', 24);
+		animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT0', 24);
+		animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN0', 24);
+		animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT0', 24);
+		animation.addByPrefix('meow', 'Dad meow0', 24);
 		dad.animation = animation;
 	}
 
@@ -49,12 +49,24 @@ class KapiAngry extends Kapi
 	{
 
 		dad.addOffset('idle');
-		dad.addOffset("singUP", 1, -8);
-		dad.addOffset("singRIGHT", 0, -25);
-		dad.addOffset("singLEFT", 0, 41);
-		dad.addOffset("singDOWN", 0, -100);
+		dad.addOffset("singUP", 0, -0);
+		dad.addOffset("singRIGHT", 0, -0);
+		dad.addOffset("singLEFT", 0, 0);
+		dad.addOffset("singDOWN", 0, -0);
 
 		dad.dance();
+	
+
+
+	}
+
+	override function createDad()
+	{
+		super.createDad();
+		dad.scale.x *= 1.25;
+		dad.scale.y *= 1.25;
+
+		dad.y -= 165;
 
 	}
 	

@@ -14,7 +14,7 @@ class Incident extends Trueform
 
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('trueform/trollge/trollge', 'mods');
+		var tex = Paths.getSparrowAtlas('bg/trueform/trollge/trollge', 'mods');
 		dad.frames = tex;
 	}
 
@@ -49,14 +49,14 @@ class Incident extends Trueform
 		playState.defaultCamZoom = 0.9;
 
 		hole = new FlxSprite(-650, 600);
-		hole.loadGraphic(Paths.image('trueform/sky/gfshit', 'mods'), true, 512, 512);
+		hole.loadGraphic(Paths.image('bg/trueform/sky/gfshit', 'mods'), true, 512, 512);
 		hole.scrollFactor.set(0.9, 0.9);
 
 		hole.animation.add('shit', getArray(5, 16), 16, true);
 		hole.animation.play('shit', true);
 
 		
-		var bg:FlxSprite = new FlxSprite(-600, 500).loadGraphic(Paths.image('trueform/trollge/bg', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-600, 500).loadGraphic(Paths.image('bg/trueform/trollge/bg', 'mods'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 
@@ -73,7 +73,7 @@ class Incident extends Trueform
 
 		bg.y -= 250;
 
-		gfbg = new FlxSprite(-600, 300).loadGraphic(Paths.image('trueform/trollge/GF', 'mods'));
+		gfbg = new FlxSprite(-600, 300).loadGraphic(Paths.image('bg/trueform/trollge/GF', 'mods'));
 		gfbg.antialiasing = true;
 		gfbg.scrollFactor.set(0.9, 0.9);
 

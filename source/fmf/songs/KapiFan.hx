@@ -11,16 +11,19 @@ class KapiFan extends Kapi
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('kapi/flatzone', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/kapifan/flatzone', 'mods');
 		dad.frames = tex;
 	}
 
 
 	override function loadMap()
 	{
-		var bg:FlxSprite = new FlxSprite(-600, -100).loadGraphic(Paths.image('kapi/fanclub', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-200, -225).loadGraphic(Paths.image('bg/kapi/fanclub', 'mods'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
+		bg.scale.x = 1.25;
+		bg.scale.y = 1.25;
+
 		bg.active = false;
 		playState.add(bg);
 	}
@@ -29,10 +32,10 @@ class KapiFan extends Kapi
 	{
 		var animation = dad.animation;
 		animation.addByPrefix('idle', 'idle', 24);
-		animation.addByPrefix('singUP', 'up', 24);
-		animation.addByPrefix('singRIGHT', 'right', 24);
-		animation.addByPrefix('singDOWN', 'down', 24);
-		animation.addByPrefix('singLEFT', 'left', 24);
+		animation.addByPrefix('singUP', 'up0', 24);
+		animation.addByPrefix('singRIGHT', 'right0', 24);
+		animation.addByPrefix('singDOWN', 'down0', 24);
+		animation.addByPrefix('singLEFT', 'left0', 24);
 		dad.animation = animation;
 	}
 
