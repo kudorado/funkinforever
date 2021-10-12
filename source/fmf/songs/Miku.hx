@@ -12,6 +12,12 @@ using StringTools;
 class Miku extends SongPlayer
 {
 	
+	public  override function loadMap()
+	{
+		super.loadMap();
+
+	}
+
 	public override function getDadTex():Void
 	{
 		var tex = Paths.getSparrowAtlas('pc/miku/miku', 'mods');

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:c46748fd3e393baa0d63f9399025d2e9:0b4a6be5417ffbf5cfd4f64e350a0e04:3f5ff2b678fcd9b55dbf9242026009bb$ -->
+<TextureAtlas imagePath="drunkAnnie_miss.png" width="932" height="932">
+    <SubTexture name="Monster down MISS0000" x="1" y="1" width="329" height="429" frameX="-1" frameY="-1" frameWidth="331" frameHeight="431"/>
+    <SubTexture name="Monster left note MISS0000" x="1" y="462" width="327" height="464" frameX="-1" frameY="-2" frameWidth="329" frameHeight="467"/>
+    <SubTexture name="Monster Right note MISS0000" x="332" y="1" width="330" height="459" frameX="-1" frameY="-2" frameWidth="333" frameHeight="463"/>
+    <SubTexture name="Monster up note MISS0000" x="330" y="462" width="332" height="469" frameX="-1" frameY="-1" frameWidth="334" frameHeight="471"/>
+</TextureAtlas>

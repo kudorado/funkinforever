@@ -54,6 +54,9 @@ class SongPlayerManager
 			case 'light-it-up' | 'ruckus':
 				songPlayer = new Matt("matt");
 
+			case 'target-practice':
+				songPlayer = new MattAngry();
+
 			case 'lo-fight' | 'overhead':
 				songPlayer = new Whitty('whitty');
 

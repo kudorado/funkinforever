@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:62b553742028856f67a63da57dd340d8:2507d0cb0ea9afb31bf5967920f13ad6:d706fe939fc0a1afc5467765e364c601$ -->
+<TextureAtlas imagePath="solazar.png" width="4087" height="3637">
+    <SubTexture name="Sol_Down MISS0000" x="2206" y="1" width="692" height="668" frameX="0" frameY="-109" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0000" x="2900" y="1" width="692" height="668" frameX="0" frameY="-109" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0001" x="2900" y="1" width="692" height="668" frameX="0" frameY="-109" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0002" x="2059" y="671" width="685" height="716" frameX="0" frameY="-61" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0003" x="2059" y="671" width="685" height="716" frameX="0" frameY="-61" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0004" x="1471" y="1389" width="682" height="721" frameX="-1" frameY="-56" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0005" x="1471" y="1389" width="682" height="721" frameX="-1" frameY="-56" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0006" x="1" y="2859" width="683" height="740" frameX="0" frameY="-37" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0007" x="1" y="2859" width="683" height="740" frameX="0" frameY="-37" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0008" x="686" y="2859" width="683" height="742" frameX="0" frameY="-35" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0009" x="686" y="2859" width="683" height="742" frameX="0" frameY="-35" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0010" x="686" y="2859" width="683" height="742" frameX="0" frameY="-35" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0011" x="686" y="2859" width="683" height="742" frameX="0" frameY="-35" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0012" x="686" y="2859" width="683" height="742" frameX="0" frameY="-35" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0013" x="686" y="2859" width="683" height="742" frameX="0" frameY="-35" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Down0014" x="686" y="2859" width="683" height="742" frameX="0" frameY="-35" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20000" x="1" y="2123" width="409" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20001" x="1" y="2123" width="409" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20002" x="412" y="2123" width="409" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20003" x="412" y="2123" width="409" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20004" x="2824" y="1389" width="405" height="732" frameX="0" frameY="-45" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20005" x="2824" y="1389" width="405" height="732" frameX="0" frameY="-45" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20006" x="823" y="2123" width="399" height="734" frameX="-1" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20007" x="823" y="2123" width="399" height="734" frameX="-1" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20008" x="1224" y="2123" width="397" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20009" x="1224" y="2123" width="397" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20010" x="1623" y="2123" width="397" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20011" x="1623" y="2123" width="397" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20012" x="2022" y="2123" width="397" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20013" x="2022" y="2123" width="397" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20014" x="3231" y="1389" width="409" height="732" frameX="0" frameY="-45" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20015" x="3231" y="1389" width="409" height="732" frameX="0" frameY="-45" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20016" x="2421" y="2123" width="409" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20017" x="2421" y="2123" width="409" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20018" x="2832" y="2123" width="405" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20019" x="2832" y="2123" width="405" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20020" x="3239" y="2123" width="400" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20021" x="3239" y="2123" width="400" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20022" x="3642" y="1389" width="397" height="732" frameX="0" frameY="-45" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20023" x="3642" y="1389" width="397" height="732" frameX="0" frameY="-45" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20024" x="3641" y="2123" width="405" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20025" x="3641" y="2123" width="405" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20026" x="1224" y="2123" width="397" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Idle_20027" x="1224" y="2123" width="397" height="734" frameX="0" frameY="-43" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left MISS0000" x="2746" y="671" width="669" height="716" frameX="0" frameY="-61" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0000" x="3417" y="671" width="669" height="716" frameX="0" frameY="-61" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0001" x="3417" y="671" width="669" height="716" frameX="0" frameY="-61" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0002" x="2155" y="1389" width="667" height="725" frameX="-1" frameY="-52" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0003" x="2155" y="1389" width="667" height="725" frameX="-1" frameY="-52" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0004" x="736" y="671" width="661" height="703" frameX="-1" frameY="-74" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0005" x="736" y="671" width="661" height="703" frameX="-1" frameY="-74" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0006" x="1399" y="671" width="658" height="710" frameX="0" frameY="-67" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0007" x="1399" y="671" width="658" height="710" frameX="0" frameY="-67" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0008" x="1399" y="671" width="658" height="710" frameX="0" frameY="-67" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0009" x="1399" y="671" width="658" height="710" frameX="0" frameY="-67" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0010" x="1399" y="671" width="658" height="710" frameX="0" frameY="-67" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0011" x="1399" y="671" width="658" height="710" frameX="0" frameY="-67" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0012" x="1399" y="671" width="658" height="710" frameX="0" frameY="-67" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0013" x="1399" y="671" width="658" height="710" frameX="0" frameY="-67" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Left0014" x="1399" y="671" width="658" height="710" frameX="0" frameY="-67" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right MISS0000" x="1" y="1" width="733" height="656" frameX="0" frameY="-121" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0000" x="736" y="1" width="733" height="656" frameX="0" frameY="-121" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0001" x="736" y="1" width="733" height="656" frameX="0" frameY="-121" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0002" x="1471" y="1" width="733" height="664" frameX="0" frameY="-113" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0003" x="1471" y="1" width="733" height="664" frameX="0" frameY="-113" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0004" x="1" y="671" width="733" height="693" frameX="0" frameY="-84" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0005" x="1" y="671" width="733" height="693" frameX="0" frameY="-84" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0006" x="1" y="1389" width="733" height="716" frameX="0" frameY="-61" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0007" x="1" y="1389" width="733" height="716" frameX="0" frameY="-61" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0008" x="736" y="1389" width="733" height="718" frameX="0" frameY="-59" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0009" x="736" y="1389" width="733" height="718" frameX="0" frameY="-59" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0010" x="736" y="1389" width="733" height="718" frameX="0" frameY="-59" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0011" x="736" y="1389" width="733" height="718" frameX="0" frameY="-59" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0012" x="736" y="1389" width="733" height="718" frameX="0" frameY="-59" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0013" x="736" y="1389" width="733" height="718" frameX="0" frameY="-59" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Right0014" x="736" y="1389" width="733" height="718" frameX="0" frameY="-59" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up MISS0000" x="1796" y="2859" width="429" height="765" frameX="0" frameY="-12" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0000" x="2227" y="2859" width="429" height="765" frameX="0" frameY="-12" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0001" x="2227" y="2859" width="429" height="765" frameX="0" frameY="-12" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0002" x="1371" y="2859" width="423" height="763" frameX="0" frameY="-14" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0003" x="1371" y="2859" width="423" height="763" frameX="0" frameY="-14" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0004" x="3454" y="2859" width="407" height="777" frameX="0" frameY="0" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0005" x="3454" y="2859" width="407" height="777" frameX="0" frameY="0" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0006" x="3054" y="2859" width="398" height="776" frameX="0" frameY="-1" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0007" x="3054" y="2859" width="398" height="776" frameX="0" frameY="-1" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0008" x="2658" y="2859" width="394" height="774" frameX="-1" frameY="-3" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0009" x="2658" y="2859" width="394" height="774" frameX="-1" frameY="-3" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0010" x="2658" y="2859" width="394" height="774" frameX="-1" frameY="-3" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0011" x="2658" y="2859" width="394" height="774" frameX="-1" frameY="-3" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0012" x="2658" y="2859" width="394" height="774" frameX="-1" frameY="-3" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0013" x="2658" y="2859" width="394" height="774" frameX="-1" frameY="-3" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0014" x="2658" y="2859" width="394" height="774" frameX="-1" frameY="-3" frameWidth="733" frameHeight="777"/>
+    <SubTexture name="Sol_Up0015" x="2658" y="2859" width="394" height="774" frameX="-1" frameY="-3" frameWidth="733" frameHeight="777"/>
+</TextureAtlas>

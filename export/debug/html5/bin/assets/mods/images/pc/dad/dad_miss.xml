@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:1fcfa035d66e04e4e995588a7bbf97ee:7d5e6625e9ff7f400a25a1c0525d11ba:833512318b3f516de7215b8f4a2ba6e8$ -->
+<TextureAtlas imagePath="dad_miss.png" width="878" height="1599">
+    <SubTexture name="Dad Miss Note DOWN0000" x="1" y="1" width="470" height="732" frameX="0" frameY="-4" frameWidth="470" frameHeight="736"/>
+    <SubTexture name="Dad Miss Note LEFT0000" x="1" y="780" width="465" height="793"/>
+    <SubTexture name="Dad Miss Note RIGHT0000" x="473" y="1" width="372" height="777" frameX="0" frameY="0" frameWidth="382" frameHeight="777"/>
+    <SubTexture name="Dad Miss note UP0000" x="468" y="780" width="409" height="818"/>
+</TextureAtlas>

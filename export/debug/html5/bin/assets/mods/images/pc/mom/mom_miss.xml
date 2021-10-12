@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:f588e12c3f37ed657edc8cdac1edaa03:79abaaa8044184ad1e2a6b3c633d0e84:e73a677be7e4b7187e2b0065ae4b929d$ -->
+<TextureAtlas imagePath="mom_miss.png" width="1989" height="1989">
+    <SubTexture name="MOM DOWN POSE miss0000" x="1" y="1" width="411" height="613" frameX="-3" frameY="0" frameWidth="414" frameHeight="613"/>
+    <SubTexture name="Mom Pose Left miss0000" x="820" y="1" width="578" height="771"/>
+    <SubTexture name="Mom Right Pose miss0000" x="1" y="774" width="603" height="817" frameX="0" frameY="0" frameWidth="606" frameHeight="817"/>
+    <SubTexture name="Mom Up Pose miss0000" x="1204" y="774" width="393" height="849" frameX="0" frameY="-8" frameWidth="394" frameHeight="863"/>
+</TextureAtlas>

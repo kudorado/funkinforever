@@ -17,6 +17,7 @@ class Matt extends SongPlayer
 		bg.active = true;
 		playState.add(bg);
 	}
+
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/matt/matt_assets', "mods");
@@ -45,12 +46,12 @@ class Matt extends SongPlayer
 	{
 		dad.addOffset("idle", 0, 0);
 		
-		dad.addOffset("singUP", 0, 20);
-		dad.addOffset("singRIGHT", -15, -20);
-		dad.addOffset("singLEFT", 30, -40);
-		dad.addOffset("singDOWN", 0, -20);
+		dad.addOffset("singUP", -48, 15);
+		dad.addOffset("singRIGHT", -6, -23);
+		dad.addOffset("singLEFT", 49, -40);
+		dad.addOffset("singDOWN", -59, -25);
+		
 		dad.dance();
-
 	}
 
 	override function createCharacters()
@@ -65,8 +66,8 @@ class Matt extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('bg/matt/iconGrid', "mods"), true, 150, 150);
-		icon.animation.add('dad', [23, 24], 0, false, false);
+		icon.loadGraphic(Paths.image('bg/matt/iconGrid', "mods"), true, 150, 132);
+		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
 }

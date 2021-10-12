@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:7af67dc60f0a4180ddff171ff517d0d7:c5eb30c5d8344a23ca4c023b53ad4903:bc1a6eb80c3c5552dab205e690bf06f0$ -->
+<TextureAtlas imagePath="bg.png" width="3606" height="3385">
+    <SubTexture name="Stage0000" x="1" y="1" width="1200" height="675"/>
+    <SubTexture name="Stage0001" x="1203" y="1" width="1200" height="675"/>
+    <SubTexture name="Stage0002" x="2405" y="1" width="1200" height="675"/>
+    <SubTexture name="Stage0003" x="1" y="678" width="1200" height="675"/>
+    <SubTexture name="Stage0004" x="1203" y="678" width="1200" height="675"/>
+    <SubTexture name="Stage0005" x="2405" y="678" width="1200" height="675"/>
+    <SubTexture name="Stage0006" x="1" y="1355" width="1200" height="675"/>
+    <SubTexture name="Stage0007" x="1203" y="1355" width="1200" height="675"/>
+    <SubTexture name="Stage0008" x="2405" y="1355" width="1200" height="675"/>
+    <SubTexture name="Stage0009" x="1" y="2032" width="1200" height="675"/>
+    <SubTexture name="Stage0010" x="1203" y="2032" width="1200" height="675"/>
+    <SubTexture name="Stage0011" x="2405" y="2032" width="1200" height="675"/>
+    <SubTexture name="Stage0012" x="1" y="2709" width="1200" height="675"/>
+    <SubTexture name="Stage0013" x="2405" y="2032" width="1200" height="675"/>
+    <SubTexture name="Stage0014" x="1203" y="2032" width="1200" height="675"/>
+    <SubTexture name="Stage0015" x="1" y="2032" width="1200" height="675"/>
+    <SubTexture name="Stage0016" x="2405" y="1355" width="1200" height="675"/>
+    <SubTexture name="Stage0017" x="1203" y="1355" width="1200" height="675"/>
+    <SubTexture name="Stage0018" x="1" y="1355" width="1200" height="675"/>
+    <SubTexture name="Stage0019" x="2405" y="678" width="1200" height="675"/>
+    <SubTexture name="Stage0020" x="1203" y="678" width="1200" height="675"/>
+    <SubTexture name="Stage0021" x="1" y="678" width="1200" height="675"/>
+    <SubTexture name="Stage0022" x="2405" y="1" width="1200" height="675"/>
+    <SubTexture name="Stage0023" x="1203" y="1" width="1200" height="675"/>
+</TextureAtlas>

@@ -1028,6 +1028,8 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_mom_mom_miss_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_agoticrazy_alt_agoti_sprites_b_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_agoticrazy_alt_agoti_sprites_b_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_mattangry_mattangry_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_mattangry_mattangry_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_dadangel_dad_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_dadangel_dad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_gf_skins_tabimad_postexpgf_assets_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1210,8 +1212,6 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_swordfight_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_icongrid_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_railing_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_mattangry_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_mattangry_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_boxingnight3_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_garcello_garsmoke_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_garcello_garsmoke_xml extends null { }
@@ -2258,6 +2258,8 @@ null
 @:keep @:file("assets/mods/images/pc/mom/mom_miss.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_mom_mom_miss_xml extends haxe.io.Bytes {}
 @:keep @:image("assets/mods/images/pc/agoticrazy/Alt_Agoti_Sprites_B.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_agoticrazy_alt_agoti_sprites_b_png extends lime.graphics.Image {}
 @:keep @:file("assets/mods/images/pc/agoticrazy/Alt_Agoti_Sprites_B.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_agoticrazy_alt_agoti_sprites_b_xml extends haxe.io.Bytes {}
+@:keep @:image("assets/mods/images/pc/mattangry/mattangry.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_mattangry_mattangry_png extends lime.graphics.Image {}
+@:keep @:file("assets/mods/images/pc/mattangry/mattangry.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_mattangry_mattangry_xml extends haxe.io.Bytes {}
 @:keep @:file("assets/mods/images/pc/dadangel/dad.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_dadangel_dad_xml extends haxe.io.Bytes {}
 @:keep @:image("assets/mods/images/pc/dadangel/dad.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_pc_dadangel_dad_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/gf_skins/tabimad/PostExpGF_Assets.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_gf_skins_tabimad_postexpgf_assets_png extends lime.graphics.Image {}
@@ -2440,8 +2442,6 @@ null
 @:keep @:image("assets/mods/images/bg/matt/swordfight.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_swordfight_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/matt/iconGrid.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_icongrid_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/matt/railing.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_railing_png extends lime.graphics.Image {}
-@:keep @:image("assets/mods/images/bg/matt/mattangry.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_mattangry_png extends lime.graphics.Image {}
-@:keep @:file("assets/mods/images/bg/matt/mattangry.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_mattangry_xml extends haxe.io.Bytes {}
 @:keep @:image("assets/mods/images/bg/matt/boxingnight3.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_matt_boxingnight3_png extends lime.graphics.Image {}
 @:keep @:image("assets/mods/images/bg/garcello/garSmoke.png") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_garcello_garsmoke_png extends lime.graphics.Image {}
 @:keep @:file("assets/mods/images/bg/garcello/garSmoke.xml") @:noCompletion #if display private #end class __ASSET__assets_mods_images_bg_garcello_garsmoke_xml extends haxe.io.Bytes {}

@@ -119,7 +119,7 @@ class SongManager
 				folder: 'week_matt',
 				character: 'matt',
 				songTitle: 'V.S Matt',
-				songList: ['Light-it-up', 'Ruckus', 'Target-practicle']
+				songList: ['Light-it-up', 'Ruckus', 'Target-practice']
 			}
 		),
 
@@ -139,7 +139,7 @@ class SongManager
 			{
 				folder: 'week_bob',
 				character: 'bob',
-				songTitle: 'V.S Miku',
+				songTitle: 'V.S Bob',
 				songList: ['Sunshine', 'Withered', 'Run', "Ron", "Trouble", "Onslaught", "Little-man"]
 			}
 		),
