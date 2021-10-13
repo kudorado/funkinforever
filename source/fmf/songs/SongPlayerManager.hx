@@ -180,9 +180,6 @@ class SongPlayerManager
 			case 'nene':
 				songPlayer = new Nene();
 
-			case 'disappearance':
-				songPlayer = new MikuMad();
-
 			case 'tord':
 				songPlayer = new Tord();
 
@@ -239,6 +236,13 @@ class SongPlayerManager
 
 			case 'godrays':
 				songPlayer = new Solazar();
+
+			case 'popipo' | 'siu' |'chug' | 'aishite':
+				songPlayer = new Miku();
+
+			case 'disappearance':
+				songPlayer = new MikuMad();
+
 
 
 		}

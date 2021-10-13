@@ -11,10 +11,27 @@ using StringTools;
 
 class Miku extends SongPlayer
 {
-	
-	public  override function loadMap()
+	var simp:FlxSprite; 
+
+	override function loadMap()
 	{
-		super.loadMap();
+		playState.defaultCamZoom = 0.8;
+		var bg:FlxSprite = new FlxSprite(-275, -300).loadGraphic(Paths.image('bg/miku/stageback', "mods"));
+		bg.antialiasing = true;
+		bg.scrollFactor.set(0.9, 0.9);
+
+		bg.setGraphicSize(Std.int(bg.width * 1.25));
+
+		bg.active = true;
+		playState.add(bg);
+
+		var hallowTex = Paths.getSparrowAtlas('bg/miku/bunch_of_simps', 'mods');
+		
+		simp = new FlxSprite(-200, 300);
+		simp.frames = hallowTex;
+		simp.animation.addByPrefix('idle', 'Downer Crowd Bob0');
+		simp.animation.play('idle');
+		simp.antialiasing = true;
 
 	}
 
@@ -52,6 +69,32 @@ class Miku extends SongPlayer
 		dad.flipX = true;
 
 	}
-	
 
+	override function createBF()
+	{
+		super.createBF();
+		bf.y -= 350;
+		bf.x += 50;
+	}
+
+	override function createDad()
+	{
+	
+		super.createDad();
+		dad.x -= 350;
+		dad.y -= 400;
+
+	}
+
+	override function createGF()
+	{
+		super.createGF();
+		gf.y -= 400;
+	}
+
+	override function createCharacters()
+	{
+		super.createCharacters();
+		playState.add(simp);
+	}
 }

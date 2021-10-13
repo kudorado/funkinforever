@@ -129,7 +129,7 @@ class SongManager
 				folder: 'week_miku',
 				character: 'miku',
 				songTitle: 'V.S Miku',
-				songList: ['Popipo', 'Chug', 'Siu', "Aishite", "Disappearance"]
+				songList: ['Popipo', "Aishite", 'Siu', "Disappearance", 'Chug']
 			}
 		),
 

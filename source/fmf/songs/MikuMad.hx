@@ -6,7 +6,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class MikuMad extends SongPlayer
+class MikuMad extends Miku
 {
     override function getDadTex()
 	{

@@ -669,6 +669,16 @@ null
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_tricky_expurgation_voices_mp3 extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_tricky_madness_inst_mp3 extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_tricky_madness_voices_mp3 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_aishite_inst_mp3 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_aishite_voices_mp3 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_siu_inst_mp3 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_siu_voices_mp3 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_chug_inst_mp3 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_chug_voices_mp3 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_popipo_inst_mp3 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_popipo_voices_mp3 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_disappearance_inst_mp3 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_disappearance_voices_mp3 extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_sarv_casanova_inst_mp3 extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_sarv_casanova_voices_mp3 extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_week_sarv_worship_inst_mp3 extends null { }
@@ -1899,6 +1909,16 @@ null
 @:keep @:file("assets/songs/week_tricky/expurgation/Voices.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_tricky_expurgation_voices_mp3 extends haxe.io.Bytes {}
 @:keep @:file("assets/songs/week_tricky/madness/Inst.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_tricky_madness_inst_mp3 extends haxe.io.Bytes {}
 @:keep @:file("assets/songs/week_tricky/madness/Voices.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_tricky_madness_voices_mp3 extends haxe.io.Bytes {}
+@:keep @:file("assets/songs/week_miku/aishite/Inst.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_aishite_inst_mp3 extends haxe.io.Bytes {}
+@:keep @:file("assets/songs/week_miku/aishite/Voices.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_aishite_voices_mp3 extends haxe.io.Bytes {}
+@:keep @:file("assets/songs/week_miku/siu/Inst.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_siu_inst_mp3 extends haxe.io.Bytes {}
+@:keep @:file("assets/songs/week_miku/siu/Voices.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_siu_voices_mp3 extends haxe.io.Bytes {}
+@:keep @:file("assets/songs/week_miku/chug/Inst.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_chug_inst_mp3 extends haxe.io.Bytes {}
+@:keep @:file("assets/songs/week_miku/chug/Voices.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_chug_voices_mp3 extends haxe.io.Bytes {}
+@:keep @:file("assets/songs/week_miku/popipo/Inst.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_popipo_inst_mp3 extends haxe.io.Bytes {}
+@:keep @:file("assets/songs/week_miku/popipo/Voices.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_popipo_voices_mp3 extends haxe.io.Bytes {}
+@:keep @:file("assets/songs/week_miku/disappearance/Inst.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_disappearance_inst_mp3 extends haxe.io.Bytes {}
+@:keep @:file("assets/songs/week_miku/disappearance/Voices.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_miku_disappearance_voices_mp3 extends haxe.io.Bytes {}
 @:keep @:file("assets/songs/week_sarv/casanova/Inst.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_sarv_casanova_inst_mp3 extends haxe.io.Bytes {}
 @:keep @:file("assets/songs/week_sarv/casanova/Voices.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_sarv_casanova_voices_mp3 extends haxe.io.Bytes {}
 @:keep @:file("assets/songs/week_sarv/worship/Inst.mp3") @:noCompletion #if display private #end class __ASSET__assets_songs_week_sarv_worship_inst_mp3 extends haxe.io.Bytes {}
