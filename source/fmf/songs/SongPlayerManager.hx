@@ -242,11 +242,21 @@ class SongPlayerManager
 
 			case 'disappearance':
 				songPlayer = new MikuMad();
+
 			case 'sunshine':
 				songPlayer = new Bob();
 
+			case 'withered':
+				songPlayer = new BobAngry();
 
+			case 'ron':
+				songPlayer = new Bob();
+			
+			case 'trouble':
+				songPlayer = new Bob();
 
+			case 'onslaught':
+				songPlayer = new Bob();
 		}
 
 		return songPlayer;
