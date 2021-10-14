@@ -6,12 +6,12 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class BobSmall extends SongPlayer	
+class BobAngry extends SongPlayer	
 {
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/littleman/Small_Guy', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/bobangry/angrybob_asset', 'mods');
 		dad.frames = tex;
 	}
 
@@ -20,14 +20,14 @@ class BobSmall extends SongPlayer
 
 		playState.defaultCamZoom = 0.75;
 
-		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bob/happysky', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/nothappy_sky', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 2;
 		bg.scale.x = 2;
 		playState.add(bg);
 
 
-		var stageFront:FlxSprite = new FlxSprite(-650, -600).loadGraphic(Paths.image('bob/nothappy_ground', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(-650, -600).loadGraphic(Paths.image('bg/bob/slightlyannyoed_ground', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
@@ -40,11 +40,11 @@ class BobSmall extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'idle', 18, false);
-		animation.addByPrefix('singUP', 'up', 24, false);
-		animation.addByPrefix('singRIGHT', 'right', 24, false);
-		animation.addByPrefix('singLEFT', 'left', 24, false);
-		animation.addByPrefix('singDOWN', 'down', 24, false);
+		animation.addByPrefix('idle', 'bob_idle00', 18, false);
+		animation.addByPrefix('singUP', 'bob_UP00', 24, false);
+		animation.addByPrefix('singRIGHT', 'bob_RIGHT00', 24, false);
+		animation.addByPrefix('singLEFT', 'bob_LEFT00', 24, false);
+		animation.addByPrefix('singDOWN', 'bob_DOWN00', 24, false);
 		dad.animation = animation;
 
 	}
@@ -62,22 +62,24 @@ class BobSmall extends SongPlayer
 		dad.scale.x = 0.75;
 		dad.scale.y = 0.75;
 
-		dad.x -= 300;
-		dad.y += 350;
-	
+		dad.x -= 400;
+		
+
+		dad.flipX = true;
 	}
 
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
+		
+		bf.x += 250;
 		bf.y -= 150;
-		bf.x += 200;
 	}
 
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
-		gf.y -= 150;
+		gf.y -= 200;
 	}
 
 	override function updateCamFollowBF()
@@ -91,14 +93,14 @@ class BobSmall extends SongPlayer
 	{
 
 		playState.camFollow.y = dad.getGraphicMidpoint().y - 200;
-		playState.camFollow.x = dad.getGraphicMidpoint().x + 350;
+		playState.camFollow.x = dad.getGraphicMidpoint().x + 450;
 
 	}
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
-		icon.animation.add('dad', [0, 1], 0, false, false);
+		icon.loadGraphic(Paths.image('bg/bob/iconGrid', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [26, 27], 0, false, false);
 		icon.animation.play("dad");
 	}
 
