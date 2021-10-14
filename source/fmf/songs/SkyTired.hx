@@ -55,7 +55,7 @@ class SkyTired extends Sky
 		dad.addOffset("singUP", 0, 0);
 		dad.addOffset("singRIGHT", 0, 0);
 		dad.addOffset("singLEFT", 0, 0);
-		dad.addOffset("singDOWN", 0, 0);
+		dad.ad dOffset("singDOWN", 0, 0);
 
 		dad.dance();
 		dad.flipX = true;
@@ -76,7 +76,7 @@ class SkyTired extends Sky
 
 				
 
-			case 126:
+			case 125:
 
 				changeDad("sky-angry");
 				dad.playAnim('grr', true);
@@ -88,7 +88,7 @@ class SkyTired extends Sky
 				dad.y += 25;
 
 				
-			case 191 | 254 | 270:
+			case 190 | 253 | 270:
 				dad.playAnim('huh', true);
 				dad.lockAnim(0.5, function()
 				{
@@ -97,7 +97,7 @@ class SkyTired extends Sky
 
 			case 286:
 				dad.playAnim('ugh', true);
-				dad.lockAnim(0.5, function()
+				dad.lockAnim(1, function()
 				{
 					dad.dance();
 				});

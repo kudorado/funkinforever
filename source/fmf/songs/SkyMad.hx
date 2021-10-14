@@ -33,7 +33,7 @@ class SkyMad extends SongPlayer
 
 		bg.x += 400;
 
-		bg.y += 250;
+		bg.y += 300;
 
 		playState.add(bg);
 	}
@@ -72,7 +72,7 @@ class SkyMad extends SongPlayer
 		dad.addOffset("singDOWN-alt", 0, 0);
 
 		dad.x -= 250;
-		dad.y += 100;
+		dad.y += 85;
 
 		dad.scale.x = 1.25;
 		dad.scale.y = 1.25;
