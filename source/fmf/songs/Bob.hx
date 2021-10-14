@@ -22,8 +22,8 @@ class Bob extends SongPlayer
 
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/bob/happysky', 'mods'));
 		bg.antialiasing = true;
-		bg.scale.y = 1.7;
-		bg.scale.x = 1.7;
+		bg.scale.y = 2;
+		bg.scale.x = 2;
 		playState.add(bg);
 
 
@@ -58,7 +58,7 @@ class Bob extends SongPlayer
 		dad.addOffset("singDOWN", -14, -8);
 		dad.dance();
 
-		dad.x -= 300;
+		dad.x -= 350;
 		dad.y += 100;
 		dad.flipX = true;
 	}
@@ -70,4 +70,12 @@ class Bob extends SongPlayer
 		icon.animation.play("dad");
 	}
 
+	public override function createGF() {
+		super.createGF();
+		gf.y -= 100;
+	}
+	public override function createBF() {
+		super.createBF();
+		bf.x += 220;
+	}
 }
