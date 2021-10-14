@@ -471,9 +471,6 @@ class PcManager
 		}),
 
 
-
-
-
 	];
 
 	public static function getPc(pcName:String):PlayableCharacter

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:d539a033d8e8703d03dcadf1042925af:0bd5711e8d7726e13511eff248bd8bb8:3854a2cd3d412e3571cc23358b0f3b9c$ -->
+<TextureAtlas imagePath="bg_normal.png" width="4000" height="2200">
+    <SubTexture name="Bg0000" x="1" y="1" width="1998" height="1098"/>
+    <SubTexture name="Bg0001" x="2001" y="1" width="1998" height="1098"/>
+    <SubTexture name="Bg0002" x="1" y="1101" width="1998" height="1098"/>
+    <SubTexture name="Bg0003" x="2001" y="1101" width="1998" height="1098"/>
+    <SubTexture name="Bg0004" x="2001" y="1101" width="1998" height="1098"/>
+    <SubTexture name="Bg0005" x="2001" y="1101" width="1998" height="1098"/>
+    <SubTexture name="Bg0006" x="2001" y="1101" width="1998" height="1098"/>
+    <SubTexture name="Bg0007" x="1" y="1101" width="1998" height="1098"/>
+</TextureAtlas>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:db4167b3bd5ca5c19d0fcf1668563be3:876e2eff6a87d38dd20eccfe2216b61d:71bb0d217d96eb4a32122315dda573e7$ -->
+<TextureAtlas imagePath="bg_annoyed.png" width="4000" height="3300">
+    <SubTexture name="Bg20000" x="1" y="1" width="1998" height="1098"/>
+    <SubTexture name="Bg20001" x="2001" y="1" width="1998" height="1098"/>
+    <SubTexture name="Bg20002" x="1" y="1101" width="1998" height="1098"/>
+    <SubTexture name="Bg20003" x="2001" y="1101" width="1998" height="1098"/>
+    <SubTexture name="Bg20004" x="2001" y="1101" width="1998" height="1098"/>
+    <SubTexture name="Bg20005" x="2001" y="1101" width="1998" height="1098"/>
+    <SubTexture name="Bg20006" x="2001" y="1101" width="1998" height="1098"/>
+    <SubTexture name="Bg20007" x="1" y="2201" width="1998" height="1098"/>
+</TextureAtlas>

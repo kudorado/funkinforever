@@ -15,25 +15,23 @@ class Sky extends SongPlayer
 		dad.frames = tex;
 	}
 
-
 	override function loadMap()
 	{
-		var daBG = PlayState.CURRENT_SONG == 'wocky' ? "stageback" : 'sunset';
+		playState.defaultCamZoom = 0.8;
 
+		var hallowTex = Paths.getSparrowAtlas('bg/sky/bg_normal', 'mods');
+		var bg = new FlxSprite(-200, -300);
 
-		var bg:FlxSprite = new FlxSprite(-500, -200).loadGraphic(Paths.image('kapi/' + daBG, 'mods'));
+		bg.frames = hallowTex;
+		bg.animation.addByPrefix('idle', 'Bg0', 12, true);
+		bg.animation.play('idle');
 		bg.antialiasing = true;
-		bg.scrollFactor.set(0.9, 0.9);
-		bg.active = false;
+
+		bg.scale.x = 2;
+		bg.scale.y = 2;
+
 		playState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(-400, 550).loadGraphic(Paths.image('kapi/stagefront', 'mods'));
-		stageFront.setGraphicSize(Std.int(stageFront.width * 1));
-		stageFront.updateHitbox();
-		stageFront.antialiasing = true;
-		stageFront.scrollFactor.set(0.9, 0.9);
-		playState.add(stageFront);
-		
 	}
 
 	override function createDadAnimations():Void
@@ -56,77 +54,26 @@ class Sky extends SongPlayer
 		dad.addOffset("singLEFT", 0, 0);
 		dad.addOffset("singDOWN", 0, 0);
 
-		dad.scale.x = 2;
-		dad.scale.y = 2;
-
 		dad.dance();
-
-	}
-
-	override function getGFTex():Void
-	{
-		var tex = Paths.getSparrowAtlas('kapi/GF_assets', 'mods');
-		gf.frames = tex;
-
-	}
-
-	override function createGFAnimations()
-	{
-		var animation = gf.animation;
-		animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 	
-		gf.animation = animation;
 	}
-
-	override function createGFAnimationOffsets()
-	{
-
-		gf.addOffset('danceLeft', 0, -9);
-		gf.addOffset('danceRight', 0, -9);
-
-		gf.scale.x = 0.65; 
-		gf.scale.y = 0.65;
-
-		gf.y -= 50;	
-		gf.x += 75;	
-
-	}
-
+	
 	override function createDad()
 	{
-        dad = new Dad(0, 125);
-		getDadTex();
-		createDadAnimations();
-		createDadAnimationOffsets();
-		dad.dance();
-
-		dad.x += 125;
-		dad.y += 185;
-
-		dad.scale.x = 0.65;
-		dad.scale.y = 0.65;
-
-		dad.scrollFactor.set(0.95, 0.95);
-    }
-
-	override function createBFAnimationOffsets()
-	{
-
-		bf.x += 100;
-		bf.y += 50;
-
-		bf.scale.x *= 0.75;
-		bf.scale.y *= 0.75;
-
-		super.createBFAnimationOffsets();
+		super.createDad();
+		dad.x -= 250;
+		dad.y += 75;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	override function createBF()
 	{
-		icon.loadGraphic(Paths.image('kapi/iconGrid', 'mods'), true, 150, 150);
-		icon.animation.add('dad', [12, 13], 0, false, false);
-		icon.animation.play("dad");
+		super.createBF();
+		bf.x += 100;
+	}
+	override function createGF()
+	{
+		super.createGF();
+		gf.y -= 100;
 	}
 
 }

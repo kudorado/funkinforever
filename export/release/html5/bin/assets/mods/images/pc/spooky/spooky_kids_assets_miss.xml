@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:4e61949ec69b56f0eadefe6469fa813c:395c643ee29296501c0c5bb0fc9bc71a:b383a7224ff6cbd1c8e94286a7c30d5a$ -->
-<TextureAtlas imagePath="spooky_kids_assets.png" width="959" height="1099">
-    <SubTexture name="Note sing left MISS0000" x="1" y="527" width="556" height="527"/>
-    <SubTexture name="Spooky DOWN note MISS0000" x="1" y="1" width="463" height="408"/>
-    <SubTexture name="Spooky sing right MISS0000" x="466" y="1" width="442" height="524"/>
-    <SubTexture name="Spooky UP NOTE MISS0000" x="559" y="527" width="399" height="571"/>
-</TextureAtlas>

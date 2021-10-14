@@ -84,6 +84,19 @@ class SongPlayerManager
 			case 'trap':
 				songPlayer = new Trap('sky');
 
+			case  'wife-forever': 
+				songPlayer = new Sky();
+
+			case 'sky':
+				songPlayer = new SkyTired();
+
+			case 'sky-angry':
+				songPlayer = new SkyAngry();
+
+			case 'manifest':
+				songPlayer = new SkyMad();
+
+
 			case 'incident':
 				songPlayer = new Incident();
 
@@ -152,9 +165,6 @@ class SongPlayerManager
 
 			case 'miku':
 				return new Miku();
-
-			case 'sky':
-				return new Sky();
 
 			case 'hdsenpaimad':
 				return new HDSenpaiMad();

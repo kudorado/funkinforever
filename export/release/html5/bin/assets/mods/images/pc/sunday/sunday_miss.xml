@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:b26f9ad2cc0bc110d4e9a25a0f387c03:66c09b6444e9ccfa8e952854394e8ff7:4bd3cee82fb60a81cc5d2201c223bd07$ -->
-<TextureAtlas imagePath="sunday_miss.png" width="1763" height="825">
-    <SubTexture name="Dad Sing Note DOWN MISS0000" x="1" y="1" width="483" height="733"/>
-    <SubTexture name="Dad Sing Note LEFT MISS0000" x="486" y="1" width="486" height="799"/>
-    <SubTexture name="Dad Sing Note RIGHT MISS0000" x="974" y="1" width="368" height="781"/>
-    <SubTexture name="Dad Sing Note UP MISS0000" x="1344" y="1" width="418" height="823"/>
-</TextureAtlas>

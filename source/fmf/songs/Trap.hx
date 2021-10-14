@@ -48,7 +48,7 @@ class Trap extends Trueform
 		hole.animation.play('shit', true);
 
 		
-		var hallowTex = Paths.getSparrowAtlas('bg/trueform/sky/bg', 'mods');
+		var hallowTex = Paths.getSparrowAtlas('bg/sky/bg', 'mods');
 		var bg = new FlxSprite(-200, -200);
 		bg.frames = hallowTex;
 		bg.animation.addByPrefix('idle', 'Bg_manifest0');

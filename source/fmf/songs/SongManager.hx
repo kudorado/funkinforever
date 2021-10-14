@@ -212,12 +212,11 @@ class SongManager
 				folder: 'week_sky',
 				character: 'sky',
 				songTitle: 'V.S Sky',
-				songList: ['Wifeforever', 'Sky', 'Manifest']
+				songList: ['Wife-forever', 'Sky', 'Manifest']
 			}
 		),
 
 	];
 //-----------------------------------------------------------
-
 
 }
