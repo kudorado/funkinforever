@@ -6,47 +6,45 @@ import flixel.FlxSprite;
 import fmf.characters.*;
 import Song.SwagSong;
 
-class Run extends Trueform
+class Run extends SongPlayer
 {
 
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('trueform/bob/GF', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/bobismad/hellbob_assets', 'mods');
 		dad.frames = tex;
 	}
 
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.9;
+		playState.defaultCamZoom = 0.7;
 
-		hole = new FlxSprite(-650, 600);
-		hole.loadGraphic(Paths.image('trueform/trollge/gfshit', 'mods'), true, 512, 512);
-		hole.scrollFactor.set(0.9, 0.9);
-
-		hole.animation.add('shit', getArray(5, 16), 16, true);
-		hole.animation.play('shit', true);
-		
-		var bg:FlxSprite = new FlxSprite(0, -100).loadGraphic(Paths.image('trueform/bob/bg', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/hell', 'mods'));
 		bg.antialiasing = true;
-		bg.scrollFactor.set(0.9, 0.9);
-		bg.scale.x = 1.5;	
 		bg.scale.y = 1.5;
-
+		bg.scale.x = 1.5;
 		playState.add(bg);
 
-		var bg1:FlxSprite = new FlxSprite(-200, 200).loadGraphic(Paths.image('trueform/bob/fg', 'mods'));
-		bg1.antialiasing = true;
-		bg1.scrollFactor.set(0.9, 0.9);
+		var bgmid:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/middlething', 'mods'));
+		bgmid.antialiasing = true;
+		bgmid.scale.y = 1.5;
+		bgmid.scale.x = 1.5;
+		playState.add(bgmid);
 
-		bg1.y -= 250;
-		playState.add(bg1);
+		var theydead:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/theydead', 'mods'));
+		theydead.antialiasing = true;
+		theydead.scale.y = 1;
+		theydead.scale.x = 1;
+		playState.add(theydead);
 
-		var stageFront:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('trueform/bob/ground', 'mods'));
+
+		var stageFront:FlxSprite = new FlxSprite(-650, -600).loadGraphic(Paths.image('bg/bob/ground', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
+		stageFront.active = false;
 		playState.add(stageFront);
 
 	}
@@ -54,57 +52,66 @@ class Run extends Trueform
 	private override function createDadAnimations()
 	{
 		var animation = dad.animation;
-		animation.addByIndices('singLEFT', 'GF Dancing Beat instance 1', [6], "", 1, false);
-		animation.addByIndices('singRIGHT', 'GF Dancing Beat instance 1', [6], "", 1, false);
-		animation.addByIndices('singUP', 'GF Dancing Beat instance 1', [6], "", 1, false);
-		animation.addByIndices('singDOWN', 'GF Dancing Beat instance 1', [6], "", 1, false);
-
-		animation.addByIndices('danceLeft', 'GF Dancing Beat instance 1', [6], "", 1, false);
-		animation.addByIndices('danceRight', 'GF Dancing Beat instance 1', [6], "", 1, false);
+		animation.addByPrefix('idle', 'bobismad', 18, false);
+		animation.addByPrefix('singUP', 'bobismad', 24, false);
+		animation.addByPrefix('singRIGHT', 'bobismad', 24, false);
+		animation.addByPrefix('singLEFT', 'bobismad', 24, false);
+		animation.addByPrefix('singDOWN', 'bobismad', 24, false);
 		dad.animation = animation;
 	}
 
-	// create dad animation offsets
-	private override function createDadAnimationOffsets()
+	override function createDadAnimationOffsets():Void
 	{
-
-		dad.playAnim('danceRight');
+		dad.addOffset('idle', -7, -2);
+		dad.addOffset("singUP", -15, 4);
+		dad.addOffset("singRIGHT", -6, -1);
+		dad.addOffset("singLEFT", -16, -3);
+		dad.addOffset("singDOWN", -14, -8);
 		dad.dance();
+
+
+		dad.scale.x = 1;
+		dad.scale.y = 1;
+
+		dad.x -= 200;
+		dad.y += 50;
+
+		dad.flipX = true;
 	}
 	
-	
-	override function midSongEventUpdate(curBeat:Int)
+	override function createBFAnimationOffsets()
 	{
-		if (curBeat % playState.gfSpeed == 0 && playState.turn == -1)
-		{
-			playState.shakeNormal();
-		}
+		super.createBFAnimationOffsets();
+		
+		bf.x += 250;
+		bf.y -= 150;
 	}
 
-
-	override function createCharacters()
+	override function createGFAnimationOffsets()
 	{
-		super.createCharacters();
-		bf.alpha = 0.85;
-		dad.alpha = 1;
+		super.createGFAnimationOffsets();
+		gf.y -= 200;
+	}
 
-		// create hell bob over dad
+	override function updateCamFollowBF()
+	{
+		playState.camFollow.y = bf.getGraphicMidpoint().y - 200;
+		playState.camFollow.x = bf.getGraphicMidpoint().x - 300;
 
-		var bob:FlxSprite = new FlxSprite();
+	}
 
-		var tex = Paths.getSparrowAtlas('trueform/bob/hellbob_assets', 'mods');
-		bob.frames = tex;
+	override function updateCamFollowDad()
+	{
 
-		bob.animation.addByPrefix('mad', 'bobismad', 24, true);
+		playState.camFollow.y = dad.getGraphicMidpoint().y - 200;
+		playState.camFollow.x = dad.getGraphicMidpoint().x + 250;
 
-		bob.animation.play('mad');
+	}
 
-		bob.x = dad.x + 35;
-		bob.y = dad.y + 15;
-		bob.scale.x = 0.9;
-		bob.scale.y = 0.9;
-
-		playState.add(bob);
-
+	public override function getDadIcon(icon:HealthIcon)
+	{
+		icon.loadGraphic(Paths.image('bg/bob/iconGrid', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [28, 29], 0, false, false);
+		icon.animation.play("dad");
 	}
 }
