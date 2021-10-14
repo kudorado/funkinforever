@@ -242,6 +242,8 @@ class SongPlayerManager
 
 			case 'disappearance':
 				songPlayer = new MikuMad();
+			case 'sunshine':
+				songPlayer = new Bob();
 
 
 

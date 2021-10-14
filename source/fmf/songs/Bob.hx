@@ -6,7 +6,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class BobSmall extends SongPlayer	
+class Bob extends SongPlayer	
 {
 
     override function getDadTex()
@@ -20,15 +20,15 @@ class BobSmall extends SongPlayer
 
 		playState.defaultCamZoom = 0.75;
 
-		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/ob/happysky', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/bob/happysky', 'mods'));
 		bg.antialiasing = true;
-		bg.scale.y = 2;
-		bg.scale.x = 2;
+		bg.scale.y = 1.7;
+		bg.scale.x = 1.7;
 		playState.add(bg);
 
 
-		var stageFront:FlxSprite = new FlxSprite(-650, -600).loadGraphic(Paths.image('bg/bob/nothappy_ground', 'mods'));
-		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+		var stageFront:FlxSprite = new FlxSprite(-500, -400).loadGraphic(Paths.image('bg/bob/happyground', 'mods'));
+		stageFront.setGraphicSize(Std.int(stageFront.width * 1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
@@ -58,6 +58,9 @@ class BobSmall extends SongPlayer
 		dad.addOffset("singDOWN", -14, -8);
 		dad.dance();
 
+		dad.x -= 300;
+		dad.y += 100;
+		dad.flipX = true;
 	}
 
 	public override function getDadIcon(icon:HealthIcon)
