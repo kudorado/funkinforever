@@ -124,8 +124,8 @@ class SongPlayerManager
 			case 'flatzone':
 				songPlayer = new KapiFan();
 
-			case 'run':
-				songPlayer = new Run();
+			case 'stay':
+				songPlayer = new Stay();
 
 			case 'headache':
 				songPlayer = new Garcello();
@@ -258,6 +258,9 @@ class SongPlayerManager
 
 			case 'withered':
 				songPlayer = new BobAngry();
+
+			case 'run':
+				songPlayer = new Run();
 
 			case 'ron':
 				songPlayer = new Bob();
