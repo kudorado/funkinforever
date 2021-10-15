@@ -200,7 +200,7 @@ class SongManager
 		new SongData
 		(
 			{
-				folder: 'week_solazar',
+				folder: 'week_entity',
 				character: 'daidem',
 				songTitle: 'Entity Origins',
 				songList: ['Experimental-Phase', 'Perfection']

@@ -267,6 +267,9 @@ class SongPlayerManager
 
 			case 'onslaught':
 				songPlayer = new Bob();
+
+			case 'experimental-phase' | 'perfection':
+				songPlayer = new Daidem();
 		}
 
 		return songPlayer;
