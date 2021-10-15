@@ -263,13 +263,13 @@ class SongPlayerManager
 				songPlayer = new Run();
 
 			case 'ron':
-				songPlayer = new Bob();
+				songPlayer = new Ron();
 			
 			case 'trouble':
-				songPlayer = new Bob();
+				songPlayer = new BobIsSuck();
 
 			case 'onslaught':
-				songPlayer = new Bob();
+				songPlayer = new BobIsBlack();
 
 			case 'experimental-phase' | 'perfection':
 				songPlayer = new Daidem();

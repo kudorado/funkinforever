@@ -140,8 +140,8 @@ class SongManager
 				folder: 'week_bob',
 				character: 'bob',
 				songTitle: 'V.S Bob',
-				songList: ['Sunshine', 'Withered', 'Run', "Ron", "Trouble", "Onslaught", "Little-man"]
-				//songList: ["Ron", "Trouble", "Onslaught", "Little-man"]
+				//songList: ['Sunshine', 'Withered', 'Run', "Ron", "Trouble", "Onslaught", "Little-man"]
+				songList: ["Onslaught", "Little-man"]
 			}
 		),
 
