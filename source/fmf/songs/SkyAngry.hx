@@ -33,7 +33,7 @@ class SkyAngry extends SkyTired
 		animation.addByPrefix('singLEFT-alt', 'Sky annoyed alt left0', 24, false);
 
 
-		animation.addByPrefix('grr', 'Sky annoyed grr0', 12, false);
+		animation.addByPrefix('grr', 'Sky annoyed grr0', 24, false);
 		animation.addByPrefix('huh', 'Sky annoyed huh0', 12, false);
 		animation.addByPrefix('ugh', 'Sky annoyed ugh0', 12, false);
 
