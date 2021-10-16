@@ -6,12 +6,12 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class BobSmall extends SongPlayer	
+class BobIsBlack extends SongPlayer	
 {
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/littleman/Small_Guy', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/bobisblack/ScaryBobAaaaah', 'mods');
 		dad.frames = tex;
 	}
 
@@ -20,14 +20,14 @@ class BobSmall extends SongPlayer
 
 		playState.defaultCamZoom = 0.75;
 
-		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bob/happysky', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/scary_sky', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 2;
 		bg.scale.x = 2;
 		playState.add(bg);
 
 
-		var stageFront:FlxSprite = new FlxSprite(-650, -600).loadGraphic(Paths.image('bob/nothappy_ground', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(-650, -600).loadGraphic(Paths.image('bg/bob/GlitchedGround', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
@@ -63,7 +63,7 @@ class BobSmall extends SongPlayer
 		dad.scale.y = 0.75;
 
 		dad.x -= 300;
-		dad.y += 350;
+		dad.y += 0;
 	
 	}
 

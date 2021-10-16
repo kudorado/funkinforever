@@ -99,7 +99,7 @@ class SongManager
 				folder: 'week_trueform',
 				character: 'trueform',
 				songTitle: 'T.R.U.E.F.A.C.E',
-				songList: ['Eeeaaaooo', 'Practice', 'Fool', 'Trap', 'Incident', 'Run']
+				songList: ['Eeeaaaooo', 'Practice', 'Fool', 'Trap', 'Incident', 'Stay']
 			}
 		),
 
@@ -140,8 +140,8 @@ class SongManager
 				folder: 'week_bob',
 				character: 'bob',
 				songTitle: 'V.S Bob',
-				songList: ['Sunshine', 'Withered', 'Run', "Ron", "Trouble", "Onslaught", "Little-man"]
-				//songList: ["Ron", "Trouble", "Onslaught", "Little-man"]
+				//songList: ['Sunshine', 'Withered', 'Run', "Ron", "Trouble", "Onslaught", "Little-man"]
+				songList: ["Onslaught", "Little-man"]
 			}
 		),
 
