@@ -1,5 +1,8 @@
 package fmf.songs;
 
+import lime.text.GlyphMetrics;
+import flixel.system.scaleModes.RatioScaleMode;
+import haxe.xml.Parser.XmlParserException;
 import fmf.characters.Littleman;
 import flixel.FlxG;
 
@@ -273,6 +276,24 @@ class SongPlayerManager
 
 			case 'experimental-phase' | 'perfection':
 				songPlayer = new Daidem();
+
+			case 'dunk':
+				songPlayer = new Dunk();
+
+			case 'ram':
+				songPlayer = new Ram();
+
+			case 'hello-world': 
+				songPlayer = new HexHelloWorld();
+
+			case 'glitcher': 
+				songPlayer = new Glitcher();
+
+			case 'encore' : 
+				songPlayer = new Encore();
+				
+			case 'parish':
+				songPlayer = new Parish();
 		}
 
 		return songPlayer;
