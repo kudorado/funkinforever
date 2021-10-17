@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:33ed45b9af2b3f77c6f120981e629e2c:84f7e29f69e2a1fdc3c781e559f2b7b5:1cc18d7c2ab1e6ff3be8bae5422b69d9$ -->
-<TextureAtlas imagePath="Monster_Assets_miss.png" width="1681" height="716">
-    <SubTexture name="Monster down MISS0000" x="1" y="1" width="428" height="599"/>
-    <SubTexture name="Monster left note MISS0000" x="431" y="1" width="460" height="671"/>
-    <SubTexture name="Monster Right note MISS0000" x="893" y="1" width="375" height="674"/>
-    <SubTexture name="Monster up note MISS0000" x="1270" y="1" width="410" height="714"/>
-</TextureAtlas>
