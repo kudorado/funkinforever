@@ -70,6 +70,7 @@ class SongManager
 				character: 'whitty',
 				songTitle: 'V.S Whitty',
 				songList: ['Lo-fight', 'Overhead', 'Ballistic', 'Remorse']
+				//songList: ['Remorse', 'Overhead']
 			}
 		),
 
@@ -140,8 +141,7 @@ class SongManager
 				folder: 'week_bob',
 				character: 'bob',
 				songTitle: 'V.S Bob',
-				//songList: ['Sunshine', 'Withered', 'Run', "Ron", "Trouble", "Onslaught", "Little-man"]
-				songList: ["Onslaught", "Little-man"]
+				songList: ['Sunshine', 'Withered', 'Run', "Ron", "Trouble", "Onslaught", "Little-man"]
 			}
 		),
 
