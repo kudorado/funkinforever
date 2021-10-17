@@ -11,7 +11,7 @@ class Ram extends SongPlayer
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/hex/normal/DADDY_DEAREST', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/hex/sunset/DADDY_DEAREST', 'mods');
 		dad.frames = tex;
 	}
 
@@ -20,7 +20,7 @@ class Ram extends SongPlayer
 
 		playState.defaultCamZoom = 0.75;
 
-		var bg:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/hex/normal/stageback', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/hex/sunset/stageback', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 2;
 		bg.scale.x = 2;
