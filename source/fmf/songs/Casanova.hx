@@ -6,7 +6,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class Parish extends SongPlayer	
+class Casanova extends SongPlayer	
 {
 
     override function getDadTex()

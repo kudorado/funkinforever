@@ -1,5 +1,7 @@
 package fmf.songs;
 
+import openfl.display.GraphicsShader;
+import js.html.audio.AudioWorkletProcessor;
 import lime.text.GlyphMetrics;
 import flixel.system.scaleModes.RatioScaleMode;
 import haxe.xml.Parser.XmlParserException;
@@ -294,6 +296,18 @@ class SongPlayerManager
 				
 			case 'parish':
 				songPlayer = new Parish();
+			
+			case 'worship':
+				songPlayer = new Worship();
+			
+			case 'zavodila':
+				songPlayer = new Zavodila();
+
+			case 'gospel': 
+				songPlayer = new Gospel();
+			
+			case 'casanova': 
+				songPlayer = new Casanova();
 		}
 
 		return songPlayer;

@@ -6,7 +6,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class Parish extends SongPlayer	
+class Gospel extends SongPlayer	
 {
 
     override function getDadTex()
