@@ -8,6 +8,7 @@ import fmf.characters.*;
 
 class BobIsSuck extends SongPlayer	
 {
+	var ronDie:FlxSprite;
 
     override function getDadTex()
 	{
@@ -37,11 +38,10 @@ class BobIsSuck extends SongPlayer
 		stageFront.active = false;
 		playState.add(stageFront);
 
-		var ronDie:FlxSprite = new FlxSprite(-700, 500).loadGraphic(Paths.image('bg/bob/GoodHeDied', 'mods'));
+		ronDie = new FlxSprite(-700, 500).loadGraphic(Paths.image('bg/bob/GoodHeDied', 'mods'));
 		ronDie.antialiasing = true;
 		ronDie.scale.y = 0.9;
 		ronDie.scale.x = 0.9;
-		playState.add(ronDie);
 
 	}
 
@@ -87,6 +87,13 @@ class BobIsSuck extends SongPlayer
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [28, 29], 0, false, false);
 		icon.animation.play("dad");
+	}
+
+	override function createCharacters()
+	{
+		super.createCharacters();
+		playState.add(ronDie);
+	
 	}
 
 }

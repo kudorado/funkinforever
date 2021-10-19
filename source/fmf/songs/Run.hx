@@ -52,7 +52,7 @@ class Run extends SongPlayer
 	private override function createDadAnimations()
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'bobismad', 18, false);
+		animation.addByPrefix('idle', 'bobismad', 24, true);
 		animation.addByPrefix('singUP', 'bobismad', 24, false);
 		animation.addByPrefix('singRIGHT', 'bobismad', 24, false);
 		animation.addByPrefix('singLEFT', 'bobismad', 24, false);
@@ -77,6 +77,9 @@ class Run extends SongPlayer
 		dad.y += 50;
 
 		dad.flipX = true;
+
+		dad.lockAnim(999);
+
 	}
 	
 	override function createBFAnimationOffsets()
