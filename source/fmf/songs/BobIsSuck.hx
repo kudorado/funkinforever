@@ -66,20 +66,14 @@ class BobIsSuck extends SongPlayer
 		dad.addOffset("singDOWN", -14, -8);
 		dad.dance();
 
-
-		dad.scale.x = 0.75;
-		dad.scale.y = 0.75;
-
 		dad.x -= 350;
-		dad.y -= 50;
-	
 	}
 
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y -= 200;
-		bf.x += 250;
+		bf.y -= 100;
+		bf.x += 200;
 	}
 
 	override function createGFAnimationOffsets()

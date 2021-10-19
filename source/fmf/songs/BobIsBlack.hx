@@ -18,7 +18,7 @@ class BobIsBlack extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.8;
+		playState.defaultCamZoom = 0.9;
 
 		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/scary_sky', 'mods'));
 		bg.antialiasing = true;
@@ -58,11 +58,7 @@ class BobIsBlack extends SongPlayer
 		dad.addOffset("singDOWN", -14, -8);
 		dad.dance();
 
-
-		dad.scale.x = 0.75;
-		dad.scale.y = 0.75;
-
-		dad.x -= 300;
+		dad.x -= 320;
 		dad.y += 0;
 	
 	}
@@ -70,8 +66,8 @@ class BobIsBlack extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y -= 150;
-		bf.x += 200;
+		bf.y -= 120;
+		bf.x += 220;
 	}
 
 	override function createGFAnimationOffsets()
