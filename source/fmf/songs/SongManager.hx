@@ -70,7 +70,6 @@ class SongManager
 				character: 'whitty',
 				songTitle: 'V.S Whitty',
 				songList: ['Lo-fight', 'Overhead', 'Ballistic', 'Remorse']
-				//songList: ['Remorse', 'Overhead']
 			}
 		),
 
@@ -100,7 +99,7 @@ class SongManager
 				folder: 'week_trueform',
 				character: 'trueform',
 				songTitle: 'T.R.U.E.F.A.C.E',
-				songList: ['Eeeaaaooo', 'Practice', 'Fool', 'Trap', 'Incident', 'Stay']
+				songList: ['Eeeaaaooo', 'Practice', 'Fool', 'Trap', 'Incident', 'Run']
 			}
 		),
 
@@ -207,7 +206,7 @@ class SongManager
 			}
 		),
 
-		new SongData
+		new SongData	
 		(
 			{
 				folder: 'week_sky',

@@ -55,9 +55,9 @@ class TitleState extends MusicBeatState
 	{
 		credits = CreditManager.credits;
 
-		#if polymod
-		polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
-		#end
+		// #if polymod
+		// polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
+		// #end
 		
 	
 		PlayerSettings.init();
@@ -72,7 +72,7 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-		FlxG.save.bind('savev351', 'data');
+		FlxG.save.bind('save', 'data');
 
 		KadeEngineData.initSave();
 

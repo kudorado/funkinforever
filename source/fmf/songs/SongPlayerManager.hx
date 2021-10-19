@@ -277,7 +277,7 @@ class SongPlayerManager
 			case 'experimental-phase' | 'perfection':
 				songPlayer = new Daidem();
 
-			case 'dunk':
+			case 'dunk' | 'encore':
 				songPlayer = new Dunk();
 
 			case 'ram':
@@ -289,7 +289,7 @@ class SongPlayerManager
 			case 'glitcher': 
 				songPlayer = new Glitcher();
 
-			case 'encore' : 
+			case 'hex-virus' : 
 				songPlayer = new Encore();
 				
 			case 'parish':
