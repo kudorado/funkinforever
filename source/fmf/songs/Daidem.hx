@@ -57,7 +57,17 @@ class Daidem extends SongPlayer
 		dad.scale.y = 1.25;
 	
 	}
-	
+
+	override function updateCamFollowDad()
+	{
+		playState.camFollow.y = dad.getMidpoint().y - 100;
+	}
+
+	override function updateCamFollowBF()
+	{
+		playState.camFollow.y = bf.getMidpoint().y - 300;
+	}
+
 	override function createDad()
 	{
 		super.createDad();
