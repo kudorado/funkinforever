@@ -18,7 +18,7 @@ class BobAngry extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.75;
+		playState.defaultCamZoom = 0.8;
 
 		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/nothappy_sky', 'mods'));
 		bg.antialiasing = true;
@@ -80,21 +80,6 @@ class BobAngry extends SongPlayer
 	{
 		super.createGFAnimationOffsets();
 		gf.y -= 200;
-	}
-
-	override function updateCamFollowBF()
-	{
-		playState.camFollow.y = bf.getGraphicMidpoint().y - 200;
-		playState.camFollow.x = bf.getGraphicMidpoint().x - 250;
-
-	}
-
-	override function updateCamFollowDad()
-	{
-
-		playState.camFollow.y = dad.getGraphicMidpoint().y - 200;
-		playState.camFollow.x = dad.getGraphicMidpoint().x + 450;
-
 	}
 
 	public override function getDadIcon(icon:HealthIcon)

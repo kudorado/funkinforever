@@ -300,14 +300,14 @@ class SongPlayerManager
 			case 'worship':
 				songPlayer = new Worship();
 			
-			case 'zavodila':
-				songPlayer = new Zavodila();
+			// case 'zavodila':
+			// 	songPlayer = new Zavodila();
 
-			case 'gospel': 
-				songPlayer = new Gospel();
+			// case 'gospel': 
+			// 	songPlayer = new Gospel();
 			
-			case 'casanova': 
-				songPlayer = new Casanova();
+			// case 'casanova': 
+			// 	songPlayer = new Casanova();
 		}
 
 		return songPlayer;

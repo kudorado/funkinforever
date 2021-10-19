@@ -18,7 +18,7 @@ class Run extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.7;
+		playState.defaultCamZoom = 0.8;
 
 		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/hell', 'mods'));
 		bg.antialiasing = true;
@@ -91,21 +91,6 @@ class Run extends SongPlayer
 	{
 		super.createGFAnimationOffsets();
 		gf.y -= 200;
-	}
-
-	override function updateCamFollowBF()
-	{
-		playState.camFollow.y = bf.getGraphicMidpoint().y - 200;
-		playState.camFollow.x = bf.getGraphicMidpoint().x - 300;
-
-	}
-
-	override function updateCamFollowDad()
-	{
-
-		playState.camFollow.y = dad.getGraphicMidpoint().y - 200;
-		playState.camFollow.x = dad.getGraphicMidpoint().x + 250;
-
 	}
 
 	public override function getDadIcon(icon:HealthIcon)

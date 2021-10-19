@@ -18,13 +18,15 @@ class BobIsSuck extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.75;
+		playState.defaultCamZoom = 0.8;
 
 		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/nothappy_sky', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 2;
 		bg.scale.x = 2;
 		playState.add(bg);
+
+		
 
 
 		var stageFront:FlxSprite = new FlxSprite(-650, -600).loadGraphic(Paths.image('bg/bob/nothappy_ground', 'mods'));
@@ -34,6 +36,12 @@ class BobIsSuck extends SongPlayer
 		stageFront.scrollFactor.set(0.9, 0.9);
 		stageFront.active = false;
 		playState.add(stageFront);
+
+		var ronDie:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/GoodHeDied', 'mods'));
+		ronDie.antialiasing = true;
+		ronDie.scale.y = 2;
+		ronDie.scale.x = 2;
+		playState.add(ronDie);
 
 	}
 
@@ -80,25 +88,10 @@ class BobIsSuck extends SongPlayer
 		gf.y -= 150;
 	}
 
-	override function updateCamFollowBF()
-	{
-		playState.camFollow.y = bf.getGraphicMidpoint().y - 200;
-		playState.camFollow.x = bf.getGraphicMidpoint().x - 250;
-
-	}
-
-	override function updateCamFollowDad()
-	{
-
-		playState.camFollow.y = dad.getGraphicMidpoint().y - 200;
-		playState.camFollow.x = dad.getGraphicMidpoint().x + 350;
-
-	}
-
 	public override function getDadIcon(icon:HealthIcon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
-		icon.animation.add('dad', [0, 1], 0, false, false);
+		icon.animation.add('dad', [28, 29], 0, false, false);
 		icon.animation.play("dad");
 	}
 

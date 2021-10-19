@@ -141,6 +141,7 @@ class SongManager
 				character: 'bob',
 				songTitle: 'V.S Bob',
 				songList: ['Sunshine', 'Withered', 'Run', "Ron", "Trouble", "Onslaught", "Little-man"]
+				//songList: ['Withered', 'Run', "Ron", "Trouble", "Onslaught"]
 			}
 		),
 
