@@ -37,10 +37,10 @@ class BobIsSuck extends SongPlayer
 		stageFront.active = false;
 		playState.add(stageFront);
 
-		var ronDie:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/GoodHeDied', 'mods'));
+		var ronDie:FlxSprite = new FlxSprite(-700, 500).loadGraphic(Paths.image('bg/bob/GoodHeDied', 'mods'));
 		ronDie.antialiasing = true;
-		ronDie.scale.y = 2;
-		ronDie.scale.x = 2;
+		ronDie.scale.y = 0.9;
+		ronDie.scale.x = 0.9;
 		playState.add(ronDie);
 
 	}
@@ -71,14 +71,14 @@ class BobIsSuck extends SongPlayer
 		dad.scale.y = 0.75;
 
 		dad.x -= 350;
-		dad.y += 0;
+		dad.y -= 50;
 	
 	}
 
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y -= 150;
+		bf.y -= 200;
 		bf.x += 250;
 	}
 
