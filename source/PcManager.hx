@@ -682,7 +682,7 @@ class PcManager
 				return new LuciSarvSus(700, 0);
 
 			case 'matt':
-				return new MattSus(700, 450);
+				return new MattSus(800, 400);
 
 			case 'monster':
 				return new MonsterSus(700, 250);
