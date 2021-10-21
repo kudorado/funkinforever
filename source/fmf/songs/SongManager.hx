@@ -31,16 +31,7 @@ class SongManager
 				songList: ['Common-sense', 'Highlights', 'Context', "Nonsensical"]
 			}
 		),
-		new SongData
-		(
-			{
-				folder: 'week_agoti',
-				character: 'agoti',
-				songTitle: 'V.S Agoti',
-				songList: ['Screenplay', 'Parasite', 'AGOTI', 'Guns', 'Godrays']
-			}
-		),
-		
+	
 		new SongData
 		(
 			{
@@ -78,7 +69,7 @@ class SongManager
 				folder: 'week_entity',
 				character: 'daidem',
 				songTitle: 'Entity Origins',
-				songList: ['Experimental-Phase', 'Perfection']
+				songList: ['Experimental-Phase', 'Perfection', 'Godrays']
 			}
 		),
 
