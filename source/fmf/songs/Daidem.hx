@@ -88,4 +88,12 @@ class Daidem extends SongPlayer
 		gf.alpha = 0;
 	}
 
+	public override function getDadIcon(icon:HealthIcon)
+	{
+		icon.loadGraphic(Paths.image('bg/entity/icon-daidem', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [0, 1], 0, false, false);
+		icon.animation.play("dad");
+	}
+
+
 }

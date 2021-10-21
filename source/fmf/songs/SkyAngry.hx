@@ -45,7 +45,7 @@ class SkyAngry extends SkyTired
 
 		dad.addOffset('idle');
 		dad.addOffset("singUP", 0, 0);
-		dad.addOffset("singRIGHT", 0, 0);
+		dad.addOffset("singRI	GHT", 0, 0);
 		dad.addOffset("singLEFT", 0, 0);
 		dad.addOffset("singDOWN", 0, 0);
 

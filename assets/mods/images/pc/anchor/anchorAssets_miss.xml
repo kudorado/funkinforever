@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:83af2609166d3107dbf8a9cea3e71cd2:a9fc9f6e733d47c9589c5c4e026d9806:8ab2ecafb8dd7345829d6e8a16511142$ -->
-<TextureAtlas imagePath="anchorAssets_miss.png" width="896" height="1412">
-    <SubTexture name="Anchor DOWN POSE MISS0000" x="1" y="1" width="393" height="594" frameX="-1" frameY="-197" frameWidth="500" frameHeight="791"/>
-    <SubTexture name="Anchor Left Pose MISS0000" x="409" y="662" width="450" height="749" frameX="-1" frameY="-42" frameWidth="500" frameHeight="791"/>
-    <SubTexture name="Anchor Pose Left MISS0000" x="396" y="1" width="499" height="659" frameX="-1" frameY="-132" frameWidth="500" frameHeight="791"/>
-    <SubTexture name="Anchor Up Pose MISS0000" x="1" y="662" width="406" height="737" frameX="-1" frameY="-54" frameWidth="500" frameHeight="791"/>
-</TextureAtlas>

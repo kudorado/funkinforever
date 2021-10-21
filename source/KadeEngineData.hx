@@ -175,6 +175,13 @@ class KadeEngineData
 		}
 		else
 		{
+			if (FlxG.save.data.pcId >= PcManager.pcList.length)
+			{
+                //exceed pc, reset it lmao,
+                // this happen cuz some pc of old version was removed.
+                FlxG.save.data.pcId = 0;
+            }
+
 			var different:Int = Std.int(PcManager.pcList.length - FlxG.save.data.pcData.length);
 			if (different > 0) // in case update new pc
 			{
@@ -194,6 +201,7 @@ class KadeEngineData
 	{
 		if (FlxG.save.data.initSkin == null)
 		{
+
 			FlxG.save.data.initSkin = true;
 			var skinData:Array<Int> = new Array<Int>();
 
@@ -207,6 +215,14 @@ class KadeEngineData
 		}
 		else
 		{
+            			
+			if (FlxG.save.data.skinId >= SkinManager.skinList.length)
+			{
+				// exceed skin, reset it lmao,
+				// this happen cuz some skin of old version was removed.
+				FlxG.save.data.skinId = 0;
+			}
+                
 			var different:Int = Std.int(SkinManager.skinList.length - FlxG.save.data.skinData.length);
 			if (different > 0) // in case update new pc
 			{
@@ -227,6 +243,7 @@ class KadeEngineData
 	{
 		if (FlxG.save.data.initVfx == null)
 		{
+
 			FlxG.save.data.initVfx = true;
 			var vfxData:Array<Int> = new Array<Int>();
 
@@ -240,6 +257,13 @@ class KadeEngineData
 		}
 		else
 		{
+			if (FlxG.save.data.vfxId >= VfxManager.vfxList.length)
+			{
+				// exceed vfx, reset it lmao,
+				// this happen cuz some vfx of old version was removed.
+				FlxG.save.data.vfxId = 0;
+			}
+
 			var different:Int = Std.int(VfxManager.vfxList.length - FlxG.save.data.vfxData.length);
 			if (different > 0) // in case update new pc
 			{

@@ -25,54 +25,12 @@ class SongManager
 		new SongData
 		(
 			{
-				folder: 'week_es',
-				character: 'es',
-				songTitle: 'Everyone Sings',
-				songList: ['ES-Nerves', "ES-Manifest", "ES-Animal"]
-			}
-		),
-
-		new SongData
-		(
-			{
 				folder: 'week_nonsense',
 				character: 'nonsense',
 				songTitle: 'V.S Nonsense',
 				songList: ['Common-sense', 'Highlights', 'Context', "Nonsensical"]
 			}
 		),
-
-
-		new SongData
-		(
-			{
-				folder: 'week_tabi',
-				character: 'tabi',
-				songTitle: 'V.S Ex',
-				songList: ['My-battle', 'Last-chance', 'Genocide']
-			}
-		),
-		
-		new SongData
-		(
-			{
-				folder: 'week_garcello',
-				character: 'garcello',
-				songTitle: 'SMOKE EM\' OUT STRUGGLE',
-				songList: ['Headache', 'Nerves', 'Release', 'Fading']
-			}
-		),
-
-		new SongData
-		(
-			{
-				folder: 'week_whitty',
-				character: 'whitty',
-				songTitle: 'V.S Whitty',
-				songList: ['Lo-fight', 'Overhead', 'Ballistic', 'Remorse']
-			}
-		),
-
 		new SongData
 		(
 			{
@@ -83,36 +41,6 @@ class SongManager
 			}
 		),
 		
-		new SongData
-		(
-			{
-				folder: 'week_tricky',
-				character: 'tricky',
-				songTitle: 'V.S Clown',
-				songList: ['Improbable-outset', 'Madness', 'Hellclown', 'Expurgation', 'Reality-bender']
-			}
-		),
-		
-		new SongData
-		(
-			{
-				folder: 'week_trueform',
-				character: 'trueform',
-				songTitle: 'T.R.U.E.F.A.C.E',
-				songList: ['Eeeaaaooo', 'Practice', 'Fool', 'Trap', 'Incident', 'Run']
-			}
-		),
-
-		new SongData
-		(
-			{
-				folder: 'week_kapi',
-				character: 'kapi',
-				songTitle: 'Showdown Arcane',
-				songList: ['Wocky', 'Beathoven', 'Nyaw', 'Flatzone']
-			}
-		),
-
 		new SongData
 		(
 			{
@@ -143,58 +71,6 @@ class SongManager
 				songList: ['Sunshine', 'Withered', 'Run', "Ron", "Trouble", "Onslaught", "Little-man"]
 			}
 		),
-
-		new SongData
-		(
-			{
-				folder: 'week_hex',
-				character: 'hex',
-				songTitle: 'V.S Hex',
-				songList: ['Dunk', 'Ram', 'Hello-world', 'Glitcher', 'Encore']
-			}
-		),
-
-		new SongData
-		(
-			{
-				folder: 'week_mfm',
-				character: 'mfm',
-				songTitle: 'Mid-Fight Masses',
-				songList: ['Parish', 'Worship', "Zavodila", 'Gospel', "Casanova"]
-			}
-		),
-
-		new SongData
-		(
-			{
-				folder: 'week_impostor',
-				character: 'red',
-				songTitle: 'V.S Red Impostor',
-				songList: ['Sussus-moogus', 'Sabotage', 'Meltdown']
-			}
-		),
-
-		new SongData
-		(
-			{
-				folder: 'week_impostor',
-				character: 'green',
-				songTitle: 'V.S Green Impostor',
-				songList: ['Sussus-toogus', 'Lights-down', 'Reactor', 'Ejected']
-			}
-		),
-
-	
-		new SongData
-		(
-			{
-				folder: 'week_bab',
-				character: 'bab',
-				songTitle: 'Bop & Bosip',
-				songList: ['Jump-in', 'Swing', 'Split']
-			}
-		),
-
 
 		new SongData
 		(

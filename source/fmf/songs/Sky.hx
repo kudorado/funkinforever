@@ -76,4 +76,12 @@ class Sky extends SongPlayer
 		gf.y -= 100;
 	}
 
+	public override function getDadIcon(icon:HealthIcon)
+	{
+		icon.loadGraphic(Paths.image('bg/sky/iconGrid', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [24, 25], 0, false, false);
+		icon.animation.play("dad");
+	}
+
+
 }

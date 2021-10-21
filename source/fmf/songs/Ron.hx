@@ -63,14 +63,14 @@ class Ron extends SongPlayer
 		dad.scale.y = 0.75;
 
 		dad.x -= 300;
-		dad.y += 0;
+		dad.y += 100;
 	
 	}
 
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y -= 150;
+		bf.y -= 50;
 		bf.x += 200;
 	}
 
@@ -82,8 +82,8 @@ class Ron extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
-		icon.animation.add('dad', [0, 1], 0, false, false);
+		icon.loadGraphic(Paths.image('bg/bob/iconGrid', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [30, 31], 0, false, false);
 		icon.animation.play("dad");
 	}
 
