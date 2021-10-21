@@ -186,9 +186,6 @@ class SongPlayerManager
 			case 'es-animal':
 				songPlayer = new EsAnimal();
 
-			case 'gospel':
-				songPlayer = new LuciSarv();
-
 			case 'gf-mad':
 				songPlayer = new GFMad();
 
@@ -215,12 +212,6 @@ class SongPlayerManager
 
 			case 'chara':
 				songPlayer = new Chara();
-
-			case 'casanova':
-				songPlayer = new Selever();
-
-			case 'zavodila':
-				songPlayer = new Ruv();
 
 			case 'liz':
 				songPlayer = new Liz();
@@ -299,6 +290,15 @@ class SongPlayerManager
 			
 			case 'worship':
 				songPlayer = new Worship();
+
+			case 'zavodila':
+				songPlayer = new Ruv();
+
+			case 'gospel':
+				songPlayer = new Gospel();
+			
+			// case 'casanova':
+			// 	songPlayer = new Selever();
 			
 			// case 'zavodila':
 			// 	songPlayer = new Zavodila();
@@ -306,8 +306,8 @@ class SongPlayerManager
 			// case 'gospel': 
 			// 	songPlayer = new Gospel();
 			
-			// case 'casanova': 
-			// 	songPlayer = new Casanova();
+			case 'casanova': 
+				songPlayer = new Casanova();
 		}
 
 		return songPlayer;
