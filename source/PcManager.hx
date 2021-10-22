@@ -27,13 +27,7 @@ class PcManager
 			name: 'spooky',
 			cost: 0
 		}),
-
-		new PcData
-		({
-			name: 'monster',
-			cost: 0
-		}),
-
+		
 		new PcData
 		({
 			name: 'mom',
@@ -84,25 +78,6 @@ class PcManager
 
 		new PcData
 		({
-			name: 'agoti crazy',
-			cost: 2
-		}),
-
-		new PcData
-		({
-			name: 'whitty',
-			cost: 2
-		}),
-
-		new PcData
-		({
-			name: 'whitty crazy',
-			cost: 2
-		}),
-
-
-		new PcData
-		({
 			name: 'gs boyfriend',
 			cost: 2
 		}),
@@ -128,12 +103,6 @@ class PcManager
 		new PcData
 		({
 			name: 'mom angel',
-			cost: 2
-		}),
-
-		new PcData
-		({
-			name: 'corrupted lemon',
 			cost: 2
 		}),
 

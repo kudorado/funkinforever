@@ -14,12 +14,6 @@ class VfxManager
 			cost: 0
 		}),
 		
-		new VfxData
-		({
-			name: 'mad',
-			cost: 1
-		}),
-		
 		new VfxData	
 		({
 			name: 'fire',
@@ -56,12 +50,6 @@ class VfxManager
 			cost: 5
 		}),
 
-
-		new VfxData
-		({
-			name: 'stardream',
-			cost: 5
-		}),
 
 
 		new VfxData

@@ -23,7 +23,7 @@ class Sky extends SongPlayer
 		var bg = new FlxSprite(-200, -300);
 
 		bg.frames = hallowTex;
-		bg.animation.addByPrefix('idle', 'Bg0', 12, true);
+		bg.animation.addByPrefix('idle', 'Bg0', 6, true);
 		bg.animation.play('idle');
 		bg.antialiasing = true;
 
