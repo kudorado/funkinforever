@@ -55,6 +55,28 @@ class Gospel extends SongPlayer
 			dad.x -= 350;
 			dad.y -= 300;
 		}
+		
+		var sillyHotBabe:Bool = true;
+		var counter:Float;
+		var direction:Float = 1;
+	
+		override function update(elapsed:Float)
+		{
+			super.update(elapsed);
+	
+			if (sillyHotBabe)
+			{
+				dad.y += Math.sin(200) * direction;
+				counter += elapsed;
+				if (counter >= 2.5)
+				{
+					direction *= -1;
+					counter = 0;
+				}
+			}
+		}
+	
+		
 	
 		override function createBFAnimationOffsets()
 		{

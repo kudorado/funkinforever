@@ -66,6 +66,12 @@ class Zavodila extends SongPlayer
 		dad.y += 0;
 	
 	}
+	
+	override function dadNoteEvent(noteData:Note)
+	{
+		playState.shakeNormal();
+		PlayState.songPlayer.gf.playAnimForce("scared", 0.35);
+	}
 
 	override function createBFAnimationOffsets()
 	{

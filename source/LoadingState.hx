@@ -72,6 +72,37 @@ class LoadingState extends MusicBeatState
 		}
 	}
 
+
+	//load all required bitmap before going to play hahaha hohoho!
+	function loadSongBitmap()
+	{
+		checkLoadBitmap(getBitmapPath('pc/' + PcManager.pcList[FlxG.save.data.pcId].name));
+		checkLoadBitmap(getBitmapPath('bg/' + PlayState.playingSong.folder));
+		checkLoadBitmap(getBitmapPath('note_skins/' +  VfxManager.vfxList[FlxG.save.data.vfxId].name));
+		checkLoadBitmap(getBitmapPath('note_effects/' + SkinManager.skinList[FlxG.save.data.skinId].name));
+	
+		//load dad, gf
+		checkLoadBitmap(getBitmapPath('pc/' +  ''));
+		checkLoadBitmap(getBitmapPath('gf_skins/' +  ''));
+
+	}
+
+	function checkLoadBitmap(path:String)
+	{
+		if (!Assets.cache.hasBitmapData(path))
+		{
+			trace("load bitmap shit at path: " + path);
+			var library = Assets.getLibrary("mods");
+			final symbolPath = path.split(":").pop();
+			var callback = callbacks.add("bg:" + path);
+			Assets.loadBitmapData(path).onComplete(function(_)
+			{
+				callback();
+			});
+		}
+	}
+
+
 	function checkLibrary(library:String)
 	{
 		trace(Assets.hasLibrary(library));
@@ -115,6 +146,13 @@ class LoadingState extends MusicBeatState
 	{
 		return Paths.voices(PlayState.SONG.song, PlayState.playingSong.folder);
 	}
+
+	static function getBitmapPath(path:String, library:String = 'mods')
+	{
+		return Paths.image(path, library);
+	}
+
+		
 
 	inline static public function loadAndSwitchState(target:FlxState, stopMusic = false)
 	{

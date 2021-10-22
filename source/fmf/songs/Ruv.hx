@@ -32,6 +32,12 @@ class Ruv extends SongPlayer
 		playState.add(bg2);
 
 	}
+	override function dadNoteEvent(noteData:Note)
+	{
+		playState.shakeNormal();
+		PlayState.songPlayer.gf.playAnimForce("scared", 0.35);
+	}
+
 
 	override function createDadAnimations():Void
 	{
