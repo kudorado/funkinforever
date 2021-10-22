@@ -618,6 +618,8 @@ class PlayState extends MusicBeatState
 
 		createBlackFadeOut();
 
+		LoadingState.hasCachedSong = true;
+
 		super.create();
 		AdMob.hideBanner();
 

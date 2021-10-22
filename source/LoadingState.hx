@@ -27,6 +27,8 @@ class LoadingState extends MusicBeatState
 	var stopMusic = false;
 	var callbacks:MultiCallback;
 	var danceLeft = false;
+	public static var hasCachedSong:Bool;
+
 
 	function new(target:FlxState, stopMusic:Bool)
 	{
@@ -119,6 +121,25 @@ class LoadingState extends MusicBeatState
 		FlxG.switchState(getNextState(target, stopMusic));
 	}
 
+	public static function clearCachedSong()
+	{
+		if (!hasCachedSong)
+		{
+			trace('no cached!');
+			return;
+		}
+
+		var result:Bool = Assets.cache.removeSound(getSongPath());
+		trace("remove song cached: " + getSongPath() + ", result: " + result);
+
+
+		if (PlayState.SONG.needsVoices)
+		{
+			var vocalResult:Bool = Assets.cache.removeSound(getVocalPath());
+			trace("remove vocal cached: " + getVocalPath() + ", result: " + vocalResult);
+		}
+	}
+
 	static function getNextState(target:FlxState, stopMusic = false):FlxState
 	{
 		Paths.setCurrentLevel(SongManager.songs[PlayState.storyWeek].folder);
@@ -194,6 +215,7 @@ class LoadingState extends MusicBeatState
 	// #if NO_PRELOAD_ALL
 	static function isSoundLoaded(path:String):Bool
 	{
+		trace("loaded sound path: " + path);
 		return Assets.cache.hasSound(path);
 	}
 
