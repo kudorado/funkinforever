@@ -152,7 +152,7 @@ class VictorySubState extends MusicBeatSubstate
 
                     LoadingState.createBlackFadeIn(this, function()
 					{
-						FlxG.resetState();
+                        LoadingState.loadAndSwitchState(new PlayState(), true);
 					}, PlayState.instance.camHUD);
 				          
 
