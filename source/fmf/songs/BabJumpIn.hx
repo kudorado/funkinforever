@@ -16,6 +16,11 @@ class BabJumpIn extends SongPlayer
 		dad.frames = tex;
 	}
 
+	override  function getGFTex() {
+		var text = Paths.getSparrowAtlas('pc/bab/bobsip_gf', 'mods');
+		gf.frames = text;
+	}
+
 	override function loadMap()
 	{
 
@@ -82,12 +87,10 @@ class BabJumpIn extends SongPlayer
 		//dad.flipX = true;
 	}
 
-	override function createBFAnimationOffsets()
-	{
-		super.createBFAnimationOffsets();
-		bf.y += 80;
-		bf.x += 300;
-	}
+	// override function createGFAnimations() {
+	// 	var animation = gf.animation;
+	// 	animation.addByPrefix('idle')	
+	// }
 
 	override function createGFAnimationOffsets()
 	{
