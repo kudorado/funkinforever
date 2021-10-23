@@ -1,5 +1,6 @@
 package;
 
+import fmf.songs.SongData;
 import fmf.songs.SongManager;
 import flixel.FlxCamera;
 import flixel.tweens.FlxEase;
@@ -44,13 +45,16 @@ class LoadingState extends MusicBeatState
 			callbacks = new MultiCallback(onLoad);
 			var introComplete = callbacks.add("introComplete");
 			checkLoadSong(getSongPath());
+			loadSongBitmap();
+
 			if (PlayState.SONG.needsVoices)
 				checkLoadSong(getVocalPath());
 			checkLibrary("shared");
-			if (PlayState.storyWeek > 0)
-				checkLibrary("mods");
-			else
+			// if (PlayState.storyWeek > 0)
+				// checkLibrary("mods");
+			// else
 				checkLibrary("tutorial");
+
 
 			var fadeTime = 0.5;
 			FlxG.camera.fade(FlxG.camera.bgColor, fadeTime, true);
@@ -76,14 +80,48 @@ class LoadingState extends MusicBeatState
 	//load all required bitmap before going to play hahaha hohoho!
 	function loadSongBitmap()
 	{
-		checkLoadBitmap(getBitmapPath('pc/' + PcManager.pcList[FlxG.save.data.pcId].name));
-		checkLoadBitmap(getBitmapPath('bg/' + PlayState.playingSong.folder));
-		checkLoadBitmap(getBitmapPath('note_skins/' +  VfxManager.vfxList[FlxG.save.data.vfxId].name));
-		checkLoadBitmap(getBitmapPath('note_effects/' + SkinManager.skinList[FlxG.save.data.skinId].name));
-	
-		//load dad, gf
-		checkLoadBitmap(getBitmapPath('pc/' +  ''));
-		checkLoadBitmap(getBitmapPath('gf_skins/' +  ''));
+		trace("check load bitmap!");
+		var pc:String = PcManager.pcList[FlxG.save.data.pcId].name;
+		var vfx:String = VfxManager.vfxList[FlxG.save.data.vfxId].name;
+		var skin:String = SkinManager.skinList[FlxG.save.data.skinId].name;
+
+		checkLoadBitmap(getBitmapPath('pc/' + pc + "/" + pc));
+		checkLoadBitmap(getBitmapPath('pc/' + pc + '/' + pc + '_miss'));
+
+        checkLoadBitmap(getBitmapPath('note_skins/' + vfx + "/" + vfx)) ;
+        checkLoadBitmap(getBitmapPath('note_effects/' + skin  + '/' + skin));
+    
+        //load dad, gf, bg
+
+        var song:SongData = PlayState.playingSong;
+        var index:Int = song.songIndex;
+
+        if (song.bitmapList.length > index)
+        {
+            //load all bg
+            for(bg in song.bitmapList[index].bg)
+            {
+                checkLoadBitmap(getBitmapPath(bg));
+            }
+
+            //load all pc
+            for (pc in song.bitmapList[index].pc)
+            {
+                checkLoadBitmap(getBitmapPath(pc));
+            }
+
+        
+            // load all gf
+            for (gf in song.bitmapList[index].gf)
+            {
+                checkLoadBitmap(getBitmapPath(gf));
+            }
+
+        }
+        else
+        {
+            trace('no bitmap to load for ' + PlayState.CURRENT_SONG);
+        }
 
 	}
 
@@ -94,10 +132,10 @@ class LoadingState extends MusicBeatState
 			trace("load bitmap shit at path: " + path);
 			var library = Assets.getLibrary("mods");
 			final symbolPath = path.split(":").pop();
-			var callback = callbacks.add("bg:" + path);
+			// var callback = callbacks.add("load shit:" + path);
 			Assets.loadBitmapData(path).onComplete(function(_)
 			{
-				callback();
+				// callback();
 			});
 		}
 	}
@@ -105,8 +143,13 @@ class LoadingState extends MusicBeatState
 
 	function checkLibrary(library:String)
 	{
-		trace(Assets.hasLibrary(library));
-		if (Assets.getLibrary(library) == null)
+		trace("check library: " + library + ", result: " +  Assets.hasLibrary(library));
+		if (library == 'mods')
+		{
+			//don't load this lib
+			trace("catched mods library, ignore!");
+		}
+		else if (Assets.getLibrary(library) == null)
 		{
 			@:privateAccess
 			if (!LimeAssets.libraryPaths.exists(library))
@@ -118,6 +161,7 @@ class LoadingState extends MusicBeatState
 				callback();
 			});
 		}
+
 	}
 
 	override function update(elapsed:Float)
