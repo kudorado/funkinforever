@@ -54,6 +54,21 @@ class PlayableCharacter extends Character
 
 	override function update(elapsed:Float)
 	{
+	
+		if (playState.playAsDad)
+		{
+			dadBehaviour(elapsed);
+		}
+		else
+		{
+			bfBehaviour(elapsed);
+		}
+		super.update(elapsed);
+	}
+
+
+	private function bfBehaviour(elapsed:Float)
+	{
 		if (animation.curAnim.name.startsWith('sing'))
 		{
 			holdTimer += elapsed;
@@ -70,7 +85,25 @@ class PlayableCharacter extends Character
 		{
 			holdTimer += elapsed;
 		}
-		super.update(elapsed);
+	}
+
+	private function dadBehaviour(elapsed:Float)
+	{
+		if (animation == null || animation.curAnim == null || animation.curAnim.name == null)
+			return;
+
+		if (animation.curAnim.name.startsWith('sing'))
+		{
+			holdTimer += elapsed;
+		}
+
+		var dadVar:Float = 6.1;
+
+		if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001)
+		{
+			dance();
+			holdTimer = 0;
+		}
 	}
 
 	// create animation offset for BF

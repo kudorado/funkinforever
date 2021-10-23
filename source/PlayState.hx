@@ -244,6 +244,9 @@ class PlayState extends MusicBeatState
 
 	private var executeModchart = false;
 
+
+	public var playAsDad:Bool = true;
+
 	//determine which's turn, 1 is player, -1 is dad
 	public var turn:Int;
 
@@ -839,7 +842,7 @@ class PlayState extends MusicBeatState
 					daStrumTime = 0;
 				var daNoteData:Int = Std.int(songNotes[1] % 4);
 
-				var gottaHitNote:Bool = section.mustHitSection;
+				var gottaHitNote:Bool = playAsDad ? !section.mustHitSection : section.mustHitSection;
 
 				if (songNotes[1] > 3)
 				{
@@ -909,7 +912,6 @@ class PlayState extends MusicBeatState
 		{
 			var babyArrow:FlxSprite = new FlxSprite(0, strumLine.y);
 			
-
 			// get arrow skin depending on song playing
 			songPlayer.getArrowSkin(i, babyArrow);
 
@@ -947,8 +949,11 @@ class PlayState extends MusicBeatState
 			
 			if (!hideDadNote)
 			{
+				var px:Int = player;
+				px = playAsDad ? px == 0 ? 1 : 0 : px;
+
 				babyArrow.x += shit * Main.fx;
-				babyArrow.x += ((w / 2) * player);
+				babyArrow.x += ((w / 2) * px);
 			}
 
 			cpuStrums.forEach(function(spr:FlxSprite)
@@ -1636,8 +1641,12 @@ class PlayState extends MusicBeatState
 
 
 
-					dad().playAnim(lastNote, true);
-
+					if (playAsDad)
+						boyfriend().playAnim(lastNote, true);
+					else
+					{
+						dad().playAnim(lastNote, true);
+					}
 
 					//enemy note highlight
 					if (FlxG.save.data.cpuStrums)
@@ -1667,7 +1676,10 @@ class PlayState extends MusicBeatState
 					//trigger when dad hit a note
 					songPlayer.dadNoteEvent(daNote);
 
-					dad().holdTimer = 0;
+					if (playAsDad)
+						boyfriend().holdTimer = 0;
+					else
+						dad().holdTimer = 0;
 
 					if (SONG.needsVoices)
 						vocals.volume = 1;
@@ -2401,7 +2413,12 @@ class PlayState extends MusicBeatState
 		// PRESSES, check for note hits
 		if (pressArray.contains(true) && /*!boyfriend().stunned && */ generatedMusic)
 		{
-			boyfriend().holdTimer = 0;
+			if (playAsDad)
+			{
+				dad().holdTimer = 0;
+			}
+			else
+				boyfriend().holdTimer = 0;
 
 			var possibleNotes:Array<Note> = []; // notes that can be hit
 			var directionList:Array<Int> = []; // directions that can be hit
@@ -2513,15 +2530,30 @@ class PlayState extends MusicBeatState
 				if (botPlayShit && daNote.canBeHit && daNote.mustPress || botPlayShit && daNote.tooLate && daNote.mustPress)
 				{
 					goodNoteHit(daNote);
-					boyfriend().holdTimer = daNote.sustainLength;
+					if (playAsDad)
+						dad().holdTimer = daNote.sustainLength;
+					else
+						boyfriend().holdTimer = daNote.sustainLength;
 				}
 			}
 		});
 
-		if (boyfriend().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || botPlayShit))
+		if (playAsDad)
 		{
-			if (boyfriend().animation.curAnim.name.startsWith('sing') && !boyfriend().animation.curAnim.name.endsWith('miss'))
-				boyfriend().playAnim('idle');
+			if (dad().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || botPlayShit))
+			{
+				if (dad().animation.curAnim.name.startsWith('sing') && !dad().animation.curAnim.name.endsWith('miss'))
+					dad().playAnim('idle');
+			}
+		}
+
+		else
+		{
+			if (boyfriend().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || botPlayShit))
+			{
+				if (boyfriend().animation.curAnim.name.startsWith('sing') && !boyfriend().animation.curAnim.name.endsWith('miss'))
+					boyfriend().playAnim('idle');
+			}
 		}
 
 		if (!botPlayShit)
@@ -2562,7 +2594,8 @@ class PlayState extends MusicBeatState
 
 	function noteMiss(direction:Int = 1, daNote:Note):Void
 	{
-		if (!boyfriend().stunned)
+		var stunned:Bool = playAsDad ? dad().stunned : boyfriend().stunned;
+		if (!stunned)
 		{
 			health -= 0.04;
 			if (combo > 5 && gf().animOffsets.exists('sad'))
@@ -2586,18 +2619,25 @@ class PlayState extends MusicBeatState
 
 			songPlayer.playerMissNoteEvent();
 			
-			switch (direction)
+			if (playAsDad)
 			{
-				case 0:
-					boyfriend().playAnim('singLEFTmiss', true);
-				case 1:
-					boyfriend().playAnim('singDOWNmiss', true);
-				case 2:
-					boyfriend().playAnim('singUPmiss', true);
-				case 3:
-					boyfriend().playAnim('singRIGHTmiss', true);
+				//temp ignore
 			}
-
+			else
+			{
+				switch (direction)
+				{
+					case 0:
+						boyfriend().playAnim('singLEFTmiss', true);
+					case 1:
+						boyfriend().playAnim('singDOWNmiss', true);
+					case 2:
+						boyfriend().playAnim('singUPmiss', true);
+					case 3:
+						boyfriend().playAnim('singRIGHTmiss', true);
+				}
+			}
+			
 			#if windows
 			if (luaModchart != null)
 				luaModchart.executeState('playerOneMiss', [direction, Conductor.songPosition]);
@@ -2698,18 +2738,34 @@ class PlayState extends MusicBeatState
 			else
 				totalNotesHit += 1;
 
-			switch (note.noteData)
+			if (playAsDad)
 			{
-				case 2:
-					boyfriend().playAnim('singUP', true);
-				case 3:
-					boyfriend().playAnim('singRIGHT', true);
-				case 1:
-					boyfriend().playAnim('singDOWN', true);
-				case 0:
-					boyfriend().playAnim('singLEFT', true);
+				switch (note.noteData)
+				{
+					case 2:
+						dad().playAnim('singUP', true);
+					case 3:
+						dad().playAnim('singRIGHT', true);
+					case 1:
+						dad().playAnim('singDOWN', true);
+					case 0:
+						dad().playAnim('singLEFT', true);
+				}
 			}
-
+			else
+			{
+				switch (note.noteData)
+				{
+					case 2:
+						boyfriend().playAnim('singUP', true);
+					case 3:
+						boyfriend().playAnim('singRIGHT', true);
+					case 1:
+						boyfriend().playAnim('singDOWN', true);
+					case 0:
+						boyfriend().playAnim('singLEFT', true);
+				}
+			}
 			#if windows
 			if (luaModchart != null)
 				luaModchart.executeState('playerOneSing', [note.noteData, Conductor.songPosition]);
@@ -2836,7 +2892,10 @@ class PlayState extends MusicBeatState
 
 			// Dad doesnt interupt his own notes
 			if (SONG.notes[Math.floor(curStep / 16)].mustHitSection)
-				dad().dance();
+			{
+				if (!playAsDad)
+					dad().dance();
+			}
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
 		wiggleShit.update(Conductor.crochet);
@@ -2865,9 +2924,21 @@ class PlayState extends MusicBeatState
 			gf().dance();
 		}
 
-		if (!boyfriend().animation.curAnim.name.startsWith("sing"))
+		if (playAsDad)
 		{
-			boyfriend().playAnim('idle');
+			if (!dad().animation.curAnim.name.startsWith("sing"))
+			{
+				dad().playAnim('idle');
+			}
+		}	
+		else
+		{
+			if (!boyfriend().animation.curAnim.name.startsWith("sing"))
+			{
+				boyfriend().playAnim('idle');
+			}
 		}
+
+
 	}
 }

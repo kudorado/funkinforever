@@ -18,7 +18,7 @@ class Parish extends SongPlayer
 
 	override function loadMap()
 	{
-
+		
 		playState.defaultCamZoom = 0.75;
 
 		var bg:FlxSprite = new FlxSprite(-200, -700).loadGraphic(Paths.image('bg/sacredmass/church1/base', 'mods'));
