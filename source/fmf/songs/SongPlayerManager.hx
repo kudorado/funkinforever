@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import flixel.input.gamepad.lists.FlxBaseGamepadList;
 import openfl.display.GraphicsShader;
 import js.html.audio.AudioWorkletProcessor;
 import lime.text.GlyphMetrics;
@@ -308,6 +309,21 @@ class SongPlayerManager
 			
 			case 'casanova': 
 				songPlayer = new Casanova();
+
+			case 'jump-in':
+				songPlayer = new BabJumpIn();
+
+			case 'swing':
+				songPlayer = new BabSwing();
+
+			case 'split':
+				songPlayer = new BabSplit();
+
+			case 'ronald-mcdonal-slide':
+				songPlayer = new BabRonaldMcDonal();
+
+			case 'jump-out':
+				songPlayer = new BabJumpOut();
 		}
 
 		return songPlayer;

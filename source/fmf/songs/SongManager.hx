@@ -160,7 +160,7 @@ class SongManager
 				folder: 'week_mfm',
 				character: 'mfm',
 				songTitle: 'Mid-Fight Masses',
-				songList: ['Parish', 'Worship', "Zavodila", 'Gospel', "Casanova"]
+				songList: ['Parish', 'Worship', "Zavodila", 'Gospel', 'Casanova']
 			}
 		),
 
@@ -191,7 +191,7 @@ class SongManager
 				folder: 'week_bab',
 				character: 'bab',
 				songTitle: 'Bop & Bosip',
-				songList: ['Jump-in', 'Swing', 'Split']
+				songList: ['Jump-in', 'Swing', 'Split', 'Ronald-McDonal-Slide', 'Jump-out']
 			}
 		),
 
