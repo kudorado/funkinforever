@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import flixel.addons.effects.FlxTrail;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -8,7 +9,7 @@ import fmf.characters.*;
 
 class Parish extends SongPlayer	
 {
-
+	var trail:FlxTrail;
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/sarv/sarv', 'mods');
@@ -26,6 +27,35 @@ class Parish extends SongPlayer
 		bg.scale.x = 1.3;
 		playState.add(bg);
 
+	}
+
+	private function createTrail()
+	{
+		if (FlxG.save.data.distractions)
+		{
+			trail = new FlxTrail(dad, null, 4, 24, 0.3, 0.1);
+			trail.color = FlxColor.WHITE;
+
+			playState.add(trail);
+			trail.visible = false;
+		}
+	}
+
+	override function dadNoteEvent(noteData:Note)
+	{
+		if (FlxG.save.data.distractions)
+		{
+			if (FlxG.save.data.distractions)
+			{
+				trail.visible = true;
+			}
+		}
+	}
+
+	override function bfNoteEvent(noteData:Note)
+	{
+		if (FlxG.save.data.distractions)
+			trail.visible = false;
 	}
 
 	override function createDadAnimations():Void
@@ -56,6 +86,8 @@ class Parish extends SongPlayer
 		dad.y += 0;
 		
 		dad.flipX = true;
+		createTrail();
+
 	}
 
 	override function createBFAnimationOffsets()

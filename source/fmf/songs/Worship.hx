@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import flixel.addons.effects.FlxTrail;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -8,7 +9,7 @@ import fmf.characters.*;
 
 class Worship extends SongPlayer	
 {
-
+	var trail:FlxTrail;
 	override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/sarv_dark/sarvente_dark_1', 'mods');
@@ -40,6 +41,43 @@ class Worship extends SongPlayer
 
 	}
 
+	override function dadNoteEvent(noteData:Note)
+	{
+		if (FlxG.save.data.distractions)
+		{
+			if (playState.curBeat % 6 == 0)
+			{
+				if (FlxG.save.data.distractions)
+				{
+					trail.visible = true;
+				}
+			}
+			else if (playState.curBeat % 16 == 0)
+			{
+				if (FlxG.save.data.distractions)
+					trail.visible = false;
+			}
+		}
+	}
+
+	override function bfNoteEvent(noteData:Note)
+	{
+		if (FlxG.save.data.distractions)
+			trail.visible = false;
+	}
+
+	private function createTrail()
+	{
+		if (FlxG.save.data.distractions)
+		{
+			trail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
+			trail.color = FlxColor.PINK;
+
+			playState.add(trail);
+			trail.visible = false;
+		}
+	}
+		
 	override function createDadAnimationOffsets():Void
 	{
 		dad.addOffset('idle', -7, 18);
@@ -54,6 +92,8 @@ class Worship extends SongPlayer
 
 		dad.x -= 350;
 		dad.y -= 50;
+
+		createTrail();
 	}
 
 	override function createBFAnimationOffsets()
