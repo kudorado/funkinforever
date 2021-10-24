@@ -33,10 +33,10 @@ class SpookySus extends Boyfriend
 		animation.addByPrefix('singLEFT', 'note sing left0', 24, false);
 		animation.addByPrefix('singRIGHT', 'spooky sing right0', 24, false);
 
-		animation.addByPrefix('singUPmiss', 'spooky UP NOTE MISS0', 1, false);
-		animation.addByPrefix('singDOWNmiss', 'spooky DOWN note MISS0', 1, false);
-		animation.addByPrefix('singLEFTmiss', 'note sing left MISS0', 1, false);
-		animation.addByPrefix('singRIGHTmiss', 'spooky sing right MISS0', 1, false);
+		animation.addByPrefix('singUPmiss', 'Spooky UP NOTE MISS0', 1, false);
+		animation.addByPrefix('singDOWNmiss', 'Spooky DOWN note MISS0', 1, false);
+		animation.addByPrefix('singLEFTmiss', 'Note sing left MISS0', 1, false);
+		animation.addByPrefix('singRIGHTmiss', 'Spooky sing right MISS0', 1, false);
 		
 		dance();
 	}
@@ -46,17 +46,17 @@ class SpookySus extends Boyfriend
 	{
 		addOffset('idle', 0, 0);
 
-		addOffset("singUP", -20, 26);
-		addOffset("singRIGHT", -130, -14);
-		addOffset("singLEFT", 130, -10);
-		addOffset("singDOWN", -50, -130);
+		addOffset("singUP", -65, 26);
+		addOffset("singRIGHT", 96, -11);
+		addOffset("singLEFT", -17, -10);
+		addOffset("singDOWN", 50, -141);
 
-		addOffset("singUPmiss", -20, 26);
-		addOffset("singRIGHTmiss", -130, -14);
-		addOffset("singLEFTmiss", 130, -10);
-		addOffset("singDOWNmiss", -50, -130);
+		addOffset("singUPmiss", -79, 27);
+		addOffset("singRIGHTmiss", 95, -18);
+		addOffset("singLEFTmiss", -21, -11);
+		addOffset("singDOWNmiss", 59, -150);
 	
-		flipX = false;
+		flipX = true;
 	}
 	
 

@@ -71,39 +71,23 @@ class Kaique extends TikyMask
 	public override function createAnimationOffsets():Void
 	{
 		addOffset('idle', -6, -1);
-		addOffset("singUP", -17, -2);
-		addOffset("singRIGHT", -17, -1);
-		addOffset("singLEFT", -4, 0);
-		addOffset("singDOWN", -7, -3);
+		addOffset("singUP", -18, -2);
+		addOffset("singRIGHT", -4, -2);
+		addOffset("singLEFT", -17, -3);
+		addOffset("singDOWN", -8, -3);
 
-		addOffset("singUPmiss", -17, -2);
-		addOffset("singRIGHTmiss", -17, -1);
-		addOffset("singLEFTmiss", -4, 0);
+		addOffset("singUPmiss", -18, -3);
+		addOffset("singRIGHTmiss", -18, -3);
+		addOffset("singLEFTmiss", -4, -2);
 		addOffset("singDOWNmiss", -7, -3);
 
-		addOffset("hey", -6, -1);
-		addOffset('scared', -6, -1);
+		addOffset("hey", -6, -2);
+		addOffset('scared', -7, -2);
 
 		playAnim('idle');
-		flipX = true;
+		flipX = false;
 
-		// i dunno why i should do this, LOl
-		dance();
-		flipX = !flipX;
-
-		// Doesn't flip for BF, since his are already in the right place???		{
-		var oldRight = animation.getByName('singRIGHT').frames;
-		animation.getByName('singRIGHT').frames = animation.getByName('singLEFT').frames;
-		animation.getByName('singLEFT').frames = oldRight;
-
-		// IF THEY HAVE MISS ANIMATIONS??
-		if (animation.getByName('singRIGHTmiss') != null)
-		{
-			var oldMiss = animation.getByName('singRIGHTmiss').frames;
-			animation.getByName('singRIGHTmiss').frames = animation.getByName('singLEFTmiss').frames;
-			animation.getByName('singLEFTmiss').frames = oldMiss;
-		}
-
+	
 		this.scale.x = 0.25;
 		this.scale.y = 0.25;
 

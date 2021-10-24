@@ -245,7 +245,7 @@ class PlayState extends MusicBeatState
 	private var executeModchart = false;
 
 
-	public var playAsDad:Bool = true;
+	public var playAsDad:Bool = false;
 
 	//determine which's turn, 1 is player, -1 is dad
 	public var turn:Int;

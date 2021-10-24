@@ -47,38 +47,20 @@ class Daddy extends Boyfriend
 	public override function createAnimationOffsets():Void
 	{
 		addOffset('idle', -5, 28);
-		addOffset("singUP", -15, 78);
-		addOffset("singRIGHT", -18, 37);
-		addOffset("singLEFT", -14, 54);
-		addOffset("singDOWN", -5, -4);
+		addOffset("singUP", -15, 79);
+		addOffset("singRIGHT", 34, 55);
+		addOffset("singLEFT", -57, 38);
+		addOffset("singDOWN", 30, -3);
 
-		addOffset("singUPmiss", -21, 79);
-		addOffset("singRIGHTmiss", -16, 54);
-		addOffset("singLEFTmiss", -16, 38);
-		addOffset("singDOWNmiss", -2, -3);
+		addOffset("singUPmiss", -16, 79);
+		addOffset("singRIGHTmiss", -49, 39);
+		addOffset("singLEFTmiss", 34, 55);
+		addOffset("singDOWNmiss", 27, -2);
 
-		addOffset("hey", -9, 26);
-		addOffset('scared', -8, 27);
 
 		playAnim('idle');
-		flipX = false;
+		flipX = true;
 
-		// i dunno why i should do this, LOl
-		dance();
-		flipX = !flipX;
-
-		// Doesn't flip for BF, since his are already in the right place???		{
-		var oldRight = animation.getByName('singRIGHT').frames;
-		animation.getByName('singRIGHT').frames = animation.getByName('singLEFT').frames;
-		animation.getByName('singLEFT').frames = oldRight;
-
-		// IF THEY HAVE MISS ANIMATIONS??
-		if (animation.getByName('singRIGHTmiss') != null)
-		{
-			var oldMiss = animation.getByName('singRIGHTmiss').frames;
-			animation.getByName('singRIGHTmiss').frames = animation.getByName('singLEFTmiss').frames;
-			animation.getByName('singLEFTmiss').frames = oldMiss;
-		}
 
 	}
 	
