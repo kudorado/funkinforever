@@ -849,13 +849,15 @@ class PlayState extends MusicBeatState
 				var daStrumTime:Float = songNotes[0] + FlxG.save.data.offset + songOffset;
 				if (daStrumTime < 0)
 					daStrumTime = 0;
+
 				var daNoteData:Int = Std.int(songNotes[1] % 4);
 
 				var gottaHitNote:Bool = playAsDad ? !section.mustHitSection : section.mustHitSection;
 
 				if (songNotes[1] > 3)
 				{
-					gottaHitNote = !section.mustHitSection;
+					
+					gottaHitNote = (playAsDad ? section.mustHitSection : !section.mustHitSection);
 				}
 
 				var oldNote:Note;
