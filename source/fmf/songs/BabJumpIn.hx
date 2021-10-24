@@ -61,6 +61,7 @@ class BabJumpIn extends SongPlayer
 		bgAnim2.frames = Paths.getSparrowAtlas('bg/bab/day/bluskystv', 'mods');
 		bgAnim2.animation.addByPrefix('idle', 'bluskystv00', 24, true);
 		bgAnim2.animation.play('idle');
+
 		bgAnim2.antialiasing = true;
 
 		bgAnim2.scale.x = 0.5;
@@ -78,6 +79,8 @@ class BabJumpIn extends SongPlayer
 		bg.scale.y = 0.75;
 		bg.scale.x = 0.75;
 		playState.add(bg);
+
+		randomShit();
 
 	}
 
@@ -138,4 +141,28 @@ class BabJumpIn extends SongPlayer
 		playState.camFollow.x = dad.getGraphicMidpoint().x + 350;
 	}
 
+	var dir:Int = 1; 
+	var checkBeat = 96;
+	var speed = 10;
+
+
+	function randomShit()
+	{
+		checkBeat = FlxG.random.int(85, 105);
+		speed = FlxG.random.int(8, 15);
+	}
+	override function update(elapsed:Float)
+	{
+		bgAnim2.x += speed * dir * elapsed;
+
+		if (playState.curBeat % checkBeat == 0 && playState.curBeat > 10)
+		{
+			dir *= -1;
+			bgAnim2.flipX = !bgAnim2.flipX;
+			checkBeat --;
+		}
+
+
+		super.update(elapsed);
+	}
 }
