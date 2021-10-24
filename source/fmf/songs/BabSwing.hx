@@ -16,7 +16,7 @@ class BabSwing extends BabJumpIn
 	}
 
 	override  function getGFTex() {
-		var text = Paths.getSparrowAtlas('pc/bab/gf/bob_gf', 'mods');
+		var text = Paths.getSparrowAtlas('gf_skins/bab/bob_gf', 'mods');
 		gf.frames = text;
 	}
 

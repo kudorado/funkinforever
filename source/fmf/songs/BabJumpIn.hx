@@ -18,7 +18,7 @@ class BabJumpIn extends SongPlayer
 	}
 
 	override  function getGFTex() {
-		var text = Paths.getSparrowAtlas('pc/bab/gf/bobsip_gf', 'mods');
+		var text = Paths.getSparrowAtlas('gf_skins/bab/bobsip_gf', 'mods');
 		gf.frames = text;
 	}
 
