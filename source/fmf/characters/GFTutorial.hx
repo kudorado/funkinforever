@@ -7,8 +7,12 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 using StringTools;
 
-class Dad extends Character
+class GFTutorial extends Character
 {
+	override function dance():Void
+	{
+		playAnim('idle');
+	}
 
 	override function update(elapsed:Float)
 	{
@@ -23,12 +27,11 @@ class Dad extends Character
 		super.update(elapsed);
 	}
 
-
 	private function bfBehaviour(elapsed:Float)
 	{
 		if (animation == null || animation.curAnim == null || animation.curAnim.name == null)
 			return;
-		
+
 		if (animation.curAnim.name.startsWith('sing'))
 		{
 			holdTimer += elapsed;
@@ -63,6 +66,25 @@ class Dad extends Character
 		{
 			dance();
 			holdTimer = 0;
+		}
+	}
+
+	public override function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
+	{
+		super.playAnim(AnimName, Force, Reversed, Frame);
+
+		if (AnimName == 'singLEFT')
+		{
+			danced = true;
+		}
+		else if (AnimName == 'singRIGHT')
+		{
+			danced = false;
+		}
+
+		if (AnimName == 'singUP' || AnimName == 'singDOWN')
+		{
+			danced = !danced;
 		}
 	}
 

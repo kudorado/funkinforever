@@ -28,7 +28,6 @@ class OptionsMenu extends MusicBeatState
 
     var options:Array<OptionCategory> = [
         new OptionCategory("Advanced Settings", [
-            new BotPlay("Showcase your charts and mods with autoplay."),
             new DistractionsAndEffectsOption("Toggle stage distractions that can hinder your gameplay."),
             new GhostTapOption("Ghost Tapping is when you tap a direction and it doesn't give you a miss."),
             new ScrollSpeedOption("Change your scroll speed (1 = Chart dependent)"),

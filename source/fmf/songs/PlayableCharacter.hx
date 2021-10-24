@@ -55,7 +55,7 @@ class PlayableCharacter extends Character
 	override function update(elapsed:Float)
 	{
 	
-		if (playState.playAsDad)
+		if (PlayState.playAsDad)
 		{
 			dadBehaviour(elapsed);
 		}
@@ -69,6 +69,9 @@ class PlayableCharacter extends Character
 
 	private function bfBehaviour(elapsed:Float)
 	{
+		if (animation == null || animation.curAnim == null || animation.curAnim.name == null)
+			return;
+
 		if (animation.curAnim.name.startsWith('sing'))
 		{
 			holdTimer += elapsed;
