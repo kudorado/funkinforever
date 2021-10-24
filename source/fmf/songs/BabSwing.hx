@@ -6,9 +6,11 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class BabSwing extends BabJumpIn	
+class BabSwing extends SongPlayer	
 {
   
+	var bgAnim:FlxSprite;
+	var bgAnim2:FlxSprite;
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/bab/swing/bosip_assets', 'mods');
@@ -18,6 +20,69 @@ class BabSwing extends BabJumpIn
 	override  function getGFTex() {
 		var text = Paths.getSparrowAtlas('gf_skins/bab/bob_gf', 'mods');
 		gf.frames = text;
+	}
+
+	override function loadMap()
+	{
+
+		playState.defaultCamZoom = 0.8;
+
+		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/BG1', 'mods'));
+		bg1.antialiasing = true;
+		bg1.scale.y = 0.5;
+		bg1.scale.x = 0.5;
+		playState.add(bg1);
+
+		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/BG2', 'mods'));
+		bg2.antialiasing = true;
+		bg2.scale.y = 0.5;
+		bg2.scale.x = 0.5;
+		playState.add(bg2);
+
+		bgAnim = new FlxSprite(0, 0);
+		bgAnim.frames = Paths.getSparrowAtlas('bg/bab/sunset/femboy_and_edgy', 'mods');
+		bgAnim.animation.addByPrefix('idle', 'femboy00', 24, true);
+		bgAnim.animation.play('idle');
+		bgAnim.antialiasing = true;
+
+		bgAnim.scale.x = 0.5;
+		bgAnim.scale.y = 0.5;
+		bgAnim.x = 870;
+		bgAnim.y = 230;
+
+		bgAnim.y += 120;
+
+		if (FlxG.save.data.distractions)
+		{
+			playState.add(bgAnim);
+		}
+
+		bgAnim2 = new FlxSprite(0, 0);
+		bgAnim2.frames = Paths.getSparrowAtlas('bg/bab/sunset/jacob', 'mods');
+		bgAnim2.animation.addByPrefix('idle', 'jacob00', 24, true);
+		bgAnim2.animation.play('idle');
+
+		bgAnim2.antialiasing = true;
+
+		bgAnim2.scale.x = 0.5;
+		bgAnim2.scale.y = 0.5;
+		bgAnim2.y += 300;
+		bgAnim2.x += 150;
+
+		if (FlxG.save.data.distractions)
+		{
+			playState.add(bgAnim2);
+		}
+
+		var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/sunset/BG3', 'mods'));
+		bg.antialiasing = true;
+		bg.scrollFactor.set(0.9,0.9);
+		bg.scale.y = 0.75;
+		bg.scale.x = 0.75;
+		playState.add(bg);
+
+		
+
 	}
 
 	override function createDadAnimations():Void
@@ -45,18 +110,18 @@ class BabSwing extends BabJumpIn
 		dad.scale.y = 1;
 
 		dad.x -= 350;
-		dad.y -= 50;
+		dad.y += 50;
 	}
 
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
-		gf.y += 50;
+		gf.y += 150;
 	}
 
 	override function createBFAnimationOffsets()
 	{
-		bf.y += 100;
+		bf.y += 200;
 		bf.x += 200;
 	}
 
@@ -70,6 +135,7 @@ class BabSwing extends BabJumpIn
 	override function updateCamFollowBF()
 	{
 		playState.camFollow.x -= 200;
+		playState.camFollow.y -= 100;
 	}
 
 	override function updateCamFollowDad()
