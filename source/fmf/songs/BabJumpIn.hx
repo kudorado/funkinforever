@@ -123,22 +123,18 @@ class BabJumpIn extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('bg/bab/icons/bobex','mods'), true, 150, 150);
-		icon.animation.add('dad', [0, 1], 0, false, false);
+		icon.loadGraphic(Paths.image('bg/bab/iconGrid','mods'), true, 150, 150);
+		icon.animation.add('dad', [27,29], 0, false, false);
 		icon.animation.play("dad");
 	}
 
 	override function updateCamFollowBF()
 	{
-		//playState.camFollow.y = bf.getGraphicMidpoint().y - 200;
 		playState.camFollow.x = bf.getGraphicMidpoint().x - 300;
-
 	}
 
 	override function updateCamFollowDad()
 	{
-
-		//playState.camFollow.y = dad.getGraphicMidpoint().y - 200;
 		playState.camFollow.x = dad.getGraphicMidpoint().x + 350;
 	}
 
