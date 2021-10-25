@@ -71,7 +71,7 @@ class BabSplit extends SongPlayer
 
 		var bg4:FlxSprite = new FlxSprite(-1400, -500).loadGraphic(Paths.image('bg/bab/night/BG4', 'mods'));
 		bg4.antialiasing = true;
-		//bg4.scrollFactor.set(0.9,0.9);
+		
 		bg4.scale.y = 0.5;
 		bg4.scale.x = 0.5;
 		playState.add(bg4);

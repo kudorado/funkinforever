@@ -439,7 +439,7 @@ class PlayState extends MusicBeatState
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 
-		camFollow.setPosition(songPlayer.camPos.x, songPlayer.camPos.y);
+		camFollow.setPosition(songPlayer.bf.x - 200, songPlayer.bf.y + 50);
 
 		if (prevCamFollow != null)
 		{
@@ -1399,41 +1399,18 @@ class PlayState extends MusicBeatState
 			{
 				var offsetX = 0;
 				var offsetY = 0;
-				#if windows
-				if (luaModchart != null)
-				{
-					offsetX = luaModchart.getVar("followXOffset", "float");
-					offsetY = luaModchart.getVar("followYOffset", "float");
-				}
-				#end
-				camFollow.setPosition(dad().getMidpoint().x + 150 + offsetX, dad().getMidpoint().y - 100 + offsetY);
-				#if windows
-				if (luaModchart != null)
-					luaModchart.executeState('playerTwoTurn', []);
-				#end
 
-				turn = -1;
+				camFollow.setPosition(dad().getMidpoint().x + 150 + offsetX, dad().getMidpoint().y - 100 + offsetY);
 				songPlayer.updateCamFollowDad();
+				turn = -1;
 			}
 
 			if (SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != boyfriend().getMidpoint().x - 100)
 			{
 				var offsetX = 0;
 				var offsetY = 0;
-				#if windows
-				if (luaModchart != null)
-				{
-					offsetX = luaModchart.getVar("followXOffset", "float");
-					offsetY = luaModchart.getVar("followYOffset", "float");
-				}
-				#end
+
 				camFollow.setPosition(boyfriend().getMidpoint().x - 100 + offsetX, boyfriend().getMidpoint().y - 100 + offsetY);
-
-				#if windows
-				if (luaModchart != null)
-					luaModchart.executeState('playerOneTurn', []);
-				#end
-
 				turn = 1;
 				songPlayer.updateCamFollowBF();
 			}
@@ -1707,7 +1684,10 @@ class PlayState extends MusicBeatState
 					// #end
 					
 					//trigger when dad hit a note
-					songPlayer.dadNoteEvent(daNote);
+					if(playAsDad)
+						songPlayer.bfNoteEvent(daNote);
+					else
+						songPlayer.dadNoteEvent(daNote);
 
 					if (playAsDad)
 						boyfriend().holdTimer = 0;
@@ -2818,7 +2798,11 @@ class PlayState extends MusicBeatState
 				if (Math.abs(note.noteData) == spr.ID)
 				{
 					spr.animation.play('confirm', true);
-					songPlayer.bfNoteEvent(note);
+				
+					if (playAsDad)
+						songPlayer.dadNoteEvent(note);
+					else
+						songPlayer.bfNoteEvent(note);
 				}
 				if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
 				{
