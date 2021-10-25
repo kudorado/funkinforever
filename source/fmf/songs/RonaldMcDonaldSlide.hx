@@ -7,7 +7,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class BabRonaldMcDonal extends SongPlayer	
+class RonaldMcDonaldSlide extends SongPlayer	
 {
 
     override function getDadTex()

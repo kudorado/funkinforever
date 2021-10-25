@@ -191,7 +191,7 @@ class SongManager
 				folder: 'week_bab',
 				character: 'bab',
 				songTitle: 'Bop & Bosip',
-				songList: ['Jump-in', 'Swing', 'Split', 'Ronald-McDonal-Slide', 'Jump-out']
+				songList: ['Jump-in', 'Swing', 'Split', 'Ronald-McDonald-Slide', 'Jump-out']
 			}
 		),
 

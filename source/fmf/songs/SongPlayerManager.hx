@@ -319,8 +319,8 @@ class SongPlayerManager
 			case 'split':
 				songPlayer = new BabSplit();
 
-			case 'ronald-mcdonal-slide':
-				songPlayer = new BabRonaldMcDonal();
+			case 'ronald-mcdonald-slide':
+				songPlayer = new RonaldMcDonaldSlide();
 
 			case 'jump-out':
 				songPlayer = new BabJumpOut();
