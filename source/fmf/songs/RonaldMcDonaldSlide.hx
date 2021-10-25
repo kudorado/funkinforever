@@ -19,9 +19,9 @@ class RonaldMcDonaldSlide extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.3;
+		playState.defaultCamZoom = 0.8;
 
-		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/happy/happy_sky', 'mods'));
+		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_sky', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 0.5;
 		bg1.scale.x = 0.5;
@@ -29,14 +29,14 @@ class RonaldMcDonaldSlide extends SongPlayer
 		
 		playState.add(bg1);
 
-		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/happy/happy_back', 'mods'));
+		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_back', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 0.5;
 		bg2.scale.x = 0.5;
 		//bg2.scrollFactor.set(0.9,0.9);
 		playState.add(bg2);
 
-		var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/day/happy/happy_front', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_front', 'mods'));
 		bg.antialiasing = true;
 		//bg.scrollFactor.set(0.9,0.9);
 		bg.scale.y = 0.75;
@@ -58,17 +58,18 @@ class RonaldMcDonaldSlide extends SongPlayer
 
 	override function createDadAnimationOffsets():Void
 	{
-		dad.addOffset('idle', -7, 0);
-		dad.addOffset("singUP", -15, 63);
-		dad.addOffset("singRIGHT", -6, 33);
-		dad.addOffset("singLEFT", -16, 17);
-		dad.addOffset("singDOWN", -14, 3);
+		dad.addOffset('idle', -7, 11);
+		dad.addOffset("singUP", -15, -28);
+		dad.addOffset("singRIGHT", -6, -23);
+		dad.addOffset("singLEFT", -16, 225);
+		dad.addOffset("singDOWN", -14, -164);
 		dad.dance();
 
 		dad.scale.x = 1;
 		dad.scale.y = 1;
 
 		dad.x -= 350;
+        dad.y += 80;
 	}
 
 	override function createGFAnimationOffsets()
@@ -93,12 +94,12 @@ class RonaldMcDonaldSlide extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.camFollow.x = bf.getGraphicMidpoint().x - 300;
+		playState.camFollow.x -=  200;
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.camFollow.x = dad.getGraphicMidpoint().x + 350;
+		playState.camFollow.x += 200;
 	}
 
 }

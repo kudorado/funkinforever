@@ -10,70 +10,94 @@ class BabJumpOut extends SongPlayer
 {
 
     override function getDadTex()
-	{
-		var tex = Paths.getSparrowAtlas('pc/selever/selever_sheet', 'mods');
-		dad.frames = tex;
+		{
+			var tex = Paths.getSparrowAtlas('pc/bab/STUPID_LOOP_MAN', 'mods');
+			dad.frames = tex;
+		}
+	
+		override function loadMap()
+		{
+	
+			playState.defaultCamZoom = 0.3;
+	
+			var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_sky', 'mods'));
+			bg1.antialiasing = true;
+			bg1.scale.y = 0.5;
+			bg1.scale.x = 0.5;
+			//bg1.scrollFactor.set(0.9,0.9);
+			
+			playState.add(bg1);
+	
+			var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_back', 'mods'));
+			bg2.antialiasing = true;
+			bg2.scale.y = 0.5;
+			bg2.scale.x = 0.5;
+			//bg2.scrollFactor.set(0.9,0.9);
+			playState.add(bg2);
+	
+			var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_front', 'mods'));
+			bg.antialiasing = true;
+			//bg.scrollFactor.set(0.9,0.9);
+			bg.scale.y = 0.75;
+			bg.scale.x = 0.75;
+			playState.add(bg);
+		}
+	
+		override function createDadAnimations():Void
+		{
+			var animation = dad.animation;
+			animation.addByPrefix('idle', 'bob_idle00', 24, false);
+			animation.addByPrefix('singUP', 'bob_up00', 24, false);
+			animation.addByPrefix('singDOWN', 'bob_down00', 24, false);
+			animation.addByPrefix('singLEFT', 'bob_left00', 24, false);
+			animation.addByPrefix('singRIGHT', 'bob_right00', 24, false);
+			dad.animation = animation;
+	
+		}
+	
+		override function createDadAnimationOffsets():Void
+		{
+			dad.addOffset('idle', -7, 0);
+			dad.addOffset("singUP", -15, 63);
+			dad.addOffset("singRIGHT", -6, 33);
+			dad.addOffset("singLEFT", -16, 17);
+			dad.addOffset("singDOWN", -14, 3);
+			dad.dance();
+	
+			dad.scale.x = 1;
+			dad.scale.y = 1;
+	
+			dad.x -= 350;
+		}
+	
+		override function createGFAnimationOffsets()
+		{
+			super.createGFAnimationOffsets();
+			gf.y += 50;
+		}
+	
+		override function createBFAnimationOffsets()
+		{
+			super.createBFAnimationOffsets();
+			bf.y += 100;
+			bf.x += 200;
+		}
+	
+		public override function getDadIcon(icon:HealthIcon)
+		{
+			icon.loadGraphic(Paths.image('bg/bab/icons/ronsip','mods'), true, 150, 150);
+			icon.animation.add('dad', [0,2], 0, false, false);
+			icon.animation.play("dad");
+		}
+	
+		override function updateCamFollowBF()
+		{
+			playState.camFollow.x = bf.getGraphicMidpoint().x - 300;
+		}
+	
+		override function updateCamFollowDad()
+		{
+			playState.camFollow.x = dad.getGraphicMidpoint().x + 350;
+		}
+	
 	}
-
-	override function loadMap()
-	{
-
-		playState.defaultCamZoom = 0.75;
-
-		var bg:FlxSprite = new FlxSprite(-200, -700).loadGraphic(Paths.image('bg/sacredmass/churchSelever/base', 'mods'));
-		bg.antialiasing = true;
-		bg.scale.y = 1.3;
-		bg.scale.x = 1.3;
-		playState.add(bg);
-
-	}
-
-	override function createDadAnimations():Void
-	{
-		var animation = dad.animation;
-		animation.addByPrefix('idle', 'SelIdle0', 24, false);
-		animation.addByPrefix('singUP', 'SelUp0', 24, false);
-		animation.addByPrefix('singDOWN', 'SelDown0', 24, false);
-		animation.addByPrefix('singLEFT', 'SelLeft0', 24, false);
-		animation.addByPrefix('singRIGHT', 'SelRight0', 24, false);
-		dad.animation = animation;
-
-	}
-
-	override function createDadAnimationOffsets():Void
-	{
-		dad.addOffset('idle', -7, 48);
-		dad.addOffset("singUP", -15, 106);
-		dad.addOffset("singRIGHT", -6, 70);
-		dad.addOffset("singLEFT", -16, 42);
-		dad.addOffset("singDOWN", -14, 8);
-		dad.dance();
-
-		dad.scale.x = 1;
-		dad.scale.y = 1;
-
-		dad.x -= 350;
-		
-		//dad.flipX = true;
-	}
-
-	override function createBFAnimationOffsets()
-	{
-		super.createBFAnimationOffsets();
-		bf.y += 120;
-		bf.x += 300;
-	}
-
-	override function createGFAnimationOffsets()
-	{
-		super.createGFAnimationOffsets();
-	}
-
-	public override function getDadIcon(icon:HealthIcon)
-	{
-		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
-		icon.animation.add('dad', [36, 37], 0, false, false);
-		icon.animation.play("dad");
-	}
-
-}
