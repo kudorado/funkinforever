@@ -635,6 +635,27 @@ class PlayState extends MusicBeatState
 		super.create();
 		AdMob.hideBanner();
 
+
+		musicListeningShit = FlxG.save.data.musicListening;
+		if (musicListeningShit)
+		{
+			effectStrums.visible = false;
+			strumLineNotes.visible = false;
+			notes.visible = false;
+			healthBar.visible = false;
+			healthBarBG.visible = false;
+			iconP1.visible = false;
+			iconP2.visible = false;
+
+			scoreTxt.visible = false;
+			missTxt.visible = false;
+			accuracyTxt.visible = false;
+			npsTxt.visible = false;
+			botPlayState.visible = false;
+
+		}
+
+
 	}
 
 	function isUnlocked():Bool
@@ -645,6 +666,7 @@ class PlayState extends MusicBeatState
 
 	var mcontrols:Mobilecontrols; 
 	var botPlayShit:Bool;
+	var musicListeningShit:Bool;
 
 	public var startTimer:FlxTimer;
 	var perfectMode:Bool = false;
@@ -733,6 +755,14 @@ class PlayState extends MusicBeatState
 			songPosBG.cameras = [camHUD];
 			songPosBar.cameras = [camHUD];
 			songName.cameras = [camHUD];
+
+			if (musicListeningShit)
+			{
+				songName.visible = false;
+				songPosBG.visible = false;
+				songPosBar.visible = false;
+
+			}
 		}
 
 		#if windows
@@ -2086,6 +2116,9 @@ class PlayState extends MusicBeatState
 
 	private function popUpScore(daNote:Note):Void
 	{
+		if (musicListeningShit)
+			return;
+
 		var noteDiff:Float = Math.abs(Conductor.songPosition - daNote.strumTime);
 		var wife:Float = EtternaFunctions.wife3(noteDiff, Conductor.timeScale);
 		vocals.volume = 1;

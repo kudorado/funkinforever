@@ -27,6 +27,12 @@ class PlayModeManager
 			name: 'auto play',
 			cost: 5
 		}),
+
+		new PlayModeData
+		({
+			name: 'music listening',
+			cost: 5
+		}),
 		
 	];
 
@@ -37,16 +43,25 @@ class PlayModeManager
 		switch (FlxG.save.data.playModeId)
 		{
 			case 0:
+				FlxG.save.data.musicListening = false;
 				FlxG.save.data.botplay = false;
 				PlayState.playAsDad = false;
 
 			case 1:
+				FlxG.save.data.musicListening = false;
 				FlxG.save.data.botplay = false;
 				PlayState.playAsDad = true;
 
 			case 2:
+				FlxG.save.data.musicListening = false;
 				FlxG.save.data.botplay = true;
 				PlayState.playAsDad = false;
+
+			case 3:
+				FlxG.save.data.botplay = true;
+				FlxG.save.data.musicListening = true;
+				PlayState.playAsDad = false;
+
 		}
 
 	}

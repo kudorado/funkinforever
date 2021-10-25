@@ -23,6 +23,11 @@ class KadeEngineData
             FlxG.save.data.showDadNote = false;
         }
 
+		if (FlxG.save.data.musicListening == null)
+		{
+			FlxG.save.data.musicListening = false;
+		}
+
         if (FlxG.save.data.showCombo == null)
         {
             FlxG.save.data.showCombo = true;
