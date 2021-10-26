@@ -11,16 +11,16 @@ class BabJumpOut extends SongPlayer
 
     override function getDadTex()
 		{
-			var tex = Paths.getSparrowAtlas('pc/bab/STUPID_LOOP_MAN', 'mods');
+			var tex = Paths.getSparrowAtlas('pc/bab/jump-out/STUPID_GLOOP_MAN', 'mods');
 			dad.frames = tex;
 		}
 	
 		override function loadMap()
 		{
 	
-			playState.defaultCamZoom = 0.3;
+			playState.defaultCamZoom = 0.8;
 	
-			var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_sky', 'mods'));
+			var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/happy/happy_sky', 'mods'));
 			bg1.antialiasing = true;
 			bg1.scale.y = 0.5;
 			bg1.scale.x = 0.5;
@@ -28,14 +28,14 @@ class BabJumpOut extends SongPlayer
 			
 			playState.add(bg1);
 	
-			var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_back', 'mods'));
+			var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/happy/happy_back', 'mods'));
 			bg2.antialiasing = true;
 			bg2.scale.y = 0.5;
 			bg2.scale.x = 0.5;
 			//bg2.scrollFactor.set(0.9,0.9);
 			playState.add(bg2);
 	
-			var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_front', 'mods'));
+			var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/day/happy/happy_front', 'mods'));
 			bg.antialiasing = true;
 			//bg.scrollFactor.set(0.9,0.9);
 			bg.scale.y = 0.75;
@@ -57,30 +57,31 @@ class BabJumpOut extends SongPlayer
 	
 		override function createDadAnimationOffsets():Void
 		{
-			dad.addOffset('idle', -7, 0);
-			dad.addOffset("singUP", -15, 63);
-			dad.addOffset("singRIGHT", -6, 33);
-			dad.addOffset("singLEFT", -16, 17);
-			dad.addOffset("singDOWN", -14, 3);
+			dad.addOffset('idle', 0, 0);
+			dad.addOffset("singUP", 0, 0);
+			dad.addOffset("singRIGHT", 0, 0);
+			dad.addOffset("singLEFT", 0, 0);
+			dad.addOffset("singDOWN", 0, 0);
 			dad.dance();
 	
 			dad.scale.x = 1;
 			dad.scale.y = 1;
 	
 			dad.x -= 350;
+			dad.y += 280;
 		}
 	
 		override function createGFAnimationOffsets()
 		{
 			super.createGFAnimationOffsets();
-			gf.y += 50;
+			gf.y += 100;
 		}
 	
 		override function createBFAnimationOffsets()
 		{
 			super.createBFAnimationOffsets();
-			bf.y += 100;
-			bf.x += 200;
+			bf.y += 160;
+			bf.x += 250;
 		}
 	
 		public override function getDadIcon(icon:HealthIcon)
@@ -92,12 +93,14 @@ class BabJumpOut extends SongPlayer
 	
 		override function updateCamFollowBF()
 		{
-			playState.camFollow.x = bf.getGraphicMidpoint().x - 300;
+			playState.camFollow.x -=  200;
+			playState.camFollow.y -= 60;
 		}
 	
 		override function updateCamFollowDad()
 		{
-			playState.camFollow.x = dad.getGraphicMidpoint().x + 350;
+			playState.camFollow.x += 100;
+			playState.camFollow.y -= 60;
 		}
 	
 	}
