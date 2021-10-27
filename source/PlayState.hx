@@ -1649,42 +1649,43 @@ class PlayState extends MusicBeatState
 				if (!daNote.mustPress && daNote.wasGoodHit)
 				{
 					camZooming = true;
-					var altAnim:String = "";
-
-					if (SONG.notes[Math.floor(curStep / 16)] != null)
-					{
-						if (SONG.notes[Math.floor(curStep / 16)].altAnim)
-							altAnim = '-alt';
-					}
-
-					switch (Math.abs(daNote.noteData))
-					{
-						case 2:
-							lastNote = "singUP";
-
-						case 3:
-							lastNote = "singRIGHT";
-
-						case 1:
-							lastNote = "singDOWN";
-
-						case 0:
-							lastNote = "singLEFT";
-					}
-
-					if (dad().animation.getByName(lastNote + altAnim) == null)
-					{
-						//no alt anim
-					}
-					else
-						lastNote += altAnim;
-
-
 
 					if (playAsDad)
-						boyfriend().playAnim(lastNote, true);
+					{
+						var altAnim:String = "";
+						if (SONG.notes[Math.floor(curStep / 16)] != null)
+						{
+							if (SONG.notes[Math.floor(curStep / 16)].altAnim)
+								altAnim = '-alt';
+						}
+						var fuckNote:String = '';
+						switch (Math.abs(daNote.noteData))
+						{
+							case 2:
+								fuckNote = "singUP";
+
+							case 3:
+								fuckNote = "singRIGHT";
+
+							case 1:
+								fuckNote = "singDOWN";
+
+							case 0:
+								fuckNote = "singLEFT";
+						}
+
+						if (dad().animation.getByName(fuckNote + altAnim) == null)
+						{
+							// no alt anim
+						}
+						else
+							fuckNote += altAnim;
+						
+						boyfriend().playAnim(fuckNote, true);
+					}
 					else
 					{
+						setLastNote(daNote);
 						dad().playAnim(lastNote, true);
 					}
 
@@ -1816,6 +1817,38 @@ class PlayState extends MusicBeatState
 		if (FlxG.keys.justPressed.ONE)
 			endSong();
 		#end
+	}
+
+	function setLastNote(daNote:Note)
+	{
+		var altAnim:String = "";
+		if (SONG.notes[Math.floor(curStep / 16)] != null)
+		{
+			if (SONG.notes[Math.floor(curStep / 16)].altAnim)
+				altAnim = '-alt';
+		}
+
+		switch (Math.abs(daNote.noteData))
+		{
+			case 2:
+				lastNote = "singUP";
+
+			case 3:
+				lastNote = "singRIGHT";
+
+			case 1:
+				lastNote = "singDOWN";
+
+			case 0:
+				lastNote = "singLEFT";
+		}
+
+		if (dad().animation.getByName(lastNote + altAnim) == null)
+		{
+			// no alt anim
+		}
+		else
+			lastNote += altAnim;
 	}
 
 
@@ -2831,9 +2864,11 @@ class PlayState extends MusicBeatState
 				if (Math.abs(note.noteData) == spr.ID)
 				{
 					spr.animation.play('confirm', true);
-				
 					if (playAsDad)
+					{
+						setLastNote(note);
 						songPlayer.dadNoteEvent(note);
+					}
 					else
 						songPlayer.bfNoteEvent(note);
 				}
