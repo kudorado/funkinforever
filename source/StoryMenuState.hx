@@ -227,7 +227,7 @@ class StoryMenuState extends MusicBeatState
 
 		updateText();
 
-
+		changeWeek(0);
 
 		trace("Line 165");
 
