@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import flixel.input.gamepad.lists.FlxBaseGamepadList;
 import openfl.display.GraphicsShader;
 import lime.text.GlyphMetrics;
 import flixel.system.scaleModes.RatioScaleMode;
@@ -185,9 +186,6 @@ class SongPlayerManager
 			case 'es-animal':
 				songPlayer = new EsAnimal();
 
-			case 'gospel':
-				songPlayer = new LuciSarv();
-
 			case 'gf-mad':
 				songPlayer = new GFMad();
 
@@ -214,12 +212,6 @@ class SongPlayerManager
 
 			case 'chara':
 				songPlayer = new Chara();
-
-			case 'casanova':
-				songPlayer = new Selever();
-
-			case 'zavodila':
-				songPlayer = new Ruv();
 
 			case 'liz':
 				songPlayer = new Liz();
@@ -298,6 +290,15 @@ class SongPlayerManager
 			
 			case 'worship':
 				songPlayer = new Worship();
+
+			case 'zavodila':
+				songPlayer = new Ruv();
+
+			case 'gospel':
+				songPlayer = new Gospel();
+			
+			// case 'casanova':
+			// 	songPlayer = new Selever();
 			
 			// case 'zavodila':
 			// 	songPlayer = new Zavodila();
@@ -305,8 +306,23 @@ class SongPlayerManager
 			// case 'gospel': 
 			// 	songPlayer = new Gospel();
 			
-			// case 'casanova': 
-			// 	songPlayer = new Casanova();
+			case 'casanova': 
+				songPlayer = new Casanova();
+
+			case 'jump-in':
+				songPlayer = new BabJumpIn();
+
+			case 'swing':
+				songPlayer = new BabSwing();
+
+			case 'split':
+				songPlayer = new BabSplit();
+
+			case 'ronald mcdonald slide':
+				songPlayer = new RonaldMcDonaldSlide();
+
+			case 'jump-out':
+				songPlayer = new BabJumpOut();
 		}
 
 		return songPlayer;

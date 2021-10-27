@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bluskystv.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bluskystv0000" x="2" y="2" width="208" height="375" frameX="0" frameY="-2" frameWidth="212" frameHeight="380"/>
+	<SubTexture name="bluskystv0014" x="212" y="2" width="208" height="363" frameX="0" frameY="-17" frameWidth="212" frameHeight="380"/>
+	<SubTexture name="bluskystv0015" x="422" y="2" width="202" height="377" frameX="-10" frameY="0" frameWidth="212" frameHeight="380"/>
+	<SubTexture name="bluskystv0029" x="626" y="2" width="202" height="372" frameX="-10" frameY="-8" frameWidth="212" frameHeight="380"/>
+</TextureAtlas>

@@ -33,7 +33,6 @@ class NonsenseTired extends Nonsense
 	{
 		super.createCharacters();
 		changeDad('common sense');
-
 		whiteBG = new FlxSprite(-600, -200).makeGraphic(FlxG.width * 4, FlxG.height * 4, FlxColor.WHITE);
 		playState.add(whiteBG);
 		whiteBG.alpha = 0;

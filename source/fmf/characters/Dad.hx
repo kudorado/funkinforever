@@ -12,7 +12,43 @@ class Dad extends Character
 
 	override function update(elapsed:Float)
 	{
+		if (PlayState.playAsDad)
+		{
+			bfBehaviour(elapsed);
+		}
+		else
+		{
+			dadBehaviour(elapsed);
+		}
+		super.update(elapsed);
+	}
 
+
+	private function bfBehaviour(elapsed:Float)
+	{
+		if (animation == null || animation.curAnim == null || animation.curAnim.name == null)
+			return;
+		
+		if (animation.curAnim.name.startsWith('sing'))
+		{
+			holdTimer += elapsed;
+		}
+		else
+			holdTimer = 0;
+
+		if (animation.curAnim.name.endsWith('miss') && animation.curAnim.finished && !debugMode)
+		{
+			playAnim('idle', true, false, 10);
+		}
+
+		if (animation.curAnim.name.startsWith('sing'))
+		{
+			holdTimer += elapsed;
+		}
+	}
+
+	private function dadBehaviour(elapsed:Float)
+	{
 		if (animation == null || animation.curAnim == null || animation.curAnim.name == null)
 			return;
 
@@ -28,8 +64,6 @@ class Dad extends Character
 			dance();
 			holdTimer = 0;
 		}
-
-		super.update(elapsed);
 	}
 
 

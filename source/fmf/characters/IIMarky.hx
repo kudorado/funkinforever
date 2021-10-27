@@ -71,37 +71,20 @@ class IIMarky extends Boyfriend
 	{
 		addOffset('idle', -7, -2);
 		addOffset("singUP", -46, -2);
-		addOffset("singRIGHT", -46, -1);
-		addOffset("singLEFT", -1, -20);
-		addOffset("singDOWN", -15, -44);
+		addOffset("singRIGHT", 0, -19);
+		addOffset("singLEFT", -46, -2);
+		addOffset("singDOWN", -15, -43);
 
-		addOffset("singUPmiss", -46, -2);
-		addOffset("singRIGHTmiss", -46, -1);
-		addOffset("singLEFTmiss", -1, -20);
-		addOffset("singDOWNmiss", -15, -44);
+		addOffset("singUPmiss", -46, -5);
+		addOffset("singRIGHTmiss", -40, -3);
+		addOffset("singLEFTmiss", -1, -14);
+		addOffset("singDOWNmiss", -11, -45);
 
 		addOffset("hey", -7, -2);
 		addOffset('scared', -7, -2);
 
 		playAnim('idle');
-		flipX = true;
-
-		// i dunno why i should do this, LOl
-		dance();
-		flipX = !flipX;
-
-		// Doesn't flip for BF, since his are already in the right place???		{
-		var oldRight = animation.getByName('singRIGHT').frames;
-		animation.getByName('singRIGHT').frames = animation.getByName('singLEFT').frames;
-		animation.getByName('singLEFT').frames = oldRight;
-
-		// IF THEY HAVE MISS ANIMATIONS??
-		if (animation.getByName('singRIGHTmiss') != null)
-		{
-			var oldMiss = animation.getByName('singRIGHTmiss').frames;
-			animation.getByName('singRIGHTmiss').frames = animation.getByName('singLEFTmiss').frames;
-			animation.getByName('singLEFTmiss').frames = oldMiss;
-		}
+		flipX = false;
 
 		this.scale.x = 0.85;
 		this.scale.y = 0.85;

@@ -76,24 +76,8 @@ class Sarv extends Boyfriend
 		addOffset("singDOWNmiss", -113, 0);
 
 		playAnim('idle');
-		flipX = true;
+		flipX = false;
 
-		// i dunno why i should do this, LOl
-		dance();
-		flipX = !flipX;
-
-		// Doesn't flip for BF, since his are already in the right place???		{
-		var oldRight = animation.getByName('singRIGHT').frames;
-		animation.getByName('singRIGHT').frames = animation.getByName('singLEFT').frames;
-		animation.getByName('singLEFT').frames = oldRight;
-
-		// IF THEY HAVE MISS ANIMATIONS??
-		if (animation.getByName('singRIGHTmiss') != null)
-		{
-			var oldMiss = animation.getByName('singRIGHTmiss').frames;
-			animation.getByName('singRIGHTmiss').frames = animation.getByName('singLEFTmiss').frames;
-			animation.getByName('singLEFTmiss').frames = oldMiss;
-		}
 
 		createTrail();
 	}

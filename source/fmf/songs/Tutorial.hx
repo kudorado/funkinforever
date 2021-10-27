@@ -15,14 +15,10 @@ class Tutorial extends SongPlayer
 
 	override function getDadVersion():Character
 	{
-		return new GF(100, 100);
+		return new GFTutorial(100, 100);
 	}
 	override function midSongEventUpdate(curBeat:Int):Void
 	{
-		if (curBeat % 2 == 1 && dad.animOffsets.exists('danceLeft'))
-			dad.playAnim('danceLeft');
-		if (curBeat % 2 == 0 && dad.animOffsets.exists('danceRight'))
-			dad.playAnim('danceRight');
 
 		if (curBeat % 16 == 15  && curBeat > 16 && curBeat < 48)
 		{

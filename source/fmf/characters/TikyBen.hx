@@ -71,27 +71,12 @@ class TikyBen extends TikyHell
 
 
 		playAnim('idle');
-		flipX = false;
+		flipX = true;
 
 
 		this.scale.x = 4;
 		this.scale.y = 4;
 
-		// i dunno why i should do this, LOl
-		flipX = !flipX;
-
-		// Doesn't flip for BF, since his are already in the right place???		{
-		var oldRight = animation.getByName('singRIGHT').frames;
-		animation.getByName('singRIGHT').frames = animation.getByName('singLEFT').frames;
-		animation.getByName('singLEFT').frames = oldRight;
-
-		// IF THEY HAVE MISS ANIMATIONS??
-		if (animation.getByName('singRIGHTmiss') != null)
-		{
-			var oldMiss = animation.getByName('singRIGHTmiss').frames;
-			animation.getByName('singRIGHTmiss').frames = animation.getByName('singLEFTmiss').frames;
-			animation.getByName('singLEFTmiss').frames = oldMiss;
-		}
 
 		clown = new BenClown();
 		clown.createStaticBG();

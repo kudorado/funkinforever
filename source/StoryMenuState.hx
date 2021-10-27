@@ -233,6 +233,9 @@ class StoryMenuState extends MusicBeatState
 
 		Controller.init(this, FULL, A_B);
 
+
+		LoadingState.clearCachedSong();
+		
 		super.create();
 	}
 

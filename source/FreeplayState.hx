@@ -179,6 +179,8 @@ class FreeplayState extends MusicBeatState
 
 		AdMob.onInterstitialEvent = onRewarded;
 
+		LoadingState.clearCachedSong();
+
 		super.create();
 	}
 

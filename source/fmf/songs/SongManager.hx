@@ -66,6 +66,61 @@ class SongManager
 		new SongData
 		(
 			{
+<<<<<<< HEAD
+=======
+				folder: 'week_hex',
+				character: 'hex',
+				songTitle: 'V.S Hex',
+				songList: ['Dunk', 'Ram', 'Hello-world', 'Glitcher', 'Encore']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_mfm',
+				character: 'mfm',
+				songTitle: 'Mid-Fight Masses',
+				songList: ['Parish', 'Worship', "Zavodila", 'Gospel', 'Casanova']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_impostor',
+				character: 'red',
+				songTitle: 'V.S Red Impostor',
+				songList: ['Sussus-moogus', 'Sabotage', 'Meltdown']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_impostor',
+				character: 'green',
+				songTitle: 'V.S Green Impostor',
+				songList: ['Sussus-toogus', 'Lights-down', 'Reactor', 'Ejected']
+			}
+		),
+
+	
+		new SongData
+		(
+			{
+				folder: 'week_bab',
+				character: 'bab',
+				songTitle: 'Bop & Bosip',
+				songList: ['Jump-in', 'Swing', 'Split', 'Ronald-McDonald-Slide', 'Jump-out']
+			}
+		),
+
+
+		new SongData
+		(
+			{
+>>>>>>> d4cfe3e2f33832632bb8c544a60e1c8c2cecf2a4
 				folder: 'week_entity',
 				character: 'daidem',
 				songTitle: 'Entity Origins',

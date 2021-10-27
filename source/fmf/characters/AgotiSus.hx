@@ -49,35 +49,20 @@ class AgotiSus extends Boyfriend
 	
 		addOffset('idle', 0, 150);
 
-		addOffset('singUP', -37, 206);
-		addOffset('singRIGHT', 201, 169);
-		addOffset('singLEFT', 157, 117);
-		addOffset('singDOWN', 91, -22);
+		addOffset('singUP', -47, 206);
+		addOffset('singRIGHT', 150, 109);
+		addOffset('singLEFT', 111, 184);
+		addOffset('singDOWN', 61, -22);
 		
-		addOffset('singUPmiss', -37, 206);
-		addOffset('singRIGHTmiss', 201, 169);
-		addOffset('singLEFTmiss', 157, 117);
-		addOffset('singDOWNmiss', 91, -22);
+		addOffset('singUPmiss', -57, 207);
+		addOffset('singRIGHTmiss', 148, 110);
+		addOffset('singLEFTmiss', 113, 178);
+		addOffset('singDOWNmiss', 57, 6
+		);
 		
 		playAnim('idle');
-		flipX = false;
+		flipX = true;
 
-		// i dunno why i should do this, LOl
-		dance();
-		flipX = !flipX;
-
-		// Doesn't flip for BF, since his are already in the right place???		{
-		var oldRight = animation.getByName('singRIGHT').frames;
-		animation.getByName('singRIGHT').frames = animation.getByName('singLEFT').frames;
-		animation.getByName('singLEFT').frames = oldRight;
-
-		// IF THEY HAVE MISS ANIMATIONS??
-		if (animation.getByName('singRIGHTmiss') != null)
-		{
-			var oldMiss = animation.getByName('singRIGHTmiss').frames;
-			animation.getByName('singRIGHTmiss').frames = animation.getByName('singLEFTmiss').frames;
-			animation.getByName('singLEFTmiss').frames = oldMiss;
-		}
 
 		this.scale.x = 1.5;
 		this.scale.y = 1.5;

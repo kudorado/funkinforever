@@ -11,6 +11,7 @@ class KadeEngineData
         initSkinData();
         initVfxData();
         initPcData();
+        initPlayModeData();
 
 		if (FlxG.save.data.scrollId == null)
 		{
@@ -21,6 +22,11 @@ class KadeEngineData
         {
             FlxG.save.data.showDadNote = false;
         }
+
+		if (FlxG.save.data.musicListening == null)
+		{
+			FlxG.save.data.musicListening = false;
+		}
 
         if (FlxG.save.data.showCombo == null)
         {
@@ -51,23 +57,7 @@ class KadeEngineData
         {
             FlxG.save.data.showCombo = true;
         }
-
-        // yeah pc id
-        if (FlxG.save.data.pcId == null)
-        {
-            // default pc, boyfriend!
-            FlxG.save.data.pcId = 0;
-        }
-
-        if (FlxG.save.data.skinId == null)
-        {
-            FlxG.save.data.skinId = 0;
-        }
-
-        if (FlxG.save.data.vfxId == null)
-        {
-            FlxG.save.data.vfxId = 0;
-        }
+            
 
         if (FlxG.save.data.newInput == null)
             FlxG.save.data.newInput = true;
@@ -158,8 +148,71 @@ class KadeEngineData
     }
 
 
+	private static function initPlayModeData()
+	{
+		// yeah pc id
+		if (FlxG.save.data.playModeId == null)
+		{
+			// default pc, boyfriend!
+			FlxG.save.data.playModeId = 0;
+		}
+		else
+		{
+			if (FlxG.save.data.playModeId >= PlayModeManager.playModeList.length)
+			{
+				// out of range, force reset
+				FlxG.save.data.playModeId = 0;
+			}
+		}
+
+		if (FlxG.save.data.initPlayMode == null)
+		{
+			FlxG.save.data.initPlayMode = true;
+			var playModeData:Array<Int> = new Array<Int>();
+
+			// push data to array
+			for (i in 0...PlayModeManager.playModeList.length)
+			{
+				playModeData.push(0);
+			}
+
+			FlxG.save.data.playModeData = playModeData;
+		}
+		else
+		{
+			var different:Int = Std.int(PlayModeManager.playModeList.length - FlxG.save.data.playModeData.length);
+			if (different > 0) // in case update new pc
+			{
+				var playModeData:Array<Int> = FlxG.save.data.playModeData;
+
+				for (i in 0...different)
+				{
+					playModeData.push(0);
+				}
+
+				FlxG.save.data.playModeData = playModeData;
+			}
+		}
+	
+	}
+
 	private  static function initPcData()
 	{
+		// yeah pc id
+		if (FlxG.save.data.pcId == null)
+		{
+			// default pc, boyfriend!
+			FlxG.save.data.pcId = 0;
+		}
+		else
+		{
+			if (FlxG.save.data.pcId >= PcManager.pcList.length)
+			{
+				// out of range, force reset
+				FlxG.save.data.pcId = 0;
+			}
+		}
+
 		if (FlxG.save.data.initPc == null)
 		{
 			FlxG.save.data.initPc = true;
@@ -199,6 +252,21 @@ class KadeEngineData
 
 	private static function initSkinData()
 	{
+		// yeah pc id
+		if (FlxG.save.data.skinId == null)
+		{
+			// default pc, boyfriend!
+			FlxG.save.data.skinId = 0;
+		}
+		else
+		{
+			if (FlxG.save.data.skinId >= SkinManager.skinList.length)
+			{
+				// out of range, force reset
+				FlxG.save.data.skinId = 0;
+			}
+		}
+
 		if (FlxG.save.data.initSkin == null)
 		{
 
@@ -241,6 +309,21 @@ class KadeEngineData
 
 	private static function initVfxData()
 	{
+		// yeah pc id
+		if (FlxG.save.data.vfxId == null)
+		{
+			// default pc, boyfriend!
+			FlxG.save.data.vfxId = 0;
+		}
+		else
+		{
+			if (FlxG.save.data.vfxId >= VfxManager.vfxList.length)
+			{
+				// out of range, force reset
+				FlxG.save.data.vfxId = 0;
+			}
+		}
+
 		if (FlxG.save.data.initVfx == null)
 		{
 

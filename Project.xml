@@ -48,7 +48,7 @@
 	<!-- <define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/> -->
 	
 	<section if="PRELOAD_ALL">
-		<library name="songs"    preload="true" />
+		<library name="songs"    preload="false" />
 		<library name="shared"   preload="true" />
 		<library name="tutorial" preload="true" />
 		<library name="week1"    preload="true" />

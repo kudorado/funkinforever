@@ -28,7 +28,7 @@ class VfxManager
 		
 		new VfxData
 		({
-			name: 'spark',
+			name: 'agoti',
 			cost: 2
 		}),
 
@@ -70,7 +70,7 @@ class VfxManager
 
 		switch (vfxName.toLowerCase())
 		{
-			case "spark":
+			case "agoti":
 				vfx = new AgotiEffect("agoti");
 			case "dust":
 				vfx = new DustEffect("dust");
