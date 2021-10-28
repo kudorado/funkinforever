@@ -324,6 +324,9 @@ class SongPlayerManager
 
 			case 'jump-out':
 				songPlayer = new BabJumpOut();
+			
+			case 'sussus-moogus':
+				songPlayer = new SussusMoogus();
 		}
 
 		return songPlayer;
