@@ -170,7 +170,6 @@ class LoadingState extends MusicBeatState
 		var result:Bool = Assets.cache.removeSound(getSongPath());
 		trace("remove song cached: " + getSongPath() + ", result: " + result);
 
-
 		if (PlayState.SONG.needsVoices)
 		{
 			var vocalResult:Bool = Assets.cache.removeSound(getVocalPath());

@@ -59,7 +59,7 @@ class BabJumpIn extends SongPlayer
 
 		bgAnim2 = new FlxSprite(0, 0);
 		bgAnim2.frames = Paths.getSparrowAtlas('bg/bab/day/bluskystv', 'mods');
-		bgAnim2.animation.addByPrefix('idle', 'bluskystv00', 24, true);
+		bgAnim2.animation.addByPrefix('idle', 'bluskystv00', 6, true);
 		bgAnim2.animation.play('idle');
 
 		bgAnim2.antialiasing = true;
