@@ -542,7 +542,7 @@ class PlayState extends MusicBeatState
 			+ 50, 0,
 			SONG.song
 			+ " "
-			+ (storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy"));
+			+ (storyDifficulty == 3 ? "Shit" :  storyDifficulty == 2  ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy"));
 
 			// + (Main.watermarks ? " - KE " + MainMenuState.kadeEngineVer : ""));
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
