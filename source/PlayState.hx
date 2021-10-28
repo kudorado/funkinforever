@@ -635,7 +635,6 @@ class PlayState extends MusicBeatState
 		super.create();
 		AdMob.hideBanner();
 
-
 		musicListeningShit = FlxG.save.data.musicListening;
 		if (musicListeningShit)
 		{

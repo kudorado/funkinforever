@@ -1,6 +1,5 @@
 package fmf.songs;
 
-import js.html.rtc.PeerConnectionIceEvent;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -94,12 +93,16 @@ class RonaldMcDonaldSlide extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.camFollow.x -=  200;
+		playState.camFollow.x =  dad.getMidpoint().x + 300;
+		playState.camFollow.y =  dad.getMidpoint().y;
+
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.camFollow.x += 200;
+		playState.camFollow.x =  dad.getMidpoint().x + 50;
+		playState.camFollow.y =  dad.getMidpoint().y;
+
 	}
 
 }
