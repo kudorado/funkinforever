@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:8149941e621ff826dba9fa1ba51cc3ba:5e6e2d3c4c6a9b9c36a853dd7e1307b1:7dabbc4547495de841abacedfc25337c$ -->
+<TextureAtlas imagePath="impostor.png" width="2034" height="1572">
+    <SubTexture name="Impostor down0000" x="1766" y="1178" width="231" height="178" frameX="0" frameY="-35" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0001" x="907" y="838" width="233" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0002" x="1" y="1" width="236" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0003" x="1" y="1" width="236" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0004" x="239" y="1" width="242" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0005" x="239" y="1" width="242" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0006" x="483" y="1" width="242" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0007" x="483" y="1" width="242" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0008" x="483" y="1" width="242" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0009" x="483" y="1" width="242" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0010" x="483" y="1" width="242" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0011" x="483" y="1" width="242" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0012" x="483" y="1" width="242" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0013" x="483" y="1" width="242" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor down0014" x="483" y="1" width="242" height="151" frameX="0" frameY="-62" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0000" x="1577" y="1" width="296" height="163" frameX="0" frameY="-50" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0001" x="1" y="166" width="296" height="163" frameX="0" frameY="-50" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0002" x="299" y="166" width="295" height="164" frameX="0" frameY="-49" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0003" x="299" y="166" width="295" height="164" frameX="0" frameY="-49" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0004" x="563" y="333" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0005" x="563" y="333" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0006" x="859" y="333" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0007" x="859" y="333" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0008" x="859" y="333" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0009" x="859" y="333" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0010" x="859" y="333" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0011" x="859" y="333" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0012" x="859" y="333" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0013" x="859" y="333" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor idle0014" x="859" y="333" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0000" x="1155" y="333" width="283" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0001" x="1155" y="333" width="283" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0002" x="1440" y="333" width="280" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0003" x="1440" y="333" width="280" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0004" x="1722" y="333" width="277" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0005" x="1722" y="333" width="277" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0006" x="1722" y="333" width="277" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0007" x="1722" y="333" width="277" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0008" x="1722" y="333" width="277" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0009" x="1722" y="333" width="277" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0010" x="1722" y="333" width="277" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0011" x="1722" y="333" width="277" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0012" x="1722" y="333" width="277" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0013" x="1722" y="333" width="277" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor left0014" x="1722" y="333" width="277" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0000" x="727" y="1" width="284" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0001" x="727" y="1" width="284" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0002" x="1013" y="1" width="282" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0003" x="1013" y="1" width="282" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0004" x="1297" y="1" width="278" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0005" x="1297" y="1" width="278" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0006" x="1297" y="1" width="278" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0007" x="1297" y="1" width="278" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0008" x="1297" y="1" width="278" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0009" x="1297" y="1" width="278" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0010" x="1297" y="1" width="278" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0011" x="1297" y="1" width="278" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0012" x="1297" y="1" width="278" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0013" x="1297" y="1" width="278" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor right0014" x="1297" y="1" width="278" height="159" frameX="0" frameY="-54" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10000" x="1" y="669" width="295" height="167" frameX="0" frameY="-46" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10001" x="298" y="669" width="295" height="167" frameX="0" frameY="-46" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10002" x="595" y="669" width="296" height="167" frameX="0" frameY="-46" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10003" x="893" y="669" width="296" height="167" frameX="0" frameY="-46" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10004" x="1142" y="838" width="296" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10005" x="1142" y="838" width="296" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10006" x="1440" y="838" width="296" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10007" x="1440" y="838" width="296" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10008" x="1738" y="838" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10009" x="1738" y="838" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10010" x="1" y="1008" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10011" x="1" y="1008" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10012" x="1" y="1008" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10013" x="1" y="1008" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10014" x="1" y="1008" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10015" x="1" y="1008" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10016" x="1" y="1358" width="360" height="180" frameX="0" frameY="-33" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10017" x="1191" y="669" width="306" height="167" frameX="0" frameY="-46" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10018" x="1499" y="669" width="290" height="167" frameX="0" frameY="-46" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10019" x="596" y="166" width="263" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10020" x="861" y="166" width="277" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10021" x="1140" y="166" width="277" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10022" x="1419" y="166" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10023" x="1700" y="166" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10024" x="1" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10025" x="1" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10026" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10027" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10028" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10029" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10030" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10031" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10032" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10033" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10034" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10035" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10036" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10037" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10038" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10039" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10040" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10041" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10042" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10043" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10044" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10045" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10046" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10047" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10048" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10049" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10050" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10051" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10052" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10053" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 10054" x="282" y="333" width="279" height="165" frameX="0" frameY="-48" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20000" x="1" y="501" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20001" x="1" y="501" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20002" x="297" y="501" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20003" x="297" y="501" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20004" x="593" y="501" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20005" x="593" y="501" width="294" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20006" x="298" y="1008" width="294" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20007" x="298" y="1008" width="294" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20008" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20009" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20010" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20011" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20012" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20013" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20014" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20015" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20016" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20017" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20018" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20019" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20020" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20021" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20022" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20023" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20024" x="1174" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20025" x="1470" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20026" x="1470" y="1178" width="294" height="169" frameX="0" frameY="-44" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20027" x="594" y="1008" width="294" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20028" x="594" y="1008" width="294" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20029" x="890" y="1008" width="294" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20030" x="890" y="1008" width="294" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20031" x="1186" y="1008" width="294" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20032" x="1186" y="1008" width="294" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20033" x="1482" y="1008" width="294" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20034" x="1482" y="1008" width="294" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20035" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20036" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20037" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20038" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20039" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20040" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20041" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20042" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20043" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20044" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20045" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20046" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20047" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20048" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20049" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20050" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20051" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20052" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20053" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20054" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20055" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20056" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20057" x="1" y="1178" width="295" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20058" x="1" y="838" width="481" height="167" frameX="0" frameY="-46" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20059" x="484" y="838" width="421" height="167" frameX="0" frameY="-46" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20060" x="889" y="501" width="289" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20061" x="1180" y="501" width="289" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20062" x="1471" y="501" width="290" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20063" x="1471" y="501" width="290" height="166" frameX="0" frameY="-47" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20064" x="298" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20065" x="298" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20066" x="590" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20067" x="590" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20068" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20069" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20070" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20071" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20072" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20073" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20074" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20075" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20076" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20077" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20078" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20079" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20080" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20081" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20082" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20083" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20084" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20085" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20086" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20087" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20088" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20089" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20090" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor shoot 20091" x="882" y="1178" width="290" height="168" frameX="0" frameY="-45" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0000" x="1040" y="1358" width="243" height="213" frameX="0" frameY="0" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0001" x="1285" y="1358" width="238" height="213" frameX="0" frameY="0" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0002" x="808" y="1358" width="230" height="209" frameX="0" frameY="-4" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0003" x="808" y="1358" width="230" height="209" frameX="0" frameY="-4" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0004" x="363" y="1358" width="222" height="207" frameX="0" frameY="-6" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0005" x="363" y="1358" width="222" height="207" frameX="0" frameY="-6" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0006" x="587" y="1358" width="219" height="207" frameX="0" frameY="-6" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0007" x="587" y="1358" width="219" height="207" frameX="0" frameY="-6" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0008" x="587" y="1358" width="219" height="207" frameX="0" frameY="-6" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0009" x="587" y="1358" width="219" height="207" frameX="0" frameY="-6" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0010" x="587" y="1358" width="219" height="207" frameX="0" frameY="-6" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0011" x="587" y="1358" width="219" height="207" frameX="0" frameY="-6" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0012" x="587" y="1358" width="219" height="207" frameX="0" frameY="-6" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0013" x="587" y="1358" width="219" height="207" frameX="0" frameY="-6" frameWidth="481" frameHeight="213"/>
+    <SubTexture name="Impostor up0014" x="587" y="1358" width="219" height="207" frameX="0" frameY="-6" frameWidth="481" frameHeight="213"/>
+</TextureAtlas>
