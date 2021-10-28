@@ -73,7 +73,7 @@ class SussusMoogus extends SongPlayer
 
 	override function createDadAnimationOffsets():Void
 	{
-		dad.addOffset('idle', 0, 0);
+		dad.addOffset('idle', 0, -187);
 		dad.addOffset("singUP", 0, 0);
 		dad.addOffset("singRIGHT", 0, 0);
 		dad.addOffset("singLEFT", 0, 0);
@@ -83,7 +83,7 @@ class SussusMoogus extends SongPlayer
 		dad.scale.x = 2;
 		dad.scale.y = 2;
 		dad.x -= 150;
-		dad.y += 300;
+		dad.y += 113;
 	}
 
 	override function createGFAnimationOffsets()
