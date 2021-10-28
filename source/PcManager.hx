@@ -249,33 +249,6 @@ class PcManager
 
 		new PcData
 		({
-			name: 'common',
-			cost: 2
-		}),
-
-		new PcData
-		({
-			name: 'tired',
-			cost: 2
-		}),
-
-		new PcData({
-			name: 'angry',
-			cost: 2
-		}),
-
-		new PcData({
-			name: 'mad',
-			cost: 2
-		}),
-
-		new PcData({
-			name: 'nonsense',
-			cost: 2
-		}),
-
-		new PcData
-		({
 			name: 'carol',
 			cost: 2
 		}),

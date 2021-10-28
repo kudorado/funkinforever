@@ -1,6 +1,5 @@
 package fmf.songs;
 
-import js.html.rtc.PeerConnectionIceEvent;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;

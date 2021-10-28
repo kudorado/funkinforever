@@ -55,31 +55,10 @@ class SongManager
 		new SongData
 		(
 			{
-				folder: 'week_mfm',
-				character: 'mfm',
-				songTitle: 'Mid-Fight Masses',
-				songList: ['Parish', 'Worship', "Zavodila", 'Gospel', 'Casanova']
-			}
-		),
-	
-		new SongData
-		(
-			{
 				folder: 'week_bab',
 				character: 'bab',
 				songTitle: 'Bop & Bosip',
 				songList: ['Jump-in', 'Swing', 'Split', 'Ronald-McDonald-Slide', 'Jump-out']
-			}
-		),
-
-
-		new SongData
-		(
-			{
-				folder: 'week_entity',
-				character: 'daidem',
-				songTitle: 'Entity Origins',
-				songList: ['Experimental-Phase', 'Perfection', 'Godrays']
 			}
 		),
 
