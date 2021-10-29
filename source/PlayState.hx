@@ -542,7 +542,7 @@ class PlayState extends MusicBeatState
 			+ 50, 0,
 			SONG.song
 			+ " "
-			+ (storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy"));
+			+ (storyDifficulty == 3 ? "Shit" :  storyDifficulty == 2  ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy"));
 
 			// + (Main.watermarks ? " - KE " + MainMenuState.kadeEngineVer : ""));
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -2228,20 +2228,44 @@ class PlayState extends MusicBeatState
 				pixelShitPart2 = '-pixel';
 			}
 
-			var coolText:FlxText = new FlxText(0, 0, 0, placement, 32);
+			var coolText:FlxText = new FlxText(0, 0, 0, placement, 5);
 			coolText.screenCenter();
 			coolText.x = FlxG.width * 0.55;
-			coolText.y -= 350;
+
+
+			if (FlxG.save.data.downscroll)
+			{
+				coolText.y -= 1000;
+			}
+			else
+			{
+				coolText.y -= 350;
+			}
+
 			coolText.cameras = [camHUD];
+
 			//
 	
 			var rating:FlxSprite = new FlxSprite();
 
-
 			rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
 			rating.screenCenter();
-			rating.y -= 50;
-			rating.x = coolText.x - 125;
+			if (FlxG.save.data.downscroll)
+			{
+				rating.y -= 200;
+				rating.x = coolText.x - 125;
+			}
+			else
+			{
+				rating.y += 100;
+
+				if (playAsDad)
+					rating.x = coolText.x + 25;
+				else
+					rating.x = coolText.x - 5;
+
+
+			}
 
 			if (FlxG.save.data.changedHit)
 			{
@@ -2251,6 +2275,7 @@ class PlayState extends MusicBeatState
 			rating.acceleration.y = 550;
 			rating.velocity.y -= FlxG.random.int(140, 175);
 			rating.velocity.x -= FlxG.random.int(0, 10);
+
 
 			var msTiming = HelperFunctions.truncateFloat(noteDiff, 3);
 			if (botPlayShit)
@@ -2308,6 +2333,9 @@ class PlayState extends MusicBeatState
 			comboSpr.acceleration.y = 600;
 			comboSpr.velocity.y -= 150;
 
+			comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.5));
+
+
 			currentTimingShown.screenCenter();
 			currentTimingShown.x = comboSpr.x + 100;
 			currentTimingShown.y = rating.y + 100;
@@ -2321,15 +2349,15 @@ class PlayState extends MusicBeatState
 
 			if (!curStage.startsWith('school'))
 			{
-				rating.setGraphicSize(Std.int(rating.width * 0.7));
+				rating.setGraphicSize(Std.int(rating.width * 0.7 * 0.5));
 				rating.antialiasing = true;
-				comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.7));
+				comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.7 * 0.5));
 				comboSpr.antialiasing = true;
 			}
 			else
 			{
-				rating.setGraphicSize(Std.int(rating.width * daPixelZoom * 0.7));
-				comboSpr.setGraphicSize(Std.int(comboSpr.width * daPixelZoom * 0.7));
+				rating.setGraphicSize(Std.int(rating.width * daPixelZoom * 0.5 * 0.7));
+				comboSpr.setGraphicSize(Std.int(comboSpr.width * daPixelZoom * 0.5 * 0.7));
 			}
 
 			currentTimingShown.updateHitbox();
@@ -2364,18 +2392,18 @@ class PlayState extends MusicBeatState
 			{
 				var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'num' + Std.int(i) + pixelShitPart2));
 				numScore.screenCenter();
-				numScore.x = rating.x + (43 * daLoop) - 50;
+				numScore.x = rating.x + (43 * daLoop * 0.425) - 50;
 				numScore.y = rating.y + 100;
 				numScore.cameras = [camHUD];
 
 				if (!curStage.startsWith('school'))
 				{
 					numScore.antialiasing = true;
-					numScore.setGraphicSize(Std.int(numScore.width * 0.5));
+					numScore.setGraphicSize(Std.int(numScore.width * 0.25));
 				}
 				else
 				{
-					numScore.setGraphicSize(Std.int(numScore.width * daPixelZoom));
+					numScore.setGraphicSize(Std.int(numScore.width * 0.25 * daPixelZoom));
 				}
 				numScore.updateHitbox();
 

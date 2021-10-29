@@ -70,7 +70,7 @@ class Highscore
 
 		if (diff == 0)
 			daSong += '-easy';
-		else if (diff == 2)
+		else if (diff == 2 || diff == 3)
 			daSong += '-hard';
 
 		return daSong;

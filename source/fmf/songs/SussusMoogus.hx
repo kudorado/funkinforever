@@ -120,4 +120,5 @@ class SussusMoogus extends SongPlayer
 		playState.camFollow.x = bf.getMidpoint().x - 500;
 		playState.camFollow.y = bf.getMidpoint().y - 150;
 	}
+
 }
