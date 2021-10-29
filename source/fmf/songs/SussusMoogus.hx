@@ -11,7 +11,7 @@ class SussusMoogus extends SongPlayer
 {
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/impostor/impostor', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/sus/impostor', 'mods');
 		dad.frames = tex;
 	}
 
@@ -62,28 +62,28 @@ class SussusMoogus extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'Impostor idle00', 24, false);
-		animation.addByPrefix('singUP', 'Impostor up00', 24, false);
-		animation.addByPrefix('singDOWN', 'Impostor down00', 24, false);
-		animation.addByPrefix('singLEFT', 'Impostor left00', 24, false);
-		animation.addByPrefix('singRIGHT', 'Impostor right00', 24, false);
+		animation.addByPrefix('idle', 'Impostor idle', 18, false);
+		animation.addByPrefix('singUP', 'Impostor up', 24, false);
+		animation.addByPrefix('singDOWN', 'Impostor down', 24, false);
+		animation.addByPrefix('singLEFT', 'Impostor left', 24, false);
+		animation.addByPrefix('singRIGHT', 'Impostor right', 24, false);
 		dad.animation = animation;
 
 	}
 
 	override function createDadAnimationOffsets():Void
 	{
-		dad.addOffset('idle', 0, -187);
+		dad.addOffset('idle', 0, -138);
 		dad.addOffset("singUP", 0, 0);
 		dad.addOffset("singRIGHT", 0, 0);
 		dad.addOffset("singLEFT", 0, 0);
 		dad.addOffset("singDOWN", 0, 0);
 		dad.dance();
 
-		dad.scale.x = 2;
-		dad.scale.y = 2;
+		dad.scale.x = 1.5;
+		dad.scale.y = 1.5;
 		dad.x -= 150;
-		dad.y += 113;
+		dad.y += 225;
 	}
 
 	override function createGFAnimationOffsets()
@@ -110,12 +110,14 @@ class SussusMoogus extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		playState.camFollow.x -= 150;
+		playState.camFollow.x = bf.getMidpoint().x - 240;
+		playState.camFollow.y = bf.getMidpoint().y - 150;
 	}
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		//playState.camFollow.x += 00;
+		playState.camFollow.x = bf.getMidpoint().x - 500;
+		playState.camFollow.y = bf.getMidpoint().y - 150;
 	}
 }

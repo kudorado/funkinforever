@@ -327,6 +327,12 @@ class SongPlayerManager
 			
 			case 'sussus-moogus':
 				songPlayer = new SussusMoogus();
+			
+			case 'sabotage':
+				songPlayer = new Sabotage();
+
+			case 'meltdown':
+				songPlayer = new Meltdown();
 		}
 
 		return songPlayer;
