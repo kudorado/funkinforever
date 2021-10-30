@@ -39,11 +39,10 @@ class MikuMad extends Miku
 		dad.addOffset("singDOWN", 0, -3);
 
 	}
-
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
-		icon.animation.add('dad', [26, 27], 0, false, false);
+		icon.loadGraphic(Paths.image('bg/miku/iconGrid', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [24, 25], 0, false, false);
 		icon.animation.play("dad");
 	}
 

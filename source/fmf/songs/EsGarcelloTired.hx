@@ -151,8 +151,8 @@ class EsGarcelloTired extends Garcello
 			case 88:
 				changeDad('miku');
 
-				dad.x -= 350;
-				dad.y += 25;
+				// dad.x -= 350;
+				dad.y += 400;
 
 			case 95:
 				changePc('hex');
@@ -207,10 +207,10 @@ class EsGarcelloTired extends Garcello
 			case 168:
 				changeDad("hdsenpaimad");
 
-				dad.scale.x = 1.25;
-				dad.scale.y = 1.25;
+				dad.scale.x = 1;
+				dad.scale.y = 1;
 
-				dad.y -= 100;
+				dad.y -= 150;
 
 			case 176:
 				changePc('tankman');
@@ -222,7 +222,7 @@ class EsGarcelloTired extends Garcello
 				dad.scale.y = 1;
 
 				dad.x -= 50;
-				dad.y -= 200;
+				dad.y -= 150;
 
 
 

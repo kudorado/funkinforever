@@ -222,14 +222,8 @@ class PlayModeState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
-			if (PlayState.isStoryMode)
-			{
-				FlxG.switchState(new StoryMenuState());
-			}
-			else
-			{
-				FlxG.switchState(new FreeplayState());
-			}
+			FlxG.switchState(new SelectionState());
+			
 		}
 
 		super.update(elapsed);
