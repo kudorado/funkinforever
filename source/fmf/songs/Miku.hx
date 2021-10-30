@@ -41,6 +41,13 @@ class Miku extends SongPlayer
 		dad.frames = tex;
 	}
 
+	public override function getDadIcon(icon:HealthIcon)
+	{
+		icon.loadGraphic(Paths.image('iconGrid2'), true, 150, 132);
+		icon.animation.add('dad', [10, 11], 0, false, false);
+		icon.animation.play("dad");
+	}
+
 	// create animation for BF
 	public override function createDadAnimations():Void
 	

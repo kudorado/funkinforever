@@ -74,7 +74,7 @@ class TrickyBen extends TrickyHell
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('bg/clown/ben', 'mods'), true, 172, 126);
+		icon.loadGraphic(Paths.image('bg/clown/ben', 'mods'), true, 95, 110);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 		icon.scale.x = 0.5;
