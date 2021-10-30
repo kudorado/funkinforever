@@ -42,17 +42,17 @@ class Ejected extends SongPlayer
 		fgClouds.scale.x = 1;
 		playState.add(fgClouds);
 
-        var speedLines1:FlxSprite = new FlxSprite(-200, 0).loadGraphic(Paths.image('bg/sus/ejected1/speedLines', 'mods'));
+        speedLines1 = new FlxSprite(-200, 0).loadGraphic(Paths.image('bg/sus/ejected1/speedLines', 'mods'));
 		speedLines1.antialiasing = true;
 		speedLines1.scale.y = 2;
 		speedLines1.scale.x = 2;
 		playState.add(speedLines1);
 
-        // var speedLines2:FlxSprite = new FlxSprite(-200, -1000).loadGraphic(Paths.image('bg/sus/ejected1/speedLines', 'mods'));
-		// speedLines2.antialiasing = true;
-		// speedLines2.scale.y = 2;
-		// speedLines2.scale.x = 2;
-		// playState.add(speedLines2);
+        speedLines2 = new FlxSprite(-200, 1000).loadGraphic(Paths.image('bg/sus/ejected1/speedLines', 'mods'));
+		speedLines2.antialiasing = true;
+		speedLines2.scale.y = 2;
+		speedLines2.scale.x = 2;
+		playState.add(speedLines2);
 
 	}
 
@@ -120,16 +120,23 @@ class Ejected extends SongPlayer
 
     var dir:Int = -1; 
 	var checkBeat = 96;
-	var speed = 10;
+	var speed = 100;
 
     override function update(elapsed:Float)
     {
         speedLines1.y += speed * dir * elapsed;
 
-        // if(speedLines1.y <-1000)
-        // {
-        //     speedLines1.y = 1000;
-        // }
+        speedLines2.y += speed * dir * elapsed;
+
+        if(speedLines1.y <-1000)
+        {
+            speedLines1.y = 1000;
+        }
+
+        if(speedLines2.y <-1000)
+        {
+            speedLines2.y = 1000;
+        }
 
 
         super.update(elapsed);
