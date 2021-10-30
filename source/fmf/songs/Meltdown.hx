@@ -15,10 +15,10 @@ class Meltdown extends Sabotage
 		dad.frames = tex;
 	}
 
-    override function getBFTex() {
-        var tex = Paths.getSparrowAtlas('pc/bf/bfghost', 'mods');
-		bf.frames = tex;
-    }
+    // override function getBFTex() {
+    //     var tex = Paths.getSparrowAtlas('pc/bf/bfghost', 'mods');
+	// 	bf.frames = tex;
+    // }
 
     override function loadMap()
     {
