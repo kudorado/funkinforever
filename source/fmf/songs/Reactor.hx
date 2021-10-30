@@ -25,10 +25,10 @@ class Reactor extends SongPlayer
 	{
 		playState.defaultCamZoom = 0.55;
 
-        var mainbg:FlxSprite = new FlxSprite(-2200, -1600).loadGraphic(Paths.image('bg/sus/reactor/reactor_background', 'mods'));
+        var mainbg:FlxSprite = new FlxSprite(-733, -757).loadGraphic(Paths.image('bg/sus/reactor_resize/reactor_background', 'mods'));
 		mainbg.antialiasing = true;
-		mainbg.scale.y = 0.6;
-		mainbg.scale.x = 0.6;
+		mainbg.scale.y = 1.2;
+		mainbg.scale.x = 1.2;
 		playState.add(mainbg);
 
 		// var bg1:FlxSprite = new FlxSprite(-2200, -1600).loadGraphic(Paths.image('bg/sus/reactor/reference', 'mods'));
@@ -56,10 +56,10 @@ class Reactor extends SongPlayer
 			playState.add(yellow_sus);
 		}
 
-        var pillar1:FlxSprite = new FlxSprite(-2200, -1600).loadGraphic(Paths.image('bg/sus/reactor/back_pillars', 'mods'));
+        var pillar1:FlxSprite = new FlxSprite(-733, -757).loadGraphic(Paths.image('bg/sus/reactor_resize/back_pillars', 'mods'));
 		pillar1.antialiasing = true;
-		pillar1.scale.y = 0.6;
-		pillar1.scale.x = 0.6;
+		pillar1.scale.y = 1.2;
+		pillar1.scale.x = 1.2;
 		playState.add(pillar1);
 
         // var blue_sus:FlxSprite = new FlxSprite(1350, 180).loadGraphic(Paths.image('bg/sus/reactor/blue_sus', 'mods'));
@@ -81,10 +81,10 @@ class Reactor extends SongPlayer
 			playState.add(blue_sus);
 		}
 
-        var pillar2:FlxSprite = new FlxSprite(-2200, -1600).loadGraphic(Paths.image('bg/sus/reactor/middle_pillars', 'mods'));
+        var pillar2:FlxSprite = new FlxSprite(-733, -757).loadGraphic(Paths.image('bg/sus/reactor_resize/middle_pillars', 'mods'));
 		pillar2.antialiasing = true;
-		pillar2.scale.y = 0.6;
-		pillar2.scale.x = 0.6;
+		pillar2.scale.y = 1.2;
+		pillar2.scale.x = 1.2;
 		playState.add(pillar2);
 
         // var brown_sus:FlxSprite = new FlxSprite(-560, 150).loadGraphic(Paths.image('bg/sus/reactor/brown_sus', 'mods'));
@@ -125,10 +125,10 @@ class Reactor extends SongPlayer
 			playState.add(white_sus);
 		}
 
-        var pillar3:FlxSprite = new FlxSprite(-2200, -1600).loadGraphic(Paths.image('bg/sus/reactor/front_pillars', 'mods'));
+        var pillar3:FlxSprite = new FlxSprite(-733, -757).loadGraphic(Paths.image('bg/sus/reactor_resize/front_pillars', 'mods'));
 		pillar3.antialiasing = true;
-		pillar3.scale.y = 0.6;
-		pillar3.scale.x = 0.6;
+		pillar3.scale.y = 1.2;
+		pillar3.scale.x = 1.2;
 		playState.add(pillar3);
 
         var ball:FlxSprite = new FlxSprite(-400, -1200).loadGraphic(Paths.image('bg/sus/reactor/ball_of_big_ol_energy', 'mods'));

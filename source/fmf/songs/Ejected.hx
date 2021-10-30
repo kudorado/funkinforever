@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import flixel.addons.display.shapes.FlxShapeLightning.LightningStyle;
 import lime.math.BGRA;
 import js.html.rtc.PeerConnectionIceEvent;
 import flixel.util.FlxColor;
@@ -10,6 +11,9 @@ import fmf.characters.*;
 
 class Ejected extends SongPlayer	
 {
+    var speedLines1 : FlxSprite;
+    var speedLines2 : FlxSprite;
+
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/sus/parasite', 'mods');
@@ -24,7 +28,7 @@ class Ejected extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.7;
+		playState.defaultCamZoom = 0.3;
 
 		var bg1:FlxSprite = new FlxSprite(-1000, -1200).loadGraphic(Paths.image('bg/sus/ejected1/sky', 'mods'));
 		bg1.antialiasing = true;
@@ -37,6 +41,18 @@ class Ejected extends SongPlayer
 		fgClouds.scale.y = 1;
 		fgClouds.scale.x = 1;
 		playState.add(fgClouds);
+
+        var speedLines1:FlxSprite = new FlxSprite(-200, 0).loadGraphic(Paths.image('bg/sus/ejected1/speedLines', 'mods'));
+		speedLines1.antialiasing = true;
+		speedLines1.scale.y = 2;
+		speedLines1.scale.x = 2;
+		playState.add(speedLines1);
+
+        // var speedLines2:FlxSprite = new FlxSprite(-200, -1000).loadGraphic(Paths.image('bg/sus/ejected1/speedLines', 'mods'));
+		// speedLines2.antialiasing = true;
+		// speedLines2.scale.y = 2;
+		// speedLines2.scale.x = 2;
+		// playState.add(speedLines2);
 
 	}
 
@@ -101,5 +117,22 @@ class Ejected extends SongPlayer
 		playState.camFollow.x = bf.getMidpoint().x - 500;
 		playState.camFollow.y = bf.getMidpoint().y - 150;
 	}
+
+    var dir:Int = -1; 
+	var checkBeat = 96;
+	var speed = 10;
+
+    override function update(elapsed:Float)
+    {
+        speedLines1.y += speed * dir * elapsed;
+
+        // if(speedLines1.y <-1000)
+        // {
+        //     speedLines1.y = 1000;
+        // }
+
+
+        super.update(elapsed);
+    }
 
 }

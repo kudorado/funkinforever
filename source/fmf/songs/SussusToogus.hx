@@ -9,6 +9,7 @@ import fmf.characters.*;
 
 class SussusToogus extends SongPlayer	
 {
+    
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/sus/crewmate', 'mods');
