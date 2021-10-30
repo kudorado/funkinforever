@@ -120,7 +120,7 @@ class Ejected extends SongPlayer
 
     var dir:Int = -1; 
 	var checkBeat = 96;
-	var speed = 100;
+	var speed = 1000;
 
     override function update(elapsed:Float)
     {
