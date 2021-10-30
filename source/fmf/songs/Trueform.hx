@@ -32,8 +32,7 @@ class Trueform extends Tutorial
 		animation.addByPrefix('singRIGHT', 'GF Right Note instance 1', 24, false);
 		animation.addByPrefix('singUP', 'GF Up Note instance 1', 24, false);
 		animation.addByPrefix('singDOWN', 'GF Down Note instance 1', 24, false);
-		animation.addByIndices('danceLeft', 'GF Dancing Beat instance 1', [6], "", 1, false);
-		animation.addByIndices('danceRight', 'GF Dancing Beat instance 1', [6], "", 1, false);
+		animation.addByIndices('idle', 'GF Dancing Beat instance 1', [6], "", 1, false);
 		animation.addByPrefix('scared', 'ikNode_10', 24, false);
 		dad.animation = animation;
 	}
@@ -51,7 +50,7 @@ class Trueform extends Tutorial
 
 		dad.addOffset('scared', -11, -23);
 
-		dad.playAnim('danceRight');
+		dad.playAnim('idle');
 		dad.dance();
 	}
 
