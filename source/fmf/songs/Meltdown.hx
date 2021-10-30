@@ -81,7 +81,7 @@ class Meltdown extends Sabotage
 		animation.addByPrefix('idle', 'impostor idle', 18, false);
 		animation.addByPrefix('singUP', 'impostor up', 24, false);
 		animation.addByPrefix('singDOWN', 'impostor down', 24, false);
-		animation.addByPrefix('singLEFT', 'impostor left', 24, false);
+		animation.addByPrefix('singLEFT', 'imposter left', 24, false);
 		animation.addByPrefix('singRIGHT', 'impostor right', 24, false);
 		dad.animation = animation;
 
@@ -90,10 +90,10 @@ class Meltdown extends Sabotage
 	override function createDadAnimationOffsets():Void
 	{
 		dad.addOffset('idle', 0, 0);
-		dad.addOffset("singUP", 0, 40);
-		dad.addOffset("singRIGHT", 0, 8);
-		dad.addOffset("singLEFT", 0, 9);
-		dad.addOffset("singDOWN", 0, -12);
+		dad.addOffset("singUP", -5, 40);
+		dad.addOffset("singRIGHT", -39, 8);
+		dad.addOffset("singLEFT", 95, -4);
+		dad.addOffset("singDOWN", -25, -12);
 		dad.dance();
         dad.scale.x = 0.8;
         dad.scale.y = 0.8;

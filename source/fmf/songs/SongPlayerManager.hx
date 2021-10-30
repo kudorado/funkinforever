@@ -333,6 +333,12 @@ class SongPlayerManager
 
 			case 'meltdown':
 				songPlayer = new Meltdown();
+
+			case 'sussus-toogus': 
+				songPlayer = new SussusToogus();
+			
+			case 'reactor':
+				songPlayer = new Reactor();
 		}
 
 		return songPlayer;
