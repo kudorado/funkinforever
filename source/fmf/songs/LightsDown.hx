@@ -9,11 +9,11 @@ import fmf.characters.*;
 
 class LightsDown extends SussusToogus	
 {
-    // override function getDadTex()
-	// {
-	// 	var tex = Paths.getSparrowAtlas('pc/sus/crewmate', 'mods');
-	// 	dad.frames = tex;
-	// }
+    override function getDadTex()
+	{
+		var tex = Paths.getSparrowAtlas('pc/sus/impostor3', 'mods');
+		dad.frames = tex;
+	}
 
 	override function loadMap()
 	{
@@ -21,32 +21,32 @@ class LightsDown extends SussusToogus
 		super.loadMap();
 	}
 
-	// override function createDadAnimations():Void
-	// {
-	// 	var animation = dad.animation;
-	// 	animation.addByPrefix('idle', 'impostor idle00', 18, false);
-	// 	animation.addByPrefix('singUP', 'impostor up20', 24, false);
-	// 	animation.addByPrefix('singDOWN', 'impostor down00', 24, false);
-	// 	animation.addByPrefix('singLEFT', 'imposter left00', 24, false);
-	// 	animation.addByPrefix('singRIGHT', 'impostor right00', 24, false);
-	// 	dad.animation = animation;
+	override function createDadAnimations():Void
+	{
+		var animation = dad.animation;
+		animation.addByPrefix('idle', 'impostor idle00', 18, false);
+		animation.addByPrefix('singUP', 'impostor up20', 24, false);
+		animation.addByPrefix('singDOWN', 'impostor down00', 24, false);
+		animation.addByPrefix('singLEFT', 'imposter left00', 24, false);
+		animation.addByPrefix('singRIGHT', 'impostor right00', 24, false);
+		dad.animation = animation;
 
-	// }
+	}
 
-	// override function createDadAnimationOffsets():Void
-	// {
-	// 	dad.addOffset('idle', -83, -27);
-	// 	dad.addOffset("singUP", 49, 67);
-	// 	dad.addOffset("singRIGHT", -61, -40);
-	// 	dad.addOffset("singLEFT", 116, -21);
-	// 	dad.addOffset("singDOWN", 21, -53);
-	// 	dad.dance();
+	override function createDadAnimationOffsets():Void
+	{
+        dad.addOffset('idle', 0, 0);
+		dad.addOffset("singUP", 214, 82);
+		dad.addOffset("singRIGHT", -98, -14);
+		dad.addOffset("singLEFT", 65, 17);
+		dad.addOffset("singDOWN", -81, -20);
+		dad.dance();
 
-	// 	dad.scale.x = 0.9;
-	// 	dad.scale.y = 0.9;
-	// 	dad.x -= 500;
-	// 	dad.y += 225;
-	// }
+		dad.scale.x = 0.9;
+		dad.scale.y = 0.9;
+		dad.x -= 500;
+		dad.y += 225;
+	}
 
 	// override function createGFAnimationOffsets()
 	// {
