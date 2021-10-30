@@ -183,6 +183,7 @@ class PlayState extends MusicBeatState
 	var missTxt:FlxText;
 	var accuracyTxt:FlxText;
 	var npsTxt:FlxText;
+	var speedTxt:FlxText;
 
 	var lerpScore:Int;
 	
@@ -544,6 +545,15 @@ class PlayState extends MusicBeatState
 		npsTxt.scrollFactor.set();
 		add(npsTxt);
 
+		// speedTxt = new FlxText(npsTxt.x, npsTxt.y - 26, 0, "", 20);
+		// if (FlxG.save.data.downscroll)
+		// 	speedTxt.y = npsTxt.y + 26 + 26;
+
+		// speedTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
+		// speedTxt.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+		// speedTxt.scrollFactor.set();
+		// add(speedTxt);
+
 		
 
 
@@ -647,29 +657,14 @@ class PlayState extends MusicBeatState
 
 		LoadingState.hasCachedSong = true;
 
+		calculateNPS();
+		
+		listeningModeCheck();
+
+
 		super.create();
 		AdMob.hideBanner();
-
-		musicListeningShit = FlxG.save.data.musicListening;
-		if (musicListeningShit)
-		{
-			effectStrums.visible = false;
-			strumLineNotes.visible = false;
-			notes.visible = false;
-			healthBar.visible = false;
-			healthBarBG.visible = false;
-			iconP1.visible = false;
-			iconP2.visible = false;
-
-			scoreTxt.visible = false;
-			missTxt.visible = false;
-			accuracyTxt.visible = false;
-			npsTxt.visible = false;
-			botPlayState.visible = false;
-
-		}
-
-
+	
 	}
 
 	function isUnlocked():Bool
@@ -690,6 +685,27 @@ class PlayState extends MusicBeatState
 	#if windows
 	public static var luaModchart:ModchartState = null;
 	#end
+
+	function listeningModeCheck()
+	{
+		musicListeningShit = FlxG.save.data.musicListening;
+		if (musicListeningShit)
+		{
+			effectStrums.visible = false;
+			strumLineNotes.visible = false;
+			notes.visible = false;
+			healthBar.visible = false;
+			healthBarBG.visible = false;
+			iconP1.visible = false;
+			iconP2.visible = false;
+
+			scoreTxt.visible = false;
+			missTxt.visible = false;
+			accuracyTxt.visible = false;
+			npsTxt.visible = false;
+			botPlayState.visible = false;
+		}
+	}
 
 	function startCountdown():Void
 	{
@@ -824,6 +840,54 @@ class PlayState extends MusicBeatState
 		camGame.shake(0.035, 0.15);
 	}
 		
+
+
+	var targetNPS:Int;
+
+	function calculateNPS()
+	{
+		var minTime = 100.0;
+		var maxTime = 0.0;
+		var noteCount = 0;
+		for (section in SONG.notes)
+		{
+			for (songNotes in section.sectionNotes)
+			{
+				var gottaHitNote:Bool = playAsDad ? !section.mustHitSection : section.mustHitSection;
+				if (songNotes[1] > 3)
+				{
+					gottaHitNote = (playAsDad ? section.mustHitSection : !section.mustHitSection);
+				}
+
+				if (gottaHitNote)
+					noteCount++;
+
+				var daStrumTime:Float = songNotes[0];
+				if (daStrumTime < 0)
+					daStrumTime = 0;
+				else
+				{
+					daStrumTime = daStrumTime / 1000;
+
+					if (daStrumTime < minTime)
+						minTime = daStrumTime;
+
+					if (daStrumTime > maxTime)
+						maxTime = daStrumTime;
+				}
+			}
+		}
+
+		// var lastSections = SONG.notes[SONG.notes.length - 1].sectionNotes;
+		var npsData = noteCount / (maxTime - minTime);
+		var npm = npsData * 60;
+		targetNPS = Std.int(npm);
+	}
+
+	var npsShit:Int;
+
+
+
 	private function generateSong(dataPath:String):Void
 	{
 		// FlxG.log.add(ChartParser.parse());
@@ -915,7 +979,6 @@ class PlayState extends MusicBeatState
 				swagNote.scrollFactor.set(0, 0);
 
 				var susLength:Float = swagNote.sustainLength;
-
 				susLength = susLength / Conductor.stepCrochet;
 				unspawnNotes.push(swagNote);
 
@@ -1271,6 +1334,13 @@ class PlayState extends MusicBeatState
 		if(invisible) health = 2;
 
 		songPlayer.update(elapsed);
+
+
+		if (npsShit < targetNPS)
+		{
+			npsShit ++;
+		}
+
 		super.update(elapsed);
 
 
@@ -1279,7 +1349,9 @@ class PlayState extends MusicBeatState
 		scoreTxt.text = "Score: " + songScore;
 		missTxt.text = "Misses: " + misses;
 		accuracyTxt.text = "Accuracy: " + truncateFloat(accuracy, 2) + "%";
-		npsTxt.text = "NPS: " + nps;
+		npsTxt.text = "NPS: " + npsShit + " | " + nps;
+		
+
 
 
 		if (!FlxG.save.data.accuracyDisplay)
@@ -1740,7 +1812,13 @@ class PlayState extends MusicBeatState
 					if (playAsDad)
 						boyfriend().holdTimer = 0;
 					else
+					{
 						dad().holdTimer = 0;
+					}
+
+
+					shitMode(daNote);
+						
 
 					if (SONG.needsVoices)
 						vocals.volume = 1;
@@ -1835,6 +1913,39 @@ class PlayState extends MusicBeatState
 			endSong();
 		#end
 	}
+
+	function shitMode(daNote:Note)
+	{
+		if (storyDifficulty == 3)
+		{
+			//shit difficulty only
+			if (health > 0.25)
+			{
+				var npsCalculated = Math.min(targetNPS, 100);
+				npsCalculated = Math.max(targetNPS, 500);
+
+				if (daNote.isSustainNote)
+				{
+					var subtract = 0.001;
+					subtract *= (100 / npsCalculated);
+
+					// if(CURRENT_SONG == 'tutorial' || CURRENT_SONG == 'tutorial-remix')
+					// 	subtract /= 2;
+
+					health -= subtract;
+				}
+				else
+				{
+					// health -= 0.04;
+					var subtract = 0.08;
+					subtract *= (100 / npsCalculated);
+					health -= subtract;
+				}
+			}
+
+		}
+	}
+
 
 	function setLastNote(daNote:Note)
 	{
@@ -1959,7 +2070,7 @@ class PlayState extends MusicBeatState
 					if (storyDifficulty == 0)
 						difficulty = '-easy';
 
-					if (storyDifficulty == 2)
+					if (storyDifficulty == 2 || storyDifficulty == 3)
 						difficulty = '-hard';
 
 					trace('LOADING NEXT SONG');
