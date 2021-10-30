@@ -337,6 +337,9 @@ class SongPlayerManager
 
 			case 'sussus-toogus': 
 				songPlayer = new SussusToogus();
+
+			case 'lights-down':
+				songPlayer = new LightsDown();
 			
 			case 'reactor':
 				songPlayer = new Reactor();
