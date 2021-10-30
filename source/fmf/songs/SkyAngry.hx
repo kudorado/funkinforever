@@ -40,6 +40,7 @@ class SkyAngry extends SkyTired
 		dad.animation = animation;
 	}
 
+
 	override function createDadAnimationOffsets():Void
 	{
 

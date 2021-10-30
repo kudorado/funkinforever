@@ -503,7 +503,7 @@ class PlayState extends MusicBeatState
 
 //------------------------mic c up copy ----------------------------
 
-		songName = new FlxText(25, healthBarBG.y + 26, 0, CURRENT_SONG.toUpperCase(), 20);
+		songName = new FlxText(25, healthBarBG.y + 26, 0, CURRENT_SONG.toUpperCase() + ": " + getDiff().toUpperCase(), 20);
 		if (FlxG.save.data.downscroll)
 			songName.y = healthBarBG.y - 18;
 
@@ -566,7 +566,7 @@ class PlayState extends MusicBeatState
 			+ 50, 0,
 			SONG.song
 			+ " "
-			+ (storyDifficulty == 3 ? "Shit" :  storyDifficulty == 2  ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy"));
+			+ getDiff());
 
 			// + (Main.watermarks ? " - KE " + MainMenuState.kadeEngineVer : ""));
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -685,6 +685,12 @@ class PlayState extends MusicBeatState
 	#if windows
 	public static var luaModchart:ModchartState = null;
 	#end
+	
+	function getDiff():String
+	{
+		var dif:String = storyDifficulty == 3 ? "Shit" : storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy";
+		return dif;
+	}
 
 	function listeningModeCheck()
 	{
@@ -1349,7 +1355,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.text = "Score: " + songScore;
 		missTxt.text = "Misses: " + misses;
 		accuracyTxt.text = "Accuracy: " + truncateFloat(accuracy, 2) + "%";
-		npsTxt.text = "NPS: " + npsShit + " | " + nps;
+		npsTxt.text = "NPM & NPS: " + npsShit + " | " + nps;
 		
 
 
