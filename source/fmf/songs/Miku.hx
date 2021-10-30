@@ -43,7 +43,7 @@ class Miku extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('iconGrid2'), true, 150, 132);
+		icon.loadGraphic(Paths.image('bg/miku/iconGrid', 'mods'), true, 150, 132);
 		icon.animation.add('dad', [10, 11], 0, false, false);
 		icon.animation.play("dad");
 	}

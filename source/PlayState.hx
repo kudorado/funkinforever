@@ -184,6 +184,8 @@ class PlayState extends MusicBeatState
 	var accuracyTxt:FlxText;
 	var npsTxt:FlxText;
 
+	var lerpScore:Int;
+	
 	//immortal godlike
 	var invisible:Bool;
 
@@ -500,9 +502,19 @@ class PlayState extends MusicBeatState
 
 //------------------------mic c up copy ----------------------------
 
-		scoreTxt = new FlxText(25, healthBarBG.y + 26, 0, "", 20);
+		songName = new FlxText(25, healthBarBG.y + 26, 0, CURRENT_SONG.toUpperCase(), 20);
 		if (FlxG.save.data.downscroll)
-			scoreTxt.y = healthBarBG.y - 18;
+			songName.y = healthBarBG.y - 18;
+
+		songName.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
+		songName.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+		songName.scrollFactor.set();
+		add(songName);
+
+		scoreTxt = new FlxText(songName.x, songName.y - 26, 0, "", 20);
+		if (FlxG.save.data.downscroll)
+			scoreTxt.y = scoreTxt.y + 26 + 26;
+
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
 		scoreTxt.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 		scoreTxt.scrollFactor.set();
@@ -531,6 +543,8 @@ class PlayState extends MusicBeatState
 		npsTxt.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 		npsTxt.scrollFactor.set();
 		add(npsTxt);
+
+		
 
 
 //-----------------------------------------------------------------------------
@@ -592,6 +606,7 @@ class PlayState extends MusicBeatState
 		missTxt.cameras = [camHUD];
 		accuracyTxt.cameras = [camHUD];
 		npsTxt.cameras = [camHUD];
+		songName.cameras = [camHUD];
 
 		// doof.cameras = [camHUD];
 		if (FlxG.save.data.songPosition)
@@ -722,35 +737,36 @@ class PlayState extends MusicBeatState
 
 		if (kudoradoHandsome)
 		{
-			songPosBG = new FlxSprite(0, 10).loadGraphic(Paths.image('healthBar', 'shared'));
+
+			songPosBG = new FlxSprite(0, songName.y).loadGraphic(Paths.image('fuckbar', 'shared'));
 			songPosBG.color = FlxColor.BLACK;
 
+			songPosBG.y-= songPosBG.height / 2;
+
+			songPosBG.x += 5;
+
 			if (FlxG.save.data.downscroll)
-				songPosBG.y = FlxG.height * 0.9 + 45;
-			songPosBG.screenCenter(X);
+				songPosBG.y += 62.5;
+			else
+				songPosBG.y -= 40;
+
+		
 			songPosBG.scrollFactor.set();
 			add(songPosBG);
+
 			songPosBG.cameras = [camHUD];
-			songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4, LEFT_TO_RIGHT, Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
+			songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4 ,  BOTTOM_TO_TOP  , Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
 				'songPositionBar', 0, Math.max(songLength - 1000, 30));
 			songPosBar.scrollFactor.set();
 			songPosBar.createFilledBar(FlxColor.TRANSPARENT, FlxColor.WHITE);
 			add(songPosBar);
 			songPosBar.cameras = [camHUD];
 
-			var songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - 20, songPosBG.y, 0, CURRENT_SONG, 16);
-			if (FlxG.save.data.downscroll)
-				songName.y -= 3;
-
-			songName.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-			songName.scrollFactor.set();
-			add(songName);
+			songPosBG.setGraphicSize(Std.int(songPosBG.width * 0.5), Std.int(songPosBG.height * 0.2));
+			songPosBar.setGraphicSize(Std.int(songPosBar.width * 0.5), Std.int(songPosBar.height * 0.2));
 
 
-			FlxTween.tween(songPosBG, {alpha: 1}, 0.5, {});
-			FlxTween.tween(songPosBar, {alpha: 1}, 0.5, {});
-			FlxTween.tween(songName, {alpha: 1}, 0.5, {});
-
+			
 			songPosBG.cameras = [camHUD];
 			songPosBar.cameras = [camHUD];
 			songName.cameras = [camHUD];
@@ -885,7 +901,6 @@ class PlayState extends MusicBeatState
 
 				if (songNotes[1] > 3)
 				{
-					
 					gottaHitNote = (playAsDad ? section.mustHitSection : !section.mustHitSection);
 				}
 
@@ -1257,6 +1272,9 @@ class PlayState extends MusicBeatState
 
 		songPlayer.update(elapsed);
 		super.update(elapsed);
+
+
+		// lerpScore = Math.floor(FlxMath.lerp(lerpScore, songScore, elapsed * 5));
 
 		scoreTxt.text = "Score: " + songScore;
 		missTxt.text = "Misses: " + misses;
@@ -2150,6 +2168,7 @@ class PlayState extends MusicBeatState
 	{
 		if (musicListeningShit)
 			return;
+
 
 		var noteDiff:Float = Math.abs(Conductor.songPosition - daNote.strumTime);
 		var wife:Float = EtternaFunctions.wife3(noteDiff, Conductor.timeScale);

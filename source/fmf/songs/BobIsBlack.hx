@@ -75,11 +75,11 @@ class BobIsBlack extends SongPlayer
 		super.createGFAnimationOffsets();
 		gf.y -= 150;
 	}
-
+	
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
-		icon.animation.add('dad', [28, 29], 0, false, false);
+		icon.loadGraphic(Paths.image('bg/bob/iconGrid', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [34, 35], 0, false, false);
 		icon.animation.play("dad");
 	}
 

@@ -87,7 +87,7 @@ class BabRonaldMcDonal extends SongPlayer
 	public override function getDadIcon(icon:HealthIcon)
 	{
 		icon.loadGraphic(Paths.image('bg/bab/icons/ronsip','mods'), true, 150, 150);
-		icon.animation.add('dad', [0,2], 0, false, false);
+		icon.animation.add('dad', [2, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
 

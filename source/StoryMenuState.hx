@@ -238,6 +238,7 @@ class StoryMenuState extends MusicBeatState
 
 		LoadingState.clearCachedSong();
 		
+		changeWeek(0);
 		super.create();
 	}
 
