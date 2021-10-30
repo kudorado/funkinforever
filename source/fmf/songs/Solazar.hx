@@ -122,8 +122,8 @@ class Solazar extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
-		icon.animation.add('dad', [50, 51], 0, false, false);
+		icon.loadGraphic(Paths.image('bg/solazar/iconGrid', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [3, 5], 0, false, false);
 		icon.animation.play("dad");
 	}
 
