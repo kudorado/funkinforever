@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import js.html.AbortController;
 import flixel.input.gamepad.lists.FlxBaseGamepadList;
 import openfl.display.GraphicsShader;
 import js.html.audio.AudioWorkletProcessor;
@@ -339,6 +340,9 @@ class SongPlayerManager
 			
 			case 'reactor':
 				songPlayer = new Reactor();
+			
+			case 'ejected':
+				songPlayer = new Ejected();
 		}
 
 		return songPlayer;
