@@ -50,8 +50,11 @@ class GameOverSubstate extends MusicBeatSubstate
         bg.alpha = 0;
         bg.scrollFactor.set();
 
-        bg.scale.x = Main.fx;
-        bg.scale.y = Main.fy;
+        if (Main.daTabletShit)
+		{
+			bg.scale.x = Main.fuckZoom;
+			bg.scale.y = Main.fuckZoom;
+		}
 
         add(bg);
 

@@ -47,9 +47,11 @@ class VictorySubState extends MusicBeatSubstate
         bg.alpha = 0;
         bg.scrollFactor.set();
 
-        bg.scale.x = Main.fx;
-        bg.scale.y = Main.fy;
-        
+		if (Main.daTabletShit)
+		{
+			bg.scale.x = Main.shitZoom;
+			bg.scale.y = Main.shitZoom;
+		}
         add(bg);
 
 
@@ -62,8 +64,11 @@ class VictorySubState extends MusicBeatSubstate
         bg1.screenCenter();
         bg1.antialiasing = true;
 
-        bg1.scale.x = Main.fx;
-        bg1.scale.y = Main.fy;
+		if (Main.daTabletShit)
+		{
+			bg1.scale.x = Main.shitZoom;
+			bg1.scale.y = Main.shitZoom;
+		}
 
         add(bg1);
 

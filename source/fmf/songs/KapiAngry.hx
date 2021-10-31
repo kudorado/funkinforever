@@ -63,8 +63,8 @@ class KapiAngry extends Kapi
 	override function createDad()
 	{
 		super.createDad();
-		dad.scale.x *= 1.25;
-		dad.scale.y *= 1.25;
+		dad.scale.x = 1.2;
+		dad.scale.y = 1.2;
 
 		dad.y -= 165;
 

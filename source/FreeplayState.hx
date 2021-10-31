@@ -28,7 +28,6 @@ class FreeplayState extends MusicBeatState
 
 	var selector:FlxText;
 	static var curSelected:Int = 0;
-	var curDifficulty:Int = 1;
 
 	var scoreText:FlxText;
 	var diffText:FlxText;
@@ -82,16 +81,17 @@ class FreeplayState extends MusicBeatState
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		bg.scrollFactor.x = 0;
-		bg.scrollFactor.y = 0.15;
+		bg.scrollFactor.y = 0.10;
 		bg.setGraphicSize(Std.int(bg.width * 1.1));
 		bg.updateHitbox();
-
-		bg.screenCenter(X);
+		bg.screenCenter();
 		bg.antialiasing = true;
 
-		bg.scale.x *= Main.fx;
-		bg.scale.y *= Main.fy;
-
+		if (Main.daTabletShit)
+		{
+			bg.scale.x *= Main.shitZoom;
+			bg.scale.y *= Main.shitZoom;
+		}
 
 		add(bg);
 
@@ -305,7 +305,7 @@ class FreeplayState extends MusicBeatState
 
 		trace(songLowercase);
 
-		var poop:String = Highscore.formatSong(songHighscore, curDifficulty);
+		var poop:String = Highscore.formatSong(songHighscore, StoryMenuState.curDifficulty);
 
 		trace(poop);
 
@@ -315,7 +315,7 @@ class FreeplayState extends MusicBeatState
 		PlayState.SONG = Song.loadFromJson(poop, SongManager.songs[curSong.week].folder + songLowercase);
 
 		PlayState.isStoryMode = false;
-		PlayState.storyDifficulty = curDifficulty;
+		PlayState.storyDifficulty = StoryMenuState.curDifficulty;
 		PlayState.storyWeek = songs[curSelected].week;
 
 		LoadingState.loadAndSwitchState(new SelectionState());
@@ -323,12 +323,12 @@ class FreeplayState extends MusicBeatState
 
 	function changeDiff(change:Int = 0)
 	{
-		curDifficulty += change;
+		StoryMenuState.curDifficulty += change;
 
-		if (curDifficulty < 0)
-			curDifficulty = 3;
-		if (curDifficulty > 3)
-			curDifficulty = 0;
+		if (StoryMenuState.curDifficulty < 0)
+			StoryMenuState.curDifficulty = 3;
+		if (StoryMenuState.curDifficulty > 3)
+			StoryMenuState.curDifficulty = 0;
 
 		// adjusting the highscore song name to be compatible (changeDiff)
 		var songHighscore = StringTools.replace(songs[curSelected].songName, " ", "-");
@@ -338,10 +338,10 @@ class FreeplayState extends MusicBeatState
 		}
 		
 		#if !switch
-		intendedScore = Highscore.getScore(songHighscore, curDifficulty);
+		intendedScore = Highscore.getScore(songHighscore, StoryMenuState.curDifficulty);
 		#end
 
-		switch (curDifficulty)
+		switch (StoryMenuState.curDifficulty)
 		{
 			case 0:
 				diffText.text = "EASY";
@@ -382,7 +382,7 @@ class FreeplayState extends MusicBeatState
 		}
 
 		#if !switch
-		intendedScore = Highscore.getScore(songHighscore, curDifficulty);
+		intendedScore = Highscore.getScore(songHighscore, StoryMenuState.curDifficulty);
 		// lerpScore = 0;
 		#end
 

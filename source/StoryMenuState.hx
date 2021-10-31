@@ -34,7 +34,7 @@ class StoryMenuState extends MusicBeatState
 	var gf:MenuCharacter;
 
 
-	var curDifficulty:Int = 1;
+	public static var curDifficulty:Int = 1;
 
 	public static var weekUnlocked:Array<Bool> =
 	 [true, true, true, true, true, true, true,

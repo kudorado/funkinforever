@@ -47,9 +47,12 @@ class WeekCompleteSubState extends MusicBeatSubstate
         var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
         bg.alpha = 0;
         bg.scrollFactor.set();
-
-        bg.scale.x = Main.fx;
-        bg.scale.y = Main.fy;
+		
+        if (Main.daTabletShit)
+		{
+			bg.scale.x = Main.shitZoom;
+			bg.scale.y = Main.shitZoom;
+		}
 
         add(bg);
 
@@ -60,9 +63,13 @@ class WeekCompleteSubState extends MusicBeatSubstate
         bg1.updateHitbox();
         bg1.screenCenter();
         bg1.antialiasing = true;
+		
+        if (Main.daTabletShit)
+		{
+			bg1.scale.x = Main.shitZoom;
+			bg1.scale.y = Main.shitZoom;
+		}
 
-        bg1.scale.x = Main.fx;
-        bg1.scale.y = Main.fy;
         add(bg1);
 
 

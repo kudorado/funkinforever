@@ -23,6 +23,15 @@ class Main extends Sprite
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
 	public static var watermarks = true; // Whether to put Kade Engine liteartly anywhere
+	
+	// this is fucking shit make by kudorado
+	public static var shitZoom:Float = 1.2;
+	public static var fuckZoom:Float;
+	public static var daTabletShit:Bool;
+
+
+
+
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
@@ -33,7 +42,6 @@ class Main extends Sprite
 	{
 
 		// quick checks 
-
 		Lib.current.addChild(new Main());
 	}
 
@@ -66,18 +74,31 @@ class Main extends Sprite
 		var stageWidth:Int = Lib.current.stage.stageWidth;
 		var stageHeight:Int = Lib.current.stage.stageHeight;
 
-		// var stageWidth:Int = 1600;
-		// var stageHeight:Int = 720;
+		//debug resolution
+		
+		// var stageWidth:Int = 2732;
+		// var stageHeight:Int = 2048;
 		
 		if (zoom == -1)
 		{
 			fx = stageWidth / gameWidth;
 			fy = stageHeight / gameHeight;
 
+			if (stageWidth / stageHeight > 1.60)//wide phone
+				zoom = Math.max(fx, fy);
+			else // tablet
+			{
+				zoom = Math.min(fx, fy);
+				daTabletShit = true;
+			}
 
-			zoom = Math.min(fx, fy); 
+
+			fuckZoom = zoom;
+
 			gameWidth = Math.ceil(stageWidth / zoom);
 			gameHeight = Math.ceil(stageHeight / zoom);
+
+			trace('fucking zoom: ' + zoom);
 		}
 
 		#if !debug

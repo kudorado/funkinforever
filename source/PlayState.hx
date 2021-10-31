@@ -215,6 +215,11 @@ class PlayState extends MusicBeatState
 	public static var campaignScore:Int = 0;
 
 	public var defaultCamZoom:Float = 0.85;
+	public var camZoomShit(get, never):Float;
+	public inline function get_camZoomShit():Float
+	{
+		return defaultCamZoom * Main.fuckZoom;
+	}
 
 	public static var daPixelZoom:Float = 6;
 
@@ -455,7 +460,7 @@ class PlayState extends MusicBeatState
 		camGame.follow(camFollow, LOCKON, 0.04);
 		// camGame.follow(camFollow, LOCKON, 0.04 * (30 / (cast(Lib.current.getChildAt(0), Main)).getFPS()));
 		// camGame.setScrollBounds(0, FlxG.width, 0, FlxG.height);
-		camGame.zoom = defaultCamZoom;
+		camGame.zoom = camZoomShit;
 		camGame.focusOn(camFollow.getPosition());
 
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
@@ -1062,10 +1067,10 @@ class PlayState extends MusicBeatState
 				case 1:
 					if (hideDadNote)
 					{
-						babyArrow.x = w * 0.5;
+						babyArrow.x = w * 0.46;
 						babyArrow.x -= (babyArrow.width * 2);
 						babyArrow.x += Note.swagWidth * i;
-						// babyArrow.x += shit * Main.fx;
+						babyArrow.x += shit; // * Main.fx;
 					}
 					playerStrums.add(babyArrow);
 			}
@@ -1077,7 +1082,7 @@ class PlayState extends MusicBeatState
 				var px:Int = player;
 				px = playAsDad ? px == 0 ? 1 : 0 : px;
 
-				babyArrow.x += shit * Main.fx;
+				babyArrow.x += shit;
 				babyArrow.x += ((w / 2) * px);
 			}
 
@@ -1544,7 +1549,7 @@ class PlayState extends MusicBeatState
 
 		if (camZooming)
 		{
-			camGame.zoom = FlxMath.lerp(defaultCamZoom, camGame.zoom, 0.95);
+			camGame.zoom = FlxMath.lerp(camZoomShit, camGame.zoom, 0.95);
 			// camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, 0.95);
 		}
 

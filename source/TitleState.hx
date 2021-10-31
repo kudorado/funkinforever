@@ -139,13 +139,16 @@ class TitleState extends MusicBeatState
 		var daSplash:FlxSprite = new FlxSprite().loadGraphic(Paths.image('splash'));
 		daSplash.setGraphicSize(Std.int(FlxG.width), Std.int(FlxG.height));
 		
-		daSplash.scale.x *= Main.fx;
-		daSplash.scale.y *= Main.fy;
+		if (Main.daTabletShit)
+		{
+			daSplash.scale.x *= Main.shitZoom;
+			daSplash.scale.y *= Main.shitZoom;
+		}
 
 		add(daSplash);
 
 
-		titleText = new FlxSprite(100 * Main.fx, FlxG.height * 0.6);
+		titleText = new FlxSprite(100, FlxG.height * 0.6);
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
 		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
 		titleText.animation.addByPrefix('press', "ENTER PRESSED0", 24);
@@ -153,9 +156,9 @@ class TitleState extends MusicBeatState
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
 		titleText.screenCenter(X);
-		titleText.setGraphicSize(Std.int(titleText.width * 0.7 * Main.fx));
+		titleText.setGraphicSize(Std.int(titleText.width * 0.7));
 
-		titleText.x =  200  * Main.fx;
+		titleText.x =  100;
 
 		titleText.y = 100;
 

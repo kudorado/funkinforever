@@ -29,7 +29,7 @@ class Hitbox extends FlxSpriteGroup
     public var down:FlxButton;
     public var up:FlxButton;
     public var right:FlxButton;
-    var sp:Float  = 0.1;
+	var sp:Float = 0.1;
     public function new(?widghtScreen:Int, ?heightScreen:Int)
     {
         super(widghtScreen, heightScreen);
@@ -64,6 +64,9 @@ class Hitbox extends FlxSpriteGroup
         
 
         button.loadGraphic(FlxGraphic.fromFrame(frames.getByName(framestring)));
+        button.setGraphicSize(Std.int(button.width), FlxG.height);
+        button.updateHitbox();
+        button.screenCenter(Y);
 
         button.alpha = sp;
         switch (X){
@@ -79,11 +82,11 @@ class Hitbox extends FlxSpriteGroup
         }
     
         button.onDown.callback = function (){
-            FlxTween.num(sp, 0.3, .075, {ease: FlxEase.circInOut}, function (a:Float) { button.alpha = a; });
+            FlxTween.num(sp, 0.45, .075, {ease: FlxEase.circInOut}, function (a:Float) { button.alpha = a; });
         };
 
         button.onUp.callback = function (){
-            FlxTween.num(0.3, sp, .1, {ease: FlxEase.circInOut}, function (a:Float) { button.alpha = a; });
+            FlxTween.num(0.45, sp, .1, {ease: FlxEase.circInOut}, function (a:Float) { button.alpha = a; });
         }
         
         button.onOut.callback = function (){

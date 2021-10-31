@@ -125,9 +125,9 @@
 	<haxelib name="flixel-ui" />
 	<!-- <haxelib name="newgrounds"/> -->
 	<haxelib name="faxe" if='switch'/>
-	<haxelib name="polymod"/>
+	<!-- <haxelib name="polymod"/> -->
 	<haxelib name="discord_rpc" if="windows"/>
-	<haxelib name="linc_luajit"/>
+	<!-- <haxelib name="linc_luajit"/> -->
 
 
 	<architecture name="arm64" />

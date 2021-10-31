@@ -66,15 +66,18 @@ class MainMenuState extends MusicBeatState
 
 		var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('menuBG'));
 		bg.scrollFactor.x = 0;
-		bg.scrollFactor.y = 0.10;
+		bg.scrollFactor.y = 0;
 		bg.setGraphicSize(Std.int(bg.width * 1.1));
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = true;
-
-		bg.scale.x *= Main.fx;
-		bg.scale.y *= Main.fy;
-
+		
+		if (Main.daTabletShit)
+		{
+			bg.scale.x *= Main.shitZoom;
+			bg.scale.y *= Main.shitZoom;
+		}
+		
 		add(bg);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
@@ -82,7 +85,7 @@ class MainMenuState extends MusicBeatState
 
 		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
 		magenta.scrollFactor.x = 0;
-		magenta.scrollFactor.y = 0.10;
+		magenta.scrollFactor.y = 0;
 		magenta.setGraphicSize(Std.int(magenta.width * 1.1));
 		magenta.updateHitbox();
 		magenta.screenCenter();
@@ -90,10 +93,12 @@ class MainMenuState extends MusicBeatState
 		magenta.antialiasing = true;
 		magenta.color = 0xFFfd719b;
 
-		
-		magenta.scale.x *= Main.fx;
-		magenta.scale.y *= Main.fy;
-		
+		if (Main.daTabletShit)
+		{
+			magenta.scale.x *= Main.shitZoom;
+			magenta.scale.y *= Main.shitZoom;
+		}
+
 		add(magenta);
 		// magenta.scrollFactor.set();
 
