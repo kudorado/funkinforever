@@ -74,10 +74,10 @@ class SussusMoogus extends SongPlayer
 	override function createDadAnimationOffsets():Void
 	{
 		dad.addOffset('idle', 0, -138);
-		dad.addOffset("singUP", 0, 0);
-		dad.addOffset("singRIGHT", 0, 0);
-		dad.addOffset("singLEFT", 0, 0);
-		dad.addOffset("singDOWN", 0, 0);
+		dad.addOffset("singUP", -64, -4);
+		dad.addOffset("singRIGHT", -98, -1);
+		dad.addOffset("singLEFT", 9, -2);
+		dad.addOffset("singDOWN", -57, -16);
 		dad.dance();
 
 		dad.scale.x = 1.5;
