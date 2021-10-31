@@ -19,45 +19,42 @@ class SussusToogus extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.8;
+		playState.defaultCamZoom = 0.7;
 
-		var bg1:FlxSprite = new FlxSprite(0, -300).loadGraphic(Paths.image('bg/impostor/red/polusSky', 'mods'));
+		var bg1:FlxSprite = new FlxSprite(-50, 100).loadGraphic(Paths.image('bg/sus/sussus_toogus/Mira', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1.4;
 		bg1.scale.x = 1.4;
 		playState.add(bg1);
 
-        
+		
 
-        var bg3:FlxSprite = new FlxSprite(-100, -100).loadGraphic(Paths.image('bg/impostor/red/polusrocks', 'mods'));
-		bg3.antialiasing = true;
-		bg3.scale.y = 1;
-		bg3.scale.x = 1;
-        bg3.scrollFactor.set(0.6,0.6);
-		playState.add(bg3);
+		var vending_machine:FlxSprite = new FlxSprite(1100, 160).loadGraphic(Paths.image('bg/sus/sussus_toogus/vending_machine', 'mods'));
+		vending_machine.antialiasing = true;
+		vending_machine.scale.y = 1.4;
+		vending_machine.scale.x = 1.4;
+		playState.add(vending_machine);
 
+	}
 
-        var bg2:FlxSprite = new FlxSprite(200, 150).loadGraphic(Paths.image('bg/impostor/red/polusWarehouse', 'mods'));
-		bg2.antialiasing = true;
-		bg2.scale.y = 1;
-		bg2.scale.x = 1;
-        bg2.scrollFactor.set(0.8,0.8);
-		playState.add(bg2);
-        
+	function addTable(){
+		var table:FlxSprite = new FlxSprite(-800, 800).loadGraphic(Paths.image('bg/sus/sussus_toogus/table', 'mods'));
+		table.antialiasing = true;
+		table.scale.y = 1.4;
+		table.scale.x = 1.4;
+		playState.add(table);
 
-        var bg3:FlxSprite = new FlxSprite(-250, 300).loadGraphic(Paths.image('bg/impostor/red/polusHills', 'mods'));
-		bg3.antialiasing = true;
-		bg3.scale.y = 1;
-		bg3.scale.x = 1;
-        bg3.scrollFactor.set(0.8,0.8);
-		playState.add(bg3);
+		var table2:FlxSprite = new FlxSprite(1500, 850).loadGraphic(Paths.image('bg/sus/sussus_toogus/table', 'mods'));
+		table2.antialiasing = true;
+		table2.scale.y = 1.4;
+		table2.scale.x = 1.4;
+		table2.flipX = true;
+		playState.add(table2);
+	}
 
-        var bg4:FlxSprite = new FlxSprite(-0, 600).loadGraphic(Paths.image('bg/impostor/red/polusGround', 'mods'));
-		bg4.antialiasing = true;
-		bg4.scale.y = 1.4;
-		bg4.scale.x = 1.4;
-		playState.add(bg4);
-
+	override function createCharacters() {
+		super.createCharacters();
+		addTable();
 	}
 
 	override function createDadAnimations():Void
@@ -97,7 +94,7 @@ class SussusToogus extends SongPlayer
 	{
 		super.createBFAnimationOffsets();
 		
-		bf.x += 150;
+		bf.x += 50;
         bf.y += 50;
 	}
 
@@ -111,14 +108,14 @@ class SussusToogus extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		playState.camFollow.x = bf.getMidpoint().x - 240;
+		playState.camFollow.x = bf.getMidpoint().x - 160;
 		playState.camFollow.y = bf.getMidpoint().y - 150;
 	}
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		playState.camFollow.x = bf.getMidpoint().x - 500;
+		playState.camFollow.x = bf.getMidpoint().x - 300;
 		playState.camFollow.y = bf.getMidpoint().y - 150;
 	}
 

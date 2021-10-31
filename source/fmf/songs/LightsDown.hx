@@ -18,7 +18,48 @@ class LightsDown extends SussusToogus
 	override function loadMap()
 	{
 
-		super.loadMap();
+		playState.defaultCamZoom = 0.7;
+
+		var bg1:FlxSprite = new FlxSprite(-50, 100).loadGraphic(Paths.image('bg/sus/sussus_toogus/MiraDark', 'mods'));
+		bg1.antialiasing = true;
+		bg1.scale.y = 1.4;
+		bg1.scale.x = 1.4;
+		playState.add(bg1);
+
+		
+
+		var vending_machine:FlxSprite = new FlxSprite(1100, 160).loadGraphic(Paths.image('bg/sus/sussus_toogus/vending_machineDark', 'mods'));
+		vending_machine.antialiasing = true;
+		vending_machine.scale.y = 1.4;
+		vending_machine.scale.x = 1.4;
+		playState.add(vending_machine);
+
+	}
+
+	override function addTable(){
+		var table:FlxSprite = new FlxSprite(-800, 800).loadGraphic(Paths.image('bg/sus/sussus_toogus/tableDark', 'mods'));
+		table.antialiasing = true;
+		table.scale.y = 1.4;
+		table.scale.x = 1.4;
+		playState.add(table);
+
+		var table2:FlxSprite = new FlxSprite(1500, 850).loadGraphic(Paths.image('bg/sus/sussus_toogus/tableDark', 'mods'));
+		table2.antialiasing = true;
+		table2.scale.y = 1.4;
+		table2.scale.x = 1.4;
+		table2.flipX = true;
+		playState.add(table2);
+
+		var bg1:FlxSprite = new FlxSprite(50, 100).loadGraphic(Paths.image('bg/sus/sussus_toogus/MiraGradient', 'mods'));
+		bg1.antialiasing = true;
+		bg1.scale.y = 2;
+		bg1.scale.x = 2;
+		playState.add(bg1);
+	}
+
+	override function createCharacters() {
+		super.createCharacters();
+		addTable();
 	}
 
 	override function createDadAnimations():Void
@@ -47,40 +88,5 @@ class LightsDown extends SussusToogus
 		dad.x -= 500;
 		dad.y += 225;
 	}
-
-	// override function createGFAnimationOffsets()
-	// {
-	// 	super.createGFAnimationOffsets();
-		
-	// }
-
-	// override function createBFAnimationOffsets()
-	// {
-	// 	super.createBFAnimationOffsets();
-		
-	// 	bf.x += 150;
-    //     bf.y += 50;
-	// }
-
-	// public override function getDadIcon(icon:HealthIcon)
-	// {
-	// 	icon.loadGraphic(Paths.image('bg/impostor/red/iconGrid','mods'), true, 150, 150);
-	// 	icon.animation.add('dad', [26, 27], 0, false, false);
-	// 	icon.animation.play("dad");
-	// }
-
-	// override function updateCamFollowBF()
-	// {
-	// 	super.updateCamFollowBF();
-	// 	playState.camFollow.x = bf.getMidpoint().x - 240;
-	// 	playState.camFollow.y = bf.getMidpoint().y - 150;
-	// }
-
-	// override function updateCamFollowDad()
-	// {
-	// 	super.updateCamFollowDad();
-	// 	playState.camFollow.x = bf.getMidpoint().x - 500;
-	// 	playState.camFollow.y = bf.getMidpoint().y - 150;
-	// }
 
 }
