@@ -70,6 +70,8 @@ class TitleState extends MusicBeatState
 		AdMob.initAndroid();
 		#end
 
+
+
 		super.create();
 
 		FlxG.save.bind('save', 'data');
