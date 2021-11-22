@@ -18,6 +18,8 @@ class Character extends FlxSprite
 
     public var isVisible:Bool = true;
 
+    public var daBF = false;
+
     public var label:String;
 
     public function new(x:Float = 700, y:Float = 200, label:String = 'none')
@@ -60,16 +62,13 @@ class Character extends FlxSprite
     }
 
 
-    public function dance():Void
-    {
-        if (isLockAnim)
-            return;
+	public function dance():Void
+	{
+		if (isLockAnim)
+			return;
 
-        if (!debugMode)
-        {
-            playAnim('idle');
-        }
-    }
+		playAnim('idle');
+	}
 
     public function playAnimForce(anim:String, lockDuration:Float, callback:Void->Void = null)
     {
@@ -86,11 +85,22 @@ class Character extends FlxSprite
     public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
     {
 
+
         if (isLockAnim)
             return;
 
         if (!isVisible)
             return;
+
+		if (daBF && AnimName.contains("-alt")) //ah shit fuck you
+		{
+            var daString:String = AnimName;
+			if (animation.getByName(AnimName) == null)
+			{
+				daString = daString.replace('-alt', '');
+				AnimName = (daString);
+			}
+        }
 
         animation.play(AnimName, Force, Reversed, Frame);
 

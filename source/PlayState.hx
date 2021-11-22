@@ -185,6 +185,9 @@ class PlayState extends MusicBeatState
 	var npsTxt:FlxText;
 	var speedTxt:FlxText;
 
+	var holdTimerTxt:FlxText;
+
+
 	var lerpScore:Int;
 	
 	//immortal godlike
@@ -464,7 +467,7 @@ class PlayState extends MusicBeatState
 		camGame.focusOn(camFollow.getPosition());
 
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
-
+  
 		FlxG.fixedTimestep = false;
 		
 		healthBarBG = new FlxSprite(0, FlxG.height * 0.9).loadGraphic(Paths.image('healthBar'));
@@ -543,6 +546,8 @@ class PlayState extends MusicBeatState
 		accuracyTxt.scrollFactor.set();
 		add(accuracyTxt);
 
+
+
 		npsTxt = new FlxText(accuracyTxt.x, accuracyTxt.y - 26, 0, "", 20);
 		if (FlxG.save.data.downscroll)
 			npsTxt.y = accuracyTxt.y + 26;
@@ -550,6 +555,17 @@ class PlayState extends MusicBeatState
 		npsTxt.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 		npsTxt.scrollFactor.set();
 		add(npsTxt);
+
+		holdTimerTxt = new FlxText(npsTxt.x, npsTxt.y - 26, 0,  "Hold Timer: " + boyfriend().holdTimer, 20);
+		if (FlxG.save.data.downscroll)
+			npsTxt.y = npsTxt.y + 26;
+
+		songName.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
+		holdTimerTxt.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+
+		#if debug
+		add(holdTimerTxt);
+		#end
 
 		// speedTxt = new FlxText(npsTxt.x, npsTxt.y - 26, 0, "", 20);
 		// if (FlxG.save.data.downscroll)
@@ -623,6 +639,10 @@ class PlayState extends MusicBeatState
 		accuracyTxt.cameras = [camHUD];
 		npsTxt.cameras = [camHUD];
 		songName.cameras = [camHUD];
+
+		#if debug
+		holdTimerTxt.cameras = [camHUD];
+		#end
 
 		// doof.cameras = [camHUD];
 		if (FlxG.save.data.songPosition)
@@ -1362,7 +1382,7 @@ class PlayState extends MusicBeatState
 		missTxt.text = "Misses: " + misses;
 		accuracyTxt.text = "Accuracy: " + truncateFloat(accuracy, 2) + "%";
 		npsTxt.text = "NPM & NPS: " + npsShit + " | " + nps;
-		
+		holdTimerTxt.text =  "Hold Timer: " + boyfriend().holdTimer;
 
 
 
@@ -1782,6 +1802,7 @@ class PlayState extends MusicBeatState
 						else
 							fuckNote += altAnim;
 						
+						trace("fuckNote: " + fuckNote);
 						boyfriend().playAnim(fuckNote, true);
 					}
 					else
@@ -3185,13 +3206,13 @@ class PlayState extends MusicBeatState
 				dad().playAnim('idle');
 			}
 		}	
-		else
-		{
+		// else
+		// {
 			if (!boyfriend().animation.curAnim.name.startsWith("sing"))
 			{
 				boyfriend().playAnim('idle');
 			}
-		}
+		// }
 
 
 	}

@@ -15,6 +15,12 @@ class PlayableCharacter extends Character
 	public inline function get_playState()
 		return PlayState.instance;
 
+	public override function new(x:Float = 700, y:Float = 200, label:String = 'none')
+	{
+		super(x, y);
+		daBF = true;
+	}
+
 	public function getTex():Void
 	{
 		var tex = Paths.getSparrowAtlas('pc/bf/BoyFriend_Assets', 'mods');

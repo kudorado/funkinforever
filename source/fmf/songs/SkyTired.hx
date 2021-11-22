@@ -80,7 +80,6 @@ class SkyTired extends Sky
 
 				changeDad("sky-angry");
 				dad.playAnim('grr', true);
-
 				dad.lockAnim(1, function()
 				{
 					dad.dance();

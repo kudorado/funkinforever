@@ -23,7 +23,6 @@ class Dad extends Character
 		super.update(elapsed);
 	}
 
-
 	private function bfBehaviour(elapsed:Float)
 	{
 		if (animation == null || animation.curAnim == null || animation.curAnim.name == null)
