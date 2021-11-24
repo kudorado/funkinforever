@@ -11,7 +11,7 @@ class RonaldMcDonaldSlide extends SongPlayer
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/bab/kill_yourself', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/bab/ronald/kill_yourself', 'mods');
 		dad.frames = tex;
 	}
 
