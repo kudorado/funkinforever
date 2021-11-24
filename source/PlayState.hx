@@ -180,7 +180,6 @@ class PlayState extends MusicBeatState
 	public var camGame:FlxCamera;
 
 
-	public static var debugger:Debugger;
 
 	var scoreTxt:FlxText;
 	var missTxt:FlxText;
@@ -678,8 +677,6 @@ class PlayState extends MusicBeatState
 
 
 		super.create();
-
-		Debugger.create(this, camHUD);
 
 		AdMob.hideBanner();
 	
@@ -1376,9 +1373,6 @@ class PlayState extends MusicBeatState
 		#end
 
 		super.update(elapsed);
-		
-		if (Debugger.instance != null)
-			Debugger.instance.update(elapsed);
 
 		// lerpScore = Math.floor(FlxMath.lerp(lerpScore, songScore, elapsed * 5));
 
