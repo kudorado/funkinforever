@@ -8,6 +8,10 @@ using StringTools;
 
 class PlayableCharacter extends Character
 {
+	override function debugName():String
+	{
+		return "boyfriend";
+	}
 	//should pa heyable!
 	private var heyable:Bool;
 

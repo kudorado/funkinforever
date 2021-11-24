@@ -149,6 +149,9 @@ class MainMenuState extends MusicBeatState
 
 		Controller.init(this, UP_DOWN, A);
 		super.create();
+
+		// Debugger.create(this, camera);
+
 		AdMob.showBanner();
 
 

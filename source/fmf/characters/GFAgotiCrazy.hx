@@ -9,6 +9,10 @@ using StringTools;
 
 class GFAgotiCrazy extends Character
 {
+	override function debugName():String
+	{
+		return "gf";
+	}
 
 	override function dance():Void
 	{

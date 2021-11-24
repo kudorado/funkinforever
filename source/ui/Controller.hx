@@ -35,7 +35,7 @@ class Controller
     	_pad.alpha = 0.85;
 		#end
 		#if debug //i dunno could it be using || for multiple condition, cuz i'm stupis	
-		_pad.alpha = 0.85;
+		// _pad.alpha = 0.85;
 		#end
 
 

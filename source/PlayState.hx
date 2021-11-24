@@ -1,5 +1,6 @@
 package;
 
+import flixel.system.debug.FlxDebugger;
 import extension.admob.AdMob;
 import WeekCompleteSubstate.WeekCompleteSubState;
 import ui.Controller;
@@ -179,13 +180,14 @@ class PlayState extends MusicBeatState
 	public var camGame:FlxCamera;
 
 
+	public static var debugger:Debugger;
+
 	var scoreTxt:FlxText;
 	var missTxt:FlxText;
 	var accuracyTxt:FlxText;
 	var npsTxt:FlxText;
 	var speedTxt:FlxText;
 
-	var holdTimerTxt:FlxText;
 
 
 	var lerpScore:Int;
@@ -556,16 +558,6 @@ class PlayState extends MusicBeatState
 		npsTxt.scrollFactor.set();
 		add(npsTxt);
 
-		holdTimerTxt = new FlxText(npsTxt.x, npsTxt.y - 26, 0,  "Hold Timer: " + boyfriend().holdTimer, 20);
-		if (FlxG.save.data.downscroll)
-			npsTxt.y = npsTxt.y + 26;
-
-		songName.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
-		holdTimerTxt.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
-
-		#if debug
-		add(holdTimerTxt);
-		#end
 
 		// speedTxt = new FlxText(npsTxt.x, npsTxt.y - 26, 0, "", 20);
 		// if (FlxG.save.data.downscroll)
@@ -640,9 +632,6 @@ class PlayState extends MusicBeatState
 		npsTxt.cameras = [camHUD];
 		songName.cameras = [camHUD];
 
-		#if debug
-		holdTimerTxt.cameras = [camHUD];
-		#end
 
 		// doof.cameras = [camHUD];
 		if (FlxG.save.data.songPosition)
@@ -689,6 +678,9 @@ class PlayState extends MusicBeatState
 
 
 		super.create();
+
+		Debugger.create(this, camHUD);
+
 		AdMob.hideBanner();
 	
 	}
@@ -721,6 +713,11 @@ class PlayState extends MusicBeatState
 	function listeningModeCheck()
 	{
 		musicListeningShit = FlxG.save.data.musicListening;
+		#if debug
+		musicListeningShit = true;
+		botPlayShit = true;
+		#end
+
 		if (musicListeningShit)
 		{
 			effectStrums.visible = false;
@@ -922,6 +919,7 @@ class PlayState extends MusicBeatState
 
 	private function generateSong(dataPath:String):Void
 	{
+		
 		// FlxG.log.add(ChartParser.parse());
 
 		var songData = SONG;
@@ -1373,8 +1371,14 @@ class PlayState extends MusicBeatState
 			npsShit ++;
 		}
 
-		super.update(elapsed);
+		#if debug
+		health = 2;
+		#end
 
+		super.update(elapsed);
+		
+		if (Debugger.instance != null)
+			Debugger.instance.update(elapsed);
 
 		// lerpScore = Math.floor(FlxMath.lerp(lerpScore, songScore, elapsed * 5));
 
@@ -1382,7 +1386,6 @@ class PlayState extends MusicBeatState
 		missTxt.text = "Misses: " + misses;
 		accuracyTxt.text = "Accuracy: " + truncateFloat(accuracy, 2) + "%";
 		npsTxt.text = "NPM & NPS: " + npsShit + " | " + nps;
-		holdTimerTxt.text =  "Hold Timer: " + boyfriend().holdTimer;
 
 
 

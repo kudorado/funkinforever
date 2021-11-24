@@ -104,6 +104,8 @@ class TitleState extends MusicBeatState
 			startIntro();
 		});
 		#end
+
+		// Debugger.create(this, camera);
 	}
 
 	var logoBl:FlxSprite;

@@ -9,7 +9,11 @@ using StringTools;
 
 class GFTricky extends Character
 {
-
+	override function debugName():String
+	{
+		return "gf";
+	}
+	
 	override function dance():Void
 	{
 		playAnim('danceRight');

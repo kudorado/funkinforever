@@ -9,6 +9,11 @@ using StringTools;
 
 class GFTutorial extends Character
 {
+	override function debugName():String
+	{
+		return "gf";
+	}
+		
 	override function dance():Void
 	{
 		playAnim('idle');

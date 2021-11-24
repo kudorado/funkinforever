@@ -8,7 +8,6 @@ import fmf.characters.*;
 
 class RonaldMcDonaldSlide extends SongPlayer	
 {
-
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/bab/ronald/kill_yourself', 'mods');
@@ -19,25 +18,20 @@ class RonaldMcDonaldSlide extends SongPlayer
 	{
 
 		playState.defaultCamZoom = 0.8;
-
 		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_sky', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 0.5;
 		bg1.scale.x = 0.5;
-		//bg1.scrollFactor.set(0.9,0.9);
 		
 		playState.add(bg1);
-
 		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_back', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 0.5;
 		bg2.scale.x = 0.5;
-		//bg2.scrollFactor.set(0.9,0.9);
 		playState.add(bg2);
 
 		var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_front', 'mods'));
 		bg.antialiasing = true;
-		//bg.scrollFactor.set(0.9,0.9);
 		bg.scale.y = 0.75;
 		bg.scale.x = 0.75;
 		playState.add(bg);
