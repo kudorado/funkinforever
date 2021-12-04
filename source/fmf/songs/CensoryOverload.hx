@@ -26,12 +26,7 @@ class CensoryOverload extends Carefree
 		bg.scale.x = 1;
 		playState.add(bg);
 
-
-		var bg:FlxSprite = new FlxSprite(33, 451).loadGraphic(Paths.image('bg/qt/TV_V2_off', 'mods'));
-		bg.antialiasing = true;
-		bg.scale.y = 1;
-		bg.scale.x = 1;
-		playState.add(bg);
+		createTV();
 
 	}
 
