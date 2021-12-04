@@ -226,6 +226,55 @@ class SongManager
 			}
 		),
 
+		new SongData	
+		(
+			{
+				folder: 'week_the_date',
+				character: 'the_date',
+				songTitle: 'The Date',
+				songList: ['Whitroll', 'Perfume', 'Heartbass']
+			}
+		),
+
+		new SongData	
+		(
+			{
+				folder: 'week_zardy',
+				character: 'zardy',
+				songTitle: 'V.S Zardy',
+				songList: ['Foolhardy', 'Bushwhack']
+			}
+		),
+
+		new SongData	
+		(
+			{
+				folder: 'week_zardy',
+				character: 'zardy',
+				songTitle: 'V.S Zardy',
+				songList: ['Foolhardy', 'Bushwhack']
+			}
+		),
+
+		new SongData	
+		(
+			{
+				folder: 'week_sonic',
+				character: 'sonic',
+				songTitle: 'V.S Sonic.exe',
+				songList: ['Too-Slow', 'Endless', 'Execution']
+			}
+		),
+
+		new SongData	
+		(
+			{
+				folder: 'week_eteled',
+				character: 'eteled',
+				songTitle: 'V.S Eteled',
+				songList: ['Too-Slow', 'Endless', 'Execution']
+			}
+		),
 	];
 //-----------------------------------------------------------
 
