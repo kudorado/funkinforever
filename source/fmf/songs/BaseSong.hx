@@ -53,6 +53,16 @@ class BaseSong
 	// label for song, use it in somecase.
 	public var songLabel:String;
 
+	public function bfCamFollowYMin()
+	{
+		return 500;
+	}
+
+	public function bfCamFollowYMax()
+	{
+		return 550;
+	}
+	
 	//--------------------------------------------------------------------------------------------------------
 	//------------------------------------------ INITIALIE ---------------------------------------------------
 	// init song with a familar name to identity
@@ -573,7 +583,7 @@ class BaseSong
 	public function applyCamPosition():Void
 	{
 		playState.camFollow = new FlxObject(0, 0, 1, 1);
-		playState.camFollow.setPosition(camPos.x, camPos.y);
+		playState.setCamFollowPosition(camPos.x, camPos.y);
 	}
 
 	//--------------------------------------------------------------------------------------------------------

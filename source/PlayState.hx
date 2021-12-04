@@ -1,5 +1,7 @@
 package;
 
+import flixel.ui.FlxButton;
+import flixel.addons.editors.ogmo.FlxOgmo3Loader.Point;
 import flixel.system.debug.FlxDebugger;
 import extension.admob.AdMob;
 import WeekCompleteSubstate.WeekCompleteSubState;
@@ -180,7 +182,6 @@ class PlayState extends MusicBeatState
 	public var camGame:FlxCamera;
 
 
-	public static var debugger:Debugger;
 
 	var scoreTxt:FlxText;
 	var missTxt:FlxText;
@@ -452,7 +453,7 @@ class PlayState extends MusicBeatState
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 
-		camFollow.setPosition(songPlayer.bf.x - 200, songPlayer.bf.y + 50);
+		setCamFollowPosition(songPlayer.bf.x - 200, songPlayer.bf.y + 50);
 
 		if (prevCamFollow != null)
 		{
@@ -676,13 +677,26 @@ class PlayState extends MusicBeatState
 		
 		listeningModeCheck();
 
+		createBounds();
 
 		super.create();
 
-		Debugger.create(this, camHUD);
-
 		AdMob.hideBanner();
 	
+	}
+
+	function createBounds()
+	{
+		boundMin = new FlxText(0, 0, "");
+		boundMax = new FlxText(0, 25, "");
+
+		boundMin.cameras = [camHUD];
+		boundMax.cameras = [camHUD];
+
+
+		add(boundMin);
+		add(boundMax);
+
 	}
 
 	function isUnlocked():Bool
@@ -1220,6 +1234,7 @@ class PlayState extends MusicBeatState
 		num = Math.round(num) / Math.pow(10, precision);
 		return num;
 	}
+
 	function resyncVocals():Void
 	{
 		vocals.pause();
@@ -1278,8 +1293,28 @@ class PlayState extends MusicBeatState
 		});
 	}
 
+	var lockCamFollow:Bool;
+
+	var maxCamFollowSafeFrame = 48;
+	var camFollowSafeFrame = 0;
+
+	function checkUnlockCamFollow()
+	{
+		if(camFollowSafeFrame >= maxCamFollowSafeFrame)
+			lockCamFollow = false;
+		else
+			camFollowSafeFrame ++;
+	}
+
 	override public function update(elapsed:Float)
 	{
+
+		checkUnlockCamFollow();
+
+		#if debug
+		boundMin.text = "camFollow: " + camFollow.getPosition() + ", safe frame: "  + camFollowSafeFrame;
+		boundMax.text = "lockCamFollow: " + lockCamFollow + ", targetPosition: " + targetCamFollow;
+		#end
 
 		#if !debug
 		perfectMode = false;
@@ -1376,9 +1411,6 @@ class PlayState extends MusicBeatState
 		#end
 
 		super.update(elapsed);
-		
-		if (Debugger.instance != null)
-			Debugger.instance.update(elapsed);
 
 		// lerpScore = Math.floor(FlxMath.lerp(lerpScore, songScore, elapsed * 5));
 
@@ -1549,22 +1581,28 @@ class PlayState extends MusicBeatState
 				luaModchart.setVar("mustHit", SONG.notes[Std.int(curStep / 16)].mustHitSection);
 			#end
 
-			if (camFollow.x != dad().getMidpoint().x + 150 && !SONG.notes[Std.int(curStep / 16)].mustHitSection)
+			if (!SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != dad().getMidpoint().x + 150)
 			{
+				if (turn == -1) // repeat
+ 					camFollowSafeFrame = 0;
+
 				var offsetX = 0;
 				var offsetY = 0;
 
-				camFollow.setPosition(dad().getMidpoint().x + 150 + offsetX, dad().getMidpoint().y - 100 + offsetY);
+				setCamFollowPosition(dad().getMidpoint().x + 150 + offsetX, dad().getMidpoint().y - 100 + offsetY);
 				songPlayer.updateCamFollowDad();
 				turn = -1;
 			}
 
-			if (SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != boyfriend().getMidpoint().x - 100)
+			if (SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != boyfriend().getMidpoint().x - 100 && !lockCamFollow)
 			{
+				if (turn == 1) // repeat
+					camFollowSafeFrame = 0;
+				
 				var offsetX = 0;
 				var offsetY = 0;
 
-				camFollow.setPosition(boyfriend().getMidpoint().x - 100 + offsetX, boyfriend().getMidpoint().y - 100 + offsetY);
+				setCamFollowPosition(boyfriend().getMidpoint().x - 100 + offsetX, clamp(boyfriend().getMidpoint().y - 100 + offsetY, songPlayer.bfCamFollowYMin(), songPlayer.bfCamFollowYMax()));
 				turn = 1;
 				songPlayer.updateCamFollowBF();
 			}
@@ -2032,6 +2070,22 @@ class PlayState extends MusicBeatState
 		
 		songPlayer.endSongEvent(endSongCallback);	
 
+	}
+
+	var targetCamFollow:FlxPoint;
+	public function setCamFollowPosition(x:Float, y:Float)
+	{
+		lockCamFollow = true;
+		targetCamFollow = new FlxPoint(x, y);
+		camFollow.setPosition(x, y);
+	}
+
+	function clamp(raw:Float, min:Float, max:Float)
+	{
+		if(raw < min) raw = min;
+		if(raw > max) raw = max;
+
+		return raw;
 	}
 
 	private function endSongCallback()
@@ -2636,6 +2690,10 @@ class PlayState extends MusicBeatState
 	var rightHold:Bool = false;
 	var leftHold:Bool = false;
 	public var isGameStarted:Bool;
+
+	var boundMin:FlxText;
+	var boundMax:FlxText;
+
 
 	private function keyShit():Void // I've invested in emma stocks
 	{

@@ -181,8 +181,8 @@ class FreeplayState extends MusicBeatState
 
 		LoadingState.clearCachedSong();
 
-		Debugger.create(this, camera);
-		
+		// Debugger.create(this, camera);
+
 		super.create();
 	}
 

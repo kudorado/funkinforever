@@ -128,6 +128,7 @@
 	<!-- <haxelib name="polymod"/> -->
 	<haxelib name="discord_rpc" if="windows"/>
 	<!-- <haxelib name="linc_luajit"/> -->
+	<haxelib name="haxeplus" />
 
 
 	<architecture name="arm64" />
