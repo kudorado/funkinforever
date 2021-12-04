@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import haxe.display.JsonModuleTypes.JsonClassFieldReference;
 import flixel.input.gamepad.lists.FlxBaseGamepadList;
 import openfl.display.GraphicsShader;
 //import js.html.audio.AudioWorkletProcessor;
@@ -345,6 +346,18 @@ class SongPlayerManager
 			
 			case 'ejected':
 				songPlayer = new Ejected();
+
+			case 'carefree':
+				songPlayer = new Carefree();
+
+			case 'careless':
+				songPlayer = new Careless();
+			case 'censory-overload':
+				songPlayer = new CensoryOverload();
+
+			case 'termination':
+				songPlayer = new Termination();
+			
 		}
 
 		return songPlayer;

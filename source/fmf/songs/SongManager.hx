@@ -216,6 +216,16 @@ class SongManager
 			}
 		),
 
+		new SongData	
+		(
+			{
+				folder: 'week_qt',
+				character: 'qt',
+				songTitle: 'V.S QT',
+				songList: ['Carefree', 'Careless', 'Censory-overload','Termination']
+			}
+		),
+
 	];
 //-----------------------------------------------------------
 
