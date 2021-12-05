@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="maroon.png">
+	<SubTexture name="maroon left0000" x="0" y="0" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon left0001" x="708" y="0" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon left0002" x="1416" y="0" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon left0003" x="2124" y="0" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon left0004" x="2832" y="0" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon left0005" x="3540" y="0" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon left0006" x="0" y="525" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon left0007" x="708" y="525" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon down0000" x="1416" y="525" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon down0001" x="2124" y="525" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0000" x="2832" y="525" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0001" x="3540" y="525" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0002" x="0" y="1050" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0003" x="708" y="1050" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0004" x="1416" y="1050" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0005" x="2124" y="1050" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0006" x="2832" y="1050" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0007" x="3540" y="1050" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0008" x="0" y="1575" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0009" x="708" y="1575" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0010" x="1416" y="1575" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0011" x="2124" y="1575" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0012" x="2832" y="1575" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon idle0013" x="3540" y="1575" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon right0000" x="0" y="2100" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon right0001" x="708" y="2100" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon right0002" x="1416" y="2100" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon right0003" x="2124" y="2100" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon right0004" x="2832" y="2100" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon right0005" x="3540" y="2100" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon right0006" x="0" y="2625" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon right0007" x="708" y="2625" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon right0008" x="1416" y="2625" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon right0009" x="2124" y="2625" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon up0000" x="2832" y="2625" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon up0001" x="3540" y="2625" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon up0002" x="0" y="3150" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon up0003" x="708" y="3150" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon up0004" x="1416" y="3150" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon up0005" x="2124" y="3150" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon up0006" x="2832" y="3150" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+	<SubTexture name="maroon up0007" x="3540" y="3150" width="708" height="525" frameX="0" frameY="0" frameWidth="708" frameHeight="525"/>
+</TextureAtlas>

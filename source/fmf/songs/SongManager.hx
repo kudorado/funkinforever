@@ -276,15 +276,15 @@ class SongManager
 			}
 		),
 
-		new SongData	
-		(
-			{
-				folder: 'week_entity_origins',
-				character: 'entityorigins',
-				songTitle: 'V.S Entity Origins',
-				songList: ['Experimental-Phase', 'Perfection']
-			}
-		),
+		// new SongData	
+		// (
+		// 	{
+		// 		folder: 'week_entity_origins',
+		// 		character: 'entityorigins',
+		// 		songTitle: 'V.S Entity Origins',
+		// 		songList: ['Experimental-Phase', 'Perfection']
+		// 	}
+		// ),
 	];
 //-----------------------------------------------------------
 
