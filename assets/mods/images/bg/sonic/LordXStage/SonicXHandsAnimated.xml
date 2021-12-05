@@ -1,16 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="SonicXHandsAnimated.png">
-	<!-- Created with Adobe Animate version 21.0.3.38773 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="HandsAnimated0000" x="0" y="0" width="1961" height="1836"/>
-	<SubTexture name="HandsAnimated0001" x="1961" y="0" width="1961" height="1836"/>
-	<SubTexture name="HandsAnimated0002" x="3922" y="0" width="1961" height="1836"/>
-	<SubTexture name="HandsAnimated0003" x="5883" y="0" width="1961" height="1836"/>
-	<SubTexture name="HandsAnimated0004" x="0" y="1836" width="1961" height="1836"/>
-	<SubTexture name="HandsAnimated0005" x="1961" y="1836" width="1961" height="1836"/>
-	<SubTexture name="HandsAnimated0006" x="3922" y="1836" width="1961" height="1836"/>
-	<SubTexture name="HandsAnimated0007" x="5883" y="1836" width="1961" height="1836"/>
-	<SubTexture name="HandsAnimated0008" x="0" y="3672" width="1961" height="1836"/>
-	<SubTexture name="HandsAnimated0009" x="1961" y="3672" width="1961" height="1836"/>
-	<SubTexture name="HandsAnimated0010" x="3922" y="3672" width="1961" height="1836"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:6183198d5ca066ffdc406a1ae5e65a10:5700f73a8b8af51a74e67a651662a027:bd70b61bd5483a4e42a708729575d4f8$ -->
+<TextureAtlas imagePath="SonicXHandsAnimated.png" width="4096" height="4096">
+    <SubTexture name="HandsAnimated0000" x="1" y="1" width="981" height="918"/>
+    <SubTexture name="HandsAnimated0001" x="1" y="921" width="981" height="918"/>
+    <SubTexture name="HandsAnimated0002" x="1" y="1841" width="981" height="918"/>
+    <SubTexture name="HandsAnimated0003" x="1" y="2761" width="981" height="918"/>
+    <SubTexture name="HandsAnimated0004" x="984" y="1" width="981" height="918"/>
+    <SubTexture name="HandsAnimated0005" x="984" y="921" width="981" height="918"/>
+    <SubTexture name="HandsAnimated0006" x="984" y="1841" width="981" height="918"/>
+    <SubTexture name="HandsAnimated0007" x="984" y="2761" width="981" height="918"/>
+    <SubTexture name="HandsAnimated0008" x="1967" y="1" width="981" height="918"/>
+    <SubTexture name="HandsAnimated0009" x="1967" y="921" width="981" height="918"/>
+    <SubTexture name="HandsAnimated0010" x="1967" y="1841" width="981" height="918"/>
 </TextureAtlas>
