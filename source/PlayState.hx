@@ -3267,13 +3267,13 @@ class PlayState extends MusicBeatState
 				dad().playAnim('idle');
 			}
 		}	
-		// else
-		// {
+		else
+		{
 			if (!boyfriend().animation.curAnim.name.startsWith("sing"))
 			{
 				boyfriend().playAnim('idle');
 			}
-		// }
+		}
 
 
 	}
