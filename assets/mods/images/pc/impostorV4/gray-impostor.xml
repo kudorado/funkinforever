@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="gray-impostor.png"><SubTexture name="gray idle0000" x="0" y="0" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0001" x="668" y="0" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0002" x="1336" y="0" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0003" x="0" y="599" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0004" x="668" y="599" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0005" x="1336" y="599" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0006" x="0" y="1198" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0007" x="668" y="1198" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0008" x="1336" y="1198" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0009" x="0" y="1797" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0010" x="668" y="1797" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0011" x="1336" y="1797" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0012" x="0" y="2396" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+<SubTexture name="gray idle0013" x="668" y="2396" width="668" height="599" frameX="0" frameY="0" frameWidth="668" frameHeight="599" />
+</TextureAtlas>

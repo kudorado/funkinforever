@@ -1,0 +1,67 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.045,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "shocked",
+			"text": "gf oh no its the IMPOSTORS!!! FUCKING god\\nRUNTHEFUCKGIRLFRIEND"
+		},
+		{
+			"speed": 0.055,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "demon",
+			"text": "i am a demon, dont you know that bf?\\ndidnt you participate in week 7 with like pico?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "i did ty gf"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "redimpostor",
+			"boxState": "normal",
+			"expression": "",
+			"text": "hi there coolswags we are crewmates"
+		},
+		{
+			"speed": 0.00500000000000001,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "shocked",
+			"text": "i cant believe this is happening rn im gonna die\\n somebody can call the ambulance, but im gonna die to singing cancer look y'all im gonna die in like a second if y'all dont go away ALKMDS:FJKASLK:FGLHJAKSFLJKASLJKFjkFLSAKLJF:ASJK:LFJK:LASJFLK:ASJKL:D:KLASDJAJSKLDLK:A"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "*dies*"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "*brings back bf to life*"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "-comes back-"
+		},
+		{
+			"speed": 0.055,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "ty, lets start."
+		}
+	]
+}

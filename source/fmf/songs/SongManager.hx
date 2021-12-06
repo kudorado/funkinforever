@@ -229,7 +229,7 @@ class SongManager
 		new SongData	
 		(
 			{
-				folder: 'week_the_date',
+				folder: 'week_date',
 				character: 'the_date',
 				songTitle: 'The Date',
 				songList: ['Whitroll', 'Perfume', 'Heartbass']
@@ -272,9 +272,19 @@ class SongManager
 				folder: 'week_eteled',
 				character: 'eteled',
 				songTitle: 'V.S Eteled',
-				songList: ['Too-Slow', 'Endless', 'Execution']
+				songList: ['dream-of-peace', 'diagraphephobia', 'post-mortal', 'plaything', 'system-failure']
 			}
 		),
+
+		// new SongData	
+		// (
+		// 	{
+		// 		folder: 'week_entity_origins',
+		// 		character: 'entityorigins',
+		// 		songTitle: 'V.S Entity Origins',
+		// 		songList: ['Experimental-Phase', 'Perfection']
+		// 	}
+		// ),
 	];
 //-----------------------------------------------------------
 
