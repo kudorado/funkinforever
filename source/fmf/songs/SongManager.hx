@@ -249,16 +249,6 @@ class SongManager
 		new SongData	
 		(
 			{
-				folder: 'week_zardy',
-				character: 'zardy',
-				songTitle: 'V.S Zardy',
-				songList: ['Foolhardy', 'Bushwhack']
-			}
-		),
-
-		new SongData	
-		(
-			{
 				folder: 'week_sonic',
 				character: 'sonic',
 				songTitle: 'V.S Sonic.exe',

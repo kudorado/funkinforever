@@ -98,6 +98,10 @@ class PlayState extends MusicBeatState
 	public static var songPosBar:FlxBar;
 
 
+	public static var healthBarShitBG:FlxSprite;
+	public static var healthBarShit:FlxBar;
+
+
 	public static var noteBools:Array<Bool> = [false, false, false, false];
 
 	var halloweenLevel:Bool = false;
@@ -156,7 +160,7 @@ class PlayState extends MusicBeatState
 	private var curSong:String = "";
 
 	public var gfSpeed:Int = 1;
-	public var health:Float = 1; // making public because sethealth doesnt work without it
+	public var health:Float = 2; // making public because sethealth doesnt work without it
 
 	private var combo:Int = 0;
 
@@ -474,7 +478,7 @@ class PlayState extends MusicBeatState
 		FlxG.fixedTimestep = false;
 		
 		healthBarBG = new FlxSprite(0, FlxG.height * 0.9).loadGraphic(Paths.image('healthBar'));
-		healthBarBG.setGraphicSize(Std.int(healthBarBG.width * 0.75));
+		healthBarBG.setGraphicSize(Std.int(healthBarBG.width));
 
 		healthBarBG.color = FlxColor.BLACK;
 		healthBarBG.alpha = 0.85;
@@ -503,7 +507,7 @@ class PlayState extends MusicBeatState
 		healthBar.scrollFactor.set();
 		healthBar.createFilledBar(0x000000FF, FlxColor.RED);
 
-		healthBar.setGraphicSize(Std.int(healthBar.width * 0.75));
+		healthBar.setGraphicSize(Std.int(healthBar.width));
 
 		// healthBar.alpha = 0;
 
@@ -512,10 +516,11 @@ class PlayState extends MusicBeatState
 
 
 
+
 //------------------------mic c up copy ----------------------------
 
 		var daAuto:String = botPlayShit ? " [A]" :"";
-		songName = new FlxText(25, healthBarBG.y + 26, 0, CURRENT_SONG.toUpperCase() + ": " + getDiff().toUpperCase() + daAuto, 20);
+		songName = new FlxText(35, healthBarBG.y + 26, 0, CURRENT_SONG.toUpperCase() + ": " + getDiff().toUpperCase() + daAuto, 20);
 		if (FlxG.save.data.downscroll)
 			songName.y = healthBarBG.y - 18;
 
@@ -614,6 +619,14 @@ class PlayState extends MusicBeatState
 		add(iconP2);
 
 
+		//new system disable heatlhbar and icon
+
+		healthBar.visible = false;
+		healthBarBG.visible = false;
+		iconP1.visible = false;
+		iconP2.visible = false;
+
+
 		// iconP1.y = healthBar.y;
 		// iconP2.y = healthBar.y;
 		add(effectStrums);
@@ -634,12 +647,17 @@ class PlayState extends MusicBeatState
 		songName.cameras = [camHUD];
 
 
-		// doof.cameras = [camHUD];
-		if (FlxG.save.data.songPosition)
-		{
-			songPosBG.cameras = [camHUD];
-			songPosBar.cameras = [camHUD];
-		}
+		// // doof.cameras = [camHUD];
+		// if (FlxG.save.data.songPosition)
+		// {
+		// 	songPosBG.cameras = [camHUD];
+		// 	songPosBar.cameras = [camHUD];
+		// }
+
+		// healthBarShitBG.cameras = [camHUD];
+		// healthBarShit.cameras = [camHUD];
+
+
 		kadeEngineWatermark.cameras = [camHUD];
 
 		startingSong = true;
@@ -796,47 +814,8 @@ class PlayState extends MusicBeatState
 
 		if (kudoradoHandsome)
 		{
-
-			songPosBG = new FlxSprite(0, songName.y).loadGraphic(Paths.image('fuckbar', 'shared'));
-			songPosBG.color = FlxColor.BLACK;
-
-			songPosBG.y-= songPosBG.height / 2;
-
-			songPosBG.x += 5;
-
-			if (FlxG.save.data.downscroll)
-				songPosBG.y += 62.5;
-			else
-				songPosBG.y -= 40;
-
-		
-			songPosBG.scrollFactor.set();
-			add(songPosBG);
-
-			songPosBG.cameras = [camHUD];
-			songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4 ,  BOTTOM_TO_TOP  , Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
-				'songPositionBar', 0, Math.max(songLength - 1000, 30));
-			songPosBar.scrollFactor.set();
-			songPosBar.createFilledBar(FlxColor.TRANSPARENT, FlxColor.WHITE);
-			add(songPosBar);
-			songPosBar.cameras = [camHUD];
-
-			songPosBG.setGraphicSize(Std.int(songPosBG.width * 0.5), Std.int(songPosBG.height * 0.2));
-			songPosBar.setGraphicSize(Std.int(songPosBar.width * 0.5), Std.int(songPosBar.height * 0.2));
-
-
-			
-			songPosBG.cameras = [camHUD];
-			songPosBar.cameras = [camHUD];
-			songName.cameras = [camHUD];
-
-			if (musicListeningShit)
-			{
-				songName.visible = false;
-				songPosBG.visible = false;
-				songPosBar.visible = false;
-
-			}
+			createHealthBarShit();
+			createSongPosBar();
 		}
 
 		#if windows
@@ -1227,6 +1206,87 @@ class PlayState extends MusicBeatState
 		super.closeSubState();
 	}
 
+	function createSongPosBar(){
+		songPosBG = new FlxSprite(10, songName.y).loadGraphic(Paths.image('fuckbar', 'shared'));
+		songPosBG.color = FlxColor.BLACK;
+
+		songPosBG.y-= songPosBG.height / 2;
+
+		songPosBG.x += 5;
+
+		if (FlxG.save.data.downscroll)
+			songPosBG.y += 62.5;
+		else
+			songPosBG.y -= 40;
+
+	
+		songPosBG.scrollFactor.set();
+		add(songPosBG);
+
+		songPosBG.cameras = [camHUD];
+		songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4 ,  BOTTOM_TO_TOP  , Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
+			'songPositionBar', 0, Math.max(songLength - 1000, 30));
+		songPosBar.scrollFactor.set();
+		songPosBar.createFilledBar(FlxColor.TRANSPARENT, FlxColor.WHITE);
+		add(songPosBar);
+		songPosBar.cameras = [camHUD];
+
+		songPosBG.setGraphicSize(Std.int(songPosBG.width * 0.5), Std.int(songPosBG.height * 0.2));
+		songPosBar.setGraphicSize(Std.int(songPosBar.width * 0.5), Std.int(songPosBar.height * 0.2));
+
+
+		
+		songPosBG.cameras = [camHUD];
+		songPosBar.cameras = [camHUD];
+		songName.cameras = [camHUD];
+
+		if (musicListeningShit)
+		{
+			songName.visible = false;
+			songPosBG.visible = false;
+			songPosBar.visible = false;
+		}
+	}
+
+	function createHealthBarShit()
+	{
+		healthBarShitBG = new FlxSprite(0, songName.y).loadGraphic(Paths.image('fuckbar', 'shared'));
+		healthBarShitBG.color = FlxColor.BLACK;
+
+		healthBarShitBG.y-= healthBarShitBG.height / 2;
+
+		healthBarShitBG.x += 5;
+
+		if (FlxG.save.data.downscroll)
+			healthBarShitBG.y += 62.5;
+		else
+			healthBarShitBG.y -= 40;
+
+	
+		healthBarShitBG.scrollFactor.set();
+		add(healthBarShitBG);
+
+		healthBarShitBG.cameras = [camHUD];
+		healthBarShit = new FlxBar(healthBarShitBG.x + 4, healthBarShitBG.y + 4, BOTTOM_TO_TOP, Std.int(healthBarShitBG.width - 8), Std.int(healthBarShitBG.height - 8),
+			this, 'health', 0, 2);
+		healthBarShit.scrollFactor.set();
+		healthBarShit.createFilledBar(FlxColor.TRANSPARENT, FlxColor.RED);
+		add(healthBarShit);
+		healthBarShit.cameras = [camHUD];
+
+		healthBarShitBG.setGraphicSize(Std.int(healthBarShitBG.width * 0.5), Std.int(healthBarShitBG.height * 0.2));
+		healthBarShit.setGraphicSize(Std.int(healthBarShit.width * 0.5), Std.int(healthBarShit.height * 0.2));
+
+
+		
+
+		if (musicListeningShit)
+		{
+			healthBarShitBG.visible = false;
+			healthBarShit.visible = false;
+
+		}
+	}
 	function truncateFloat(number:Float, precision:Int):Float
 	{
 		var num = number;
@@ -1234,6 +1294,7 @@ class PlayState extends MusicBeatState
 		num = Math.round(num) / Math.pow(10, precision);
 		return num;
 	}
+	
 
 	function resyncVocals():Void
 	{
