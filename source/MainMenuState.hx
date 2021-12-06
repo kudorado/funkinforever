@@ -91,7 +91,7 @@ class MainMenuState extends MusicBeatState
 		magenta.screenCenter();
 		magenta.visible = false;
 		magenta.antialiasing = true;
-		magenta.color = 0xFFfd719b;
+		// magenta.color = 0xFFfd719b;
 
 		if (Main.daTabletShit)
 		{
@@ -220,10 +220,34 @@ class MainMenuState extends MusicBeatState
 				else
 				{
 					selectedSomethin = true;
-					FlxG.sound.play(Paths.sound('confirmMenu'));
+
+					FlxG.sound.play(Paths.sound('confirmMenu'), 0.5);
 					
+					if (optionShit[curSelected] == 'freeplay')
+					{
+						//sky ugh
+						FlxG.sound.play(Paths.sound('sky-ugh'), 2);
+					}
+					else
+					{
+						// remove(magenta);
+						magenta.loadGraphic(Paths.image('menuDeshit'));
+						// magenta.setGraphicSize(Std.int(magenta.width * 1.1));
+						// magenta.updateHitbox();
+						// magenta.screenCenter();
+						// magenta.antialiasing = true;
+						// add(magenta);
+						FlxG.sound.play(Paths.sound('gf-ugh'), 2);
+					}
+
+
 					if (FlxG.save.data.flashing)
-						FlxFlicker.flicker(magenta, 1.1, 0.15, false);
+					{
+						new FlxTimer().start(0.1, function shit(tmr:FlxTimer) 
+						{
+							magenta.visible = true;
+						}, 1);
+					}
 
 					menuItems.forEach(function(spr:FlxSprite)
 					{
