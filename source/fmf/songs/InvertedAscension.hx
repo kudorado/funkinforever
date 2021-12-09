@@ -11,47 +11,62 @@ class InvertedAscension extends SongPlayer
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/annie/annie', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/starlingmayhem/cj_assets', 'mods');
 		dad.frames = tex;
 	}
 
 	override function loadMap()
 	{
-
-		var bg:FlxSprite = new FlxSprite(0, -151).loadGraphic(Paths.image('bg/annie/philly/sky', 'mods'));
+        playState.defaultCamZoom = 0.6;
+		var bg:FlxSprite = new FlxSprite(0, -396).loadGraphic(Paths.image('bg/starlingmayhem/morning/bg', 'mods'));
 		bg.antialiasing = true;
-		bg.scale.y = 1.5;
-		bg.scale.x = 1.5;
+		bg.scale.y = 1;
+		bg.scale.x = 1;
 		playState.add(bg);
 
-        var bg1:FlxSprite = new FlxSprite(0, -151).loadGraphic(Paths.image('bg/annie/philly/city', 'mods'));
+        var light0:FlxSprite = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light0', 'mods'));
+		light0.antialiasing = true;
+		light0.scale.y = 1;
+		light0.scale.x = 1;
+		playState.add(light0);
+
+        var bg1:FlxSprite = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/stage', 'mods'));
 		bg1.antialiasing = true;
-		bg1.scale.y = 1.5;
-		bg1.scale.x = 1.5;
+		bg1.scale.y = 1;
+		bg1.scale.x = 1;
 		playState.add(bg1);
 
+        var headlight = new FlxSprite(0, 0);
+		headlight.frames = Paths.getSparrowAtlas('bg/starlingmayhem/headlightsRGB', 'mods');
+		headlight.animation.addByPrefix('idle', 'Lightsrepeated00', 24, true);
+		headlight.animation.play('idle');
+		headlight.antialiasing = true;
+        headlight.scale.x = 2;
+        headlight.scale.y = 2;
+		headlight.x = 657;
+		headlight.y = -128;
+        playState.add(headlight);
 
-        var bg2:FlxSprite = new FlxSprite(0, -218).loadGraphic(Paths.image('bg/annie/philly/behindTrain', 'mods'));
-		bg2.antialiasing = true;
-		bg2.scale.y = 1.5;
-		bg2.scale.x = 1.5;
-		playState.add(bg2);
-
-        var bg3:FlxSprite = new FlxSprite(0, -224).loadGraphic(Paths.image('bg/annie/philly/street', 'mods'));
-		bg3.antialiasing = true;
-		bg3.scale.y = 1.5;
-		bg3.scale.x = 1.5;
-		playState.add(bg3);
+        var headlight = new FlxSprite(0, 0);
+		headlight.frames = Paths.getSparrowAtlas('bg/starlingmayhem/frontboppers', 'mods');
+		headlight.animation.addByPrefix('idle', 'frontboppers000', 24, true);
+		headlight.animation.play('idle');
+		headlight.antialiasing = true;
+        headlight.scale.x = 1;
+        headlight.scale.y = 1;
+		headlight.x = 0;
+		headlight.y = 753;
+        playState.add(headlight);
 	}
 
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'BF idle dance00', 18, false);
-		animation.addByPrefix('singUP', 'BF NOTE UP00', 24, false);
-		animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT00', 24, false);
-		animation.addByPrefix('singLEFT', 'BF NOTE LEFT00', 24, false);
-		animation.addByPrefix('singDOWN', 'BF NOTE DOWN00', 24, false);
+		animation.addByPrefix('idle', 'Cj idle dance00', 18, false);
+		animation.addByPrefix('singUP', 'Cj Sing Note UP00', 24, false);
+		animation.addByPrefix('singRIGHT', 'Cj Sing Note RIGHT00', 24, false);
+		animation.addByPrefix('singLEFT', 'Cj Sing Note LEFT00', 24, false);
+		animation.addByPrefix('singDOWN', 'Cj Sing Note DOWN00', 24, false);
 		dad.animation = animation;
 
 	}
@@ -59,32 +74,31 @@ class InvertedAscension extends SongPlayer
 	override function createDadAnimationOffsets():Void
 	{
 
-        dad.addOffset('idle',-2, -38);
+        dad.addOffset('idle',0, 0);
 
-		dad.addOffset('singUP', 0, -22);
-		dad.addOffset('singRIGHT', 15 , -44);
-		dad.addOffset('singLEFT', -94, -44);
-		dad.addOffset('singDOWN', -61, -69);
-
-		dad.flipX = true;
-
-		dad.x = 351;
-		dad.y = 200;
+		dad.addOffset('singUP', 0, 0);
+		dad.addOffset('singRIGHT', 0 , 0);
+		dad.addOffset('singLEFT', 0, 0);
+		dad.addOffset('singDOWN', 0, 0);
+        dad.scale.x = 1.9;
+        dad.scale.y = 1.9;
+		dad.x = 809;
+		dad.y = 66;
 	
 	}
 
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y = 261;
-		bf.x = 844;
+		bf.y = 313;
+		bf.x = 1613;
 	}
 
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
-		gf.y = -12;
-        gf.x = 514;
+		gf.y = 43;
+        gf.x = 972;
 	}
 
 	override function updateCamFollowBF()
