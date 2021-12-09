@@ -36,7 +36,12 @@ class SelectionState extends MusicBeatState
 
 	var storeLabel:FlxText;
 
-	var options:Array<String> = ['Play', 'Characters', "Notes", "Effects", 'Controls', 'Scrolls'];
+	var options:Array<String> = ['Play', 'Characters', "Notes", "Effects", 'Controls', 'Scrolls',  "Play Mode"];
+
+	var txtTracklist:FlxText;
+	var txtTapToStart:FlxText;
+
+	var grpWeekText:FlxTypedGroup<SelectionItem>;
 
 	var curSelection:Int = 0;
 	
@@ -45,22 +50,15 @@ class SelectionState extends MusicBeatState
 	public var curSkin:Int;
 	public var curControl:Int;
 	public var curScroll:Int;
+	public var curPlayMode:Int;
 
-
-	var txtTracklist:FlxText;
-	var txtTapToStart:FlxText;
-
-	var grpWeekText:FlxTypedGroup<SelectionItem>;
 
 	public var grpPcs:FlxTypedGroup<PcItem>;
-
 	public var grpVfxs:FlxTypedGroup<VfxItem>;
-
 	public var grpSkins:FlxTypedGroup<SkinItem>;
-
 	public var grpControls:FlxTypedGroup<ControlItem>;
-
 	public var grpScrolls:FlxTypedGroup<ScrollItem>;
+	public var grpPlayModes:FlxTypedGroup<PlayModeItem>;
 
 
 	var grpLocks:FlxTypedGroup<FlxSprite>;
@@ -72,8 +70,15 @@ class SelectionState extends MusicBeatState
 	var selectedSkin:SkinItem;
 	var selectedControl:ControlItem;
 	var selectedScroll:ScrollItem;
+	var selectedPlayMode:PlayModeItem;
 
 
+
+	public static var playModeData(get, never):Array<Int>;
+	static inline function get_playModeData():Array<Int>
+	{
+		return FlxG.save.data.playModeData;
+	} 
 
 
 	public static var pcData(get, never):Array<Int>;
@@ -129,6 +134,7 @@ class SelectionState extends MusicBeatState
 		curSkin  = FlxG.save.data.skinId;
 		curControl = FlxG.save.data.mobileControl;
 		curScroll = FlxG.save.data.scrollId;
+		curPlayMode = FlxG.save.data.playModeId;
 
 
 		var rankText:FlxText = new FlxText(0, 10);
@@ -153,6 +159,7 @@ class SelectionState extends MusicBeatState
 		grpSkins = new FlxTypedGroup<SkinItem>();
 		grpControls = new FlxTypedGroup<ControlItem>();
 		grpScrolls = new FlxTypedGroup<ScrollItem>();
+		grpPlayModes = new FlxTypedGroup<PlayModeItem>();
 
 		for (i in 0...options.length)
 		{
@@ -178,6 +185,17 @@ class SelectionState extends MusicBeatState
 			// weekThing.updateHitbox();
 		}
 
+		// create play mode
+		for (i in 0...PlayModeManager.playModeList.length)
+		{
+			var weekThing:PlayModeItem = new PlayModeItem(i, yellowBG.x + yellowBG.width + 100 * i, 0);
+
+			weekThing.y = yellowBG.y + 175;
+
+			grpPlayModes.add(weekThing);
+			weekThing.antialiasing = true;
+		}
+
 		// create skin
 		for (i in 0...SkinManager.skinList.length)
 		{
@@ -189,6 +207,8 @@ class SelectionState extends MusicBeatState
 			weekThing.antialiasing = true;
 			// weekThing.updateHitbox();
 		}
+
+		
 
 		//create vfx
 		for (i in 0...VfxManager.vfxList.length)
@@ -225,6 +245,7 @@ class SelectionState extends MusicBeatState
 			weekThing.antialiasing = true;
 		}
 
+		
 
 
 		selectedPc = new PcItem(curPc, 0, 0);
@@ -245,8 +266,6 @@ class SelectionState extends MusicBeatState
 		selectedSkin.deactiveTexts();
 
 		// gd(selectedVfx);
-
-
 
 		add(yellowBG);
 		// add(bgShit);
@@ -275,13 +294,12 @@ class SelectionState extends MusicBeatState
 		add(grpSkins);
 		add(grpControls);
 		add(grpScrolls);
+		add(grpPlayModes);
 
 
 		add(selectedPc);
 		add(selectedSkin);
 		add(selectedVfx);
-
-
 
 		add(txtTapToStart);
 
@@ -370,7 +388,7 @@ class SelectionState extends MusicBeatState
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
-				LoadingState.loadAndSwitchState(new PlayModeState(), true);
+				LoadingState.loadAndSwitchState(new PlayState(), true);
 			});
 		}
 		else
@@ -390,7 +408,9 @@ class SelectionState extends MusicBeatState
 
 				case 4:
 					selectedItem = grpControls.members[curControl];
-	
+				
+				case 5:
+					selectedItem = grpPlayModes.members[curPlayMode];
 
 			}
 
@@ -461,6 +481,11 @@ class SelectionState extends MusicBeatState
 		return curSelection == 5;
 	}
 
+	private function isPlayMode():Bool
+	{
+		return curSelection == 6;
+	}
+	
 		
 
 //--------------------------------------------------------------------------------------------
@@ -472,6 +497,8 @@ class SelectionState extends MusicBeatState
 		grpVfxs.visible = isVfx();
 		grpControls.visible = isControl();
 		grpScrolls.visible = isScroll();
+		grpPlayModes.visible = isPlayMode();
+
 	}
 
 	function changeSelection(change:Int = 0):Void
@@ -524,6 +551,9 @@ class SelectionState extends MusicBeatState
 			
 			case 5:
 				changeScroll(change);
+
+			case 6:
+				changePlayMode(change);
 		}
 
 
@@ -658,6 +688,24 @@ class SelectionState extends MusicBeatState
 		updateVfx();
 	}
 
+	private function changePlayMode(change:Int)
+	{
+		curPlayMode += change;
+
+		if (curPlayMode < 0)
+			curPlayMode = PlayModeManager.playModeList.length - 1;
+
+		if (curVfx > PlayModeManager.playModeList.length - 1)
+			curPlayMode = 0;
+
+		FlxG.sound.play(Paths.sound('scrollMenu'));
+
+		grpPlayModes.members[curPlayMode].trySelect();
+
+		updatePlayMode();
+	}
+	
+
 	private function updatePc()
 	{
 		var bullShit:Int = 0;
@@ -767,6 +815,29 @@ class SelectionState extends MusicBeatState
 			bullShit++;
 		}
 	}
+
+	private function updatePlayMode()
+	{
+		var bullShit:Int = 0;
+
+		for (item in grpPlayModes.members)
+		{
+			item.targetX = bullShit - curPlayMode;
+			if (item.targetX == Std.int(0))
+			{
+				item.color = item.isUnlocked ? FlxColor.GREEN : FlxColor.WHITE;
+				item.alpha = 1;
+			}
+			else
+			{
+				item.color = FlxColor.BLACK;
+				item.alpha = 0.1;
+			}
+
+			bullShit++;
+		}
+	}
+
 
 }
 

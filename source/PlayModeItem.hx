@@ -18,7 +18,7 @@ class PlayModeItem extends Item
 
 	override function getUnlockedTime():Int
 	{
-		return PlayModeState.playModeData[id];
+		return SelectionState.playModeData[id];
 	}
 
 	override function isSelected():Bool
@@ -33,7 +33,7 @@ class PlayModeItem extends Item
 
 	override function unlock()
 	{
-		var playModeData = PlayModeState.playModeData;
+		var playModeData = SelectionState.playModeData;
 		playModeData[id] ++;
 
 		FlxG.save.data.playModeData = playModeData;
@@ -53,11 +53,8 @@ class PlayModeItem extends Item
 			FlxG.save.data.playModeId = id;
 			FlxG.save.flush();
 
-			PlayModeState.instance.grpPlayModes.members[curPlayMode].updateState();
-
+			SelectionState.instance.grpPlayModes.members[curPlayMode].updateState();
 			refresh();
-
-			PlayModeState.instance.updatePlayModeReview();
 
 			PlayModeManager.loadPlayMode();
 		}

@@ -2426,7 +2426,7 @@ class PlayState extends MusicBeatState
 	var timeShown = 0;
 	var currentTimingShown:FlxText = null;
 
-	private function popUpScore(daNote:Note):Void
+	private function popUpScore(daNote:Note, missNote:Bool = false):Void
 	{
 		if (musicListeningShit)
 			return;
@@ -2440,19 +2440,31 @@ class PlayState extends MusicBeatState
 
 	
 		var score:Float = 350;
-
+		var healthRating:Float = 0;
 		if (FlxG.save.data.accuracyMod == 1)
 			totalNotesHit += wife;
 
 		var daRating = daNote.rating;
 
+		if(missNote)
+			daRating = "fuck";
+			
+			
+
 		switch (daRating)
 		{
+			case 'fuck':
+				score = -500;
+				combo = 0;
+				healthRating = -0.2;
+				ss = false;
+				shits++;
+				if (FlxG.save.data.accuracyMod == 0)
+					totalNotesHit += 0.25;
+
 			case 'shit':
 				score = -300;
-				combo = 0;
-				misses++;
-				health -= 0.2;
+				healthRating = -0.1;
 				ss = false;
 				shits++;
 				if (FlxG.save.data.accuracyMod == 0)
@@ -2460,7 +2472,7 @@ class PlayState extends MusicBeatState
 			case 'bad':
 				daRating = 'bad';
 				score = 0;
-				health -= 0.06;
+				healthRating -= 0.06;
 				ss = false;
 				bads++;
 				if (FlxG.save.data.accuracyMod == 0)
@@ -2470,17 +2482,23 @@ class PlayState extends MusicBeatState
 				score = 200;
 				ss = false;
 				goods++;
-				if (health < 2)
-					health += 0.04;
+
+				healthRating = 0.04;
+
 				if (FlxG.save.data.accuracyMod == 0)
 					totalNotesHit += 0.75;
 			case 'sick':
-				if (health < 2)
-					health += 0.1;
+
+				healthRating = 0.1;
+
 				if (FlxG.save.data.accuracyMod == 0)
 					totalNotesHit += 1;
 				sicks++;
 		}
+		
+		health += healthRating;
+		if(health > 2)
+			health = 2;
 
 		// trace('Wife accuracy loss: ' + wife + ' | Rating: ' + daRating + ' | Score: ' + score + ' | Weight: ' + (1 - wife));
 
@@ -2569,7 +2587,7 @@ class PlayState extends MusicBeatState
 			timeShown = 0;
 			switch (daRating)
 			{
-				case 'shit' | 'bad':
+				case 'shit' | 'bad' | 'fuck':
 					currentTimingShown.color = FlxColor.RED;
 				case 'good':
 					currentTimingShown.color = FlxColor.GREEN;
@@ -2579,7 +2597,10 @@ class PlayState extends MusicBeatState
 			currentTimingShown.borderStyle = OUTLINE;
 			currentTimingShown.borderSize = 1;
 			currentTimingShown.borderColor = FlxColor.BLACK;
-			currentTimingShown.text = msTiming + "ms";
+			currentTimingShown.text = 
+			(healthRating > 0 ? "+" : "") +
+			(healthRating * 50) + "hp";
+
 			currentTimingShown.size = 20;
 
 			if (msTiming >= 0.03 && offsetTesting)
@@ -2606,6 +2627,8 @@ class PlayState extends MusicBeatState
 
 			if (!botPlayShit)
 				add(currentTimingShown);
+
+			//ah shit here we go again!
 
 			var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'combo' + pixelShitPart2));
 			comboSpr.screenCenter();
@@ -2648,6 +2671,21 @@ class PlayState extends MusicBeatState
 			currentTimingShown.cameras = [camHUD];
 			comboSpr.cameras = [camHUD];
 			rating.cameras = [camHUD];
+
+			//oh shit fuck you...
+			if (daRating == 'fuck')
+			{
+				FlxTween.tween(rating, {alpha: 0}, 0.2, {
+					startDelay: Conductor.crochet * 0.001,
+					onUpdate: function(tween:FlxTween)
+					{
+						if (currentTimingShown != null)
+							currentTimingShown.alpha -= 0.02;
+						timeShown++;
+					}
+				});
+				return;
+			}
 
 			var seperatedScore:Array<Int> = [];
 
@@ -2988,21 +3026,20 @@ class PlayState extends MusicBeatState
 		var stunned:Bool = playAsDad ? dad().stunned : boyfriend().stunned;
 		if (!stunned)
 		{
-			health -= 0.04;
+	
 			if (combo > 5 && gf().animOffsets.exists('sad'))
 			{
 				gf().playAnim('sad');
 			}
-			combo = 0;
-			misses++;
+
+		
+			// popUpScore(daNote, true);
 
 			// var noteDiff:Float = Math.abs(daNote.strumTime - Conductor.songPosition);
 			// var wife:Float = EtternaFunctions.wife3(noteDiff, FlxG.save.data.etternaMode ? 1 : 1.7);
 
 			if (FlxG.save.data.accuracyMod == 1)
 				totalNotesHit -= 1;
-
-			songScore -= 10;
 
 			FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
 			// FlxG.sound.play(Paths.sound('missnote1'), 1, false);

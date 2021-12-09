@@ -27,12 +27,9 @@ class OptionsMenu extends MusicBeatState
     var curSelected:Int = 0;
 
     var options:Array<OptionCategory> = [
-        new OptionCategory("Advanced Settings", [
-            new DistractionsAndEffectsOption("Toggle stage distractions that can hinder your gameplay."),
-            new GhostTapOption("Ghost Tapping is when you tap a direction and it doesn't give you a miss."),
-            new ScrollSpeedOption("Change your scroll speed (1 = Chart dependent)"),
-            new AccuracyDOption("Change how accuracy is calculated. (Accurate = Simple, Complex = Milisecond Based)"),
-            new Judgement("Customize your Hit Timings (LEFT or RIGHT)"),
+        new OptionCategory("", [
+            new CustomizationOption("Customize your favorite characters, skins, effects..."),
+            new PlaymodeOption("Select your play mode!"),
         ])
     ];
 

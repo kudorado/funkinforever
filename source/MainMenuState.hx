@@ -304,7 +304,6 @@ class MainMenuState extends MusicBeatState
 				FlxG.switchState(new FreeplayState());
 
 				trace("Freeplay Menu Selected");
-
 			case 'options':
 				FlxG.switchState(new OptionsMenu());
 		}

@@ -923,6 +923,50 @@ class WatermarkOption extends Option
     }
 }
 
+class CustomizationOption extends Option
+{
+    public function new(desc:String)
+    {
+        super();
+        description = desc;
+    }
+
+    public override function press():Bool
+    {
+      
+        LoadingState.loadAndSwitchState(new SelectionState());
+        return true;
+    }
+
+    private override function updateDisplay():String
+    {
+        return "Customization";
+    }
+}
+
+class PlaymodeOption extends Option
+{
+    public function new(desc:String)
+    {
+        super();
+        description = desc;
+    }
+
+    public override function press():Bool
+    {
+      
+        LoadingState.loadAndSwitchState(new SelectionState());
+        return true;
+    }
+
+    private override function updateDisplay():String
+    {
+        return "Play Mode";
+    }
+}
+
+
+
 class OffsetMenu extends Option
 {
     public function new(desc:String)
