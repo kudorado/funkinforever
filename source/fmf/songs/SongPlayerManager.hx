@@ -357,7 +357,12 @@ class SongPlayerManager
 
 			case 'termination':
 				songPlayer = new Termination();
-			
+
+			case 'bushwhack':
+				songPlayer = new Bushwhack();
+
+			case 'foolhardy':
+				songPlayer = new Foolhardy();
 		}
 
 		return songPlayer;
