@@ -23,16 +23,14 @@ class AnimationDebug extends FlxState
 	var animList:Array<String> = [];
 	var curAnim:Int = 0;
 	var isDad:Bool = true;
-	var daAnim:String = 'spooky';
 	var camFollow:FlxObject;
 
 	var flipBF:Bool;
 
-	public function new(daAnim:String = 'spooky', flipBF:Bool = false)
+	public function new(isDad:Bool, flipBF:Bool = false)
 	{
 		super();
-		this.daAnim = daAnim;
-
+		this.isDad = isDad;
 		this.flipBF = flipBF;
 	}
 
@@ -44,9 +42,7 @@ class AnimationDebug extends FlxState
 		gridBG.scrollFactor.set(0.5, 0.5);
 		add(gridBG);
 
-		if (daAnim == 'bf')
-			isDad = false;
-
+		trace("get song: " + PlayState.CURRENT_SONG);
 		if (isDad)
 		{
 			var song = SongPlayerManager.getCurrentSong(PlayState.CURRENT_SONG);
@@ -65,7 +61,6 @@ class AnimationDebug extends FlxState
 		else
 		{
 			var song = SongPlayerManager.getCurrentSong(PlayState.CURRENT_SONG);
-
 			song.createBF();
 			bf = song.bf;
 			bf.debugMode = true;
@@ -129,6 +124,9 @@ class AnimationDebug extends FlxState
 
 	override function update(elapsed:Float)
 	{
+		if (char.animation.curAnim == null)
+			return;
+
 		textAnim.text = char.animation.curAnim.name;
 
 		if (FlxG.keys.justPressed.E)

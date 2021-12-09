@@ -198,7 +198,7 @@ class SongPlayerManager
 			case 'tord':
 				songPlayer = new Tord();
 
-			case 'drunkannie':
+			case 'drunkannie' | 'monster-christmas':
 				songPlayer = new DrunkAnnie();
 				
 			case 'monika':

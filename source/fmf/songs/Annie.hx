@@ -37,13 +37,14 @@ class Annie extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'BF idle dance', 24, false);
+		animation.addByPrefix('idle', 'BF idle dance0', 24, false);
 		animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
 		animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
 		animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
 		animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
-
 		dad.animation = animation;
+
+		
 	}
 
 	override function getDadVersion():Character
@@ -53,7 +54,7 @@ class Annie extends SongPlayer
 
 	override function createDadAnimationOffsets():Void
 	{
-		dad.addOffset('idle',-2, -38);
+		dad.addOffset('idle', -2, -38);
 
 		dad.addOffset('singUP', 0, -22);
 		dad.addOffset('singRIGHT', 15 , -44);
@@ -61,8 +62,9 @@ class Annie extends SongPlayer
 		dad.addOffset('singDOWN', -61, -69);
 
 		dad.flipX = true;
+
+		dad.playAnim('idle');
 		
-		dad.dance();
 	}
 
 	public override function createCharacters()

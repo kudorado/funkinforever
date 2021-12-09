@@ -58,17 +58,7 @@ class GoodEnough extends SongPlayer
 
 	override function createDadAnimationOffsets():Void
 	{
-		// dad.addOffset('idle', 0, 0);
-		// dad.addOffset("singUP", -3, 13);
-		// dad.addOffset("singRIGHT", -11, -7);
-		// dad.addOffset("singLEFT", -30, -5);
-		// dad.addOffset("singDOWN", 15, -29);
-		// dad.dance();
-
-        // dad.flipX = true;
-		// dad.scale.x = 1;
-		// dad.scale.y = 1;
-
+	
         dad.addOffset('idle',-2, -38);
 
 		dad.addOffset('singUP', 0, -22);
@@ -80,6 +70,8 @@ class GoodEnough extends SongPlayer
 
 		dad.x = 351;
 		dad.y = 200;
+
+		dad.playAnim('idle');
 	
 	}
 

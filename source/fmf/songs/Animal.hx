@@ -53,6 +53,8 @@ class Animal extends SongPlayer
 
 		dad.x = 50;
 		dad.y = 195;
+		
+		dad.playAnim('idle');
 	
 	}
 
