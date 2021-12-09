@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import js.html.AnimationPlaybackEvent;
 import haxe.display.JsonModuleTypes.JsonClassFieldReference;
 import flixel.input.gamepad.lists.FlxBaseGamepadList;
 import openfl.display.GraphicsShader;
@@ -363,6 +364,18 @@ class SongPlayerManager
 
 			case 'foolhardy':
 				songPlayer = new Foolhardy();
+
+			case 'good-enough':
+				songPlayer = new GoodEnough();
+			
+			case 'lover':
+				songPlayer = new Lover();
+
+			case 'tug-of-war':
+				songPlayer = new TugOfWar();
+
+			case 'animal':
+				songPlayer = new Animal();
 		}
 
 		return songPlayer;

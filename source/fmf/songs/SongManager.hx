@@ -266,6 +266,16 @@ class SongManager
 			}
 		),
 
+		new SongData	
+		(
+			{
+				folder: 'week_annie',
+				character: 'annie',
+				songTitle: 'V.S Annie',
+				songList: ['Good-enough', 'Lover', 'Tug-of-war', 'Animal']
+			}
+		)
+
 		// new SongData	
 		// (
 		// 	{
