@@ -9,6 +9,8 @@ import fmf.characters.*;
 class InvertedAscension extends SongPlayer	
 {
 
+	var abel:FlxSprite;
+
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/starlingmayhem/cj_assets', 'mods');
@@ -57,6 +59,44 @@ class InvertedAscension extends SongPlayer
 		headlight.x = 0;
 		headlight.y = 753;
         playState.add(headlight);
+
+
+		// var Abel = new FlxSprite(0, 0);
+		// Abel.frames = Paths.getSparrowAtlas('bg/starlingmayhem/Abel', 'mods');
+		// Abel.animation.addByPrefix('idle', 'ABEL00', 24, true);
+		// Abel.animation.play('idle');
+		// Abel.antialiasing = true;
+        // Abel.scale.x = 1;
+        // Abel.scale.y = 1;
+		// Abel.x = 473;
+		// Abel.y = -34;
+        // playState.add(Abel);
+
+		createAbel();
+	}
+
+	function createAbel() {
+		abel = new FlxSprite(0, 0);
+		abel.frames = Paths.getSparrowAtlas('pc/starlingmayhem/Abel', 'mods');
+		
+		abel.animation.addByPrefix('idle', 'ABELIDLE00', 24, false);
+		abel.animation.addByPrefix('singUP', 'ABELUP00', 24, false);
+		abel.animation.addByPrefix('singDOWN', 'ABELDOWN00', 24, false);
+		abel.animation.addByPrefix('singLEFT', 'ABELLEFT00', 24, false);
+		abel.animation.addByPrefix('singRIGHT', 'ABELRIGHT00', 24, false);
+		abel.animation.play('idle');
+		abel.antialiasing = true;
+
+		abel.scale.x = 0.8;
+		abel.scale.y = 0.8;
+		
+		abel.x = 494;
+		abel.y = 32;
+
+		if (FlxG.save.data.distractions)
+		{
+			playState.add(abel);
+		}
 	}
 
 	override function createDadAnimations():Void
@@ -114,4 +154,19 @@ class InvertedAscension extends SongPlayer
 		playState.camFollow.y = 360;
 
 	}
+
+	override function dadNoteEvent(noteData:Note)
+	{
+		super.dadNoteEvent(noteData);
+		var lastNote = playState.lastNote;
+		abel.animation.play(lastNote);
+	}
+
+	override function bfNoteEvent(noteData:Note)
+	{
+		super.bfNoteEvent(noteData);
+		var lastNote = playState.lastNote;
+		abel.animation.play(lastNote);
+	}
+	
 }
