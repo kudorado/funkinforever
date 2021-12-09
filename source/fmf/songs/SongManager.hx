@@ -274,6 +274,16 @@ class SongManager
 				songTitle: 'V.S Annie',
 				songList: ['Good-enough', 'Lover', 'Tug-of-war', 'Animal']
 			}
+		),
+
+		new SongData	
+		(
+			{
+				folder: 'week_starlingmayhem',
+				character: 'starlingmayhem',
+				songTitle: 'V.S Starling Mayhem',
+				songList: ['inverted-ascension', 'echoes', 'artificial-lust']
+			}
 		)
 
 		// new SongData	

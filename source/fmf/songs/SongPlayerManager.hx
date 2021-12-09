@@ -376,6 +376,9 @@ class SongPlayerManager
 
 			case 'animal':
 				songPlayer = new Animal();
+
+			case 'inverted-ascension':
+				songPlayer = new InvertedAscension();
 		}
 
 		return songPlayer;
