@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import openfl.events.EventDispatcher;
 import js.html.AnimationPlaybackEvent;
 import haxe.display.JsonModuleTypes.JsonClassFieldReference;
 import flixel.input.gamepad.lists.FlxBaseGamepadList;
@@ -379,6 +380,12 @@ class SongPlayerManager
 
 			case 'inverted-ascension':
 				songPlayer = new InvertedAscension();
+
+			case 'echoes':
+				songPlayer = new Echoes();
+
+			case 'artificial-lust':
+				songPlayer = new ArtificialLust();
 		}
 
 		return songPlayer;
