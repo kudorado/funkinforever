@@ -10,6 +10,7 @@ class InvertedAscension extends SongPlayer
 {
 
 	var abel:FlxSprite;
+	var max: FlxSprite;
 
     override function getDadTex()
 	{
@@ -60,19 +61,8 @@ class InvertedAscension extends SongPlayer
 		headlight.y = 753;
         playState.add(headlight);
 
-
-		// var Abel = new FlxSprite(0, 0);
-		// Abel.frames = Paths.getSparrowAtlas('bg/starlingmayhem/Abel', 'mods');
-		// Abel.animation.addByPrefix('idle', 'ABEL00', 24, true);
-		// Abel.animation.play('idle');
-		// Abel.antialiasing = true;
-        // Abel.scale.x = 1;
-        // Abel.scale.y = 1;
-		// Abel.x = 473;
-		// Abel.y = -34;
-        // playState.add(Abel);
-
 		createAbel();
+		createMax();
 	}
 
 	function createAbel() {
@@ -98,6 +88,32 @@ class InvertedAscension extends SongPlayer
 			playState.add(abel);
 		}
 	}
+
+	function createMax() {
+		max = new FlxSprite(0, 0);
+		max.frames = Paths.getSparrowAtlas('pc/starlingmayhem/Max', 'mods');
+		
+		max.animation.addByPrefix('idle', 'MAXIDLE00', 24, false);
+		max.animation.addByPrefix('singUP', 'MAXUP00', 24, false);
+		max.animation.addByPrefix('singDOWN', 'MAXDOWN00', 24, false);
+		max.animation.addByPrefix('singLEFT', 'MAXLEFT00', 24, false);
+		max.animation.addByPrefix('singRIGHT', 'MAXRIGHT00', 24, false);
+		max.animation.play('idle');
+		max.antialiasing = true;
+
+		max.scale.x = 0.9;
+		max.scale.y = 0.9;
+		
+		max.x = 1659;
+		max.y = -33;
+
+		if (FlxG.save.data.distractions)
+		{
+			playState.add(max);
+		}
+	}
+
+
 
 	override function createDadAnimations():Void
 	{
@@ -159,14 +175,16 @@ class InvertedAscension extends SongPlayer
 	{
 		super.dadNoteEvent(noteData);
 		var lastNote = playState.lastNote;
-		abel.animation.play(lastNote);
+		//abel.animation.play(lastNote);
+		max.animation.play(lastNote);
 	}
 
 	override function bfNoteEvent(noteData:Note)
 	{
 		super.bfNoteEvent(noteData);
 		var lastNote = playState.lastNote;
-		abel.animation.play(lastNote);
+		//abel.animation.play(lastNote);
+		max.animation.play(lastNote);
 	}
 	
 }
