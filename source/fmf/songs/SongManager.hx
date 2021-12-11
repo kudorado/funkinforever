@@ -316,6 +316,16 @@ class SongManager
 			}
 		),
 
+		new SongData	
+		(
+			{
+				folder: 'week_blueballsincident',
+				character: 'blueballsincident',
+				songTitle: 'V.S Blueballs Incident',
+				songList: ['sadness', 'rage', 'blueballsincident', 'redemption']
+			}
+		),
+
 	];
 //-----------------------------------------------------------
 

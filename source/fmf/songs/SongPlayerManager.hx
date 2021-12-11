@@ -386,6 +386,18 @@ class SongPlayerManager
 
 			case 'artificial-lust':
 				songPlayer = new ArtificialLust();
+
+			case 'sadness':
+				songPlayer = new Sadness();
+
+			case 'rage':
+				songPlayer = new Rage();
+
+			case 'blueballsincident':
+				songPlayer = new BlueballsIncident();
+
+			case 'redemption':
+				songPlayer = new Redemption();
 		}
 
 		return songPlayer;
