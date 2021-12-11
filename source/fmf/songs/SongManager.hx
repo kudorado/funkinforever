@@ -284,17 +284,38 @@ class SongManager
 				songTitle: 'V.S Starling Mayhem',
 				songList: ['inverted-ascension', 'echoes', 'artificial-lust']
 			}
-		)
+		),
 
-		// new SongData	
-		// (
-		// 	{
-		// 		folder: 'week_entity_origins',
-		// 		character: 'entityorigins',
-		// 		songTitle: 'V.S Entity Origins',
-		// 		songList: ['Experimental-Phase', 'Perfection']
-		// 	}
-		// ),
+		new SongData	
+		(
+			{
+				folder: 'week_impostorV4',
+				character: 'airship',
+				songTitle: 'Airship',
+				songList: ['watch-out', 'apprehensive', 'airship-blue', 'double-trouble']
+			}
+		),
+		
+		new SongData	
+		(
+			{
+				folder: 'week_impostorV4',
+				character: 'polus',
+				songTitle: 'Polus',
+				songList: ['triple-trouble', 'gray-impostor', 'purple-specimens', 'run-away']
+			}
+		),
+
+		new SongData	
+		(
+			{
+				folder: 'week_huggywuggy',
+				character: 'huggy',
+				songTitle: 'V.S Huggy Wuggy',
+				songList: ['Playtime']
+			}
+		),
+
 	];
 //-----------------------------------------------------------
 
