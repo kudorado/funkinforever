@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import flixel.math.FlxRandom;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -11,6 +12,10 @@ class InvertedAscension extends SongPlayer
 
 	var abel:FlxSprite;
 	var max: FlxSprite;
+	var light0: FlxSprite;
+	var light1: FlxSprite;
+	var light2: FlxSprite;
+	var light3: FlxSprite;
 
     override function getDadTex()
 	{
@@ -27,11 +32,32 @@ class InvertedAscension extends SongPlayer
 		bg.scale.x = 1;
 		playState.add(bg);
 
-        var light0:FlxSprite = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light0', 'mods'));
+        light0 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light0', 'mods'));
 		light0.antialiasing = true;
 		light0.scale.y = 1;
 		light0.scale.x = 1;
 		playState.add(light0);
+
+		light1 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light1', 'mods'));
+		light1.antialiasing = true;
+		light1.scale.y = 1;
+		light1.scale.x = 1;
+		light1.visible = false;
+		playState.add(light1);
+
+		light2 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light2', 'mods'));
+		light2.antialiasing = true;
+		light2.scale.y = 1;
+		light2.scale.x = 1;
+		light2.visible = false;
+		playState.add(light2);
+
+		light3 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light3', 'mods'));
+		light3.antialiasing = true;
+		light3.scale.y = 1;
+		light3.scale.x = 1;
+		light3.visible = false;
+		playState.add(light3);
 
         var bg1:FlxSprite = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/stage', 'mods'));
 		bg1.antialiasing = true;
@@ -69,7 +95,7 @@ class InvertedAscension extends SongPlayer
 		abel = new FlxSprite(0, 0);
 		abel.frames = Paths.getSparrowAtlas('pc/starlingmayhem/Abel', 'mods');
 		
-		abel.animation.addByPrefix('idle', 'ABELIDLE00', 24, false);
+		abel.animation.addByPrefix('idle', 'ABEL', 24, true);
 		abel.animation.addByPrefix('singUP', 'ABELUP00', 24, false);
 		abel.animation.addByPrefix('singDOWN', 'ABELDOWN00', 24, false);
 		abel.animation.addByPrefix('singLEFT', 'ABELLEFT00', 24, false);
@@ -93,7 +119,7 @@ class InvertedAscension extends SongPlayer
 		max = new FlxSprite(0, 0);
 		max.frames = Paths.getSparrowAtlas('pc/starlingmayhem/Max', 'mods');
 		
-		max.animation.addByPrefix('idle', 'MAXIDLE00', 24, false);
+		max.animation.addByPrefix('idle', 'MAXIDLE00', 24, true);
 		max.animation.addByPrefix('singUP', 'MAXUP00', 24, false);
 		max.animation.addByPrefix('singDOWN', 'MAXDOWN00', 24, false);
 		max.animation.addByPrefix('singLEFT', 'MAXLEFT00', 24, false);
@@ -175,16 +201,31 @@ class InvertedAscension extends SongPlayer
 	{
 		super.dadNoteEvent(noteData);
 		var lastNote = playState.lastNote;
-		//abel.animation.play(lastNote);
-		max.animation.play(lastNote);
-	}
-
-	override function bfNoteEvent(noteData:Note)
-	{
-		super.bfNoteEvent(noteData);
-		var lastNote = playState.lastNote;
-		//abel.animation.play(lastNote);
 		max.animation.play(lastNote);
 	}
 	
+	override function playBeatEvent() 
+	{
+		var x = FlxG.random.int(0, 3);
+		light0.visible = false;
+		light1.visible = false;
+		light2.visible = false;
+		light3.visible = false;
+		if(x == 0) {
+			light0.visible = true;
+		}
+		else {
+			if(x == 1) {
+				light1.visible = true;
+			}
+			else {
+				if(x == 2) {
+					light2.visible = true;
+				}
+				else {
+					light3.visible = true;
+				}
+			}
+		}
+	}
 }
