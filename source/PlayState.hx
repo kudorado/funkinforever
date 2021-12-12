@@ -186,7 +186,6 @@ class PlayState extends MusicBeatState
 	public var camGame:FlxCamera;
 
 
-
 	var scoreTxt:FlxText;
 	var missTxt:FlxText;
 	var accuracyTxt:FlxText;
@@ -623,6 +622,7 @@ class PlayState extends MusicBeatState
 
 		healthBar.visible = false;
 		healthBarBG.visible = false;
+
 		iconP1.visible = false;
 		iconP2.visible = false;
 
@@ -746,8 +746,8 @@ class PlayState extends MusicBeatState
 	{
 		musicListeningShit = FlxG.save.data.musicListening;
 		#if debug
-		musicListeningShit = true;
-		botPlayShit = true;
+		// musicListeningShit = true;
+		// botPlayShit = true;
 		#end
 
 		if (musicListeningShit)
@@ -1220,15 +1220,18 @@ class PlayState extends MusicBeatState
 			songPosBG.y -= 40;
 
 	
-		songPosBG.scrollFactor.set();
 		add(songPosBG);
 
-		songPosBG.cameras = [camHUD];
 		songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4 ,  BOTTOM_TO_TOP  , Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
 			'songPositionBar', 0, Math.max(songLength - 1000, 30));
-		songPosBar.scrollFactor.set();
+
+		songPosBG.scrollFactor.set(1, 1);
+		songPosBar.scrollFactor.set(1, 1);
+
 		songPosBar.createFilledBar(FlxColor.TRANSPARENT, FlxColor.WHITE);
 		add(songPosBar);
+
+		songPosBG.cameras = [camHUD];
 		songPosBar.cameras = [camHUD];
 
 		songPosBG.setGraphicSize(Std.int(songPosBG.width * 0.5), Std.int(songPosBG.height * 0.2));
@@ -1250,32 +1253,33 @@ class PlayState extends MusicBeatState
 
 	function createHealthBarShit()
 	{
-		healthBarShitBG = new FlxSprite(0, songName.y).loadGraphic(Paths.image('fuckbar', 'shared'));
+		healthBarShitBG = new FlxSprite(boyfriend().x + 4, boyfriend().y + 4).loadGraphic(Paths.image('healthBar', 'shared'));
 		healthBarShitBG.color = FlxColor.BLACK;
 
-		healthBarShitBG.y-= healthBarShitBG.height / 2;
+		// healthBarShitBG.y-= healthBarShitBG.height / 2;
 
-		healthBarShitBG.x += 5;
+		// healthBarShitBG.x += 5;
 
-		if (FlxG.save.data.downscroll)
-			healthBarShitBG.y += 62.5;
-		else
-			healthBarShitBG.y -= 40;
+		// if (FlxG.save.data.downscroll)
+		// 	healthBarShitBG.y += 62.5;
+		// else
+		// 	healthBarShitBG.y -= 40;
 
 	
-		healthBarShitBG.scrollFactor.set();
 		add(healthBarShitBG);
 
-		healthBarShitBG.cameras = [camHUD];
-		healthBarShit = new FlxBar(healthBarShitBG.x + 4, healthBarShitBG.y + 4, BOTTOM_TO_TOP, Std.int(healthBarShitBG.width - 8), Std.int(healthBarShitBG.height - 8),
-			this, 'health', 0, 2);
-		healthBarShit.scrollFactor.set();
+		healthBarShit = new FlxBar(healthBarShitBG.x + 4, healthBarShitBG.y + 4, LEFT_TO_RIGHT, Std.int(healthBarShitBG.width - 8), Std.int(healthBarShitBG.height - 8),
+			boyfriend(), 'health', 0, 2);
+	
 		healthBarShit.createFilledBar(FlxColor.TRANSPARENT, FlxColor.RED);
 		add(healthBarShit);
-		healthBarShit.cameras = [camHUD];
 
-		healthBarShitBG.setGraphicSize(Std.int(healthBarShitBG.width * 0.5), Std.int(healthBarShitBG.height * 0.2));
-		healthBarShit.setGraphicSize(Std.int(healthBarShit.width * 0.5), Std.int(healthBarShit.height * 0.2));
+		healthBarShitBG.scrollFactor.set(0.95, 0.95);
+		healthBarShit.scrollFactor.set(0.95, 0.95);
+
+
+		healthBarShitBG.setGraphicSize(Std.int(healthBarShitBG.width * 0.25));
+		healthBarShit.setGraphicSize(Std.int(healthBarShitBG.width * 0.25));
 
 
 		
@@ -2588,20 +2592,18 @@ class PlayState extends MusicBeatState
 			switch (daRating)
 			{
 				case 'shit' | 'bad' | 'fuck':
-					currentTimingShown.color = FlxColor.RED;
-				case 'good':
-					currentTimingShown.color = FlxColor.GREEN;
-				case 'sick':
-					currentTimingShown.color = FlxColor.CYAN;
+					currentTimingShown.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.RED, CENTER);
+
+				case 'good' | 'sick':
+					currentTimingShown.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.CYAN, CENTER);
+
 			}
-			currentTimingShown.borderStyle = OUTLINE;
-			currentTimingShown.borderSize = 1;
-			currentTimingShown.borderColor = FlxColor.BLACK;
+			currentTimingShown.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 			currentTimingShown.text = 
 			(healthRating > 0 ? "+" : "") +
 			(healthRating * 50) + "hp";
 
-			currentTimingShown.size = 20;
+			currentTimingShown.size = 30;
 
 			if (msTiming >= 0.03 && offsetTesting)
 			{
@@ -3032,7 +3034,10 @@ class PlayState extends MusicBeatState
 				gf().playAnim('sad');
 			}
 
-		
+			songScore = -500;
+			combo = 0;
+			health -= 0.02;
+
 			// popUpScore(daNote, true);
 
 			// var noteDiff:Float = Math.abs(daNote.strumTime - Conductor.songPosition);
