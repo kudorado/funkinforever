@@ -477,7 +477,6 @@ class PlayState extends MusicBeatState
 		FlxG.fixedTimestep = false;
 		
 		healthBarBG = new FlxSprite(0, FlxG.height * 0.9).loadGraphic(Paths.image('healthBar'));
-		healthBarBG.setGraphicSize(Std.int(healthBarBG.width));
 
 		healthBarBG.color = FlxColor.BLACK;
 		healthBarBG.alpha = 0.85;
@@ -506,7 +505,8 @@ class PlayState extends MusicBeatState
 		healthBar.scrollFactor.set();
 		healthBar.createFilledBar(0x000000FF, FlxColor.RED);
 
-		healthBar.setGraphicSize(Std.int(healthBar.width));
+		healthBarBG.setGraphicSize(Std.int(healthBarBG.width * 0.35));
+		healthBar.setGraphicSize(Std.int(healthBarBG.width * 0.35));
 
 		// healthBar.alpha = 0;
 
@@ -1253,36 +1253,34 @@ class PlayState extends MusicBeatState
 
 	function createHealthBarShit()
 	{
-		healthBarShitBG = new FlxSprite(boyfriend().x + 4, boyfriend().y + 4).loadGraphic(Paths.image('healthBar', 'shared'));
+		healthBarShitBG = new FlxSprite(0, songName.y).loadGraphic(Paths.image('fuckbar', 'shared'));
 		healthBarShitBG.color = FlxColor.BLACK;
 
-		// healthBarShitBG.y-= healthBarShitBG.height / 2;
+		healthBarShitBG.y-= healthBarShitBG.height / 2;
 
-		// healthBarShitBG.x += 5;
+		healthBarShitBG.x += 5;
 
-		// if (FlxG.save.data.downscroll)
-		// 	healthBarShitBG.y += 62.5;
-		// else
-		// 	healthBarShitBG.y -= 40;
+		if (FlxG.save.data.downscroll)
+			healthBarShitBG.y += 62.5;
+		else
+			healthBarShitBG.y -= 40;
 
 	
+		healthBarShitBG.scrollFactor.set();
 		add(healthBarShitBG);
 
-		healthBarShit = new FlxBar(healthBarShitBG.x + 4, healthBarShitBG.y + 4, LEFT_TO_RIGHT, Std.int(healthBarShitBG.width - 8), Std.int(healthBarShitBG.height - 8),
-			boyfriend(), 'health', 0, 2);
-	
+		healthBarShitBG.cameras = [camHUD];
+		healthBarShit = new FlxBar(healthBarShitBG.x + 4, healthBarShitBG.y + 4, BOTTOM_TO_TOP, Std.int(healthBarShitBG.width - 8), Std.int(healthBarShitBG.height - 8),
+			this, 'health', 0, 2);
+		healthBarShit.scrollFactor.set();
 		healthBarShit.createFilledBar(FlxColor.TRANSPARENT, FlxColor.RED);
 		add(healthBarShit);
+		healthBarShit.cameras = [camHUD];
 
-		healthBarShitBG.scrollFactor.set(0.95, 0.95);
-		healthBarShit.scrollFactor.set(0.95, 0.95);
-
-
-		healthBarShitBG.setGraphicSize(Std.int(healthBarShitBG.width * 0.25));
-		healthBarShit.setGraphicSize(Std.int(healthBarShitBG.width * 0.25));
+		healthBarShitBG.setGraphicSize(Std.int(healthBarShitBG.width * 0.5), Std.int(healthBarShitBG.height * 0.2));
+		healthBarShit.setGraphicSize(Std.int(healthBarShit.width * 0.5), Std.int(healthBarShit.height * 0.2));
 
 
-		
 
 		if (musicListeningShit)
 		{

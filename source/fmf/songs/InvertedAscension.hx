@@ -95,19 +95,19 @@ class InvertedAscension extends SongPlayer
 		abel = new FlxSprite(0, 0);
 		abel.frames = Paths.getSparrowAtlas('pc/starlingmayhem/Abel', 'mods');
 		
-		abel.animation.addByPrefix('idle', 'ABEL', 24, true);
-		abel.animation.addByPrefix('singUP', 'ABELUP00', 24, false);
-		abel.animation.addByPrefix('singDOWN', 'ABELDOWN00', 24, false);
-		abel.animation.addByPrefix('singLEFT', 'ABELLEFT00', 24, false);
-		abel.animation.addByPrefix('singRIGHT', 'ABELRIGHT00', 24, false);
+		abel.animation.addByPrefix('idle', 'ABEL', 110, true);
+		abel.animation.addByPrefix('singUP', 'ABELUP00', 48, false);
+		abel.animation.addByPrefix('singDOWN', 'ABELDOWN00', 48, false);
+		abel.animation.addByPrefix('singLEFT', 'ABELLEFT00', 48, false);
+		abel.animation.addByPrefix('singRIGHT', 'ABELRIGHT00', 48, false);
 		abel.animation.play('idle');
 		abel.antialiasing = true;
 
 		abel.scale.x = 0.8;
 		abel.scale.y = 0.8;
 		
-		abel.x = 494;
-		abel.y = 32;
+		abel.x = 400;
+		abel.y = 25;
 
 		if (FlxG.save.data.distractions)
 		{
@@ -202,6 +202,31 @@ class InvertedAscension extends SongPlayer
 		super.dadNoteEvent(noteData);
 		var lastNote = playState.lastNote;
 		max.animation.play(lastNote);
+	}
+	
+	override function bfNoteEvent(noteData:Note)
+	{
+		super.bfNoteEvent(noteData);
+		var lastNote = playState.lastNote;
+		max.animation.play(lastNote);
+	}
+
+	var daFrame = 0;
+
+	override function update(elapsed:Float)
+	{
+		super.update(elapsed);
+
+		daFrame ++;
+
+		if (daFrame >= 12)
+		{
+			daFrame  = 0;
+		}
+		else
+			daFrame ++;
+
+
 	}
 	
 	override function playBeatEvent() 
