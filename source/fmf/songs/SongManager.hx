@@ -326,6 +326,16 @@ class SongManager
 			}
 		),
 
+		new SongData	
+		(
+			{
+				folder: 'week_camellia',
+				character: 'camellia',
+				songTitle: 'V.S Camellia',
+				songList: ['first-town', 'liquated', 'why-do-you-hate-me', 'ghost']
+			}
+		),
+
 	];
 //-----------------------------------------------------------
 

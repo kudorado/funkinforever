@@ -398,6 +398,18 @@ class SongPlayerManager
 
 			case 'redemption':
 				songPlayer = new Redemption();
+
+			case 'first-town':
+				songPlayer = new FirstTown();
+
+			case 'liquated':
+				songPlayer = new Liquated();
+
+			case 'why-do-you-hate-me':
+				songPlayer = new WhyDoYouHateMe();
+
+			case 'ghost':
+				songPlayer = new Ghost();
 		}
 
 		return songPlayer;
