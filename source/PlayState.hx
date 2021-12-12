@@ -1941,7 +1941,7 @@ class PlayState extends MusicBeatState
 					// if (luaModchart != null)
 					// 	luaModchart.executeState('playerTwoSing', [Math.abs(daNote.noteData), Conductor.songPosition]);
 					// #end
-					
+					//songPlayer.noteEvent(daNote);
 					//trigger when dad hit a note
 					if(playAsDad)
 						songPlayer.bfNoteEvent(daNote);
@@ -3051,6 +3051,8 @@ class PlayState extends MusicBeatState
 			// FlxG.log.add('played imss note');
 
 			songPlayer.playerMissNoteEvent();
+
+			//songPlayer.missNoteEvent(daNote);
 			
 			if (playAsDad)
 			{
@@ -3350,6 +3352,7 @@ class PlayState extends MusicBeatState
 		{
 			camGame.zoom += 0.0075;
 			// camHUD.zoom += 0.015;
+			songPlayer.playBeatEvent();
 		}
 
 		iconP1.setGraphicSize(Std.int(iconP1.width + 30));
