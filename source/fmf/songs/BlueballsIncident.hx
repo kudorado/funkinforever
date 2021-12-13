@@ -41,17 +41,17 @@ class BlueballsIncident extends SongPlayer
 	override function createDadAnimationOffsets():Void
 	{
 
-        dad.addOffset('idle',0, 0);
+        dad.addOffset('idle',0, 23);
 
-		dad.addOffset('singUP', 0, 0);
-		dad.addOffset('singRIGHT', 0 , 0);
-		dad.addOffset('singLEFT', 0, 0);
-		dad.addOffset('singDOWN', 0, 0);
+		dad.addOffset('singUP', 66, 29);
+		dad.addOffset('singRIGHT', -25, 20);
+		dad.addOffset('singLEFT', 83, 22);
+		dad.addOffset('singDOWN', 28, -39);
 		dad.dance();
         dad.scale.x = 1;
         dad.scale.y = 1;
 		dad.x = 400;
-		dad.y = 159;
+		dad.y = 199;
 	
 	}
 

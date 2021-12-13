@@ -29,11 +29,11 @@ class Rage extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', '1TrollgeIdle00', 18, false);
-		animation.addByPrefix('singUP', '1TrollgeUp00', 24, false);
-		animation.addByPrefix('singRIGHT', '1TrollgeRight00', 24, false);
-		animation.addByPrefix('singLEFT', '1TrollgeLeft00', 24, false);
-		animation.addByPrefix('singDOWN', '1TrollgeDown00', 24, false);
+		animation.addByPrefix('idle', '1TrollgeRageIdle0', 18, true);
+		animation.addByPrefix('singUP', '1TrollgeRageUp00', 24, false);
+		animation.addByPrefix('singRIGHT', '1TrollgeRageRight00', 24, false);
+		animation.addByPrefix('singLEFT', '1TrollgeRageLeft00', 24, false);
+		animation.addByPrefix('singDOWN', '1TrollgeRageDown00', 24, false);
 		dad.animation = animation;
 
 	}
@@ -43,15 +43,15 @@ class Rage extends SongPlayer
 
         dad.addOffset('idle',0, 0);
 
-		dad.addOffset('singUP', 0, 0);
-		dad.addOffset('singRIGHT', 0 , 0);
-		dad.addOffset('singLEFT', 0, 0);
-		dad.addOffset('singDOWN', 0, 0);
+		dad.addOffset('singUP', 177, 24);
+		dad.addOffset('singRIGHT', 18, -24);
+		dad.addOffset('singLEFT', 25, 7);
+		dad.addOffset('singDOWN', 41, -20);
 		dad.dance();
         dad.scale.x = 1;
         dad.scale.y = 1;
-		dad.x = 809;
-		dad.y = 66;
+		dad.x = 569;
+		dad.y = 322;
 	
 	}
 

@@ -41,17 +41,17 @@ class Sadness extends SongPlayer
 	override function createDadAnimationOffsets():Void
 	{
 
-        dad.addOffset('idle',0, 0);
+        dad.addOffset('idle',0, 23);
 
-		dad.addOffset('singUP', 0, 0);
-		dad.addOffset('singRIGHT', 0 , 0);
-		dad.addOffset('singLEFT', 0, 0);
-		dad.addOffset('singDOWN', 0, 0);
+		dad.addOffset('singUP', -41, 21);
+		dad.addOffset('singRIGHT', 81, 8);
+		dad.addOffset('singLEFT', 72, 6);
+		dad.addOffset('singDOWN', -19, -30);
 		dad.dance();
         dad.scale.x = 1.2;
         dad.scale.y = 1.2;
-		dad.x = 529;
-		dad.y = 222;
+		dad.x = 646;
+		dad.y = 247;
 	
 	}
 
