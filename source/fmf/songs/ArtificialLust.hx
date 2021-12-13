@@ -179,14 +179,15 @@ class ArtificialLust extends SongPlayer
 
         dad.addOffset('idle',0, 0);
 
-		dad.addOffset('singUP', 0, 0);
-		dad.addOffset('singRIGHT', 0 , 0);
-		dad.addOffset('singLEFT', 0, 0);
-		dad.addOffset('singDOWN', 0, 0);
+		dad.addOffset('singUP', -0, 0);
+		dad.addOffset('singRIGHT', -0 , 0);
+		dad.addOffset('singLEFT', -0, 0);
+		dad.addOffset('singDOWN', -0, 0);
         dad.scale.x = 1.8;
         dad.scale.y = 1.8;
-		dad.x = 724;
-		dad.y = 158;
+		dad.x = 734;
+		dad.y = 141;
+		dad.dance();
 	
 	}
 

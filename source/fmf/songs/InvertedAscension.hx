@@ -162,6 +162,7 @@ class InvertedAscension extends SongPlayer
 		dad.addOffset('singRIGHT', 0 , 0);
 		dad.addOffset('singLEFT', 0, 0);
 		dad.addOffset('singDOWN', 0, 0);
+		dad.dance();
         dad.scale.x = 1.9;
         dad.scale.y = 1.9;
 		dad.x = 809;

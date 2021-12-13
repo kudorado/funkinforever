@@ -165,7 +165,7 @@ class Echoes extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'ruby idle dance00', 18, false);
+		animation.addByPrefix('idle', 'ruby idle dance00', 18, true);
 		animation.addByPrefix('singUP', 'ruby Sing Note UP00', 24, false);
 		animation.addByPrefix('singRIGHT', 'ruby Sing Note RIGHT00', 24, false);
 		animation.addByPrefix('singLEFT', 'ruby Sing Note LEFT00', 24, false);
@@ -177,17 +177,17 @@ class Echoes extends SongPlayer
 	override function createDadAnimationOffsets():Void
 	{
 
-        dad.addOffset('idle',0, 0);
+        dad.addOffset('idle',0, 39);
 
-		dad.addOffset('singUP', 0, 0);
-		dad.addOffset('singRIGHT', 0 , 0);
-		dad.addOffset('singLEFT', 0, 0);
-		dad.addOffset('singDOWN', 0, 0);
+		dad.addOffset('singUP', -19, 81);
+		dad.addOffset('singRIGHT', -23, 60);
+		dad.addOffset('singLEFT', -27, 38);
+		dad.addOffset('singDOWN', -26, 0);
         dad.scale.x = 1;
         dad.scale.y = 1;
 		dad.x = 587;
-		dad.y = 5;
-	
+		dad.y = 0;
+		dad.dance();
 	}
 
 	override function createBFAnimationOffsets()
