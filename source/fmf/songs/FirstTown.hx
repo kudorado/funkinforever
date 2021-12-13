@@ -59,6 +59,7 @@ class FirstTown extends SongPlayer
 		dad.addOffset('singRIGHT', 0 , -22);
 		dad.addOffset('singLEFT', 94, 26);
 		dad.addOffset('singDOWN', 0, 77);
+		dad.dance();
         dad.scale.x = 1;
         dad.scale.y = 1;
 		dad.x = 150;

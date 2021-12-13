@@ -47,6 +47,7 @@ class BlueballsIncident extends SongPlayer
 		dad.addOffset('singRIGHT', 0 , 0);
 		dad.addOffset('singLEFT', 0, 0);
 		dad.addOffset('singDOWN', 0, 0);
+		dad.dance();
         dad.scale.x = 1;
         dad.scale.y = 1;
 		dad.x = 400;
