@@ -721,7 +721,9 @@ class PcManager
 		var pc = getPc(pcName);
         var defaultPc = Type.getClassName(Type.getClass(pc));
 
-		return defaultPc != "boyfriend" ? pc : song.getDefaultPc();
+		trace("pc: " + defaultPc);
+
+		return defaultPc.toLowerCase() != "fmf.characters.boyfriend" ? pc : song.getDefaultPc();
 
 
 		
