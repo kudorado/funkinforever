@@ -410,6 +410,9 @@ class SongPlayerManager
 
 			case 'ghost':
 				songPlayer = new Ghost();
+
+			case 'whitroll':
+				songPlayer = new Whitroll();
 		}
 
 		return songPlayer;
