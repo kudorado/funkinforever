@@ -135,6 +135,7 @@ class BaseSong
 
 		bf.characterAddedEvent();
 
+
 	}
 
 	//---------------------------------------------------------------------------------------------------------
@@ -273,15 +274,16 @@ class BaseSong
 		createDadAnimationOffsets();
 	}
 
-	private function switchDad(song:SongPlayer, createDad:Bool = true)
+	private function switchDad(song:SongPlayer, createDad:Bool = true, destroyOldDad:Bool = true)
 	{
-		#if !debug
 		playState.remove(dad);
-		dad.destroy();//alloc for fun
-		#end
+
+		if(destroyOldDad)
+			dad.destroy();
 
 		if (createDad)
 			song.createDad();
+
 
 		dad = song.dad;
 		

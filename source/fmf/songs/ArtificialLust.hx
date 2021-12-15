@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import flixel.util.FlxTimer;
 import flixel.tweens.FlxTween;
 import flixel.math.FlxRandom;
 import flixel.util.FlxColor;
@@ -182,6 +183,18 @@ class ArtificialLust extends SongPlayer
 		playState.add(dad);
 
 		bf.characterAddedEvent();
+
+
+		eventEnter();
+
+		//cache it babe
+		new FlxTimer().start(0.1, function shit(tmr:FlxTimer)
+		{
+			eventExit();
+		}, 1);
+
+		//cache first.
+		
 	}
 
 	function createBlackShit()
@@ -334,12 +347,14 @@ class ArtificialLust extends SongPlayer
 		if (showTime)
 			eventSong.max.animation.play(lastNote);
 		else
-			max.animation.play(lastNote);	}
+			max.animation.play(lastNote);
+	}
 
 	override function midSongEventUpdate(curBeat:Int)
 	{
 		switch (curBeat)
 		{
+
 			case 58 :
 				// sp.createDad();
 				FlxTween.tween(blackShit, {alpha: 1}, 1, {});
@@ -347,28 +362,36 @@ class ArtificialLust extends SongPlayer
 				playState.defaultCamZoom =  1.25;
 				showTime = true;
 
-			case 64 :
+			case 62:
+				playState.defaultCamZoom = camZoomShit;
+
+			case 63:
 				FlxTween.tween(blackShit, {alpha: 0}, 0.1, {});
 				playState.shakeNormal();
-				switchDad(eventSong, false);
-				switchAbelAndMaxRGB();
-
-				playState.defaultCamZoom = camZoomShit;
-				playState.camGame.zoom = camZoomShit;
+				eventEnter();
 
 			case 95 | 400:
 				showTime = false;
 				playState.shakeBig();
-				switchDad(new ArtificialLust());
-				switchAbelAndMax();
-
+				eventExit();
 			case 304:
 				showTime = true;
 				playState.shakeNormal();
-				switchDad(eventSong, false);
-				switchAbelAndMaxRGB();
+				eventEnter();
 
 		}
+	}
+	function eventEnter()
+	{
+		switchDad(eventSong, false);
+		switchAbelAndMaxRGB();
+	}
+		
+	function eventExit()
+	{
+		switchDad(new ArtificialLust(), true, false);
+		switchAbelAndMax();
+
 	}
 
 	function switchAbelAndMaxRGB()

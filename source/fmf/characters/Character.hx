@@ -84,8 +84,6 @@ class Character extends FlxSprite
 
     public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
     {
-
-
         if (isLockAnim)
             return;
 
