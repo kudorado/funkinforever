@@ -340,7 +340,7 @@ class ArtificialLust extends SongPlayer
 	{
 		switch (curBeat)
 		{
-			case 58:
+			case 58 :
 				// sp.createDad();
 				FlxTween.tween(blackShit, {alpha: 1}, 1, {});
 				dad.playAnim('showTime');
@@ -356,12 +356,17 @@ class ArtificialLust extends SongPlayer
 				playState.defaultCamZoom = camZoomShit;
 				playState.camGame.zoom = camZoomShit;
 
-			case 100:
+			case 95 | 400:
 				showTime = false;
 				playState.shakeBig();
 				switchDad(new ArtificialLust());
 				switchAbelAndMax();
 
+			case 304:
+				showTime = true;
+				playState.shakeNormal();
+				switchDad(eventSong, false);
+				switchAbelAndMaxRGB();
 
 		}
 	}
