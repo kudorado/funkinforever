@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import flixel.tweens.FlxTween;
 import flixel.math.FlxRandom;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -10,12 +11,29 @@ import fmf.characters.*;
 class ArtificialLust extends SongPlayer	
 {
 
+	var showTime:Bool;
+    var camZoomShit:Float = 0.6;
+    var eventSong:ArtificialLustRGB;
+
+
 	var abel:FlxSprite;
 	var max: FlxSprite;
+
 	var light0: FlxSprite;
 	var light1: FlxSprite;
 	var light2: FlxSprite;
 	var light3: FlxSprite;
+
+	var lightEvent: FlxSprite;
+
+
+    public var bg:FlxSprite;
+    public var stage:FlxSprite;
+    public var headlight:FlxSprite;
+    public var simp:FlxSprite;
+
+	var blackShit:FlxSprite;
+
 
     override function getDadTex()
 	{
@@ -23,14 +41,26 @@ class ArtificialLust extends SongPlayer
 		dad.frames = tex;
 	}
 
-	override function loadMap()
+	function createBG()
 	{
-        playState.defaultCamZoom = 0.6;
-		var bg:FlxSprite = new FlxSprite(0, -396).loadGraphic(Paths.image('bg/starlingmayhem/night/bg', 'mods'));
+		bg = new FlxSprite(0, -396).loadGraphic(Paths.image('bg/starlingmayhem/night/bg', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
 		playState.add(bg);
+	}
+
+	function createStage()
+	{
+        stage = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/stage', 'mods'));
+		stage.antialiasing = true;
+		stage.scale.y = 1;
+		stage.scale.x = 1;
+		playState.add(stage);
+	}
+
+	function createLight()
+	{
 
         light0 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light0', 'mods'));
 		light0.antialiasing = true;
@@ -59,50 +89,78 @@ class ArtificialLust extends SongPlayer
 		light3.visible = false;
 		playState.add(light3);
 
-        var bg1:FlxSprite = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/stage', 'mods'));
-		bg1.antialiasing = true;
-		bg1.scale.y = 1;
-		bg1.scale.x = 1;
-		playState.add(bg1);
+		lightEvent = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/event/light', 'mods'));
+		lightEvent.antialiasing = true;
+		lightEvent.scale.y = 1;
+		lightEvent.scale.x = 1;
+		lightEvent.visible = false;
+		playState.add(lightEvent);
 
-        var headlight = new FlxSprite(0, 0);
-		headlight.frames = Paths.getSparrowAtlas('bg/starlingmayhem/headlightsRGB', 'mods');
+	}
+
+	function createHeadlight()
+	{
+        headlight = new FlxSprite(0, 0);
+		headlight.frames = Paths.getSparrowAtlas('bg/starlingmayhem/headlights', 'mods');
 		headlight.animation.addByPrefix('idle', 'Lightsrepeated00', 24, true);
 		headlight.animation.play('idle');
 		headlight.antialiasing = true;
         headlight.scale.x = 2;
         headlight.scale.y = 2;
 		headlight.x = 657;
-		headlight.y = -128;
+		headlight.y = -150;
         playState.add(headlight);
 
-        var headlight = new FlxSprite(0, 0);
-		headlight.frames = Paths.getSparrowAtlas('bg/starlingmayhem/frontboppers', 'mods');
-		headlight.animation.addByPrefix('idle', 'frontboppers000', 24, true);
-		headlight.animation.play('idle');
-		headlight.antialiasing = true;
-        headlight.scale.x = 1;
-        headlight.scale.y = 1;
-		headlight.x = 0;
-		headlight.y = 753;
-        playState.add(headlight);
+	}
+
+	function createSimp()
+	{
+		simp = new FlxSprite(0, 0);
+		simp.frames = Paths.getSparrowAtlas('bg/starlingmayhem/frontboppers', 'mods');
+		simp.animation.addByPrefix('idle', 'frontboppers000', 24, true);
+		simp.animation.play('idle');
+		simp.antialiasing = true;
+        simp.scale.x = 1;
+        simp.scale.y = 1;
+		simp.x = 0;
+		simp.y = 753;
+        playState.add(simp);
+	}
+
+	override function loadMap()
+	{
+        playState.defaultCamZoom = 0.6;
+		playState.defaultCamZoom = camZoomShit;
+
+		createBG();
+		createLight();
+		createStage();
+		createHeadlight();
+		createSimp();
+
+		createBlackShit();
 
 		createAbel();
 		createMax();
-        //createCJAbel();
+
+		eventSong = new ArtificialLustRGB();
+		eventSong.loadMap();
+		eventSong.createDad();
+
 	}
 
-    function createCJAbel() {
+	function createCJAbel()
+	{
 		abel = new FlxSprite(0, 0);
 		abel.frames = Paths.getSparrowAtlas('bg/starlingmayhem/CJBG', 'mods');
-		
+
 		abel.animation.addByPrefix('idle', 'CJ00', 24, true);
 		abel.animation.play('idle');
 		abel.antialiasing = true;
 
 		abel.scale.x = 0.8;
 		abel.scale.y = 0.8;
-		
+
 		abel.x = 767;
 		abel.y = 221;
 
@@ -112,34 +170,36 @@ class ArtificialLust extends SongPlayer
 		}
 	}
 
-	function createAbel() {
-		abel = new FlxSprite(0, 0);
-		abel.frames = Paths.getSparrowAtlas('pc/starlingmayhem/Abel', 'mods');
-		
-		abel.animation.addByPrefix('idle', 'ABEL', 110, true);
-		abel.animation.addByPrefix('singUP', 'ABELUP00', 48, false);
-		abel.animation.addByPrefix('singDOWN', 'ABELDOWN00', 48, false);
-		abel.animation.addByPrefix('singLEFT', 'ABELLEFT00', 48, false);
-		abel.animation.addByPrefix('singRIGHT', 'ABELRIGHT00', 48, false);
-		abel.animation.play('idle');
-		abel.antialiasing = true;
+	override function createCharacters()
+	{
+		createGF();
+		createBF();
+		createDad();
 
-		abel.scale.x = 0.8;
-		abel.scale.y = 0.8;
-		
-		abel.x = 400;
-		abel.y = 25;
+		gf.scrollFactor.set(0.95, 0.95);
+		playState.add(gf);
+		playState.add(bf);
+		playState.add(dad);
 
-		if (FlxG.save.data.distractions)
-		{
-			playState.add(abel);
-		}
+		bf.characterAddedEvent();
 	}
 
-	function createMax() {
+	function createBlackShit()
+	{
+		blackShit = new FlxSprite(-600, -200).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+
+		blackShit.antialiasing = true;
+		blackShit.scrollFactor.set(0.9, 0.9);
+		blackShit.alpha = 0;
+		blackShit.screenCenter(X);
+		playState.add(blackShit);
+	}
+
+	function createMax()
+	{
 		max = new FlxSprite(0, 0);
 		max.frames = Paths.getSparrowAtlas('pc/starlingmayhem/Max', 'mods');
-		
+
 		max.animation.addByPrefix('idle', 'MAXIDLE00', 24, true);
 		max.animation.addByPrefix('singUP', 'MAXUP00', 24, false);
 		max.animation.addByPrefix('singDOWN', 'MAXDOWN00', 24, false);
@@ -150,17 +210,42 @@ class ArtificialLust extends SongPlayer
 
 		max.scale.x = 0.9;
 		max.scale.y = 0.9;
-		
-		max.x = 1659;
-		max.y = -33;
 
+		max.x = 1700;
+		max.y = 25;
+		
 		if (FlxG.save.data.distractions)
 		{
 			playState.add(max);
 		}
 	}
 
+	function createAbel()
+	{
+		abel = new FlxSprite(0, 0);
+		abel.frames = Paths.getSparrowAtlas('pc/starlingmayhem/Abel', 'mods');
 
+		abel.animation.addByPrefix('idle', 'ABEL', 110, true);
+		abel.animation.addByPrefix('singUP', 'ABELUP00', 48, false);
+		abel.animation.addByPrefix('singDOWN', 'ABELDOWN00', 48, false);
+		abel.animation.addByPrefix('singLEFT', 'ABELLEFT00', 48, false);
+		abel.animation.addByPrefix('singRIGHT', 'ABELRIGHT00', 48, false);
+		abel.animation.play('idle');
+		abel.antialiasing = true;
+
+		abel.scale.x = 0.8;
+		abel.scale.y = 0.8;
+
+		abel.x = 253;
+		abel.y = 25;
+
+
+		if (FlxG.save.data.distractions)
+		{
+			playState.add(abel);
+		}
+	}
+	
 
 	override function createDadAnimations():Void
 	{
@@ -170,6 +255,7 @@ class ArtificialLust extends SongPlayer
 		animation.addByPrefix('singRIGHT', 'Duet Sing Note RIGHT00', 24, false);
 		animation.addByPrefix('singLEFT', 'Duet Sing Note LEFT00', 24, false);
 		animation.addByPrefix('singDOWN', 'Duet Sing Note DOWN00', 24, false);
+		animation.addByPrefix('showTime', 'Duet SHOWTIME0', 24, false);
 		dad.animation = animation;
 
 	}
@@ -207,32 +293,132 @@ class ArtificialLust extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
+		if (showTime)
+		{
+			playState.camFollow.x = gf.getGraphicMidpoint().x - 300;
+			playState.camFollow.y = 300;
+			return;
+		}
+
 		playState.camFollow.x = gf.getGraphicMidpoint().x + 120;
 		playState.camFollow.y = 360;
-
 	}
 
 	override function updateCamFollowDad()
 	{
+		if (showTime)
+		{
+			playState.camFollow.x = gf.getGraphicMidpoint().x - 300;
+			playState.camFollow.y = 300;
+			return;
+		}
+
 		playState.camFollow.x = gf.getGraphicMidpoint().x - 120;
 		playState.camFollow.y = 360;
-
 	}
 
 	override function dadNoteEvent(noteData:Note)
 	{
 		super.dadNoteEvent(noteData);
 		var lastNote = playState.lastNote;
-		max.animation.play(lastNote);
+		if (showTime)
+			eventSong.max.animation.play(lastNote);
+		else
+			max.animation.play(lastNote);
 	}
 	
 	override function bfNoteEvent(noteData:Note)
 	{
 		super.bfNoteEvent(noteData);
 		var lastNote = playState.lastNote;
-		max.animation.play(lastNote);
+		if (showTime)
+			eventSong.max.animation.play(lastNote);
+		else
+			max.animation.play(lastNote);	}
+
+	override function midSongEventUpdate(curBeat:Int)
+	{
+		switch (curBeat)
+		{
+			case 58:
+				// sp.createDad();
+				FlxTween.tween(blackShit, {alpha: 1}, 1, {});
+				dad.playAnim('showTime');
+				playState.defaultCamZoom =  1.25;
+				showTime = true;
+
+			case 64 :
+				FlxTween.tween(blackShit, {alpha: 0}, 0.1, {});
+				playState.shakeNormal();
+				switchDad(eventSong, false);
+				switchAbelAndMaxRGB();
+
+				playState.defaultCamZoom = camZoomShit;
+				playState.camGame.zoom = camZoomShit;
+
+			case 100:
+				showTime = false;
+				playState.shakeBig();
+				switchDad(new ArtificialLust());
+				switchAbelAndMax();
+
+
+		}
 	}
-	
+
+	function switchAbelAndMaxRGB()
+	{
+		lightEvent.visible = true;
+		playState.remove(bg);
+		playState.remove(stage);
+		playState.remove(headlight);
+		playState.remove(simp);
+		playState.remove(abel);
+		playState.remove(max);
+		playState.remove(bf);
+		playState.remove(gf);
+
+		playState.add(eventSong.bg);
+		playState.add(eventSong.stage);
+		playState.add(eventSong.headlight);
+		playState.add(eventSong.simp);
+		playState.add(eventSong.abel);
+		playState.add(eventSong.max);
+		playState.add(gf);
+		playState.add(bf);
+
+		eventSong.abel.animation.play('idle');
+		eventSong.max.animation.play('idle');
+
+	}
+
+	function switchAbelAndMax()
+	{
+		lightEvent.visible = false;
+
+		playState.remove(eventSong.bg);
+		playState.remove(eventSong.stage);
+		playState.remove(eventSong.headlight);
+		playState.remove(eventSong.simp);
+		playState.remove(eventSong.abel);
+		playState.remove(eventSong.max);
+		playState.remove(gf);
+		playState.remove(bf);
+
+		playState.add(bg);
+		playState.add(stage);
+		playState.add(headlight);
+		playState.add(simp);
+		playState.add(abel);
+		playState.add(max);
+		playState.add(bf);
+		playState.add(gf);
+
+		abel.animation.play('idle');
+		max.animation.play('idle');
+
+	}
+
 	override function playBeatEvent() 
 	{
 		var x = FlxG.random.int(0, 3);

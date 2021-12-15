@@ -66,7 +66,7 @@ class InvertedAscension extends SongPlayer
 		playState.add(bg1);
 
         var headlight = new FlxSprite(0, 0);
-		headlight.frames = Paths.getSparrowAtlas('bg/starlingmayhem/headlightsRGB', 'mods');
+		headlight.frames = Paths.getSparrowAtlas('bg/starlingmayhem/headlights', 'mods');
 		headlight.animation.addByPrefix('idle', 'Lightsrepeated00', 24, true);
 		headlight.animation.play('idle');
 		headlight.antialiasing = true;
@@ -106,8 +106,8 @@ class InvertedAscension extends SongPlayer
 		abel.scale.x = 0.8;
 		abel.scale.y = 0.8;
 		
-		abel.x = 400;
-		abel.y = 25;
+		abel.x = 253;
+		abel.y = -33;
 
 		if (FlxG.save.data.distractions)
 		{
@@ -130,8 +130,8 @@ class InvertedAscension extends SongPlayer
 		max.scale.x = 0.9;
 		max.scale.y = 0.9;
 		
-		max.x = 1659;
-		max.y = -33;
+		max.x = 1700;
+		max.y = 50;
 
 		if (FlxG.save.data.distractions)
 		{

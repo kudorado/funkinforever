@@ -273,12 +273,16 @@ class BaseSong
 		createDadAnimationOffsets();
 	}
 
-	private function switchDad(song:SongPlayer)
+	private function switchDad(song:SongPlayer, createDad:Bool = true)
 	{
+		#if !debug
 		playState.remove(dad);
 		dad.destroy();//alloc for fun
+		#end
 
-		song.createDad();
+		if (createDad)
+			song.createDad();
+
 		dad = song.dad;
 		
 		
