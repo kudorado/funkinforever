@@ -355,7 +355,7 @@ class ArtificialLust extends SongPlayer
 		switch (curBeat)
 		{
 
-			case 58 :
+			case 57 :
 				// sp.createDad();
 				FlxTween.tween(blackShit, {alpha: 1}, 1, {});
 				dad.playAnim('showTime');
