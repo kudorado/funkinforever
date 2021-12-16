@@ -105,7 +105,6 @@ class PlayState extends MusicBeatState
 	public static var noteBools:Array<Bool> = [false, false, false, false];
 
 	var halloweenLevel:Bool = false;
-
 	var songLength:Float = 0;
 	var kadeEngineWatermark:FlxText;
 
@@ -133,6 +132,8 @@ class PlayState extends MusicBeatState
 	{
 		return songPlayer.bf;
 	}
+
+	public var isMidSongEvent:Bool;
 
 	public var restartGame:Bool;
 	
@@ -2010,7 +2011,10 @@ class PlayState extends MusicBeatState
 					else
 					{
 						health -= 0.075;
-						vocals.volume = 0;
+
+						if(!isMidSongEvent)
+							vocals.volume = 0;
+
 						if (theFunne)
 							noteMiss(daNote.noteData, daNote);
 					}
@@ -3034,7 +3038,9 @@ class PlayState extends MusicBeatState
 
 			songScore = -500;
 			combo = 0;
+			misses ++;
 			health -= 0.02;
+
 
 			// popUpScore(daNote, true);
 
@@ -3044,7 +3050,9 @@ class PlayState extends MusicBeatState
 			if (FlxG.save.data.accuracyMod == 1)
 				totalNotesHit -= 1;
 
-			FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
+			if (!isMidSongEvent)
+				FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
+		
 			// FlxG.sound.play(Paths.sound('missnote1'), 1, false);
 			// FlxG.log.add('played imss note');
 
