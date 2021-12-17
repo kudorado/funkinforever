@@ -255,4 +255,11 @@ class InvertedAscension extends SongPlayer
 			}
 		}
 	}
+
+	public override function getDadIcon(icon:HealthIcon)
+	{
+		icon.loadGraphic(Paths.image('health_icon/starlingMayhemIconGrid', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [45, 46], 0, false, false);
+		icon.animation.play("dad");
+	}
 }
