@@ -695,7 +695,7 @@ class SelectionState extends MusicBeatState
 		if (curPlayMode < 0)
 			curPlayMode = PlayModeManager.playModeList.length - 1;
 
-		if (curVfx > PlayModeManager.playModeList.length - 1)
+		if (curPlayMode > PlayModeManager.playModeList.length - 1)
 			curPlayMode = 0;
 
 		FlxG.sound.play(Paths.sound('scrollMenu'));

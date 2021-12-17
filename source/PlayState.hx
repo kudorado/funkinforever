@@ -213,6 +213,7 @@ class PlayState extends MusicBeatState
 		return (generatedMusic && SONG.notes[Std.int(curStep / 16)] != null);
 	}
 
+	var daAuto:String;
 	var songName:FlxText;
 
 	var wiggleShit:WiggleEffect = new WiggleEffect();
@@ -519,7 +520,7 @@ class PlayState extends MusicBeatState
 
 //------------------------mic c up copy ----------------------------
 
-		var daAuto:String = botPlayShit ? " [A]" :"";
+		daAuto = botPlayShit ? " [A]" : "";
 		songName = new FlxText(35, healthBarBG.y + 26, 0, CURRENT_SONG.toUpperCase() + ": " + getDiff().toUpperCase() + daAuto, 20);
 		if (FlxG.save.data.downscroll)
 			songName.y = healthBarBG.y - 18;
@@ -813,6 +814,8 @@ class PlayState extends MusicBeatState
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length;
 
+		trace('songLength: ' + songLength);
+
 		if (kudoradoHandsome)
 		{
 			createHealthBarShit();
@@ -902,7 +905,8 @@ class PlayState extends MusicBeatState
 		}
 
 		// var lastSections = SONG.notes[SONG.notes.length - 1].sectionNotes;
-		var npsData = noteCount / (maxTime - minTime);
+		var shit = (maxTime - minTime);
+		var npsData = noteCount / shit;
 		var npm = npsData * 60;
 		targetNPS = Std.int(npm);
 	}
@@ -1257,7 +1261,7 @@ class PlayState extends MusicBeatState
 		healthBarShitBG = new FlxSprite(0, songName.y).loadGraphic(Paths.image('fuckbar', 'shared'));
 		healthBarShitBG.color = FlxColor.BLACK;
 
-		healthBarShitBG.y-= healthBarShitBG.height / 2;
+		healthBarShitBG.y -= healthBarShitBG.height / 2;
 
 		healthBarShitBG.x += 5;
 
@@ -1327,9 +1331,11 @@ class PlayState extends MusicBeatState
 
 	private var paused:Bool = false;
 	public var startedCountdown:Bool = false;
+	var itFuckingEnd = false;
 	var canPause:Bool = true;
 	var nps:Int = 0;
 	var maxNPS:Int = 0;
+	var secondToBeat:Float = 1.67164;
 
 	public static var songRate = 1.5;
 
@@ -1368,6 +1374,82 @@ class PlayState extends MusicBeatState
 			lockCamFollow = false;
 		else
 			camFollowSafeFrame ++;
+	}
+
+	function updateSongPosBar()
+	{
+		if (startingSong)
+		{
+			if (startedCountdown)
+			{
+				Conductor.songPosition += FlxG.elapsed * 1000;
+				if (Conductor.songPosition >= 0)
+					startSong();
+			}
+		}
+		else
+		{
+			if (itFuckingEnd)
+				return;
+
+			Conductor.songPosition += FlxG.elapsed * 1000;
+			songPositionBar = Conductor.songPosition;
+
+			if (!paused)
+			{
+				songTime += FlxG.game.ticks - previousFrameTime;
+				previousFrameTime = FlxG.game.ticks;
+
+				// Interpolation type beat
+				if (Conductor.lastSongPos != Conductor.songPosition)
+				{
+					songTime = (songTime + Conductor.songPosition) / 2;
+					Conductor.lastSongPos = Conductor.songPosition;
+					// Conductor.songPosition += FlxG.elapsed * 1000;
+					// trace('MISSED FRAME');
+				}
+			}
+		}
+	}
+
+	function updateTextShit()
+	{
+		if (itFuckingEnd)
+			return;
+
+		npsTxt.text =  getSongTimeLeft(); 
+		accuracyTxt.text = "Score: " + songScore;
+		missTxt.text = "Misses: " + misses;
+		scoreTxt.text =  CURRENT_SONG.toUpperCase() + ": " + getDiff().toUpperCase() + daAuto;
+		songName.text =  playingSong.songTitle;
+
+		// accuracyTxt.text = "Beat: " + 
+		// (curBeat < 0 ? "..." : 
+		// curBeat + "/" +  Std.int((songLength / 1000) / (Conductor.crochet / 1000)));
+		// songName.text =  + " " +  CURRENT_SONG.toUpperCase() + ": " + getDiff().toUpperCase() + daAuto;
+
+
+
+		//time shit
+		//
+	}
+
+	function getSongTimeLeft():String
+	{
+		var daTime = (songLength - songPositionBar) / 1000;
+		
+		if (daTime <= 0)
+			return "...";
+
+		var daMinute = Std.int(daTime / 60);
+		var daSecond = Std.int(daTime - (60 * daMinute));
+		
+		if (daMinute < 1)
+		{
+			var shit = (daTime > 10 ? Std.int(daSecond) + "" : "0" + Std.int(daSecond));
+			return "0:" + shit;
+		}
+		return daMinute + ":" +  (daSecond > 10 ? daSecond + "" : "0" + daSecond);
 	}
 
 	override public function update(elapsed:Float)
@@ -1478,11 +1560,8 @@ class PlayState extends MusicBeatState
 
 		// lerpScore = Math.floor(FlxMath.lerp(lerpScore, songScore, elapsed * 5));
 
-		scoreTxt.text = "Score: " + songScore;
-		missTxt.text = "Misses: " + misses;
-		accuracyTxt.text = "Accuracy: " + truncateFloat(accuracy, 2) + "%";
-		npsTxt.text = "NPM & NPS: " + npsShit + " | " + nps;
-
+	
+		updateTextShit();
 
 
 		if (!FlxG.save.data.accuracyDisplay)
@@ -1594,39 +1673,8 @@ class PlayState extends MusicBeatState
 		#end
 	
 
-		if (startingSong)
-		{
-			if (startedCountdown)
-			{
-				Conductor.songPosition += FlxG.elapsed * 1000;
-				if (Conductor.songPosition >= 0)
-					startSong();
-			}
-		}
-		else
-		{
-			// Conductor.songPosition = FlxG.sound.music.time;
-			Conductor.songPosition += FlxG.elapsed * 1000;
-			songPositionBar = Conductor.songPosition;
-
-			if (!paused)
-			{
-				songTime += FlxG.game.ticks - previousFrameTime;
-				previousFrameTime = FlxG.game.ticks;
-
-				// Interpolation type beat
-				if (Conductor.lastSongPos != Conductor.songPosition)
-				{
-					songTime = (songTime + Conductor.songPosition) / 2;
-					Conductor.lastSongPos = Conductor.songPosition;
-					// Conductor.songPosition += FlxG.elapsed * 1000;
-					// trace('MISSED FRAME');
-				}
-			}
-
-			// Conductor.lastSongPos = FlxG.sound.music.time;
-		}
-
+		updateSongPosBar();
+	
 		if (generatedMusic && SONG.notes[Std.int(curStep / 16)] != null)
 		{
 			// Make sure Girlfriend cheers only for certain songs
@@ -2010,7 +2058,6 @@ class PlayState extends MusicBeatState
 					}
 					else
 					{
-						health -= 0.075;
 
 						if(!isMidSongEvent)
 							vocals.volume = 0;
@@ -2124,6 +2171,12 @@ class PlayState extends MusicBeatState
 	function endSong():Void
 	{
 
+		//wait next beat plus a bit offset (0.1) before ending.
+		new FlxTimer().start(1 / secondToBeat + 0.1, function shit(tmr:FlxTimer)
+		{
+			itFuckingEnd = true;
+		}, 1);
+
 		botPlayShit = false;
 		FlxG.save.data.scrollSpeed = 1;
 	
@@ -2136,6 +2189,8 @@ class PlayState extends MusicBeatState
 		#end
 		
 		songPlayer.endSongEvent(endSongCallback);	
+
+
 
 	}
 
@@ -2430,7 +2485,127 @@ class PlayState extends MusicBeatState
 	var offsetTest:Float = 0;
 
 	var timeShown = 0;
-	var currentTimingShown:FlxText = null;
+
+	function popUpHealth(daRating:String, rating:Float)
+	{
+		
+		var healthRating:FlxText = new FlxText(0, 0, 0, "");
+		healthRating.setFormat(Paths.font("vcr.ttf"), 15, FlxColor.CYAN, CENTER);
+		
+		switch (daRating)
+		{
+			case 'shit' | 'bad' | 'fuck':
+				healthRating.setFormat(Paths.font("vcr.ttf"), 15, FlxColor.RED, CENTER);
+		
+			case 'good' | 'sick':
+				healthRating.setFormat(Paths.font("vcr.ttf"), 15, FlxColor.CYAN, CENTER);
+		
+		}
+
+		healthRating.setBorderStyle(OUTLINE, 0xFF000000, 1, 1);
+		healthRating.text = rating == 0 ?  "" :
+		(rating > 0 ? "+" : "") +
+		(rating * 50);
+
+		healthRating.x = healthBarShitBG.x - 5;
+		
+		if(FlxG.save.data.downscroll)
+			healthRating.y = songName.y + 125;
+		else
+			healthRating.y = songName.y - 125;
+	
+		healthRating.size = 20;
+
+		if (healthRating.alpha != 1)
+			healthRating.alpha = 1;
+		
+		if (!botPlayShit)
+			add(healthRating);
+		
+
+		healthRating.updateHitbox();
+		healthRating.cameras = [camHUD];
+
+		FlxTween.tween(healthRating, {alpha: 0}, 0.2, 
+		{
+			startDelay: Conductor.crochet * 0.0005,
+		});
+
+		
+	}
+
+	function popUpRating(daRating:String){
+
+		var pixelShitPart1:String = "";
+		var pixelShitPart2:String = '';
+
+		if (curStage.startsWith('school'))
+		{
+			pixelShitPart1 = 'weeb/pixelUI/';
+			pixelShitPart2 = '-pixel';
+		}
+
+		var rating:FlxSprite = new FlxSprite();
+
+		rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
+		rating.screenCenter();
+		var xPos:Float = FlxG.width * 0.55;
+
+		rating.y -= 40;
+
+		if (FlxG.save.data.downscroll)
+		{
+			rating.y -= 200;
+			rating.x = xPos - 125;
+		}
+		else
+		{
+			rating.y += 100;
+
+			if (playAsDad)
+				rating.x = xPos + 25;
+			else
+				rating.x = xPos - 5;
+
+
+		}
+
+		if (FlxG.save.data.changedHit)
+		{
+			rating.x = FlxG.save.data.changedHitX;
+			rating.y = FlxG.save.data.changedHitY;
+		}
+
+		rating.acceleration.y = 550;
+		rating.velocity.y -= FlxG.random.int(140, 175);
+		rating.velocity.x -= FlxG.random.int(0, 10);
+
+
+		if (!botPlayShit)
+			add(rating);
+
+		if (!curStage.startsWith('school'))
+		{
+			rating.setGraphicSize(Std.int(rating.width * 0.7 * 0.5));
+			rating.antialiasing = true;
+		}
+		else
+		{
+			rating.setGraphicSize(Std.int(rating.width * daPixelZoom * 0.5 * 0.7));
+		}
+
+		rating.updateHitbox();
+		rating.cameras = [camHUD];
+
+
+		FlxTween.tween(rating, {alpha: 0}, 0.2, {
+			onComplete: function(tween:FlxTween)
+			{
+				rating.destroy();
+			},
+			startDelay: Conductor.crochet * 0.001
+		});
+	}
 
 	private function popUpScore(daNote:Note, missNote:Bool = false):Void
 	{
@@ -2454,8 +2629,7 @@ class PlayState extends MusicBeatState
 
 		if(missNote)
 			daRating = "fuck";
-			
-			
+		
 
 		switch (daRating)
 		{
@@ -2506,7 +2680,7 @@ class PlayState extends MusicBeatState
 		if(health > 2)
 			health = 2;
 
-		// trace('Wife accuracy loss: ' + wife + ' | Rating: ' + daRating + ' | Score: ' + score + ' | Weight: ' + (1 - wife));
+		popUpHealth(daRating, healthRating);
 
 		if (daRating != 'shit' || daRating != 'bad')
 		{
@@ -2537,7 +2711,7 @@ class PlayState extends MusicBeatState
 			coolText.screenCenter();
 			coolText.x = FlxG.width * 0.55;
 
-
+			
 			if (FlxG.save.data.downscroll)
 			{
 				coolText.y -= 1000;
@@ -2577,6 +2751,7 @@ class PlayState extends MusicBeatState
 				rating.x = FlxG.save.data.changedHitX;
 				rating.y = FlxG.save.data.changedHitY;
 			}
+
 			rating.acceleration.y = 550;
 			rating.velocity.y -= FlxG.random.int(140, 175);
 			rating.velocity.x -= FlxG.random.int(0, 10);
@@ -2585,27 +2760,6 @@ class PlayState extends MusicBeatState
 			var msTiming = HelperFunctions.truncateFloat(noteDiff, 3);
 			if (botPlayShit)
 				msTiming = 0;
-
-			if (currentTimingShown != null)
-				remove(currentTimingShown);
-
-			currentTimingShown = new FlxText(0, 0, 0, "0ms");
-			timeShown = 0;
-			switch (daRating)
-			{
-				case 'shit' | 'bad' | 'fuck':
-					currentTimingShown.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.RED, CENTER);
-
-				case 'good' | 'sick':
-					currentTimingShown.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.CYAN, CENTER);
-
-			}
-			currentTimingShown.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
-			currentTimingShown.text = 
-			(healthRating > 0 ? "+" : "") +
-			(healthRating * 50) + "hp";
-
-			currentTimingShown.size = 30;
 
 			if (msTiming >= 0.03 && offsetTesting)
 			{
@@ -2626,12 +2780,6 @@ class PlayState extends MusicBeatState
 				offsetTest = HelperFunctions.truncateFloat(total / hits.length, 2);
 			}
 
-			if (currentTimingShown.alpha != 1)
-				currentTimingShown.alpha = 1;
-
-			if (!botPlayShit)
-				add(currentTimingShown);
-
 			//ah shit here we go again!
 
 			var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'combo' + pixelShitPart2));
@@ -2644,14 +2792,8 @@ class PlayState extends MusicBeatState
 			comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.5));
 
 
-			currentTimingShown.screenCenter();
-			currentTimingShown.x = comboSpr.x + 100;
-			currentTimingShown.y = rating.y + 100;
-			currentTimingShown.acceleration.y = 600;
-			currentTimingShown.velocity.y -= 150;
-
 			comboSpr.velocity.x += FlxG.random.int(1, 10);
-			currentTimingShown.velocity.x += comboSpr.velocity.x;
+		
 			if (!botPlayShit)
 				add(rating);
 
@@ -2668,28 +2810,11 @@ class PlayState extends MusicBeatState
 				comboSpr.setGraphicSize(Std.int(comboSpr.width * daPixelZoom * 0.5 * 0.7));
 			}
 
-			currentTimingShown.updateHitbox();
 			comboSpr.updateHitbox();
 			rating.updateHitbox();
 
-			currentTimingShown.cameras = [camHUD];
 			comboSpr.cameras = [camHUD];
 			rating.cameras = [camHUD];
-
-			//oh shit fuck you...
-			if (daRating == 'fuck')
-			{
-				FlxTween.tween(rating, {alpha: 0}, 0.2, {
-					startDelay: Conductor.crochet * 0.001,
-					onUpdate: function(tween:FlxTween)
-					{
-						if (currentTimingShown != null)
-							currentTimingShown.alpha -= 0.02;
-						timeShown++;
-					}
-				});
-				return;
-			}
 
 			var seperatedScore:Array<Int> = [];
 
@@ -2756,28 +2881,19 @@ class PlayState extends MusicBeatState
 
 			FlxTween.tween(rating, {alpha: 0}, 0.2, {
 				startDelay: Conductor.crochet * 0.001,
-				onUpdate: function(tween:FlxTween)
-				{
-					if (currentTimingShown != null)
-						currentTimingShown.alpha -= 0.02;
-					timeShown++;
-				}
 			});
+
 
 			FlxTween.tween(comboSpr, {alpha: 0}, 0.2, {
 				onComplete: function(tween:FlxTween)
 				{
 					coolText.destroy();
 					comboSpr.destroy();
-					if (currentTimingShown != null && timeShown >= 20)
-					{
-						remove(currentTimingShown);
-						currentTimingShown = null;
-					}
 					rating.destroy();
 				},
 				startDelay: Conductor.crochet * 0.001
 			});
+
 
 			curSection += 1;
 		}
@@ -3039,10 +3155,11 @@ class PlayState extends MusicBeatState
 			songScore = -500;
 			combo = 0;
 			misses ++;
-			health -= 0.02;
+			health -= 0.1;
 
 
-			// popUpScore(daNote, true);
+			popUpRating('fuck');
+			popUpHealth('fuck', -0.1);
 
 			// var noteDiff:Float = Math.abs(daNote.strumTime - Conductor.songPosition);
 			// var wife:Float = EtternaFunctions.wife3(noteDiff, FlxG.save.data.etternaMode ? 1 : 1.7);
