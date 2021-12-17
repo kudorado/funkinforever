@@ -1420,7 +1420,7 @@ class PlayState extends MusicBeatState
 		npsTxt.text =  getSongTimeLeft(); 
 		accuracyTxt.text = "Score: " + songScore;
 		missTxt.text = "Misses: " + misses;
-		scoreTxt.text =  CURRENT_SONG.toUpperCase() + ": " + getDiff().toUpperCase() + daAuto;
+		scoreTxt.text =  CURRENT_SONG + ": " + getDiff() + daAuto;
 		songName.text =  playingSong.songTitle;
 
 		// accuracyTxt.text = "Beat: " + 
