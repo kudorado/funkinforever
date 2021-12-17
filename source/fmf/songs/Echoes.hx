@@ -256,4 +256,11 @@ class Echoes extends SongPlayer
 			}
 		}
 	}
+
+	public override function getDadIcon(icon:HealthIcon)
+	{
+		icon.loadGraphic(Paths.image('health_icon/starlingMayhemIconGrid', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [47, 48], 0, false, false);
+		icon.animation.play("dad");
+	}
 }
