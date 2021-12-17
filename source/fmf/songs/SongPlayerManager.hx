@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import Options.PlaymodeOption;
 import openfl.events.EventDispatcher;
 import js.html.AnimationPlaybackEvent;
 import haxe.display.JsonModuleTypes.JsonClassFieldReference;
@@ -413,6 +414,9 @@ class SongPlayerManager
 
 			case 'whitroll':
 				songPlayer = new Whitroll();
+
+			case 'playtime': 
+				songPlayer = new PlayTime();
 		}
 
 		return songPlayer;
