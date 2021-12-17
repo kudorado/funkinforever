@@ -64,8 +64,8 @@ class PlayTime extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y = 458;
-		bf.x = 948;
+		bf.y += 4;
+		bf.x += 240;
 	}
 
 	override function createGFAnimationOffsets()
