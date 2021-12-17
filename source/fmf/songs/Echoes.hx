@@ -193,8 +193,10 @@ class Echoes extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y = 313;
-		bf.x = 1613;
+
+		bf.x += 913;
+		bf.y -= 112;
+	
 	}
 
 	override function createGFAnimationOffsets()
