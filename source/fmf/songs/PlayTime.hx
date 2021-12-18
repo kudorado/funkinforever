@@ -21,13 +21,18 @@ class PlayTime extends SongPlayer
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
 		bg.scale.x = 1.2;
+		playState.add(bg);
 
-        var bg1:FlxSprite = new FlxSprite(-669, -362).loadGraphic(Paths.image('bg/huggy_wuggy/shadow', 'mods'));
+        var bg1:FlxSprite = new FlxSprite(-669, -250).loadGraphic(Paths.image('bg/huggy_wuggy/shadow', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1.2;
 		bg1.scale.x = 1.2;
+		bg1.cameras = [playState.camHUD];
 
-		playState.add(bg);
+		playState.add(bg1);
+
+
+
 	}
 
 	override function createDadAnimations():Void
@@ -50,12 +55,12 @@ class PlayTime extends SongPlayer
 		dad.addOffset('singUP', 224, 221);
 		dad.addOffset('singRIGHT', 80, 196);
 		dad.addOffset('singLEFT', 80, 157);
-		dad.addOffset('singDOWN', 110, -100);
+		dad.addOffset('singDOWN', 110, -257);
 		dad.dance();
-        dad.scale.x = 1;
-        dad.scale.y = 1;
+        dad.scale.x = 1.5;
+        dad.scale.y = 1.5;
 		dad.x = 117;
-		dad.y = 296;
+		dad.y = 49;
 	
 	}
 
@@ -64,7 +69,7 @@ class PlayTime extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y += 4;
+		bf.y += 50;
 		bf.x += 240;
 	}
 
@@ -76,14 +81,14 @@ class PlayTime extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		playState.camFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.camFollow.y = 360;
+		playState.camFollow.y -= 100;
 
 	}
 
 	override function updateCamFollowDad()
 	{
 		playState.camFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.camFollow.y = 360;
+		playState.camFollow.y = 400;
 
 	}
 

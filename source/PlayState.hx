@@ -1422,16 +1422,7 @@ class PlayState extends MusicBeatState
 		missTxt.text = "Misses: " + misses;
 		scoreTxt.text =  CURRENT_SONG.toUpperCase() + ": " + getDiff() + daAuto;
 		songName.text =  playingSong.songTitle;
-
-		// accuracyTxt.text = "Beat: " + 
-		// (curBeat < 0 ? "..." : 
-		// curBeat + "/" +  Std.int((songLength / 1000) / (Conductor.crochet / 1000)));
-		// songName.text =  + " " +  CURRENT_SONG.toUpperCase() + ": " + getDiff().toUpperCase() + daAuto;
-
-
-
-		//time shit
-		//
+		
 	}
 
 	function getSongTimeLeft():String
