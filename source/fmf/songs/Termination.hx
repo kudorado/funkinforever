@@ -8,4 +8,9 @@ import fmf.characters.*;
 
 class Termination extends CensoryOverload	
 {
+	override function getDadTex()
+	{
+		var tex = Paths.fromGenericXML('pc/qt/robot_error', 'mods');
+		dad.frames = tex;
+	}
 }

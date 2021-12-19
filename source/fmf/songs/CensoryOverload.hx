@@ -9,7 +9,7 @@ import fmf.characters.*;
 class CensoryOverload extends Carefree	
 {
 
-    override function getDadTex()
+	override function getDadTex()
 	{
 		var tex = Paths.fromGenericXML('pc/qt/robot', 'mods');
 		dad.frames = tex;
