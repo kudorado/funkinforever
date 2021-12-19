@@ -355,11 +355,15 @@ class SongPlayerManager
 
 			case 'careless':
 				songPlayer = new Careless();
+				
 			case 'censory-overload':
 				songPlayer = new CensoryOverload();
 
 			case 'termination':
 				songPlayer = new Termination();
+
+			case 'cessation':
+				songPlayer = new Cessation();
 
 			case 'bushwhack':
 				songPlayer = new Bushwhack();

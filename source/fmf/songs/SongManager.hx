@@ -222,7 +222,7 @@ class SongManager
 				folder: 'week_qt',
 				character: 'qt',
 				songTitle: 'V.S QT',
-				songList: ['Carefree', 'Careless', 'Censory-overload','Termination']
+				songList: ['Carefree', 'Careless', 'Censory-overload', 'Termination', 'Cessation']
 			}
 		),
 
