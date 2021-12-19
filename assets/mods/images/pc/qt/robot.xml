@@ -1,45 +1,63 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="robot.png">
-	<!-- Created with Adobe Animate version 19.2.0.405 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="KB_DanceLeft0000" x="2" y="2" width="876" height="675" frameX="-38" frameY="0" frameWidth="953" frameHeight="676"/>
-	<SubTexture name="KB_DanceLeft0001" x="880" y="2" width="895" height="667" frameX="-27" frameY="-9" frameWidth="953" frameHeight="676"/>
-	<SubTexture name="KB_DanceLeft0002" x="1777" y="2" width="934" height="655" frameX="-3" frameY="-20" frameWidth="953" frameHeight="676"/>
-	<SubTexture name="KB_DanceLeft0003" x="2713" y="2" width="940" height="653" frameX="-3" frameY="-22" frameWidth="953" frameHeight="676"/>
-	<SubTexture name="KB_DanceLeft0004" x="2" y="679" width="924" height="653" frameX="-29" frameY="-22" frameWidth="953" frameHeight="676"/>
-	<SubTexture name="KB_DanceLeft0005" x="928" y="679" width="938" height="654" frameX="-1" frameY="-21" frameWidth="953" frameHeight="676"/>
-	<SubTexture name="KB_DanceLeft0006" x="1868" y="679" width="923" height="656" frameX="0" frameY="-19" frameWidth="953" frameHeight="676"/>
-	<SubTexture name="KB_DanceLeft0007" x="2793" y="679" width="905" height="653" frameX="-9" frameY="-22" frameWidth="953" frameHeight="676"/>
-	<SubTexture name="KB_DanceLeft0008" x="2" y="1337" width="892" height="650" frameX="-16" frameY="-25" frameWidth="953" frameHeight="676"/>
-	<SubTexture name="KB_DanceLeft0009" x="896" y="1337" width="847" height="649" frameX="-58" frameY="-26" frameWidth="953" frameHeight="676"/>
-	<SubTexture name="KB_DanceRight0000" x="1745" y="1337" width="806" height="652" frameX="-58" frameY="-32" frameWidth="877" frameHeight="685"/>
-	<SubTexture name="KB_DanceRight0001" x="2553" y="1337" width="810" height="657" frameX="-48" frameY="-28" frameWidth="877" frameHeight="685"/>
-	<SubTexture name="KB_DanceRight0002" x="2" y="1996" width="803" height="656" frameX="-46" frameY="-28" frameWidth="877" frameHeight="685"/>
-	<SubTexture name="KB_DanceRight0003" x="807" y="1996" width="803" height="658" frameX="-42" frameY="-26" frameWidth="877" frameHeight="685"/>
-	<SubTexture name="KB_DanceRight0004" x="1612" y="1996" width="805" height="669" frameX="-44" frameY="-15" frameWidth="877" frameHeight="685"/>
-	<SubTexture name="KB_DanceRight0005" x="2419" y="1996" width="806" height="677" frameX="-53" frameY="-7" frameWidth="877" frameHeight="685"/>
-	<SubTexture name="KB_DanceRight0006" x="3227" y="1996" width="806" height="681" frameX="-61" frameY="-3" frameWidth="877" frameHeight="685"/>
-	<SubTexture name="KB_DanceRight0007" x="2" y="2679" width="835" height="677" frameX="-35" frameY="-7" frameWidth="877" frameHeight="685"/>
-	<SubTexture name="KB_DanceRight0008" x="839" y="2679" width="867" height="684" frameX="-6" frameY="0" frameWidth="877" frameHeight="685"/>
-	<SubTexture name="KB_DanceRight0009" x="1708" y="2679" width="877" height="672" frameX="0" frameY="-12" frameWidth="877" frameHeight="685"/>
-	<SubTexture name="KB_Down0000" x="2587" y="2679" width="742" height="602" frameX="-62" frameY="0" frameWidth="876" frameHeight="602"/>
-	<SubTexture name="KB_Down0001" x="2" y="3365" width="787" height="601" frameX="-26" frameY="-1" frameWidth="876" frameHeight="602"/>
-	<SubTexture name="KB_Down0002" x="791" y="3365" width="803" height="602" frameX="-31" frameY="0" frameWidth="876" frameHeight="602"/>
-	<SubTexture name="KB_Down0003" x="1596" y="3365" width="843" height="597" frameX="-9" frameY="-4" frameWidth="876" frameHeight="602"/>
-	<SubTexture name="KB_Down0004" x="2441" y="3365" width="876" height="579" frameX="0" frameY="-21" frameWidth="876" frameHeight="602"/>
-	<SubTexture name="KB_Left0000" x="2" y="3969" width="778" height="793" frameX="-36" frameY="-35" frameWidth="814" frameHeight="828"/>
-	<SubTexture name="KB_Left0001" x="782" y="3969" width="799" height="785" frameX="-8" frameY="-33" frameWidth="814" frameHeight="828"/>
-	<SubTexture name="KB_Left0002" x="1583" y="3969" width="802" height="781" frameX="0" frameY="-36" frameWidth="814" frameHeight="828"/>
-	<SubTexture name="KB_Left0003" x="2387" y="3969" width="789" height="809" frameX="-8" frameY="-8" frameWidth="814" frameHeight="828"/>
-	<SubTexture name="KB_Left0004" x="3178" y="3969" width="762" height="820" frameX="-24" frameY="0" frameWidth="814" frameHeight="828"/>
-	<SubTexture name="KB_Right0000" x="2" y="4791" width="659" height="646" frameX="-8" frameY="0" frameWidth="667" frameHeight="648"/>
-	<SubTexture name="KB_Right0001" x="663" y="4791" width="660" height="645" frameX="-6" frameY="-1" frameWidth="667" frameHeight="648"/>
-	<SubTexture name="KB_Right0002" x="1325" y="4791" width="649" height="645" frameX="-6" frameY="-2" frameWidth="667" frameHeight="648"/>
-	<SubTexture name="KB_Right0003" x="1976" y="4791" width="639" height="645" frameX="-4" frameY="-3" frameWidth="667" frameHeight="648"/>
-	<SubTexture name="KB_Right0004" x="2617" y="4791" width="622" height="641" frameX="0" frameY="-7" frameWidth="667" frameHeight="648"/>
-	<SubTexture name="KB_Up0000" x="2" y="5439" width="899" height="825" frameX="-1" frameY="-5" frameWidth="904" frameHeight="830"/>
-	<SubTexture name="KB_Up0001" x="903" y="5439" width="904" height="830"/>
-	<SubTexture name="KB_Up0002" x="1809" y="5439" width="892" height="790" frameX="-5" frameY="-40" frameWidth="904" frameHeight="830"/>
-	<SubTexture name="KB_Up0003" x="2703" y="5439" width="872" height="801" frameX="-14" frameY="-28" frameWidth="904" frameHeight="830"/>
-	<SubTexture name="KB_Up0004" x="2" y="6271" width="865" height="795" frameX="-20" frameY="-34" frameWidth="904" frameHeight="830"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:ed491f1c09c7e427e257ad6497c010bc:bb27e2e5867bda1509e62f26d6547ef0:72027c707f9e6386411f2c63ec0138ea$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="robot.png" width="3802" height="4066">
+    <sprite n="KB_DanceLeft0000.png" x="1" y="1" w="659" h="532" pX="0.563438" pY="0.838462" oX="37" oY="118" oW="733" oH="650"/>
+    <sprite n="KB_DanceLeft0001.png" x="662" y="1" w="675" h="528" pX="0.563438" pY="0.835385" oX="29" oY="122" oW="733" oH="650"/>
+    <sprite n="KB_DanceLeft0002.png" x="1339" y="1" w="710" h="525" pX="0.571623" pY="0.832308" oX="11" oY="125" oW="733" oH="650"/>
+    <sprite n="KB_DanceLeft0003.png" x="2051" y="1" w="724" h="524" pX="0.57708" pY="0.836923" oX="4" oY="126" oW="733" oH="650"/>
+    <sprite n="KB_DanceLeft0004.png" x="2777" y="1" w="727" h="524" pX="0.563438" pY="0.84" oX="2" oY="126" oW="733" oH="650"/>
+    <sprite n="KB_DanceLeft0005.png" x="1" y="535" w="733" h="526" pX="0.572988" pY="0.836923" oX="0" oY="124" oW="733" oH="650"/>
+    <sprite n="KB_DanceLeft0006.png" x="736" y="535" w="729" h="527" pX="0.572988" pY="0.838462" oX="2" oY="123" oW="733" oH="650"/>
+    <sprite n="KB_DanceLeft0007.png" x="1467" y="535" w="713" h="527" pX="0.566166" pY="0.836923" oX="10" oY="123" oW="733" oH="650"/>
+    <sprite n="KB_DanceLeft0008.png" x="2182" y="535" w="699" h="528" pX="0.566166" pY="0.836923" oX="17" oY="122" oW="733" oH="650"/>
+    <sprite n="KB_DanceLeft0009.png" x="2883" y="535" w="677" h="527" pX="0.549795" pY="0.838462" oX="28" oY="123" oW="733" oH="650"/>
+    <sprite n="KB_DanceRight0000.png" x="1" y="1065" w="653" h="529" pX="0.533424" pY="0.84" oX="41" oY="121" oW="733" oH="650"/>
+    <sprite n="KB_DanceRight0001.png" x="656" y="1065" w="645" h="531" pX="0.533424" pY="0.836923" oX="44" oY="119" oW="733" oH="650"/>
+    <sprite n="KB_DanceRight0002.png" x="1303" y="1065" w="630" h="525" pX="0.537517" pY="0.838462" oX="51" oY="125" oW="733" oH="650"/>
+    <sprite n="KB_DanceRight0003.png" x="1935" y="1065" w="624" h="526" pX="0.540246" pY="0.838462" oX="55" oY="124" oW="733" oH="650"/>
+    <sprite n="KB_DanceRight0004.png" x="2561" y="1065" w="614" h="531" pX="0.544338" pY="0.836923" oX="59" oY="119" oW="733" oH="650"/>
+    <sprite n="KB_DanceRight0005.png" x="3177" y="1065" w="619" h="536" pX="0.544338" pY="0.84" oX="56" oY="114" oW="733" oH="650"/>
+    <sprite n="KB_DanceRight0006.png" x="1" y="1603" w="626" h="538" pX="0.54161" pY="0.84" oX="53" oY="112" oW="733" oH="650"/>
+    <sprite n="KB_DanceRight0007.png" x="629" y="1603" w="646" h="535" pX="0.552524" pY="0.836923" oX="43" oY="115" oW="733" oH="650"/>
+    <sprite n="KB_DanceRight0008.png" x="1277" y="1603" w="655" h="539" pX="0.559345" pY="0.84" oX="39" oY="111" oW="733" oH="650"/>
+    <sprite n="KB_DanceRight0009.png" x="1934" y="1603" w="656" h="530" pX="0.555252" pY="0.838462" oX="38" oY="120" oW="733" oH="650"/>
+    <sprite n="KB_Down0000.png" x="2592" y="1603" w="590" h="480" pX="0.667121" pY="0.843077" oX="71" oY="170" oW="733" oH="650"/>
+    <sprite n="KB_Down0001.png" x="3184" y="1603" w="609" h="479" pX="0.657572" pY="0.838462" oX="62" oY="171" oW="733" oH="650"/>
+    <sprite n="KB_Down0002.png" x="1" y="2144" w="627" h="476" pX="0.645293" pY="0.836923" oX="53" oY="174" oW="733" oH="650"/>
+    <sprite n="KB_Down0003.png" x="630" y="2144" w="647" h="470" pX="0.648022" pY="0.832308" oX="43" oY="180" oW="733" oH="650"/>
+    <sprite n="KB_Down0004.png" x="1279" y="2144" w="675" h="454" pX="0.643929" pY="0.827692" oX="28" oY="196" oW="733" oH="650"/>
+    <sprite n="KB_Left0000.png" x="1956" y="2144" w="620" h="622" pX="0.739427" pY="0.823077" oX="56" oY="27" oW="733" oH="650"/>
+    <sprite n="KB_Left0001.png" x="2578" y="2144" w="619" h="624" pX="0.739427" pY="0.823077" oX="57" oY="26" oW="733" oH="650"/>
+    <sprite n="KB_Left0002.png" x="1" y="2770" w="617" h="620" pX="0.744884" pY="0.826154" oX="58" oY="30" oW="733" oH="650"/>
+    <sprite n="KB_Left0003.png" x="620" y="2770" w="615" h="641" pX="0.755798" pY="0.824615" oX="59" oY="9" oW="733" oH="650"/>
+    <sprite n="KB_Left0004.png" x="1237" y="2770" w="611" h="649" pX="0.758527" pY="0.821538" oX="61" oY="1" oW="733" oH="650"/>
+    <sprite n="KB_Right0000.png" x="1850" y="2770" w="491" h="492" pX="0.442019" pY="0.835385" oX="121" oY="158" oW="733" oH="650"/>
+    <sprite n="KB_Right0001.png" x="2343" y="2770" w="492" h="493" pX="0.442019" pY="0.835385" oX="120" oY="157" oW="733" oH="650"/>
+    <sprite n="KB_Right0002.png" x="2837" y="2770" w="485" h="494" pX="0.447476" pY="0.833846" oX="124" oY="156" oW="733" oH="650"/>
+    <sprite n="KB_Right0003.png" x="3324" y="2770" w="477" h="496" pX="0.452933" pY="0.833846" oX="127" oY="154" oW="733" oH="650"/>
+    <sprite n="KB_Right0004.png" x="1" y="3421" w="463" h="496" pX="0.466576" pY="0.833846" oX="135" oY="154" oW="733" oH="650"/>
+    <sprite n="KB_Up0000.png" x="466" y="3421" w="672" h="644" pX="0.616644" pY="0.816923" oX="30" oY="6" oW="733" oH="650"/>
+    <sprite n="KB_Up0001.png" x="1140" y="3421" w="676" h="642" pX="0.613915" pY="0.816923" oX="28" oY="8" oW="733" oH="650"/>
+    <sprite n="KB_Up0002.png" x="1818" y="3421" w="669" h="637" pX="0.619372" pY="0.823077" oX="32" oY="13" oW="733" oH="650"/>
+    <sprite n="KB_Up0003.png" x="2489" y="3421" w="657" h="631" pX="0.623465" pY="0.826154" oX="38" oY="19" oW="733" oH="650"/>
+    <sprite n="KB_Up0004.png" x="3148" y="3421" w="646" h="631" pX="0.616644" pY="0.826154" oX="44" oY="19" oW="733" oH="650"/>
 </TextureAtlas>

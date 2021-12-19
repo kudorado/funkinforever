@@ -11,14 +11,12 @@ class CensoryOverload extends Carefree
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/qt/robot_404-angry', 'mods');
+		var tex = Paths.fromGenericXML('pc/qt/robot', 'mods');
 		dad.frames = tex;
 	}
 
 	override function loadMap()
 	{
-
-		playState.defaultCamZoom = 0.75;
 
 		var bg:FlxSprite = new FlxSprite(-783, -390).loadGraphic(Paths.image('bg/qt/streetBack', 'mods'));
 		bg.antialiasing = true;
@@ -30,25 +28,30 @@ class CensoryOverload extends Carefree
 
 	}
 
+
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'KB404ALT_idle', 18, false);
-		animation.addByPrefix('singUP', 'KB404ALT_Up', 24, false);
-		animation.addByPrefix('singRIGHT', 'KB404ALT_Right', 24, false);
-		animation.addByPrefix('singLEFT', 'KB404ALT_Left', 24, false);
-		animation.addByPrefix('singDOWN', 'KB404ALT_Down', 24, false);
+
+		animation.addByPrefix('idle', 'KB_DanceLeft0', 24, false);
+		animation.addByPrefix('danceLeft', 'KB_DanceLeft0', 24, false);
+		animation.addByPrefix('danceRight', 'KB_DanceRight0', 24, false);
+		animation.addByPrefix('singUP', 'KB_Up0', 24, false);
+		animation.addByPrefix('singRIGHT', 'KB_Right0', 24, false);
+		animation.addByPrefix('singLEFT', 'KB_Left0', 24, false);
+		animation.addByPrefix('singDOWN', 'KB_Down0', 24, false);
 		dad.animation = animation;
 
 	}
 
 	override function createDadAnimationOffsets():Void
 	{
-		dad.addOffset('idle', -7, 0);
-		dad.addOffset("singUP", 17, 185);
-		dad.addOffset("singRIGHT", -278, -26);
-		dad.addOffset("singLEFT", 101, 173);
-		dad.addOffset("singDOWN", 22, -42);
+		dad.addOffset('danceLeft', 0, 0);
+		dad.addOffset('danceRight', 0, 0);
+		dad.addOffset("singUP", 0, 0);
+		dad.addOffset("singRIGHT", 0, 0);
+		dad.addOffset("singLEFT", 0, 0);
+		dad.addOffset("singDOWN", 0, 0);
 		dad.dance();
 
 
