@@ -34,8 +34,6 @@ class CensoryOverload extends Carefree
 		var animation = dad.animation;
 
 		animation.addByPrefix('idle', 'KB_DanceLeft0', 24, false);
-		animation.addByPrefix('danceLeft', 'KB_DanceLeft0', 24, false);
-		animation.addByPrefix('danceRight', 'KB_DanceRight0', 24, false);
 		animation.addByPrefix('singUP', 'KB_Up0', 24, false);
 		animation.addByPrefix('singRIGHT', 'KB_Right0', 24, false);
 		animation.addByPrefix('singLEFT', 'KB_Left0', 24, false);
@@ -46,20 +44,19 @@ class CensoryOverload extends Carefree
 
 	override function createDadAnimationOffsets():Void
 	{
-		dad.addOffset('danceLeft', 0, 0);
-		dad.addOffset('danceRight', 0, 0);
-		dad.addOffset("singUP", 0, 0);
-		dad.addOffset("singRIGHT", 0, 0);
-		dad.addOffset("singLEFT", 0, 0);
-		dad.addOffset("singDOWN", 0, 0);
+		dad.addOffset('idle', 0, 0);
+		dad.addOffset("singUP", -20, 21);
+		dad.addOffset("singRIGHT", -17, 6);
+		dad.addOffset("singLEFT", -20, 7);
+		dad.addOffset("singDOWN", 0, 7);
 		dad.dance();
 
 
-		dad.scale.x = 1;
-		dad.scale.y = 1;
+		dad.scale.x = 1.2;
+		dad.scale.y = 1.2;
 
-		dad.x = -230;
-		dad.y = 97;
+		dad.x = 0;
+		dad.y = 327;
 	}
 
     public override function getDadIcon(icon:HealthIcon)
