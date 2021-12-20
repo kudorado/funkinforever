@@ -1,6 +1,0 @@
-:bf:Beep boop
-:tricky:GAHHHHHHHAAAAAAAAAAA
-:trick:ERRORRRRRRRRRR
-:trick::INVALID
-
-

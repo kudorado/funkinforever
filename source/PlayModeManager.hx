@@ -19,19 +19,19 @@ class PlayModeManager
 		new PlayModeData
 		({
 			name: 'enemy side',
-			cost: 5
+			cost: 1
 		}),
 
 		new PlayModeData
 		({
 			name: 'auto play',
-			cost: 5
+			cost: 1
 		}),
 
 		new PlayModeData
 		({
 			name: 'music listening',
-			cost: 5
+			cost: 1
 		}),
 		
 	];

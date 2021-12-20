@@ -58,17 +58,6 @@ class SongManager
             }
         ),
 
-
-        new SongData
-        (
-            {
-                folder: 'week_impostor',
-                character: 'green',
-                songTitle: 'V.S Green Impostor',
-                songList: ['Sussus-toogus', 'Lights-down', 'Reactor', 'Ejected']
-            }
-        ),
-
 		new SongData    
         (
             {
