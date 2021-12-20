@@ -7,7 +7,6 @@ class SongManager
 
     static public var songs:Array<SongData> = 
     [
-		
 //-------------------------TUTORIAL--------------------------
         new SongData
         (
