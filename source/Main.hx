@@ -76,8 +76,8 @@ class Main extends Sprite
 
 		//debug resolution
 		
-		var stageWidth:Int = 2688;
-		var stageHeight:Int = 1242;
+		// var stageWidth:Int = 2688;
+		// var stageHeight:Int = 1242;
 		
 
 		if (zoom == -1)

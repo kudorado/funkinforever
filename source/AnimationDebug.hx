@@ -32,6 +32,7 @@ class AnimationDebug extends FlxState
 		super();
 		this.isDad = isDad;
 		this.flipBF = flipBF;
+		
 	}
 
 	override function create()

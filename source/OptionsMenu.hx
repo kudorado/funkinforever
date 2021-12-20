@@ -29,7 +29,7 @@ class OptionsMenu extends MusicBeatState
     var options:Array<OptionCategory> = [
         new OptionCategory("", [
             new CustomizationOption("Customize your favorite characters, skins, effects..."),
-            new PlaymodeOption("Select your play mode!"),
+            new PlaymodeOption("Select your play mode!"),   
         ])
     ];
 
