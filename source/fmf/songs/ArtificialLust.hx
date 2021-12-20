@@ -359,7 +359,7 @@ class ArtificialLust extends SongPlayer
 				// sp.createDad();
 				FlxTween.tween(blackShit, {alpha: 1}, 1, {});
 				dad.playAnim('showTime');
-				playState.defaultCamZoom =  1.25;
+				playState.defaultCamZoom = 1.25;
 				showTime = true;
 				playState.isMidSongEvent = true;
 				

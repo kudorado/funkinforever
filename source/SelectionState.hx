@@ -386,6 +386,7 @@ class SelectionState extends MusicBeatState
 		{
 			//go babe
 			FlxG.sound.play(Paths.sound('confirmMenu'));
+			AdMob.showInterstitial(60);
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
 				LoadingState.loadAndSwitchState(new PlayState(), true);
