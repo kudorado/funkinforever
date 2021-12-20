@@ -13,4 +13,15 @@ class Termination extends CensoryOverload
 		var tex = Paths.fromGenericXML('pc/qt/robot_error', 'mods');
 		dad.frames = tex;
 	}
+
+	override function loadMap()
+	{
+		var bg:FlxSprite = new FlxSprite(-783, -390).loadGraphic(Paths.image('bg/qt/streetError', 'mods'));
+		bg.antialiasing = true;
+		bg.scale.y = 1;
+		bg.scale.x = 1;
+		playState.add(bg);
+
+		createTV();
+	}
 }

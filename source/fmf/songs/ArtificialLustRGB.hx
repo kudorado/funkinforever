@@ -39,7 +39,7 @@ class ArtificialLustRGB extends ArtificialLust
 		headlight.scale.x = 2;
 		headlight.scale.y = 2;
 		headlight.x = 657;
-		headlight.y = -150;
+		headlight.y = -200;
 		//playState.add(headlight);
 	}
 
