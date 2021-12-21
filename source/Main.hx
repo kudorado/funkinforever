@@ -76,16 +76,30 @@ class Main extends Sprite
 
 		//debug resolution
 		
-		// var stageWidth:Int = 2732;
-		// var stageHeight:Int = 2048;
+		// var stageWidth:Int = 2688;
+		// var stageHeight:Int = 1242;
 		
-		if (zoom == -1)
-		{
-			fx = stageWidth / gameWidth;
-			fy = stageHeight / gameHeight;
+		var kudoradoHandsome:Bool = true;
+		var daFactor:Float = (stageWidth / (stageHeight * 1.0));
 
-			if (stageWidth / stageHeight > 1.60)//wide phone
+		trace("daWidth: " + stageWidth);
+		trace("daHeight: " + stageHeight);
+		trace("daFactor: " + daFactor);
+		if (kudoradoHandsome == true)
+		{
+			if (daFactor > 1.6) // wide phone
+			{
+				if (daFactor > 2)
+				{
+					//oh shit rabbit ears, or super long phone
+					stageWidth -= (209 * 2);
+				}
+
+				fx = stageWidth / gameWidth;
+				fy = stageHeight / gameHeight;
 				zoom = Math.max(fx, fy);
+
+			}
 			else // tablet
 			{
 				zoom = Math.min(fx, fy);
