@@ -19,7 +19,7 @@ class Daidem extends SongPlayer
 	{
 		playState.defaultCamZoom = 0.7;
 
-		var bg = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/entity/Stage_LayerTop', 'mods'));
+		var bg = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/entity_origins/Stage_LayerTop', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1.4;
@@ -44,7 +44,7 @@ class Daidem extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('bg/entity/icon-daidem', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('bg/entity_origins/icons/icon-daidem', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}

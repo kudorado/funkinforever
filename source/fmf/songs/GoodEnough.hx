@@ -78,8 +78,8 @@ class GoodEnough extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y = 261;
-		bf.x = 844;
+		bf.x += 144;
+		bf.y -= 164;
 	}
 
 	override function createGFAnimationOffsets()

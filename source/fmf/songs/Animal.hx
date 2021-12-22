@@ -61,8 +61,8 @@ class Animal extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y = 308;
-		bf.x = 1112;
+		bf.x += 412;
+		bf.y -= 117;
 	}
 
 	override function createGFAnimationOffsets()

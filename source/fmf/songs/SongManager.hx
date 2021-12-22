@@ -199,7 +199,7 @@ class SongManager
 		new SongData
 		(
 			{
-				folder: 'week_entity',
+				folder: 'week_entity_origins',
 				character: 'daidem',
 				songTitle: 'Entity Origins',
 				songList: ['Experimental-Phase', 'Perfection']
@@ -262,7 +262,7 @@ class SongManager
 				folder: 'week_eteled',
 				character: 'eteled',
 				songTitle: 'V.S Eteled',
-				songList: ['dream-of-peace', 'diagraphephobia', 'post-mortal', 'plaything', 'system-failure']
+				songList: ['Dream-of-peace', 'Diagraphephobia', 'Post-mortal', 'Plaything', 'System-failure']
 			}
 		),
 
@@ -282,7 +282,7 @@ class SongManager
 				folder: 'week_starlingmayhem',
 				character: 'starlingmayhem',
 				songTitle: 'V.S Starling Mayhem',
-				songList: ['inverted-ascension', 'echoes', 'artificial-lust']
+				songList: ['Inverted-ascension', 'Echoes', 'Artificial-lust']
 			}
 		),
 
@@ -292,7 +292,7 @@ class SongManager
 				folder: 'week_impostorV4',
 				character: 'airship',
 				songTitle: 'Airship',
-				songList: ['watch-out', 'apprehensive', 'airship-blue', 'double-trouble']
+				songList: ['Watch-out', 'Apprehensive', 'Airship-blue', 'Double-trouble']
 			}
 		),
 		
@@ -302,7 +302,7 @@ class SongManager
 				folder: 'week_impostorV4',
 				character: 'polus',
 				songTitle: 'Polus',
-				songList: ['triple-trouble', 'gray-impostor', 'purple-specimens', 'run-away']
+				songList: ['Triple-trouble', 'Gray-impostor', 'Purple-specimens', 'Run-away']
 			}
 		),
 
@@ -322,7 +322,7 @@ class SongManager
 				folder: 'week_blueballsincident',
 				character: 'blueballsincident',
 				songTitle: 'V.S Blueballs Incident',
-				songList: ['sadness', 'rage', 'blueballsincident', 'redemption']
+				songList: ['Sadness', 'Rage', 'Incident', 'redemption']
 			}
 		),
 
@@ -332,10 +332,19 @@ class SongManager
 				folder: 'week_camellia',
 				character: 'camellia',
 				songTitle: 'V.S Camellia',
-				songList: ['first-town', 'liquated', 'why-do-you-hate-me', 'ghost']
+				songList: ['First-town', 'Liquated', 'Why-do-you-hate-me', 'ghost']
 			}
 		),
 
+		new SongData	
+		(
+			{
+				folder: 'week_entity',
+				character: 'entity',
+				songTitle: 'V.S Entity',
+				songList: ['Promenade', 'Shotgun-shell', 'Parasite', 'Godrays']
+			}
+		),
 	];
 //-----------------------------------------------------------
 

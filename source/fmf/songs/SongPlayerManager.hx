@@ -421,6 +421,9 @@ class SongPlayerManager
 
 			case 'playtime': 
 				songPlayer = new PlayTime();
+
+			case 'promenade':
+				songPlayer = new Promenade();
 		}
 
 		return songPlayer;
