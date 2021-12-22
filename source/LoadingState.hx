@@ -226,6 +226,57 @@ class LoadingState extends MusicBeatState
 		});
 	}
 
+
+	public static function loadWeekSplash(group:FlxGroup, callback:Void->Void, cam:FlxCamera = null, disposeOnCallback:Bool = false)
+	{
+		if (FlxG.sound.music != null)
+			FlxG.sound.music.stop();
+
+		var blackScreen:FlxSprite = new FlxSprite(0, 0);
+		blackScreen.loadGraphic(Paths.image("loading/all"));
+		blackScreen.setGraphicSize(Std.int(FlxG.width), Std.int(FlxG.height));
+		blackScreen.antialiasing = true;
+		blackScreen.screenCenter();
+
+		var loading:FlxSprite = new FlxSprite(0, 0);
+		loading.loadGraphic(Paths.image("loading/loading"));
+		loading.setGraphicSize(Std.int(FlxG.width), Std.int(FlxG.height));
+		loading.screenCenter();
+		loading.updateHitbox();
+		loading.antialiasing = true;
+
+		
+		if (cam == null)
+			cam = FlxG.camera;
+
+		blackScreen.cameras = [cam];
+		loading.cameras = [cam];
+
+		blackScreen.alpha = 0;
+		loading.alpha = 0;
+
+		group.add(blackScreen);
+		group.add(loading);
+
+		FlxTween.tween(blackScreen, {alpha: 1}, 0.25, {});
+		FlxTween.tween(loading, {alpha: 1}, 0.25, {});
+
+		new FlxTimer().start(1, function(tmr:FlxTimer)
+		{
+			// shit here
+			new FlxTimer().start(2, function(tmr:FlxTimer)
+			{
+				callback();
+				if (disposeOnCallback)
+				{
+					group.remove(blackScreen);
+					group.remove(loading);
+				}
+			});
+		});
+
+	}
+
 	public static function createBlackFadeOut(group:FlxGroup, cam:FlxCamera = null)
 	{
 		if (cam == null)

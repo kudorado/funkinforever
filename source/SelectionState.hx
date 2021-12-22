@@ -388,7 +388,10 @@ class SelectionState extends MusicBeatState
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
-				LoadingState.loadAndSwitchState(new PlayState(), true);
+				LoadingState.loadWeekSplash(this, function()
+				{
+					FlxG.switchState(new PlayState());
+				});
 			});
 		}
 		else

@@ -1346,6 +1346,9 @@ class PlayState extends MusicBeatState
 	}
 	public function switchState(callback:Void->Void)
 	{
+		if (FlxG.sound.music != null)
+			FlxG.sound.music.stop();
+
 		restartGame = true;
 		camHUD.visible = true;
 
