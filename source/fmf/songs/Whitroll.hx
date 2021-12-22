@@ -21,35 +21,42 @@ class Whitroll extends SongPlayer
 
 	override function loadMap()
 	{
-        playState.defaultCamZoom = 0.6;
-		var bg:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/date/citycolor', 'mods'));
+        playState.defaultCamZoom = 0.85;
+		var bg:FlxSprite = new FlxSprite(157, 0).loadGraphic(Paths.image('bg/date/citycolor', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
 		bg.scale.x = 1.2;
 		playState.add(bg);
 
-        var skyscrapers:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/date/skyscrapers', 'mods'));
+        var skyscrapers:FlxSprite = new FlxSprite(227, 134).loadGraphic(Paths.image('bg/date/skyscrapers', 'mods'));
 		skyscrapers.antialiasing = true;
 		skyscrapers.scale.y = 1.2;
 		skyscrapers.scale.x = 1.2;
 		playState.add(skyscrapers);
 
-        var light:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/date/light', 'mods'));
+        var light:FlxSprite = new FlxSprite(497, -1000).loadGraphic(Paths.image('bg/date/light', 'mods'));
 		light.antialiasing = true;
 		light.scale.y = 1.2;
 		light.scale.x = 1.2;
 		playState.add(light);
 
-        var deco:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/date/deco', 'mods'));
+        var deco:FlxSprite = new FlxSprite(157, 0).loadGraphic(Paths.image('bg/date/deco', 'mods'));
 		deco.antialiasing = true;
 		deco.scale.y = 1.2;
 		deco.scale.x = 1.2;
 		playState.add(deco);
 
-        var balc:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/date/balc', 'mods'));
+        var balc:FlxSprite = new FlxSprite(105, 400).loadGraphic(Paths.image('bg/date/balc', 'mods'));
 		balc.antialiasing = true;
 		balc.scale.y = 1.2;
 		balc.scale.x = 1.2;
+		playState.add(balc);
+
+
+		var balc:FlxSprite = new FlxSprite(731, 558).loadGraphic(Paths.image('bg/date/table', 'mods'));
+		balc.antialiasing = true;
+		balc.scale.y = 1;
+		balc.scale.x = 1;
 		playState.add(balc);
 
         
@@ -72,15 +79,15 @@ class Whitroll extends SongPlayer
 
         dad.addOffset('idle',0, 23);
 
-		dad.addOffset('singUP', 66, 29);
-		dad.addOffset('singRIGHT', -25, 20);
-		dad.addOffset('singLEFT', 83, 22);
-		dad.addOffset('singDOWN', 28, -39);
+		dad.addOffset('singUP', 1, 23);
+		dad.addOffset('singRIGHT', 1, 23);
+		dad.addOffset('singLEFT', 1, 23);
+		dad.addOffset('singDOWN', 1, 23);
 		dad.dance();
-        dad.scale.x = 1;
-        dad.scale.y = 1;
-		dad.x = 400;
-		dad.y = 195;
+        dad.scale.x = 2;
+        dad.scale.y = 2;
+		dad.x = 601;
+		dad.y = 303;
 	
 	}
 
@@ -104,8 +111,9 @@ class Whitroll extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y = 494;
-		bf.x = 1613;
+		bf.x += 431;
+		bf.y -= 150;
+
 	}
 
 	override function createGFAnimationOffsets()
@@ -113,19 +121,8 @@ class Whitroll extends SongPlayer
 		super.createGFAnimationOffsets();
 		gf.y = 176;
         gf.x = 863;
+		gf.visible = false;
 	}
 
-	override function updateCamFollowBF()
-	{
-		playState.camFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.camFollow.y = 360;
 
-	}
-
-	override function updateCamFollowDad()
-	{
-		playState.camFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.camFollow.y = 360;
-
-	}
 }

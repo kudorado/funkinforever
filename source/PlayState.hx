@@ -1566,6 +1566,16 @@ class PlayState extends MusicBeatState
 		
 			openSubState(new PauseSubState(boyfriend().getScreenPosition().x, boyfriend().getScreenPosition().y));
 		}
+		#if debug
+		if (FlxG.keys.justPressed.P)
+		{
+			persistentUpdate = false;
+			persistentDraw = true;
+			paused = true;
+
+			openSubState(new DebugPauseSubState(boyfriend().getScreenPosition().x, boyfriend().getScreenPosition().y));
+		}
+		#end
 		
 		if (FlxG.keys.justPressed.SEVEN)
 		{
