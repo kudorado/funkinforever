@@ -62,8 +62,8 @@ class WinterHorrorland extends SongPlayer
 			playState.remove(blackScreen);
 			playState.camHUD.visible = true;
 			FlxG.sound.play(Paths.sound('Lights_Turn_On'));
-			playState.camFollow.y = -2050;
-			playState.camFollow.x += 200;
+			playState.targetCamFollow.y = -2050;
+			playState.targetCamFollow.x += 200;
 			FlxG.camera.focusOn(playState.camFollow.getPosition());
 			FlxG.camera.zoom = 1;
 		});

@@ -47,7 +47,7 @@ class SundaySus extends Boyfriend
 	override function noteEventBF(noteData:Note)
 	{
 		super.noteEventBF(noteData);
-		playState.camFollow.y = this.getMidpoint().y + 100;
+		playState.targetCamFollow.y = this.getMidpoint().y + 100;
 
 		playState.shakeNormal();
 

@@ -308,26 +308,26 @@ class ArtificialLust extends SongPlayer
 	{
 		if (showTime)
 		{
-			playState.camFollow.x = gf.getGraphicMidpoint().x - 300;
-			playState.camFollow.y = 300;
+			playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 300;
+			playState.targetCamFollow.y = 300;
 			return;
 		}
 
-		playState.camFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.camFollow.y = 360;
+		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
+		playState.targetCamFollow.y = 360;
 	}
 
 	override function updateCamFollowDad()
 	{
 		if (showTime)
 		{
-			playState.camFollow.x = gf.getGraphicMidpoint().x - 300;
-			playState.camFollow.y = 300;
+			playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 300;
+			playState.targetCamFollow.y = 300;
 			return;
 		}
 
-		playState.camFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.camFollow.y = 360;
+		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		playState.targetCamFollow.y = 360;
 	}
 
 	override function dadNoteEvent(noteData:Note)

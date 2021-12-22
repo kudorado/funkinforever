@@ -82,16 +82,16 @@ class BobSmall extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.camFollow.y = bf.getGraphicMidpoint().y - 200;
-		// playState.camFollow.x = bf.getGraphicMidpoint().x - 250;
+		playState.targetCamFollow.y = bf.getGraphicMidpoint().y - 200;
+		// playState.targetCamFollow.x = bf.getGraphicMidpoint().x - 250;
 
 	}
 
 	override function updateCamFollowDad()
 	{
 
-		playState.camFollow.y = dad.getGraphicMidpoint().y - 200;
-		playState.camFollow.x = dad.getGraphicMidpoint().x + 350;
+		playState.targetCamFollow.y = dad.getGraphicMidpoint().y - 200;
+		playState.targetCamFollow.x = dad.getGraphicMidpoint().x + 350;
 
 	}
 

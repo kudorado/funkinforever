@@ -110,15 +110,15 @@ class SussusMoogus extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		playState.camFollow.x = bf.getMidpoint().x - 240;
-		playState.camFollow.y = bf.getMidpoint().y - 150;
+		playState.targetCamFollow.x = bf.getMidpoint().x - 240;
+		playState.targetCamFollow.y = bf.getMidpoint().y - 150;
 	}
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		playState.camFollow.x = bf.getMidpoint().x - 500;
-		playState.camFollow.y = bf.getMidpoint().y - 150;
+		playState.targetCamFollow.x = bf.getMidpoint().x - 500;
+		playState.targetCamFollow.y = bf.getMidpoint().y - 150;
 	}
 
 }

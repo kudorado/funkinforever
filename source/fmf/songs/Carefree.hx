@@ -84,15 +84,15 @@ class Carefree extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.camFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.camFollow.y = 360;
+		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
+		playState.targetCamFollow.y = 360;
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.camFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.camFollow.y = 360;
+		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		playState.targetCamFollow.y = 360;
 
 	}
 

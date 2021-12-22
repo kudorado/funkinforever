@@ -101,14 +101,14 @@ class BabJumpOut extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.camFollow.x -=  200;
-		playState.camFollow.y -= 60;
+		playState.targetCamFollow.x -=  200;
+		playState.targetCamFollow.y -= 60;
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.camFollow.x += 100;
-		playState.camFollow.y -= 60;
+		playState.targetCamFollow.x += 100;
+		playState.targetCamFollow.y -= 60;
 	}
 
 }

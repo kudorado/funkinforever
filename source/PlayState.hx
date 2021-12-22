@@ -458,7 +458,11 @@ class PlayState extends MusicBeatState
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 
-		setCamFollowPosition(songPlayer.bf.x - 200, songPlayer.bf.y + 50);
+		var daX = songPlayer.bf.x;
+		var daY = songPlayer.bf.y + 50;
+
+		setCamFollowPosition(daX, daY);
+		camFollow.setPosition(daX, daY);
 
 		if (prevCamFollow != null)
 		{
@@ -1552,8 +1556,10 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		// lerpScore = Math.floor(FlxMath.lerp(lerpScore, songScore, elapsed * 5));
+		var daX = FlxMath.lerp(camFollow.x, targetCamFollow.x, 1 / 30.0);
+		var daY = FlxMath.lerp(camFollow.y, targetCamFollow.y, 1 / 30.0);
 
+		camFollow.setPosition(daX, daY);
 	
 		updateTextShit();
 
@@ -2198,12 +2204,11 @@ class PlayState extends MusicBeatState
 
 	}
 
-	var targetCamFollow:FlxPoint;
+	public var targetCamFollow:FlxPoint;
 	public function setCamFollowPosition(x:Float, y:Float)
 	{
 		lockCamFollow = true;
 		targetCamFollow = new FlxPoint(x, y);
-		camFollow.setPosition(x, y);
 	}
 
 	function clamp(raw:Float, min:Float, max:Float)

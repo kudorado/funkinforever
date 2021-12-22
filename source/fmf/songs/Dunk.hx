@@ -62,7 +62,7 @@ class Dunk extends SongPlayer
 
 	override function updateCamFollowDad()
 	{
-		playState.camFollow.y = dad.getGraphicMidpoint().y - 50;
+		playState.targetCamFollow.y = dad.getGraphicMidpoint().y - 50;
 	}
 
 

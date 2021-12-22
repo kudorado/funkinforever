@@ -157,7 +157,7 @@ class Parents extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.camFollow.y = bf.getMidpoint().y - 200;
+		playState.targetCamFollow.y = bf.getMidpoint().y - 200;
 	}
 
 	override function midSongEventUpdate(curBeat:Int):Void

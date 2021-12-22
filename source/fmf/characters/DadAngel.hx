@@ -40,7 +40,7 @@ class DadAngel extends Boyfriend
 	override function noteEventBF(noteData:Note)
 	{
 		super.noteEventBF(noteData);
-		playState.camFollow.y = this.getMidpoint().y - 150;
+		playState.targetCamFollow.y = this.getMidpoint().y - 150;
 	}
 
 	// create animation offset for BF

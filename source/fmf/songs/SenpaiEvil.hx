@@ -120,14 +120,14 @@ class SenpaiEvil extends Senpai
 
 	override function updateCamFollowDad()
 	{
-		playState.camFollow.y = dad.getMidpoint().y;
-		playState.camFollow.x = dad.getMidpoint().x + 250;
+		playState.targetCamFollow.y = dad.getMidpoint().y;
+		playState.targetCamFollow.x = dad.getMidpoint().x + 250;
 	}
 
 	override function updateCamFollowBF()
 	{
-		playState.camFollow.x = bf.getMidpoint().x - 200;
-		playState.camFollow.y = bf.getMidpoint().y - 200;
+		playState.targetCamFollow.x = bf.getMidpoint().x - 200;
+		playState.targetCamFollow.y = bf.getMidpoint().y - 200;
 	}
 
 	override function initVariables()

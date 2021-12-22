@@ -80,15 +80,19 @@ class PlayTime extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.camFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.camFollow.y -= 100;
+		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 150;
+		playState.targetCamFollow.y -= 100;
+		playState.defaultCamZoom = 0.75;
+
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.camFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.camFollow.y = 400;
+		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		playState.targetCamFollow.y = 400;
+		playState.defaultCamZoom = 0.6;
+
 
 	}
 

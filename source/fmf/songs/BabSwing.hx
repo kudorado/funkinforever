@@ -134,14 +134,14 @@ class BabSwing extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.camFollow.x -= 200;
-		playState.camFollow.y -= 100;
+		playState.targetCamFollow.x -= 200;
+		playState.targetCamFollow.y -= 100;
 	}
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		playState.camFollow.x += 200;
+		playState.targetCamFollow.x += 200;
 	}
 
 }

@@ -189,12 +189,12 @@ class Mom extends SongPlayer
 
 	public override function updateCamFollowDad():Void
 	{
-		playState.camFollow.y = dad.getMidpoint().y;
+		playState.targetCamFollow.y = dad.getMidpoint().y;
 	}
 
 	override function updateCamFollowBF():Void
 	{
-		playState.camFollow.x = bf.getMidpoint().x - 300;
+		playState.targetCamFollow.x = bf.getMidpoint().x - 300;
 	}
 
 	public override function getDadIcon(icon:HealthIcon)

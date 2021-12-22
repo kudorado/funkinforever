@@ -38,7 +38,7 @@ class MomAngel extends Boyfriend
 	override function noteEventBF(noteData:Note)
 	{
 		super.noteEventBF(noteData);
-		playState.camFollow.y = this.getMidpoint().y - 250;
+		playState.targetCamFollow.y = this.getMidpoint().y - 250;
 
 	}
 

@@ -89,8 +89,8 @@ class TrickyHell extends TrickyMask
 
 	override function updateCamFollowDad()
 	{
-		playState.camFollow.y = dad.getMidpoint().y + 250;
-		playState.camFollow.x = dad.getMidpoint().x;
+		playState.targetCamFollow.y = dad.getMidpoint().y + 250;
+		playState.targetCamFollow.x = dad.getMidpoint().x;
 	}
 
 	override function dadNoteEvent(noteData:Note)

@@ -208,14 +208,14 @@ class Senpai extends SongPlayer
 
 	override function updateCamFollowDad()
 	{
-	playState.camFollow.y = dad.getMidpoint().y - 430;
-	playState.camFollow.x = dad.getMidpoint().x - 100;
+	playState.targetCamFollow.y = dad.getMidpoint().y - 430;
+	playState.targetCamFollow.x = dad.getMidpoint().x - 100;
 	}
 
 	override function updateCamFollowBF()
 	{
-		playState.camFollow.x = bf.getMidpoint().x - 200;
-		playState.camFollow.y = bf.getMidpoint().y - 200;
+		playState.targetCamFollow.x = bf.getMidpoint().x - 200;
+		playState.targetCamFollow.y = bf.getMidpoint().y - 200;
 	}
 
 	private override function introType():String

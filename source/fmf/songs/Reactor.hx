@@ -208,15 +208,15 @@ class Reactor extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		playState.camFollow.x = bf.getMidpoint().x - 240;
-		playState.camFollow.y = bf.getMidpoint().y - 250;
+		playState.targetCamFollow.x = bf.getMidpoint().x - 240;
+		playState.targetCamFollow.y = bf.getMidpoint().y - 250;
 	}
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		playState.camFollow.x = bf.getMidpoint().x - 500;
-		playState.camFollow.y = bf.getMidpoint().y - 250;
+		playState.targetCamFollow.x = bf.getMidpoint().x - 500;
+		playState.targetCamFollow.y = bf.getMidpoint().y - 250;
 	}
 
 }

@@ -68,12 +68,12 @@ class Daidem extends SongPlayer
 
 	override function updateCamFollowDad()
 	{
-		playState.camFollow.y = dad.getMidpoint().y - 100;
+		playState.targetCamFollow.y = dad.getMidpoint().y - 100;
 	}
 
 	override function updateCamFollowBF()
 	{
-		playState.camFollow.y = bf.getMidpoint().y - 300;
+		playState.targetCamFollow.y = bf.getMidpoint().y - 300;
 	}
 
 	override function createDad()

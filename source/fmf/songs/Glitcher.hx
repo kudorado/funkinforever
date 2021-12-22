@@ -27,7 +27,7 @@ class Glitcher extends SongPlayer
 
 	override function updateCamFollowDad()
 	{
-		playState.camFollow.y = dad.getGraphicMidpoint().y - 125;
+		playState.targetCamFollow.y = dad.getGraphicMidpoint().y - 125;
 	}
 
 	override function createDadAnimations():Void

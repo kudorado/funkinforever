@@ -113,8 +113,8 @@ class TikyHell extends TikyMask
 		this.x = largePos.x;
 		this.y = largePos.y;
 
-		playState.camFollow.y = this.getMidpoint().y + 250;
-		playState.camFollow.x = this.getMidpoint().x;
+		playState.targetCamFollow.y = this.getMidpoint().y + 250;
+		playState.targetCamFollow.x = this.getMidpoint().x;
 
 		playState.defaultCamZoom = 0.4;
 	}
