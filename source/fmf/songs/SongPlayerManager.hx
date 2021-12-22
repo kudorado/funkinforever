@@ -424,6 +424,21 @@ class SongPlayerManager
 
 			case 'promenade':
 				songPlayer = new Promenade();
+
+			case 'dream-of-peace':
+				songPlayer = new DreamOfPeace();
+
+			case 'diagraphephobia':
+				songPlayer = new Diagraphephobia();
+
+			case 'post-mortal':
+				songPlayer = new PostMortal();
+
+			case 'plaything':
+				songPlayer = new Plaything();
+
+			case 'system-failure':
+				songPlayer = new SystemFailure();
 		}
 
 		return songPlayer;

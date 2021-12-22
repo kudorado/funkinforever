@@ -705,6 +705,9 @@ class PcManager
 			case 'nonsense':
 				return new NonsenseGodSus(700, 0);
 			
+			case 'glitchhallway':
+				return new Glitchhallway(700,0);
+			
 							
 			
 
