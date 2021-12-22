@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:992d3ffeeeea57cbad071d021714b7f0:8c155320dd529df345e6e436de4f441e:7ab3b0e9c87c96afba04cd793c8f15ab$ -->
+<TextureAtlas imagePath="carol_dance.png" width="3194" height="2462">
+    <SubTexture name="Carol dance down0000" x="1" y="1" width="779" height="831"/>
+    <SubTexture name="Carol dance down0001" x="1" y="1" width="779" height="831"/>
+    <SubTexture name="Carol dance down0002" x="782" y="1" width="779" height="831"/>
+    <SubTexture name="Carol dance down0003" x="782" y="1" width="779" height="831"/>
+    <SubTexture name="Carol dance down0004" x="1563" y="1" width="779" height="831"/>
+    <SubTexture name="Carol dance down0005" x="1563" y="1" width="779" height="831"/>
+    <SubTexture name="Carol dance down0006" x="1563" y="1" width="779" height="831"/>
+    <SubTexture name="Carol dance down0007" x="1563" y="1" width="779" height="831"/>
+    <SubTexture name="Carol dance down0008" x="1563" y="1" width="779" height="831"/>
+    <SubTexture name="Carol dance down0009" x="1563" y="1" width="779" height="831"/>
+    <SubTexture name="Carol dance left0000" x="2344" y="1" width="779" height="811"/>
+    <SubTexture name="Carol dance left0001" x="2344" y="1" width="779" height="811"/>
+    <SubTexture name="Carol dance left0002" x="1" y="834" width="779" height="811"/>
+    <SubTexture name="Carol dance left0003" x="1" y="834" width="779" height="811"/>
+    <SubTexture name="Carol dance left0004" x="782" y="834" width="779" height="811"/>
+    <SubTexture name="Carol dance left0005" x="782" y="834" width="779" height="811"/>
+    <SubTexture name="Carol dance left0006" x="782" y="834" width="779" height="811"/>
+    <SubTexture name="Carol dance left0007" x="782" y="834" width="779" height="811"/>
+    <SubTexture name="Carol dance left0008" x="782" y="834" width="779" height="811"/>
+    <SubTexture name="Carol dance left0009" x="782" y="834" width="779" height="811"/>
+    <SubTexture name="Carol dance right0000" x="1563" y="834" width="814" height="811"/>
+    <SubTexture name="Carol dance right0001" x="1563" y="834" width="814" height="811"/>
+    <SubTexture name="Carol dance right0002" x="2379" y="834" width="814" height="811"/>
+    <SubTexture name="Carol dance right0003" x="2379" y="834" width="814" height="811"/>
+    <SubTexture name="Carol dance right0004" x="1" y="1647" width="814" height="811"/>
+    <SubTexture name="Carol dance right0005" x="1" y="1647" width="814" height="811"/>
+    <SubTexture name="Carol dance right0006" x="1" y="1647" width="814" height="811"/>
+    <SubTexture name="Carol dance right0007" x="1" y="1647" width="814" height="811"/>
+    <SubTexture name="Carol dance right0008" x="1" y="1647" width="814" height="811"/>
+    <SubTexture name="Carol dance right0009" x="1" y="1647" width="814" height="811"/>
+    <SubTexture name="Carol dance up0000" x="817" y="1647" width="779" height="814"/>
+    <SubTexture name="Carol dance up0001" x="817" y="1647" width="779" height="814"/>
+    <SubTexture name="Carol dance up0002" x="1598" y="1647" width="779" height="814"/>
+    <SubTexture name="Carol dance up0003" x="1598" y="1647" width="779" height="814"/>
+    <SubTexture name="Carol dance up0004" x="2379" y="1647" width="779" height="814"/>
+    <SubTexture name="Carol dance up0005" x="2379" y="1647" width="779" height="814"/>
+    <SubTexture name="Carol dance up0006" x="2379" y="1647" width="779" height="814"/>
+    <SubTexture name="Carol dance up0007" x="2379" y="1647" width="779" height="814"/>
+    <SubTexture name="Carol dance up0008" x="2379" y="1647" width="779" height="814"/>
+    <SubTexture name="Carol dance up0009" x="2379" y="1647" width="779" height="814"/>
+</TextureAtlas>
