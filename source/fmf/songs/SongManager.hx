@@ -322,7 +322,7 @@ class SongManager
 				folder: 'week_blueballsincident',
 				character: 'blueballsincident',
 				songTitle: 'V.S Blueballs Incident',
-				songList: ['Sadness', 'Rage', 'Incident', 'redemption']
+				songList: ['Sadness', 'Rage', 'BlueballsIncident', 'Redemption']
 			}
 		),
 
