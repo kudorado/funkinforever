@@ -21,6 +21,8 @@ class Promenade extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.75;
+		playState.camFollowSpeed = 1;
+
 		var bg:FlxSprite = new FlxSprite(-911, -555).loadGraphic(Paths.image('bg/entity/NikusaBG', 'mods'));
 		bg.antialiasing = true;
 

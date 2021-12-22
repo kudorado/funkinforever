@@ -108,6 +108,8 @@ class PlayState extends MusicBeatState
 	var songLength:Float = 0;
 	var kadeEngineWatermark:FlxText;
 
+	public var camFollowSpeed:Float = 1;
+
 	#if windows
 	// Discord RPC variables
 	var storyDifficultyText:String = "";
@@ -1556,8 +1558,8 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		var daX = FlxMath.lerp(camFollow.x, targetCamFollow.x, 1 / 30.0);
-		var daY = FlxMath.lerp(camFollow.y, targetCamFollow.y, 1 / 30.0);
+		var daX = FlxMath.lerp(camFollow.x, targetCamFollow.x, (1 / 30.0) * camFollowSpeed);
+		var daY = FlxMath.lerp(camFollow.y, targetCamFollow.y, (1 / 30.0) * camFollowSpeed);
 
 		camFollow.setPosition(daX, daY);
 	
