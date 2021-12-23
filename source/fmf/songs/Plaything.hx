@@ -69,6 +69,7 @@ class Plaything extends SongPlayer
     {
         super.createBF();
         changePc('glitchhallway');
+        bf.y += 317;;
     }
 
 	override function createGFAnimationOffsets()
@@ -82,5 +83,13 @@ class Plaything extends SongPlayer
 		icon.animation.add('dad', [0, 2], 0, false, false);
 		icon.animation.play("dad");
 	}
+
+    // public override function getBFIcon(icon:HealthIcon)
+    // {
+    //     icon.loadGraphic(Paths.image('health_icon/eteled/icons/icon-bf-austin'), true, 150, 150);
+    //     icon.animation.add('bf', [0, 1], 0, false, true);
+    //     icon.animation.play("bf");
+    //     icon.flipX = true;
+    // }
 
 }
