@@ -75,9 +75,9 @@ class Main extends Sprite
 		var stageHeight:Int = Lib.current.stage.stageHeight;
 
 		//debug resolution
-		
-		// var stageWidth:Int = 2688;
-		// var stageHeight:Int = 1242;
+		// 
+		var stageWidth:Int = 2688;
+		var stageHeight:Int = 1242;
 		
 		var kudoradoHandsome:Bool = true;
 		var daFactor:Float = (stageWidth / (stageHeight * 1.0));
@@ -89,10 +89,12 @@ class Main extends Sprite
 		{
 			if (daFactor > 1.6) // wide phone
 			{
-				if (daFactor > 2)
+				if (daFactor > 2.1)
 				{
+					#if ios
 					//oh shit rabbit ears, or super long phone
 					stageWidth -= (209 * 2);
+					#end
 				}
 
 				fx = stageWidth / gameWidth;

@@ -141,6 +141,7 @@ class TitleState extends MusicBeatState
 
 
 		var daSplash:FlxSprite = new FlxSprite().loadGraphic(Paths.image('splash'));
+		daSplash.screenCenter();
 		daSplash.setGraphicSize(Std.int(FlxG.width), Std.int(FlxG.height));
 		
 		if (Main.daTabletShit)
