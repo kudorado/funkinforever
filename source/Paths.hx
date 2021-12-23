@@ -1,5 +1,6 @@
 package;
 
+import fmf.songs.SongFilter;
 import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
@@ -97,21 +98,13 @@ class Paths
 
 	inline static public function voices(song:String, folder:String)
 	{
-		var songLowercase = StringTools.replace(song, " ", "-").toLowerCase();
-			switch (songLowercase) {
-				case 'dad-battle': songLowercase = 'dadbattle';
-					case 'philly-nice': songLowercase = 'philly';
-			}
+		var songLowercase = SongFilter.filter(song);
 		return 'songs:assets/songs/${folder + songLowercase}/Voices.$SOUND_EXT';
 	}
 
 	inline static public function inst(song:String, folder:String)
 	{
-		var songLowercase = StringTools.replace(song, " ", "-").toLowerCase();
-			switch (songLowercase) {
-				case 'dad-battle': songLowercase = 'dadbattle';
-				case 'philly-nice': songLowercase = 'philly';
-			}
+		var songLowercase = SongFilter.filter(song);
 		return 'songs:assets/songs/${folder + songLowercase}/Inst.$SOUND_EXT';
 	}
 

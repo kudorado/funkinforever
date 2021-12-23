@@ -74,7 +74,7 @@ class VictorySubState extends MusicBeatSubstate
 
 
         var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
-        levelInfo.text += PlayState.SONG.song;
+        levelInfo.text += PlayState.CURRENT_SONG;
         levelInfo.scrollFactor.set();
         levelInfo.setFormat(Paths.font("vcr.ttf"), 32);
         levelInfo.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);

@@ -139,12 +139,17 @@ class LoadingState extends MusicBeatState
 
 	static function getSongPath()
 	{
-		return Paths.inst(PlayState.SONG.song, PlayState.playingSong.folder);
+		var daSongName = StringTools.replace(PlayState.SONG_NAME, "SHIT", "");
+		//ignore case when load song path
+		return Paths.inst(daSongName, PlayState.playingSong.folder);
 	}
 
 	static function getVocalPath()
 	{
-		return Paths.voices(PlayState.SONG.song, PlayState.playingSong.folder);
+		var daSongName = StringTools.replace(PlayState.SONG_NAME, "SHIT", "");
+		//ignore case when load song path
+		
+		return Paths.voices(daSongName, PlayState.playingSong.folder);
 	}
 
 	static function getBitmapPath(path:String, library:String = 'mods')

@@ -1,5 +1,6 @@
 package;
 
+import fmf.songs.SongFilter;
 import Section.SwagSection;
 import haxe.Json;
 import haxe.format.JsonParser;
@@ -49,12 +50,7 @@ class Song
 		trace(jsonInput);
 		
 		// pre lowercasing the song name (update)
-		var folderLowercase = StringTools.replace(folder, " ", "-").toLowerCase();
-		switch (folderLowercase) {
-			case 'dad-battle': folderLowercase = 'dadbattle';
-			case 'philly-nice': folderLowercase = 'philly';
-		}
-		
+		var folderLowercase = SongFilter.filter(folder);
 		trace('loading ' + folderLowercase + '/' + jsonInput.toLowerCase());
 
 		var rawJson = Assets.getText(Paths.json(folderLowercase + '/' + jsonInput.toLowerCase())).trim();

@@ -77,15 +77,26 @@ class PlayState extends MusicBeatState
 {
 	public static var instance:PlayState = null;
 
+	//SONG name in the json file
 	public static var CURRENT_SONG:String;
+
+	//SONG name in the SongManager (filtered)
+	public static var SONG_NAME:String;
+
+	// SONG name in the SongManager (raw)
+	public static var RAW_SONG_NAME:String;
+
+
 	public static var songPlayer:SongPlayer;
 
 	public static var curStage:String = '';
 	public static var SONG:SwagSong;
+	public static var playingSong:SongData;
+
+
 	public static var isStoryMode:Bool = false;
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
-	public static var playingSong:SongData;
 
 	public static var storyDifficulty:Int = 1;
 	public static var weekSong:Int = 0;
@@ -313,20 +324,13 @@ class PlayState extends MusicBeatState
 
 		repPresses = 0;
 		repReleases = 0;
-		CURRENT_SONG = SONG.song.toLowerCase();
+
+		CURRENT_SONG = SONG_NAME;
 
 		botPlayShit =  FlxG.save.data.botplay;
 
 		// pre lowercasing the song name (create)
-		var songLowercase = StringTools.replace(CURRENT_SONG, " ", "-").toLowerCase();
-		switch (songLowercase)
-		{
-			case 'dad-battle':
-				songLowercase = 'dadbattle';
-			case 'philly-nice':
-				songLowercase = 'philly';
-
-		}
+		var songLowercase = SongFilter.filter(CURRENT_SONG);
 
 		#if windows
 		executeModchart = FileSystem.exists(Paths.lua(songLowercase + "/modchart"));
@@ -404,9 +408,6 @@ class PlayState extends MusicBeatState
 		persistentUpdate = true;
 		persistentDraw = true;
 
-		if (SONG == null)
-			SONG = Song.loadFromJson('tutorial');
-
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
 
@@ -416,7 +417,7 @@ class PlayState extends MusicBeatState
 		trace("cur song shit: " + CURRENT_SONG);
 
 		
-		songPlayer = SongPlayerManager.getCurrentSong(CURRENT_SONG);
+		songPlayer = SongPlayerManager.getCurrentSong(RAW_SONG_NAME);
 
 		//hardcode this shit
 		if(CURRENT_SONG == 'sepai' || CURRENT_SONG == 'roses')
@@ -951,14 +952,8 @@ class PlayState extends MusicBeatState
 		var playerCounter:Int = 0;
 
 		// pre lowercasing the song name (generateSong)
-		var songLowercase = StringTools.replace(CURRENT_SONG, " ", "-").toLowerCase();
-		switch (songLowercase)
-		{
-			case 'dad-battle':
-				songLowercase = 'dadbattle';
-			case 'philly-nice':
-				songLowercase = 'philly';
-		}
+		var songLowercase = SongFilter.filter(CURRENT_SONG); 
+		
 		// Per song offset check
 		#if windows
 		var songPath = 'assets/data/' + songLowercase + '/';
@@ -2231,14 +2226,7 @@ class PlayState extends MusicBeatState
 		{
 			// adjusting the highscore song name to be compatible
 			// would read original scores if we didn't change packages
-			var songHighscore = StringTools.replace(CURRENT_SONG, " ", "-");
-			switch (songHighscore)
-			{
-				case 'Dad-Battle':
-					songHighscore = 'Dadbattle';
-				case 'Philly-Nice':
-					songHighscore = 'Philly';
-			}
+			var songHighscore = SongFilter.filter(CURRENT_SONG);
 
 			#if !switch
 			Highscore.saveScore(songHighscore, Math.round(songScore), storyDifficulty);
@@ -2298,25 +2286,12 @@ class PlayState extends MusicBeatState
 
 					trace('LOADING NEXT SONG');
 					// pre lowercasing the next story song name
-					var nextSongLowercase = StringTools.replace(storyPlaylist[0], " ", "-").toLowerCase();
-					switch (nextSongLowercase)
-					{
-						case 'dad-battle':
-							nextSongLowercase = 'dadbattle';
-						case 'philly-nice':
-							nextSongLowercase = 'philly';
-					}
+					var nextSongLowercase = SongFilter.filter(storyPlaylist[0]);
+					
 					trace(nextSongLowercase + difficulty);
 
 					// pre lowercasing the song name (endSong)
-					var songLowercase = StringTools.replace(CURRENT_SONG, " ", "-").toLowerCase();
-					switch (songLowercase)
-					{
-						case 'dad-battle':
-							songLowercase = 'dadbattle';
-						case 'philly-nice':
-							songLowercase = 'philly';
-					}
+					var songLowercase = SongFilter.filter(CURRENT_SONG);
 
 					if (songLowercase == 'eggnog')
 					{
@@ -2332,9 +2307,12 @@ class PlayState extends MusicBeatState
 					// FlxTransitionableState.skipNextTransIn = true;
 					// FlxTransitionableState.skipNextTransOut = true;
 					prevCamFollow = camFollow;
-
+					
+					PlayState.SONG_NAME = nextSongLowercase;
+					PlayState.RAW_SONG_NAME = storyPlaylist[0];
 					SONG = Song.loadFromJson(nextSongLowercase + difficulty, playingSong.folder + storyPlaylist[0]);
-					CURRENT_SONG = SONG.song.toLowerCase();
+				
+					CURRENT_SONG = SONG_NAME;
 
 					FlxG.sound.music.stop(); 
 

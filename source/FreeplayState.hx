@@ -100,7 +100,7 @@ class FreeplayState extends MusicBeatState
 
 		for (i in 0...songs.length)
 		{
-			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false, true);
+			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, SongFilter.filter(songs[i].songName), true, false, true);
 			songText.isMenuItem = true;
 			songText.targetY = i;
 			grpSongs.add(songText);
@@ -286,28 +286,11 @@ class FreeplayState extends MusicBeatState
 
 	function playLevel()
 	{
-		var songLowercase = StringTools.replace(songs[curSelected].songName, " ", "-").toLowerCase();
-		switch (songLowercase)
-		{
-			case 'dad-battle':
-				songLowercase = 'dadbattle';
-			case 'philly-nice':
-				songLowercase = 'philly';
-		}
-		// adjusting the highscore song name to be compatible (update)
-		// would read original scores if we didn't change packages
-		var songHighscore = StringTools.replace(songs[curSelected].songName, " ", "-");
-		switch (songHighscore)
-		{
-			case 'Dad-Battle':
-				songHighscore = 'Dadbattle';
-			case 'Philly-Nice':
-				songHighscore = 'Philly';
-		}
+		var songLowercase = SongFilter.filter(songs[curSelected].songName);
 
 		trace(songLowercase);
 
-		var poop:String = Highscore.formatSong(songHighscore, StoryMenuState.curDifficulty);
+		var poop:String = Highscore.formatSong(songLowercase, StoryMenuState.curDifficulty);
 
 		trace(poop);
 
@@ -315,6 +298,8 @@ class FreeplayState extends MusicBeatState
 
 		PlayState.playingSong = SongManager.songs[curSong.week];
 		PlayState.SONG = Song.loadFromJson(poop, SongManager.songs[curSong.week].folder + songLowercase);
+		PlayState.SONG_NAME = songLowercase;
+		PlayState.RAW_SONG_NAME = songs[curSelected].songName;
 
 		PlayState.isStoryMode = false;
 		PlayState.storyDifficulty = StoryMenuState.curDifficulty;
@@ -333,11 +318,7 @@ class FreeplayState extends MusicBeatState
 			StoryMenuState.curDifficulty = 0;
 
 		// adjusting the highscore song name to be compatible (changeDiff)
-		var songHighscore = StringTools.replace(songs[curSelected].songName, " ", "-");
-		switch (songHighscore) {
-			case 'Dad-Battle': songHighscore = 'Dadbattle';
-			case 'Philly-Nice': songHighscore = 'Philly';
-		}
+		var songHighscore = SongFilter.filter(songs[curSelected].songName);
 		
 		#if !switch
 		intendedScore = Highscore.getScore(songHighscore, StoryMenuState.curDifficulty);
@@ -377,12 +358,8 @@ class FreeplayState extends MusicBeatState
 		
 		// adjusting the highscore song name to be compatible (changeSelection)
 		// would read original scores if we didn't change packages
-		var songHighscore = StringTools.replace(songs[curSelected].songName, " ", "-");
-		switch (songHighscore) {
-			case 'Dad-Battle': songHighscore = 'Dadbattle';
-			case 'Philly-Nice': songHighscore = 'Philly';
-		}
-
+		var songHighscore = SongFilter.filter(songs[curSelected].songName);
+	
 		#if !switch
 		intendedScore = Highscore.getScore(songHighscore, StoryMenuState.curDifficulty);
 		// lerpScore = 0;

@@ -439,6 +439,16 @@ class SongPlayerManager
 
 			case 'system-failure':
 				songPlayer = new SystemFailure();
+
+			case 'parasite[entity]':
+				songPlayer = new Parasite();
+
+			case 'godraysSHIT':
+				songPlayer = new Godrays();
+		
+			case 'shotgun-shell':
+				songPlayer = new  ShotgunShell();
+	
 		}
 
 		return songPlayer;

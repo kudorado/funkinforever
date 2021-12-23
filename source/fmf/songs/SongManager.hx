@@ -342,7 +342,7 @@ class SongManager
 				folder: 'week_entity',
 				character: 'entity',
 				songTitle: 'V.S Entity',
-				songList: ['Promenade', 'Shotgun-shell', 'Parasite', 'Godrays']
+				songList: ['Shotgun-shell', 'Parasite[ENTITY]', 'Godrays[ENTITY]', 'Promenade']
 			}
 		),
 	];
