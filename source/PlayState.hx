@@ -1721,7 +1721,10 @@ class PlayState extends MusicBeatState
 				var offsetX = 0;
 				var offsetY = 0;
 
-				setCamFollowPosition(boyfriend().getMidpoint().x - 100 + offsetX, clamp(boyfriend().getMidpoint().y - 100 + offsetY, songPlayer.bfCamFollowYMin(), songPlayer.bfCamFollowYMax()));
+
+				setCamFollowPosition(boyfriend().getMidpoint().x - 100 + offsetX,
+				clamp(boyfriend().getMidpoint().y - 100 + offsetY, songPlayer.bfCamFollowYMin(), songPlayer.bfCamFollowYMax()));
+				
 				turn = 1;
 				songPlayer.updateCamFollowBF();
 			}

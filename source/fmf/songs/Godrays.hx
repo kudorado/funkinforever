@@ -21,22 +21,22 @@ class Godrays extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.5;
-		var bg:FlxSprite = new FlxSprite(-1400, 366).loadGraphic(Paths.image('bg/entity/BG_Sol_1', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-1482, -622).loadGraphic(Paths.image('bg/entity/BG_Sol_1', 'mods'));
 		bg.antialiasing = true;
 
-		bg.scale.x = 2.5;
-		bg.scale.y = 2.5;
+		bg.scale.x = 0.6;
+		bg.scale.y = 0.6;
 
-		bg.scrollFactor.set(0.95, 0.95);
+		bg.scrollFactor.set(0.5, 0.5);
 		playState.add(bg);
 
-		var bg1:FlxSprite = new FlxSprite(-325, 0).loadGraphic(Paths.image('bg/entity/BG_Sol_2', 'mods'));
+		var bg1:FlxSprite = new FlxSprite(-547, -886).loadGraphic(Paths.image('bg/entity/BG_Sol_2', 'mods'));
 		bg1.antialiasing = true;
 
-		bg1.scale.x = 2.5;
-		bg1.scale.y = 2.5;
+		bg1.scale.x = 1.2;
+		bg1.scale.y = 1.2;
 
-		bg1.scrollFactor.set(0.95, 0.95);
+		bg1.scrollFactor.set(0.75, 0.75);
 		playState.add(bg1);
 
 		var stageFront:FlxSprite = new FlxSprite(-867, -714).loadGraphic(Paths.image('bg/entity/BG_Sol_3', 'mods'));
@@ -146,7 +146,6 @@ class Godrays extends SongPlayer
 		gf.x = 843;
 		gf.y = 580;
 		
-
 	}
 
 	override function createDad()
