@@ -113,8 +113,8 @@ class ShotgunShell extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('bg/entity/icons/icon-niku', 'mods'), true, 150, 150);
-		icon.animation.add('dad', [0, 2], 0, false, false);
+		icon.loadGraphic(Paths.image('bg/entity/icons/icon-aldryx', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
 

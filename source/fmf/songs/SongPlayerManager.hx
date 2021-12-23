@@ -443,7 +443,7 @@ class SongPlayerManager
 			case 'parasite[entity]':
 				songPlayer = new Parasite();
 
-			case 'godraysSHIT':
+			case 'godrays[entity]':
 				songPlayer = new Godrays();
 		
 			case 'shotgun-shell':

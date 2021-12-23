@@ -2197,8 +2197,6 @@ class PlayState extends MusicBeatState
 		
 		songPlayer.endSongEvent(endSongCallback);	
 
-
-
 	}
 
 	public var targetCamFollow:FlxPoint;

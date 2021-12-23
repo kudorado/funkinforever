@@ -113,6 +113,7 @@ class Solazar extends SongPlayer
 
     }
 
+
 	override function createBF()
 	{
 		super.createBF();

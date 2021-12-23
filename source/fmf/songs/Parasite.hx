@@ -10,6 +10,8 @@ import fmf.characters.*;
 class Parasite extends SongPlayer
 {
 
+	var rock:FlxSprite;
+
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/agoti/AGOTI', 'mods');
@@ -28,7 +30,7 @@ class Parasite extends SongPlayer
 
 		var bg:FlxSprite = new FlxSprite();
 
-		var tex = Paths.getSparrowAtlas('bg/agoti/The_void', 'mods');
+		var tex = Paths.getSparrowAtlas('bg/entity/The_void', 'mods');
 
 		bg.frames = tex;
 		bg.animation.addByPrefix('init', 'VoidShift', 24, true);
@@ -49,14 +51,29 @@ class Parasite extends SongPlayer
 
 		playState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/agoti/Void_Front', 'mods'));
+		var tower:FlxSprite = new FlxSprite(-207, -724).loadGraphic(Paths.image('bg/entity/tower', 'mods'));
 
-		stageFront.x -= 250;
-		stageFront.y -= 200;
 
-		stageFront.scale.x = 1.5;
-		stageFront.scale.y = 1.5;
+		tower.scale.x = 0.8;
+		tower.scale.y = 0.8;
+		tower.scrollFactor.set(0.7, 0.7);
+
+		playState.add(tower);
+
+		rock = new FlxSprite(-570, -303).loadGraphic(Paths.image('bg/entity/rock', 'mods'));
+		rock.scale.x = 1;
+		rock.scale.y = 1;
+		rock.scrollFactor.set(0.85, 0.85);
+
+		playState.add(rock);
+
+
+		var stageFront:FlxSprite = new FlxSprite(-1030, -648	).loadGraphic(Paths.image('bg/entity/floor', 'mods'));
+
+		stageFront.scale.x = 1;
+		stageFront.scale.y = 1;
 		playState.add(stageFront);
+
 		
 	}
 
@@ -141,7 +158,7 @@ class Parasite extends SongPlayer
 		gf.y  -= 100;	
 		gf.x += 75;	
 		
-		gf.visible = false;
+		// gf.visible = false;
 
 	}
 
@@ -168,5 +185,21 @@ class Parasite extends SongPlayer
 		icon.animation.add('dad', [50, 51], 0, false, false);
 		icon.animation.play("dad");
 	}
+	var dir:Int = 1; 
+	var checkBeat = 12;
+	var speed = 16;
+	
+	override function update(elapsed:Float)
+	{
+		rock.y -= speed * dir * elapsed;
+
+		if (playState.curBeat % checkBeat == 0 && playState.curBeat > 5)
+		{
+			dir *= -1;
+		}
+
+		super.update(elapsed);
+	}
+
 
 }
