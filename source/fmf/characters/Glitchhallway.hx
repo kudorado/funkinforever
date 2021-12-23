@@ -29,7 +29,7 @@ class Glitchhallway extends Boyfriend
 		animation.addByPrefix('singLEFT', 'Austin Sing Note LEFT00', 24, false);
 		animation.addByPrefix('singDOWN', 'Austin Sing Note DOWN00', 24, false);
 
-		animation.addByPrefix('singUPmiss', 'AAustin miss up00', 1, false);
+		animation.addByPrefix('singUPmiss', 'Austin miss up00', 1, false);
 		animation.addByPrefix('singRIGHTmiss', 'Austin miss right00', 1, false);
 		animation.addByPrefix('singLEFTmiss', 'Austin miss left00', 1, false);
 		animation.addByPrefix('singDOWNmiss', 'Austin miss down0', 1, false);
@@ -40,18 +40,17 @@ class Glitchhallway extends Boyfriend
 	public override function createAnimationOffsets():Void
 	{
 	
-		addOffset('idle', 0, 0);
+		addOffset('idle', 0, 32);
 
-		addOffset('singUP', -0, 0);
-		addOffset('singRIGHT', 0, 0);
-		addOffset('singLEFT', 0, 0);
-		addOffset('singDOWN', 0, -0);
+		addOffset('singUP', -132, 32);
+		addOffset('singRIGHT', 0, 32);
+		addOffset('singLEFT', -216, 32);
+		addOffset('singDOWN', 0, 32);
 		
-		addOffset('singUPmiss', -0, 0);
-		addOffset('singRIGHTmiss', 0, 0);
-		addOffset('singLEFTmiss', 0, 0);
-		addOffset('singDOWNmiss', 0, 6
-		);
+		addOffset('singUPmiss', -141, 32);
+		addOffset('singRIGHTmiss', -21, 32);
+		addOffset('singLEFTmiss', -231, 32);
+		addOffset('singDOWNmiss', 0, 32);
 		
 		playAnim('idle');
 		flipX = true;
