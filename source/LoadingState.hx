@@ -242,7 +242,6 @@ class LoadingState extends MusicBeatState
 		loading.loadGraphic(Paths.image("loading/loading"));
 		loading.setGraphicSize(Std.int(FlxG.width), Std.int(FlxG.height));
 		loading.screenCenter();
-		loading.updateHitbox();
 		loading.antialiasing = true;
 
 		

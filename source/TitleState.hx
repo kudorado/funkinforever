@@ -162,7 +162,6 @@ class TitleState extends MusicBeatState
 		titleText.updateHitbox();
 		titleText.screenCenter(X);
 		titleText.setGraphicSize(Std.int(titleText.width * 0.7));
-
 		titleText.x =  100;
 
 		titleText.y = 100;

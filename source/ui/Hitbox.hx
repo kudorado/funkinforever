@@ -20,6 +20,7 @@ import flixel.tweens.FlxEase;
 class Hitbox extends FlxSpriteGroup
 {
     public var hitbox:FlxSpriteGroup;
+    public var hitboxHint:FlxSpriteGroup;
 
     var sizex:Int = 320;
 
@@ -29,7 +30,13 @@ class Hitbox extends FlxSpriteGroup
     public var down:FlxButton;
     public var up:FlxButton;
     public var right:FlxButton;
-	var sp:Float = 0.1;
+	var sp:Float = 0.15;
+    var tp:Float = 0.9;
+
+    var daPress:Float = 0.075;
+    var daRelease:Float = 0.1;
+    var daOut:Float = 0.2;
+
     public function new(?widghtScreen:Int, ?heightScreen:Int)
     {
         super(widghtScreen, heightScreen);
@@ -39,15 +46,22 @@ class Hitbox extends FlxSpriteGroup
         
         //add graphic
         hitbox = new FlxSpriteGroup();
+        hitboxHint = new FlxSpriteGroup();
+
         hitbox.scrollFactor.set();
-
-        // var hitbox_hint:FlxSprite = new FlxSprite(0, 0).loadGraphic('assets/shared/images/hitbox/hitbox_hint.png');
-
-        // hitbox_hint.alpha = 0.3;
-
-        // add(hitbox_hint);
+        hitboxHint.scrollFactor.set();
 
 
+        hitboxHint.add(add(createhitboxHint(0, "left")));
+
+        hitboxHint.add(add(createhitboxHint(1, "down")));
+
+        hitboxHint.add(add(createhitboxHint(2, "up")));
+
+        hitboxHint.add(add(createhitboxHint(3, "right")));
+
+
+        
         hitbox.add(add(left = createhitbox(0, "left")));
 
         hitbox.add(add(down = createhitbox(1, "down")));
@@ -55,6 +69,10 @@ class Hitbox extends FlxSpriteGroup
         hitbox.add(add(up = createhitbox(2, "up")));
 
         hitbox.add(add(right = createhitbox(3, "right")));
+
+
+        
+
     }
 
 
@@ -62,9 +80,10 @@ class Hitbox extends FlxSpriteGroup
         var button = new FlxButton(X, 0);
         var frames = Paths.getSparrowAtlas('hitbox');// FlxAtlasFrames.fromSparrow('assets/shared/images/hitbox/hitbox.png', 'assets/shared/images/hitbox/hitbox.xml');
         
+        var maxWidth:Float = FlxG.width / 4;
 
         button.loadGraphic(FlxGraphic.fromFrame(frames.getByName(framestring)));
-        button.setGraphicSize(Std.int(button.width), FlxG.height);
+        button.setGraphicSize(Std.int(Math.min(button.width, maxWidth)), FlxG.height);
         button.updateHitbox();
         button.screenCenter(Y);
 
@@ -82,18 +101,46 @@ class Hitbox extends FlxSpriteGroup
         }
     
         button.onDown.callback = function (){
-            FlxTween.num(sp, 0.45, .075, {ease: FlxEase.circInOut}, function (a:Float) { button.alpha = a; });
+            FlxTween.num(sp, tp, daPress, {ease: FlxEase.circInOut}, function (a:Float) { button.alpha = a; });
         };
 
         button.onUp.callback = function (){
-            FlxTween.num(0.45, sp, .1, {ease: FlxEase.circInOut}, function (a:Float) { button.alpha = a; });
+            FlxTween.num(tp, sp, daRelease, {ease: FlxEase.circInOut}, function (a:Float) { button.alpha = a; });
         }
         
         button.onOut.callback = function (){
-            FlxTween.num(button.alpha, sp, .2, {ease: FlxEase.circInOut}, function (a:Float) { button.alpha = a; });
+            FlxTween.num(button.alpha, sp, daOut, {ease: FlxEase.circInOut}, function (a:Float) { button.alpha = a; });
         }
 
         return button;
+    }
+
+
+
+    public function createhitboxHint(X:Float, framestring:String) {
+        var spr = new FlxSprite(X, 0);
+        var frames = Paths.getSparrowAtlas('hitbox_hint');// FlxAtlasFrames.fromSparrow('assets/shared/images/hitbox/hitbox.png', 'assets/shared/images/hitbox/hitbox.xml');
+        
+        var maxWidth:Float = FlxG.width / 4;
+
+        spr.loadGraphic(FlxGraphic.fromFrame(frames.getByName(framestring)));
+        spr.setGraphicSize(Std.int(Math.min(spr.width, maxWidth)), FlxG.height);
+        spr.updateHitbox();
+        spr.screenCenter(Y);
+        spr.alpha = 0.3;
+        switch (X){
+            case 0:
+                spr.x = 0;
+            case 1:
+                spr.x = spr.width;
+            case 2:
+                spr.x = FlxG.width  - (spr.width * 2);
+            case 3:
+                spr.x = FlxG.width  - (spr.width);
+
+        }
+
+        return spr;
     }
 
     override public function destroy():Void

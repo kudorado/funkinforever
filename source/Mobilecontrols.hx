@@ -244,9 +244,9 @@ class Mobilecontrols extends FlxSpriteGroup
 		#if mobile
 		showMobileControls();
 		#end
-		#if debug
-		showMobileControls();
-		#end
+		// #if debug
+		// showMobileControls();
+		// #end
 
     }
 
