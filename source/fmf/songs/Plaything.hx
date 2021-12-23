@@ -69,7 +69,7 @@ class Plaything extends SongPlayer
     {
         super.createBF();
         changePc('glitchhallway');
-        bf.y += 317;;
+        bf.y += 317;
     }
 
 	override function createGFAnimationOffsets()
