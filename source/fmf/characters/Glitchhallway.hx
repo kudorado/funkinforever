@@ -40,17 +40,17 @@ class Glitchhallway extends Boyfriend
 	public override function createAnimationOffsets():Void
 	{
 	
-		addOffset('idle', 0, 150);
+		addOffset('idle', 0, 0);
 
-		addOffset('singUP', -47, 206);
-		addOffset('singRIGHT', 150, 109);
-		addOffset('singLEFT', 111, 184);
-		addOffset('singDOWN', 61, -22);
+		addOffset('singUP', -0, 0);
+		addOffset('singRIGHT', 0, 0);
+		addOffset('singLEFT', 0, 0);
+		addOffset('singDOWN', 0, -0);
 		
-		addOffset('singUPmiss', -57, 207);
-		addOffset('singRIGHTmiss', 148, 110);
-		addOffset('singLEFTmiss', 113, 178);
-		addOffset('singDOWNmiss', 57, 6
+		addOffset('singUPmiss', -0, 0);
+		addOffset('singRIGHTmiss', 0, 0);
+		addOffset('singLEFTmiss', 0, 0);
+		addOffset('singDOWNmiss', 0, 6
 		);
 		
 		playAnim('idle');
