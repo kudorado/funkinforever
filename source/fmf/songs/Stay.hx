@@ -11,7 +11,7 @@ class Stay extends Trueform
 
     override function getDadTex()
     {
-        var tex = Paths.getSparrowAtlas('trueform/bob/GF', 'mods');
+        var tex = Paths.getSparrowAtlas('bg/trueform/bob/GF', 'mods');
         dad.frames = tex;
     }
 
@@ -21,13 +21,13 @@ class Stay extends Trueform
         playState.defaultCamZoom = 0.9;
 
         hole = new FlxSprite(-650, 600);
-        hole.loadGraphic(Paths.image('trueform/trollge/gfshit', 'mods'), true, 512, 512);
+        hole.loadGraphic(Paths.image('bg/trueform/trollge/gfshit', 'mods'), true, 512, 512);
         hole.scrollFactor.set(0.9, 0.9);
 
         hole.animation.add('shit', getArray(5, 16), 16, true);
         hole.animation.play('shit', true);
         
-        var bg:FlxSprite = new FlxSprite(0, -100).loadGraphic(Paths.image('trueform/bob/bg', 'mods'));
+        var bg:FlxSprite = new FlxSprite(0, -100).loadGraphic(Paths.image('bg/trueform/bob/bg', 'mods'));
         bg.antialiasing = true;
         bg.scrollFactor.set(0.9, 0.9);
         bg.scale.x = 1.5;   
@@ -35,14 +35,14 @@ class Stay extends Trueform
 
         playState.add(bg);
 
-        var bg1:FlxSprite = new FlxSprite(-200, 200).loadGraphic(Paths.image('trueform/bob/fg', 'mods'));
+        var bg1:FlxSprite = new FlxSprite(-200, 200).loadGraphic(Paths.image('bg/trueform/bob/fg', 'mods'));
         bg1.antialiasing = true;
         bg1.scrollFactor.set(0.9, 0.9);
 
         bg1.y -= 250;
         playState.add(bg1);
 
-        var stageFront:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('trueform/bob/ground', 'mods'));
+        var stageFront:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('bg/trueform/bob/ground', 'mods'));
         stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
         stageFront.updateHitbox();
         stageFront.antialiasing = true;
@@ -92,7 +92,7 @@ class Stay extends Trueform
 
         var bob:FlxSprite = new FlxSprite();
 
-        var tex = Paths.getSparrowAtlas('trueform/bob/hellbob_assets', 'mods');
+        var tex = Paths.getSparrowAtlas('bg/trueform/bob/hellbob_assets', 'mods');
         bob.frames = tex;
 
         bob.animation.addByPrefix('mad', 'bobismad', 24, true);

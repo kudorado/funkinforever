@@ -46,6 +46,13 @@ class SongFilter
 			}
 		),
 
+		new SongFilterData	
+		(
+			{
+				key: '[trueface]',
+				replace: ''
+			}
+		),
 
 		new SongFilterData	
 		(

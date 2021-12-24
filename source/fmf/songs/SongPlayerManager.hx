@@ -85,13 +85,13 @@ class SongPlayerManager
 			case 'eeeaaaooo':
 				songPlayer = new Eeeeaaaooo("tf");
 
-			case 'practice':
+			case 'target-practice[trueface]':
 				songPlayer = new Practice("practice");
 
-			case 'fool':
+			case 'foolhardy[trueface]':
 				songPlayer = new Fool("fool");
 
-			case 'trap':
+			case 'manifest[trueface]':
 				songPlayer = new Trap('sky');
 
 			case  'wife-forever': 
@@ -107,7 +107,7 @@ class SongPlayerManager
 				songPlayer = new SkyMad();
 
 
-			case 'incident':
+			case 'incident[trueface]':
 				songPlayer = new Incident();
 
 			case 'improbable-outset':
@@ -134,7 +134,7 @@ class SongPlayerManager
 			case 'flatzone':
 				songPlayer = new KapiFan();
 
-			case 'stay':
+			case 'run[trueface]':
 				songPlayer = new Stay();
 
 			case 'headache':

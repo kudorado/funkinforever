@@ -25,10 +25,9 @@ class Trap extends Trueform
 		dad.animation.addByPrefix('singDOWN-alt', 'GF Down Note instance 1', 24, false);
 	}
 
-	override function createBFAnimationOffsets()
+	override function createDadAnimationOffsets()
 	{
-		super.createBFAnimationOffsets();
-
+		super.createDadAnimationOffsets();
 		dad.addOffset("singRIGHT-alt", 0, -20);
 		dad.addOffset("singLEFT-alt", 0, -19);
 		dad.addOffset("singDOWN-alt", 0, -20);
