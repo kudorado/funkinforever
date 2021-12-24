@@ -6,24 +6,13 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class BlueballsIncident extends SongPlayer	
+class BlueballsIncident extends Incident	
 {
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/blueballs_incident/trollgeStatic4', 'mods');
 		dad.frames = tex;
 	}
-
-	override function loadMap()
-	{
-        playState.defaultCamZoom = 0.6;
-		var bg:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/blueballs_incident/incidenti/B0', 'mods'));
-		bg.antialiasing = true;
-		bg.scale.y = 1.2;
-		bg.scale.x = 1.2;
-		playState.add(bg);
-	}
-
 
 
 	override function createDadAnimations():Void
@@ -55,31 +44,4 @@ class BlueballsIncident extends SongPlayer
 	
 	}
 
-	override function createBFAnimationOffsets()
-	{
-		super.createBFAnimationOffsets();
-		bf.y = 494;
-		bf.x = 1613;
-	}
-
-	override function createGFAnimationOffsets()
-	{
-		super.createGFAnimationOffsets();
-		gf.y = 176;
-        gf.x = 863;
-	}
-
-	override function updateCamFollowBF()
-	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.targetCamFollow.y = 360;
-
-	}
-
-	override function updateCamFollowDad()
-	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.targetCamFollow.y = 360;
-
-	}
 }

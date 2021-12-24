@@ -37,6 +37,16 @@ class SongFilter
 			}
 		),
 
+
+		new SongFilterData	
+		(
+			{
+				key: 'incident[bi]',
+				replace: 'Incident'
+			}
+		),
+
+
 		new SongFilterData	
 		(
 			{

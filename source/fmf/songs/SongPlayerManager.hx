@@ -448,6 +448,9 @@ class SongPlayerManager
 		
 			case 'shotgun-shell':
 				songPlayer = new  ShotgunShell();
+
+			case 'incident[bi]':
+				songPlayer = new BlueballsIncident();
 	
 		}
 
