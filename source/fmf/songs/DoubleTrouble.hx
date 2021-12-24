@@ -8,12 +8,12 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class AirshipBlue extends SongPlayer
+class DoubleTrouble extends SongPlayer
 {
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/impostorV4/crewmateA', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/impostorV4/gray-crewmate', 'mods');
 		dad.frames = tex;
 	}
 
@@ -79,7 +79,7 @@ class AirshipBlue extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/impostorV4/icons/icon-crewmateA', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/impostorV4/icons/icon-gray-crewmate', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}

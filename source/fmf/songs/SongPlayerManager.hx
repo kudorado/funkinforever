@@ -460,6 +460,9 @@ class SongPlayerManager
 
 			case 'airship-blue':
 				songPlayer = new AirshipBlue();
+
+			case 'double-trouble':
+				songPlayer = new DoubleTrouble();
 	
 		}
 
