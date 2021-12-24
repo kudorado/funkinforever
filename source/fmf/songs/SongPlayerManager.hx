@@ -451,6 +451,12 @@ class SongPlayerManager
 
 			case 'incident[bi]':
 				songPlayer = new BlueballsIncident();
+
+			case 'watch-out':
+				songPlayer = new WatchOut();
+
+			case 'apprehensive':
+				songPlayer = new Apprehensive();
 	
 		}
 

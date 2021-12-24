@@ -67,7 +67,7 @@ class Plaything extends SongPlayer
 	
     override function createBF()
     {
-        super.createBF();
+        //super.createBF();
         changePc('glitchhallway');
         bf.y += 317;
     }
