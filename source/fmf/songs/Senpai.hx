@@ -87,13 +87,13 @@ class Senpai extends SongPlayer
 		gf.frames = tex;
 	}
 
-	override function getBFTex()
-	{
-		var frames = Paths.getSparrowAtlas('characters/bfPixel');
-		bf.frames = frames;
+	// override function getBFTex()
+	// {
+	// 	var frames = Paths.getSparrowAtlas('characters/bfPixel');
+	// 	bf.frames = frames;
 
-		frames = null; // alloc
-	}
+	// 	frames = null; // alloc
+	// }
 
 	override function createGFAnimations()
 	{
@@ -122,22 +122,22 @@ class Senpai extends SongPlayer
 		gf.y += 150;
 	}
 
-	override function createBFAnimations()
-	{
-		var animation = bf.animation;
+	// override function createBFAnimations()
+	// {
+	// 	var animation = bf.animation;
 
-		animation.addByPrefix('idle', 'BF IDLE', 24, false);
-		animation.addByPrefix('singUP', 'BF UP NOTE', 24, false);
-		animation.addByPrefix('singLEFT', 'BF LEFT NOTE', 24, false);
-		animation.addByPrefix('singRIGHT', 'BF RIGHT NOTE', 24, false);
-		animation.addByPrefix('singDOWN', 'BF DOWN NOTE', 24, false);
-		animation.addByPrefix('singUPmiss', 'BF UP MISS', 24, false);
-		animation.addByPrefix('singLEFTmiss', 'BF LEFT MISS', 24, false);
-		animation.addByPrefix('singRIGHTmiss', 'BF RIGHT MISS', 24, false);
-		animation.addByPrefix('singDOWNmiss', 'BF DOWN MISS', 24, false);
+	// 	animation.addByPrefix('idle', 'BF IDLE', 24, false);
+	// 	animation.addByPrefix('singUP', 'BF UP NOTE', 24, false);
+	// 	animation.addByPrefix('singLEFT', 'BF LEFT NOTE', 24, false);
+	// 	animation.addByPrefix('singRIGHT', 'BF RIGHT NOTE', 24, false);
+	// 	animation.addByPrefix('singDOWN', 'BF DOWN NOTE', 24, false);
+	// 	animation.addByPrefix('singUPmiss', 'BF UP MISS', 24, false);
+	// 	animation.addByPrefix('singLEFTmiss', 'BF LEFT MISS', 24, false);
+	// 	animation.addByPrefix('singRIGHTmiss', 'BF RIGHT MISS', 24, false);
+	// 	animation.addByPrefix('singDOWNmiss', 'BF DOWN MISS', 24, false);
 
-		bf.animation = animation;
-	}
+	// 	bf.animation = animation;
+	// }
 
 	override function createBFAnimationOffsets()
 	{
@@ -167,7 +167,7 @@ class Senpai extends SongPlayer
 
 	override function createBF()
 	{
-		createCustomBF();
+		createStoryBF();
 	}
 
 	override function createDadAnimations():Void

@@ -90,11 +90,11 @@ class Parents extends SongPlayer
 		gf.frames = tex;
 	}
 
-	override function getBFTex()
-	{
-		var tex = Paths.getSparrowAtlas('characters/bfChristmas');
-		bf.frames = tex;
-	}
+	// override function getBFTex()
+	// {
+	// 	var tex = Paths.getSparrowAtlas('characters/bfChristmas');
+	// 	bf.frames = tex;
+	// }
 
 	override function getDadTex()
 	{

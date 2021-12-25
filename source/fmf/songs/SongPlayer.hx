@@ -64,9 +64,7 @@ class SongPlayer extends BaseSong
 	//get bf version, if you want to create special behaviour for bf, here you go.	
 	// private override function getBFVersion():Character{ return super.getBFVersion(); }
 	//get texture of bf and set into bf itself
-	private override function getBFTex():Void { super.getBFTex(); };
 	//create animations for bf
-	private override function createBFAnimations():Void{ super.createBFAnimations(); }
 	//create animation offsets for bf
 	private override function createBFAnimationOffsets():Void{ super.createBFAnimationOffsets(); }
 

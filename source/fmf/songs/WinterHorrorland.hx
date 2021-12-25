@@ -95,11 +95,11 @@ class WinterHorrorland extends SongPlayer
 		dad.frames = tex;
 	}
 
-	override function getBFTex()
-	{
-		var tex = Paths.getSparrowAtlas('characters/bfChristmas');
-		bf.frames = tex;
-	}
+	// override function getBFTex()
+	// {
+	// 	var tex = Paths.getSparrowAtlas('characters/bfChristmas');
+	// 	bf.frames = tex;
+	// }
 
 	override function createDadAnimations()
 	{
@@ -128,7 +128,7 @@ class WinterHorrorland extends SongPlayer
 	
 	override function createBF()
 	{
-		createCustomBF();
+		createStoryBF();
 	}
 
 	override function createCharacters()

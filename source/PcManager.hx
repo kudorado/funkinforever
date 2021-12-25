@@ -708,6 +708,11 @@ class PcManager
 			case 'glitchhallway':
 				return new Glitchhallway(700, 0);
 
+			case 'whitty simp':
+				return new WhittySimp();
+
+
+
 		}
 
 		return new Boyfriend(700, 425); 

@@ -64,6 +64,7 @@ class BaseSong
 	}
 
 	public function playBeatEvent():Void{}
+
 	
 	//--------------------------------------------------------------------------------------------------------
 	//------------------------------------------ INITIALIE ---------------------------------------------------
@@ -135,6 +136,7 @@ class BaseSong
 
 		bf.characterAddedEvent();
 
+		createStoryBF();
 
 	}
 
@@ -346,36 +348,16 @@ class BaseSong
 		//dumb event call after created playable character
 		bf.characterCreatedEvent();
 
+	}
+
+	public function createStoryBF():Void
+	{	
 
 	}
 
-	private function createCustomBF():Void
-	{
-		bf = getDefaultPc();
-
-		getBFTex();
-		createBFAnimations();
-		createBFAnimationOffsets();
-
-		bf.characterCreatedEvent();
-
-
-		bf.scrollFactor.set(0.95, 0.95);
-	}
-
-	// get texture of bf and set into bf itself
-	private function getBFTex():Void
-	{
-	}
-
-	// create animations for bf
-	private function createBFAnimations():Void
-	{
-	}
-
-	// create animation offsets for bf
 	private function createBFAnimationOffsets():Void
 	{
+
 	}
 
 	//--------------------------------------------------------------------------------------------------------

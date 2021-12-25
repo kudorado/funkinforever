@@ -62,6 +62,8 @@ class AnimationDebug extends FlxState
 		{
 			var song = SongPlayerManager.getCurrentSong(PlayState.CURRENT_SONG);
 			song.createBF();
+			song.createStoryBF();
+			
 			bf = song.bf;
 			bf.debugMode = true;
 			bf.screenCenter();
