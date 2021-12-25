@@ -49,7 +49,7 @@ class WatchOut extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'impostor idle00', 24, false);
+		animation.addByPrefix('idle', 'impostor idle00', 24, true);
 		animation.addByPrefix('singUP', 'impostor up200', 24, false);
 		animation.addByPrefix('singRIGHT', 'impostor right00', 24, false);
 		animation.addByPrefix('singLEFT', 'imposter left00', 24, false);
@@ -89,7 +89,7 @@ class WatchOut extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/impostorV4/icons/icon-yellow', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/impostorv4/icons/icon-yellow', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
