@@ -1,7 +1,6 @@
 {
 	"song": {
 		"player1": "bf",
-		"player2": "impostors",
 		"notes": [
 			{
 				"endTime": 995.850622406639,
@@ -421,6 +420,11 @@
 						11721.8838174274,
 						1,
 						0
+					],
+					[
+						11940,
+						2,
+						0
 					]
 				],
 				"changeBPM": false,
@@ -697,6 +701,11 @@
 						19688.6887966805,
 						1,
 						0
+					],
+					[
+						19910,
+						3,
+						0
 					]
 				],
 				"changeBPM": false,
@@ -914,7 +923,12 @@
 						0
 					],
 					[
-						23917.531120332,
+						24916.9045643154,
+						3,
+						0
+					],
+					[
+						23930,
 						3,
 						0
 					]
@@ -1219,11 +1233,6 @@
 						0
 					],
 					[
-						29616.0746887967,
-						2,
-						0
-					],
-					[
 						29740.5560165975,
 						3,
 						0
@@ -1239,10 +1248,29 @@
 						62.2406639004148
 					],
 					[
-						29438.2780082988,
-						2,
+						29315.3526970954,
+						3,
+						0
+					],
+					[
+						29377.5933609959,
+						1,
+						0
+					],
+					[
+						29439.8340248963,
 						0,
-						"Hurt Note"
+						0
+					],
+					[
+						29502.0746887967,
+						2,
+						0
+					],
+					[
+						29626.5560165975,
+						3,
+						0
 					]
 				],
 				"changeBPM": false,
@@ -1344,10 +1372,34 @@
 						0
 					],
 					[
-						31380.1867219917,
-						3,
+						31307.0539419087,
 						0,
-						"Hurt Note"
+						0
+					],
+					[
+						31400.4149377594,
+						1,
+						0
+					],
+					[
+						31493.77593361,
+						2,
+						0
+					],
+					[
+						31680.4979253112,
+						3,
+						0
+					],
+					[
+						31742.7385892116,
+						2,
+						0
+					],
+					[
+						31804.9792531121,
+						1,
+						0
 					]
 				],
 				"changeBPM": false,
@@ -1678,12 +1730,6 @@
 						36835.9917012448,
 						3,
 						0
-					],
-					[
-						36648.8589211618,
-						1,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -1808,12 +1854,6 @@
 						38827.6929460581,
 						3,
 						0
-					],
-					[
-						38645.2282157676,
-						3,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -2380,11 +2420,6 @@
 					[
 						52767.6348547718,
 						2,
-						0
-					],
-					[
-						51784.2323651452,
-						3,
 						0
 					]
 				],
@@ -3990,12 +4025,6 @@
 						84636.8215767635,
 						0,
 						0
-					],
-					[
-						84200.7261410787,
-						1,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -4042,6 +4071,31 @@
 					[
 						85632.6721991701,
 						0,
+						0
+					],
+					[
+						85114.1078838173,
+						0,
+						0
+					],
+					[
+						85114.1078838173,
+						1,
+						0
+					],
+					[
+						85176.3485477177,
+						2,
+						0
+					],
+					[
+						85238.5892116182,
+						3,
+						0
+					],
+					[
+						85300.8298755186,
+						1,
 						0
 					]
 				],
@@ -4139,10 +4193,39 @@
 						0
 					],
 					[
-						86824.1701244812,
-						1,
+						87074.6887966804,
 						0,
-						"Hurt Note"
+						0
+					],
+					[
+						87074.6887966804,
+						1,
+						0
+					],
+					[
+						87168.049792531,
+						2,
+						0
+					],
+					[
+						87292.5311203318,
+						3,
+						0
+					],
+					[
+						87479.2531120331,
+						1,
+						0
+					],
+					[
+						87572.6141078837,
+						3,
+						0
+					],
+					[
+						87572.6141078837,
+						2,
+						0
 					]
 				],
 				"changeBPM": false,
@@ -4535,12 +4618,6 @@
 						93599.4771784232,
 						1,
 						0
-					],
-					[
-						92856.8464730289,
-						0,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -4660,12 +4737,6 @@
 						95466.6970954357,
 						3,
 						0
-					],
-					[
-						95582.9875518671,
-						3,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -4849,6 +4920,36 @@
 						99481.2199170125,
 						1,
 						0
+					],
+					[
+						98620.3319502073,
+						1,
+						0
+					],
+					[
+						98869.294605809,
+						1,
+						0
+					],
+					[
+						98744.8132780082,
+						2,
+						0
+					],
+					[
+						98993.7759336098,
+						2,
+						0
+					],
+					[
+						99304.9792531119,
+						1,
+						0
+					],
+					[
+						99553.9419087136,
+						2,
+						0
 					]
 				],
 				"changeBPM": false,
@@ -4896,12 +4997,6 @@
 						100570.43153527,
 						1,
 						0
-					],
-					[
-						100568.46473029,
-						2,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -4951,10 +5046,14 @@
 						0
 					],
 					[
-						101561.203319502,
+						100819.502074689,
+						3,
+						0
+					],
+					[
+						101566.390041494,
 						2,
-						0,
-						"Hurt Note"
+						0
 					]
 				],
 				"changeBPM": false,
@@ -5002,12 +5101,6 @@
 						102562.132780083,
 						0,
 						0
-					],
-					[
-						102563.278008299,
-						1,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -5049,6 +5142,56 @@
 					[
 						103433.502074689,
 						2,
+						0
+					],
+					[
+						102603.734439834,
+						2,
+						0
+					],
+					[
+						102603.734439834,
+						3,
+						0
+					],
+					[
+						102697.095435685,
+						1,
+						0
+					],
+					[
+						102790.456431535,
+						2,
+						0
+					],
+					[
+						102790.456431535,
+						3,
+						0
+					],
+					[
+						102883.817427386,
+						1,
+						0
+					],
+					[
+						102977.178423236,
+						3,
+						0
+					],
+					[
+						102977.178423236,
+						2,
+						0
+					],
+					[
+						103241.701244813,
+						2,
+						0
+					],
+					[
+						103506.22406639,
+						1,
 						0
 					]
 				],
@@ -5224,18 +5367,6 @@
 						105549.684647303,
 						7,
 						0
-					],
-					[
-						104803.941908714,
-						7,
-						0,
-						"Hurt Note"
-					],
-					[
-						105180.497925311,
-						7,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -5452,12 +5583,6 @@
 						108537.236514523,
 						5,
 						0
-					],
-					[
-						108536.825726141,
-						6,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -5580,18 +5705,6 @@
 						109533.087136929,
 						7,
 						0
-					],
-					[
-						109036.307053942,
-						4,
-						0,
-						"Hurt Note"
-					],
-					[
-						109405.082987552,
-						4,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -6196,12 +6309,6 @@
 						116566.282157676,
 						4,
 						0
-					],
-					[
-						116380.705394191,
-						5,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -6682,12 +6789,6 @@
 						121482.883817427,
 						6,
 						0
-					],
-					[
-						121233.921161826,
-						5,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -6810,12 +6911,6 @@
 						122541.385892116,
 						5,
 						0
-					],
-					[
-						122105.290456431,
-						6,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -6938,12 +7033,6 @@
 						123226.033195021,
 						5,
 						217.84232365145
-					],
-					[
-						123163.381742738,
-						7,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -7098,12 +7187,6 @@
 						125466.697095436,
 						6,
 						0
-					],
-					[
-						125033.713692946,
-						7,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -7226,12 +7309,6 @@
 						126524.788381743,
 						5,
 						0
-					],
-					[
-						126029.564315353,
-						4,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -7404,12 +7481,6 @@
 						127520.639004149,
 						6,
 						0
-					],
-					[
-						127081.43153527,
-						7,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -7522,12 +7593,6 @@
 						128516.489626556,
 						5,
 						0
-					],
-					[
-						127960.580912863,
-						6,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -7620,12 +7685,6 @@
 						129512.340248963,
 						5,
 						0
-					],
-					[
-						129200.726141079,
-						5,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -7718,12 +7777,6 @@
 						130508.190871369,
 						5,
 						0
-					],
-					[
-						130199.68879668,
-						5,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -7816,12 +7869,6 @@
 						131504.041493776,
 						5,
 						0
-					],
-					[
-						131192.427385892,
-						5,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -7904,12 +7951,6 @@
 						132437.651452282,
 						4,
 						0
-					],
-					[
-						132437.2406639,
-						5,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -7982,12 +8023,6 @@
 						132687.759336099,
 						6,
 						0
-					],
-					[
-						133058.091286307,
-						5,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -8050,12 +8085,6 @@
 						134304.871369295,
 						7,
 						0
-					],
-					[
-						133680.497925311,
-						6,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -8108,18 +8137,6 @@
 						135175.440871369,
 						7,
 						0
-					],
-					[
-						134928.423236514,
-						5,
-						0,
-						"Hurt Note"
-					],
-					[
-						135174.273858921,
-						6,
-						0,
-						"Hurt Note"
 					]
 				],
 				"changeBPM": false,
@@ -8174,10 +8191,14 @@
 						373.443983402482
 					],
 					[
-						135927.385892116,
-						6,
-						0,
-						"Hurt Note"
+						135923.106846473,
+						5,
+						373.44398340249
+					],
+					[
+						135922.717842323,
+						2,
+						373.44398340249
 					]
 				],
 				"changeBPM": false,
@@ -30217,35 +30238,17 @@
 				"changeBPM": false
 			},
 			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
 				"altAnimNum": 0,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"altAnim": false,
-				"bpm": 241,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 241
 			},
 			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
 				"altAnimNum": 0,
-				"altAnim": false,
-				"bpm": 241,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 241
-			},
-			{
 				"sectionNotes": [],
 				"typeOfSection": 0,
 				"lengthInSteps": 16,
@@ -30273,67 +30276,40 @@
 				"mustHitSection": true
 			},
 			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
 				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 241
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 241
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 241
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"altAnim": false,
 				"bpm": 241,
 				"changeBPM": false,
 				"mustHitSection": true
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 241
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 241
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 241
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 241
-			},
-			{
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"altAnim": false,
-				"bpm": 241,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 241
 			},
 			{
 				"lengthInSteps": 16,
@@ -30345,34 +30321,35 @@
 				"mustHitSection": true
 			}
 		],
-		"convertMineToNuke": false,
-		"mania": 0,
-		"isHey": false,
+		"player2": "impostors",
 		"player3": "gf",
+		"isHey": false,
+		"mania": 0,
+		"convertMineToNuke": false,
 		"isCheer": null,
 		"cutsceneType": "none",
+		"song": "Double Trouble",
 		"isSpooky": false,
-		"song": "double-trouble",
 		"validScore": true,
 		"speed": 3,
 		"isMoody": false,
 		"forceJudgements": false,
 		"gfVersion": "gf",
-		"chartVersion": "2",
 		"eventObjects": [
 			{
 				"type": "BPM Change",
-				"value": 241,
+				"name": "0SM",
 				"position": 0,
-				"name": "0SM"
+				"value": 241
 			}
 		],
+		"chartVersion": "2",
 		"preferredNoteAmount": 4,
-		"uiType": "normal",
+		"stage": "airship",
 		"needsVoices": true,
-		"stage": "mall",
-		"gf": "gf",
+		"uiType": "normal",
+		"noteStyle": "normal",
 		"bpm": 241,
-		"noteStyle": "normal"
+		"gf": "gf"
 	}
 }

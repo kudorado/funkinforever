@@ -13,15 +13,15 @@ class RunAway extends SongPlayer
 
     override function getDadTex()
 	{
-		var tex = Paths.fromGenericXML('pc/impostor_v4/Black', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/impostor_v4/black_run', 'mods');
 		dad.frames = tex;
 	}
 
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.7;
-		var bg:FlxSprite = new FlxSprite(-874, -408).loadGraphic(Paths.image('bg/impostor_v4/runaway', 'mods'));
+		playState.defaultCamZoom = 0.8;
+		var bg:FlxSprite = new FlxSprite(-750, -408).loadGraphic(Paths.image('bg/impostor_v4/runaway', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1.1;
@@ -36,31 +36,29 @@ class RunAway extends SongPlayer
         return new AgotiSkin();
     }
 
+	override function getDadVersion():Character
+	{
+		return new BlackImpostor();
+	}
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'Sus idle00', 24, false);
-		animation.addByPrefix('singUP', 'iDerecha00', 24, false);
-		animation.addByPrefix('singRIGHT', 'SCREAM0', 24, false);
-		animation.addByPrefix('singLEFT', 'Izquierda0', 24, false);
-		animation.addByPrefix('singDOWN', 'DOWN00', 24, false);
+		animation.addByPrefix('idle', 'impostor idle0', 18, true);
 		dad.animation = animation;
+		dad.animation.play('idle');
+
 	}
 
 	override function createDadAnimationOffsets():Void
 	{
 			
 		dad.addOffset('idle', 0, -0);
-		dad.addOffset('singUP', 0, 0);
-		dad.addOffset('singRIGHT', 0, -0);
-		dad.addOffset('singLEFT', 0, -0);
-		dad.addOffset('singDOWN', 0, -0);
 
-		dad.scale.x = 1;
-		dad.scale.y = 1;
-		dad.x = 0;
-		dad.y = 87;
-		dad.dance();
+		dad.scale.x = 1.6;
+		dad.scale.y = 1.6;
+
+		dad.x = -400;
+		dad.y = 175;
 
 	}
 	
@@ -85,7 +83,6 @@ class RunAway extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        playState.targetCamFollow.y += 350;
     }
 
 	public override function getDadIcon(icon:HealthIcon)

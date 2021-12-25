@@ -292,7 +292,7 @@ class SongManager
 				folder: 'week_impostor_v4',
 				character: 'airship',
 				songTitle: 'Airship',
-				songList: ['Watch-out', 'Apprehensive', 'Airship-blue', 'Double-trouble']
+				songList: ['Watch-Out', 'Dlow', 'Apprehensive', 'Double-Trouble']
 			}
 		),
 		
@@ -302,7 +302,7 @@ class SongManager
 				folder: 'week_impostor_v4',
 				character: 'polus',
 				songTitle: 'Polus',
-				songList: ['Triple-trouble', 'Gray-impostor', 'Purple-specimens', 'Run-away']
+				songList: ['Double-kill', 'Blackout', 'Run-away']
 			}
 		),
 

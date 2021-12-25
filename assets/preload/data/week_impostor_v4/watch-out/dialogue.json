@@ -1,0 +1,60 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "thank GOD we got away from that crazy green dude"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "he was like an b-side of that other crazy red dude..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "please, take me out of this world."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "*shits pants*"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "yellowcrewmate",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "oh my! welcome people to the airship!!!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "uh? is this another trick to think that you are the crewmate but actually the impostor??"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "yellowcrewmate",
+			"boxState": "normal",
+			"expression": "pissed",
+			"text": "what?! why would you say that, dear girl. I'm the only crewmate around here, I swear!!"
+		},
+		{
+			"speed": 0.125,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "ok"
+		}
+	]
+}

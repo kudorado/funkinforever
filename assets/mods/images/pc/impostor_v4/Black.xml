@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:adb258e674f5d25716bb70ff5ea26405:e12d220d602946fe2968248329fc60a5:692738df31c41dab55ee6637a4a258dd$ -->
+<!-- $TexturePacker:SmartUpdate:c1adb63f9e685b1ec36bc196f5fdfb30:156c62db64f14613a2b22703ed1339c9:7305c4737cbf1d5d4f7124d8df758bf8$ -->
 <!--Format:
 n  => name of the sprite
 x  => sprite x pos in texture
@@ -19,47 +19,20 @@ vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
 verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
 triangles  => sprite triangulation, 3 vertex indices per triangle
 -->
-<TextureAtlas imagePath="black.png" width="2020" height="3231">
-    <sprite n="Derecha0000.png" x="1248" y="2705" w="328" h="322" pX="0.229008" pY="0.968896"/>
-    <sprite n="Derecha0001.png" x="1578" y="2695" w="306" h="338" pX="0.166939" pY="0.97037"/>
-    <sprite n="Derecha0002.png" x="1664" y="2059" w="298" h="338" pX="0.136134" pY="0.967407"/>
-    <sprite n="Derecha0003.png" x="1648" y="1719" w="308" h="338" pX="0.190244" pY="0.968889"/>
-    <sprite n="Derecha0004.png" x="1669" y="1064" w="319" h="343" pX="0.316614" pY="0.967883"/>
-    <sprite n="DOWN0000.png" x="1304" y="1353" w="363" h="337" pX="0.334711" pY="0.979198"/>
-    <sprite n="DOWN0001.png" x="1291" y="1026" w="356" h="325" pX="0.326301" pY="0.969183"/>
-    <sprite n="DOWN0002.png" x="910" y="2705" w="336" h="316" pX="0.294643" pY="0.969937"/>
-    <sprite n="DOWN0003.png" x="1669" y="1409" w="326" h="308" pX="0.270353" pY="0.969156"/>
-    <sprite n="DOWN0004.png" x="1684" y="690" w="307" h="372" pX="0.233279" pY="0.853297"/>
-    <sprite n="Izquierda0000.png" x="1580" y="1" w="439" h="349" pX="0.550741" pY="0.972779"/>
-    <sprite n="Izquierda0001.png" x="427" y="1010" w="441" h="353" pX="0.575964" pY="0.971671"/>
-    <sprite n="Izquierda0002.png" x="442" y="661" w="448" h="347" pX="0.603352" pY="0.972622"/>
-    <sprite n="Izquierda0003.png" x="461" y="2411" w="447" h="339" pX="0.611857" pY="0.973451"/>
-    <sprite n="Izquierda0004.png" x="876" y="1354" w="426" h="331" pX="0.548122" pY="0.971256"/>
-    <sprite n="SCREAM0000.png" x="1" y="866" w="424" h="433" pX="0.392689" pY="0.846243"/>
-    <sprite n="SCREAM0001.png" x="1" y="416" w="439" h="448" pX="0.370159" pY="0.77567"/>
-    <sprite n="SCREAM0002.png" x="1" y="1" w="483" h="413" pX="0.467358" pY="0.903148"/>
-    <sprite n="SCREAM0003.png" x="1" y="1736" w="432" h="404" pX="0.454229" pY="0.863861"/>
-    <sprite n="SCREAM0004.png" x="1" y="2544" w="447" h="397" pX="0.409396" pY="0.850126"/>
-    <sprite n="SCREAM0005.png" x="1" y="866" w="424" h="433" pX="0.391509" pY="0.845087"/>
-    <sprite n="SCREAM0006.png" x="1" y="1301" w="424" h="433" pX="0.393868" pY="0.846243"/>
-    <sprite n="SUS ARRIBA0000.png" x="1" y="2142" w="458" h="400" pX="0.436681" pY="0.975"/>
-    <sprite n="SUS ARRIBA0001.png" x="486" y="1" w="539" h="346" pX="0.384972" pY="0.969653"/>
-    <sprite n="SUS ARRIBA0002.png" x="1027" y="1" w="551" h="317" pX="0.392371" pY="0.969984"/>
-    <sprite n="SUS ARRIBA0003.png" x="486" y="349" w="471" h="310" pX="0.501594" pY="0.966074"/>
-    <sprite n="SUS ARRIBA0004.png" x="1" y="2943" w="460" h="287" pX="0.503261" pY="0.963351"/>
-    <sprite n="Sus idle0000.png" x="870" y="1011" w="419" h="341" pX="0.453461" pY="0.972141"/>
-    <sprite n="Sus idle0001.png" x="1027" y="320" w="431" h="344" pX="0.46806" pY="0.968023"/>
-    <sprite n="Sus idle0002.png" x="461" y="2063" w="443" h="346" pX="0.477427" pY="0.969653"/>
-    <sprite n="Sus idle0003.png" x="427" y="1365" w="447" h="347" pX="0.487122" pY="0.971182"/>
-    <sprite n="Sus idle0004.png" x="435" y="1714" w="446" h="347" pX="0.484305" pY="0.969741"/>
-    <sprite n="Sus idle0005.png" x="463" y="2752" w="440" h="344" pX="0.484091" pY="0.969477"/>
-    <sprite n="Sus idle0006.png" x="892" y="666" w="424" h="343" pX="0.466981" pY="0.969388"/>
-    <sprite n="Sus idle0007.png" x="883" y="1687" w="402" h="339" pX="0.4533" pY="0.973451"/>
-    <sprite n="Sus idle0008.png" x="906" y="2028" w="383" h="338" pX="0.433987" pY="0.973333"/>
-    <sprite n="Sus idle0009.png" x="1318" y="690" w="364" h="334" pX="0.424451" pY="0.970015"/>
-    <sprite n="Sus idle0010.png" x="1287" y="1692" w="352" h="331" pX="0.40767" pY="0.969789"/>
-    <sprite n="Sus idle0011.png" x="1312" y="2362" w="350" h="331" pX="0.407725" pY="0.971299"/>
-    <sprite n="Sus idle0012.png" x="1291" y="2025" w="355" h="335" pX="0.4189" pY="0.971599"/>
-    <sprite n="Sus idle0013.png" x="1460" y="352" w="375" h="336" pX="0.413333" pY="0.964232"/>
-    <sprite n="Sus idle0014.png" x="910" y="2368" w="400" h="335" pX="0.433041" pY="0.964179"/>
+<TextureAtlas imagePath="Black.png" width="3263" height="2755">
+    <sprite n="Sus idle0000.png" x="1746" y="1" w="838" h="682" pX="0.582339" pY="0.822581"/>
+    <sprite n="Sus idle0001.png" x="895" y="697" w="861" h="688" pX="0.591173" pY="0.827035"/>
+    <sprite n="Sus idle0002.png" x="1" y="1393" w="886" h="692" pX="0.60158" pY="0.825145"/>
+    <sprite n="Sus idle0003.png" x="1" y="1" w="893" h="694" pX="0.608063" pY="0.82853"/>
+    <sprite n="Sus idle0004.png" x="1" y="697" w="892" h="694" pX="0.606502" pY="0.824207"/>
+    <sprite n="Sus idle0005.png" x="889" y="1393" w="880" h="688" pX="0.610227" pY="0.822674"/>
+    <sprite n="Sus idle0006.png" x="896" y="1" w="848" h="686" pX="0.604953" pY="0.8207"/>
+    <sprite n="Sus idle0007.png" x="1758" y="685" w="803" h="678" pX="0.596513" pY="0.820059"/>
+    <sprite n="Sus idle0008.png" x="1771" y="1365" w="765" h="675" pX="0.585621" pY="0.825185"/>
+    <sprite n="Sus idle0009.png" x="1" y="2087" w="728" h="667" pX="0.583791" pY="0.823088"/>
+    <sprite n="Sus idle0010.png" x="731" y="2087" w="704" h="662" pX="0.579545" pY="0.821752"/>
+    <sprite n="Sus idle0011.png" x="2563" y="685" w="699" h="662" pX="0.576538" pY="0.824773"/>
+    <sprite n="Sus idle0012.png" x="2538" y="1365" w="709" h="669" pX="0.569817" pY="0.828102"/>
+    <sprite n="Sus idle0013.png" x="1437" y="2083" w="750" h="671" pX="0.562667" pY="0.821162"/>
+    <sprite n="Sus idle0014.png" x="2189" y="2042" w="799" h="670" pX="0.571965" pY="0.828358"/>
 </TextureAtlas>
