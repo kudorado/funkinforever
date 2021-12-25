@@ -289,7 +289,7 @@ class SongManager
 		new SongData	
 		(
 			{
-				folder: 'week_impostorV4',
+				folder: 'week_impostorv4',
 				character: 'airship',
 				songTitle: 'Airship',
 				songList: ['Watch-out', 'Apprehensive', 'Airship-blue', 'Double-trouble']
@@ -299,7 +299,7 @@ class SongManager
 		new SongData	
 		(
 			{
-				folder: 'week_impostorV4',
+				folder: 'week_impostorv4',
 				character: 'polus',
 				songTitle: 'Polus',
 				songList: ['Triple-trouble', 'Gray-impostor', 'Purple-specimens', 'Run-away']

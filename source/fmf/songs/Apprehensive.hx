@@ -11,9 +11,19 @@ import fmf.characters.*;
 class Apprehensive extends SongPlayer
 {
 
+    override function getGFTex() {
+        var tex = Paths.getSparrowAtlas('gf_skins/impostorv4/gfCar', 'mods');
+		gf.frames = tex;
+    }
+
+    override function createGFAnimations()
+    {
+        gf.animation.addByPrefix("idle", "GF Dancing Beat Hair blowing CAR0", 24, true);
+    }
+
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/impostorV4/white', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/impostorv4/white', 'mods');
 		dad.frames = tex;
 	}
 
@@ -21,11 +31,11 @@ class Apprehensive extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.7;
-		var bg:FlxSprite = new FlxSprite(-451, -234).loadGraphic(Paths.image('bg/impostorV4/stageback', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-596, -88).loadGraphic(Paths.image('bg/impostorv4/stageback', 'mods'));
 		bg.antialiasing = true;
 
-		bg.scale.x = 1.35;
-		bg.scale.y = 1.35;
+		bg.scale.x = 1;
+		bg.scale.y = 1;
 
 		bg.scrollFactor.set(0.95, 0.95);
 		playState.add(bg);
@@ -39,7 +49,7 @@ class Apprehensive extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'impostor idle00', 24, false);
+		animation.addByPrefix('idle', 'impostor idle00', 24, true);
 		animation.addByPrefix('singUP', 'impostor up200', 24, false);
 		animation.addByPrefix('singRIGHT', 'impostor right00', 24, false);
 		animation.addByPrefix('singLEFT', 'imposter left00', 24, false);
@@ -51,15 +61,15 @@ class Apprehensive extends SongPlayer
 	{
 			
 		dad.addOffset('idle', 0, 0);
-		dad.addOffset('singUP', 0, 0);
-		dad.addOffset('singRIGHT', 0, 0);
-		dad.addOffset('singLEFT', 0, 0);
-		dad.addOffset('singDOWN', 0, 0);
+		dad.addOffset('singUP', -38, 54);
+		dad.addOffset('singRIGHT', -117, 1);
+		dad.addOffset('singLEFT', -36, -11);
+		dad.addOffset('singDOWN', -10, -30);
 
 		dad.scale.x = 1;
 		dad.scale.y = 1;
-		dad.x = -57;
-		dad.y = 266;
+		dad.x = 39;
+		dad.y = 561;
 		dad.dance();
 
 	}
@@ -67,18 +77,19 @@ class Apprehensive extends SongPlayer
     override function createBF()
     {
         super.createBF();
-        bf.y += 50;
-        bf.x += 200;
+        bf.y += 110;
+        bf.x += 120;
     }
 
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
+        gf.playAnim('idle');
 	}
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/impostorV4/icons/icon-white', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/impostorv4/icons/icon-white', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}

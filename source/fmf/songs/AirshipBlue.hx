@@ -79,7 +79,7 @@ class AirshipBlue extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/impostorV4/icons/icon-crewmateA', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/impostorv4/icons/icon-crewmateA', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}

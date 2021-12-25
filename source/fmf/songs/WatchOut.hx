@@ -12,8 +12,8 @@ class WatchOut extends SongPlayer
 {
 
     override function getGFTex() {
-        var tex = Paths.getSparrowAtlas('gf_skin/impostorV4/gfCar', 'mods');
-		dad.frames = tex;
+        var tex = Paths.getSparrowAtlas('gf_skins/impostorv4/gfCar', 'mods');
+		gf.frames = tex;
     }
 
     override function createGFAnimations()
@@ -23,7 +23,7 @@ class WatchOut extends SongPlayer
     
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/impostorV4/yellow', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/impostorv4/yellow', 'mods');
 		dad.frames = tex;
 	}
 
@@ -31,7 +31,7 @@ class WatchOut extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.7;
-		var bg:FlxSprite = new FlxSprite(-451, -234).loadGraphic(Paths.image('bg/impostorV4/airship', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-596, -350).loadGraphic(Paths.image('bg/impostorv4/airship', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1.35;
@@ -49,7 +49,7 @@ class WatchOut extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'impostor idle00', 24, false);
+		animation.addByPrefix('idle', 'impostor idle00', 24, true);
 		animation.addByPrefix('singUP', 'impostor up200', 24, false);
 		animation.addByPrefix('singRIGHT', 'impostor right00', 24, false);
 		animation.addByPrefix('singLEFT', 'imposter left00', 24, false);
@@ -60,16 +60,16 @@ class WatchOut extends SongPlayer
 	override function createDadAnimationOffsets():Void
 	{
 			
-		dad.addOffset('idle', 0, 0);
-		dad.addOffset('singUP', 0, 0);
-		dad.addOffset('singRIGHT', 0, 0);
-		dad.addOffset('singLEFT', 0, 0);
-		dad.addOffset('singDOWN', 0, 0);
+		dad.addOffset('idle', 40, 0);
+		dad.addOffset('singUP', 55, 9);
+		dad.addOffset('singRIGHT', 88, -18);
+		dad.addOffset('singLEFT', 31, 9);
+		dad.addOffset('singDOWN', 146, -27);
 
 		dad.scale.x = 1;
 		dad.scale.y = 1;
-		dad.x = -57;
-		dad.y = 266;
+		dad.x = 131;
+		dad.y = 397;
 		dad.dance();
 
 	}
@@ -77,8 +77,8 @@ class WatchOut extends SongPlayer
     override function createBF()
     {
         super.createBF();
-        bf.y += 50;
-        bf.x += 200;
+        bf.y += 110;
+        bf.x += 150;
     }
 
 	override function createGFAnimationOffsets()
@@ -89,7 +89,7 @@ class WatchOut extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/impostorV4/icons/icon-yellow', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/impostorv4/icons/icon-yellow', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
