@@ -21,7 +21,7 @@ class PurpleSpecimens extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.7;
-		var bg:FlxSprite = new FlxSprite(-874, -408).loadGraphic(Paths.image('bg/impostor_v4/DeadYellow', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-874, -408).loadGraphic(Paths.image('bg/impostor_v4/halloween_bg_low', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1.1;
