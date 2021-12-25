@@ -11,6 +11,16 @@ import fmf.characters.*;
 class WatchOut extends SongPlayer
 {
 
+    override function getGFTex() {
+        var tex = Paths.getSparrowAtlas('gf_skin/impostorV4/gfCar', 'mods');
+		dad.frames = tex;
+    }
+
+    override function createGFAnimations()
+    {
+        gf.animation.addByPrefix("idle", "GF Dancing Beat Hair blowing CAR0", 24, true);
+    }
+    
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/impostorV4/yellow', 'mods');
@@ -74,6 +84,7 @@ class WatchOut extends SongPlayer
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
+        gf.playAnim('idle');
 	}
 
 	public override function getDadIcon(icon:HealthIcon)

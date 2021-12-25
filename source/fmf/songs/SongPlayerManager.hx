@@ -457,6 +457,12 @@ class SongPlayerManager
 
 			case 'apprehensive':
 				songPlayer = new Apprehensive();
+
+			case 'airship-blue':
+				songPlayer = new AirshipBlue();
+
+			case 'double-trouble':
+				songPlayer = new DoubleTrouble();
 	
 		}
 
