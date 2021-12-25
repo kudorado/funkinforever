@@ -12,7 +12,7 @@ class WatchOut extends SongPlayer
 {
 
     override function getGFTex() {
-        var tex = Paths.getSparrowAtlas('gf_skins/impostorv4/gfCar', 'mods');
+        var tex = Paths.getSparrowAtlas('gf_skins/impostor_v4/gfCar', 'mods');
 		gf.frames = tex;
     }
 
@@ -23,7 +23,7 @@ class WatchOut extends SongPlayer
     
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/impostorv4/yellow', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/impostor_v4/yellow', 'mods');
 		dad.frames = tex;
 	}
 
@@ -31,7 +31,7 @@ class WatchOut extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.7;
-		var bg:FlxSprite = new FlxSprite(-596, -350).loadGraphic(Paths.image('bg/impostorv4/airship', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-596, -350).loadGraphic(Paths.image('bg/impostor_v4/airship', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1.35;
@@ -89,7 +89,7 @@ class WatchOut extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/impostorv4/icons/icon-yellow', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/impostor_v4/icons/icon-yellow', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}

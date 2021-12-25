@@ -13,7 +13,7 @@ class RunAway extends SongPlayer
 
     override function getDadTex()
 	{
-		var tex = Paths.fromGenericXML('pc/impostorv4/black', 'mods');
+		var tex = Paths.fromGenericXML('pc/impostor_v4/black', 'mods');
 		dad.frames = tex;
 	}
 
@@ -21,7 +21,7 @@ class RunAway extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.7;
-		var bg:FlxSprite = new FlxSprite(-874, -408).loadGraphic(Paths.image('bg/impostorv4/runaway', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-874, -408).loadGraphic(Paths.image('bg/impostor_v4/runaway', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1.1;
@@ -90,7 +90,7 @@ class RunAway extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/impostorv4/icons/icon-black-run', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/impostor_v4/icons/icon-black-run', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}

@@ -13,7 +13,7 @@ class TripleTrouble extends SussusMoogus
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/impostorv4/maroon', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/impostor_v4/maroon', 'mods');
 		dad.frames = tex;
 	}
 
@@ -47,7 +47,7 @@ class TripleTrouble extends SussusMoogus
 
     public override function getDadIcon(icon:HealthIcon)
     {
-        icon.loadGraphic(Paths.image('health_icon/impostorv4/icons/icon-maroon', 'mods'), true, 150, 150);
+        icon.loadGraphic(Paths.image('health_icon/impostor_v4/icons/icon-maroon', 'mods'), true, 150, 150);
         icon.animation.add('dad', [0, 1], 0, false, false);
         icon.animation.play("dad");
     }
