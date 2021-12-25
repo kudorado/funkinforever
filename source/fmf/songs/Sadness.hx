@@ -24,6 +24,11 @@ class Sadness extends SongPlayer
 		playState.add(bg);
 	}
 
+	override function getGFTex()
+	{
+		var tex = Paths.getSparrowAtlas('gf_skins/trollge/gf_trollge', 'mods');
+		gf.frames = tex;
+	}
 
 
 	override function createDadAnimations():Void
@@ -50,8 +55,8 @@ class Sadness extends SongPlayer
 		dad.dance();
         dad.scale.x = 1.2;
         dad.scale.y = 1.2;
-		dad.x = 646;
-		dad.y = 247;
+		dad.x = 722;
+		dad.y = 250;
 	
 	}
 
@@ -65,18 +70,34 @@ class Sadness extends SongPlayer
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
-		gf.y = 176;
-        gf.x = 863;
+        gf.x = 1246;
+		gf.y = 82;
+
 	}
 
 	override function updateCamFollowBF()
 	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
+		super.updateCamFollowBF();
+		playState.targetCamFollow.y -= 50;
+		playState.defaultCamZoom = 0.85;
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		super.updateCamFollowBF();
+
+		playState.defaultCamZoom = 0.7;
+		playState.targetCamFollow.x += 150;
+		playState.targetCamFollow.y += 25;
+
 	}
+
+	public override function getDadIcon(icon:HealthIcon)
+	{
+		icon.loadGraphic(Paths.image('health_icon/blueballs', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [25, 26], 0, false, false);
+		icon.animation.play("dad");
+	}
+
 }

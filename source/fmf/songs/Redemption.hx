@@ -6,7 +6,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class Redemption extends SongPlayer	
+class Redemption extends Sadness	
 {
     override function getDadTex()
 	{
@@ -29,11 +29,12 @@ class Redemption extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'IncidentSadSIdle0', 18, false);
-		animation.addByPrefix('singUP', 'IncidentSadSing0', 24, false);
-		animation.addByPrefix('singRIGHT', 'IncidentSadSing0', 24, false);
-		animation.addByPrefix('singLEFT', 'IncidentSadSing0', 24, false);
-		animation.addByPrefix('singDOWN', 'IncidentSadSing0', 24, false);
+		animation.addByPrefix('idle', 'IncidentSadSIdle0', 8, false);
+		animation.addByPrefix('singUP', 'IncidentSadSing0', 6, false);
+		animation.addByPrefix('singRIGHT', 'IncidentSadSing0', 6, false);
+		animation.addByPrefix('singLEFT', 'IncidentSadSing0', 6, false);
+		animation.addByPrefix('singDOWN', 'IncidentSadSing0', 6, false);
+		animation.addByPrefix('talk', 'IncidentSadSpeaking0', 6, false);
 		dad.animation = animation;
 
 	}
@@ -41,45 +42,38 @@ class Redemption extends SongPlayer
 	override function createDadAnimationOffsets():Void
 	{
 
-        dad.addOffset('idle',0, 23);
+        dad.addOffset('idle',0, 0);
 
-		dad.addOffset('singUP', 66, 29);
-		dad.addOffset('singRIGHT', -25, 20);
-		dad.addOffset('singLEFT', 83, 22);
-		dad.addOffset('singDOWN', 28, -39);
+		dad.addOffset('singUP', 0, 0);
+		dad.addOffset('singRIGHT', 0, 0);
+		dad.addOffset('singLEFT', 0, 0);
+		dad.addOffset('singDOWN', 0, 0);
+		dad.addOffset('talk', 0, 0);
+
 		dad.dance();
-        dad.scale.x = 1;
-        dad.scale.y = 1;
-		dad.x = 400;
-		dad.y = 195;
+        dad.scale.x = 1.2;
+        dad.scale.y = 1.2;
+		dad.x = 702;
+		dad.y = 315;
 	
-	}
-
-	override function createBFAnimationOffsets()
-	{
-		super.createBFAnimationOffsets();
-		bf.y = 494;
-		bf.x = 1613;
-	}
-
-	override function createGFAnimationOffsets()
-	{
-		super.createGFAnimationOffsets();
-		gf.y = 176;
-        gf.x = 863;
-	}
-
-	override function updateCamFollowBF()
-	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.targetCamFollow.y = 360;
-
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.targetCamFollow.y = 360;
+		super.updateCamFollowBF();
 
+		playState.defaultCamZoom = 0.7;
+		playState.targetCamFollow.x += 150;
+		playState.targetCamFollow.y -= 100;
 	}
+
+	override function midSongEventUpdate(curBeat:Int)
+	{
+		if (curBeat == 2 == 0 && curBeat >= 1 && curBeat != 20 && curBeat != 21 && curBeat < 28)
+		{
+			dad.playAnim('talk');
+		}
+	}
+
+		
 }

@@ -6,7 +6,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class Rage extends SongPlayer	
+class Rage extends Sadness	
 {
     override function getDadTex()
 	{
@@ -48,38 +48,18 @@ class Rage extends SongPlayer
 		dad.addOffset('singLEFT', 25, 7);
 		dad.addOffset('singDOWN', 41, -20);
 		dad.dance();
-        dad.scale.x = 1;
-        dad.scale.y = 1;
-		dad.x = 569;
-		dad.y = 322;
+        dad.scale.x = 1.3;
+        dad.scale.y = 1.3;
+		dad.x = 759;
+		dad.y = 198;
 	
 	}
 
-	override function createBFAnimationOffsets()
+	public override function getDadIcon(icon:HealthIcon)
 	{
-		super.createBFAnimationOffsets();
-		bf.y = 494;
-		bf.x = 1613;
+		icon.loadGraphic(Paths.image('health_icon/blueballs', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [27, 28], 0, false, false);
+		icon.animation.play("dad");
 	}
-
-	override function createGFAnimationOffsets()
-	{
-		super.createGFAnimationOffsets();
-		gf.y = 176;
-        gf.x = 863;
-	}
-
-	override function updateCamFollowBF()
-	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.targetCamFollow.y = 360;
-
-	}
-
-	override function updateCamFollowDad()
-	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.targetCamFollow.y = 360;
-
-	}
+	
 }
