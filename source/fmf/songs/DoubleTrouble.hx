@@ -23,14 +23,23 @@ class DoubleTrouble extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.7;
-		var bg:FlxSprite = new FlxSprite(-451, -234).loadGraphic(Paths.image('bg/impostor_v4/bgWalls', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-1244, -510).loadGraphic(Paths.image('bg/impostor_v4/bgWalls', 'mods'));
 		bg.antialiasing = true;
 
-		bg.scale.x = 1.35;
-		bg.scale.y = 1.35;
+		bg.scale.x = 1;
+		bg.scale.y = 1;
 
 		bg.scrollFactor.set(0.95, 0.95);
 		playState.add(bg);
+
+		var bg2:FlxSprite = new FlxSprite(-306, 206).loadGraphic(Paths.image('bg/impostor_v4/bottomBop', 'mods'));
+		bg2.antialiasing = true;
+
+		bg2.scale.x = 1;
+		bg2.scale.y = 1;
+
+		//bg2.scrollFactor.set(0.95, 0.95);
+		playState.add(bg2);
 	}
 
     override function getDefaultSkin():Skin
@@ -52,16 +61,16 @@ class DoubleTrouble extends SongPlayer
 	override function createDadAnimationOffsets():Void
 	{
 			
-		dad.addOffset('idle', 0, 0);
-		dad.addOffset('singUP', 0, 0);
-		dad.addOffset('singRIGHT', 0, 0);
-		dad.addOffset('singLEFT', 0, 0);
-		dad.addOffset('singDOWN', 0, 0);
+		dad.addOffset('idle', 70, -47);
+		dad.addOffset('singUP', 104, -0);
+		dad.addOffset('singRIGHT', 0, -53);
+		dad.addOffset('singLEFT', 210, -58);
+		dad.addOffset('singDOWN', 90, -4);
 
 		dad.scale.x = 1;
 		dad.scale.y = 1;
 		dad.x = -57;
-		dad.y = 266;
+		dad.y = 490;
 		dad.dance();
 
 	}
@@ -76,7 +85,6 @@ class DoubleTrouble extends SongPlayer
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
-        gf.visible = false;
 	}
 
 	public override function getDadIcon(icon:HealthIcon)
