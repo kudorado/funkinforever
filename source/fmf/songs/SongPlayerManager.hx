@@ -467,8 +467,14 @@ class SongPlayerManager
 			case 'triple-trouble':
 				songPlayer = new TripleTrouble();
 
+			case 'double-kill':
+				songPlayer = new TripleTrouble();
+
 			case 'gray-impostor':
 				songPlayer = new GrayImpostor();
+
+			case 'blackout':
+				songPlayer = new PurpleSpecimens();
 
 			case 'purple-specimens':
 				songPlayer = new PurpleSpecimens();

@@ -13,7 +13,7 @@ class PurpleSpecimens extends SongPlayer
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/impostor_v4/crewmatePurple', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/impostor_v4/crewmate_Purple', 'mods');
 		dad.frames = tex;
 	}
 
@@ -21,7 +21,7 @@ class PurpleSpecimens extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.7;
-		var bg:FlxSprite = new FlxSprite(-874, -408).loadGraphic(Paths.image('bg/impostor_v4/halloween_bg_low', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-54, -136).loadGraphic(Paths.image('bg/impostor_v4/halloween_bg_low', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1.1;
@@ -58,8 +58,8 @@ class PurpleSpecimens extends SongPlayer
 
 		dad.scale.x = 1;
 		dad.scale.y = 1;
-		dad.x = 0;
-		dad.y = 87;
+		dad.x = 306;
+		dad.y = 385;
 		dad.dance();
 
 	}
@@ -80,13 +80,15 @@ class PurpleSpecimens extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowBF();
-        playState.targetCamFollow.y -= 100;
+        playState.targetCamFollow.y -= 80;
+		playState.targetCamFollow.x += 100;
     }
 
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        playState.targetCamFollow.y += 350;
+        playState.targetCamFollow.y -= 50;
+		playState.targetCamFollow.x -= 60;
     }
 
 	public override function getDadIcon(icon:HealthIcon)
