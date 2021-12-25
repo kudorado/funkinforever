@@ -15,7 +15,7 @@ class DoubleTrouble extends SongPlayer
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/impostor_v4/gray-crewmate', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/impostor_v4/impostors', 'mods');
 		dad.frames = tex;
 	}
 
@@ -23,7 +23,7 @@ class DoubleTrouble extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.7;
-		var bg:FlxSprite = new FlxSprite(-451, -234).loadGraphic(Paths.image('bg/impostor_v4/stageback', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-451, -234).loadGraphic(Paths.image('bg/impostor_v4/bgWalls', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1.35;
@@ -81,7 +81,7 @@ class DoubleTrouble extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/impostor_v4/icons/icon-gray-crewmate', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/impostor_v4/icons/icon-impostors', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
