@@ -29,7 +29,7 @@ class DoubleTrouble extends SongPlayer
 		bg.scale.x = 1;
 		bg.scale.y = 1;
 
-		bg.scrollFactor.set(0.95, 0.95);
+		bg.scrollFactor.set(0.8, 0.8);
 		playState.add(bg);
 
 		var bg2:FlxSprite = new FlxSprite(-306, 206).loadGraphic(Paths.image('bg/impostor_v4/bottomBop', 'mods'));
