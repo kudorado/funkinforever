@@ -41,6 +41,8 @@ class Note extends FlxSprite
 	{
 		super();
 
+
+
 		if (mustPress && (!FlxG.save.data.showDadNote || !FlxG.save.data.showDad))
 		{
 			// prevent lag babe
@@ -63,6 +65,7 @@ class Note extends FlxSprite
 			this.strumTime = 0;
 
 		this.noteData = noteData;
+
 		var daStage:String = PlayState.curStage;
 
 		//get note skin depending on what song are playing.

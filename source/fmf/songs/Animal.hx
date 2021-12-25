@@ -88,9 +88,9 @@ class Animal extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('bg/annie/iconGrid'), true, 150, 150);
+		icon.loadGraphic(Paths.image('bg/annie/iconGrid', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [19, 20], 0, false, false);
 		icon.animation.play("dad");
 	}
-	
+
 }

@@ -76,8 +76,8 @@ class Main extends Sprite
 
 		//debug resolution
 		// 
-		var stageWidth:Int = 1480;
-		var stageHeight:Int = 720;
+		// var stageWidth:Int = 1480;
+		// var stageHeight:Int = 720;
 		
 		var kudoradoHandsome:Bool = true;
 		var daFactor:Float = (stageWidth / (stageHeight * 1.0));

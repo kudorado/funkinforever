@@ -20,12 +20,14 @@ class ShotgunShell extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.5;
+		playState.defaultCamZoom = 0.55;
 		playState.camFollowSpeed = 1;
 
-		var bg:FlxSprite = new FlxSprite(-702, -113).loadGraphic(Paths.image('bg/entity/aldryx/AldryxBG', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-600, -113).loadGraphic(Paths.image('bg/entity/aldryx/AldryxBG', 'mods'));
 		bg.antialiasing = true;
-
+		bg.scale.x = 1.1;
+		bg.scale.y = 1.1;
+		
 		bg.scrollFactor.set(0.95, 0.95);
 		playState.add(bg);
 
