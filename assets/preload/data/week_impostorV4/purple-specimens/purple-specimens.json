@@ -5723,7 +5723,7 @@
 		"player3": "spooky",
 		"song": "purple-specimens",
 		"stage": "spooky",
-		"needsVoices": true,
+		"needsVoices": false,
 		"validScore": true,
 		"speed": 3.3,
 		"bpm": 165

@@ -4043,7 +4043,7 @@
 		"forceJudgements": false,
 		"preferredNoteAmount": 4,
 		"stage": "airship2",
-		"needsVoices": true,
+		"needsVoices": false,
 		"uiType": "normal",
 		"gf": "gf",
 		"bpm": 157

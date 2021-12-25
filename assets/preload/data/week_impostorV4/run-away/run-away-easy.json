@@ -2355,7 +2355,7 @@
 		"forceJudgements": false,
 		"preferredNoteAmount": 4,
 		"stage": "philly",
-		"needsVoices": true,
+		"needsVoices": false,
 		"uiType": "normal",
 		"gf": "gf",
 		"bpm": 175
