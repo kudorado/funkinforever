@@ -2442,7 +2442,7 @@
 		"forceJudgements": false,
 		"preferredNoteAmount": 4,
 		"uiType": "normal",
-		"needsVoices": true,
+		"needsVoices": false,
 		"stage": "philly",
 		"bpm": 175,
 		"gf": "gf"

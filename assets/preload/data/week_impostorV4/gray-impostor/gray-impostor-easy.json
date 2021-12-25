@@ -3974,7 +3974,7 @@
 		"forceJudgements": false,
 		"preferredNoteAmount": 4,
 		"uiType": "normal",
-		"needsVoices": true,
+		"needsVoices": false,
 		"stage": "mallEvil",
 		"bpm": 171,
 		"gf": "gf"

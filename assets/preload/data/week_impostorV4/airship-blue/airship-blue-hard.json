@@ -4168,7 +4168,7 @@
 		"forceJudgements": false,
 		"preferredNoteAmount": 4,
 		"uiType": "normal",
-		"needsVoices": true,
+		"needsVoices": false,
 		"stage": "airship2",
 		"bpm": 157,
 		"gf": "gf"

@@ -463,6 +463,18 @@ class SongPlayerManager
 
 			case 'double-trouble':
 				songPlayer = new DoubleTrouble();
+
+			case 'triple-trouble':
+				songPlayer = new TripleTrouble();
+
+			case 'gray-impostor':
+				songPlayer = new GrayImpostor();
+
+			case 'purple-specimens':
+				songPlayer = new PurpleSpecimens();
+
+			case 'run-away':
+				songPlayer = new RunAway();
 	
 		}
 

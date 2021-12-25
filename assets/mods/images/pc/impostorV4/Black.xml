@@ -1,47 +1,65 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="Black.png">
-	<!-- Created with Adobe Animate version 19.2.0.405 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="DOWN0000" x="0" y="0" width="726" height="673" frameX="0" frameY="0" frameWidth="726" frameHeight="762"/>
-	<SubTexture name="DOWN0001" x="726" y="0" width="711" height="649" frameX="-10" frameY="-24" frameWidth="726" frameHeight="762"/>
-	<SubTexture name="DOWN0002" x="1437" y="0" width="672" height="632" frameX="-43" frameY="-40" frameWidth="726" frameHeight="762"/>
-	<SubTexture name="DOWN0003" x="2109" y="0" width="651" height="616" frameX="-66" frameY="-57" frameWidth="726" frameHeight="762"/>
-	<SubTexture name="DOWN0004" x="2760" y="0" width="613" height="743" frameX="-89" frameY="-19" frameWidth="726" frameHeight="762"/>
-	<SubTexture name="SCREAM0000" x="0" y="743" width="848" height="865" frameX="-117" frameY="-11" frameWidth="1001" frameHeight="945"/>
-	<SubTexture name="SCREAM0001" x="848" y="743" width="878" height="896" frameX="-123" frameY="-49" frameWidth="1001" frameHeight="945"/>
-	<SubTexture name="SCREAM0002" x="1726" y="743" width="965" height="826" frameX="0" frameY="0" frameWidth="1001" frameHeight="945"/>
-	<SubTexture name="SCREAM0003" x="2691" y="743" width="863" height="808" frameX="-58" frameY="-43" frameWidth="1001" frameHeight="945"/>
-	<SubTexture name="SCREAM0004" x="0" y="1639" width="895" height="794" frameX="-87" frameY="-69" frameWidth="1001" frameHeight="945"/>
-	<SubTexture name="SCREAM0005" x="0" y="743" width="848" height="865" frameX="-117" frameY="-11" frameWidth="1001" frameHeight="945"/>
-	<SubTexture name="SCREAM0006" x="895" y="1639" width="848" height="865" frameX="-117" frameY="-11" frameWidth="1001" frameHeight="945"/>
-	<SubTexture name="SUS ARRIBA0000" x="1743" y="1639" width="916" height="800" frameX="-58" frameY="0" frameWidth="1140" frameHeight="800"/>
-	<SubTexture name="SUS ARRIBA0001" x="2659" y="1639" width="1078" height="692" frameX="-50" frameY="-108" frameWidth="1140" frameHeight="800"/>
-	<SubTexture name="SUS ARRIBA0002" x="0" y="2504" width="1101" height="633" frameX="-39" frameY="-164" frameWidth="1140" frameHeight="800"/>
-	<SubTexture name="SUS ARRIBA0003" x="1101" y="2504" width="941" height="619" frameX="0" frameY="-178" frameWidth="1140" frameHeight="800"/>
-	<SubTexture name="SUS ARRIBA0004" x="2042" y="2504" width="920" height="573" frameX="-11" frameY="-224" frameWidth="1140" frameHeight="800"/>
-	<SubTexture name="derecha0000" x="2962" y="2504" width="655" height="643" frameX="-55" frameY="-42" frameWidth="718" frameHeight="685"/>
-	<SubTexture name="derecha0001" x="0" y="3147" width="611" height="675" frameX="-102" frameY="-10" frameWidth="718" frameHeight="685"/>
-	<SubTexture name="derecha0002" x="611" y="3147" width="595" height="675" frameX="-123" frameY="-10" frameWidth="718" frameHeight="685"/>
-	<SubTexture name="derecha0003" x="1206" y="3147" width="615" height="675" frameX="-86" frameY="-10" frameWidth="718" frameHeight="685"/>
-	<SubTexture name="derecha0004" x="1821" y="3147" width="638" height="685" frameX="0" frameY="0" frameWidth="718" frameHeight="685"/>
-	<SubTexture name="izquierda0000" x="2459" y="3147" width="877" height="698" frameX="-65" frameY="-8" frameWidth="942" frameHeight="706"/>
-	<SubTexture name="izquierda0001" x="0" y="3845" width="882" height="706" frameX="-38" frameY="0" frameWidth="942" frameHeight="706"/>
-	<SubTexture name="izquierda0002" x="882" y="3845" width="895" height="694" frameX="-5" frameY="-12" frameWidth="942" frameHeight="706"/>
-	<SubTexture name="izquierda0003" x="1777" y="3845" width="894" height="678" frameX="0" frameY="-28" frameWidth="942" frameHeight="706"/>
-	<SubTexture name="izquierda0004" x="2671" y="3845" width="852" height="661" frameX="-80" frameY="-45" frameWidth="942" frameHeight="706"/>
-	<SubTexture name="sus idle0000" x="0" y="4551" width="838" height="682" frameX="-55" frameY="-12" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0001" x="838" y="4551" width="861" height="688" frameX="-34" frameY="-6" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0002" x="1699" y="4551" width="886" height="692" frameX="-9" frameY="-2" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0003" x="2585" y="4551" width="893" height="694" frameX="0" frameY="0" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0004" x="0" y="5245" width="892" height="694" frameX="-2" frameY="0" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0005" x="892" y="5245" width="880" height="688" frameX="-11" frameY="-6" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0006" x="1772" y="5245" width="848" height="686" frameX="-37" frameY="-8" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0007" x="2620" y="5245" width="803" height="678" frameX="-71" frameY="-16" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0008" x="0" y="5939" width="765" height="675" frameX="-104" frameY="-18" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0009" x="765" y="5939" width="728" height="667" frameX="-129" frameY="-26" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0010" x="1493" y="5939" width="704" height="662" frameX="-150" frameY="-31" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0011" x="2197" y="5939" width="699" height="662" frameX="-154" frameY="-31" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0012" x="2896" y="5939" width="709" height="669" frameX="-151" frameY="-27" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0013" x="0" y="6614" width="750" height="671" frameX="-130" frameY="-26" frameWidth="895" frameHeight="697"/>
-	<SubTexture name="sus idle0014" x="750" y="6614" width="799" height="670" frameX="-90" frameY="-25" frameWidth="895" frameHeight="697"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:adb258e674f5d25716bb70ff5ea26405:e12d220d602946fe2968248329fc60a5:692738df31c41dab55ee6637a4a258dd$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="black.png" width="2020" height="3231">
+    <sprite n="Derecha0000.png" x="1248" y="2705" w="328" h="322" pX="0.229008" pY="0.968896"/>
+    <sprite n="Derecha0001.png" x="1578" y="2695" w="306" h="338" pX="0.166939" pY="0.97037"/>
+    <sprite n="Derecha0002.png" x="1664" y="2059" w="298" h="338" pX="0.136134" pY="0.967407"/>
+    <sprite n="Derecha0003.png" x="1648" y="1719" w="308" h="338" pX="0.190244" pY="0.968889"/>
+    <sprite n="Derecha0004.png" x="1669" y="1064" w="319" h="343" pX="0.316614" pY="0.967883"/>
+    <sprite n="DOWN0000.png" x="1304" y="1353" w="363" h="337" pX="0.334711" pY="0.979198"/>
+    <sprite n="DOWN0001.png" x="1291" y="1026" w="356" h="325" pX="0.326301" pY="0.969183"/>
+    <sprite n="DOWN0002.png" x="910" y="2705" w="336" h="316" pX="0.294643" pY="0.969937"/>
+    <sprite n="DOWN0003.png" x="1669" y="1409" w="326" h="308" pX="0.270353" pY="0.969156"/>
+    <sprite n="DOWN0004.png" x="1684" y="690" w="307" h="372" pX="0.233279" pY="0.853297"/>
+    <sprite n="Izquierda0000.png" x="1580" y="1" w="439" h="349" pX="0.550741" pY="0.972779"/>
+    <sprite n="Izquierda0001.png" x="427" y="1010" w="441" h="353" pX="0.575964" pY="0.971671"/>
+    <sprite n="Izquierda0002.png" x="442" y="661" w="448" h="347" pX="0.603352" pY="0.972622"/>
+    <sprite n="Izquierda0003.png" x="461" y="2411" w="447" h="339" pX="0.611857" pY="0.973451"/>
+    <sprite n="Izquierda0004.png" x="876" y="1354" w="426" h="331" pX="0.548122" pY="0.971256"/>
+    <sprite n="SCREAM0000.png" x="1" y="866" w="424" h="433" pX="0.392689" pY="0.846243"/>
+    <sprite n="SCREAM0001.png" x="1" y="416" w="439" h="448" pX="0.370159" pY="0.77567"/>
+    <sprite n="SCREAM0002.png" x="1" y="1" w="483" h="413" pX="0.467358" pY="0.903148"/>
+    <sprite n="SCREAM0003.png" x="1" y="1736" w="432" h="404" pX="0.454229" pY="0.863861"/>
+    <sprite n="SCREAM0004.png" x="1" y="2544" w="447" h="397" pX="0.409396" pY="0.850126"/>
+    <sprite n="SCREAM0005.png" x="1" y="866" w="424" h="433" pX="0.391509" pY="0.845087"/>
+    <sprite n="SCREAM0006.png" x="1" y="1301" w="424" h="433" pX="0.393868" pY="0.846243"/>
+    <sprite n="SUS ARRIBA0000.png" x="1" y="2142" w="458" h="400" pX="0.436681" pY="0.975"/>
+    <sprite n="SUS ARRIBA0001.png" x="486" y="1" w="539" h="346" pX="0.384972" pY="0.969653"/>
+    <sprite n="SUS ARRIBA0002.png" x="1027" y="1" w="551" h="317" pX="0.392371" pY="0.969984"/>
+    <sprite n="SUS ARRIBA0003.png" x="486" y="349" w="471" h="310" pX="0.501594" pY="0.966074"/>
+    <sprite n="SUS ARRIBA0004.png" x="1" y="2943" w="460" h="287" pX="0.503261" pY="0.963351"/>
+    <sprite n="Sus idle0000.png" x="870" y="1011" w="419" h="341" pX="0.453461" pY="0.972141"/>
+    <sprite n="Sus idle0001.png" x="1027" y="320" w="431" h="344" pX="0.46806" pY="0.968023"/>
+    <sprite n="Sus idle0002.png" x="461" y="2063" w="443" h="346" pX="0.477427" pY="0.969653"/>
+    <sprite n="Sus idle0003.png" x="427" y="1365" w="447" h="347" pX="0.487122" pY="0.971182"/>
+    <sprite n="Sus idle0004.png" x="435" y="1714" w="446" h="347" pX="0.484305" pY="0.969741"/>
+    <sprite n="Sus idle0005.png" x="463" y="2752" w="440" h="344" pX="0.484091" pY="0.969477"/>
+    <sprite n="Sus idle0006.png" x="892" y="666" w="424" h="343" pX="0.466981" pY="0.969388"/>
+    <sprite n="Sus idle0007.png" x="883" y="1687" w="402" h="339" pX="0.4533" pY="0.973451"/>
+    <sprite n="Sus idle0008.png" x="906" y="2028" w="383" h="338" pX="0.433987" pY="0.973333"/>
+    <sprite n="Sus idle0009.png" x="1318" y="690" w="364" h="334" pX="0.424451" pY="0.970015"/>
+    <sprite n="Sus idle0010.png" x="1287" y="1692" w="352" h="331" pX="0.40767" pY="0.969789"/>
+    <sprite n="Sus idle0011.png" x="1312" y="2362" w="350" h="331" pX="0.407725" pY="0.971299"/>
+    <sprite n="Sus idle0012.png" x="1291" y="2025" w="355" h="335" pX="0.4189" pY="0.971599"/>
+    <sprite n="Sus idle0013.png" x="1460" y="352" w="375" h="336" pX="0.413333" pY="0.964232"/>
+    <sprite n="Sus idle0014.png" x="910" y="2368" w="400" h="335" pX="0.433041" pY="0.964179"/>
 </TextureAtlas>

@@ -1297,7 +1297,7 @@
 		"player3": "gf-car",
 		"song": "apprehensive",
 		"arrowSkin": "",
-		"needsVoices": true,
+		"needsVoices": false,
 		"validScore": true,
 		"stage": "stage",
 		"speed": 3.3,

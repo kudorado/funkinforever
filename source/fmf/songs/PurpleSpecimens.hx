@@ -8,12 +8,12 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class AirshipBlue extends SongPlayer
+class PurpleSpecimens extends SongPlayer
 {
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/impostorv4/crewmateA', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/impostorv4/crewmatePurple', 'mods');
 		dad.frames = tex;
 	}
 
@@ -50,11 +50,11 @@ class AirshipBlue extends SongPlayer
 	override function createDadAnimationOffsets():Void
 	{
 			
-		dad.addOffset('idle', 160, -365);
-		dad.addOffset('singUP', 294, -258);
-		dad.addOffset('singRIGHT', 210, -371);
-		dad.addOffset('singLEFT', 400, -365);
-		dad.addOffset('singDOWN', 280, -382);
+		dad.addOffset('idle', 160, -107);
+		dad.addOffset('singUP', 294, 0);
+		dad.addOffset('singRIGHT', 210, -113);
+		dad.addOffset('singLEFT', 400, -98);
+		dad.addOffset('singDOWN', 280, -124);
 
 		dad.scale.x = 1;
 		dad.scale.y = 1;
@@ -91,7 +91,7 @@ class AirshipBlue extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/impostorv4/icons/icon-crewmateA', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/impostorv4/icons/icon-crewmatePurple', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}

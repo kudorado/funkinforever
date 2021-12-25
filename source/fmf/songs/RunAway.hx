@@ -8,12 +8,12 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class AirshipBlue extends SongPlayer
+class RunAway extends SongPlayer
 {
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/impostorv4/crewmateA', 'mods');
+		var tex = Paths.fromGenericXML('pc/impostorv4/black', 'mods');
 		dad.frames = tex;
 	}
 
@@ -21,7 +21,7 @@ class AirshipBlue extends SongPlayer
 	override function loadMap()
 	{
 		playState.defaultCamZoom = 0.7;
-		var bg:FlxSprite = new FlxSprite(-874, -408).loadGraphic(Paths.image('bg/impostorv4/DeadYellow', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-874, -408).loadGraphic(Paths.image('bg/impostorv4/runaway', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1.1;
@@ -39,22 +39,22 @@ class AirshipBlue extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'impostor idle00', 24, false);
-		animation.addByPrefix('singUP', 'impostor up20', 24, false);
-		animation.addByPrefix('singRIGHT', 'impostor right00', 24, false);
-		animation.addByPrefix('singLEFT', 'imposter left00', 24, false);
-		animation.addByPrefix('singDOWN', 'impostor down00', 24, false);
+		animation.addByPrefix('idle', 'Sus idle00', 24, false);
+		animation.addByPrefix('singUP', 'iDerecha00', 24, false);
+		animation.addByPrefix('singRIGHT', 'SCREAM0', 24, false);
+		animation.addByPrefix('singLEFT', 'Izquierda0', 24, false);
+		animation.addByPrefix('singDOWN', 'DOWN00', 24, false);
 		dad.animation = animation;
 	}
 
 	override function createDadAnimationOffsets():Void
 	{
 			
-		dad.addOffset('idle', 160, -365);
-		dad.addOffset('singUP', 294, -258);
-		dad.addOffset('singRIGHT', 210, -371);
-		dad.addOffset('singLEFT', 400, -365);
-		dad.addOffset('singDOWN', 280, -382);
+		dad.addOffset('idle', 0, -0);
+		dad.addOffset('singUP', 0, 0);
+		dad.addOffset('singRIGHT', 0, -0);
+		dad.addOffset('singLEFT', 0, -0);
+		dad.addOffset('singDOWN', 0, -0);
 
 		dad.scale.x = 1;
 		dad.scale.y = 1;
@@ -74,7 +74,6 @@ class AirshipBlue extends SongPlayer
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
-        gf.visible = false;
 	}
 
     override function updateCamFollowBF()
@@ -91,7 +90,7 @@ class AirshipBlue extends SongPlayer
 
 	public override function getDadIcon(icon:HealthIcon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/impostorv4/icons/icon-crewmateA', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/impostorv4/icons/icon-black-run', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
