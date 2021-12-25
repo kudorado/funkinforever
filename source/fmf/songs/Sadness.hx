@@ -16,7 +16,7 @@ class Sadness extends SongPlayer
 
 	override function loadMap()
 	{
-        playState.defaultCamZoom = 0.6;
+        playState.defaultCamZoom = 0.85;
 		var bg:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/blueballs_incident/sadi/sad', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
@@ -72,14 +72,11 @@ class Sadness extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.targetCamFollow.y = 360;
 
 	}
 
 	override function updateCamFollowDad()
 	{
 		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.targetCamFollow.y = 360;
-
 	}
 }

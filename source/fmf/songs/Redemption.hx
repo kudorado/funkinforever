@@ -10,13 +10,13 @@ class Redemption extends SongPlayer
 {
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/blueballs_incident/TrollgeFinal', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/blueballs_incident/trollgephase4', 'mods');
 		dad.frames = tex;
 	}
 
 	override function loadMap()
 	{
-        playState.defaultCamZoom = 0.6;
+        playState.defaultCamZoom = 0.85;
 		var bg:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/blueballs_incident/redemp/sad', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
@@ -29,11 +29,11 @@ class Redemption extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'TrollgeIdle00', 18, false);
-		animation.addByPrefix('singUP', 'TrollgeUp00', 24, false);
-		animation.addByPrefix('singRIGHT', 'TrollgeRight00', 24, false);
-		animation.addByPrefix('singLEFT', 'TrollgeLeft00', 24, false);
-		animation.addByPrefix('singDOWN', 'TrollgeDown00', 24, false);
+		animation.addByPrefix('idle', 'IncidentSadSIdle0', 18, false);
+		animation.addByPrefix('singUP', 'IncidentSadSing0', 24, false);
+		animation.addByPrefix('singRIGHT', 'IncidentSadSing0', 24, false);
+		animation.addByPrefix('singLEFT', 'IncidentSadSing0', 24, false);
+		animation.addByPrefix('singDOWN', 'IncidentSadSing0', 24, false);
 		dad.animation = animation;
 
 	}

@@ -16,7 +16,7 @@ class Rage extends SongPlayer
 
 	override function loadMap()
 	{
-        playState.defaultCamZoom = 0.6;
+        playState.defaultCamZoom = 0.85;
 		var bg:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/blueballs_incident/ragi/B0', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
@@ -29,7 +29,7 @@ class Rage extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', '1TrollgeRageIdle0', 18, true);
+		animation.addByPrefix('idle', '1TrollgeRageIdle0', 12, true);
 		animation.addByPrefix('singUP', '1TrollgeRageUp00', 24, false);
 		animation.addByPrefix('singRIGHT', '1TrollgeRageRight00', 24, false);
 		animation.addByPrefix('singLEFT', '1TrollgeRageLeft00', 24, false);
