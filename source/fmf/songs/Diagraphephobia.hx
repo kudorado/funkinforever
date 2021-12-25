@@ -30,6 +30,24 @@ class Diagraphephobia extends DreamOfPeace
 		bg.scrollFactor.set(0.95, 0.95);
 		playState.add(bg);
 
+
+
+	}
+
+	function addClocks()
+	{
+
+        var bg1:FlxSprite = new FlxSprite(-1113, 65);
+		bg1.frames = Paths.fromGenericXML("bg/eteled/Glitchmiibuttons", 'mods');
+
+		bg1.animation.addByPrefix('idle', 'Stagecurtains0', 24, true);
+		bg1.antialiasing = true;
+		bg1.scale.y = 1.6;
+		bg1.scale.x = 1.6;
+		bg1.scrollFactor.set(0.95, 0.95);
+		bg1.animation.play('idle');
+		playState.add(bg1);
+
 	}
 
 	override function createDadAnimations():Void
@@ -58,6 +76,12 @@ class Diagraphephobia extends DreamOfPeace
 		dad.y = 266;
 		dad.dance();
 
+	}
+
+	override function createCharacters()
+	{
+		super.createCharacters();
+		addClocks();
 	}
 	
 	override function createGFAnimationOffsets()

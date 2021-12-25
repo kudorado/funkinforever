@@ -65,16 +65,16 @@ class Plaything extends SongPlayer
 
 	}
 	
-    override function createBF()
-    {
-        //super.createBF();
-        changePc('glitchhallway');
-        bf.y += 317;
-    }
 
-	override function createGFAnimationOffsets()
+	override function createCharacters()
 	{
-		super.createGFAnimationOffsets();
+		super.createCharacters();
+
+		trace('shit');
+		changePc('glitchhallway');
+		bf.x += 164;
+        bf.y += 427;
+		
 	}
 
 	public override function getDadIcon(icon:HealthIcon)
