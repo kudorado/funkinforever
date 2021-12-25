@@ -128,9 +128,9 @@ class Paths
 		return FlxAtlasFrames.fromSpriteSheetPacker(image(key, library), file('images/$key.txt', library));
 	}
 	
-	inline static public function fromGenericXML(key:String, ?library:String)
+	inline static public function fromGenericXML(key:String, ?library:String, offsetX:Float = 150, offsetY:Float = 150)
 	{
-		return FlxAtlasFrames.fromTexturePackerXml(image(key, library), file('images/$key.xml', library));
+		return FlxAtlasFrames.fromTexturePackerXml(image(key, library), file('images/$key.xml', library), offsetX, offsetY);
 	}
 
 }

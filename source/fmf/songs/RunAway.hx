@@ -13,7 +13,7 @@ class RunAway extends SongPlayer
 
     override function getDadTex()
 	{
-		var tex = Paths.fromGenericXML('pc/impostor_v4/black', 'mods');
+		var tex = Paths.fromGenericXML('pc/impostor_v4/Black', 'mods');
 		dad.frames = tex;
 	}
 
