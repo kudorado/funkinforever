@@ -84,6 +84,7 @@ class WatchOut extends SongPlayer
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
+        gf.playAnim('idle');
 	}
 
 	public override function getDadIcon(icon:HealthIcon)
