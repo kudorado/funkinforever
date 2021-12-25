@@ -11,6 +11,8 @@ import fmf.characters.*;
 class DoubleTrouble extends SongPlayer
 {
 
+    
+
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/impostorV4/gray-crewmate', 'mods');
