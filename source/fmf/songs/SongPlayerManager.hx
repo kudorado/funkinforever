@@ -481,6 +481,9 @@ class SongPlayerManager
 
 			case 'run-away':
 				songPlayer = new RunAway();
+
+			case 'perfume':
+				songPlayer = new Perfume();
 	
 		}
 

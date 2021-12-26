@@ -11,7 +11,7 @@ class CensoryOverload extends Carefree
 
     override function getDadTex()
     {
-        var tex = Paths.fromGenericXML('pc/qt/black_run', 'mods');
+        var tex = Paths.fromGenericXML('pc/qt/robot', 'mods');
         dad.frames = tex;
     }
 

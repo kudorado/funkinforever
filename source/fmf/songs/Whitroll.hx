@@ -159,5 +159,19 @@ class Whitroll extends SongPlayer
 		gf.visible = false;
 	}
 
+	override function getBFIcon(icon:HealthIcon)
+	{
+		icon.loadGraphic(Paths.image('health_icon/cw_icon', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [5, 6], 0, false, false);
+		icon.animation.play("dad");
+	}
+
+	public override function getDadIcon(icon:HealthIcon)
+	{
+		icon.loadGraphic(Paths.image('health_icon/cw_icon', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [0, 1], 0, false, false);
+		icon.animation.play("dad");
+	}
+
 
 }

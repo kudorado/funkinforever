@@ -13,6 +13,7 @@ using StringTools;
 
 class Tiky extends TikyMask
 {
+	
 	public override function getTex():Void
 	{
 		var tex = Paths.getSparrowAtlas('pc/tricky/tikyangry', 'mods');
@@ -22,7 +23,7 @@ class Tiky extends TikyMask
 		{
 			tex.pushFrame(frame);
 		}
-		
+
 		frames = tex;
 	}
 
@@ -44,17 +45,16 @@ class Tiky extends TikyMask
 	// create animation offset for BF
 	public override function createAnimationOffsets():Void
 	{
-
 		this.flipX = true;
 
 		addOffset('idle', 0, 4);
 		addOffset('singUP', -70, -1);
-		addOffset('singRIGHT', 160, -64); 
+		addOffset('singRIGHT', 160, -64);
 		addOffset('singLEFT', -3, 0);
 		addOffset('singDOWN', 45, -12);
-	
+
 		addOffset('singUPmiss', -70, -1);
-		addOffset('singRIGHTmiss', 160, -64); 
+		addOffset('singRIGHTmiss', 160, -64);
 		addOffset('singLEFTmiss', -3, 0);
 		addOffset('singDOWNmiss', 45, -12);
 
@@ -65,7 +65,6 @@ class Tiky extends TikyMask
 
 		clown = new Clown();
 		clown.createStaticBG();
-
 	}
 
 	override function noteEventBF(noteData:Note)
