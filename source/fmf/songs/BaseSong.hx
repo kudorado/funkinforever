@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import flixel.FlxBasic;
 import Options.PcOption;
 import Options.VFXOption;
 import Options.SkinOption;
@@ -297,8 +298,11 @@ class BaseSong
 
 	private function switchBF(pc:PlayableCharacter)
 	{
-		playState.remove(bf);
-		bf.destroy();
+		if (bf != null)
+		{
+			playState.remove(bf);
+			bf.destroy();
+		}
 
 		this.bf = pc;
 		playState.add(bf);
@@ -353,6 +357,11 @@ class BaseSong
 	public function createStoryBF():Void
 	{	
 
+	}
+
+	public function add(obj:FlxBasic)
+	{
+		playState.add(obj);
 	}
 
 	private function createBFAnimationOffsets():Void
