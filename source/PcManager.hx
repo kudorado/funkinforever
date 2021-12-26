@@ -711,6 +711,9 @@ class PcManager
 			case 'whitty simp':
 				return new WhittySimp();
 
+			case 'bf trollge':
+				return new BFTrollge();
+
 
 
 		}
