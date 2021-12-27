@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import Options.DownscrollOption;
 import Options.PlaymodeOption;
 import openfl.events.EventDispatcher;
 import js.html.AnimationPlaybackEvent;
@@ -460,6 +461,9 @@ class SongPlayerManager
 
 			case 'airship-blue':
 				songPlayer = new AirshipBlue();
+			
+			case 'dlow':
+				songPlayer = new Dlow();
 
 			case 'double-trouble':
 				songPlayer = new DoubleTrouble();
