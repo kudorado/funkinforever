@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import flixel.addons.weapon.FlxWeapon.FlxTypedWeapon;
 import Options.DownscrollOption;
 import Options.PlaymodeOption;
 import openfl.events.EventDispatcher;
@@ -488,6 +489,9 @@ class SongPlayerManager
 
 			case 'perfume':
 				songPlayer = new Perfume();
+
+			case 'too-slow':
+				songPlayer = new TooSlow();
 	
 		}
 
