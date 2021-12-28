@@ -20,7 +20,7 @@ class TooSlow extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.85;
+		playState.defaultCamZoom = 0.95;
 		var sky:FlxSprite = new FlxSprite(-286, -42).loadGraphic(Paths.image('bg/sonic/Sonic_Stages/sky', 'mods'));
 		sky.antialiasing = true;
 
@@ -111,10 +111,10 @@ class TooSlow extends SongPlayer
 		dad.addOffset('singLEFT', 179, -4);
 		dad.addOffset('singDOWN', 176, -47);
 
-		dad.scale.x = 1;
-		dad.scale.y = 1;
-		dad.x = 156;
-		dad.y = 313;
+		dad.scale.x = 1.5;
+		dad.scale.y = 1.5;
+		dad.x = 196;
+		dad.y = 196;
 		dad.dance();
 
 	}
@@ -122,9 +122,25 @@ class TooSlow extends SongPlayer
     override function createBF()
     {
         super.createBF();
+        bf.x += 75;
         bf.y += 65;
-        bf.x += 40;
+
     }
+
+	override function updateCamFollowDad()
+	{
+		super.updateCamFollowDad();
+		playState.targetCamFollow.y += 150;
+		playState.defaultCamZoom = 0.9;
+
+
+	}
+
+	override function updateCamFollowBF()
+	{
+		super.updateCamFollowDad();
+		playState.defaultCamZoom = 1;
+	}
 
 	override function createGFAnimationOffsets()
 	{

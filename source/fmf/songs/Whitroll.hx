@@ -83,7 +83,7 @@ class Whitroll extends SongPlayer
 
 	function createTable()
 	{
-		var balc:FlxSprite = new FlxSprite(731, 558).loadGraphic(Paths.image('bg/date/table', 'mods'));
+		var balc:FlxSprite = new FlxSprite(733, 557).loadGraphic(Paths.image('bg/date/table', 'mods'));
 		balc.antialiasing = true;
 		balc.scale.y = 1;
 		balc.scale.x = 1;
@@ -124,12 +124,12 @@ class Whitroll extends SongPlayer
 
 	override function createStoryBF() 
 	{
-		changePc("whitty simp");
-		bf.scale.x = 1.047;
-		bf.scale.y = 1.047;
+		// changePc("whitty simp");
+		// bf.scale.x = 1.047;
+		// bf.scale.y = 1.047;
 
-		bf.x += 140;
-		bf.y -= 70;
+		// bf.x += 140;
+		// bf.y -= 70;
 
 
 	}
@@ -139,8 +139,8 @@ class Whitroll extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.x += 431;
-		bf.y -= 150;
+		bf.x += 243;
+		bf.y += 65;
 
 	}
 
@@ -164,6 +164,7 @@ class Whitroll extends SongPlayer
 		icon.loadGraphic(Paths.image('health_icon/cw_icon', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [5, 6], 0, false, false);
 		icon.animation.play("dad");
+	
 	}
 
 	public override function getDadIcon(icon:HealthIcon)

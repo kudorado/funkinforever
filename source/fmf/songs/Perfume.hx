@@ -78,6 +78,9 @@ class Perfume extends Whitroll
 		
 		createHeartThings();
 		add(wallbg);
+		
+		createTable();
+
 
 	
 	
@@ -85,7 +88,7 @@ class Perfume extends Whitroll
 
 	override function createLights()
 	{
-		var light:FlxSprite = new FlxSprite(450, -500).loadGraphic(Paths.image('bg/date/light', 'mods'));
+		var light:FlxSprite = new FlxSprite(450, -650).loadGraphic(Paths.image('bg/date/light', 'mods'));
 		light.antialiasing = true;
 		light.scale.y = 1;
 		light.scale.x = 1;
@@ -96,6 +99,7 @@ class Perfume extends Whitroll
 	{
 		super.createCharacters();
 		createLights();
+
 	}
 
 	public function initBGChars()
