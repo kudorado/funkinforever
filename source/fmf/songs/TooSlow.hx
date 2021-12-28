@@ -136,6 +136,15 @@ class TooSlow extends SongPlayer
 
 	}
 
+	override function dadNoteEvent(noteData:Note)
+	{
+		super.dadNoteEvent(noteData);
+		if (noteData.noteData == 2)
+		{
+			gf.playAnimForce("scared", 0.35);
+		}
+	}
+
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowDad();
