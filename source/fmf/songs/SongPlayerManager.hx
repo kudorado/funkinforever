@@ -493,6 +493,8 @@ class SongPlayerManager
 			case 'too-slow':
 				songPlayer = new TooSlow();
 	
+			case 'endless':
+				songPlayer = new Endless();
 		}
 
 		return songPlayer;
