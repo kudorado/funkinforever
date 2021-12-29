@@ -496,6 +496,8 @@ class SongPlayerManager
 			case 'heartbass':
 				songPlayer = new Heartbass();
 	
+			case 'endless':
+				songPlayer = new Endless();
 		}
 
 		return songPlayer;
