@@ -209,7 +209,7 @@ class Heartbass extends Perfume
 			playState.camGame.zoom += 0.05;
 		}
 		
-		if (curBeat == 13)
+		if (curBeat == 359)
 		{
 			frontboppers.visible = true;
 			backboppers.visible = true;
@@ -226,7 +226,7 @@ class Heartbass extends Perfume
 
 		}
 
-		if (curBeat == 14) // 360)
+		if (curBeat == 360) // 360)
 		{
 			playState.isMidSongEvent = true;
 			dancing = true;

@@ -64,7 +64,7 @@ class Whitroll extends SongPlayer
 
 	function createLights()
 	{
-		var light:FlxSprite = new FlxSprite(459, -434).loadGraphic(Paths.image('bg/date/light', 'mods'));
+		var light:FlxSprite = new FlxSprite(459, -500).loadGraphic(Paths.image('bg/date/light', 'mods'));
 		light.antialiasing = true;
 		light.scale.y = 1;
 		light.scale.x = 1;
