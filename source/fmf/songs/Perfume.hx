@@ -11,8 +11,8 @@ class Perfume extends Whitroll
 {
 	private var characters_walking:FlxSprite;
 	private var characters_walking2:FlxSprite;
-	public static var charswhohavewalked:Array<String> = [];
-	public static var charswhohavewalked2:Array<String> = [];
+	public var charswhohavewalked:Array<String> = [];
+	public var charswhohavewalked2:Array<String> = [];
 	var stopSTOPITSTOPITNOW:Int = 270;
 	public var moveNOWWW:Bool = true;
 
@@ -131,18 +131,20 @@ class Perfume extends Whitroll
 	{
 		super.update(elapsed);
 
+		ohNooooo();
+	}
+
+	function ohNooooo()
+	{
 		// heartbeat too
-		trace("ah shit: " + characters_walking.animation);
 		if (FlxG.save.data.distractions
 			&& characters_walking.animation != null
 			&& characters_walking.animation.curAnim != null)
 		{ // only on perfume. probably a better way to do this
 
-			trace("jump 1: " + moveNOWWW);
 
 			if (characters_walking.animation.curAnim.name == "selsunday" || characters_walking.animation.curAnim.name == "jojo")
 			{
-				trace("jump 1");
 
 				if (moveNOWWW)
 					characters_walking.x += 8;
@@ -164,7 +166,6 @@ class Perfume extends Whitroll
 			}
 			else if (chars.lastIndexOf(characters_walking.animation.curAnim.name) % 2 == 0)
 			{
-				trace("jump 2: " + moveNOWWW);
 
 				if (moveNOWWW)
 					characters_walking.x -= 2;
@@ -187,7 +188,6 @@ class Perfume extends Whitroll
 			}
 			else
 			{
-				trace("jump 3: " + moveNOWWW);
 
 				if (moveNOWWW)
 					characters_walking.x += 2;
@@ -210,7 +210,6 @@ class Perfume extends Whitroll
 
 			if (true)
 			{
-				trace("jump 4: " + moveNOWWW);
 
 				if (chars2.lastIndexOf(characters_walking2.animation.curAnim.name) % 2 == 0)
 				{

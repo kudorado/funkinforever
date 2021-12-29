@@ -492,6 +492,9 @@ class SongPlayerManager
 
 			case 'too-slow':
 				songPlayer = new TooSlow();
+
+			case 'heartbass':
+				songPlayer = new Heartbass();
 	
 		}
 

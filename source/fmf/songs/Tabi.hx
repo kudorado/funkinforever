@@ -11,7 +11,7 @@ class Tabi extends SongPlayer
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/tabi/TABI', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/tabiremix/TABI', 'mods');
 		dad.frames = tex;
 	}
 
@@ -42,7 +42,7 @@ class Tabi extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.8;
+		playState.defaultCamZoom = 0.7;
 		var bg:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('bg/tabi/normal_stage', 'mods'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.95, 0.95);
@@ -50,7 +50,7 @@ class Tabi extends SongPlayer
 		playState.add(bg);
 
 		#if !mobile
-		PlayState.songOffset = -500;
+		// PlayState.songOffset = -500;
 		#end
 	}
 
@@ -62,7 +62,7 @@ class Tabi extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'Dad idle dance', 24, false);
+		animation.addByPrefix('idle', 'Dad idle dance0', 18, false);
 		animation.addByPrefix('singUP', 'Dad Sing Note UP0', 24, false);
 		animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN0', 24, false);
 		animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT0', 24, false);
@@ -102,6 +102,19 @@ class Tabi extends SongPlayer
 		sumtable.antialiasing = true;
 		sumtable.scrollFactor.set(0.95, 0.95);
 		playState.add(sumtable);
+	}
+
+	override function updateCamFollowDad()
+	{
+
+		playState.targetCamFollow.x = bf.getMidpoint().x - 350;
+		playState.targetCamFollow.y = bf.y + 150;
+	}
+
+	override function updateCamFollowBF()
+	{
+		playState.targetCamFollow.x = bf.getMidpoint().x - 350;
+		playState.targetCamFollow.y = bf.y + 50;
 	}
 
 	public override function getDadIcon(icon:HealthIcon)

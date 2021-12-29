@@ -384,6 +384,7 @@ class ArtificialLust extends SongPlayer
 
 		}
 	}
+	
 	function eventEnter()
 	{
 		switchDad(eventSong, false);

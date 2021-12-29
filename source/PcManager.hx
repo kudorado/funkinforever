@@ -714,6 +714,8 @@ class PcManager
 			case 'bf trollge':
 				return new BFTrollge();
 
+			case 'whittysimp dance':
+				return new WhittySimpDance();
 
 
 		}

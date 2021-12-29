@@ -137,7 +137,9 @@ class BaseSong
 
 		bf.characterAddedEvent();
 
-		createStoryBF();
+		if (PlayState.isStoryMode)
+			createStoryBF();
+
 
 	}
 
