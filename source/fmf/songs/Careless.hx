@@ -30,6 +30,17 @@ class Careless extends Carefree
 
 	}
 
+	override function createTV()
+	{
+		playState.defaultCamZoom = 0.9;
+		var bg:FlxSprite = new FlxSprite(100, 356).loadGraphic(Paths.image('bg/qt/TV_V2', 'mods'));
+		bg.antialiasing = true;
+		bg.scale.y = 1;
+		bg.scale.x = 1;
+		playState.add(bg);
+	}
+
+
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;

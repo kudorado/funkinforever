@@ -242,7 +242,7 @@ class SongManager
 				folder: 'week_zardy',
 				character: 'zardy',
 				songTitle: 'V.S Zardy',
-				songList: ['Bushwhack', 'Foolhardy']
+				songList: ['Foolhardy', 'Bushwhack']
 			}
 		),
 
