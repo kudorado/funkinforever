@@ -94,4 +94,12 @@ class FirstTown extends SongPlayer
 		playState.targetCamFollow.y = 360;
 
 	}
+
+	public override function getDadIcon(icon:HealthIcon)
+	{
+		icon.loadGraphic(Paths.image('health_icon/camellia/iconGrid', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [10, 11], 0, false, false);
+		icon.animation.play("dad");
+	}
+
 }
