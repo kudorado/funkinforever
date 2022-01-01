@@ -22,8 +22,8 @@ class Foolhardy extends SongPlayer
 		bgAnim.animation.addByPrefix('idle', 'Stage00', 24, true);
 		bgAnim.animation.play('idle');
 		bgAnim.antialiasing = true;
-        bgAnim.scale.x = 1.5;
-        bgAnim.scale.y = 1.5;
+        bgAnim.scale.x = 1.65;
+        bgAnim.scale.y = 1.65;
 		bgAnim.x = 0;
 		bgAnim.y = 111;
         playState.add(bgAnim);
