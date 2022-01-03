@@ -4,7 +4,6 @@ import flixel.addons.weapon.FlxWeapon.FlxTypedWeapon;
 import Options.DownscrollOption;
 import Options.PlaymodeOption;
 import openfl.events.EventDispatcher;
-import js.html.AnimationPlaybackEvent;
 import haxe.display.JsonModuleTypes.JsonClassFieldReference;
 import flixel.input.gamepad.lists.FlxBaseGamepadList;
 import openfl.display.GraphicsShader;
