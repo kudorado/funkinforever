@@ -252,7 +252,7 @@ class SongManager
 				folder: 'week_sonic',
 				character: 'sonic',
 				songTitle: 'V.S Sonic.exe',
-				songList: ['Too-Slow', 'Endless', 'Execution']
+				songList: ['Too-Slow', 'Endless', 'Execution', 'You-Cant-Run']
 			}
 		),
 

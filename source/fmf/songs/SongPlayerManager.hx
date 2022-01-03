@@ -497,6 +497,9 @@ class SongPlayerManager
 	
 			case 'endless':
 				songPlayer = new Endless();
+			
+			case 'you-cant-run':
+				songPlayer = new YouCantRun();
 		}
 
 		return songPlayer;
