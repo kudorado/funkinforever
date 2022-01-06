@@ -69,6 +69,13 @@ class SongFilter
 				replace: 'dadbattle'
 			}
 		),
+
+		new SongFilterData(
+			{
+				key : 'triple-trouble[sonic]',
+				replace: 'triple-trouble'
+			}
+		),
 	];
 
 }
