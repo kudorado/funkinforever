@@ -103,6 +103,7 @@ class Sadness extends SongPlayer
 		dad.addOffset('singLEFT', 72, 6);
 		dad.addOffset('singDOWN', -19, -30);
 		dad.dance();
+		
         dad.scale.x = 1.2;
         dad.scale.y = 1.2;
 		dad.x = 722;
