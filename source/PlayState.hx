@@ -716,7 +716,13 @@ class PlayState extends MusicBeatState
 	{
 		boundMin = new FlxText(0, 0, "");
 		boundMax = new FlxText(0, 25, "");
-
+		
+		boundMin.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
+		boundMin.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+		
+		boundMax.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
+		boundMax.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+	
 		boundMin.cameras = [camHUD];
 		boundMax.cameras = [camHUD];
 

@@ -113,8 +113,8 @@ class Sadness extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.x += 913;
-		bf.y += 294;
+		bf.x += 809;
+		bf.y += 50;
 
 	}
 

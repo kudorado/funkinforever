@@ -58,7 +58,7 @@ class Controller
 	public static var BACK(get, never):Bool;
     static inline function get_BACK()
     {
-		return _pad.buttonB.justPressed || controls.BACK;
+		return _pad.buttonB != null && (_pad.buttonB.justPressed || controls.BACK);
     }
 
     //LEFT SIDE, pressed ARROW SHIT
