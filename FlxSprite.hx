@@ -288,8 +288,10 @@ class FlxSprite extends FlxObject
 			defaultDebugObject = SimpleGraphic;
 		}
 
+		#if !mobile
 		#if debug
 		FlxMouseEventManager.add(this, mouseDown, null, null, null, null);
+		#end
 		#end
 	}
 

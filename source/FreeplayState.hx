@@ -71,10 +71,12 @@ class FreeplayState extends MusicBeatState
 
 		var isDebug:Bool = false;
 
+		#if !mobile
 		#if debug
 		isDebug = true;
 		#end
-
+		#end
+		
 		// LOAD MUSIC
 
 		// LOAD CHARACTERS

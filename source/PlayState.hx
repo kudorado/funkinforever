@@ -1452,9 +1452,11 @@ class PlayState extends MusicBeatState
 
 		checkUnlockCamFollow();
 
+		#if !mobile
 		#if debug
 		boundMin.text = "camFollow: " + camFollow.getPosition() + ", safe frame: "  + camFollowSafeFrame;
 		boundMax.text = "lockCamFollow: " + lockCamFollow + ", targetPosition: " + targetCamFollow;
+		#end
 		#end
 
 		#if !debug
@@ -1547,8 +1549,10 @@ class PlayState extends MusicBeatState
 			npsShit ++;
 		}
 
+		#if !mobile
 		#if debug
 		health = 2;
+		#end
 		#end
 
 		super.update(elapsed);
@@ -1572,6 +1576,7 @@ class PlayState extends MusicBeatState
 		
 			openSubState(new PauseSubState(boyfriend().getScreenPosition().x, boyfriend().getScreenPosition().y));
 		}
+		#if !mobile
 		#if debug
 		if (FlxG.keys.justPressed.P)
 		{
@@ -1581,6 +1586,7 @@ class PlayState extends MusicBeatState
 
 			openSubState(new DebugPauseSubState(boyfriend().getScreenPosition().x, boyfriend().getScreenPosition().y));
 		}
+		#end
 		#end
 		
 		if (FlxG.keys.justPressed.SEVEN)
@@ -1647,6 +1653,7 @@ class PlayState extends MusicBeatState
 
 
 
+		#if !mobile
 		#if debug
 		if (FlxG.keys.justPressed.EIGHT)
 		{
@@ -1659,6 +1666,7 @@ class PlayState extends MusicBeatState
 			}
 			#end
 		}
+
 
 		if (FlxG.keys.justPressed.ZERO)
 		{
@@ -1677,6 +1685,7 @@ class PlayState extends MusicBeatState
 			FlxG.switchState(new AnimationDebug(false, true));
 		}
 	
+		#end
 		#end
 	
 

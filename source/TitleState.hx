@@ -1,6 +1,8 @@
 package;
 
 import extension.admob.AdMob;
+import extension.admob.GravityMode;
+
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -66,8 +68,9 @@ class TitleState extends MusicBeatState
 
 		// DEBUG BULLSHIT
 
+		AdMob.initIOS("11c519235", "", GravityMode.BOTTOM);
 		#if mobile	
-		AdMob.initAndroid();
+		// AdMob.initAndroid();
 		#end
 
 
@@ -345,6 +348,12 @@ class TitleState extends MusicBeatState
 
 
 			case 2:
+				if (credit == null)
+				{
+					creditStep = -9999;
+					skipIntro();
+					return;
+				}
 				createCoolText(credit.titles);
 				creditStep++;
 

@@ -119,7 +119,7 @@ class VictorySubState extends MusicBeatSubstate
 
         cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
-        Controller.init(this, UP_DOWN, A_B);
+        Controller.init(this, UP_DOWN, A);
         Controller._pad.cameras = [PlayState.instance.camHUD];
 
 		LoadingState.createBlackFadeOut(this, PlayState.instance.camHUD);

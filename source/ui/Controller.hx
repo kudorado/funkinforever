@@ -34,8 +34,11 @@ class Controller
 		#if mobile 
     	_pad.alpha = 0.85;
 		#end
+		
+		#if !mobile
 		#if debug //i dunno could it be using || for multiple condition, cuz i'm stupis	
 		_pad.alpha = 0.85;
+		#end
 		#end
 
 

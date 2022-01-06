@@ -70,8 +70,8 @@ class FirstTown extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y = 494;
-		bf.x = 1613;
+		bf.x += 913;
+		bf.y += 70;
 	}
 
 	override function createGFAnimationOffsets()

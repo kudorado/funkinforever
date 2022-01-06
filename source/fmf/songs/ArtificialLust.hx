@@ -384,7 +384,7 @@ class ArtificialLust extends SongPlayer
 
 		}
 	}
-	
+
 	function eventEnter()
 	{
 		switchDad(eventSong, false);
@@ -395,7 +395,6 @@ class ArtificialLust extends SongPlayer
 	{
 		switchDad(new ArtificialLust(), true, false);
 		switchAbelAndMax();
-
 	}
 
 	function switchAbelAndMaxRGB()
