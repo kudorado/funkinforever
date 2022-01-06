@@ -358,6 +358,8 @@ class StoryMenuState extends MusicBeatState
 			var daSong = PlayState.SONG_NAME + diffic;
 			var daFolder = PlayState.playingSong.folder + StringTools.replace(PlayState.storyPlaylist[0], " ", "-").toLowerCase();
 
+			trace("daFolder: " + daFolder);
+			
 			PlayState.SONG = Song.loadFromJson(daSong, daFolder);
 
 			PlayState.storyWeek = curWeek;

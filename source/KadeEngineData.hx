@@ -136,7 +136,7 @@ class KadeEngineData
             FlxG.save.data.customStrumLine = 0;
 
         if (FlxG.save.data.mobileControl == null)
-            FlxG.save.data.mobileControl = 5;
+            FlxG.save.data.mobileControl = 0;
 
         Conductor.recalculateTimings();
         PlayerSettings.player1.controls.loadKeyBinds();

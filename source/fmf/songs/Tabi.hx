@@ -11,7 +11,7 @@ class Tabi extends SongPlayer
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/tabiremix/TABI', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/tabi/TABI', 'mods');
 		dad.frames = tex;
 	}
 

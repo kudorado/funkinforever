@@ -107,7 +107,6 @@ class SongPlayerManager
 			case 'manifest':
 				songPlayer = new SkyMad();
 
-
 			case 'incident[trueface]':
 				songPlayer = new Incident();
 
@@ -150,7 +149,7 @@ class SongPlayerManager
 			case 'fading':
 				songPlayer = new GarcelloGhosty();
 
-			case 'my-battle' | 'last-chance':
+			case 'my-battle' | 'last-chance' | 'my battle' | 'last chance':
 				songPlayer = new Tabi();
 
 			case 'genocide':

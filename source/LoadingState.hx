@@ -65,6 +65,7 @@ class LoadingState extends MusicBeatState
 			var library = Assets.getLibrary("songs");
 			final symbolPath = path.split(":").pop();
 			var callback = callbacks.add("song:" + path);
+			trace('try cache: ' + path);
 			Assets.loadSound(path).onComplete(function(_)
 			{
 				callback();
@@ -139,17 +140,18 @@ class LoadingState extends MusicBeatState
 
 	static function getSongPath()
 	{
-		var daSongName = StringTools.replace(PlayState.SONG_NAME, "SHIT", "");
-		//ignore case when load song path
-		return Paths.inst(daSongName, PlayState.playingSong.folder);
+		var daSongPath = Paths.inst(PlayState.SONG_NAME, PlayState.playingSong.folder);
+		trace('songPath: ' + daSongPath);
+
+		return daSongPath;
 	}
 
 	static function getVocalPath()
 	{
-		var daSongName = StringTools.replace(PlayState.SONG_NAME, "SHIT", "");
-		//ignore case when load song path
-		
-		return Paths.voices(daSongName, PlayState.playingSong.folder);
+		var daVocalPath =  Paths.voices(PlayState.SONG_NAME, PlayState.playingSong.folder);
+		trace('vocalPath: ' + daVocalPath);
+
+		return daVocalPath;
 	}
 
 	static function getBitmapPath(path:String, library:String = 'mods')
@@ -186,6 +188,7 @@ class LoadingState extends MusicBeatState
 	{
 		Paths.setCurrentLevel(SongManager.songs[PlayState.storyWeek].folder);
 		// #if NO_PRELOAD_ALL
+		trace('need voices:' + PlayState.SONG.needsVoices);
 		var loaded = isSoundLoaded(getSongPath())
 			&& (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath()))
 			&& isLibraryLoaded("shared");
@@ -310,8 +313,9 @@ class LoadingState extends MusicBeatState
 	// #if NO_PRELOAD_ALL
 	static function isSoundLoaded(path:String):Bool
 	{
-		trace("loaded sound path: " + path);
-		return Assets.cache.hasSound(path);
+		var isSoundLoaded = Assets.cache.hasSound(path);
+		trace("is sound loaded????: " + isSoundLoaded);
+		return isSoundLoaded;
 	}
 
 	static function isLibraryLoaded(library:String):Bool
