@@ -76,8 +76,8 @@ class Main extends Sprite
 
 		//debug resolution
 		// 
-		// var stageWidth:Int = 1480;
-		// var stageHeight:Int = 720;
+		// var stageWidth:Int = 2688;
+		// var stageHeight:Int = 1242;
 		
 		var kudoradoHandsome:Bool = true;
 		var daFactor:Float = (stageWidth / (stageHeight * 1.0));
@@ -85,6 +85,9 @@ class Main extends Sprite
 		trace("daWidth: " + stageWidth);
 		trace("daHeight: " + stageHeight);
 		trace("daFactor: " + daFactor);
+
+	
+
 		if (kudoradoHandsome == true)
 		{
 			if (daFactor > 1.6) // wide phone
@@ -104,6 +107,9 @@ class Main extends Sprite
 			}
 			else // tablet
 			{
+				fx = stageWidth / gameWidth;
+				fy = stageHeight / gameHeight;
+
 				zoom = Math.min(fx, fy);
 				daTabletShit = true;
 			}
