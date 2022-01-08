@@ -246,15 +246,6 @@ class SongManager
 			}
 		),
 
-		// new SongData	
-		// (
-		// 	{
-		// 		folder: 'week_sonic',
-		// 		character: 'sonic',
-		// 		songTitle: 'V.S Sonic.exe',
-		// 		songList: ['Too-Slow', 'Endless', 'You-Cant-Run']
-		// 	}
-		// ),
 
 		new SongData	
 		(
@@ -262,7 +253,7 @@ class SongManager
 				folder: 'week_sonic',
 				character: 'sonic',
 				songTitle: 'V.S Sonic.exe',
-				songList: ['Too-Slow', 'You-Cant-Run', 'triple-trouble[sonic]', 'Cycles', 'Endless', 'Sunshine', 'Chaos', 'Faker', 'Black-sun', 'Milk', 'Too-fest']
+				songList: ['Too-Slow', 'You-Cant-Run', 'triple-trouble[sonic]', 'Cycles', 'Endless', 'Sunshine']
 			}
 		),
 

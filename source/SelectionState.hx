@@ -384,6 +384,7 @@ class SelectionState extends MusicBeatState
 	{
 		if (options[curSelection].toLowerCase() == 'play')
 		{
+			AdMob.showInterstitial(60);
 			//go babe
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)
