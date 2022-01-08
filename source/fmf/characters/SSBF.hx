@@ -53,7 +53,6 @@ class SSBF extends Boyfriend
 		addOffset('singDOWNmiss', 0, 0);
 		
 		playAnim('idle');
-		flipX = true;
 
 
 		this.scale.x = 2;
