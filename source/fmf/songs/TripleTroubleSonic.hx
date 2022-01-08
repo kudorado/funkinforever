@@ -72,15 +72,15 @@ class TripleTroubleSonic extends SongPlayer
     {
             
         dad.addOffset('idle', 0, 0);
-        dad.addOffset('singUP', 20, 39);
-        dad.addOffset('singRIGHT', 20, -11);
-        dad.addOffset('singLEFT', 78, -8);
-        dad.addOffset('singDOWN', 42, 47);
+        dad.addOffset('singUP', 48, 65);
+        dad.addOffset('singRIGHT', 23, -21);
+        dad.addOffset('singLEFT', 118, -19);
+        dad.addOffset('singDOWN', 42, -83);
 
         dad.scale.x = 1.7;
 		dad.scale.y = 1.7;
 		dad.x = 311;
-		dad.y = 323;
+		dad.y = 262;
 
         dad.dance();
 
