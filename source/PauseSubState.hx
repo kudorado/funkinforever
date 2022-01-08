@@ -205,16 +205,21 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.instance.gameNa();
 					close();
 					PlayState.instance.restorePad();
+					AdMob.showInterstitial(60);
+
 
 					PlayState.instance.switchState(function()
 					{
 						FlxG.resetState();
 					});
 
+
 				case 'Customization':
 					PlayState.instance.gameNa();
 					close();
 					PlayState.instance.restorePad();
+
+					AdMob.showInterstitial(60);
 
 					PlayState.instance.switchState(function()
 					{
@@ -222,9 +227,11 @@ class PauseSubState extends MusicBeatSubstate
 					});
 					
 				case "Exit to menu":
+
 					PlayState.instance.gameNa();
 					close();
 					PlayState.instance.restorePad();
+					AdMob.showInterstitial(60);
 
 					PlayState.instance.switchState(function()
 					{
@@ -234,6 +241,7 @@ class PauseSubState extends MusicBeatSubstate
 							FlxG.switchState(new FreeplayState());
 						
 					});
+
 
 			}
 		}

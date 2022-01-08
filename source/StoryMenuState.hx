@@ -332,6 +332,7 @@ class StoryMenuState extends MusicBeatState
 				grpWeekText.members[curWeek].startFlashing();
 				// grpWeekCharacters.members[1].animation.play('bfConfirm');
 				stopspamming = true;
+				AdMob.showInterstitial(60);
 			}
 
 			PlayState.storyPlaylist = SongManager.songs[curWeek].copySongList;
