@@ -42,15 +42,15 @@ class SSBF extends Boyfriend
 	
 		addOffset('idle', 0, 0);
 
-		addOffset('singUP', -0, 0);
-		addOffset('singRIGHT', 0, 0);
-		addOffset('singLEFT', -0, 0);
-		addOffset('singDOWN', 0, 0);
+		addOffset('singUP', -2, 4);
+		addOffset('singRIGHT', -2, -6);
+		addOffset('singLEFT', 24, 9);
+		addOffset('singDOWN', 2, -13);
 		
-		addOffset('singUPmiss', -0, 0);
-		addOffset('singRIGHTmiss', -0, 0);
-		addOffset('singLEFTmiss', -0, 0);
-		addOffset('singDOWNmiss', 0, 0);
+		addOffset('singUPmiss', -2, 5);
+		addOffset('singRIGHTmiss', 10, 13);
+		addOffset('singLEFTmiss', 19, -2);
+		addOffset('singDOWNmiss', 17, 17);
 		
 		playAnim('idle');
 

@@ -13,8 +13,7 @@ class SunshineSonic extends SongPlayer
 
     override function getDadTex()
     {
-        //var tex = Paths.getSparrowAtlas('pc/sonic/Tails_Doll', 'mods');
-        var tex = Paths.getSparrowAtlas('pc/sonic/SSBF_Assets', 'mods');
+        var tex = Paths.getSparrowAtlas('pc/sonic/Tails_Doll', 'mods');
         dad.frames = tex;
     }
 
@@ -39,24 +38,11 @@ class SunshineSonic extends SongPlayer
     override function createDadAnimations():Void
     {
         var animation = dad.animation;
-        // animation.addByPrefix('idle', 'TailsDoll IDLE', 24, true);
-        // animation.addByPrefix('singUP', 'TailsDoll UP', 24, false);
-        // animation.addByPrefix('singRIGHT', 'TailsDoll RIGHT', 24, false);
-        // animation.addByPrefix('singLEFT', 'TailsDoll LEFT', 24, false);
-        // animation.addByPrefix('singDOWN', 'TailsDoll DOWN', 24, false);
-
-        //for test
-        animation.addByPrefix('idle', 'SSBF IDLE instance 100', 24, false);
-		animation.addByPrefix('singUP', 'SSBF UP instance', 24, false);
-		animation.addByPrefix('singRIGHT', 'SSBF RIGHT instance', 24, false);
-		animation.addByPrefix('singLEFT', 'SSBF LEFT instance 100', 24, false);
-		animation.addByPrefix('singDOWN', 'SSBF DOWN instance', 24, false);
-
-        // animation.addByPrefix('idle', 'SSBF IDLE instance 100', 24, false);
-		// animation.addByPrefix('singUP', 'SSBF UPmiss instance', 1, false);
-		// animation.addByPrefix('singRIGHT', 'SSBF RIGHTmiss instance', 1, false);
-		// animation.addByPrefix('singLEFT', 'SSBF LEFTmiss instance', 1, false);
-		// animation.addByPrefix('singDOWN', 'SSBF DOWNmiss instance', 1, false);
+        animation.addByPrefix('idle', 'TailsDoll IDLE', 24, true);
+        animation.addByPrefix('singUP', 'TailsDoll UP', 24, false);
+        animation.addByPrefix('singRIGHT', 'TailsDoll RIGHT', 24, false);
+        animation.addByPrefix('singLEFT', 'TailsDoll LEFT', 24, false);
+        animation.addByPrefix('singDOWN', 'TailsDoll DOWN', 24, false);
         
         dad.animation = animation;
     }
@@ -72,7 +58,7 @@ class SunshineSonic extends SongPlayer
 
         dad.scale.x = 2;
         dad.scale.y = 2;
-        dad.x = 442;
+        dad.x = 360;
         dad.y = 303;
         dad.dance();
 
@@ -81,7 +67,12 @@ class SunshineSonic extends SongPlayer
     override function createStoryBF()
     {
         changePc('sonic_ssbf');
-        bf.x += 200;
+        bf.x += 350;
+    }
+
+    override function createBFAnimationOffsets() 
+    {
+        bf.x += 352;
     }
 
     override function updateCamFollowDad()
