@@ -27,7 +27,7 @@ class Redemption extends Sadness
 		whito2.antialiasing = true;
 		whito2.alpha = 0;
 		
-		soe.loadGraphic(Paths.image('bg/blueballs_incident/redemp/sad', 'mods'));
+		soe.loadGraphic(Paths.image('bg/blueballs_incident/sadi/sad', 'mods'));
 		soe.antialiasing = true;
 		soe.scrollFactor.set(0.9, 0.9);
 		soe.y -= 100;
