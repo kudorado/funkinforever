@@ -44,10 +44,6 @@ class Dad extends Character
 			playAnim('idle', true, false, 10);
 		}
 
-		if (animation.curAnim.name.startsWith('sing'))
-		{
-			holdTimer += elapsed;
-		}
 	}
 
 	private function dadBehaviour(elapsed:Float)
@@ -59,6 +55,8 @@ class Dad extends Character
 		{
 			holdTimer += elapsed;
 		}
+		else 
+			holdTimer = 0;
 
 		var dadVar:Float = 6.1;
 

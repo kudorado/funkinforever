@@ -3098,19 +3098,19 @@ class PlayState extends MusicBeatState
 			if (dad().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || botPlayShit))
 			{
 				if (dad().animation.curAnim.name.startsWith('sing')
-					&& !dad().animation.curAnim.name.endsWith('miss')
-					&& (boyfriend().animation.curAnim != null && boyfriend().animation.curAnim.finished))
+					&& !dad().animation.curAnim.name.endsWith('miss'))
+					// && (boyfriend().animation.curAnim != null && boyfriend().animation.curAnim.finished))
 					dad().playAnim('idle'); // .idle();
 			}
 		}
 
 		else
 		{
-			if (boyfriend().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (botPlayShit))
+			if (boyfriend().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || botPlayShit))
 			{
 				if (boyfriend().animation.curAnim.name.startsWith('sing')
-					&& !boyfriend().animation.curAnim.name.endsWith('miss')
-					&& (boyfriend().animation.curAnim != null && boyfriend().animation.curAnim.finished))
+					&& !boyfriend().animation.curAnim.name.endsWith('miss'))
+					// && (boyfriend().animation.curAnim != null && boyfriend().animation.curAnim.finished))
 					boyfriend().playAnim('idle');//, false, false, 10);
 			}
 		}
@@ -3467,8 +3467,8 @@ class PlayState extends MusicBeatState
 			// Dad doesnt interupt his own notes
 			if (SONG.notes[Math.floor(curStep / 16)].mustHitSection)
 			{
-				if (!playAsDad)
-					dad().dance();
+				// if (!playAsDad)
+					// dad().dance();
 			}
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
@@ -3501,14 +3501,16 @@ class PlayState extends MusicBeatState
 
 		if (playAsDad)
 		{
-			if (!dad().animation.curAnim.name.startsWith("sing")  && dad().animation.curAnim.finished)
+			if (!dad().animation.curAnim.name.startsWith("idle")
+				 && dad().animation.curAnim.finished)
 			{
 				dad().playAnim('idle');
 			}
 		}	
 		else
 		{
-			if (!boyfriend().animation.curAnim.name.startsWith("sing") && boyfriend().animation.curAnim.finished)
+			if (!boyfriend().animation.curAnim.name.startsWith("idle")
+				 && boyfriend().animation.curAnim.finished)
 			{
 				boyfriend().playAnim('idle');//, false, false, 10);
 			}

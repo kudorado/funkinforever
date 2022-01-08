@@ -96,25 +96,19 @@ class Tabi extends SongPlayer
 		createFrontObject();
 	}
 
+	override function updateCamFollowBF()
+	{
+		super.updateCamFollowBF();
+		playState.targetCamFollow.y -= 50;
+			
+	}
+
 	private function createFrontObject()
 	{
 		var sumtable:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('bg/tabi/sumtable', 'mods'));
 		sumtable.antialiasing = true;
 		sumtable.scrollFactor.set(0.95, 0.95);
 		playState.add(sumtable);
-	}
-
-	override function updateCamFollowDad()
-	{
-
-		playState.targetCamFollow.x = bf.getMidpoint().x - 350;
-		playState.targetCamFollow.y = bf.y + 150;
-	}
-
-	override function updateCamFollowBF()
-	{
-		playState.targetCamFollow.x = bf.getMidpoint().x - 350;
-		playState.targetCamFollow.y = bf.y + 50;
 	}
 
 	public override function getDadIcon(icon:HealthIcon)
