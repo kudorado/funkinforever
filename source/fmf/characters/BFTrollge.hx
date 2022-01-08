@@ -23,16 +23,16 @@ class BFTrollge extends Boyfriend
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		animation.addByPrefix('idle', 'BF idle dance', 24, false);
-		animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
-		animation.addByPrefix('singRIGHT', 'BF NOTE LEFT0', 24, false);
-		animation.addByPrefix('singLEFT', 'BF NOTE RIGHT0', 24, false);
-		animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+		animation.addByPrefix('idle', 'BF idle dance0', 9, false);
+		animation.addByPrefix('singUP', 'BF NOTE UP0', 9, false);
+		animation.addByPrefix('singRIGHT', 'BF NOTE LEFT0', 9, false);
+		animation.addByPrefix('singLEFT', 'BF NOTE RIGHT0', 9, false);
+		animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 9, false);
 		
-		animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
-		animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
-		animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
-		animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+		animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 9, false);
+		animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 9, false);
+		animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 9, false);
+		animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 9, false);
 	}
 
 	// create animation offset for BF

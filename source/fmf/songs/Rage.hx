@@ -29,7 +29,7 @@ class Rage extends Sadness
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', '1TrollgeRageIdle0', 12, true);
+		animation.addByPrefix('idle', '1TrollgeRageIdle0', 6, true);
 		animation.addByPrefix('singUP', '1TrollgeRageUp00', 24, false);
 		animation.addByPrefix('singRIGHT', '1TrollgeRageRight00', 24, false);
 		animation.addByPrefix('singLEFT', '1TrollgeRageLeft00', 24, false);

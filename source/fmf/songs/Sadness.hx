@@ -77,7 +77,7 @@ class Sadness extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'TrollfaceIdle00', 18, false);
+		animation.addByPrefix('idle', 'TrollfaceIdle0', 9, false);
 		animation.addByPrefix('singUP', 'TrollfaceUp00', 24, false);
 		animation.addByPrefix('singRIGHT', 'TrollfaceRight00', 24, false);
 		animation.addByPrefix('singLEFT', 'TrollfaceLeft00', 24, false);

@@ -21,7 +21,7 @@ class Incident extends Trueform
 	override function createDadAnimations()
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('singLEFT', 'TrollgeLeft', 24, false);
+		animation.addByPrefix('singLEFT', 'TrollgeLeft', 9, false);
 		animation.addByPrefix('singRIGHT', 'TrollgeRight', 24, false);
 		animation.addByPrefix('singUP', 'TrollgeUp', 24, false);
 		animation.addByPrefix('singDOWN', 'TrollgeDown', 24, false);
