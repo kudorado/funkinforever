@@ -76,6 +76,13 @@ class SongFilter
 				replace: 'triple-trouble'
 			}
 		),
+
+		new SongFilterData(
+			{
+				key : 'sunshine[sonic]',
+				replace: 'Sunshine'
+			}
+		),
 	];
 
 }

@@ -505,6 +505,9 @@ class SongPlayerManager
 
 			case 'cycles':
 				songPlayer = new Cycles();
+
+			case 'sunshine[sonic]':
+				songPlayer = new SunshineSonic();
 		}
 
 		return songPlayer;

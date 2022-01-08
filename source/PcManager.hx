@@ -1,5 +1,6 @@
 package;
 
+import flixel.FlxSubState;
 import flixel.FlxG;
 import fmf.songs.BaseSong;
 import fmf.songs.PlayableCharacter;
@@ -717,6 +718,8 @@ class PcManager
 			case 'whittysimp dance':
 				return new WhittySimpDance();
 
+			case 'sonic_ssbf':
+				return new SSBF(700, 425);
 
 		}
 
