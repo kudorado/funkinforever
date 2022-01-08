@@ -102,8 +102,8 @@ class EsAnimal extends SongPlayer
 
 			case 53:
 				changeDad("miku");
-				dad.x -= 275;
-				dad.y -= 25;
+				dad.x = 50;
+				dad.y = 256;
 
 			case 63:
 				changePc("monika");
@@ -112,14 +112,14 @@ class EsAnimal extends SongPlayer
 
 			case 72:
 				changeDad("casanova");
-				dad.x -= 225;
-				dad.y -= 50;
+				dad.x = -81;
+				dad.y = 252;
 
 
 			case 88:
 				changePc("ruv");
 				bf.x += 100;
-				bf.y += 50;
+				bf.y += 75;
 
 
 			case 96:
