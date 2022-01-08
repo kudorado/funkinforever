@@ -499,9 +499,12 @@ class SongPlayerManager
 			
 			case 'you-cant-run':
 				songPlayer = new YouCantRun();
-				
+
 			case 'triple-trouble[sonic]':
 				songPlayer = new TripleTroubleSonic();
+
+			case 'cycles':
+				songPlayer = new Cycles();
 		}
 
 		return songPlayer;
