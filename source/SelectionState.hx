@@ -424,7 +424,6 @@ class SelectionState extends MusicBeatState
 				curSelection = 0;
 				changeSelection(0);
 
-
 				if (selectedItem != null)
 				{
 					selectedItem.onSelected();

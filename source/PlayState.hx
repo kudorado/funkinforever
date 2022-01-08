@@ -716,13 +716,14 @@ class PlayState extends MusicBeatState
 	{
 		boundMin = new FlxText(0, 0, "");
 		boundMax = new FlxText(0, 25, "");
-		
+
+
 		boundMin.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
 		boundMin.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
-		
+
 		boundMax.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
 		boundMax.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
-	
+
 		boundMin.cameras = [camHUD];
 		boundMax.cameras = [camHUD];
 
@@ -1460,7 +1461,7 @@ class PlayState extends MusicBeatState
 
 		#if !mobile
 		#if debug
-		boundMin.text = "camFollow: " + camFollow.getPosition() + ", safe frame: "  + camFollowSafeFrame;
+		boundMin.text = "holdTimer: " + boyfriend().holdTimer +  ", camFollow: " + camFollow.getPosition() + ", safe frame: "  + camFollowSafeFrame;
 		boundMax.text = "lockCamFollow: " + lockCamFollow + ", targetPosition: " + targetCamFollow;
 		#end
 		#end
@@ -3096,17 +3097,21 @@ class PlayState extends MusicBeatState
 		{
 			if (dad().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || botPlayShit))
 			{
-				if (dad().animation.curAnim.name.startsWith('sing') && !dad().animation.curAnim.name.endsWith('miss'))
-					dad().playAnim('idle');
+				if (dad().animation.curAnim.name.startsWith('sing')
+					&& !dad().animation.curAnim.name.endsWith('miss')
+					&& (boyfriend().animation.curAnim != null && boyfriend().animation.curAnim.finished))
+					dad().playAnim('idle'); // .idle();
 			}
 		}
 
 		else
 		{
-			if (boyfriend().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || botPlayShit))
+			if (boyfriend().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (botPlayShit))
 			{
-				if (boyfriend().animation.curAnim.name.startsWith('sing') && !boyfriend().animation.curAnim.name.endsWith('miss'))
-					boyfriend().playAnim('idle');
+				if (boyfriend().animation.curAnim.name.startsWith('sing')
+					&& !boyfriend().animation.curAnim.name.endsWith('miss')
+					&& (boyfriend().animation.curAnim != null && boyfriend().animation.curAnim.finished))
+					boyfriend().playAnim('idle');//, false, false, 10);
 			}
 		}
 
@@ -3496,16 +3501,16 @@ class PlayState extends MusicBeatState
 
 		if (playAsDad)
 		{
-			if (!dad().animation.curAnim.name.startsWith("sing"))
+			if (!dad().animation.curAnim.name.startsWith("sing")  && dad().animation.curAnim.finished)
 			{
 				dad().playAnim('idle');
 			}
 		}	
 		else
 		{
-			if (!boyfriend().animation.curAnim.name.startsWith("sing"))
+			if (!boyfriend().animation.curAnim.name.startsWith("sing") && boyfriend().animation.curAnim.finished)
 			{
-				boyfriend().playAnim('idle');
+				boyfriend().playAnim('idle');//, false, false, 10);
 			}
 		}
 
