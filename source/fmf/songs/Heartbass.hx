@@ -271,7 +271,7 @@ class Heartbass extends Perfume
 
 		for (i in 0...chars.length)
 		{
-			trace('add char shit:' + chars[i]);
+			//@notrace('add char shit:' + chars[i]);
 			characters_walking.animation.addByIndices(chars[i], "Characters_walking0", [
 				0 + i * 12, 1 + i * 12, 2 + i * 12, 3 + i * 12, 4 + i * 12, 5 + i * 12, 6 + i * 12, 7 + i * 12, 8 + i * 12, 9 + i * 12, 10 + i * 12,
 				11 + i * 12

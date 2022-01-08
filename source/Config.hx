@@ -43,7 +43,7 @@ class Config {
     }
 
     public function savecustom(_pad:FlxVirtualPad) {
-		trace("saved");
+		//@notrace("saved");
 
 		if (save.data.buttons == null)
 		{

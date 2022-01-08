@@ -20,7 +20,7 @@ class Alloctable
 			j++;
 		}
 
-		trace('alloc: ' + j + " objects.");
+		//@notrace('alloc: ' + j + " objects.");
 	}
 
 	public static function allocSprite(group:FlxSpriteGroup)
@@ -39,6 +39,6 @@ class Alloctable
 			j++;
 		}
 
-		trace('alloc: ' + j + " sprites.");
+		//@notrace('alloc: ' + j + " sprites.");
 	}
 }

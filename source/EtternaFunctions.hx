@@ -43,11 +43,11 @@ class EtternaFunctions
             var notes:Int = 0;
             for (i in 0...PlayState.SONG.notes.length) 
             {
-                trace(PlayState.SONG.notes[i]);
+                //@notrace(PlayState.SONG.notes[i]);
                 for (ii in 0...PlayState.SONG.notes[i].sectionNotes.length)
                 {
                     var n = PlayState.SONG.notes[i].sectionNotes[ii];
-                    trace(n);
+                    //@notrace(n);
                     if (n[1] > 0)
                         notes++;
                 }

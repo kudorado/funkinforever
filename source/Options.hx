@@ -890,7 +890,7 @@ class CustomizeGameplay extends Option
 
     public override function press():Bool
     {
-        //KODURADOtrace("switch");
+        //KODURADO//@notrace("switch");
         FlxG.switchState(new GameplayCustomizeState());
         return false;
     }
@@ -977,7 +977,7 @@ class OffsetMenu extends Option
 
     public override function press():Bool
     {
-        //KODURADOtrace("switch");
+        //KODURADO//@notrace("switch");
         var poop:String = Highscore.formatSong("Tutorial", 1);
 
         PlayState.SONG = Song.loadFromJson(poop, "Tutorial");
@@ -985,7 +985,7 @@ class OffsetMenu extends Option
         PlayState.storyDifficulty = 0;
         PlayState.storyWeek = 0;
         PlayState.offsetTesting = true;
-        //KODURADOtrace('CUR WEEK' + PlayState.storyWeek);
+        //KODURADO//@notrace('CUR WEEK' + PlayState.storyWeek);
         LoadingState.loadAndSwitchState(new PlayState());
         return false;
     }
@@ -1006,7 +1006,7 @@ class BotPlay extends Option
     public override function press():Bool
     {
         FlxG.save.data.botplay = !FlxG.save.data.botplay;
-        //KODURADOtrace('BotPlay : ' + FlxG.save.data.botplay);
+        //KODURADO//@notrace('BotPlay : ' + FlxG.save.data.botplay);
         display = updateDisplay();
         return true;
     }

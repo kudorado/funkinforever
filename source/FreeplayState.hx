@@ -60,8 +60,8 @@ class FreeplayState extends MusicBeatState
 		}
 
 
-		for(i in songs)
-			trace(i.songName);
+		// for(i in songs)
+			//@notrace(i.songName);
 
 
 		 #if windows
@@ -171,7 +171,7 @@ class FreeplayState extends MusicBeatState
 
 			// scoreText.textField.htmlText = md;
 
-			trace(md);
+			//@notrace(md);
 		 */
 
 		AdMob.hideBanner();
@@ -290,11 +290,11 @@ class FreeplayState extends MusicBeatState
 	{
 		var songLowercase = SongFilter.filter(songs[curSelected].songName);
 
-		trace(songLowercase);
+		//@notrace(songLowercase);
 
 		var poop:String = Highscore.formatSong(songLowercase, StoryMenuState.curDifficulty);
 
-		trace(poop);
+		//@notrace(poop);
 
 		var curSong = songs[curSelected];
 

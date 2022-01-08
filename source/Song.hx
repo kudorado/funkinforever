@@ -47,11 +47,11 @@ class Song
 
 	public static function loadFromJson(jsonInput:String, ?folder:String):SwagSong
 	{
-		trace("load song: " + jsonInput);
+		//@notrace("load song: " + jsonInput);
 		
 		// pre lowercasing the song name (update)
 		var folderLowercase = SongFilter.filter(folder);
-		trace('loading ' + folderLowercase + '/' + jsonInput.toLowerCase());
+		//@notrace('loading ' + folderLowercase + '/' + jsonInput.toLowerCase());
 
 		var rawJson = Assets.getText(Paths.json(folderLowercase + '/' + jsonInput.toLowerCase())).trim();
 
@@ -63,13 +63,13 @@ class Song
 
 		// FIX THE CASTING ON WINDOWS/NATIVE
 		// Windows???
-		// trace(songData);
+		// //@notrace(songData);
 
-		// trace('LOADED FROM JSON: ' + songData.notes);
+		// //@notrace('LOADED FROM JSON: ' + songData.notes);
 		/* 
 			for (i in 0...songData.notes.length)
 			{
-				trace('LOADED FROM JSON: ' + songData.notes[i].sectionNotes);
+				//@notrace('LOADED FROM JSON: ' + songData.notes[i].sectionNotes);
 				// songData.notes[i].sectionNotes = songData.notes[i].sectionNotes
 			}
 

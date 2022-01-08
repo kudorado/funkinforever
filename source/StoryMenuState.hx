@@ -122,7 +122,7 @@ class StoryMenuState extends MusicBeatState
 		grpLocks = new FlxTypedGroup<FlxSprite>();
 		add(grpLocks);
 
-		trace("Line 70");
+		//@notrace("Line 70");
 
 		for (i in 0...SongManager.songs.length)
 		{
@@ -153,7 +153,7 @@ class StoryMenuState extends MusicBeatState
 		add(yellowBG);
 		add(blackBarThingie);
 
-		trace("Line 96");
+		//@notrace("Line 96");
 
 		// dad = new MenuCharacter(0, 100, 0.5, false);
 		// bf = new MenuCharacter(450, 25, 0.9, true);
@@ -168,7 +168,7 @@ class StoryMenuState extends MusicBeatState
 		// grpWeekCharacters.add(bf);
 		// grpWeekCharacters.add(gf);
 
-		trace('base song: ' + baseSong.songLabel);
+		//@notrace('base song: ' + baseSong.songLabel);
 
 		//we se bf and gf one time, cuz its enough.
 		// baseSong.setBFMenuCharacter(bf);
@@ -177,7 +177,7 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors = new FlxGroup();
 		add(difficultySelectors);
 
-		trace("Line 124");
+		//@notrace("Line 124");
 
 		leftArrow = new FlxSprite(grpWeekText.members[0].x + grpWeekText.members[0].width + 10, grpWeekText.members[0].y + 10);
 		leftArrow.frames = ui_tex;
@@ -205,7 +205,7 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
 
-		// trace("Line 150");
+		// //@notrace("Line 150");
 		// var bgShit:FlxSprite = new FlxSprite().loadGraphic(Paths.image('weeks/bg0'));	
 		// bgShit.setGraphicSize(Std.int(yellowBG.width));
 
@@ -231,7 +231,7 @@ class StoryMenuState extends MusicBeatState
 
 
 
-		trace("Line 165");
+		//@notrace("Line 165");
 
 		Controller.init(this, FULL, A_B);
 
@@ -358,7 +358,7 @@ class StoryMenuState extends MusicBeatState
 			var daSong = PlayState.SONG_NAME + diffic;
 			var daFolder = PlayState.playingSong.folder + StringTools.replace(PlayState.storyPlaylist[0], " ", "-").toLowerCase();
 
-			trace("daFolder: " + daFolder);
+			//@notrace("daFolder: " + daFolder);
 			
 			PlayState.SONG = Song.loadFromJson(daSong, daFolder);
 

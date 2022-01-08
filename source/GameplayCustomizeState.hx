@@ -197,7 +197,7 @@ class GameplayCustomizeState extends MusicBeatState
         FlxG.camera.zoom += 0.015;
         // s += 0.010;
 
-        trace('beat');
+        //@notrace('beat');
 
     }
 

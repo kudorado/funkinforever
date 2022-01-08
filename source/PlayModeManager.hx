@@ -38,7 +38,7 @@ class PlayModeManager
 
 	public static function loadPlayMode()
 	{
-		trace("load playmode: " + FlxG.save.data.playModeId);
+		//@notrace("load playmode: " + FlxG.save.data.playModeId);
 
 		switch (FlxG.save.data.playModeId)
 		{

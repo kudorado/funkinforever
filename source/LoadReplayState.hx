@@ -35,7 +35,7 @@ class LoadReplayState extends MusicBeatState
         #if sys
 		controlsStrings = sys.FileSystem.readDirectory(Sys.getCwd() + "/assets/replays/");
         #end
-		trace(controlsStrings);
+		//@notrace(controlsStrings);
 
         controlsStrings.sort(Reflect.compare);
 
@@ -143,7 +143,7 @@ class LoadReplayState extends MusicBeatState
 
 			if (controls.ACCEPT && grpControls.members[curSelected].text != "No Replays...")
 			{
-                trace('loading ' + actualNames[curSelected]);
+                //@notrace('loading ' + actualNames[curSelected]);
                 PlayState.rep = Replay.LoadReplay(actualNames[curSelected]);
 
                 PlayState.loadRep = true;

@@ -63,7 +63,7 @@ class Item extends FlxSpriteGroup
 
 	public function unlock()
 	{
-		trace('unlock shit fuck you!');
+		//@notrace('unlock shit fuck you!');
 		refresh();
 	}
 

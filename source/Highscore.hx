@@ -29,7 +29,7 @@ class Highscore
 			}
 			else
 				setScore(daSong, score);
-		}else trace('BotPlay detected. Score saving is disabled.');
+		} //@notrace('BotPlay detected. Score saving is disabled.');
 	}
 
 	public static function saveWeekScore(week:Int = 1, score:Int = 0, ?diff:Int = 0):Void
@@ -42,7 +42,6 @@ class Highscore
 		if(!FlxG.save.data.botplay)
 		{
 			var daWeek:String = formatSong('week' + week, diff);
-
 			if (songScores.exists(daWeek))
 			{
 				if (songScores.get(daWeek) < score)
@@ -50,7 +49,7 @@ class Highscore
 			}
 			else
 				setScore(daWeek, score);
-		}else trace('BotPlay detected. Score saving is disabled.');
+		}//else //@notrace('BotPlay detected. Score saving is disabled.');
 	}
 
 	/**

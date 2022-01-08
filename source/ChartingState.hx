@@ -222,7 +222,7 @@ class ChartingState extends MusicBeatState
 		check_voices.callback = function()
 		{
 			_song.needsVoices = check_voices.checked;
-			trace('CHECKED!');
+			//@notrace('CHECKED!');
 		};
 
 		var check_mute_inst = new FlxUICheckBox(10, 200, null, null, "Mute Instrumental (in editor)", 100);
@@ -707,7 +707,7 @@ class ChartingState extends MusicBeatState
 				{
 					deleteNote(note);
 					delete = true;
-					trace('deelte note');
+					//@notrace('deelte note');
 				}
 			});
 		for (p in 0...pressArray.length)
@@ -745,7 +745,7 @@ class ChartingState extends MusicBeatState
 			{
 				if (_song.notes[curSection].mustHitSection)
 					{
-						trace('must hit ' + Math.abs(note.noteData));
+						//@notrace('must hit ' + Math.abs(note.noteData));
 						if (note.noteData < 4)
 						{
 							switch (Math.abs(note.noteData))
@@ -777,7 +777,7 @@ class ChartingState extends MusicBeatState
 					}
 					else
 					{
-						trace('hit ' + Math.abs(note.noteData));
+						//@notrace('hit ' + Math.abs(note.noteData));
 						if (note.noteData < 4)
 						{
 							switch (Math.abs(note.noteData))
@@ -812,9 +812,9 @@ class ChartingState extends MusicBeatState
 
 		if (curBeat % 4 == 0 && curStep >= 16 * (curSection + 1))
 		{
-			trace(curStep);
-			trace((_song.notes[curSection].lengthInSteps) * (curSection + 1));
-			trace('DUMBSHIT');
+			//@notrace(curStep);
+			//@notrace((_song.notes[curSection].lengthInSteps) * (curSection + 1));
+			//@notrace('DUMBSHIT');
 
 			if (_song.notes[curSection + 1] == null)
 			{
@@ -913,7 +913,7 @@ class ChartingState extends MusicBeatState
 			{
 				if (FlxG.keys.justPressed.Z && lastNote != null)
 				{
-					trace(curRenderedNotes.members.contains(lastNote) ? "delete note" : "add note");
+					//@notrace(curRenderedNotes.members.contains(lastNote) ? "delete note" : "add note");
 					if (curRenderedNotes.members.contains(lastNote))
 						deleteNote(lastNote);
 					else 
@@ -967,13 +967,13 @@ class ChartingState extends MusicBeatState
 				var stepMs = curStep * Conductor.stepCrochet;
 
 
-				trace(Conductor.stepCrochet / snap);
+				//@notrace(Conductor.stepCrochet / snap);
 
 				if (doSnapShit)
 					FlxG.sound.music.time = stepMs - (FlxG.mouse.wheel * Conductor.stepCrochet / snap);
 				else
 					FlxG.sound.music.time -= (FlxG.mouse.wheel * Conductor.stepCrochet * 0.4);
-				trace(stepMs + " + " + Conductor.stepCrochet / snap + " -> " + FlxG.sound.music.time);
+				//@notrace(stepMs + " + " + Conductor.stepCrochet / snap + " -> " + FlxG.sound.music.time);
 
 				vocals.time = FlxG.sound.music.time;
 			}
@@ -1053,7 +1053,7 @@ class ChartingState extends MusicBeatState
 
 	override function beatHit() 
 	{
-		trace('beat');
+		//@notrace('beat');
 
 		super.beatHit();
 		if (!player2.animation.curAnim.name.startsWith("sing"))
@@ -1107,11 +1107,11 @@ class ChartingState extends MusicBeatState
 
 	function changeSection(sec:Int = 0, ?updateMusic:Bool = true):Void
 	{
-		trace('changing section' + sec);
+		//@notrace('changing section' + sec);
 
 		if (_song.notes[sec] != null)
 		{
-			trace('naw im not null');
+			//@notrace('naw im not null');
 			curSection = sec;
 
 			updateGrid();
@@ -1137,8 +1137,8 @@ class ChartingState extends MusicBeatState
 			updateGrid();
 			updateSectionUI();
 		}
-		else
-			trace('bro wtf I AM NULL');
+		// else
+			//@notrace('bro wtf I AM NULL');
 	}
 
 	function copySection(?sectionNum:Int = 1)
@@ -1231,7 +1231,7 @@ class ChartingState extends MusicBeatState
 				{
 					if (_song.notes[sec].sectionNotes[notesse][2] == null)
 					{
-						trace('SUS NULL');
+						//@notrace('SUS NULL');
 						_song.notes[sec].sectionNotes[notesse][2] = 0;
 					}
 				}
@@ -1352,7 +1352,7 @@ class ChartingState extends MusicBeatState
 			
 			var millisecadd = (((measure*4)+step/4)*(60000/_song.bpm))+ms;
 			var totaladdsection = Std.int((millisecadd/(60000/_song.bpm)/4));
-			trace(millisecadd,totaladdsection);
+			//@notrace(millisecadd,totaladdsection);
 			if(millisecadd > 0)
 				{
 					for(i in 0...totaladdsection)
@@ -1371,7 +1371,7 @@ class ChartingState extends MusicBeatState
 				if(aimtosetsection<0) aimtosetsection = 0;
 				newSong[aimtosetsection].mustHitSection = _song.notes[daSection].mustHitSection;
 				newSong[aimtosetsection].altAnim = _song.notes[daSection].altAnim;
-				//trace("section "+daSection);
+				////@notrace("section "+daSection);
 				for(daNote in 0...(_song.notes[daSection].sectionNotes.length))
 					{	
 						var newtiming = _song.notes[daSection].sectionNotes[daNote][0]+millisecadd;
@@ -1387,7 +1387,7 @@ class ChartingState extends MusicBeatState
 					}
 	
 			}
-			//trace("DONE BITCH");
+			////@notrace("DONE BITCH");
 			_song.notes = newSong;
 			updateGrid();
 			updateSectionUI();
@@ -1440,7 +1440,7 @@ class ChartingState extends MusicBeatState
 
 				if (sec != null && sec == i)
 				{
-					trace('swag loop??');
+					//@notrace('swag loop??');
 					break;
 				}
 			}
@@ -1451,7 +1451,7 @@ class ChartingState extends MusicBeatState
 
 	function loadLevel():Void
 	{
-		trace(_song.notes);
+		//@notrace(_song.notes);
 	}
 
 	function getNotes():Array<Dynamic>

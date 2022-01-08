@@ -260,7 +260,7 @@ class PlayOptionState extends MusicBeatState
                                                     
                                     
                                     //         FlxG.switchState(new MainMenuState());
-									// 	//KUDORADOtrace("Story Menu Selected");
+									// 	//KUDORADO//@notrace("Story Menu Selected");
                                     //     case 'Hitbox':
 									// 	remove(_pad);
 									// 	_pad.alpha = 0;
@@ -269,7 +269,7 @@ class PlayOptionState extends MusicBeatState
 									// 	save();
 
     
-                                    //         //KUDORADOtrace("Freeplay Menu Selected");
+                                    //         //KUDORADO//@notrace("Freeplay Menu Selected");
     
                             
                                     // }
@@ -458,7 +458,7 @@ class PlayOptionState extends MusicBeatState
 	// 			curSelected = controlitems.length - 1;
 	// 		if (curSelected >= controlitems.length)
 	// 			curSelected = 0;
-	// 		//KUDORADOtrace(curSelected);
+	// 		//KUDORADO//@notrace(curSelected);
 	
 	// 		if (forceChange != null)
 	// 		{
@@ -496,10 +496,10 @@ class PlayOptionState extends MusicBeatState
 	// 				_pad.alpha = 0.855;
 	// 				this.add(_pad);
 	// 			case 2:
-	// 				//KUDORADOtrace(2);
+	// 				//KUDORADO//@notrace(2);
 	// 				_pad.alpha = 0;
 	// 			case 3:
-	// 				//KUDORADOtrace(3);
+	// 				//KUDORADO//@notrace(3);
 	// 				this.add(_pad);
 	// 				_pad.alpha = 0.855;
 	// 				loadcustom();
@@ -621,7 +621,7 @@ class PlayOptionState extends MusicBeatState
 	}
 
 	// function savecustom() {
-	// 	//KUDORADOtrace("saved");
+	// 	//KUDORADO//@notrace("saved");
 
 	// 	//Config.setdata(55);
 
@@ -673,7 +673,7 @@ class PlayOptionState extends MusicBeatState
 	// }
 
 	// function savetoclipboard(pad:FlxVirtualPad) {
-	// 	//KUDORADOtrace("saved");
+	// 	//KUDORADO//@notrace("saved");
 		
 	// 	var json = {
 	// 		buttonsarray : []
@@ -691,7 +691,7 @@ class PlayOptionState extends MusicBeatState
 
 	// 	json.buttonsarray = buttonsarray;
 
-	// 	//KUDORADOtrace(json);
+	// 	//KUDORADO//@notrace(json);
 
 	// 	var data:String = Json.stringify(json);
 

@@ -42,7 +42,7 @@ class AnimationDebug extends FlxState
 		gridBG.scrollFactor.set(0.5, 0.5);
 		add(gridBG);
 
-		trace("get song: " + PlayState.RAW_SONG_NAME);
+		//@notrace("get song: " + PlayState.RAW_SONG_NAME);
 		if (isDad)
 		{
 			var song = SongPlayerManager.getCurrentSong(PlayState.RAW_SONG_NAME);

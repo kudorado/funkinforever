@@ -82,9 +82,9 @@ class Main extends Sprite
 		var kudoradoHandsome:Bool = true;
 		var daFactor:Float = (stageWidth / (stageHeight * 1.0));
 
-		trace("daWidth: " + stageWidth);
-		trace("daHeight: " + stageHeight);
-		trace("daFactor: " + daFactor);
+		//@notrace("daWidth: " + stageWidth);
+		//@notrace("daHeight: " + stageHeight);
+		//@notrace("daFactor: " + daFactor);
 
 	
 
@@ -120,7 +120,7 @@ class Main extends Sprite
 			gameWidth = Math.ceil(stageWidth / zoom);
 			gameHeight = Math.ceil(stageHeight / zoom);
 
-			trace('fucking zoom: ' + zoom);
+			//@notrace('fucking zoom: ' + zoom);
 		}
 
 		#if !debug

@@ -229,7 +229,7 @@ class KeyBindMenu extends FlxSubState
 
         for(x in blacklist){notAllowed.push(x);}
 
-        trace(notAllowed);
+        //@notrace(notAllowed);
 
         for(x in 0...keys.length)
             {

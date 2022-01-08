@@ -339,7 +339,7 @@ class PlayState extends MusicBeatState
 		executeModchart = false; // FORCE disable for non cpp targets
 		#end
 
-		trace('Mod chart: ' + executeModchart + " - " + Paths.lua(songLowercase + "/modchart"));
+		//@notrace('Mod chart: ' + executeModchart + " - " + Paths.lua(songLowercase + "/modchart"));
 
 		#if windows
 		// Making difficulty text for Discord Rich Presence.
@@ -411,10 +411,10 @@ class PlayState extends MusicBeatState
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
 
-		trace('INFORMATION ABOUT WHAT U PLAYIN WIT:\nFRAMES: ' + Conductor.safeFrames + '\nZONE: ' + Conductor.safeZoneOffset + '\nTS: '
-			+ Conductor.timeScale + '\nBotPlay : ' + botPlayShit);
+		//@notrace('INFORMATION ABOUT WHAT U PLAYIN WIT:\nFRAMES: ' + Conductor.safeFrames + '\nZONE: ' + Conductor.safeZoneOffset + '\nTS: '
+			// + Conductor.timeScale + '\nBotPlay : ' + botPlayShit);
 
-		trace("cur song shit: " + CURRENT_SONG);
+		//@notrace("cur song shit: " + CURRENT_SONG);
 
 		
 		songPlayer = SongPlayerManager.getCurrentSong(RAW_SONG_NAME);
@@ -452,10 +452,10 @@ class PlayState extends MusicBeatState
 
 		// startCountdown();
 
-		if (CURRENT_SONG == null)
-			trace('song is null???');
-		else
-			trace('song looks gucci');
+		// if (CURRENT_SONG == null)
+			//@notrace('song is null???');
+		// else
+			//@notrace('song looks gucci');
 
 		generateSong(CURRENT_SONG);
 
@@ -671,7 +671,7 @@ class PlayState extends MusicBeatState
 
 		startingSong = true;
 
-		trace('starting');
+		//@notrace('starting');
 
 		if (isStoryMode)
 		{
@@ -828,7 +828,7 @@ class PlayState extends MusicBeatState
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length;
 
-		trace('songLength: ' + songLength);
+		//@notrace('songLength: ' + songLength);
 
 		if (kudoradoHandsome)
 		{
@@ -944,7 +944,7 @@ class PlayState extends MusicBeatState
 		else
 			vocals = new FlxSound();
 
-		trace('loaded vocals');
+		//@notrace('loaded vocals');
 
 		FlxG.sound.list.add(vocals);
 
@@ -972,13 +972,13 @@ class PlayState extends MusicBeatState
 			{
 				if (path.endsWith('.offset'))
 				{
-					trace('Found offset file: ' + path);
+					//@notrace('Found offset file: ' + path);
 					songOffset = Std.parseFloat(file.substring(0, file.indexOf('.off')));
 					break;
 				}
 				else
 				{
-					trace('Offset file not found. Creating one @: ' + songPath);
+					//@notrace('Offset file not found. Creating one @: ' + songPath);
 					sys.io.File.saveContent(songPath + songOffset + '.offset', '');
 				}
 			}
@@ -1047,7 +1047,7 @@ class PlayState extends MusicBeatState
 			daBeats += 1;
 		}
 
-		// trace(unspawnNotes.length);
+		// //@notrace(unspawnNotes.length);
 		// playerCounter += 1;
 
 		unspawnNotes.sort(sortByShit);
@@ -1417,7 +1417,7 @@ class PlayState extends MusicBeatState
 					songTime = (songTime + Conductor.songPosition) / 2;
 					Conductor.lastSongPos = Conductor.songPosition;
 					// Conductor.songPosition += FlxG.elapsed * 1000;
-					// trace('MISSED FRAME');
+					// //@notrace('MISSED FRAME');
 				}
 			}
 		}
@@ -1483,7 +1483,7 @@ class PlayState extends MusicBeatState
 
 			for (i in luaWiggles)
 			{
-				trace('wiggle le gaming');
+				//@notrace('wiggle le gaming');
 				i.update(elapsed);
 			}
 
@@ -1981,7 +1981,7 @@ class PlayState extends MusicBeatState
 						else
 							fuckNote += altAnim;
 						
-						trace("fuckNote: " + fuckNote);
+						//@notrace("fuckNote: " + fuckNote);
 						boyfriend().playAnim(fuckNote, true);
 					}
 					else
@@ -2068,7 +2068,7 @@ class PlayState extends MusicBeatState
 				if (daNote.isSustainNote)
 					daNote.x += daNote.width / 2 + 17;
 
-				// trace(daNote.y);
+				// //@notrace(daNote.y);
 				// WIP interpolation shit? Need to fix the pause issue
 				// daNote.y = (strumLine.y - (songTime - daNote.strumTime) * (0.45 * SONG.speed));
 
@@ -2301,11 +2301,11 @@ class PlayState extends MusicBeatState
 					if (storyDifficulty == 2 || storyDifficulty == 3)
 						difficulty = '-hard';
 
-					trace('LOADING NEXT SONG');
+					//@notrace('LOADING NEXT SONG');
 					// pre lowercasing the next story song name
 					var nextSongLowercase = SongFilter.filter(storyPlaylist[0]);
 					
-					trace(nextSongLowercase + difficulty);
+					//@notrace(nextSongLowercase + difficulty);
 
 					// pre lowercasing the song name (endSong)
 					var songLowercase = SongFilter.filter(CURRENT_SONG);
@@ -2878,8 +2878,8 @@ class PlayState extends MusicBeatState
 				daLoop++;
 			}
 			/* 
-				trace(combo);
-				trace(seperatedScore);
+				//@notrace(combo);
+				//@notrace(seperatedScore);
 			 */
 
 			coolText.text = Std.string(seperatedScore);
@@ -3014,7 +3014,7 @@ class PlayState extends MusicBeatState
 				}
 			});
 
-			// trace('\nCURRENT LINE:\n' + directionsAccounted);
+			// //@notrace('\nCURRENT LINE:\n' + directionsAccounted);
 
 			for (note in dumbNotes)
 			{
@@ -3068,7 +3068,7 @@ class PlayState extends MusicBeatState
 			{
 				if (mashViolations > 8)
 				{
-					trace('mash violations ' + mashViolations);
+					//@notrace('mash violations ' + mashViolations);
 					scoreTxt.color = FlxColor.RED;
 					noteMiss(0, null);
 				}

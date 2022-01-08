@@ -111,11 +111,11 @@ class SetFpsSubState extends MusicBeatSubstate
                 
                 if (curSelected == 1)
                 {
-                    //KUDORADOtrace(90);
+                    //KUDORADO//@notrace(90);
                     _gamesave.data.fps[0] = 90;
                 }else if (curSelected == 0)
                 {
-                    //KUDORADOtrace(60);
+                    //KUDORADO//@notrace(60);
                     _gamesave.data.fps = null;
                 }
                 _gamesave.flush();

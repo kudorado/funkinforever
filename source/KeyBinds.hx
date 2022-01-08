@@ -27,23 +27,23 @@ class KeyBinds
     {
         if(FlxG.save.data.upBind == null){
             FlxG.save.data.upBind = "W";
-            trace("No UP");
+            //@notrace("No UP");
         }
         if(FlxG.save.data.downBind == null){
             FlxG.save.data.downBind = "S";
-            trace("No DOWN");
+            //@notrace("No DOWN");
         }
         if(FlxG.save.data.leftBind == null){
             FlxG.save.data.leftBind = "A";
-            trace("No LEFT");
+            //@notrace("No LEFT");
         }
         if(FlxG.save.data.rightBind == null){
             FlxG.save.data.rightBind = "D";
-            trace("No RIGHT");
+            //@notrace("No RIGHT");
         }
         if(FlxG.save.data.killBind == null){
             FlxG.save.data.killBind = "R";
-            trace("No KILL");
+            //@notrace("No KILL");
         }
     }
 

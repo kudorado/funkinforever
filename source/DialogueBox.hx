@@ -150,7 +150,7 @@ class DialogueBox extends FlxSpriteGroup
 
 		if(isWeekSix())
 		{
-			//KUDORADO//DISABLE//DISABLEtraceget gfffff shit!');
+			//KUDORADO//DISABLE//DISABLE//@notraceget gfffff shit!');
 			portraitLeft = new FlxSprite(-20, 40);
 			var path = song == 'thorns' ? 'portraits/emptyPortrait' : 'weeb/senpaiPortrait';
 
@@ -166,7 +166,7 @@ class DialogueBox extends FlxSpriteGroup
 
 		else
 		{
-			//KUDORADO//DISABLE//DISABLEtraceget gf shit!');
+			//KUDORADO//DISABLE//DISABLE//@notraceget gf shit!');
 			var char = PlayState.SONG.player2.toLowerCase();
 			curCharacter = char;
 			showDialogue(false);
@@ -194,7 +194,7 @@ class DialogueBox extends FlxSpriteGroup
 		}
 		else
 		{
-			//KUDORADO//DISABLE//DISABLEtraceget gf shit!1');
+			//KUDORADO//DISABLE//DISABLE//@notraceget gf shit!1');
 			addRightChar('boyfriend');
 		
 		}
@@ -311,8 +311,8 @@ class DialogueBox extends FlxSpriteGroup
 
 
 		var path = 'portraits/' + char + 'Portrait';
-		//KUDORADO//DISABLE//DISABLEtraceadd left char shit: ' + path);
-		//KUDORADO//DISABLE//DISABLEtraceleft char animation shit: ' + defaultAnimation);
+		//KUDORADO//DISABLE//DISABLE//@notraceadd left char shit: ' + path);
+		//KUDORADO//DISABLE//DISABLE//@notraceleft char animation shit: ' + defaultAnimation);
 		portraitLeft = new FlxSprite(-1600, 10);
 		portraitLeft.frames = Paths.getSparrowAtlas(path);
 		portraitLeft.animation.addByPrefix('enter', defaultAnimation, 24, false);
@@ -380,7 +380,7 @@ class DialogueBox extends FlxSpriteGroup
 		if(portraitRight != null)
 			remove(portraitRight);
 
-		//KUDORADO//DISABLE//DISABLEtraceadd right char shit: ' + char);
+		//KUDORADO//DISABLE//DISABLE//@notraceadd right char shit: ' + char);
 
 		portraitRight = new FlxSprite(0, 40);
 		portraitRight.frames = Paths.getSparrowAtlas('portraits/' + char + 'Portrait');
@@ -443,7 +443,7 @@ class DialogueBox extends FlxSpriteGroup
 	{
 		var song = PlayState.CURRENT_SONG;
 
-		//KUDORADO//DISABLE//DISABLEtracedialogue cur Char:'  + curCharacter);
+		//KUDORADO//DISABLE//DISABLE//@notracedialogue cur Char:'  + curCharacter);
 		var ctc = curCharacter.toLowerCase();
 
 		if (song == 'senpai' || song ==  'roses' || song == 'thorns')
@@ -805,13 +805,13 @@ class DialogueBox extends FlxSpriteGroup
 	{
 		var splitName:Array<String> = dialogueList[0].split(":");
 
-		//DISABLEtrace("split 0: " + splitName[0]);
-		//DISABLEtrace("split 1: " + splitName[1]);
+		//DISABLE//@notrace("split 0: " + splitName[0]);
+		//DISABLE//@notrace("split 1: " + splitName[1]);
 
 		curCharacter = splitName[1];
 
 		dialogueList[0] = dialogueList[0].substr(splitName[1].length + 2).trim();
-		//KUDORADO//DISABLE//DISABLEtracebg shit: ' + curCharacter.toLowerCase());
+		//KUDORADO//DISABLE//DISABLE//@notracebg shit: ' + curCharacter.toLowerCase());
 
 		switch (curCharacter.toLowerCase())
 		{

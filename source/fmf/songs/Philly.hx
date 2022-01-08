@@ -47,7 +47,7 @@ class Philly extends SongPlayer
 
 			if (startedMoving)
 			{
-				// trace("moving: " + phillyTrain.x);
+				// //@notrace("moving: " + phillyTrain.x);
 
 				phillyTrain.x -= 400;
 
@@ -260,7 +260,7 @@ class Philly extends SongPlayer
 	{
 		if (trainMoving)
 		{
-			// trace('update train: ' + elapsed);
+			// //@notrace('update train: ' + elapsed);
 			trainFrameTiming += elapsed;
 
 			if (trainFrameTiming >= 1 / 24)

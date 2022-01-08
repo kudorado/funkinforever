@@ -568,7 +568,7 @@ class Controls extends FlxActionSet
 	public function loadKeyBinds()
 	{
 
-		//trace(FlxKey.fromString(FlxG.save.data.upBind));
+		////@notrace(FlxKey.fromString(FlxG.save.data.upBind));
 
 		removeKeyboard();
 		KeyBinds.keyCheck();

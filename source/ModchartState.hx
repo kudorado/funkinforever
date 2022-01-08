@@ -48,7 +48,7 @@ class ModchartState
 					lua = null;
 					LoadingState.loadAndSwitchState(new MainMenuState());
 				}
-			// trace('err: ' + e);
+			// //@notrace('err: ' + e);
 		}
 		if( result == null) {
 			return null;
@@ -75,7 +75,7 @@ class ModchartState
 			case Type.ValueType.TObject:
 				objectToLua(l, val);
 			default:
-				trace("haxe value not supported - " + val + " which is a type of " + Type.typeof(val));
+				//@notrace("haxe value not supported - " + val + " which is a type of " + Type.typeof(val));
 				return false;
 		}
 
@@ -88,7 +88,7 @@ class ModchartState
 		var FUCK = 0;
 		for(n in Reflect.fields(res))
 		{
-			trace(Type.typeof(n).getName());
+			//@notrace(Type.typeof(n).getName());
 			FUCK++;
 		}
 
@@ -178,7 +178,7 @@ class ModchartState
 	}
 
 	public function setVar(var_name : String, object : Dynamic){
-		// trace('setting variable ' + var_name + ' to ' + object);
+		// //@notrace('setting variable ' + var_name + ' to ' + object);
 
 		Lua.pushnumber(lua,object);
 		Lua.setglobal(lua, var_name);
@@ -187,7 +187,7 @@ class ModchartState
 	public function getVar(var_name : String, type : String) : Dynamic {
 		var result : Any = null;
 
-		// trace('getting variable ' + var_name + ' with a type of ' + type);
+		// //@notrace('getting variable ' + var_name + ' with a type of ' + type);
 
 		Lua.getglobal(lua, var_name);
 		result = Convert.fromLua(lua,-1);
@@ -197,7 +197,7 @@ class ModchartState
 		return null;
 		} else {
 		var result = convert(result, type);
-		//trace(var_name + ' result: ' + result);
+		////@notrace(var_name + ' result: ' + result);
 		return result;
 		}
 	}
@@ -261,7 +261,7 @@ class ModchartState
 
 		sprite.frames = FlxAtlasFrames.fromSparrow(FlxGraphic.fromBitmapData(data), Sys.getCwd() + "assets/data/" + PlayState.SONG.song.toLowerCase() + "/" + spritePath + ".xml");
 
-		trace(sprite.frames.frames.length);
+		//@notrace(sprite.frames.frames.length);
 
 		for (p in 0...names.length)
 		{
@@ -336,11 +336,11 @@ class ModchartState
 
     function new()
     {
-        		trace('opening a lua state (because we are cool :))');
+        		//@notrace('opening a lua state (because we are cool :))');
 				lua = LuaL.newstate();
 				LuaL.openlibs(lua);
-				trace("Lua version: " + Lua.version());
-				trace("LuaJIT version: " + Lua.versionJIT());
+				//@notrace("Lua version: " + Lua.version());
+				//@notrace("LuaJIT version: " + Lua.versionJIT());
 				Lua.init_callbacks(lua);
 				
 				//shaders = new Array<LuaShader>();
@@ -817,7 +817,7 @@ class ModchartState
 				/*Lua_helper.add_callback(lua,"createShader", function(frag:String,vert:String) {
 					var shader:LuaShader = new LuaShader(frag,vert);
 
-					trace(shader.glFragmentSource);
+					//@notrace(shader.glFragmentSource);
 
 					shaders.push(shader);
 					// if theres 1 shader we want to say theres 0 since 0 index and length returns a 1 index.
@@ -837,14 +837,14 @@ class ModchartState
 
 				for (i in 0...PlayState.strumLineNotes.length) {
 					var member = PlayState.strumLineNotes.members[i];
-					trace(PlayState.strumLineNotes.members[i].x + " " + PlayState.strumLineNotes.members[i].y + " " + PlayState.strumLineNotes.members[i].angle + " | strum" + i);
+					//@notrace(PlayState.strumLineNotes.members[i].x + " " + PlayState.strumLineNotes.members[i].y + " " + PlayState.strumLineNotes.members[i].angle + " | strum" + i);
 					//setVar("strum" + i + "X", Math.floor(member.x));
 					setVar("defaultStrum" + i + "X", Math.floor(member.x));
 					//setVar("strum" + i + "Y", Math.floor(member.y));
 					setVar("defaultStrum" + i + "Y", Math.floor(member.y));
 					//setVar("strum" + i + "Angle", Math.floor(member.angle));
 					setVar("defaultStrum" + i + "Angle", Math.floor(member.angle));
-					trace("Adding strum" + i);
+					//@notrace("Adding strum" + i);
 				}
     }
 

@@ -43,7 +43,7 @@ class WinterHorrorland extends SongPlayer
 		new FlxTimer().start(0.15, function(tmr:FlxTimer)
 		{
 			playState.add(dialogueBox);
-			trace('whee mai dialgue siht!');
+			//@notrace('whee mai dialgue siht!');
 			
 			dialogueCallback = dialogueBox.finishThing; //tmp callback
 			dialogueBox.finishThing = zoomOut; //recreate callback shit

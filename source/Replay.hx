@@ -48,7 +48,7 @@ class Replay
 
         rep.LoadFromJSON();
 
-        trace('basic replay data:\nSong Name: ' + rep.replay.songName + '\nSong Diff: ' + rep.replay.songDiff + '\nNotes Length: ' + rep.replay.songNotes.length);
+        //@notrace('basic replay data:\nSong Name: ' + rep.replay.songName + '\nSong Diff: ' + rep.replay.songDiff + '\nNotes Length: ' + rep.replay.songNotes.length);
 
         return rep;
     }
@@ -75,7 +75,7 @@ class Replay
     public function LoadFromJSON()
     {
         #if sys
-        trace('loading ' + Sys.getCwd() + 'assets/replays/' + path + ' replay...');
+        //@notrace('loading ' + Sys.getCwd() + 'assets/replays/' + path + ' replay...');
         try
         {
             var repl:ReplayJSON = cast Json.parse(File.getContent(Sys.getCwd() + "assets/replays/" + path));
@@ -83,7 +83,7 @@ class Replay
         }
         catch(e)
         {
-            trace('failed!\n' + e.message);
+            //@notrace('failed!\n' + e.message);
         }
         #end
     }

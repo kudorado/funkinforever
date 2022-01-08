@@ -65,7 +65,7 @@ class LoadingState extends MusicBeatState
 			var library = Assets.getLibrary("songs");
 			final symbolPath = path.split(":").pop();
 			var callback = callbacks.add("song:" + path);
-			trace('try cache: ' + path);
+			//@notrace('try cache: ' + path);
 			Assets.loadSound(path).onComplete(function(_)
 			{
 				callback();
@@ -92,7 +92,7 @@ class LoadingState extends MusicBeatState
 	{
 		if (!Assets.cache.hasBitmapData(path))
 		{
-			trace("load bitmap shit at path: " + path);
+			//@notrace("load bitmap shit at path: " + path);
 			var library = Assets.getLibrary("mods");
 			final symbolPath = path.split(":").pop();
 			var callback = callbacks.add("bg:" + path);
@@ -106,7 +106,7 @@ class LoadingState extends MusicBeatState
 
 	function checkLibrary(library:String)
 	{
-		trace(Assets.hasLibrary(library));
+		//@notrace(Assets.hasLibrary(library));
 		if (Assets.getLibrary(library) == null)
 		{
 			@:privateAccess
@@ -125,8 +125,8 @@ class LoadingState extends MusicBeatState
 	{
 		super.update(elapsed);
 		#if debug
-		if (FlxG.keys.justPressed.SPACE)
-			trace('fired: ' + callbacks.getFired() + " unfired:" + callbacks.getUnfired());
+		// if (FlxG.keys.justPressed.SPACE)
+			//@notrace('fired: ' + callbacks.getFired() + " unfired:" + callbacks.getUnfired());
 		#end
 	}
 
@@ -141,7 +141,7 @@ class LoadingState extends MusicBeatState
 	static function getSongPath()
 	{
 		var daSongPath = Paths.inst(PlayState.SONG_NAME, PlayState.playingSong.folder);
-		trace('songPath: ' + daSongPath);
+		//@notrace('songPath: ' + daSongPath);
 
 		return daSongPath;
 	}
@@ -149,7 +149,7 @@ class LoadingState extends MusicBeatState
 	static function getVocalPath()
 	{
 		var daVocalPath =  Paths.voices(PlayState.SONG_NAME, PlayState.playingSong.folder);
-		trace('vocalPath: ' + daVocalPath);
+		//@notrace('vocalPath: ' + daVocalPath);
 
 		return daVocalPath;
 	}
@@ -170,17 +170,17 @@ class LoadingState extends MusicBeatState
 	{
 		if (!hasCachedSong)
 		{
-			trace('no cached!');
+			//@notrace('no cached!');
 			return;
 		}
 
 		var result:Bool = Assets.cache.removeSound(getSongPath());
-		trace("remove song cached: " + getSongPath() + ", result: " + result);
+		//@notrace("remove song cached: " + getSongPath() + ", result: " + result);
 
 		if (PlayState.SONG.needsVoices)
 		{
 			var vocalResult:Bool = Assets.cache.removeSound(getVocalPath());
-			trace("remove vocal cached: " + getVocalPath() + ", result: " + vocalResult);
+			//@notrace("remove vocal cached: " + getVocalPath() + ", result: " + vocalResult);
 		}
 	}
 
@@ -188,7 +188,7 @@ class LoadingState extends MusicBeatState
 	{
 		Paths.setCurrentLevel(SongManager.songs[PlayState.storyWeek].folder);
 		// #if NO_PRELOAD_ALL
-		trace('need voices:' + PlayState.SONG.needsVoices);
+		//@notrace('need voices:' + PlayState.SONG.needsVoices);
 		var loaded = isSoundLoaded(getSongPath())
 			&& (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath()))
 			&& isLibraryLoaded("shared");
@@ -314,7 +314,7 @@ class LoadingState extends MusicBeatState
 	static function isSoundLoaded(path:String):Bool
 	{
 		var isSoundLoaded = Assets.cache.hasSound(path);
-		trace("is sound loaded????: " + isSoundLoaded);
+		//@notrace("is sound loaded????: " + isSoundLoaded);
 		return isSoundLoaded;
 	}
 

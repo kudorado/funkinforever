@@ -382,13 +382,13 @@ class BaseSong
 		dialogueBox.scrollFactor.set();
 		dialogueBox.finishThing = callback;
 		dialogueBox.cameras = [playState.camHUD];
-		trace("Create dialogue at path: " + path);
+		//@notrace("Create dialogue at path: " + path);
 	}
 
 	public function showDialogue():Void
 	{
 		playState.add(dialogueBox);
-		trace('whee mai dialgue siht!');
+		//@notrace('whee mai dialgue siht!');
 	}
 
 	//--------------------------------------------------------------------------------------------------------
