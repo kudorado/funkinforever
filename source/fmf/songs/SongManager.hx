@@ -1,4 +1,4 @@
-package fmf.songs;
+ipackage fmf.songs;
 
 
 
@@ -246,23 +246,13 @@ class SongManager
 			}
 		),
 
-		// new SongData	
-		// (
-		// 	{
-		// 		folder: 'week_sonic',
-		// 		character: 'sonic',
-		// 		songTitle: 'V.S Sonic.exe',
-		// 		songList: ['Too-Slow', 'Endless', 'You-Cant-Run']
-		// 	}
-		// ),
-
 		new SongData	
 		(
 			{
 				folder: 'week_sonic',
 				character: 'sonic',
 				songTitle: 'V.S Sonic.exe',
-				songList: ['Too-Slow', 'You-Cant-Run', 'triple-trouble[sonic]', 'Cycles', 'Endless', 'Sunshine', 'Chaos', 'Faker', 'Black-sun', 'Milk', 'Too-fest']
+				songList: ['Too-Slow', 'You-Cant-Run', 'triple-trouble[sonic]', 'Cycles', 'Endless', 'Sunshine']
 			}
 		),
 
@@ -328,7 +318,7 @@ class SongManager
 
 		new SongData	
 		(
-			{
+		{
 				folder: 'week_blueballsincident',
 				character: 'blueballsincident',
 				songTitle: 'V.S Blueballs Incident',
