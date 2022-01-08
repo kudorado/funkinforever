@@ -8,7 +8,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class TripleTroubleSonic extends SussusMoogus
+class TripleTroubleSonic extends SongPlayer
 {
 
     override function getDadTex()
