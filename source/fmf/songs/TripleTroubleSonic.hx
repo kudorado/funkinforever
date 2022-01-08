@@ -36,14 +36,14 @@ class TripleTroubleSonic extends SongPlayer
         backtrees.scrollFactor.set(0.95, 0.95);
         playState.add(backtrees);
 
-        var trees:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/Phase3/Trees', 'mods'));
+        var trees:FlxSprite = new FlxSprite(-324, -150).loadGraphic(Paths.image('bg/sonic/Phase3/Trees', 'mods'));
         trees.antialiasing = true;
         trees.scale.x = 1;
         trees.scale.y = 1;
         trees.scrollFactor.set(0.95, 0.95);
         playState.add(trees);
 
-        var Grass:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/Phase3/Grass', 'mods'));
+        var Grass:FlxSprite = new FlxSprite(-324, -150).loadGraphic(Paths.image('bg/sonic/Phase3/Grass', 'mods'));
         Grass.antialiasing = true;
         Grass.scale.x = 1;
         Grass.scale.y = 1;
@@ -72,15 +72,16 @@ class TripleTroubleSonic extends SongPlayer
     {
             
         dad.addOffset('idle', 0, 0);
-        dad.addOffset('singUP', 0, 0);
-        dad.addOffset('singRIGHT', 0, 0);
-        dad.addOffset('singLEFT', 0, 0);
-        dad.addOffset('singDOWN', 0, 0);
+        dad.addOffset('singUP', 48, 65);
+        dad.addOffset('singRIGHT', 23, -21);
+        dad.addOffset('singLEFT', 118, -19);
+        dad.addOffset('singDOWN', 42, -83);
 
-        dad.scale.x = 1;
-        dad.scale.y = 1;
-        dad.x = 311;
-        dad.y = 582;
+        dad.scale.x = 1.7;
+		dad.scale.y = 1.7;
+		dad.x = 311;
+		dad.y = 262;
+
         dad.dance();
 
     }
@@ -89,7 +90,7 @@ class TripleTroubleSonic extends SongPlayer
     {
         super.createBF();
         bf.x += 75;
-        bf.y += 218;
+        bf.y += 25;
         
     }
 
