@@ -13,7 +13,7 @@ class Skin
         this.label = skin;
     }
 
-	private function getSkinTex():FlxAtlasFrames
+	public function getSkinTex():FlxAtlasFrames
 	{
 		return Paths.getSparrowAtlas('note_skins/default/NOTE_assets', 'mods');
 	}
