@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:a6e043bc12f2167aaed3c8b2b8846f4f:eb21dfcab61a09b82799f15dd05c67c0:e19a7f37a8bf09bd1d5fed93d02ab7eb$ -->
+<TextureAtlas imagePath="Emerald_Beam_Charged.png" width="4096" height="2048">
+    <SubTexture name="Emerald Beam Charged instance 10000" x="1" y="1" width="1091" height="1459"/>
+    <SubTexture name="Emerald Beam Charged instance 10001" x="1094" y="1" width="1091" height="1459"/>
+    <SubTexture name="Emerald Beam Charged instance 10002" x="2187" y="1" width="1091" height="1459"/>
+</TextureAtlas>

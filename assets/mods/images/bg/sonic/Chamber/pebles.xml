@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:455fe9636c611911113afe05f32eed96:65b4fb4dcec40b3cbb2d41e6d6724ce6:b3b2221438afaa26792989c488d4ba61$ -->
+<TextureAtlas imagePath="pebles.png" width="2048" height="256">
+    <SubTexture name="Pebles instance 10000" x="1" y="1" width="1522" height="122"/>
+    <SubTexture name="Pebles instance 20000" x="1" y="125" width="1522" height="122"/>
+</TextureAtlas>
