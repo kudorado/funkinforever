@@ -325,13 +325,16 @@ class StoryMenuState extends MusicBeatState
 	{
 		if (weekUnlocked[curWeek])
 		{
-			if (stopspamming == false)
+			if (!stopspamming)
 			{
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 
 				grpWeekText.members[curWeek].startFlashing();
 				// grpWeekCharacters.members[1].animation.play('bfConfirm');
 				stopspamming = true;
+
+				AdMob.showInterstitial(60);
+
 			}
 
 			PlayState.storyPlaylist = SongManager.songs[curWeek].copySongList;

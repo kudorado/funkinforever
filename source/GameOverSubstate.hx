@@ -191,7 +191,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
                 case "Exit to menu":
 
-                PlayState.instance.gameNa();
+					PlayState.instance.gameNa();
 
                     AdMob.showInterstitial(60);
 					// FlxG.sound.play(Paths.music('gameOverEnd'));

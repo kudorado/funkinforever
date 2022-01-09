@@ -205,6 +205,7 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.instance.gameNa();
 					close();
 					PlayState.instance.restorePad();
+					AdMob.showInterstitial(60);
 
 					PlayState.instance.switchState(function()
 					{
@@ -215,6 +216,8 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.instance.gameNa();
 					close();
 					PlayState.instance.restorePad();
+					AdMob.showInterstitial(60);
+
 
 					PlayState.instance.switchState(function()
 					{
@@ -226,6 +229,8 @@ class PauseSubState extends MusicBeatSubstate
 					close();
 					PlayState.instance.restorePad();
 
+					AdMob.showInterstitial(60);
+					
 					PlayState.instance.switchState(function()
 					{
 						if (PlayState.isStoryMode)

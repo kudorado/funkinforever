@@ -29,8 +29,12 @@ class FreeplayState extends MusicBeatState
 
 	var selector:FlxText;
 	static var curSelected:Int = 1;
+	static var curSongId:Int = 1;
+	static var curWeek:Int = 0;
 
-	var scoreText:FlxText;
+	var songWeek:FlxText;
+	var songWeekId:FlxText;
+
 	var diffText:FlxText;
 	var lerpScore:Int = 0;
 	var intendedScore:Int = 0;
@@ -41,7 +45,6 @@ class FreeplayState extends MusicBeatState
 	private var iconArray:Array<HealthIcon> = [];
 	private var videoArray:Array<VideoIcon> = [];
 
-	private var curWeek:Int;
 
 	private var totalWeek:Int;
 
@@ -49,6 +52,9 @@ class FreeplayState extends MusicBeatState
 
 	var daDiff:String;
 	var daDiffColor:FlxColor;
+	
+	var totalSong:Int;
+
 
 	function removeOldWeek()
 	{
@@ -115,8 +121,9 @@ class FreeplayState extends MusicBeatState
 		}
 		addSong('shit', curWeek, false);
 
-		scoreText.text = i.songTitle;
-		
+		songWeek.text = i.songTitle;
+		songWeekId.text =  (curWeek + 1) + "/" + totalWeek;
+
 		grpSongs = new FlxTypedGroup<AlphabetShit>();
 		add(grpSongs);
 	
@@ -134,6 +141,8 @@ class FreeplayState extends MusicBeatState
 
 			var baseSong:BaseSong = SongPlayerManager.getCurrentSong(songs[i].songName);
 			var icon:HealthIcon = new HealthIcon();
+			icon.scrollable = true;
+
 			if (!shitSong)
 				baseSong.getDadIcon(icon);
 			else
@@ -203,25 +212,31 @@ class FreeplayState extends MusicBeatState
 	
 		var pX:Float = FlxG.width * 0.4;
 
-		scoreText = new FlxText(pX, 5, 0, "", 32);
-		// scoreText.autoSize = false;
-		// scoreText.screenCenter(X);
-		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER);
-		// scoreText.alignment = RIGHT;
+		songWeek = new FlxText(pX, 5, 0, "", 32);
+		// songWeek.autoSize = false;
+		// songWeek.screenCenter(X);
+		songWeek.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER);
+		// songWeek.alignment = RIGHT;
+		songWeek.alignment = CENTER;
+
+		songWeekId = new FlxText(FlxG.width * 0.95, 5, 0, "", 32);
+		songWeekId.setFormat(Paths.font("vcr.ttf"), 15, FlxColor.WHITE, RIGHT);
+		songWeekId.alignment = RIGHT;
 
 		var scoreBG:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 1.1), 77, 0xFF000000);
 		scoreBG.alpha = 0.6;
 		scoreBG.screenCenter(X);
 		add(scoreBG);
 
-		diffText = new FlxText(pX, scoreText.y + 36, 0, "", 24);
-		diffText.font = scoreText.font;
+		diffText = new FlxText(pX, songWeek.y + 36, 0, "", 24);
+		diffText.font = songWeek.font;
 		diffText.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, CENTER);
-
+		diffText.alignment = CENTER;
 		// diffText.screenCenter(X);
 		add(diffText);
 
-		add(scoreText);
+		add(songWeek);
+		// add(songWeekId);
 
 	
 
@@ -238,13 +253,17 @@ class FreeplayState extends MusicBeatState
 	{
 
 		totalWeek = SongManager.songs.length;
+
+		for (i in SongManager.songs)
+		{
+			var s = i.songList.length;
+			totalSong += s;
+		}
+
 		loadBG();
 		
 		// fetch song shits from SongManager
 		songs = new Array<SongMetadata>();
-		var weekNum = 0;
-
-		curWeek = 0;
 		loadWeek();
 		
 
@@ -287,7 +306,7 @@ class FreeplayState extends MusicBeatState
 
 			FlxG.stage.addChild(texFel);
 
-			// scoreText.textField.htmlText = md;
+			// songWeek.textField.htmlText = md;
 
 			//@notrace(md);
 		 */
@@ -432,7 +451,10 @@ class FreeplayState extends MusicBeatState
 		#end
 
 		getDiff();
-		diffText.text = songHighscore.toUpperCase() + " " + daDiff;
+		diffText.text = (curSongId) +   "." +  songHighscore.toUpperCase() + " " + daDiff;
+
+		// diffText.text = songHighscore.toUpperCase() + " " + daDiff; 
+		// + "("  + curWeek + "/" + totalWeek + ")";
 	}
 
 
@@ -469,6 +491,8 @@ class FreeplayState extends MusicBeatState
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 
 		curSelected += change;
+		curSongId += change;
+
 
 		if (curSelected <= 0)
 		{
@@ -479,6 +503,26 @@ class FreeplayState extends MusicBeatState
 			loadWeek();
 			curSelected = songs.length - 2;
 		}
+
+		
+
+		//x  > = 134
+		//133 >= 134
+		trace('curSongId: ' + curSongId);
+
+		if (curSongId  >= totalSong)
+		{
+			curSongId = 1;
+		}
+		else if (curSongId <= 0)
+		{
+			//<= 0
+			//= 134
+			curSongId = totalSong - 1;
+		}
+		trace('fixed: ' + curSongId);
+
+
 
 		if (curSelected + 1 >= songs.length)
 		{
@@ -504,7 +548,8 @@ class FreeplayState extends MusicBeatState
 
 		var curSong = songs[curSelected];
 
-		diffText.text = songHighscore.toUpperCase() + " " + daDiff;
+		diffText.text = (curSongId) + "." +  songHighscore.toUpperCase() + " " + daDiff;
+		// diffText.text = songHighscore.toUpperCase() + " " + daDiff  + "("  + curWeek + "/" + totalWeek + ")";
 
 
 

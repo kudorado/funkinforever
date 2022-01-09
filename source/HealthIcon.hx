@@ -10,6 +10,8 @@ class HealthIcon extends FlxSprite
 	public var sprTracker:FlxSprite;
 	var offsetX:Float;
 
+	public var scrollable:Bool;
+
 	public function new()
 	{
 		super();
@@ -28,12 +30,15 @@ class HealthIcon extends FlxSprite
 		if (sprTracker != null)
 			setPosition(sprTracker.x + sprTracker.width + 10 + offsetX, sprTracker.y - 30);
 		
-		if (y < 100)
+		if (scrollable)
 		{
-			visible = false;
+			if (y < 100)
+			{
+				visible = false;
+			}
+			else
+				visible = true;
 		}
-		else 
-			visible = true;
 	
 	}
 }
