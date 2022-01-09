@@ -508,6 +508,9 @@ class SongPlayerManager
 
 			case 'sunshine[sonic]':
 				songPlayer = new SunshineSonic();
+
+			case 'chaos':
+				songPlayer = new Chaos();
 		}
 
 		return songPlayer;
