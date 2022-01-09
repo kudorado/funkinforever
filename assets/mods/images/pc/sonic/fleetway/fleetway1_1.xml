@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:70fc3da59567d61bdbfa7b05c6487542:681f61c8769729ee1fca64ba7a1c64b7:573ba4fefcc3087ccf640db2fdcff475$ -->
+<TextureAtlas imagePath="fleetway1_1.png" width="2048" height="2048">
+    <SubTexture name="Fleetway Grrr0000" x="1" y="1" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0001" x="1" y="1" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0002" x="1" y="460" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0003" x="1" y="460" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0004" x="1" y="919" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0005" x="1" y="919" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0006" x="1" y="1378" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0007" x="1" y="1378" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0008" x="380" y="1" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0009" x="380" y="1" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0010" x="759" y="1" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0011" x="759" y="1" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0012" x="1138" y="1" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0013" x="1517" y="1" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0014" x="380" y="460" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0015" x="380" y="919" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0016" x="380" y="1378" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0017" x="759" y="460" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0018" x="1138" y="460" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0019" x="1517" y="460" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0020" x="759" y="919" width="377" height="457"/>
+    <SubTexture name="Fleetway Grrr0021" x="759" y="1378" width="377" height="457"/>
+</TextureAtlas>

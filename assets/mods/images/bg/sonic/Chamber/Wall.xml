@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:b0209ba4b3cbfe2a37d55530006d660d:6aee4a4f47aaaeb35c226d335b0fc1b1:6eeb6fa88dce6e3b099b4b96d59014af$ -->
+<TextureAtlas imagePath="Wall.png" width="4096" height="4096">
+    <SubTexture name="Wall Broken instance 10000" x="1" y="1" width="2840" height="1267"/>
+    <SubTexture name="Wall instance 10000" x="1" y="1270" width="2840" height="1267"/>
+</TextureAtlas>

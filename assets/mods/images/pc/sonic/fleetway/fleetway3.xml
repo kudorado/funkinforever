@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:93ed1bbf938e96d9ffa62c24c58313fa:190e138008c0fe11bd1e63939f4a396c:78ff242b4af20dda285ddf7690e69520$ -->
+<TextureAtlas imagePath="fleetway3.png" width="4096" height="4096">
+    <SubTexture name="Fleetway Laser Blast0000" x="1" y="1" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0001" x="1" y="1" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0002" x="1605" y="1" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0003" x="1605" y="1" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0004" x="1" y="902" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0005" x="1" y="902" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0006" x="1605" y="902" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0007" x="1605" y="902" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0008" x="1" y="1803" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0009" x="1" y="1803" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0010" x="1" y="2704" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0011" x="1605" y="1803" width="1602" height="899"/>
+</TextureAtlas>

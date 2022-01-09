@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:fff308f0b9c4a33bf15eb1f071e20f5b:2a1453ad0b2d49d3edee1784d039aab4:fd8d2959bbfdb14ce8dc4a199fb0fc95$ -->
+<TextureAtlas imagePath="Emerald_Beam.png" width="4096" height="4096">
+    <SubTexture name="Emerald Beam instance 10000" x="1" y="1" width="831" height="1340"/>
+    <SubTexture name="Emerald Beam instance 10001" x="1" y="1343" width="831" height="1340"/>
+    <SubTexture name="Emerald Beam instance 10002" x="1" y="2685" width="831" height="1340"/>
+    <SubTexture name="Emerald Beam instance 10003" x="834" y="1" width="831" height="1340"/>
+    <SubTexture name="Emerald Beam instance 10004" x="834" y="1343" width="831" height="1340"/>
+    <SubTexture name="Emerald Beam instance 10005" x="834" y="2685" width="831" height="1340"/>
+    <SubTexture name="Emerald Beam instance 10006" x="1667" y="1" width="831" height="1340"/>
+    <SubTexture name="Emerald Beam instance 10007" x="2500" y="1" width="831" height="1340"/>
+    <SubTexture name="Emerald Beam instance 10008" x="1667" y="1343" width="831" height="1340"/>
+    <SubTexture name="Emerald Beam instance 10009" x="1" y="1" width="831" height="1340"/>
+</TextureAtlas>
