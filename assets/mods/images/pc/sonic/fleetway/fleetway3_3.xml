@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:e7b91337ec6dfc51bd6acebc8f03fafa:725ef26cfc92eeff5ded15b5fa626336:bd3a5b3a7d4efe07d3b28bb3a333f13e$ -->
+<TextureAtlas imagePath="fleetway3_3.png" width="4096" height="4096">
+    <SubTexture name="Fleetway Laser Blast0012" x="1" y="1" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0013" x="1605" y="1" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0014" x="1" y="902" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0015" x="1605" y="902" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0016" x="1" y="1803" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0017" x="1" y="2704" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0018" x="1605" y="1803" width="1602" height="899"/>
+    <SubTexture name="Fleetway Laser Blast0019" x="1605" y="2704" width="1602" height="899"/>
+</TextureAtlas>
