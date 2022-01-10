@@ -508,7 +508,7 @@ class FreeplayState extends MusicBeatState
 
 		//x  > = 134
 		//133 >= 134
-		trace('curSongId: ' + curSongId);
+		// trace('curSongId: ' + curSongId);
 
 		if (curSongId  >= totalSong)
 		{
@@ -520,7 +520,7 @@ class FreeplayState extends MusicBeatState
 			//= 134
 			curSongId = totalSong - 1;
 		}
-		trace('fixed: ' + curSongId);
+		// trace('fixed: ' + curSongId);
 
 
 
