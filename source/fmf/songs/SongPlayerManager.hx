@@ -511,6 +511,9 @@ class SongPlayerManager
 
 			case 'chaos':
 				songPlayer = new Chaos();
+
+			case 'faker':
+				songPlayer = new Faker();
 		}
 
 		return songPlayer;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:9fb312541ea0d7770f158fc3a035c9e3:e640e22be6ccf0f8d94b609ba632b736:039eb4e5a6d8be36366f584fbea01946$ -->
+<!-- $TexturePacker:SmartUpdate:be503b0a900fb51d615029d527846c87:21fe2e3f26021d13b95d33c417b7fe46:039eb4e5a6d8be36366f584fbea01946$ -->
 <TextureAtlas imagePath="Faker_EXE_Assets.png" width="4096" height="4096">
     <SubTexture name="FAKER DOWN instance 10000" x="1" y="1" width="407" height="525"/>
     <SubTexture name="FAKER DOWN instance 10001" x="410" y="1" width="407" height="525"/>
