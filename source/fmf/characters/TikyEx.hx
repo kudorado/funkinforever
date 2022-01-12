@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import fmf.songs.TrickyMask;
 import flixel.util.FlxColor;
 import flixel.addons.effects.FlxTrail;
@@ -68,7 +68,7 @@ class TikyEx extends TikyMask
 
 		hole.scale.y = 1.5;
 		hole.scale.x = 1;
-		playState.add(hole);
+		gamePlayState.add(hole);
 	}
 
 	override function noteEventBF(noteData:Note)

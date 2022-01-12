@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -18,13 +18,13 @@ class Casanova extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.75;
+		gamePlayState.defaultCamZoom = 0.75;
 
 		var bg:FlxSprite = new FlxSprite(-200, -700).loadGraphic(Paths.image('bg/sacredmass/churchSelever/base', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.3;
 		bg.scale.x = 1.3;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 	}
 

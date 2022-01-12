@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.songs.Clown;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -18,7 +18,7 @@ class Nonsense extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.6;
+		gamePlayState.defaultCamZoom = 0.6;
 		var bg:FlxSprite = new FlxSprite(-800, 0).loadGraphic(Paths.image('bg/nonsense/Outside', 'mods'));
 		bg.antialiasing = true;
 
@@ -27,7 +27,7 @@ class Nonsense extends SongPlayer
 
 		bg.scrollFactor.set(0.95, 0.95);
 		bg.active = false;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-1000, -475).loadGraphic(Paths.image('bg/nonsense/BACKGROUND', 'mods'));
 		
@@ -38,7 +38,7 @@ class Nonsense extends SongPlayer
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.95, 0.95);
 		stageFront.active = false;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 	}
 

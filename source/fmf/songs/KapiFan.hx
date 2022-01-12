@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -25,7 +25,7 @@ class KapiFan extends Kapi
 		bg.scale.y = 1.25;
 
 		bg.active = false;
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
 	override function createDadAnimations():Void

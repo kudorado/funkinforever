@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.songs.Clown;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
@@ -25,12 +25,12 @@ class HellClown extends  Clown
 		tstatic.animation.play('static');
 
 		tstatic.alpha = 0;
-		playState.add(tstatic);
+		gamePlayState.add(tstatic);
 	}
 
 	public override function createSpookyText(text:String, x:Float = -1111111111111, y:Float = -1111111111111):Void
 	{
-		spookySteps = playState.curStep;
+		spookySteps = gamePlayState.curStep;
 		spookyRendered = true;
 		tstatic.alpha = 0.5;
 		FlxG.sound.play(Paths.sound('staticSound', 'preload'));
@@ -41,6 +41,6 @@ class HellClown extends  Clown
 		spookyText.bold = true;
 		spookyText.text = text;
 
-		playState.add(spookyText);
+		gamePlayState.add(spookyText);
 	}
 }

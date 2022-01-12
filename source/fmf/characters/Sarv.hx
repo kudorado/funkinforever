@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.addons.effects.FlxTrail;
 import fmf.songs.PlayableCharacter;
@@ -22,7 +22,7 @@ class Sarv extends Boyfriend
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		animation.addByPrefix('idle', 'BF idle dance', 24, false);
+		animation.addByPrefix('idle', 'BF idle dance0', 24, false);
 		animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
 		animation.addByPrefix('singRIGHT', 'BF NOTE LEFT0', 24, false);
 		animation.addByPrefix('singLEFT', 'BF NOTE RIGHT0', 24, false);
@@ -40,14 +40,14 @@ class Sarv extends Boyfriend
 	{
 		if (FlxG.save.data.distractions)
 		{
-			if (playState.curBeat % 6 == 0)
+			if (gamePlayState.curBeat % 6 == 0)
 			{
 				if (FlxG.save.data.distractions)
 				{
 					trail.visible = true;
 				}
 			}
-			else if(playState.curBeat % 16 == 0)
+			else if(gamePlayState.curBeat % 16 == 0)
 			{
 				if (FlxG.save.data.distractions)
 					trail.visible = false;
@@ -89,7 +89,7 @@ class Sarv extends Boyfriend
 			trail = new FlxTrail(this, null, 4, 24, 0.3, 0.069);
 			trail.color = FlxColor.PINK;
 
-			playState.add(trail);
+			gamePlayState.add(trail);
 			trail.visible = false;
 		}
 	}

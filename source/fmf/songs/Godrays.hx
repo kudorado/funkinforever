@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -20,7 +20,7 @@ class Godrays extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.5;
+		gamePlayState.defaultCamZoom = 0.5;
 		var bg:FlxSprite = new FlxSprite(-1482, -622).loadGraphic(Paths.image('bg/entity/BG_Sol_1', 'mods'));
 		bg.antialiasing = true;
 
@@ -28,7 +28,7 @@ class Godrays extends SongPlayer
 		bg.scale.y = 0.6;
 
 		bg.scrollFactor.set(0.5, 0.5);
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var bg1:FlxSprite = new FlxSprite(-547, -886).loadGraphic(Paths.image('bg/entity/BG_Sol_2', 'mods'));
 		bg1.antialiasing = true;
@@ -37,7 +37,7 @@ class Godrays extends SongPlayer
 		bg1.scale.y = 1.2;
 
 		bg1.scrollFactor.set(0.75, 0.75);
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
 		var stageFront:FlxSprite = new FlxSprite(-867, -714).loadGraphic(Paths.image('bg/entity/BG_Sol_3', 'mods'));
 		
@@ -47,7 +47,7 @@ class Godrays extends SongPlayer
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.95, 0.95);
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 	
 
@@ -68,7 +68,7 @@ class Godrays extends SongPlayer
 		bgAnim.x = 1271;
 		bgAnim.y = 210;
 
-		playState.add(bgAnim);
+		gamePlayState.add(bgAnim);
 	}
 
 	override function getDefaultSkin():Skin
@@ -129,10 +129,10 @@ class Godrays extends SongPlayer
 
 		gf.scrollFactor.set(0.95, 0.95);
 
-		playState.add(gf);
+		gamePlayState.add(gf);
 		createAldryx();
-		playState.add(dad);
-		playState.add(bf);
+		gamePlayState.add(dad);
+		gamePlayState.add(bf);
 
 		bf.characterAddedEvent();
 
@@ -162,14 +162,14 @@ class Godrays extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		playState.defaultCamZoom = 0.75;
-		playState.targetCamFollow.y += 500;
+		gamePlayState.defaultCamZoom = 0.75;
+		gamePlayState.targetCamFollow.y += 500;
 	}
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		playState.defaultCamZoom = 0.5;
+		gamePlayState.defaultCamZoom = 0.5;
 	}
 
 		

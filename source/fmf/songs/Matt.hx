@@ -1,5 +1,5 @@
 	package fmf.songs;
-
+import state.*;
 import MenuCharacter.CharacterSetting;
 import flixel.FlxSprite;
 import fmf.characters.*;
@@ -10,12 +10,12 @@ class Matt extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.8;
+		gamePlayState.defaultCamZoom = 0.8;
 		var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bg/matt/swordfight', "mods"));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = true;
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
     override function getDadTex()

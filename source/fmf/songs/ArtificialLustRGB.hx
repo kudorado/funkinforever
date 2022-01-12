@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.tweens.FlxTween;
 import flixel.math.FlxRandom;
 import flixel.util.FlxColor;
@@ -17,7 +17,7 @@ class ArtificialLustRGB extends ArtificialLust
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		//playState.add(bg);
+		//gamePlayState.add(bg);
 	}
 
 	override function createStage()
@@ -26,7 +26,7 @@ class ArtificialLustRGB extends ArtificialLust
 		stage.antialiasing = true;
 		stage.scale.y = 1;
 		stage.scale.x = 1;
-		//playState.add(stage);
+		//gamePlayState.add(stage);
 	}
 
 	override function createHeadlight()
@@ -40,7 +40,7 @@ class ArtificialLustRGB extends ArtificialLust
 		headlight.scale.y = 2;
 		headlight.x = 657;
 		headlight.y = -150;
-		//playState.add(headlight);
+		//gamePlayState.add(headlight);
 	}
 
 	override function createSimp()
@@ -54,13 +54,13 @@ class ArtificialLustRGB extends ArtificialLust
 		simp.scale.y = 1;
 		simp.x = 0;
 		simp.y = 753;
-		//playState.add(simp);
+		//gamePlayState.add(simp);
 	}
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.6;
-		playState.defaultCamZoom = camZoomShit;
+		gamePlayState.defaultCamZoom = 0.6;
+		gamePlayState.defaultCamZoom = camZoomShit;
 
 		createBG();
 		createStage();
@@ -91,7 +91,7 @@ class ArtificialLustRGB extends ArtificialLust
 
 		if (FlxG.save.data.distractions)
 		{
-			//playState.add(max);
+			//gamePlayState.add(max);
 		}
 	}
 
@@ -116,7 +116,7 @@ class ArtificialLustRGB extends ArtificialLust
 
 		if (FlxG.save.data.distractions)
 		{
-			//playState.add(abel);
+			//gamePlayState.add(abel);
 		}
 	}
 

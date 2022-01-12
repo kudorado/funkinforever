@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import flixel.util.FlxTimer;
 import flixel.FlxG;
 import flixel.FlxSprite;

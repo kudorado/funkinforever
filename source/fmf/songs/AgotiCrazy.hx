@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -20,10 +20,10 @@ class AgotiCrazy extends Agoti
 	{
 		var dumbShit = new FlxSprite(-1000, -300).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.WHITE);
 		dumbShit.scrollFactor.set(1, 1);
-		dumbShit.cameras = [playState.camGame];
-		playState.add(dumbShit);
+		dumbShit.cameras = [gamePlayState.camGame];
+		gamePlayState.add(dumbShit);
 
-		playState.defaultCamZoom = 0.6;
+		gamePlayState.defaultCamZoom = 0.6;
 		
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/agoti/Pillar_1', 'mods'));
 		bg.antialiasing = true;
@@ -40,7 +40,7 @@ class AgotiCrazy extends Agoti
 
 		bg.x -= 150;
 		bg.y += 0;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var bg1:FlxSprite = new FlxSprite();
 		var tex1 =  Paths.getSparrowAtlas('bg/agoti/Pillar_BG_Stage', 'mods');
@@ -63,7 +63,7 @@ class AgotiCrazy extends Agoti
 
 		bg1.scrollFactor.set(0.9, 0.9);
 
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
 		var stageFront:FlxSprite = new FlxSprite(0, 0);
 
@@ -79,7 +79,7 @@ class AgotiCrazy extends Agoti
 		stageFront.scale.y = 2;
 		stageFront.scrollFactor.set(0.9, 0.9);
 
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 
 	}

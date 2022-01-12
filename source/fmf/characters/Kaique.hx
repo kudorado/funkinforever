@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import fmf.songs.PlayableCharacter;
@@ -25,7 +25,7 @@ class Kaique extends TikyMask
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		defaultCamZoom = playState.defaultCamZoom;
+		defaultCamZoom = gamePlayState.defaultCamZoom;
 
 		animation.addByPrefix('idle', 'BF idle dance', 24, false);
 		animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
@@ -47,11 +47,11 @@ class Kaique extends TikyMask
 		if (FlxG.random.bool(35) && !clown.spookyRendered && !noteData.isSustainNote) // create spooky text :flushed:
 			clown.noteEvent(noteData, x, y);
 
-		playState.shakeMinimal();
+		gamePlayState.shakeMinimal();
 
 
-		if(playState.curBeat % 6 == 0)
-			PlayState.songPlayer.gf.playAnimForce("cheer", 0.1);
+		if(gamePlayState.curBeat % 6 == 0)
+			GamePlayState.songPlayer.gf.playAnimForce("cheer", 0.1);
 
 		super.noteEventBF(noteData);
 		
@@ -59,10 +59,10 @@ class Kaique extends TikyMask
 
 	override function noteEventDad(noteData:Note)
 	{
-		if (playState.bfTurn)
+		if (gamePlayState.bfTurn)
 			return;
 
-		playState.defaultCamZoom = defaultCamZoom;
+		gamePlayState.defaultCamZoom = defaultCamZoom;
 
 		super.noteEventDad(noteData);
 	}

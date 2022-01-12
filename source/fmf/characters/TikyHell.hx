@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import fmf.songs.HellClown;
 import flixel.math.FlxPoint;
 import fmf.songs.Clown;
@@ -30,7 +30,7 @@ class TikyHell extends TikyMask
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		defaultCamZoom = playState.defaultCamZoom;
+		defaultCamZoom = gamePlayState.defaultCamZoom;
 
 		animation.addByPrefix('idle', 'Idle', 24, false);
 		animation.addByPrefix('singUP', 'Proper Up0', 24, false);
@@ -89,7 +89,7 @@ class TikyHell extends TikyMask
 
 	override function noteEventDad(noteData:Note)
 	{
-		if (playState.bfTurn)
+		if (gamePlayState.bfTurn)
 		{
 			smolFrame = 0;
 			return;
@@ -102,7 +102,7 @@ class TikyHell extends TikyMask
 		}
 
 		smolTiky();
-		playState.defaultCamZoom = defaultCamZoom;
+		gamePlayState.defaultCamZoom = defaultCamZoom;
 	}
 
 	private function biggeTiky()
@@ -113,10 +113,10 @@ class TikyHell extends TikyMask
 		this.x = largePos.x;
 		this.y = largePos.y;
 
-		playState.targetCamFollow.y = this.getMidpoint().y + 250;
-		playState.targetCamFollow.x = this.getMidpoint().x;
+		gamePlayState.targetCamFollow.y = this.getMidpoint().y + 250;
+		gamePlayState.targetCamFollow.x = this.getMidpoint().x;
 
-		playState.defaultCamZoom = 0.4;
+		gamePlayState.defaultCamZoom = 0.4;
 	}
 
 	private function smolTiky()

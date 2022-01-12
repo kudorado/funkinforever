@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import state.*;
 import flixel.FlxBasic;
 import Options.PcOption;
 import Options.VFXOption;
@@ -31,9 +32,9 @@ class BaseSong
 
 	// characters shit
 	public var bf:PlayableCharacter;
-	public var playState(get, never):PlayState;
-	public inline function get_playState()
-		return PlayState.instance;
+	public var gamePlayState(get, never):GamePlayState;
+	public inline function get_gamePlayState()
+		return GamePlayState.instance;
 	
 	public var gf:Character;
 	public var dad:Character;
@@ -97,12 +98,12 @@ class BaseSong
 	// what map should we load
 	function loadMap():Void
 	{
-		playState.defaultCamZoom = 0.9;
+		gamePlayState.defaultCamZoom = 0.9;
 		var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = false;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
@@ -110,7 +111,7 @@ class BaseSong
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
 		stageFront.active = false;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 		var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
 		stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
@@ -119,7 +120,7 @@ class BaseSong
 		stageCurtains.scrollFactor.set(1.3, 1.3);
 		stageCurtains.active = false;
 
-		playState.add(stageCurtains);
+		gamePlayState.add(stageCurtains);
 	}
 
 	// what character should we create
@@ -131,13 +132,13 @@ class BaseSong
 
 		gf.scrollFactor.set(0.95, 0.95);
 
-		playState.add(gf);
-		playState.add(dad);
-		playState.add(bf);
+		gamePlayState.add(gf);
+		gamePlayState.add(dad);
+		gamePlayState.add(bf);
 
 		bf.characterAddedEvent();
 
-		if (PlayState.isStoryMode)
+		if (GamePlayState.isStoryMode)
 			createStoryBF();
 	}
 
@@ -279,7 +280,7 @@ class BaseSong
 
 	private function switchDad(song:SongPlayer, createDad:Bool = true, destroyOldDad:Bool = true)
 	{
-		playState.remove(dad);
+		gamePlayState.remove(dad);
 
 		if(destroyOldDad)
 			dad.destroy();
@@ -291,8 +292,8 @@ class BaseSong
 		dad = song.dad;
 		
 		
-		playState.add(dad);
-		dad.playAnim(playState.lastNote, true);
+		gamePlayState.add(dad);
+		dad.playAnim(gamePlayState.lastNote, true);
 
 	}
 
@@ -300,12 +301,12 @@ class BaseSong
 	{
 		if (bf != null)
 		{
-			playState.remove(bf);
+			gamePlayState.remove(bf);
 			bf.destroy();
 		}
 
 		this.bf = pc;
-		playState.add(bf);
+		gamePlayState.add(bf);
 	}
 
 	private function changePc(pcName:String)
@@ -361,7 +362,7 @@ class BaseSong
 
 	public function add(obj:FlxBasic)
 	{
-		playState.add(obj);
+		gamePlayState.add(obj);
 	}
 
 	private function createBFAnimationOffsets():Void
@@ -374,18 +375,18 @@ class BaseSong
 	// dialogue handle
 	public function createDialogue(callback:Void->Void):Void
 	{
-		var path = PlayState.CURRENT_SONG + '/' + PlayState.CURRENT_SONG + '-dialogue';
-		dialogue = CoolUtil.coolTextFile(Paths.txt(PlayState.playingSong.folder + path));
+		var path = GamePlayState.CURRENT_SONG + '/' + GamePlayState.CURRENT_SONG + '-dialogue';
+		dialogue = CoolUtil.coolTextFile(Paths.txt(GamePlayState.playingSong.folder + path));
 		dialogueBox = new DialogueBox(false, dialogue);
 		dialogueBox.scrollFactor.set();
 		dialogueBox.finishThing = callback;
-		dialogueBox.cameras = [playState.camHUD];
+		dialogueBox.cameras = [gamePlayState.camHUD];
 		//@notrace("Create dialogue at path: " + path);
 	}
 
 	public function showDialogue():Void
 	{
-		playState.add(dialogueBox);
+		gamePlayState.add(dialogueBox);
 		//@notrace('whee mai dialgue siht!');
 	}
 
@@ -396,13 +397,13 @@ class BaseSong
 	// show ready, set, go image and sound
 	public function startCountdown():Void
 	{
-		playState.talking = false;
-		playState.startedCountdown = true;
+		gamePlayState.talking = false;
+		gamePlayState.startedCountdown = true;
 		Conductor.songPosition = 0;
 		Conductor.songPosition -= Conductor.crochet * 5;
 
 		var swagCounter:Int = 0;
-		playState.startTimer = new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
+		gamePlayState.startTimer = new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
 		{
 			dad.dance();
 			gf.dance();
@@ -438,7 +439,7 @@ class BaseSong
 		readySprite.scrollFactor.set();
 		readySprite.updateHitbox();
 		readySprite.screenCenter();
-		playState.add(readySprite);
+		gamePlayState.add(readySprite);
 		FlxTween.tween(readySprite, {y: readySprite.y += 100, alpha: 0}, Conductor.crochet / 1000, {
 			ease: FlxEase.cubeInOut,
 			onComplete: function(twn:FlxTween)
@@ -455,7 +456,7 @@ class BaseSong
 		setSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 		setSprite.scrollFactor.set();
 		setSprite.screenCenter();
-		playState.add(setSprite);
+		gamePlayState.add(setSprite);
 		FlxTween.tween(setSprite, {y: setSprite.y += 100, alpha: 0}, Conductor.crochet / 1000, {
 			ease: FlxEase.cubeInOut,
 			onComplete: function(twn:FlxTween)
@@ -473,7 +474,7 @@ class BaseSong
 		goSprite.scrollFactor.set();
 		goSprite.updateHitbox();
 		goSprite.screenCenter();
-		playState.add(goSprite);
+		gamePlayState.add(goSprite);
 
 		FlxTween.tween(goSprite, {y: goSprite.y += 100, alpha: 0}, Conductor.crochet / 1000, {
 			ease: FlxEase.cubeInOut,
@@ -484,7 +485,7 @@ class BaseSong
 		});
 
 		FlxG.sound.play(Paths.sound('introGo' + introType()), 0.6);
-		playState.isGameStarted = true;
+		gamePlayState.isGameStarted = true;
 	}
 
 	//--------------------------------------------------------------------------------------------------------
@@ -581,8 +582,8 @@ class BaseSong
 	// camera follow initalize
 	public function applyCamPosition():Void
 	{
-		playState.camFollow = new FlxObject(0, 0, 1, 1);
-		playState.setCamFollowPosition(camPos.x, camPos.y);
+		gamePlayState.camFollow = new FlxObject(0, 0, 1, 1);
+		gamePlayState.setCamFollowPosition(camPos.x, camPos.y);
 	}
 
 	//--------------------------------------------------------------------------------------------------------

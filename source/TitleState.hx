@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import extension.admob.AdMob;
 import extension.admob.GravityMode;
 
@@ -87,18 +87,18 @@ class TitleState extends MusicBeatState
 		{
 			// FIX LATER!!!
 			// WEEK UNLOCK PROGRESSION!!
-			// StoryMenuState.weekUnlocked = FlxG.save.data.weekUnlocked;
+			// StoryState.weekUnlocked = FlxG.save.data.weekUnlocked;
 
-			if (StoryMenuState.weekUnlocked.length < 4)
-				StoryMenuState.weekUnlocked.insert(0, true);
+			if (StoryState.weekUnlocked.length < 4)
+				StoryState.weekUnlocked.insert(0, true);
 
 			// QUICK PATCH OOPS!
-			if (!StoryMenuState.weekUnlocked[0])
-				StoryMenuState.weekUnlocked[0] = true;
+			if (!StoryState.weekUnlocked[0])
+				StoryState.weekUnlocked[0] = true;
 		}
 
 		#if FREEPLAY
-		FlxG.switchState(new FreeplayState());
+		FlxG.switchState(new FreePlayState());
 		#elseif CHARTING
 		FlxG.switchState(new ChartingState());
 		#else

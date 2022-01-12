@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -25,19 +25,19 @@ class BabJumpIn extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.8;
+		gamePlayState.defaultCamZoom = 0.8;
 
 		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/BG1', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 0.5;
 		bg1.scale.x = 0.5;
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
 		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/BG2', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 0.5;
 		bg2.scale.x = 0.5;
-		playState.add(bg2);
+		gamePlayState.add(bg2);
 
 		bgAnim = new FlxSprite(0, 0);
 		bgAnim.frames = Paths.getSparrowAtlas('bg/bab/day/mini', 'mods');
@@ -54,7 +54,7 @@ class BabJumpIn extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(bgAnim);
+			gamePlayState.add(bgAnim);
 		}
 
 		bgAnim2 = new FlxSprite(0, 0);
@@ -70,7 +70,7 @@ class BabJumpIn extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(bgAnim2);
+			gamePlayState.add(bgAnim2);
 		}
 
 		var bg:FlxSprite = new FlxSprite(-580, -200).loadGraphic(Paths.image('bg/bab/day/BG3', 'mods'));
@@ -78,7 +78,7 @@ class BabJumpIn extends SongPlayer
 		bg.scrollFactor.set(0.9,0.9);
 		bg.scale.y = 0.75;
 		bg.scale.x = 0.75;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		randomShit();
 
@@ -133,12 +133,12 @@ class BabJumpIn extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.targetCamFollow.x = bf.getGraphicMidpoint().x - 300;
+		gamePlayState.targetCamFollow.x = bf.getGraphicMidpoint().x - 300;
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.x = dad.getGraphicMidpoint().x + 350;
+		gamePlayState.targetCamFollow.x = dad.getGraphicMidpoint().x + 350;
 	}
 
 	var dir:Int = 1; 
@@ -155,7 +155,7 @@ class BabJumpIn extends SongPlayer
 	{
 		bgAnim2.x += speed * dir * elapsed;
 
-		if (playState.curBeat % checkBeat == 0 && playState.curBeat > 10)
+		if (gamePlayState.curBeat % checkBeat == 0 && gamePlayState.curBeat > 10)
 		{
 			dir *= -1;
 			bgAnim2.flipX = !bgAnim2.flipX;

@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import flixel.FlxSubState;
 import flixel.FlxG;
 import fmf.songs.BaseSong;

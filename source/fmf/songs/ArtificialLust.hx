@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxTween;
 import flixel.math.FlxRandom;
@@ -48,7 +48,7 @@ class ArtificialLust extends SongPlayer
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
 	function createStage()
@@ -57,7 +57,7 @@ class ArtificialLust extends SongPlayer
 		stage.antialiasing = true;
 		stage.scale.y = 1;
 		stage.scale.x = 1;
-		playState.add(stage);
+		gamePlayState.add(stage);
 	}
 
 	function createLight()
@@ -67,35 +67,35 @@ class ArtificialLust extends SongPlayer
 		light0.antialiasing = true;
 		light0.scale.y = 1;
 		light0.scale.x = 1;
-		playState.add(light0);
+		gamePlayState.add(light0);
 
 		light1 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light1', 'mods'));
 		light1.antialiasing = true;
 		light1.scale.y = 1;
 		light1.scale.x = 1;
 		light1.visible = false;
-		playState.add(light1);
+		gamePlayState.add(light1);
 
 		light2 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light2', 'mods'));
 		light2.antialiasing = true;
 		light2.scale.y = 1;
 		light2.scale.x = 1;
 		light2.visible = false;
-		playState.add(light2);
+		gamePlayState.add(light2);
 
 		light3 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light3', 'mods'));
 		light3.antialiasing = true;
 		light3.scale.y = 1;
 		light3.scale.x = 1;
 		light3.visible = false;
-		playState.add(light3);
+		gamePlayState.add(light3);
 
 		lightEvent = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/event/light', 'mods'));
 		lightEvent.antialiasing = true;
 		lightEvent.scale.y = 1;
 		lightEvent.scale.x = 1;
 		lightEvent.visible = false;
-		playState.add(lightEvent);
+		gamePlayState.add(lightEvent);
 
 	}
 
@@ -110,7 +110,7 @@ class ArtificialLust extends SongPlayer
         headlight.scale.y = 2;
 		headlight.x = 657;
 		headlight.y = -150;
-        playState.add(headlight);
+        gamePlayState.add(headlight);
 
 	}
 
@@ -125,13 +125,13 @@ class ArtificialLust extends SongPlayer
         simp.scale.y = 1;
 		simp.x = 0;
 		simp.y = 753;
-        playState.add(simp);
+        gamePlayState.add(simp);
 	}
 
 	override function loadMap()
 	{
-        playState.defaultCamZoom = 0.6;
-		playState.defaultCamZoom = camZoomShit;
+        gamePlayState.defaultCamZoom = 0.6;
+		gamePlayState.defaultCamZoom = camZoomShit;
 
 		createBG();
 		createLight();
@@ -167,7 +167,7 @@ class ArtificialLust extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(abel);
+			gamePlayState.add(abel);
 		}
 	}
 
@@ -178,9 +178,9 @@ class ArtificialLust extends SongPlayer
 		createDad();
 
 		gf.scrollFactor.set(0.95, 0.95);
-		playState.add(gf);
-		playState.add(bf);
-		playState.add(dad);
+		gamePlayState.add(gf);
+		gamePlayState.add(bf);
+		gamePlayState.add(dad);
 
 		bf.characterAddedEvent();
 
@@ -205,7 +205,7 @@ class ArtificialLust extends SongPlayer
 		blackShit.scrollFactor.set(0.9, 0.9);
 		blackShit.alpha = 0;
 		blackShit.screenCenter(X);
-		playState.add(blackShit);
+		gamePlayState.add(blackShit);
 	}
 
 	function createMax()
@@ -229,7 +229,7 @@ class ArtificialLust extends SongPlayer
 		
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(max);
+			gamePlayState.add(max);
 		}
 	}
 
@@ -255,7 +255,7 @@ class ArtificialLust extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(abel);
+			gamePlayState.add(abel);
 		}
 	}
 	
@@ -308,32 +308,32 @@ class ArtificialLust extends SongPlayer
 	{
 		if (showTime)
 		{
-			playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 300;
-			playState.targetCamFollow.y = 300;
+			gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 300;
+			gamePlayState.targetCamFollow.y = 300;
 			return;
 		}
 
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.targetCamFollow.y = 360;
+		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
+		gamePlayState.targetCamFollow.y = 360;
 	}
 
 	override function updateCamFollowDad()
 	{
 		if (showTime)
 		{
-			playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 300;
-			playState.targetCamFollow.y = 300;
+			gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 300;
+			gamePlayState.targetCamFollow.y = 300;
 			return;
 		}
 
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.targetCamFollow.y = 360;
+		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		gamePlayState.targetCamFollow.y = 360;
 	}
 
 	override function dadNoteEvent(noteData:Note)
 	{
 		super.dadNoteEvent(noteData);
-		var lastNote = playState.lastNote;
+		var lastNote = gamePlayState.lastNote;
 		if (showTime)
 			eventSong.max.animation.play(lastNote);
 		else
@@ -343,7 +343,7 @@ class ArtificialLust extends SongPlayer
 	override function bfNoteEvent(noteData:Note)
 	{
 		super.bfNoteEvent(noteData);
-		var lastNote = playState.lastNote;
+		var lastNote = gamePlayState.lastNote;
 		if (showTime)
 			eventSong.max.animation.play(lastNote);
 		else
@@ -359,27 +359,27 @@ class ArtificialLust extends SongPlayer
 				// sp.createDad();
 				FlxTween.tween(blackShit, {alpha: 1}, 1, {});
 				dad.playAnim('showTime');
-				playState.defaultCamZoom =  1.25;
+				gamePlayState.defaultCamZoom =  1.25;
 				showTime = true;
-				playState.isMidSongEvent = true;
+				gamePlayState.isMidSongEvent = true;
 				
 			case 62:
-				playState.defaultCamZoom = camZoomShit;
+				gamePlayState.defaultCamZoom = camZoomShit;
 
 			case 63:
-				playState.isMidSongEvent = false;
+				gamePlayState.isMidSongEvent = false;
 
 				FlxTween.tween(blackShit, {alpha: 0}, 0.1, {});
-				playState.shakeNormal();
+				gamePlayState.shakeNormal();
 				eventEnter();
 
 			case 95 | 400:
 				showTime = false;
-				playState.shakeBig();
+				gamePlayState.shakeBig();
 				eventExit();
 			case 304:
 				showTime = true;
-				playState.shakeNormal();
+				gamePlayState.shakeNormal();
 				eventEnter();
 
 		}
@@ -400,23 +400,23 @@ class ArtificialLust extends SongPlayer
 	function switchAbelAndMaxRGB()
 	{
 		lightEvent.visible = true;
-		playState.remove(bg);
-		playState.remove(stage);
-		playState.remove(headlight);
-		playState.remove(simp);
-		playState.remove(abel);
-		playState.remove(max);
-		playState.remove(bf);
-		playState.remove(gf);
+		gamePlayState.remove(bg);
+		gamePlayState.remove(stage);
+		gamePlayState.remove(headlight);
+		gamePlayState.remove(simp);
+		gamePlayState.remove(abel);
+		gamePlayState.remove(max);
+		gamePlayState.remove(bf);
+		gamePlayState.remove(gf);
 
-		playState.add(eventSong.bg);
-		playState.add(eventSong.stage);
-		playState.add(eventSong.headlight);
-		playState.add(eventSong.simp);
-		playState.add(eventSong.abel);
-		playState.add(eventSong.max);
-		playState.add(gf);
-		playState.add(bf);
+		gamePlayState.add(eventSong.bg);
+		gamePlayState.add(eventSong.stage);
+		gamePlayState.add(eventSong.headlight);
+		gamePlayState.add(eventSong.simp);
+		gamePlayState.add(eventSong.abel);
+		gamePlayState.add(eventSong.max);
+		gamePlayState.add(gf);
+		gamePlayState.add(bf);
 
 		eventSong.abel.animation.play('idle');
 		eventSong.max.animation.play('idle');
@@ -427,23 +427,23 @@ class ArtificialLust extends SongPlayer
 	{
 		lightEvent.visible = false;
 
-		playState.remove(eventSong.bg);
-		playState.remove(eventSong.stage);
-		playState.remove(eventSong.headlight);
-		playState.remove(eventSong.simp);
-		playState.remove(eventSong.abel);
-		playState.remove(eventSong.max);
-		playState.remove(gf);
-		playState.remove(bf);
+		gamePlayState.remove(eventSong.bg);
+		gamePlayState.remove(eventSong.stage);
+		gamePlayState.remove(eventSong.headlight);
+		gamePlayState.remove(eventSong.simp);
+		gamePlayState.remove(eventSong.abel);
+		gamePlayState.remove(eventSong.max);
+		gamePlayState.remove(gf);
+		gamePlayState.remove(bf);
 
-		playState.add(bg);
-		playState.add(stage);
-		playState.add(headlight);
-		playState.add(simp);
-		playState.add(abel);
-		playState.add(max);
-		playState.add(bf);
-		playState.add(gf);
+		gamePlayState.add(bg);
+		gamePlayState.add(stage);
+		gamePlayState.add(headlight);
+		gamePlayState.add(simp);
+		gamePlayState.add(abel);
+		gamePlayState.add(max);
+		gamePlayState.add(bf);
+		gamePlayState.add(gf);
 
 		abel.animation.play('idle');
 		max.animation.play('idle');

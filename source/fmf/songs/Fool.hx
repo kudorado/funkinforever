@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.FlxG;
 import flixel.util.FlxColor;
 import flixel.FlxSprite;
@@ -19,7 +19,7 @@ class Fool extends Trueform
 	{
 		super.loadMap();
 
-		playState.defaultCamZoom = 0.9;
+		gamePlayState.defaultCamZoom = 0.9;
 
 		hole = new FlxSprite(-650, 600);
 		hole.loadGraphic(Paths.image('bg/trueform/zardy/gfshit', 'mods'), true, 512, 512);
@@ -43,7 +43,7 @@ class Fool extends Trueform
 
 		bg.y += 200;
 
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 	}
 

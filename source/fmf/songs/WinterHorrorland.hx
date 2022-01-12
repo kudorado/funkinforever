@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import fmf.characters.*;
 import flixel.FlxG;
@@ -23,17 +23,17 @@ class WinterHorrorland extends SongPlayer
 		bg.active = false;
 		bg.setGraphicSize(Std.int(bg.width * 0.8));
 		bg.updateHitbox();
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var evilTree:FlxSprite = new FlxSprite(300, -300).loadGraphic(Paths.image('christmas/evilTree', 'week5'));
 		evilTree.antialiasing = true;
 		evilTree.scrollFactor.set(0.2, 0.2);
-		playState.add(evilTree);
+		gamePlayState.add(evilTree);
 
 		var evilSnow:FlxSprite = new FlxSprite(-200, 700).loadGraphic(Paths.image("christmas/evilSnow", 'week5'));
 		evilSnow.antialiasing = true;
 		evilSnow.scale.x = 1.25;
-		playState.add(evilSnow);
+		gamePlayState.add(evilSnow);
 	}
 
 	override function showDialogue()
@@ -42,7 +42,7 @@ class WinterHorrorland extends SongPlayer
 
 		new FlxTimer().start(0.15, function(tmr:FlxTimer)
 		{
-			playState.add(dialogueBox);
+			gamePlayState.add(dialogueBox);
 			//@notrace('whee mai dialgue siht!');
 			
 			dialogueCallback = dialogueBox.finishThing; //tmp callback
@@ -53,18 +53,18 @@ class WinterHorrorland extends SongPlayer
 	function lightItUp()
 	{
 		blackScreen = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
-		playState.add(blackScreen);
+		gamePlayState.add(blackScreen);
 		blackScreen.scrollFactor.set();
-		playState.camHUD.visible = false;
+		gamePlayState.camHUD.visible = false;
 
 		new FlxTimer().start(0.1, function(tmr:FlxTimer)
 		{
-			playState.remove(blackScreen);
-			playState.camHUD.visible = true;
+			gamePlayState.remove(blackScreen);
+			gamePlayState.camHUD.visible = true;
 			FlxG.sound.play(Paths.sound('Lights_Turn_On'));
-			playState.targetCamFollow.y = -2050;
-			playState.targetCamFollow.x += 200;
-			FlxG.camera.focusOn(playState.camFollow.getPosition());
+			gamePlayState.targetCamFollow.y = -2050;
+			gamePlayState.targetCamFollow.x += 200;
+			FlxG.camera.focusOn(gamePlayState.camFollow.getPosition());
 			FlxG.camera.zoom = 1;
 		});
 	}
@@ -73,7 +73,7 @@ class WinterHorrorland extends SongPlayer
 	{
 		new FlxTimer().start(0.8, function(tmr:FlxTimer)
 		{
-			FlxTween.tween(FlxG.camera, {zoom: playState.defaultCamZoom}, 2.5, {
+			FlxTween.tween(FlxG.camera, {zoom: gamePlayState.defaultCamZoom}, 2.5, {
 				ease: FlxEase.quadInOut,
 				onComplete: function(twn:FlxTween)
 				{

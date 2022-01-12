@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.FlxG;
 import flixel.util.FlxColor;
 import flixel.FlxSprite;
@@ -92,7 +92,7 @@ class EsManifest extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.8;
+		gamePlayState.defaultCamZoom = 0.8;
 
 		var hallowTex = Paths.getSparrowAtlas('bg/sky/bg', 'mods');
 		var bg = new FlxSprite(-200, -200);
@@ -107,7 +107,7 @@ class EsManifest extends SongPlayer
 		bg.x += 400;
 		bg.y += 300;
 
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 	}
 	override function midSongEventUpdate(curBeat:Int)

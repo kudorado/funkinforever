@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import lime.utils.Assets;
 
 using StringTools;
@@ -10,7 +10,7 @@ class CoolUtil
 
 	public static function difficultyString():String
 	{
-		return difficultyArray[PlayState.storyDifficulty];
+		return difficultyArray[GamePlayState.storyDifficulty];
 	}
 
 	public static function coolTextFile(path:String):Array<String>

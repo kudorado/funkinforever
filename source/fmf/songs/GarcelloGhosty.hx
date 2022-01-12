@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;

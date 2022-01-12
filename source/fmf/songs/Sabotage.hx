@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 //import js.html.rtc.PeerConnectionIceEvent;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -23,7 +23,7 @@ class Sabotage extends SussusMoogus
 	override function loadMap()
 	{
         super.loadMap();
-		playState.defaultCamZoom = 0.8;
+		gamePlayState.defaultCamZoom = 0.8;
 	}
 
 	override function createGFAnimationOffsets()

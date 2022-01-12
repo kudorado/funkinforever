@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import fmf.songs.SongManager;
 import flixel.FlxCamera;
 import flixel.tweens.FlxEase;
@@ -44,10 +44,10 @@ class LoadingState extends MusicBeatState
 			callbacks = new MultiCallback(onLoad);
 			var introComplete = callbacks.add("introComplete");
 			checkLoadSong(getSongPath());
-			if (PlayState.SONG.needsVoices)
+			if (GamePlayState.SONG.needsVoices)
 				checkLoadSong(getVocalPath());
 			checkLibrary("shared");
-			if (PlayState.storyWeek > 0)
+			if (GamePlayState.storyWeek > 0)
 				checkLibrary("mods");
 			else
 				checkLibrary("tutorial");
@@ -78,7 +78,7 @@ class LoadingState extends MusicBeatState
 	function loadSongBitmap()
 	{
 		checkLoadBitmap(getBitmapPath('pc/' + PcManager.pcList[FlxG.save.data.pcId].name));
-		checkLoadBitmap(getBitmapPath('bg/' + PlayState.playingSong.folder));
+		checkLoadBitmap(getBitmapPath('bg/' + GamePlayState.playingSong.folder));
 		checkLoadBitmap(getBitmapPath('note_skins/' +  VfxManager.vfxList[FlxG.save.data.vfxId].name));
 		checkLoadBitmap(getBitmapPath('note_effects/' + SkinManager.skinList[FlxG.save.data.skinId].name));
 	
@@ -140,7 +140,7 @@ class LoadingState extends MusicBeatState
 
 	static function getSongPath()
 	{
-		var daSongPath = Paths.inst(PlayState.SONG_NAME, PlayState.playingSong.folder);
+		var daSongPath = Paths.inst(GamePlayState.SONG_NAME, GamePlayState.playingSong.folder);
 		//@notrace('songPath: ' + daSongPath);
 
 		return daSongPath;
@@ -148,7 +148,7 @@ class LoadingState extends MusicBeatState
 
 	static function getVocalPath()
 	{
-		var daVocalPath =  Paths.voices(PlayState.SONG_NAME, PlayState.playingSong.folder);
+		var daVocalPath =  Paths.voices(GamePlayState.SONG_NAME, GamePlayState.playingSong.folder);
 		//@notrace('vocalPath: ' + daVocalPath);
 
 		return daVocalPath;
@@ -177,7 +177,7 @@ class LoadingState extends MusicBeatState
 		var result:Bool = Assets.cache.removeSound(getSongPath());
 		//@notrace("remove song cached: " + getSongPath() + ", result: " + result);
 
-		if (PlayState.SONG.needsVoices)
+		if (GamePlayState.SONG.needsVoices)
 		{
 			var vocalResult:Bool = Assets.cache.removeSound(getVocalPath());
 			//@notrace("remove vocal cached: " + getVocalPath() + ", result: " + vocalResult);
@@ -186,11 +186,11 @@ class LoadingState extends MusicBeatState
 
 	static function getNextState(target:FlxState, stopMusic = false):FlxState
 	{
-		Paths.setCurrentLevel(SongManager.songs[PlayState.storyWeek].folder);
+		Paths.setCurrentLevel(SongManager.songs[GamePlayState.storyWeek].folder);
 		// #if NO_PRELOAD_ALL
-		//@notrace('need voices:' + PlayState.SONG.needsVoices);
+		//@notrace('need voices:' + GamePlayState.SONG.needsVoices);
 		var loaded = isSoundLoaded(getSongPath())
-			&& (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath()))
+			&& (!GamePlayState.SONG.needsVoices || isSoundLoaded(getVocalPath()))
 			&& isLibraryLoaded("shared");
 
 		if (!loaded)

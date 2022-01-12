@@ -1,5 +1,6 @@
 package;
 
+import state.*;
 import flixel.tweens.FlxTween;
 import flixel.system.FlxSound;
 import flixel.FlxG;
@@ -40,7 +41,7 @@ class DialogueBox extends FlxSpriteGroup
 	var screenJustTouched:Bool = false;
 
 	function isWeekSix():Bool {
-		var song = PlayState.CURRENT_SONG;
+		var song = GamePlayState.CURRENT_SONG;
 		return song == 'roses' || song == 'senpai' || song == 'thorns';
 	}
 
@@ -49,7 +50,7 @@ class DialogueBox extends FlxSpriteGroup
 	{
 		super();
 
-		switch (PlayState.SONG.song.toLowerCase())
+		switch (GamePlayState.SONG.song.toLowerCase())
 		{
 		
 			case 'senpai':
@@ -64,7 +65,7 @@ class DialogueBox extends FlxSpriteGroup
 	
 		}
 
-		var song = PlayState.CURRENT_SONG;
+		var song = GamePlayState.CURRENT_SONG;
 
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), FlxColor.BLACK);
@@ -101,7 +102,7 @@ class DialogueBox extends FlxSpriteGroup
 		box = new FlxSprite(-20, 45);
 		
 		var hasDialog = false;
-		switch (PlayState.SONG.song.toLowerCase())
+		switch (GamePlayState.SONG.song.toLowerCase())
 		{
 		
 			case 'senpai':
@@ -144,9 +145,9 @@ class DialogueBox extends FlxSpriteGroup
 		if (!hasDialog)
 			return;
 
-		// PlayState.dad.scale.y = 0;
-		// PlayState.instance.focusOnEnemy();
-		var s = PlayState.CURRENT_SONG;
+		// GamePlayState.dad.scale.y = 0;
+		// GamePlayState.instance.focusOnEnemy();
+		var s = GamePlayState.CURRENT_SONG;
 
 		if(isWeekSix())
 		{
@@ -156,7 +157,7 @@ class DialogueBox extends FlxSpriteGroup
 
 			portraitLeft.frames = Paths.getSparrowAtlas(path);
 			portraitLeft.animation.addByPrefix('enter', 'Senpai Portrait Enter', 24, false);
-			portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
+			portraitLeft.setGraphicSize(Std.int(portraitLeft.width * GamePlayState.daPixelZoom * 0.9));
 			portraitLeft.updateHitbox();
 			portraitLeft.scrollFactor.set();
 			add(portraitLeft);
@@ -167,7 +168,7 @@ class DialogueBox extends FlxSpriteGroup
 		else
 		{
 			//KUDORADO//DISABLE//DISABLE//@notraceget gf shit!');
-			var char = PlayState.SONG.player2.toLowerCase();
+			var char = GamePlayState.SONG.player2.toLowerCase();
 			curCharacter = char;
 			showDialogue(false);
 			
@@ -180,7 +181,7 @@ class DialogueBox extends FlxSpriteGroup
 			portraitRight = new FlxSprite(0, 40);
 			portraitRight.frames = Paths.getSparrowAtlas('weeb/bfPortrait');
 			portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait enter', 24, false);
-			portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
+			portraitRight.setGraphicSize(Std.int(portraitRight.width * GamePlayState.daPixelZoom * 0.9));
 			portraitRight.updateHitbox();
 			portraitRight.scrollFactor.set();
 			add(portraitRight);
@@ -200,7 +201,7 @@ class DialogueBox extends FlxSpriteGroup
 		}
 		
 		box.animation.play('normalOpen');
-		box.setGraphicSize(Std.int(box.width * PlayState.daPixelZoom * 0.9));
+		box.setGraphicSize(Std.int(box.width * GamePlayState.daPixelZoom * 0.9));
 		box.updateHitbox();
 		add(box);
 
@@ -252,9 +253,9 @@ class DialogueBox extends FlxSpriteGroup
 	override function update(elapsed:Float)
 	{
 		// HARD CODING CUZ IM STUPDI
-		if (PlayState.SONG.song.toLowerCase() == 'roses')
+		if (GamePlayState.SONG.song.toLowerCase() == 'roses')
 			portraitLeft.visible = false;
-		if (PlayState.SONG.song.toLowerCase() == 'thorns')
+		if (GamePlayState.SONG.song.toLowerCase() == 'thorns')
 		{
 			portraitLeft.color = FlxColor.BLACK;
 			swagDialogue.color = FlxColor.WHITE;
@@ -274,7 +275,7 @@ class DialogueBox extends FlxSpriteGroup
 
 		if (dialogueOpened && !dialogueStarted)
 		{
-			// FlxTween.tween(PlayState.dad, {alpha: 0}, 0.15, null);
+			// FlxTween.tween(GamePlayState.dad, {alpha: 0}, 0.15, null);
 			startDialogue();
 			dialogueStarted = true;
 		}
@@ -316,7 +317,7 @@ class DialogueBox extends FlxSpriteGroup
 		portraitLeft = new FlxSprite(-1600, 10);
 		portraitLeft.frames = Paths.getSparrowAtlas(path);
 		portraitLeft.animation.addByPrefix('enter', defaultAnimation, 24, false);
-		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.175));
+		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * GamePlayState.daPixelZoom * 0.175));
 		portraitLeft.updateHitbox();
 		portraitLeft.scrollFactor.set();
 		add(portraitLeft);
@@ -339,17 +340,17 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					isEnding = true;
 
-					// PlayState.instance.setIconShitActive(true);
+					// GamePlayState.instance.setIconShitActive(true);
 
-					// if (PlayState.SONG.song.toLowerCase() == 'senpai' 
-					// 	|| PlayState.SONG.song.toLowerCase()  == 'tutorial'
-					// 	|| PlayState.SONG.song.toLowerCase() == 'thorns')
+					// if (GamePlayState.SONG.song.toLowerCase() == 'senpai' 
+					// 	|| GamePlayState.SONG.song.toLowerCase()  == 'tutorial'
+					// 	|| GamePlayState.SONG.song.toLowerCase() == 'thorns')
 						FlxG.sound.music.fadeOut(2.2, 0);
 
 
 
-					// FlxTween.tween(PlayState.dad, {scale.x: 1}, 0.5, null);
-					// FlxTween.tween(PlayState.dad(), {alpha: 1}, 1, null);
+					// FlxTween.tween(GamePlayState.dad, {scale.x: 1}, 0.5, null);
+					// FlxTween.tween(GamePlayState.dad(), {alpha: 1}, 1, null);
 
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
@@ -385,7 +386,7 @@ class DialogueBox extends FlxSpriteGroup
 		portraitRight = new FlxSprite(0, 40);
 		portraitRight.frames = Paths.getSparrowAtlas('portraits/' + char + 'Portrait');
 		portraitRight.animation.addByPrefix('enter', defaultAnim, 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.15));
+		portraitRight.setGraphicSize(Std.int(portraitRight.width * GamePlayState.daPixelZoom * 0.15));
 		portraitRight.updateHitbox();
 		portraitRight.scrollFactor.set();
 		add(portraitRight);
@@ -441,7 +442,7 @@ class DialogueBox extends FlxSpriteGroup
 
 	function showDialogue(show:Bool = true)
 	{
-		var song = PlayState.CURRENT_SONG;
+		var song = GamePlayState.CURRENT_SONG;
 
 		//KUDORADO//DISABLE//DISABLE//@notracedialogue cur Char:'  + curCharacter);
 		var ctc = curCharacter.toLowerCase();
@@ -513,7 +514,7 @@ class DialogueBox extends FlxSpriteGroup
 				isLeftDialogue = true;
 
 			case 'gf-cheer':
-				if(PlayState.CURRENT_SONG == 'pico-bsides')
+				if(GamePlayState.CURRENT_SONG == 'pico-bsides')
 				{
 					addRightChar('gfCheer', 0, 0);
 					isLeftDialogue = false;
@@ -705,7 +706,7 @@ class DialogueBox extends FlxSpriteGroup
 
 			case 'agoti' | 'agoti-crazy' | 'agoti-scared':
 				{
-					switch (PlayState.CURRENT_SONG)
+					switch (GamePlayState.CURRENT_SONG)
 					{
 						case 'screenplay':
 							addLeftChar('agoti', -40, 300, 'Agoti_Dialogue_A');
@@ -724,7 +725,7 @@ class DialogueBox extends FlxSpriteGroup
 				}
 
 			case 'dad':
-				switch (PlayState.CURRENT_SONG)
+				switch (GamePlayState.CURRENT_SONG)
 				{
 					case 'headache':
 						addLeftChar('gar', 50, 235, 'gar Default instance');
@@ -776,7 +777,7 @@ class DialogueBox extends FlxSpriteGroup
 		if(portraitRight != null)
 		portraitRight.visible = false;
 
-		if (PlayState.CURRENT_SONG == 'thorns')
+		if (GamePlayState.CURRENT_SONG == 'thorns')
 		{
 			portraitLeft.visible = false;
 			return;

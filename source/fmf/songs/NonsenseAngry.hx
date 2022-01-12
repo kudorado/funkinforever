@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.tweens.FlxTween;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxColor;
@@ -48,7 +48,7 @@ class NonsenseAngry extends Nonsense
 	{
 		super.createCharacters();
 		whiteBG = new FlxSprite(-600, -200).makeGraphic(FlxG.width * 4, FlxG.height * 4, FlxColor.WHITE);
-		playState.add(whiteBG);
+		gamePlayState.add(whiteBG);
 		whiteBG.alpha = 0;
 		
 	}
@@ -58,20 +58,20 @@ class NonsenseAngry extends Nonsense
 		switch (curBeat)
 		{
 			case 60 | 124 | 156 | 235:
-				playState.defaultCamZoom = 0.8;
+				gamePlayState.defaultCamZoom = 0.8;
 
 			case 61 | 125 | 157 | 236:
 				//shake
-				// playState.defaultCamZoom = 0.8;
+				// gamePlayState.defaultCamZoom = 0.8;
 				whiteBG.alpha = 1;
 				FlxTween.tween(whiteBG, {alpha: 0}, 0.25, {});
-				playState.shakeBig();
+				gamePlayState.shakeBig();
 
 			case 62 | 126 | 158| 206 | 237:
-				playState.defaultCamZoom = 0.6;
+				gamePlayState.defaultCamZoom = 0.6;
 
 			case 152:
-				playState.defaultCamZoom = 0.85;
+				gamePlayState.defaultCamZoom = 0.85;
 				dad.playAnimForce("takethat", 1.166, function()
 				{
 					changeDad("nonsensemad");

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -20,28 +20,28 @@ class Cycles extends SongPlayer
 
     override function loadMap()
     {
-        playState.defaultCamZoom = 0.8;
+        gamePlayState.defaultCamZoom = 0.8;
 
         var sky:FlxSprite = new FlxSprite(-320, -400).loadGraphic(Paths.image('bg/sonic/LordXStage_1/sky', 'mods'));
         sky.antialiasing = true;
         sky.scale.x = 1;
         sky.scale.y = 1;
         sky.scrollFactor.set(0.95, 0.95);
-        playState.add(sky);
+        gamePlayState.add(sky);
 
         var hills1:FlxSprite = new FlxSprite(-149, -117).loadGraphic(Paths.image('bg/sonic/LordXStage_1/hills1', 'mods'));
         hills1.antialiasing = true;
         hills1.scale.x = 1;
         hills1.scale.y = 1;
         hills1.scrollFactor.set(0.95, 0.95);
-        playState.add(hills1);
+        gamePlayState.add(hills1);
 
         var floor:FlxSprite = new FlxSprite(-149, -117).loadGraphic(Paths.image('bg/sonic/LordXStage_1/floor', 'mods'));
         floor.antialiasing = true;
         floor.scale.x = 1;
         floor.scale.y = 1;
         floor.scrollFactor.set(0.95, 0.95);
-        playState.add(floor);
+        gamePlayState.add(floor);
 
         AddNotKnuckles_Assets();
         //TreeAnimatedMoment();
@@ -52,7 +52,7 @@ class Cycles extends SongPlayer
         tree.scale.x = 1;
         tree.scale.y = 1;
         tree.scrollFactor.set(0.95, 0.95);
-        playState.add(tree);
+        gamePlayState.add(tree);
 
 
         var smallflower:FlxSprite = new FlxSprite(-149, -117).loadGraphic(Paths.image('bg/sonic/LordXStage_1/smallflower', 'mods'));
@@ -60,7 +60,7 @@ class Cycles extends SongPlayer
         smallflower.scale.x = 1;
         smallflower.scale.y = 1;
         smallflower.scrollFactor.set(0.95, 0.95);
-        playState.add(smallflower);
+        gamePlayState.add(smallflower);
 
         var smallflower1:FlxSprite = new FlxSprite(-149, -117).loadGraphic(Paths.image('bg/sonic/LordXStage_1/smallflower', 'mods'));
         smallflower1.antialiasing = true;
@@ -68,14 +68,14 @@ class Cycles extends SongPlayer
         smallflower1.scale.y = 1;
         smallflower1.scrollFactor.set(0.95, 0.95);
         smallflower1.flipX = true;
-        playState.add(smallflower1);
+        gamePlayState.add(smallflower1);
 
         var smallflowe2:FlxSprite = new FlxSprite(-149, -117).loadGraphic(Paths.image('bg/sonic/LordXStage_1/smallflowe2', 'mods'));
         smallflowe2.antialiasing = true;
         smallflowe2.scale.x = 1;
         smallflowe2.scale.y = 1;
         smallflowe2.scrollFactor.set(0.95, 0.95);
-        playState.add(smallflowe2);
+        gamePlayState.add(smallflowe2);
     }
 
     function AddNotKnuckles_Assets()
@@ -92,7 +92,7 @@ class Cycles extends SongPlayer
         bgAnim.x = 467;
         bgAnim.y = -75;
 
-        playState.add(bgAnim);
+        gamePlayState.add(bgAnim);
     }
 
     function TreeAnimatedMoment()
@@ -109,7 +109,7 @@ class Cycles extends SongPlayer
         treeAnimatedMoment.x = 271;
         treeAnimatedMoment.y = -40;
 
-        playState.add(treeAnimatedMoment);
+        gamePlayState.add(treeAnimatedMoment);
     }
 
     function WeirdAssFlower_Assets()
@@ -126,7 +126,7 @@ class Cycles extends SongPlayer
         weirdAssFlower_Assets.x = 57;
         weirdAssFlower_Assets.y = -34;
 
-        playState.add(weirdAssFlower_Assets);
+        gamePlayState.add(weirdAssFlower_Assets);
     }
 
     override function getDefaultSkin():Skin
@@ -171,8 +171,8 @@ class Cycles extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        playState.targetCamFollow.y += 150;
-        playState.defaultCamZoom = 0.9;
+        gamePlayState.targetCamFollow.y += 150;
+        gamePlayState.defaultCamZoom = 0.9;
 
 
     }
@@ -189,7 +189,7 @@ class Cycles extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        playState.defaultCamZoom = 1;
+        gamePlayState.defaultCamZoom = 1;
     }
 
     override function createGFAnimationOffsets()

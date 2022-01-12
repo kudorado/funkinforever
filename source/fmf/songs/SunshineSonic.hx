@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -20,14 +20,14 @@ class SunshineSonic extends SongPlayer
 
     override function loadMap()
     {
-        playState.defaultCamZoom = 0.8;
+        gamePlayState.defaultCamZoom = 0.8;
 
         var sky:FlxSprite = new FlxSprite(-147, -153).loadGraphic(Paths.image('bg/sonic/TailsBG', 'mods'));
         sky.antialiasing = true;
         sky.scale.x = 1;
         sky.scale.y = 1;
         sky.scrollFactor.set(0.95, 0.95);
-        playState.add(sky);
+        gamePlayState.add(sky);
     }
 
     override function getDefaultSkin():Skin
@@ -78,8 +78,8 @@ class SunshineSonic extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        playState.targetCamFollow.y += 150;
-        playState.defaultCamZoom = 0.9;
+        gamePlayState.targetCamFollow.y += 150;
+        gamePlayState.defaultCamZoom = 0.9;
 
 
     }
@@ -96,7 +96,7 @@ class SunshineSonic extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        playState.defaultCamZoom = 1;
+        gamePlayState.defaultCamZoom = 1;
     }
 
     override function createGFAnimationOffsets()

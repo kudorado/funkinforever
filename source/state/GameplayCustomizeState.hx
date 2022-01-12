@@ -1,3 +1,5 @@
+package state; 
+
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;

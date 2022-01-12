@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -20,35 +20,35 @@ class YouCantRun extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.85;
+		gamePlayState.defaultCamZoom = 0.85;
 
         var sky:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/SonicP2/sky', 'mods'));
 		sky.antialiasing = true;
 		sky.scale.x = 1;
 		sky.scale.y = 1;
 		sky.scrollFactor.set(0.95, 0.95);
-		playState.add(sky);
+		gamePlayState.add(sky);
 
         var backtrees:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/SonicP2/backtrees', 'mods'));
 		backtrees.antialiasing = true;
 		backtrees.scale.x = 1;
 		backtrees.scale.y = 1;
 		backtrees.scrollFactor.set(0.95, 0.95);
-		playState.add(backtrees);
+		gamePlayState.add(backtrees);
 
         var trees:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/SonicP2/trees', 'mods'));
 		trees.antialiasing = true;
 		trees.scale.x = 1;
 		trees.scale.y = 1;
 		trees.scrollFactor.set(0.95, 0.95);
-		playState.add(trees);
+		gamePlayState.add(trees);
 
         var ground:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/SonicP2/ground', 'mods'));
 		ground.antialiasing = true;
 		ground.scale.x = 1;
 		ground.scale.y = 1;
 		ground.scrollFactor.set(0.95, 0.95);
-		playState.add(ground);
+		gamePlayState.add(ground);
 
 	}
 
@@ -96,8 +96,8 @@ class YouCantRun extends SongPlayer
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		playState.targetCamFollow.y += 150;
-		playState.defaultCamZoom = 0.9;
+		gamePlayState.targetCamFollow.y += 150;
+		gamePlayState.defaultCamZoom = 0.9;
 
 
 	}
@@ -114,7 +114,7 @@ class YouCantRun extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowDad();
-		playState.defaultCamZoom = 1;
+		gamePlayState.defaultCamZoom = 1;
 	}
 
 	override function createGFAnimationOffsets()

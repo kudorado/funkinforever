@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -18,13 +18,13 @@ class BobIsBlack extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.9;
+		gamePlayState.defaultCamZoom = 0.9;
 
 		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/scary_sky', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 2;
 		bg.scale.x = 2;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 
 		var stageFront:FlxSprite = new FlxSprite(-650, -600).loadGraphic(Paths.image('bg/bob/GlitchedGround', 'mods'));
@@ -33,7 +33,7 @@ class BobIsBlack extends SongPlayer
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
 		stageFront.active = false;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 	}
 

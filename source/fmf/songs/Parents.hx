@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.characters.*;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -14,7 +14,7 @@ class Parents extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.80;
+		gamePlayState.defaultCamZoom = 0.80;
 
 		var bg:FlxSprite = new FlxSprite(-1000, -500).loadGraphic(Paths.image('christmas/bgWalls', 'week5'));
 		bg.antialiasing = true;
@@ -22,7 +22,7 @@ class Parents extends SongPlayer
 		bg.active = false;
 		bg.setGraphicSize(Std.int(bg.width * 0.8));
 		bg.updateHitbox();
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		upperBoppers = new FlxSprite(-240, -90);
 		upperBoppers.frames = Paths.getSparrowAtlas('christmas/upperBop', 'week5');
@@ -33,7 +33,7 @@ class Parents extends SongPlayer
 		upperBoppers.updateHitbox();
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(upperBoppers);
+			gamePlayState.add(upperBoppers);
 		}
 
 		var bgEscalator:FlxSprite = new FlxSprite(-1100, -600).loadGraphic(Paths.image('christmas/bgEscalator', 'week5'));
@@ -42,12 +42,12 @@ class Parents extends SongPlayer
 		bgEscalator.active = false;
 		bgEscalator.setGraphicSize(Std.int(bgEscalator.width * 0.9));
 		bgEscalator.updateHitbox();
-		playState.add(bgEscalator);
+		gamePlayState.add(bgEscalator);
 
 		var tree:FlxSprite = new FlxSprite(370, -250).loadGraphic(Paths.image('christmas/christmasTree', 'week5'));
 		tree.antialiasing = true;
 		tree.scrollFactor.set(0.40, 0.40);
-		playState.add(tree);
+		gamePlayState.add(tree);
 
 		bottomBoppers = new FlxSprite(-300, 140);
 		bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bottomBop', 'week5');
@@ -58,14 +58,14 @@ class Parents extends SongPlayer
 		bottomBoppers.updateHitbox();
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(bottomBoppers);
+			gamePlayState.add(bottomBoppers);
 		}
 
 		var fgSnow:FlxSprite = new FlxSprite(-600, 700).loadGraphic(Paths.image('christmas/fgSnow', 'week5'));
 		fgSnow.active = false;
 		fgSnow.antialiasing = true;
 		fgSnow.scale.x = 1.25;
-		playState.add(fgSnow);
+		gamePlayState.add(fgSnow);
 
 		santa = new FlxSprite(1300, 150);
 		santa.frames = Paths.getSparrowAtlas('christmas/santa', 'week5');
@@ -80,7 +80,7 @@ class Parents extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(santa);
+			gamePlayState.add(santa);
 		}
 	}
 
@@ -157,14 +157,14 @@ class Parents extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.targetCamFollow.y = bf.getMidpoint().y - 200;
+		gamePlayState.targetCamFollow.y = bf.getMidpoint().y - 200;
 	}
 
 	override function midSongEventUpdate(curBeat:Int):Void
 	{
-		if (playState.gfStep())
+		if (gamePlayState.gfStep())
 		{
-			switch (PlayState.CURRENT_SONG)
+			switch (GamePlayState.CURRENT_SONG)
 			{
 				case 'cocoa':
 					cocoaMidSongEvent(curBeat);

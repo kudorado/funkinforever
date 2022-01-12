@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 class CreditData 
 {
 	public var titles:Array<String>;

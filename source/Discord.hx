@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 #if windows
 import Sys.sleep;
 import discord_rpc.DiscordRpc;

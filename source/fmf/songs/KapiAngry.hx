@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -22,14 +22,14 @@ class KapiAngry extends Kapi
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = false;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-400, 550).loadGraphic(Paths.image('bg/kapi/stagefront', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 		
 	}
 

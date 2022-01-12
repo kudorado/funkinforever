@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import fmf.songs.PlayableCharacter;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -43,7 +43,7 @@ class Anchor extends Boyfriend
 	override function noteEventBF(noteData:Note)
 	{
 		super.noteEventBF(noteData);
-		playState.targetCamFollow.y = this.getMidpoint().y - 250;
+		gamePlayState.targetCamFollow.y = this.getMidpoint().y - 250;
 
 	}
 

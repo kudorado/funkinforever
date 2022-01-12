@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -16,24 +16,24 @@ class FirstTown extends SongPlayer
 
 	override function loadMap()
 	{
-        playState.defaultCamZoom = 0.5;
+        gamePlayState.defaultCamZoom = 0.5;
 		var bg:FlxSprite = new FlxSprite(311, -378).loadGraphic(Paths.image('bg/camellia/BG_CITY', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.3;
 		bg.scale.x = 1.3;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var bg1:FlxSprite = new FlxSprite(309, -267).loadGraphic(Paths.image('bg/camellia/BG_WALL', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1.4;
 		bg1.scale.x = 1.4;
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
         var bg2:FlxSprite = new FlxSprite(309, -100).loadGraphic(Paths.image('bg/camellia/FG_Floor', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 1.4;
 		bg2.scale.x = 1.4;
-		playState.add(bg2);
+		gamePlayState.add(bg2);
 	}
 
 
@@ -83,15 +83,15 @@ class FirstTown extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.targetCamFollow.y = 360;
+		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
+		gamePlayState.targetCamFollow.y = 360;
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.targetCamFollow.y = 360;
+		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		gamePlayState.targetCamFollow.y = 360;
 
 	}
 

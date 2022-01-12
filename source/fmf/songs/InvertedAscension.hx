@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.math.FlxRandom;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -25,45 +25,45 @@ class InvertedAscension extends SongPlayer
 
 	override function loadMap()
 	{
-        playState.defaultCamZoom = 0.6;
+        gamePlayState.defaultCamZoom = 0.6;
 		var bg:FlxSprite = new FlxSprite(0, -396).loadGraphic(Paths.image('bg/starlingmayhem/morning/bg', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
         light0 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light0', 'mods'));
 		light0.antialiasing = true;
 		light0.scale.y = 1;
 		light0.scale.x = 1;
-		playState.add(light0);
+		gamePlayState.add(light0);
 
 		light1 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light1', 'mods'));
 		light1.antialiasing = true;
 		light1.scale.y = 1;
 		light1.scale.x = 1;
 		light1.visible = false;
-		playState.add(light1);
+		gamePlayState.add(light1);
 
 		light2 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light2', 'mods'));
 		light2.antialiasing = true;
 		light2.scale.y = 1;
 		light2.scale.x = 1;
 		light2.visible = false;
-		playState.add(light2);
+		gamePlayState.add(light2);
 
 		light3 = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/light3', 'mods'));
 		light3.antialiasing = true;
 		light3.scale.y = 1;
 		light3.scale.x = 1;
 		light3.visible = false;
-		playState.add(light3);
+		gamePlayState.add(light3);
 
         var bg1:FlxSprite = new FlxSprite(0, -469).loadGraphic(Paths.image('bg/starlingmayhem/stage', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1;
 		bg1.scale.x = 1;
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
         var headlight = new FlxSprite(0, 0);
 		headlight.frames = Paths.getSparrowAtlas('bg/starlingmayhem/headlights', 'mods');
@@ -74,7 +74,7 @@ class InvertedAscension extends SongPlayer
         headlight.scale.y = 2;
 		headlight.x = 657;
 		headlight.y = -128;
-        playState.add(headlight);
+        gamePlayState.add(headlight);
 
         var headlight = new FlxSprite(0, 0);
 		headlight.frames = Paths.getSparrowAtlas('bg/starlingmayhem/frontboppers', 'mods');
@@ -85,7 +85,7 @@ class InvertedAscension extends SongPlayer
         headlight.scale.y = 1;
 		headlight.x = 0;
 		headlight.y = 753;
-        playState.add(headlight);
+        gamePlayState.add(headlight);
 
 		createAbel();
 		createMax();
@@ -111,7 +111,7 @@ class InvertedAscension extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(abel);
+			gamePlayState.add(abel);
 		}
 	}
 
@@ -135,7 +135,7 @@ class InvertedAscension extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(max);
+			gamePlayState.add(max);
 		}
 	}
 
@@ -187,29 +187,29 @@ class InvertedAscension extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.targetCamFollow.y = 360;
+		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
+		gamePlayState.targetCamFollow.y = 360;
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.targetCamFollow.y = 360;
+		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		gamePlayState.targetCamFollow.y = 360;
 
 	}
 
 	override function dadNoteEvent(noteData:Note)
 	{
 		super.dadNoteEvent(noteData);
-		var lastNote = playState.lastNote;
+		var lastNote = gamePlayState.lastNote;
 		max.animation.play(lastNote);
 	}
 	
 	override function bfNoteEvent(noteData:Note)
 	{
 		super.bfNoteEvent(noteData);
-		var lastNote = playState.lastNote;
+		var lastNote = gamePlayState.lastNote;
 		max.animation.play(lastNote);
 	}
 

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import MenuCharacter.CharacterSetting;
 import flixel.FlxSprite;
 import fmf.characters.*;
@@ -15,9 +15,10 @@ class PlayableCharacter extends Character
     //should pa heyable!
     private var heyable:Bool;
 
-    public var playState(get, never):PlayState;
-    public inline function get_playState()
-        return PlayState.instance;
+    public var gamePlayState(get, never):GamePlayState;
+
+    public inline function get_gamePlayState()
+        return GamePlayState.instance;
 
     public override function new(x:Float = 700, y:Float = 200, label:String = 'none')
     {
@@ -65,7 +66,7 @@ class PlayableCharacter extends Character
     override function update(elapsed:Float)
     {
     
-        if (PlayState.playAsDad)
+        if (GamePlayState.playAsDad)
         {
             dadBehaviour(elapsed);
         }

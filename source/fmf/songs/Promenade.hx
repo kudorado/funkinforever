@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -20,8 +20,8 @@ class Promenade extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.75;
-		playState.camFollowSpeed = 1;
+		gamePlayState.defaultCamZoom = 0.75;
+		gamePlayState.camFollowSpeed = 1;
 
 		var bg:FlxSprite = new FlxSprite(-911, -555).loadGraphic(Paths.image('bg/entity/NikusaBG', 'mods'));
 		bg.antialiasing = true;
@@ -30,7 +30,7 @@ class Promenade extends SongPlayer
 		bg.scale.y = 1.335;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 	}
 
@@ -76,15 +76,15 @@ class Promenade extends SongPlayer
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		playState.defaultCamZoom = 0.5;
+		gamePlayState.defaultCamZoom = 0.5;
 
 	}
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		playState.targetCamFollow.y += 225;
-		playState.defaultCamZoom = 0.75;
+		gamePlayState.targetCamFollow.y += 225;
+		gamePlayState.defaultCamZoom = 0.75;
 	}
 
 	override function createBF()

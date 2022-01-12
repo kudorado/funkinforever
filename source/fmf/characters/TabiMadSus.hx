@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.addons.effects.FlxTrail;
 import fmf.songs.PlayableCharacter;
@@ -26,7 +26,7 @@ class TabiMadSus extends Boyfriend
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		defaultCamZoom = playState.defaultCamZoom;
+		defaultCamZoom = gamePlayState.defaultCamZoom;
 
 		animation.addByPrefix('idle', 'MadTabiIdle', 24, false);
 
@@ -43,10 +43,10 @@ class TabiMadSus extends Boyfriend
 
 	override function noteEventBF(noteData:Note)
 	{
-		if (playState.curBeat % 6 == 0)
+		if (gamePlayState.curBeat % 6 == 0)
 		{
-			playState.defaultCamZoom = 1.15;
-			playState.shakeGenocide();
+			gamePlayState.defaultCamZoom = 1.15;
+			gamePlayState.shakeGenocide();
 
 			if (FlxG.save.data.distractions)
 			{
@@ -55,8 +55,8 @@ class TabiMadSus extends Boyfriend
 		}
 		else
 		{
-			playState.defaultCamZoom = 0.95;
-			playState.shakePrettyBig();
+			gamePlayState.defaultCamZoom = 0.95;
+			gamePlayState.shakePrettyBig();
 
 			if (FlxG.save.data.distractions)	
 				trail.visible = false;
@@ -65,7 +65,7 @@ class TabiMadSus extends Boyfriend
 
 	override function noteEventDad(noteData:Note)
 	{
-		playState.defaultCamZoom = defaultCamZoom;
+		gamePlayState.defaultCamZoom = defaultCamZoom;
 	}
 
 	// create animation offset for BF
@@ -98,7 +98,7 @@ class TabiMadSus extends Boyfriend
 			trail = new FlxTrail(this, null, 1, 12, 0.85, 0.069);
 			trail.color = FlxColor.RED;
 
-			playState.add(trail);
+			gamePlayState.add(trail);
 			trail.visible = false;
 		}
 	}

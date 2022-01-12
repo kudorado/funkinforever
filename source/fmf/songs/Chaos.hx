@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -20,28 +20,28 @@ class Chaos extends SongPlayer
 
     override function loadMap()
     {
-        playState.defaultCamZoom = 0.7;
+        gamePlayState.defaultCamZoom = 0.7;
 
         var sky:FlxSprite = new FlxSprite(-98, -264).loadGraphic(Paths.image('bg/sonic/Chamber/Wall_instance_10000', 'mods'));
         sky.antialiasing = true;
         sky.scale.x = 2.2;
         sky.scale.y = 2.2;
         sky.scrollFactor.set(0.95, 0.95);
-        playState.add(sky);
+        gamePlayState.add(sky);
 
         var floor:FlxSprite = new FlxSprite(-147, 865).loadGraphic(Paths.image('bg/sonic/Chamber/Floor_yellow0000', 'mods'));
         floor.antialiasing = true;
         floor.scale.x = 2.6;
         floor.scale.y = 2.6;
         floor.scrollFactor.set(0.95, 0.95);
-        playState.add(floor);
+        gamePlayState.add(floor);
 
         var bgyellow:FlxSprite = new FlxSprite(-500, -850).loadGraphic(Paths.image('bg/sonic/Chamber/BGyellow0000', 'mods'));
         bgyellow.antialiasing = true;
         bgyellow.scale.x = 2;
         bgyellow.scale.y = 2;
         bgyellow.scrollFactor.set(0.95, 0.95);
-        playState.add(bgyellow);
+        gamePlayState.add(bgyellow);
 
         
         EmeraldBeam();
@@ -53,14 +53,14 @@ class Chaos extends SongPlayer
         thechamber.scale.x = 1;
         thechamber.scale.y = 1;
         thechamber.scrollFactor.set(0.95, 0.95);
-        playState.add(thechamber);
+        gamePlayState.add(thechamber);
 
         var pebles:FlxSprite = new FlxSprite(-147, -709).loadGraphic(Paths.image('bg/sonic/Chamber/Pebles_1', 'mods'));
         pebles.antialiasing = true;
         pebles.scale.x = 1;
         pebles.scale.y = 1;
         pebles.scrollFactor.set(0.95, 0.95);
-        playState.add(pebles);
+        gamePlayState.add(pebles);
 
 
         PorkerLewis();
@@ -80,7 +80,7 @@ class Chaos extends SongPlayer
         bgAnim.x = 3900;
         bgAnim.y = -200;
 
-        playState.add(bgAnim);
+        gamePlayState.add(bgAnim);
     }
 
     function EmeraldBeam():Void
@@ -97,7 +97,7 @@ class Chaos extends SongPlayer
         bgAnim1.x = 919;
         bgAnim1.y = -1175;
 
-        playState.add(bgAnim1);
+        gamePlayState.add(bgAnim1);
     }
 
     function EmeraldBeamCharged():Void
@@ -114,7 +114,7 @@ class Chaos extends SongPlayer
         bgAnim1.x = 919;
         bgAnim1.y = -1175;
 
-        playState.add(bgAnim1);
+        gamePlayState.add(bgAnim1);
     }
 
     function TheEmeralds():Void
@@ -131,7 +131,7 @@ class Chaos extends SongPlayer
         theEmeralds.x = 1140;
         theEmeralds.y = -350;
 
-        playState.add(theEmeralds);
+        gamePlayState.add(theEmeralds);
     }
 
     override function getDefaultSkin():Skin
@@ -176,8 +176,8 @@ class Chaos extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        playState.targetCamFollow.y += 150;
-        //playState.defaultCamZoom = 0.7;
+        gamePlayState.targetCamFollow.y += 150;
+        //gamePlayState.defaultCamZoom = 0.7;
 
 
     }
@@ -185,9 +185,9 @@ class Chaos extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        //playState.defaultCamZoom = 0.7;
-        playState.targetCamFollow.y -= 150;
-        playState.targetCamFollow.x -= 100;
+        //gamePlayState.defaultCamZoom = 0.7;
+        gamePlayState.targetCamFollow.y -= 150;
+        gamePlayState.targetCamFollow.x -= 100;
     }
 
     override function createGFAnimationOffsets()

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.tweens.FlxTween;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxColor;
@@ -34,7 +34,7 @@ class NonsenseTired extends Nonsense
 		super.createCharacters();
 		changeDad('common sense');
 		whiteBG = new FlxSprite(-600, -200).makeGraphic(FlxG.width * 4, FlxG.height * 4, FlxColor.WHITE);
-		playState.add(whiteBG);
+		gamePlayState.add(whiteBG);
 		whiteBG.alpha = 0;
 		
 	}
@@ -57,19 +57,19 @@ class NonsenseTired extends Nonsense
 		{
 
 			case 60 | 124 | 204 | 235:
-				playState.defaultCamZoom = 0.8;
+				gamePlayState.defaultCamZoom = 0.8;
 
 			case 61 | 125 | 205 | 236:
 				//shake
 				whiteBG.alpha = 1;
 				FlxTween.tween(whiteBG, {alpha: 0}, 0.25, {});
-				playState.shakeBig();
+				gamePlayState.shakeBig();
 
 			case 62 | 126 | 147 | 206 | 237:
-				playState.defaultCamZoom = 0.6;
+				gamePlayState.defaultCamZoom = 0.6;
 
 			case 144:
-				playState.defaultCamZoom = 0.85;
+				gamePlayState.defaultCamZoom = 0.85;
 				dad.playAnimForce("ohno", 1.166, function()
 				{
 					changeDad("highlights");

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
@@ -47,11 +47,11 @@ class DaddyDearest extends SongPlayer
 
 	override function midSongEventUpdate(curBeat:Int):Void
 	{
-		if (playState.gfStep())
+		if (gamePlayState.gfStep())
 		{
-			if (PlayState.CURRENT_SONG == "bopeebo")
+			if (GamePlayState.CURRENT_SONG == "bopeebo")
 			{
-				switch (PlayState.CURRENT_SONG)
+				switch (GamePlayState.CURRENT_SONG)
 				{
 					case 'bopeebo':
 						bopeebooMidSongEvent(curBeat);
@@ -81,7 +81,7 @@ class DaddyDearest extends SongPlayer
 		switch (curBeat)
 		{
 			case 128, 129, 130:
-				playState.vocals.volume = 0;
+				gamePlayState.vocals.volume = 0;
 		}
 	}
 
@@ -90,17 +90,17 @@ class DaddyDearest extends SongPlayer
 		switch (curBeat)
 		{
 			case 16:
-				playState.camZooming = true;
-				playState.gfSpeed = 2;
+				gamePlayState.camZooming = true;
+				gamePlayState.gfSpeed = 2;
 
 			case 48:
-				playState.gfSpeed = 1;
+				gamePlayState.gfSpeed = 1;
 
 			case 80:
-				playState.gfSpeed = 2;
+				gamePlayState.gfSpeed = 2;
 				
 			case 112:
-				playState.gfSpeed = 1;
+				gamePlayState.gfSpeed = 1;
 		}
 	}
 

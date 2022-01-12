@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.characters.*;
 import flixel.util.FlxTimer;
 import flixel.system.FlxSound;
@@ -92,18 +92,18 @@ class Philly extends SongPlayer
 	{
 		var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('philly/sky', 'week3'));
 		bg.scrollFactor.set(0.1, 0.1);
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var city:FlxSprite = new FlxSprite(-10).loadGraphic(Paths.image('philly/city', 'week3'));
 		city.scrollFactor.set(0.3, 0.3);
 		city.setGraphicSize(Std.int(city.width * 0.85));
 		city.updateHitbox();
-		playState.add(city);
+		gamePlayState.add(city);
 
 		phillyCityLights = new FlxTypedGroup<FlxSprite>();
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(phillyCityLights);
+			gamePlayState.add(phillyCityLights);
 		}
 
 		for (i in 0...5)
@@ -118,13 +118,13 @@ class Philly extends SongPlayer
 		}
 
 		var streetBehind:FlxSprite = new FlxSprite(-40, 50).loadGraphic(Paths.image('philly/behindTrain', 'week3'));
-		playState.add(streetBehind);
+		gamePlayState.add(streetBehind);
 
 		phillyTrain = new FlxSprite(2000, 360).loadGraphic(Paths.image('philly/train', 'week3'));
 
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(phillyTrain);
+			gamePlayState.add(phillyTrain);
 		}
 
 		trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes'));
@@ -132,7 +132,7 @@ class Philly extends SongPlayer
 
 		var street:FlxSprite = new FlxSprite(-200, streetBehind.y).loadGraphic(Paths.image('philly/street', 'week3'));
 		street.scale.x = 2;
-		playState.add(street);
+		gamePlayState.add(street);
 	}
 
 	override function getGFTex()
@@ -211,9 +211,9 @@ class Philly extends SongPlayer
 
 	override function midSongEventUpdate(curBeat:Int):Void
 	{
-		if (playState.gfStep())
+		if (gamePlayState.gfStep())
 		{
-			switch (PlayState.CURRENT_SONG)
+			switch (GamePlayState.CURRENT_SONG)
 			{
 				case 'pico':
 					picoMidSongEvent(curBeat);

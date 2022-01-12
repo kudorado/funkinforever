@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -21,41 +21,41 @@ class Endless extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.7;
+		gamePlayState.defaultCamZoom = 0.7;
 		var sky:FlxSprite = new FlxSprite(-286, -42).loadGraphic(Paths.image('bg/sonic/FunInfiniteStage_1/sonicFUNsky', 'mods'));
 		sky.antialiasing = true;
 		sky.scale.x = 1.35;
 		sky.scale.y = 1.35;
 		sky.scrollFactor.set(0.95, 0.95);
-		playState.add(sky);
+		gamePlayState.add(sky);
 
         var floor2:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/FunInfiniteStage_1/sonicFUNfloor', 'mods'));
 		floor2.antialiasing = true;
 		floor2.scale.x = 1;
 		floor2.scale.y = 1;
 		floor2.scrollFactor.set(0.95, 0.95);
-		playState.add(floor2);
+		gamePlayState.add(floor2);
 
         var sonicFUNpillars3:FlxSprite = new FlxSprite(-575, -320).loadGraphic(Paths.image('bg/sonic/FunInfiniteStage_1/sonicFUNpillars3', 'mods'));
 		sonicFUNpillars3.antialiasing = true;
 		sonicFUNpillars3.scale.x = 1;
 		sonicFUNpillars3.scale.y = 1;
 		sonicFUNpillars3.scrollFactor.set(0.7, 0.7);
-		playState.add(sonicFUNpillars3);
+		gamePlayState.add(sonicFUNpillars3);
 
         var sonicFUNpillars2:FlxSprite = new FlxSprite(-391, -323).loadGraphic(Paths.image('bg/sonic/FunInfiniteStage_1/sonicFUNpillars2', 'mods'));
 		sonicFUNpillars2.antialiasing = true;
 		sonicFUNpillars2.scale.x = 1;
 		sonicFUNpillars2.scale.y = 1;
 		sonicFUNpillars2.scrollFactor.set(0.8, 0.8);
-		playState.add(sonicFUNpillars2);
+		gamePlayState.add(sonicFUNpillars2);
 
         var sonicFUNpillars1:FlxSprite = new FlxSprite(-895, -503).loadGraphic(Paths.image('bg/sonic/FunInfiniteStage_1/sonicFUNpillars1', 'mods'));
 		sonicFUNpillars1.antialiasing = true;
 		sonicFUNpillars1.scale.x = 1;
 		sonicFUNpillars1.scale.y = 1;
 		sonicFUNpillars1.scrollFactor.set(0.8, 0.8);
-		playState.add(sonicFUNpillars1);
+		gamePlayState.add(sonicFUNpillars1);
 
         createFII_BG();
 
@@ -72,7 +72,7 @@ class Endless extends SongPlayer
         FII_BG.scale.y = 1;
         FII_BG.x = -372;
         FII_BG.y = -127;
-        playState.add(FII_BG);
+        gamePlayState.add(FII_BG);
 
     }
 

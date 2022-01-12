@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -30,7 +30,7 @@ class WatchOut extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.7;
+		gamePlayState.defaultCamZoom = 0.7;
 		var bg:FlxSprite = new FlxSprite(-596, -350).loadGraphic(Paths.image('bg/impostor_v4/airship', 'mods'));
 		bg.antialiasing = true;
 
@@ -38,7 +38,7 @@ class WatchOut extends SongPlayer
 		bg.scale.y = 1.35;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
     override function getDefaultSkin():Skin

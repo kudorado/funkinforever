@@ -1,4 +1,4 @@
-package;
+package state; 
 
 import flixel.ui.FlxButton;
 import flixel.addons.editors.ogmo.FlxOgmo3Loader.Point;
@@ -73,9 +73,9 @@ import sys.FileSystem;
 
 using StringTools;
 
-class PlayState extends MusicBeatState
+class GamePlayState extends MusicBeatState
 {
-	public static var instance:PlayState = null;
+	public static var instance:GamePlayState = null;
 
 	//SONG name in the json file
 	public static var CURRENT_SONG:String;
@@ -88,10 +88,12 @@ class PlayState extends MusicBeatState
 
 
 	public static var songPlayer:SongPlayer;
+	public static var playingSong:SongData;
 
+	
 	public static var curStage:String = '';
 	public static var SONG:SwagSong;
-	public static var playingSong:SongData;
+
 
 
 	public static var isStoryMode:Bool = false;
@@ -272,7 +274,7 @@ class PlayState extends MusicBeatState
 	public static var songOffset:Float = 0;
 
 	// BotPlay text
-	private var botPlayState:FlxText;
+	private var botgamePlayState:FlxText;
 
 	private var executeModchart = false;
 
@@ -604,13 +606,13 @@ class PlayState extends MusicBeatState
 		if (FlxG.save.data.downscroll)
 			kadeEngineWatermark.y = FlxG.height * 0.9 + 45;
 
-		// botPlayState = new FlxText(5, 5, "AUTO", 15);
-		// botPlayState.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		// botPlayState.scrollFactor.set();
-		// botPlayState.cameras = [camHUD];
+		// botgamePlayState = new FlxText(5, 5, "AUTO", 15);
+		// botGamePlayState.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		// botGamePlayState.scrollFactor.set();
+		// botgamePlayState.cameras = [camHUD];
 
 		// if (botPlayShit)
-		// 	add(botPlayState);
+		// 	add(botgamePlayState);
 
 		iconP1 = new HealthIcon();
 		iconP2 = new HealthIcon();
@@ -735,8 +737,8 @@ class PlayState extends MusicBeatState
 
 	function isUnlocked():Bool
 	{
-		return (storyWeek + 1 >= StoryMenuState.weekUnlocked.length && FlxG.save.data.unlockedAllWeekShit)
-			|| (StoryMenuState.weekUnlocked[storyWeek + 1]);
+		return (storyWeek + 1 >= StoryState.weekUnlocked.length && FlxG.save.data.unlockedAllWeekShit)
+			|| (StoryState.weekUnlocked[storyWeek + 1]);
 	}
 
 	var mcontrols:Mobilecontrols; 
@@ -780,7 +782,7 @@ class PlayState extends MusicBeatState
 			missTxt.visible = false;
 			accuracyTxt.visible = false;
 			npsTxt.visible = false;
-			// botPlayState.visible = false;
+			// botGamePlayState.visible = false;
 		}
 	}
 
@@ -2280,7 +2282,7 @@ class PlayState extends MusicBeatState
 					}
 					#end
 
-					StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
+					StoryState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryState.weekUnlocked.length - 1))] = true;
 
 					if (SONG.validScore)
 					{
@@ -2288,7 +2290,7 @@ class PlayState extends MusicBeatState
 						Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
 					}
 
-					FlxG.save.data.weekUnlocked = StoryMenuState.weekUnlocked;
+					FlxG.save.data.weekUnlocked = StoryState.weekUnlocked;
 					FlxG.save.flush();
 				}
 				else
@@ -2325,8 +2327,8 @@ class PlayState extends MusicBeatState
 					// FlxTransitionableState.skipNextTransOut = true;
 					prevCamFollow = camFollow;
 					
-					PlayState.SONG_NAME = nextSongLowercase;
-					PlayState.RAW_SONG_NAME = storyPlaylist[0];
+					GamePlayState.SONG_NAME = nextSongLowercase;
+					GamePlayState.RAW_SONG_NAME = storyPlaylist[0];
 					SONG = Song.loadFromJson(nextSongLowercase + difficulty, playingSong.folder + storyPlaylist[0]);
 				
 					CURRENT_SONG = SONG_NAME;
@@ -2335,7 +2337,7 @@ class PlayState extends MusicBeatState
 
 					moveNext();
 
-					// LoadingState.loadAndSwitchState(new PlayState());
+					// LoadingState.loadAndSwitchState(new GamePlayState());
 				}
 			}
 			else

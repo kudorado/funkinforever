@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.tweens.FlxTween;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxColor;
@@ -18,7 +18,7 @@ class NonsenseGod extends Nonsense
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.6;
+		gamePlayState.defaultCamZoom = 0.6;
 		var bg:FlxSprite = new FlxSprite(-800, -375).loadGraphic(Paths.image('bg/nonsense/Outside_Space', 'mods'));
 		bg.antialiasing = true;
 
@@ -27,7 +27,7 @@ class NonsenseGod extends Nonsense
 
 		bg.scrollFactor.set(0.95, 0.95);
 		bg.active = false;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var hallowTex = Paths.getSparrowAtlas('bg/nonsense/BACKGROUND_space', 'mods');
 		var bg1 = new FlxSprite(-300, -400);
@@ -42,7 +42,7 @@ class NonsenseGod extends Nonsense
 		bg1.x += 400;
 		bg1.y += 250;
 
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
 	}
 

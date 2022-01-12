@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import flixel.FlxG;
 import fmf.songs.BaseSong;
 import fmf.songs.PlayableCharacter;
@@ -45,22 +45,22 @@ class PlayModeManager
 			case 0:
 				FlxG.save.data.musicListening = false;
 				FlxG.save.data.botplay = false;
-				PlayState.playAsDad = false;
+				GamePlayState.playAsDad = false;
 
 			case 1:
 				FlxG.save.data.musicListening = false;
 				FlxG.save.data.botplay = false;
-				PlayState.playAsDad = true;
+				GamePlayState.playAsDad = true;
 
 			case 2:
 				FlxG.save.data.musicListening = false;
 				FlxG.save.data.botplay = true;
-				PlayState.playAsDad = false;
+				GamePlayState.playAsDad = false;
 
 			case 3:
 				FlxG.save.data.botplay = true;
 				FlxG.save.data.musicListening = true;
-				PlayState.playAsDad = false;
+				GamePlayState.playAsDad = false;
 
 		}
 

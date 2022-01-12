@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.addons.effects.FlxTrail;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -59,12 +59,12 @@ class Sadness extends SongPlayer
 
 	override function loadMap()
 	{
-        playState.defaultCamZoom = 0.85;
+        gamePlayState.defaultCamZoom = 0.85;
 		var bg:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/blueballs_incident/sadi/sad', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
 		bg.scale.x = 1.2;
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
 	override function getGFTex()
@@ -130,8 +130,8 @@ class Sadness extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		playState.targetCamFollow.y -= 50;
-		playState.defaultCamZoom = 0.85;
+		gamePlayState.targetCamFollow.y -= 50;
+		gamePlayState.defaultCamZoom = 0.85;
 
 	}
 
@@ -139,9 +139,9 @@ class Sadness extends SongPlayer
 	{
 		super.updateCamFollowBF();
 
-		playState.defaultCamZoom = 0.7;
-		playState.targetCamFollow.x += 150;
-		playState.targetCamFollow.y += 25;
+		gamePlayState.defaultCamZoom = 0.7;
+		gamePlayState.targetCamFollow.x += 150;
+		gamePlayState.targetCamFollow.y += 25;
 
 	}
 

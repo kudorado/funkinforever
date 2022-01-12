@@ -1,5 +1,5 @@
  package fmf.songs;
-
+import state.*;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -29,7 +29,7 @@ class Heartbass extends Perfume
 	
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 1.2;
+		gamePlayState.defaultCamZoom = 1.2;
 		updictionary.frames = Paths.getSparrowAtlas("bg/date/updicksucker", 'mods');
 		updictionary.animation.addByPrefix("updiploma", "updimitri", 24, false);
 		updictionary.scrollFactor.set(0.8, 0.8);
@@ -172,7 +172,7 @@ class Heartbass extends Perfume
 		super.updateCamFollowDad();
 
 		if(dancing)
-			playState.targetCamFollow.y = bf.getMidpoint().y - 200;
+			gamePlayState.targetCamFollow.y = bf.getMidpoint().y - 200;
 
 	}
 
@@ -181,7 +181,7 @@ class Heartbass extends Perfume
 		super.updateCamFollowBF();
 
 		if(dancing)
-			playState.targetCamFollow.y = bf.getMidpoint().y - 200;
+			gamePlayState.targetCamFollow.y = bf.getMidpoint().y - 200;
 
 	}
 
@@ -200,13 +200,13 @@ class Heartbass extends Perfume
 				updictionary.animation.play("updiploma");
 				FlxTween.tween(updictionary, {x: 120}, 12);
 
-				FlxTween.tween(playState, {defaultCamZoom:1}, 6);
+				FlxTween.tween(gamePlayState, {defaultCamZoom:1}, 6);
 			}
 		}
 		
 		if (dancing && curBeat >= 9 && curBeat < 437 && FlxG.save.data.distractions)
 		{
-			playState.camGame.zoom += 0.05;
+			gamePlayState.camGame.zoom += 0.05;
 		}
 		
 		if (curBeat == 359)
@@ -214,7 +214,7 @@ class Heartbass extends Perfume
 			frontboppers.visible = true;
 			backboppers.visible = true;
 			if (FlxG.save.data.distractions)
-				playState.defaultCamZoom += 0.2;
+				gamePlayState.defaultCamZoom += 0.2;
 			if (FlxG.save.data.distractions)
 				FlxTween.tween(backboppers, {y: -149.45}, 0.3, {ease: FlxEase.quartIn});
 			if (FlxG.save.data.distractions)
@@ -228,7 +228,7 @@ class Heartbass extends Perfume
 
 		if (curBeat == 360) // 360)
 		{
-			playState.isMidSongEvent = true;
+			gamePlayState.isMidSongEvent = true;
 			dancing = true;
 		}
 
@@ -241,7 +241,7 @@ class Heartbass extends Perfume
 				backboppers.y += 30;
 				frontboppers.y += 30;
 
-				playState.defaultCamZoom = 0.9;
+				gamePlayState.defaultCamZoom = 0.9;
 				FlxTween.tween(bf, {y: bfy}, (Conductor.stepCrochet * 3 / 1000), {ease: FlxEase.circInOut});
 				FlxTween.tween(dad, {y: gfy}, (Conductor.stepCrochet * 3 / 1000), {ease: FlxEase.circInOut});
 				FlxTween.tween(backboppers, {y: -60}, (Conductor.stepCrochet * 3 / 1000), {ease: FlxEase.circOut});
@@ -291,7 +291,7 @@ class Heartbass extends Perfume
 		//copy no jutsu
 		if (dancing)
 		{
-			playState.defaultCamZoom = 0.9;
+			gamePlayState.defaultCamZoom = 0.9;
 		}
 		else
 		{
@@ -315,7 +315,7 @@ class Heartbass extends Perfume
 						&& charswhohavewalked.contains(characters_walking.animation.curAnim.name))
 					{ // if it's still the same character
 						characters_walking.animation.play(chars[FlxG.random.int(0, chars.length - 1)]); // change the character (i should make this a function)
-						if (playState.curBeat > stopSTOPITSTOPITNOW)
+						if (gamePlayState.curBeat > stopSTOPITSTOPITNOW)
 							moveNOWWW = false;
 					}
 					else
@@ -335,7 +335,7 @@ class Heartbass extends Perfume
 						&& charswhohavewalked.contains(characters_walking.animation.curAnim.name))
 					{ // if it's still the same character
 						characters_walking.animation.play(chars[FlxG.random.int(0, chars.length - 1)]); // change the character
-						if (playState.curBeat > stopSTOPITSTOPITNOW)
+						if (gamePlayState.curBeat > stopSTOPITSTOPITNOW)
 							moveNOWWW = false;
 					}
 					else
@@ -355,7 +355,7 @@ class Heartbass extends Perfume
 						&& charswhohavewalked.contains(characters_walking.animation.curAnim.name))
 					{ // if it's still the same character
 						characters_walking.animation.play(chars[FlxG.random.int(0, chars.length - 1)]); // change the character (i should make this a function)
-						if (playState.curBeat > stopSTOPITSTOPITNOW)
+						if (gamePlayState.curBeat > stopSTOPITSTOPITNOW)
 							moveNOWWW = false;
 					}
 					else
@@ -398,7 +398,7 @@ class Heartbass extends Perfume
 		light.antialiasing = true;
 		light.scale.y = 1;
 		light.scale.x = 1;
-		playState.add(light);
+		gamePlayState.add(light);
 	}
 
 

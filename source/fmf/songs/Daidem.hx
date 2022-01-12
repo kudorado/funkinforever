@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -17,7 +17,7 @@ class Daidem extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.7;
+		gamePlayState.defaultCamZoom = 0.7;
 
 		var bg = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/entity_origins/Stage_LayerTop', 'mods'));
 		bg.antialiasing = true;
@@ -27,7 +27,7 @@ class Daidem extends SongPlayer
 
 		bg.scrollFactor.set(0.99, 0.99);
 
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 	}
 
@@ -68,12 +68,12 @@ class Daidem extends SongPlayer
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.y = dad.getMidpoint().y - 100;
+		gamePlayState.targetCamFollow.y = dad.getMidpoint().y - 100;
 	}
 
 	override function updateCamFollowBF()
 	{
-		playState.targetCamFollow.y = bf.getMidpoint().y - 300;
+		gamePlayState.targetCamFollow.y = bf.getMidpoint().y - 300;
 	}
 
 	override function createDad()

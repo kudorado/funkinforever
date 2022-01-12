@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -20,7 +20,7 @@ class RunAway extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.8;
+		gamePlayState.defaultCamZoom = 0.8;
 		var bg:FlxSprite = new FlxSprite(-750, -408).loadGraphic(Paths.image('bg/impostor_v4/runaway', 'mods'));
 		bg.antialiasing = true;
 
@@ -28,7 +28,7 @@ class RunAway extends SongPlayer
 		bg.scale.y = 1.1;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
     override function getDefaultSkin():Skin
@@ -77,7 +77,7 @@ class RunAway extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowBF();
-        playState.targetCamFollow.y -= 100;
+        gamePlayState.targetCamFollow.y -= 100;
     }
 
     override function updateCamFollowDad()

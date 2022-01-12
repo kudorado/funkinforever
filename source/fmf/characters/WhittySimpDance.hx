@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.addons.effects.FlxTrail;
 import fmf.songs.PlayableCharacter;

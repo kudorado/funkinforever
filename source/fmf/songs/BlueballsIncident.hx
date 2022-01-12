@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -20,7 +20,7 @@ class BlueballsIncident extends Sadness
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.9;
+		gamePlayState.defaultCamZoom = 0.9;
 
 		var bg:FlxSprite = new FlxSprite(150, -467).loadGraphic(Paths.image('bg/blueballs_incident/incidenti/BB3', 'mods'));
 		bg.antialiasing = true;
@@ -28,7 +28,7 @@ class BlueballsIncident extends Sadness
 		bg.scale.x = 1.204;
 		bg.scale.y = 1.204;
 
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		whiteBG = new FlxSprite(-50, -467).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.WHITE);
 
@@ -38,8 +38,8 @@ class BlueballsIncident extends Sadness
 
 
 
-		playState.add(bg);
-		playState.add(whiteBG);
+		gamePlayState.add(bg);
+		gamePlayState.add(whiteBG);
 
 	}
 
@@ -74,19 +74,19 @@ class BlueballsIncident extends Sadness
 		switch (curBeat)
 		{
 			case 1 | 287 | 660:
-				playState.camZooming = true;
+				gamePlayState.camZooming = true;
 
 				whiteBG.color = FlxColor.BLACK;
 				FlxTween.tween(whiteBG, {alpha: 1}, 0.5, {});
 				FlxTween.tween(bf, {alpha: 1}, 0.5, {});
 				dad.alpha = 0;
-				playState.defaultCamZoom = 1.1;
+				gamePlayState.defaultCamZoom = 1.1;
 
 			case 32 | 353:
 				dad.alpha = 1;
 				bf.alpha = 1;
 				whiteBG.alpha = 0;
-				playState.defaultCamZoom = 0.9;
+				gamePlayState.defaultCamZoom = 0.9;
 
 			case 97:
 				FlxTween.tween(whiteBG, {alpha: 1}, 0.5, {});

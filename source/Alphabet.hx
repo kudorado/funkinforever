@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.FlxG;

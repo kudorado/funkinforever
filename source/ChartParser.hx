@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import flixel.util.FlxStringUtil;
 
 using StringTools;

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.addons.weapon.FlxWeapon.FlxTypedWeapon;
 import Options.DownscrollOption;
 import Options.PlaymodeOption;

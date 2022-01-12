@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -31,77 +31,77 @@ class Faker extends SongPlayer
 
     override function loadMap()
     {
-        playState.defaultCamZoom = 0.7;
+        gamePlayState.defaultCamZoom = 0.7;
 
         var sky:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/sky', 'mods'));
         sky.antialiasing = true;
         sky.scale.x = 1;
         sky.scale.y = 1;
         sky.scrollFactor.set(0.95, 0.95);
-        playState.add(sky);
+        gamePlayState.add(sky);
 
         var mountains:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/mountains', 'mods'));
         mountains.antialiasing = true;
         mountains.scale.x = 1;
         mountains.scale.y = 1;
         mountains.scrollFactor.set(0.95, 0.95);
-        playState.add(mountains);
+        gamePlayState.add(mountains);
 
         var grass:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/grass', 'mods'));
         grass.antialiasing = true;
         grass.scale.x = 1;
         grass.scale.y = 1;
         grass.scrollFactor.set(0.95, 0.95);
-        playState.add(grass);
+        gamePlayState.add(grass);
 
         var plant:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/plant', 'mods'));
         plant.antialiasing = true;
         plant.scale.x = 1;
         plant.scale.y = 1;
         plant.scrollFactor.set(0.95, 0.95);
-        playState.add(plant);
+        gamePlayState.add(plant);
 
         var tree1:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/tree1', 'mods'));
         tree1.antialiasing = true;
         tree1.scale.x = 1;
         tree1.scale.y = 1;
         tree1.scrollFactor.set(0.95, 0.95);
-        playState.add(tree1);
+        gamePlayState.add(tree1);
 
         var tree2:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/tree2', 'mods'));
         tree2.antialiasing = true;
         tree2.scale.x = 1;
         tree2.scale.y = 1;
         tree2.scrollFactor.set(0.95, 0.95);
-        playState.add(tree2);
+        gamePlayState.add(tree2);
 
         var pillar1:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/pillar1', 'mods'));
         pillar1.antialiasing = true;
         pillar1.scale.x = 1;
         pillar1.scale.y = 1;
         pillar1.scrollFactor.set(0.95, 0.95);
-        playState.add(pillar1);
+        gamePlayState.add(pillar1);
 
         var pillar2:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/pillar2', 'mods'));
         pillar2.antialiasing = true;
         pillar2.scale.x = 1;
         pillar2.scale.y = 1;
         pillar2.scrollFactor.set(0.95, 0.95);
-        playState.add(pillar2);
+        gamePlayState.add(pillar2);
 
         var flower1:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/flower1', 'mods'));
         flower1.antialiasing = true;
         flower1.scale.x = 1;
         flower1.scale.y = 1;
         flower1.scrollFactor.set(0.95, 0.95);
-        playState.add(flower1);
+        gamePlayState.add(flower1);
 
         var flower2:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/flower2', 'mods'));
         flower2.antialiasing = true;
         flower2.scale.x = 1;
         flower2.scale.y = 1;
         flower2.scrollFactor.set(0.95, 0.95);
-        playState.add(flower2);
+        gamePlayState.add(flower2);
     }
 
     override function getDefaultSkin():Skin
@@ -147,13 +147,13 @@ class Faker extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        playState.targetCamFollow.y -= 50;
+        gamePlayState.targetCamFollow.y -= 50;
     }
 
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        playState.targetCamFollow.y -= 150;
+        gamePlayState.targetCamFollow.y -= 150;
     }
 
     override function createGFAnimationOffsets()

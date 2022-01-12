@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import fmf.songs.PlayableCharacter;
@@ -24,7 +24,7 @@ class IIMarky extends Boyfriend
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		defaultCamZoom = playState.defaultCamZoom;
+		defaultCamZoom = gamePlayState.defaultCamZoom;
 
 		animation.addByPrefix('idle', 'BF idle dance', 24, false);
 		animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
@@ -43,7 +43,7 @@ class IIMarky extends Boyfriend
 	
 	override function noteEventBF(noteData:Note)
 	{
-		playState.defaultCamZoom = 1.1;
+		gamePlayState.defaultCamZoom = 1.1;
 		whiteBG.color = FlxColor.BLACK;
 
 		
@@ -55,14 +55,14 @@ class IIMarky extends Boyfriend
 
 	override function noteEventDad(noteData:Note)
 	{
-		if (playState.bfTurn)
+		if (gamePlayState.bfTurn)
 			return;
 
 		if(whiteBG.alpha > 0)
 			FlxTween.tween(whiteBG, {alpha: 0}, whiteBG.alpha, {});
 
 
-		playState.defaultCamZoom = defaultCamZoom;
+		gamePlayState.defaultCamZoom = defaultCamZoom;
 		super.noteEventDad(noteData);
 	}
 
@@ -99,10 +99,10 @@ class IIMarky extends Boyfriend
 		whiteBG.alpha = 0;
 		whiteBG.screenCenter(X);
 
-		playState.remove(this);
-		playState.add(whiteBG);
+		gamePlayState.remove(this);
+		gamePlayState.add(whiteBG);
 
-		playState.add(this);
+		gamePlayState.add(this);
 
 	}
 

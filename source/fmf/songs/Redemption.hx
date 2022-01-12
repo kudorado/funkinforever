@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxTimer;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -17,11 +17,11 @@ class Redemption extends Sadness
 
 	override function loadMap()
 	{
-        playState.defaultCamZoom = 1;
+        gamePlayState.defaultCamZoom = 1;
 
 		whito.loadGraphic(Paths.image('bg/blueballs_incident/redemp/white', 'mods'));
 		whito.antialiasing = true;
-		playState.add(whito);
+		gamePlayState.add(whito);
 
 		whito2.loadGraphic(Paths.image('bg/blueballs_incident/redemp/white', 'mods'));
 		whito2.antialiasing = true;
@@ -33,11 +33,11 @@ class Redemption extends Sadness
 		soe.y -= 100;
 		
 		soe.active = false;
-		playState.add(soe);
+		gamePlayState.add(soe);
 		
 		sur.loadGraphic(Paths.image('bg/blueballs_incident/redemp/foreground', 'mods'));
 		sur.active = false;
-		playState.add(sur);
+		gamePlayState.add(sur);
 
 		sura.loadGraphic(Paths.image('bg/blueballs_incident/redemp/aaa', 'mods'));
 		// sura.active = false;
@@ -50,18 +50,18 @@ class Redemption extends Sadness
 		gfanim.x = 1270;
 		gfanim.y = 91;
 	
-		playState.add(gfanim);
+		gamePlayState.add(gfanim);
 
 		bfanim.frames = Paths.getSparrowAtlas('bg/blueballs_incident/redemp/bfanim', 'mods');
 		bfanim.animation.addByPrefix('BF idle dance','BF idle dance',12, false);
 		bfanim.antialiasing = true;
-		playState.add(bfanim);
+		gamePlayState.add(bfanim);
 		bfanim.alpha = 0;
 		bfanim.x = 1513;
 		bfanim.y = 496;
 
-		playState.add(sura); 
-		playState.add(whito2);
+		gamePlayState.add(sura); 
+		gamePlayState.add(whito2);
 
 	}
 
@@ -104,14 +104,14 @@ class Redemption extends Sadness
 	{
 		super.updateCamFollowBF();
 
-		playState.defaultCamZoom = 0.7;
-		playState.targetCamFollow.x += 150;
-		playState.targetCamFollow.y -= 100;
+		gamePlayState.defaultCamZoom = 0.7;
+		gamePlayState.targetCamFollow.x += 150;
+		gamePlayState.targetCamFollow.y -= 100;
 	}
 
 	override function midSongStepUpdate()
 	{
-		switch (playState.curStep)
+		switch (gamePlayState.curStep)
 		{
 			case 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 44 | 47 | 50 | 53 | 56 | 59 | 62 | 65 | 68 | 73 | 76 | 79 | 82 | 99 | 103 | 106 | 109 | 112 | 115 | 117:
 				dad.playAnim("speak", true);
@@ -119,9 +119,9 @@ class Redemption extends Sadness
 				dad.playAnim("idle", false);
 			case 92:
 				bf.playAnim('singRIGHT');
-				playState.defaultCamZoom = 1;
+				gamePlayState.defaultCamZoom = 1;
 			case 128:
-				playState.camHUD.alpha = 1;
+				gamePlayState.camHUD.alpha = 1;
 			case 256 | 288 | 320 | 336 | 352:
 				soe.alpha -= 0.1;
 			case 360 | 368 | 384:
@@ -145,7 +145,7 @@ class Redemption extends Sadness
 				gf.alpha = 0;
 			case 674:
 				soe.alpha = 1;
-				playState.defaultCamZoom = 1.2;
+				gamePlayState.defaultCamZoom = 1.2;
 				gfanim.animation.play('Symbol 1', false);
 				bfanim.animation.play('BF idle dance', false);
 			case 700:
@@ -175,21 +175,21 @@ class Redemption extends Sadness
 
 		if (true)
 		{
-			switch (playState.curStep)
+			switch (gamePlayState.curStep)
 			{
 				case 256 | 288 | 320 | 336 | 352 | 360 | 368 | 384:
 					FlxG.camera.flash(0xFFEBEBEB, 1);
 			}
 		}
 
-		if (playState.curStep > 638)
+		if (gamePlayState.curStep > 638)
 		{
 			dad.playAnim("smile", true);
 		}	
 
-		if (playState.curStep > 100)
+		if (gamePlayState.curStep > 100)
 		{
-			playState.health = 2;
+			gamePlayState.health = 2;
 		}
 	}
 

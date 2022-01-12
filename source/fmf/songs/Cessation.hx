@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -14,18 +14,18 @@ class Cessation extends CensoryOverload
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		createTV();
 	}
 
 	override function createTV()
 	{
-        playState.defaultCamZoom = 0.9;
+        gamePlayState.defaultCamZoom = 0.9;
 		var bg:FlxSprite = new FlxSprite(100, 356).loadGraphic(Paths.image('bg/qt/TV_V5', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		playState.add(bg);
+		gamePlayState.add(bg);
     }
 }

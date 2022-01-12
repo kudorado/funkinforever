@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -26,7 +26,7 @@ class Bushwhack extends SongPlayer
         bgAnim.scale.y = 1.65;
 		bgAnim.x = 0;
 		bgAnim.y = 111;
-        playState.add(bgAnim);
+        gamePlayState.add(bgAnim);
 
 	}
 

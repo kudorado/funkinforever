@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.tweens.FlxTween;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxColor;

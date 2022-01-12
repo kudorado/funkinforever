@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -20,7 +20,7 @@ class Solazar extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.6;
+		gamePlayState.defaultCamZoom = 0.6;
 		var bg:FlxSprite = new FlxSprite(391, -274).loadGraphic(Paths.image('bg/solazar/The_void', 'mods'));
 		bg.antialiasing = true;
 
@@ -29,7 +29,7 @@ class Solazar extends SongPlayer
 
 		bg.scrollFactor.set(0.1, 0.1);
 		bg.active = false;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-900, -600).loadGraphic(Paths.image('bg/solazar/Void_Front', 'mods'));
 		
@@ -40,7 +40,7 @@ class Solazar extends SongPlayer
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.95, 0.95);
 		stageFront.active = false;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 	}
 
 	override function getDefaultSkin():Skin
@@ -116,7 +116,7 @@ class Solazar extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		playState.targetCamFollow.y += 500;
+		gamePlayState.targetCamFollow.y += 500;
 	}
 
 	override function updateCamFollowDad()

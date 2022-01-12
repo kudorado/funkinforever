@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -17,24 +17,24 @@ class RonaldMcDonaldSlide extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.8;
+		gamePlayState.defaultCamZoom = 0.8;
 		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_sky', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 0.5;
 		bg1.scale.x = 0.5;
 		
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_back', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 0.5;
 		bg2.scale.x = 0.5;
-		playState.add(bg2);
+		gamePlayState.add(bg2);
 
 		var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_front', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 0.75;
 		bg.scale.x = 0.75;
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
 	override function createDadAnimations():Void
@@ -87,15 +87,15 @@ class RonaldMcDonaldSlide extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.targetCamFollow.x =  dad.getMidpoint().x + 300;
-		playState.targetCamFollow.y =  dad.getMidpoint().y;
+		gamePlayState.targetCamFollow.x =  dad.getMidpoint().x + 300;
+		gamePlayState.targetCamFollow.y =  dad.getMidpoint().y;
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.x =  dad.getMidpoint().x + 50;
-		playState.targetCamFollow.y =  dad.getMidpoint().y;
+		gamePlayState.targetCamFollow.x =  dad.getMidpoint().x + 50;
+		gamePlayState.targetCamFollow.y =  dad.getMidpoint().y;
 
 	}
 

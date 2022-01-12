@@ -1,5 +1,5 @@
  package fmf.songs;
-
+import state.*;
 import flixel.group.FlxSpriteGroup;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -48,12 +48,12 @@ class Whitroll extends SongPlayer
 
 	function createCityBG()
 	{
-        playState.defaultCamZoom = 1;
+        gamePlayState.defaultCamZoom = 1;
 		var bg:FlxSprite = new FlxSprite(227, -262).loadGraphic(Paths.image('bg/date/sky_bg', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
 		bg.scale.x = 1.2;
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
 	override function createCharacters()
@@ -68,7 +68,7 @@ class Whitroll extends SongPlayer
 		light.antialiasing = true;
 		light.scale.y = 1;
 		light.scale.x = 1;
-		playState.add(light);
+		gamePlayState.add(light);
 	}
 
 	function createSky()
@@ -77,7 +77,7 @@ class Whitroll extends SongPlayer
 		skyscrapers.antialiasing = true;
 		skyscrapers.scale.y = 1.2;
 		skyscrapers.scale.x = 1.2;
-		playState.add(skyscrapers);
+		gamePlayState.add(skyscrapers);
 	}
 	override function loadMap()
 	{
@@ -92,7 +92,7 @@ class Whitroll extends SongPlayer
 	function createHeartThings()
 	{
 		heartsThings = new FlxSpriteGroup();
-		playState.add(heartsThings);
+		gamePlayState.add(heartsThings);
 	}
 	function createDeco()
 	{
@@ -101,7 +101,7 @@ class Whitroll extends SongPlayer
 		deco.antialiasing = true;
 		deco.scale.y = 1.2;
 		deco.scale.x = 1.2;
-		playState.add(deco);
+		gamePlayState.add(deco);
 
 	}
 
@@ -111,7 +111,7 @@ class Whitroll extends SongPlayer
 		balc.antialiasing = true;
 		balc.scale.y = 1;
 		balc.scale.x = 1;
-		playState.add(balc);
+		gamePlayState.add(balc);
 
 	}
 
@@ -121,7 +121,7 @@ class Whitroll extends SongPlayer
 		balc.antialiasing = true;
 		balc.scale.y = 1;
 		balc.scale.x = 1;
-		playState.add(balc);
+		gamePlayState.add(balc);
 	}
 
 	override function createStoryBF() 

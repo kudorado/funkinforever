@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.math.FlxRandom;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
@@ -35,7 +35,7 @@ class KaiqueClown extends Clown
 		tstatic.animation.play('static');
 
 		tstatic.alpha = 0;
-		playState.add(tstatic);
+		gamePlayState.add(tstatic);
 	}
 
 	public override function createSpookyText(text:String, x:Float = -1111111111111, y:Float = -1111111111111):Void
@@ -43,7 +43,7 @@ class KaiqueClown extends Clown
 
 		var col:FlxColor = new FlxRandom().color();
 
-		spookySteps = playState.curStep;
+		spookySteps = gamePlayState.curStep;
 		spookyRendered = true;
 		tstatic.alpha = 0.5;
 		tstatic.color = col;
@@ -55,7 +55,7 @@ class KaiqueClown extends Clown
 		spookyText.bold = true;
 		spookyText.text = text;
 
-		playState.add(spookyText);
+		gamePlayState.add(spookyText);
 	}
 
 }

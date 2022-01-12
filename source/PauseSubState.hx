@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import ui.Controller;
 import extension.admob.AdMob;
 import openfl.Lib;
@@ -38,7 +38,7 @@ class PauseSubState extends MusicBeatSubstate
 		super();
 
 		//recall pause music shit, idunno why
-		PlayState.instance.pauseGame();
+		GamePlayState.instance.pauseGame();
 
 		
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
@@ -61,7 +61,7 @@ class PauseSubState extends MusicBeatSubstate
 		add(bg);
 
 		var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
-		levelInfo.text += PlayState.CURRENT_SONG.toUpperCase();
+		levelInfo.text += GamePlayState.CURRENT_SONG.toUpperCase();
 		levelInfo.scrollFactor.set();
 		levelInfo.setFormat(Paths.font("vcr.ttf"), 32);
 		levelInfo.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
@@ -90,7 +90,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);
-		perSongOffset = new FlxText(5, FlxG.height - 18, 0, "Additive Offset (Left, Right): " + PlayState.songOffset + " - Description - " + 'Adds value to global offset, per song.', 12);
+		perSongOffset = new FlxText(5, FlxG.height - 18, 0, "Additive Offset (Left, Right): " + GamePlayState.songOffset + " - Description - " + 'Adds value to global offset, per song.', 12);
 		perSongOffset.scrollFactor.set();
 		perSongOffset.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		
@@ -111,7 +111,7 @@ class PauseSubState extends MusicBeatSubstate
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
 		Controller.init(this, UP_DOWN, A);
-        Controller._pad.cameras = [PlayState.instance.camHUD];
+        Controller._pad.cameras = [GamePlayState.instance.camHUD];
 
 
 	}
@@ -139,10 +139,10 @@ class PauseSubState extends MusicBeatSubstate
 		// #if cpp
 		// 	else if (leftP)
 		// 	{
-		// 		oldOffset = PlayState.songOffset;
-		// 		PlayState.songOffset -= 1;
-		// 		sys.FileSystem.rename(songPath + oldOffset + '.offset', songPath + PlayState.songOffset + '.offset');
-		// 		perSongOffset.text = "Additive Offset (Left, Right): " + PlayState.songOffset + " - Description - " + 'Adds value to global offset, per song.';
+		// 		oldOffset = GamePlayState.songOffset;
+		// 		GamePlayState.songOffset -= 1;
+		// 		sys.FileSystem.rename(songPath + oldOffset + '.offset', songPath + GamePlayState.songOffset + '.offset');
+		// 		perSongOffset.text = "Additive Offset (Left, Right): " + GamePlayState.songOffset + " - Description - " + 'Adds value to global offset, per song.';
 
 		// 		// Prevent loop from happening every single time the offset changes
 		// 		if(!offsetChanged)
@@ -166,10 +166,10 @@ class PauseSubState extends MusicBeatSubstate
 		// 		}
 		// 	}else if (rightP)
 		// 	{
-		// 		oldOffset = PlayState.songOffset;
-		// 		PlayState.songOffset += 1;
-		// 		sys.FileSystem.rename(songPath + oldOffset + '.offset', songPath + PlayState.songOffset + '.offset');
-		// 		perSongOffset.text = "Additive Offset (Left, Right): " + PlayState.songOffset + " - Description - " + 'Adds value to global offset, per song.';
+		// 		oldOffset = GamePlayState.songOffset;
+		// 		GamePlayState.songOffset += 1;
+		// 		sys.FileSystem.rename(songPath + oldOffset + '.offset', songPath + GamePlayState.songOffset + '.offset');
+		// 		perSongOffset.text = "Additive Offset (Left, Right): " + GamePlayState.songOffset + " - Description - " + 'Adds value to global offset, per song.';
 		// 		if(!offsetChanged)
 		// 		{
 		// 			grpMenuShit.clear();
@@ -200,43 +200,43 @@ class PauseSubState extends MusicBeatSubstate
 			{
 				case "Resume":
 					close();
-					PlayState.instance.restorePad();
+					GamePlayState.instance.restorePad();
 				case "Restart Song":
-					PlayState.instance.gameNa();
+					GamePlayState.instance.gameNa();
 					close();
-					PlayState.instance.restorePad();
+					GamePlayState.instance.restorePad();
 					AdMob.showInterstitial(60);
 
-					PlayState.instance.switchState(function()
+					GamePlayState.instance.switchState(function()
 					{
 						FlxG.resetState();
 					});
 
 				case 'Customization':
-					PlayState.instance.gameNa();
+					GamePlayState.instance.gameNa();
 					close();
-					PlayState.instance.restorePad();
+					GamePlayState.instance.restorePad();
 					AdMob.showInterstitial(60);
 
 
-					PlayState.instance.switchState(function()
+					GamePlayState.instance.switchState(function()
 					{
 						FlxG.switchState(new SelectionState());
 					});
 					
 				case "Exit to menu":
-					PlayState.instance.gameNa();
+					GamePlayState.instance.gameNa();
 					close();
-					PlayState.instance.restorePad();
+					GamePlayState.instance.restorePad();
 
 					AdMob.showInterstitial(60);
 					
-					PlayState.instance.switchState(function()
+					GamePlayState.instance.switchState(function()
 					{
-						if (PlayState.isStoryMode)
-							FlxG.switchState(new StoryMenuState());
+						if (GamePlayState.isStoryMode)
+							FlxG.switchState(new StoryState());
 						else
-							FlxG.switchState(new FreeplayState());
+							FlxG.switchState(new FreePlayState());
 						
 					});
 

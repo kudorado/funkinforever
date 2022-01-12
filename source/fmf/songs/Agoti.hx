@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.skins.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -19,12 +19,12 @@ class Agoti extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.6;
+		gamePlayState.defaultCamZoom = 0.6;
 
 		var dumbShit = new FlxSprite(-1000, -300).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.WHITE);
 		dumbShit.scrollFactor.set(1, 1);
-		dumbShit.cameras = [playState.camGame];
-		playState.add(dumbShit);
+		dumbShit.cameras = [gamePlayState.camGame];
+		gamePlayState.add(dumbShit);
 
 		var bg:FlxSprite = new FlxSprite();
 
@@ -47,7 +47,7 @@ class Agoti extends SongPlayer
 
 		bg.scrollFactor.set(0, 0);
 
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/agoti/Void_Front', 'mods'));
 
@@ -56,7 +56,7 @@ class Agoti extends SongPlayer
 
 		stageFront.scale.x = 1.5;
 		stageFront.scale.y = 1.5;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 		
 	}
 

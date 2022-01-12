@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
@@ -23,21 +23,21 @@ class GarcelloDead extends Garcello
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.85;
+		gamePlayState.defaultCamZoom = 0.85;
 
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/garcello/garStagebgAlt', 'mods'));
 		bg.antialiasing = true;
 		// bg.active = false;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/garcello/garStagealt', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
 		// stageFront.active = false;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 		createDeadBody();
 		createSmoke();
@@ -46,7 +46,7 @@ class GarcelloDead extends Garcello
 
 	private function addSmoke()
 	{
-		playState.add(smoke);
+		gamePlayState.add(smoke);
 	}
 
 	private function createDeadBody()
@@ -55,7 +55,7 @@ class GarcelloDead extends Garcello
 		garcelloDead.setGraphicSize(Std.int(garcelloDead.width));
 		garcelloDead.updateHitbox();
 		garcelloDead.antialiasing = true;
-		playState.add(garcelloDead);
+		gamePlayState.add(garcelloDead);
 
 	}
 
@@ -111,12 +111,12 @@ class GarcelloDead extends Garcello
 			case 209:
 				new FlxTimer().start(0.25, function(tm:FlxTimer)
 				{
-					playState.defaultCamZoom = 1.3;
+					gamePlayState.defaultCamZoom = 1.3;
 					dad.playAnim('coolGuy', true);
 					dad.lockAnim(1, function()
 					{
 						dad.dance();
-						playState.defaultCamZoom = 0.85;
+						gamePlayState.defaultCamZoom = 0.85;
 
 					});
 				});

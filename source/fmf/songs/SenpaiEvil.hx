@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.addons.effects.FlxTrail;
@@ -23,7 +23,7 @@ class SenpaiEvil extends Senpai
 		bg.animation.play('idle');
 		bg.scrollFactor.set(0.8, 0.9);
 		bg.scale.set(6, 6);
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
 	override function showDialogue()
@@ -38,12 +38,12 @@ class SenpaiEvil extends Senpai
 		senpaiEvil.scrollFactor.set();
 		senpaiEvil.updateHitbox();
 		senpaiEvil.screenCenter();
-		playState.add(red);
+		gamePlayState.add(red);
 
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
 		{
-			playState.inCutscene = true;
-			playState.add(senpaiEvil);
+			gamePlayState.inCutscene = true;
+			gamePlayState.add(senpaiEvil);
 			senpaiEvil.alpha = 0;
 			new FlxTimer().start(0.3, function(swagTimer:FlxTimer)
 			{
@@ -57,11 +57,11 @@ class SenpaiEvil extends Senpai
 					senpaiEvil.animation.play('idle');
 					FlxG.sound.play(Paths.sound('Senpai_Dies'), 1, false, null, true, function()
 					{
-						playState.remove(senpaiEvil);
-						playState.remove(red);
+						gamePlayState.remove(senpaiEvil);
+						gamePlayState.remove(red);
 						FlxG.camera.fade(FlxColor.WHITE, 0.01, true, function()
 						{
-							playState.add(dialogueBox);
+							gamePlayState.add(dialogueBox);
 						}, true);
 					});
 					new FlxTimer().start(3.2, function(deadTime:FlxTimer)
@@ -120,14 +120,14 @@ class SenpaiEvil extends Senpai
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.y = dad.getMidpoint().y;
-		playState.targetCamFollow.x = dad.getMidpoint().x + 250;
+		gamePlayState.targetCamFollow.y = dad.getMidpoint().y;
+		gamePlayState.targetCamFollow.x = dad.getMidpoint().x + 250;
 	}
 
 	override function updateCamFollowBF()
 	{
-		playState.targetCamFollow.x = bf.getMidpoint().x - 200;
-		playState.targetCamFollow.y = bf.getMidpoint().y - 200;
+		gamePlayState.targetCamFollow.x = bf.getMidpoint().x - 200;
+		gamePlayState.targetCamFollow.y = bf.getMidpoint().y - 200;
 	}
 
 	override function initVariables()
@@ -147,7 +147,7 @@ class SenpaiEvil extends Senpai
 		if (FlxG.save.data.distractions)
 		{
 			var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
-			playState.add(evilTrail);
+			gamePlayState.add(evilTrail);
 		}
 	}
 

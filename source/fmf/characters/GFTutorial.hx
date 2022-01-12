@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.animation.FlxBaseAnimation;
@@ -21,7 +21,7 @@ class GFTutorial extends Character
 
 	override function update(elapsed:Float)
 	{
-		if (PlayState.playAsDad)
+		if (GamePlayState.playAsDad)
 		{
 			bfBehaviour(elapsed);
 		}

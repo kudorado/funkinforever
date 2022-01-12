@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 
 
 //this class with manager songs data

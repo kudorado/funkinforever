@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -23,7 +23,7 @@ class BabJumpOut extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.8;
+		gamePlayState.defaultCamZoom = 0.8;
 
 		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/happy/happy_sky', 'mods'));
 		bg1.antialiasing = true;
@@ -31,21 +31,21 @@ class BabJumpOut extends SongPlayer
 		bg1.scale.x = 0.5;
 		//bg1.scrollFactor.set(0.9,0.9);
 		
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
 		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/happy/happy_back', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 0.5;
 		bg2.scale.x = 0.5;
 		//bg2.scrollFactor.set(0.9,0.9);
-		playState.add(bg2);
+		gamePlayState.add(bg2);
 
 		var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/day/happy/happy_front', 'mods'));
 		bg.antialiasing = true;
 		//bg.scrollFactor.set(0.9,0.9);
 		bg.scale.y = 0.75;
 		bg.scale.x = 0.75;
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
 	override function createDadAnimations():Void
@@ -101,14 +101,14 @@ class BabJumpOut extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.targetCamFollow.x -=  200;
-		playState.targetCamFollow.y -= 60;
+		gamePlayState.targetCamFollow.x -=  200;
+		gamePlayState.targetCamFollow.y -= 60;
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.x += 100;
-		playState.targetCamFollow.y -= 60;
+		gamePlayState.targetCamFollow.x += 100;
+		gamePlayState.targetCamFollow.y -= 60;
 	}
 
 }

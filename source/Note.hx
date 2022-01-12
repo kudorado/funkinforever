@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import flixel.addons.effects.FlxSkewedSprite;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -9,7 +9,6 @@ import flixel.util.FlxColor;
 #if polymod
 import polymod.format.ParseRules.TargetSignatureElement;
 #end
-import PlayState;
 
 using StringTools;
 
@@ -66,10 +65,10 @@ class Note extends FlxSprite
 
 		this.noteData = noteData;
 
-		var daStage:String = PlayState.curStage;
+		var daStage:String = GamePlayState.curStage;
 
 		//get note skin depending on what song are playing.
-		PlayState.songPlayer.getNoteSkin(this);
+		GamePlayState.songPlayer.getNoteSkin(this);
 
 		switch (noteData)
 		{
@@ -117,7 +116,7 @@ class Note extends FlxSprite
 
 			x -= width / 2;
 
-			if (PlayState.curStage.startsWith('school'))
+			if (GamePlayState.curStage.startsWith('school'))
 				x += 30;
 
 			if (prevNote.isSustainNote)
@@ -138,7 +137,7 @@ class Note extends FlxSprite
 				if(FlxG.save.data.scrollSpeed != 1)
 					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * FlxG.save.data.scrollSpeed;
 				else
-					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * PlayState.SONG.speed;
+					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * GamePlayState.SONG.speed;
 		
 				prevNote.updateHitbox();
 

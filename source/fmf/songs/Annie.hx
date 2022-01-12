@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -18,19 +18,19 @@ class Annie extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.85;
+		gamePlayState.defaultCamZoom = 0.85;
 		
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('garcello/garStagebg', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('garcello/garStage', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 	}
 

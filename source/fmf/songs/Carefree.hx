@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -22,7 +22,7 @@ class Carefree extends SongPlayer
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		createTV();
 
@@ -30,13 +30,13 @@ class Carefree extends SongPlayer
 
 	function createTV()
 	{
-		playState.defaultCamZoom = 0.9;
+		gamePlayState.defaultCamZoom = 0.9;
 
 		var bg:FlxSprite = new FlxSprite(100, 356).loadGraphic(Paths.image('bg/qt/TV_V2_off', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
 	override function createDadAnimations():Void
@@ -84,15 +84,15 @@ class Carefree extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		playState.targetCamFollow.y = 360;
+		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
+		gamePlayState.targetCamFollow.y = 360;
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.targetCamFollow.y = 360;
+		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		gamePlayState.targetCamFollow.y = 360;
 
 	}
 

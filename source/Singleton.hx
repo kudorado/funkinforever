@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import flixel.FlxBasic;
 import flixel.text.FlxText;
 import flixel.FlxG;

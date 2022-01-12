@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 class ItemData
 {
     public var name:String;

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -20,7 +20,7 @@ class Diagraphephobia extends DreamOfPeace
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.7;
+		gamePlayState.defaultCamZoom = 0.7;
 		var bg:FlxSprite = new FlxSprite(-451, -234).loadGraphic(Paths.image('bg/eteled/corruptback', 'mods'));
 		bg.antialiasing = true;
 
@@ -28,7 +28,7 @@ class Diagraphephobia extends DreamOfPeace
 		bg.scale.y = 1.35;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 
 
@@ -46,7 +46,7 @@ class Diagraphephobia extends DreamOfPeace
 		bg1.scale.x = 1.6;
 		bg1.scrollFactor.set(0.95, 0.95);
 		bg1.animation.play('idle');
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
 	}
 

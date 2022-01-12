@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.FlxG;
 import flixel.util.FlxColor;
 import flixel.FlxSprite;
@@ -55,7 +55,7 @@ class EsAnimal extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.8;
+		gamePlayState.defaultCamZoom = 0.8;
 
 		
 		var bg:FlxSprite = new FlxSprite(-600, -600).loadGraphic(Paths.image('bg/annie/evilBG', 'mods'));
@@ -72,8 +72,8 @@ class EsAnimal extends SongPlayer
 		stageFront.scale.x = 1.5;
 		stageFront.scale.y = 1.5;
 
-		playState.add(bg);
-		playState.add(stageFront);
+		gamePlayState.add(bg);
+		gamePlayState.add(stageFront);
 
 	}
 	override function midSongEventUpdate(curBeat:Int)

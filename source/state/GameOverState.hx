@@ -1,4 +1,4 @@
-package;
+package state;
 
 import ui.FlxVirtualPad;
 import extension.admob.AdMob;
@@ -49,7 +49,7 @@ class GameOverState extends MusicBeatSubstate
 		add(bg);
 
 		var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
-		levelInfo.text += PlayState.CURRENT_SONG.toUpperCase();
+		levelInfo.text += GamePlayState.CURRENT_SONG.toUpperCase();
 		levelInfo.scrollFactor.set();
 		levelInfo.setFormat(Paths.font("vcr.ttf"), 32);
 		levelInfo.updateHitbox();
@@ -130,10 +130,10 @@ class GameOverState extends MusicBeatSubstate
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					callback();
 					if(mode == 'story'){
-						FlxG.switchState(new StoryMenuState());
+						FlxG.switchState(new StoryState());
 					}
 					else if(mode == 'freeplay'){
-						FlxG.switchState(new FreeplayState());
+						FlxG.switchState(new FreePlayState());
 					}
 					else{
 						FlxG.switchState(new MainMenuState());
@@ -154,7 +154,6 @@ class GameOverState extends MusicBeatSubstate
 	{
 		pauseMusic.destroy();
 		pauseMusic = null; //alloc shit cuz i'm stupiz
-		this.alloc();
 
 		super.destroy();
 	}

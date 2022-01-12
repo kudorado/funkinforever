@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import extension.admob.AdMob;
 import ui.Controller;
 import flixel.FlxG;
@@ -298,10 +298,10 @@ class MainMenuState extends MusicBeatState
 		switch (daChoice)
 		{
 			case 'story mode':
-				FlxG.switchState(new StoryMenuState());
+				FlxG.switchState(new StoryState());
 				//@notrace("Story Menu Selected");
 			case 'freeplay':
-				FlxG.switchState(new FreeplayState());
+				FlxG.switchState(new FreePlayState());
 
 				//@notrace("Freeplay Menu Selected");
 			case 'options':

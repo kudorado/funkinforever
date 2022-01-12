@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import fmf.songs.PlayableCharacter;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -37,7 +37,7 @@ class GFSus extends Boyfriend
 	override function noteEventBF(noteData:Note)
 	{
 		super.noteEventBF(noteData);
-		playState.targetCamFollow.y = this.getMidpoint().y - 150;
+		gamePlayState.targetCamFollow.y = this.getMidpoint().y - 150;
 	}
 
 	// create animation offset for BF

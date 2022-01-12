@@ -1,5 +1,5 @@
 	package fmf.songs;
-
+import state.*;
 import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
@@ -22,7 +22,7 @@ class Whitty extends SongPlayer
 		bg.scale.x = 1.3;
 		bg.scale.y = 1.3;
 		bg.scrollFactor.set(0.9, 0.9);
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('bg/whitty/whittyFront', "mods"));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
@@ -30,7 +30,7 @@ class Whitty extends SongPlayer
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
 		stageFront.active = false;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 	}
 

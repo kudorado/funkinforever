@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -22,7 +22,7 @@ class DoubleTrouble extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.7;
+		gamePlayState.defaultCamZoom = 0.7;
 		var bg:FlxSprite = new FlxSprite(-1244, -510).loadGraphic(Paths.image('bg/impostor_v4/bgWalls', 'mods'));
 		bg.antialiasing = true;
 
@@ -30,7 +30,7 @@ class DoubleTrouble extends SongPlayer
 		bg.scale.y = 1;
 
 		bg.scrollFactor.set(0.8, 0.8);
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var bg2:FlxSprite = new FlxSprite(-306, 206).loadGraphic(Paths.image('bg/impostor_v4/bottomBop', 'mods'));
 		bg2.antialiasing = true;
@@ -39,7 +39,7 @@ class DoubleTrouble extends SongPlayer
 		bg2.scale.y = 1;
 
 		//bg2.scrollFactor.set(0.95, 0.95);
-		playState.add(bg2);
+		gamePlayState.add(bg2);
 	}
 
     override function getDefaultSkin():Skin

@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import fmf.songs.PlayableCharacter;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -33,8 +33,8 @@ class RuvSus extends Boyfriend
 
 	override function noteEventBF(noteData:Note)
 	{
-		playState.shakeNormal();
-		PlayState.songPlayer.gf.playAnimForce("scared", 0.35);
+		gamePlayState.shakeNormal();
+		GamePlayState.songPlayer.gf.playAnimForce("scared", 0.35);
 	}
 
 	// create animation offset for BF

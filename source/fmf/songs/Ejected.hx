@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 //import js.html.Client;
 ////import js.html.AbortController;
 import flixel.addons.display.shapes.FlxShapeLightning.LightningStyle;
@@ -37,55 +37,55 @@ class Ejected extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.7;
+		gamePlayState.defaultCamZoom = 0.7;
 
 		var bg1:FlxSprite = new FlxSprite(-1000, -1600).loadGraphic(Paths.image('bg/sus/ejected1/sky', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1;
 		bg1.scale.x = 1;
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
         var fgClouds:FlxSprite = new FlxSprite(-1150, 500).loadGraphic(Paths.image('bg/sus/ejected1/fgClouds', 'mods'));
 		fgClouds.antialiasing = true;
 		fgClouds.scale.y = 1;
 		fgClouds.scale.x = 1;
-		playState.add(fgClouds);
+		gamePlayState.add(fgClouds);
 
         speedLines1 = new FlxSprite(-200, 0).loadGraphic(Paths.image('bg/sus/ejected1/speedLines', 'mods'));
 		speedLines1.antialiasing = true;
 		speedLines1.scale.y = 2;
 		speedLines1.scale.x = 2;
-		playState.add(speedLines1);
+		gamePlayState.add(speedLines1);
 
         speedLines2 = new FlxSprite(-200, 1000).loadGraphic(Paths.image('bg/sus/ejected1/speedLines', 'mods'));
 		speedLines2.antialiasing = true;
 		speedLines2.scale.y = 2;
 		speedLines2.scale.x = 2;
-		playState.add(speedLines2);
+		gamePlayState.add(speedLines2);
         
         building1 = new FlxSprite(280, -3500).loadGraphic(Paths.image('bg/sus/ejected/buildingA', 'mods'));
         building1.antialiasing = true;
         building1.scale.x = 1;
         building1.scale.y = 1;
-        playState.add(building1);
+        gamePlayState.add(building1);
 
         building2 = new FlxSprite(350, 100).loadGraphic(Paths.image('bg/sus/ejected/buildingA2', 'mods'));
         building2.antialiasing = true;
         building2.scale.x = 1.28;
         building2.scale.y = 1.28;
-        playState.add(building2);
+        gamePlayState.add(building2);
 
         buildingB1 = new FlxSprite(-800, -500).loadGraphic(Paths.image('bg/sus/ejected/buildingB', 'mods'));
         buildingB1.antialiasing = true;
         buildingB1.scale.x = 0.6;
         buildingB1.scale.y = 0.6;
-        playState.add(buildingB1);
+        gamePlayState.add(buildingB1);
 
         buildingB2 = new FlxSprite(1000, 100).loadGraphic(Paths.image('bg/sus/ejected/buildingB2', 'mods'));
         buildingB2.antialiasing = true;
         buildingB2.scale.x = 1.3;
         buildingB2.scale.y = 1.3;
-        playState.add(buildingB2);
+        gamePlayState.add(buildingB2);
 
         cloud = new FlxSprite(0, 0);
 		cloud.frames = Paths.getSparrowAtlas('bg/sus/ejected/scrollingClouds', 'mods');
@@ -100,7 +100,7 @@ class Ejected extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			playState.add(cloud);
+			gamePlayState.add(cloud);
 		}
 
 	}
@@ -156,15 +156,15 @@ class Ejected extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		playState.targetCamFollow.x = bf.getMidpoint().x - 240;
-		playState.targetCamFollow.y = bf.getMidpoint().y - 150;
+		gamePlayState.targetCamFollow.x = bf.getMidpoint().x - 240;
+		gamePlayState.targetCamFollow.y = bf.getMidpoint().y - 150;
 	}
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		playState.targetCamFollow.x = bf.getMidpoint().x - 500;
-		playState.targetCamFollow.y = bf.getMidpoint().y - 150;
+		gamePlayState.targetCamFollow.x = bf.getMidpoint().x - 500;
+		gamePlayState.targetCamFollow.y = bf.getMidpoint().y - 150;
 	}
 
     var dir:Int = -1; 

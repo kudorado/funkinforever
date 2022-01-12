@@ -77,8 +77,8 @@ class PlayOptionState extends MusicBeatState
             transIn = FlxTransitionableState.defaultTransIn;
             transOut = FlxTransitionableState.defaultTransOut;
             
-			if (PlayState.SONG != null)
-				_song = PlayState.SONG;
+			if (GamePlayState.SONG != null)
+				_song = GamePlayState.SONG;
 			else
 			{
 				_song = {
@@ -251,8 +251,8 @@ class PlayOptionState extends MusicBeatState
                                        case 'Enemy':
 											LoadingState.loadAndSwitchState(new PlayOptionEnemyState());
 										case 'Back':
-											PlayState.SONG = _song;
-											LoadingState.loadAndSwitchState(new PlayState());
+											GamePlayState.SONG = _song;
+											LoadingState.loadAndSwitchState(new GamePlayState());
 
 									}
 

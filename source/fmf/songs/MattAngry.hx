@@ -1,5 +1,5 @@
 	package fmf.songs;
-
+import state.*;
 import MenuCharacter.CharacterSetting;
 import flixel.FlxSprite;
 import fmf.characters.*;
@@ -15,12 +15,12 @@ class MattAngry extends Matt
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.8;
+		gamePlayState.defaultCamZoom = 0.8;
 		var bg:FlxSprite = new FlxSprite(-600, -100).loadGraphic(Paths.image('bg/matt/arenanightbg', "mods"));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = true;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-650, -425).loadGraphic(Paths.image('bg/matt/boxingnight3', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1));
@@ -28,7 +28,7 @@ class MattAngry extends Matt
 		stageFront.scrollFactor.set(0.9, 0.9);
 
 		stageFront.active = true;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 	}
 

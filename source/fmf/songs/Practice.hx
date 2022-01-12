@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.FlxG;
 import flixel.util.FlxColor;
 import flixel.FlxSprite;
@@ -20,13 +20,13 @@ class Practice extends Trueform
 	{
 		super.loadMap();
 
-		playState.defaultCamZoom = 0.9;
+		gamePlayState.defaultCamZoom = 0.9;
 
 		var bg:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('bg/trueform/matt/arenanightbg', 'mods'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		hole = new FlxSprite(-650, 600);
 		hole.loadGraphic(Paths.image('bg/trueform/lila/gfshit', 'mods'), true, 512, 512);

@@ -1,5 +1,6 @@
-package;
+package state;
 
+import state.*;
 import flixel.graphics.frames.FlxAtlasFrames;
 import extension.admob.AdMob;
 import fmf.songs.*;
@@ -23,7 +24,7 @@ import Discord.DiscordClient;
 
 using StringTools;
 
-class FreeplayState extends MusicBeatState
+class FreePlayState extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
 
@@ -54,7 +55,15 @@ class FreeplayState extends MusicBeatState
 	var daDiffColor:FlxColor;
 	
 	var totalSong:Int;
-
+	
+	function loadWeekBG(curWeek:Int)
+	{
+		var char:String = SongManager.songs[curWeek].character;
+		bg.loadGraphic(Paths.image('freeplay/' + char));
+		bg.setGraphicSize(Std.int(bg.width * 1.1));
+		bg.screenCenter();
+		bg.antialiasing = true;
+	}
 
 	function removeOldWeek()
 	{
@@ -135,7 +144,7 @@ class FreeplayState extends MusicBeatState
 
 			var songText:AlphabetShit = new AlphabetShit(0, (70 * i) + 30, shitSong ? '' : SongFilter.filter(songs[i].songName), true, false, true);
 			songText.isMenuItem = true;
-			songText.targetY = i + 4;
+			songText.targetY = i;
 			grpSongs.add(songText);
 
 
@@ -184,6 +193,9 @@ class FreeplayState extends MusicBeatState
 			iconArray.push(icon);
 			add(icon);
 			add(videoIcon);
+
+			loadWeekBG(curWeek);
+			
 		}
 
 
@@ -224,7 +236,7 @@ class FreeplayState extends MusicBeatState
 		songWeekId.alignment = RIGHT;
 
 		var scoreBG:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 1.1), 77, 0xFF000000);
-		scoreBG.alpha = 0.6;
+		scoreBG.alpha = 0.85;
 		scoreBG.screenCenter(X);
 		add(scoreBG);
 
@@ -265,6 +277,7 @@ class FreeplayState extends MusicBeatState
 		// fetch song shits from SongManager
 		songs = new Array<SongMetadata>();
 		loadWeek();
+
 		
 
 
@@ -416,38 +429,38 @@ class FreeplayState extends MusicBeatState
 
 		//@notrace(songLowercase);
 
-		var poop:String = Highscore.formatSong(songLowercase, StoryMenuState.curDifficulty);
+		var poop:String = Highscore.formatSong(songLowercase, StoryState.curDifficulty);
 
 		//@notrace(poop);
 
 		var curSong = songs[curSelected];
 
-		PlayState.playingSong = SongManager.songs[curSong.week];
-		PlayState.SONG = Song.loadFromJson(poop, SongManager.songs[curSong.week].folder + songLowercase);
-		PlayState.SONG_NAME = songLowercase;
-		PlayState.RAW_SONG_NAME = songs[curSelected].songName;
+		GamePlayState.playingSong = SongManager.songs[curSong.week];
+		GamePlayState.SONG = Song.loadFromJson(poop, SongManager.songs[curSong.week].folder + songLowercase);
+		GamePlayState.SONG_NAME = songLowercase;
+		GamePlayState.RAW_SONG_NAME = songs[curSelected].songName;
 
-		PlayState.isStoryMode = false;
-		PlayState.storyDifficulty = StoryMenuState.curDifficulty;
-		PlayState.storyWeek = songs[curSelected].week;
+		GamePlayState.isStoryMode = false;
+		GamePlayState.storyDifficulty = StoryState.curDifficulty;
+		GamePlayState.storyWeek = songs[curSelected].week;
 
 		LoadingState.loadAndSwitchState(new SelectionState());
 	}
 
 	function changeDiff(change:Int = 0)
 	{
-		StoryMenuState.curDifficulty += change;
+		StoryState.curDifficulty += change;
 
-		if (StoryMenuState.curDifficulty < 0)
-			StoryMenuState.curDifficulty = 3;
-		if (StoryMenuState.curDifficulty > 3)
-			StoryMenuState.curDifficulty = 0;
+		if (StoryState.curDifficulty < 0)
+			StoryState.curDifficulty = 3;
+		if (StoryState.curDifficulty > 3)
+			StoryState.curDifficulty = 0;
 
 		// adjusting the highscore song name to be compatible (changeDiff)
 		var songHighscore = SongFilter.filter(songs[curSelected].songName);
 		
 		#if !switch
-		intendedScore = Highscore.getScore(songHighscore, StoryMenuState.curDifficulty);
+		intendedScore = Highscore.getScore(songHighscore, StoryState.curDifficulty);
 		#end
 
 		getDiff();
@@ -460,7 +473,7 @@ class FreeplayState extends MusicBeatState
 
 	function getDiff()
 	{
-		switch (StoryMenuState.curDifficulty)
+		switch (StoryState.curDifficulty)
 		{
 			case 0:
 				daDiff = "EASY";
@@ -542,7 +555,7 @@ class FreeplayState extends MusicBeatState
 		var songHighscore = SongFilter.filter(songs[curSelected].songName);
 	
 		#if !switch
-		intendedScore = Highscore.getScore(songHighscore, StoryMenuState.curDifficulty);
+		intendedScore = Highscore.getScore(songHighscore, StoryState.curDifficulty);
 		// lerpScore = 0;
 		#end
 
@@ -558,14 +571,15 @@ class FreeplayState extends MusicBeatState
 		// #end
 
 		var bullShit:Int = 0;
+		var daAlpha:Float = 0.25;
 
 
 		for (i in 0...iconArray.length)
 		{			
 			//all unlocked, hail kdorado
 			var unlocked:Bool = true; //songs[i].firstSong;
-			iconArray[i].alpha = unlocked ? 0.6 : 0;
-			videoArray[i].alpha = unlocked ? 0 : 0.6;
+			iconArray[i].alpha = unlocked ? daAlpha : 0;
+			videoArray[i].alpha = unlocked ? 0 : daAlpha;
 
 		}
 
@@ -579,13 +593,20 @@ class FreeplayState extends MusicBeatState
 			item.targetY = bullShit - curSelected;
 			bullShit++;
 
-			item.alpha = 0.6;
-			// item.setGraphicSize(Std.int(item.width * 0.8));
+			item.alpha = daAlpha;
+			item.setGraphicSize(Std.int(item.width * 0.5));
+
+			item.scale.x = 0.75;
+			item.scale.y = 0.75;
+			// item.setBorderStyle(OUTLINE, FlxColor.WHITE, 3, 1);
 
 			if (item.targetY == 0)
 			{
+				// item.setBorderStyle(OUTLINE, FlxColor.GREEN, 3, 1);
+
 				item.alpha = 1;
-				// item.setGraphicSize(Std.int(item.width));
+				item.scale.x = 1.1;
+				item.scale.y = 1.1;
 			}
 		}
 	}

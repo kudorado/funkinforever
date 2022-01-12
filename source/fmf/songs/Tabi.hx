@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -42,15 +42,15 @@ class Tabi extends SongPlayer
 
     override function loadMap()
     {
-        playState.defaultCamZoom = 0.7;
+        gamePlayState.defaultCamZoom = 0.7;
         var bg:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('bg/tabi/normal_stage', 'mods'));
         bg.antialiasing = true;
         bg.scrollFactor.set(0.95, 0.95);
 
-        playState.add(bg);
+        gamePlayState.add(bg);
 
         #if !mobile
-        // PlayState.songOffset = -500;
+        // GamePlayState.songOffset = -500;
         #end
     }
 
@@ -99,7 +99,7 @@ class Tabi extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowBF();
-        playState.targetCamFollow.y -= 50;
+        gamePlayState.targetCamFollow.y -= 50;
             
     }
 
@@ -108,7 +108,7 @@ class Tabi extends SongPlayer
         var sumtable:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('bg/tabi/sumtable', 'mods'));
         sumtable.antialiasing = true;
         sumtable.scrollFactor.set(0.95, 0.95);
-        playState.add(sumtable);
+        gamePlayState.add(sumtable);
     }
 
     public override function getDadIcon(icon:HealthIcon)

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 //import js.html.rtc.PeerConnectionIceEvent;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -18,13 +18,13 @@ class LightsDown extends SussusToogus
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.7;
+		gamePlayState.defaultCamZoom = 0.7;
 
 		var bg1:FlxSprite = new FlxSprite(-50, 100).loadGraphic(Paths.image('bg/sus/sussus_toogus/MiraDark', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1.4;
 		bg1.scale.x = 1.4;
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
 		
 
@@ -32,7 +32,7 @@ class LightsDown extends SussusToogus
 		vending_machine.antialiasing = true;
 		vending_machine.scale.y = 1.4;
 		vending_machine.scale.x = 1.4;
-		playState.add(vending_machine);
+		gamePlayState.add(vending_machine);
 
 	}
 
@@ -41,20 +41,20 @@ class LightsDown extends SussusToogus
 		table.antialiasing = true;
 		table.scale.y = 1.4;
 		table.scale.x = 1.4;
-		playState.add(table);
+		gamePlayState.add(table);
 
 		var table2:FlxSprite = new FlxSprite(1500, 850).loadGraphic(Paths.image('bg/sus/sussus_toogus/tableDark', 'mods'));
 		table2.antialiasing = true;
 		table2.scale.y = 1.4;
 		table2.scale.x = 1.4;
 		table2.flipX = true;
-		playState.add(table2);
+		gamePlayState.add(table2);
 
 		var bg1:FlxSprite = new FlxSprite(50, 100).loadGraphic(Paths.image('bg/sus/sussus_toogus/MiraGradient', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 2;
 		bg1.scale.x = 2;
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 	}
 
 	override function createCharacters() {

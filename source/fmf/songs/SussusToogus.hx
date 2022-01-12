@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 //import js.html.rtc.PeerConnectionIceEvent;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -19,13 +19,13 @@ class SussusToogus extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.7;
+		gamePlayState.defaultCamZoom = 0.7;
 
 		var bg1:FlxSprite = new FlxSprite(-50, 100).loadGraphic(Paths.image('bg/sus/sussus_toogus/Mira', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1.4;
 		bg1.scale.x = 1.4;
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
 		
 
@@ -33,7 +33,7 @@ class SussusToogus extends SongPlayer
 		vending_machine.antialiasing = true;
 		vending_machine.scale.y = 1.4;
 		vending_machine.scale.x = 1.4;
-		playState.add(vending_machine);
+		gamePlayState.add(vending_machine);
 
 	}
 
@@ -42,14 +42,14 @@ class SussusToogus extends SongPlayer
 		table.antialiasing = true;
 		table.scale.y = 1.4;
 		table.scale.x = 1.4;
-		playState.add(table);
+		gamePlayState.add(table);
 
 		var table2:FlxSprite = new FlxSprite(1500, 850).loadGraphic(Paths.image('bg/sus/sussus_toogus/table', 'mods'));
 		table2.antialiasing = true;
 		table2.scale.y = 1.4;
 		table2.scale.x = 1.4;
 		table2.flipX = true;
-		playState.add(table2);
+		gamePlayState.add(table2);
 	}
 
 	override function createCharacters() {
@@ -108,15 +108,15 @@ class SussusToogus extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		playState.targetCamFollow.x = bf.getMidpoint().x - 160;
-		playState.targetCamFollow.y = bf.getMidpoint().y - 150;
+		gamePlayState.targetCamFollow.x = bf.getMidpoint().x - 160;
+		gamePlayState.targetCamFollow.y = bf.getMidpoint().y - 150;
 	}
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		playState.targetCamFollow.x = bf.getMidpoint().x - 300;
-		playState.targetCamFollow.y = bf.getMidpoint().y - 150;
+		gamePlayState.targetCamFollow.x = bf.getMidpoint().x - 300;
+		gamePlayState.targetCamFollow.y = bf.getMidpoint().y - 150;
 	}
 
 }

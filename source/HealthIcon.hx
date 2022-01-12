@@ -1,11 +1,12 @@
 package;
-
+import flixel.util.FlxTimer;
+import state.*;
 import flixel.FlxSprite;
 
 class HealthIcon extends FlxSprite
 {
 	/**
-	 * Used for FreeplayState! If you use it elsewhere, prob gonna annoying
+	 * Used for FreePlayState! If you use it elsewhere, prob gonna annoying
 	 */
 	public var sprTracker:FlxSprite;
 	var offsetX:Float;
@@ -16,6 +17,17 @@ class HealthIcon extends FlxSprite
 	{
 		super();
 		scrollFactor.set();
+		visible = false;
+		
+		if (scrollable)
+		{
+			new FlxTimer().start(0.1, function(tmr:FlxTimer)
+			{
+				visible = true;
+			});
+		}
+
+
 	}
 
 	public function setOffsetX(offset:Float)
@@ -32,7 +44,7 @@ class HealthIcon extends FlxSprite
 		
 		if (scrollable)
 		{
-			if (y < 100)
+			if (y < AlphabetShit.daVisible + 15)
 			{
 				visible = false;
 			}

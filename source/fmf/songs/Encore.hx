@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -16,13 +16,13 @@ class Encore extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.75;
+		gamePlayState.defaultCamZoom = 0.75;
 
 		var bg:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/hex/WIRE/WIREStageBack', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.6;
 		bg.scale.x = 1.6;
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
 	override function createDadAnimations():Void
@@ -54,7 +54,7 @@ class Encore extends SongPlayer
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.y = dad.getGraphicMidpoint().y - 50;
+		gamePlayState.targetCamFollow.y = dad.getGraphicMidpoint().y - 50;
 	}
 
 	override function createBFAnimationOffsets()

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -19,13 +19,13 @@ class BobIsSuck extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.8;
+		gamePlayState.defaultCamZoom = 0.8;
 
 		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/nothappy_sky', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 2;
 		bg.scale.x = 2;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		
 
@@ -36,7 +36,7 @@ class BobIsSuck extends SongPlayer
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
 		stageFront.active = false;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 		ronDie = new FlxSprite(-700, 500).loadGraphic(Paths.image('bg/bob/GoodHeDied', 'mods'));
 		ronDie.antialiasing = true;
@@ -92,7 +92,7 @@ class BobIsSuck extends SongPlayer
 	override function createCharacters()
 	{
 		super.createCharacters();
-		playState.add(ronDie);
+		gamePlayState.add(ronDie);
 	
 	}
 

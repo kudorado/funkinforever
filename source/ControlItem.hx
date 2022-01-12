@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import ui.CustomControlsState;
 import flixel.text.FlxText;
 import flixel.FlxG;

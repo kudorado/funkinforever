@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -16,12 +16,12 @@ class Rage extends Sadness
 
 	override function loadMap()
 	{
-        playState.defaultCamZoom = 0.85;
+        gamePlayState.defaultCamZoom = 0.85;
 		var bg:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/blueballs_incident/ragi/B0', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
 		bg.scale.x = 1.2;
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
 
@@ -29,7 +29,7 @@ class Rage extends Sadness
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', '1TrollgeRageIdle0', 6, true);
+		animation.addByPrefix('idle', '1TrollgeRageIdle0', 9, true);
 		animation.addByPrefix('singUP', '1TrollgeRageUp00', 24, false);
 		animation.addByPrefix('singRIGHT', '1TrollgeRageRight00', 24, false);
 		animation.addByPrefix('singLEFT', '1TrollgeRageLeft00', 24, false);

@@ -1,4 +1,4 @@
-package;
+package state; 
 
 import extension.admob.AdMob;
 import fmf.songs.*;
@@ -25,7 +25,7 @@ import Discord.DiscordClient;
 
 using StringTools;
 
-class StoryMenuState extends MusicBeatState
+class StoryState extends MusicBeatState
 {
 	var scoreText:FlxText;
 
@@ -337,10 +337,10 @@ class StoryMenuState extends MusicBeatState
 
 			}
 
-			PlayState.storyPlaylist = SongManager.songs[curWeek].copySongList;
-			PlayState.playingSong = SongManager.songs[curWeek];
+			GamePlayState.storyPlaylist = SongManager.songs[curWeek].copySongList;
+			GamePlayState.playingSong = SongManager.songs[curWeek];
 			
-			PlayState.isStoryMode = true;
+			GamePlayState.isStoryMode = true;
 			selectedWeek = true;
 
 			var diffic = "";
@@ -354,19 +354,19 @@ class StoryMenuState extends MusicBeatState
 
 			}
 
-			PlayState.storyDifficulty = curDifficulty;
-			PlayState.SONG_NAME = SongFilter.filter(PlayState.storyPlaylist[0]);
-			PlayState.RAW_SONG_NAME = (PlayState.storyPlaylist[0]);
+			GamePlayState.storyDifficulty = curDifficulty;
+			GamePlayState.SONG_NAME = SongFilter.filter(GamePlayState.storyPlaylist[0]);
+			GamePlayState.RAW_SONG_NAME = (GamePlayState.storyPlaylist[0]);
 
-			var daSong = PlayState.SONG_NAME + diffic;
-			var daFolder = PlayState.playingSong.folder + StringTools.replace(PlayState.storyPlaylist[0], " ", "-").toLowerCase();
+			var daSong = GamePlayState.SONG_NAME + diffic;
+			var daFolder = GamePlayState.playingSong.folder + StringTools.replace(GamePlayState.storyPlaylist[0], " ", "-").toLowerCase();
 
 			//@notrace("daFolder: " + daFolder);
 			
-			PlayState.SONG = Song.loadFromJson(daSong, daFolder);
+			GamePlayState.SONG = Song.loadFromJson(daSong, daFolder);
 
-			PlayState.storyWeek = curWeek;
-			PlayState.campaignScore = 0;
+			GamePlayState.storyWeek = curWeek;
+			GamePlayState.campaignScore = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				LoadingState.loadAndSwitchState(new SelectionState(), true);

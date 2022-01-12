@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -17,7 +17,7 @@ class TrickyBen extends TrickyHell
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.25;
+		gamePlayState.defaultCamZoom = 0.25;
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/clown/red', 'mods'));
 		bg.antialiasing = true;
 
@@ -26,7 +26,7 @@ class TrickyBen extends TrickyHell
 
 		bg.x -= 250;
 
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/clown/rb/island_but_red', 'mods'));
 
@@ -35,7 +35,7 @@ class TrickyBen extends TrickyHell
 
 		stageFront.scale.x = 3;
 		stageFront.scale.y = 3;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 
 		clown = new BenClown();

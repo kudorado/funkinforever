@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
@@ -20,12 +20,12 @@ class TrickyMask extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.85;
+		gamePlayState.defaultCamZoom = 0.85;
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/clown/red', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var fg:FlxSprite = new FlxSprite();
 		fg.frames =  Paths.getSparrowAtlas('bg/clown/tricky_floor', 'mods');
@@ -36,7 +36,7 @@ class TrickyMask extends SongPlayer
 		fg.x = 150;
 		fg.scale.y = 1.75;
 		fg.scale.x = 1.75;
-		playState.add(fg);
+		gamePlayState.add(fg);
 
 		clown = new Clown();
 		clown.createStaticBG();

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -17,14 +17,14 @@ class TrickyHell extends TrickyMask
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.5;
+		gamePlayState.defaultCamZoom = 0.5;
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/clown/red', 'mods'));
 		bg.antialiasing = true;
 
 
 		bg.scale.y = 2.5;
 		bg.scale.x = 2.5;
-		playState.add(bg);
+		gamePlayState.add(bg);
 		
 		var stageFront:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/clown/hellclown/island_but_red', 'mods'));
 
@@ -33,7 +33,7 @@ class TrickyHell extends TrickyMask
 
 		stageFront.scale.x = 3;
 		stageFront.scale.y = 3;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 		clown = new HellClown();
 		clown.createStaticBG();
@@ -89,8 +89,8 @@ class TrickyHell extends TrickyMask
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.y = dad.getMidpoint().y + 250;
-		playState.targetCamFollow.x = dad.getMidpoint().x;
+		gamePlayState.targetCamFollow.y = dad.getMidpoint().y + 250;
+		gamePlayState.targetCamFollow.x = dad.getMidpoint().x;
 	}
 
 	override function dadNoteEvent(noteData:Note)

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -20,7 +20,7 @@ class PurpleSpecimens extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.7;
+		gamePlayState.defaultCamZoom = 0.7;
 		var bg:FlxSprite = new FlxSprite(-54, -136).loadGraphic(Paths.image('bg/impostor_v4/halloween_bg_low', 'mods'));
 		bg.antialiasing = true;
 
@@ -28,7 +28,7 @@ class PurpleSpecimens extends SongPlayer
 		bg.scale.y = 1.1;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
     override function getDefaultSkin():Skin
@@ -80,15 +80,15 @@ class PurpleSpecimens extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowBF();
-        playState.targetCamFollow.y -= 80;
-		playState.targetCamFollow.x += 100;
+        gamePlayState.targetCamFollow.y -= 80;
+		gamePlayState.targetCamFollow.x += 100;
     }
 
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        playState.targetCamFollow.y -= 50;
-		playState.targetCamFollow.x -= 60;
+        gamePlayState.targetCamFollow.y -= 50;
+		gamePlayState.targetCamFollow.x -= 60;
     }
 
 	public override function getDadIcon(icon:HealthIcon)

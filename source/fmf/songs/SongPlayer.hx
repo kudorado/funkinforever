@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.songs.*;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -17,25 +17,25 @@ class Ruv extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.75;
+		gamePlayState.defaultCamZoom = 0.75;
 
 		var bg:FlxSprite = new FlxSprite(-200, -700).loadGraphic(Paths.image('bg/sacredmass/church2/base', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.3;
 		bg.scale.x = 1.3;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var bg2:FlxSprite = new FlxSprite(-200, -700).loadGraphic(Paths.image('bg/sacredmass/church2/pillarbroke', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 1.3;
 		bg2.scale.x = 1.3;
-		playState.add(bg2);
+		gamePlayState.add(bg2);
 
 	}
 	override function dadNoteEvent(noteData:Note)
 	{
-		playState.shakeNormal();
-		PlayState.songPlayer.gf.playAnimForce("scared", 0.35);
+		gamePlayState.shakeNormal();
+		GamePlayState.songPlayer.gf.playAnimForce("scared", 0.35);
 	}
 
 

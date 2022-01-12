@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 
 class CreditManager
 {

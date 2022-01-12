@@ -1,5 +1,6 @@
 package;
 
+import state.*;
 import haxe.rtti.CType.Path;
 import flixel.group.FlxSpriteGroup;
 import Options.PcOption;
@@ -363,13 +364,13 @@ class SelectionState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
-			if (PlayState.isStoryMode)
+			if (GamePlayState.isStoryMode)
 			{
-				FlxG.switchState(new StoryMenuState());
+				FlxG.switchState(new StoryState());
 			}
 			else
 			{
-				FlxG.switchState(new FreeplayState());
+				FlxG.switchState(new FreePlayState());
 			}
 		}
 
@@ -390,7 +391,7 @@ class SelectionState extends MusicBeatState
 			{
 				LoadingState.loadWeekSplash(this, function()
 				{
-					FlxG.switchState(new PlayState());
+					FlxG.switchState(new GamePlayState());
 				});
 			});
 		}

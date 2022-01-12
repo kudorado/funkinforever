@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
@@ -16,7 +16,7 @@ class Ballistic extends Whitty
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.9;
+		gamePlayState.defaultCamZoom = 0.9;
 		var bgTex =  Paths.getSparrowAtlas('bg/whitty/BallisticBackground', 'mods'); //Paths.getSparrowAtlas('BallisticBackground','week_whitty');
 	
 		var nwBg:FlxSprite = new FlxSprite(-48, 100);
@@ -32,7 +32,7 @@ class Ballistic extends Whitty
 		nwBg.scale.y = 3.5;
 		nwBg.scrollFactor.set(0.9, 0.9);
 
-		playState.add(nwBg);
+		gamePlayState.add(nwBg);
 
 
 		var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('bg/whitty/whittyFront', "mods"));
@@ -41,7 +41,7 @@ class Ballistic extends Whitty
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
 		stageFront.active = false;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 	}
 

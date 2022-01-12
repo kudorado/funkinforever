@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import fmf.songs.PlayableCharacter;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -47,9 +47,9 @@ class SundaySus extends Boyfriend
 	override function noteEventBF(noteData:Note)
 	{
 		super.noteEventBF(noteData);
-		playState.targetCamFollow.y = this.getMidpoint().y + 100;
+		gamePlayState.targetCamFollow.y = this.getMidpoint().y + 100;
 
-		playState.shakeNormal();
+		gamePlayState.shakeNormal();
 
 	}
 	

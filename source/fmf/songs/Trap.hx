@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.FlxG;
 import flixel.util.FlxColor;
 import flixel.FlxSprite;
@@ -37,7 +37,7 @@ class Trap extends Trueform
 	{
 		super.loadMap();
 
-		playState.defaultCamZoom = 0.9;
+		gamePlayState.defaultCamZoom = 0.9;
 
 		hole = new FlxSprite(-650, 600);
 		hole.loadGraphic(Paths.image('bg/trueform/sky/gfshit', 'mods'), true, 512, 512);
@@ -61,7 +61,7 @@ class Trap extends Trueform
 
 		bg.y += 250;
 
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 	}
 

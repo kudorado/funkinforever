@@ -1,5 +1,5 @@
 package fmf.characters;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.addons.effects.FlxTrail;
 import fmf.songs.PlayableCharacter;
@@ -22,7 +22,7 @@ class TikyBen extends TikyHell
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		defaultCamZoom = playState.defaultCamZoom;
+		defaultCamZoom = gamePlayState.defaultCamZoom;
 
 		animation.addByPrefix('idle', 'Phase 3 Tricky Idle0', 24, false);
 		animation.addByPrefix('singUP', 'Proper Up0', 24, false);
@@ -45,10 +45,10 @@ class TikyBen extends TikyHell
 		// this.x = largePos.x;
 		// this.y = largePos.y;
 
-		// playState.targetCamFollow.y = this.getMidpoint().y + 250;
-		// playState.targetCamFollow.x = this.getMidpoint().x;
+		// gamePlayState.targetCamFollow.y = this.getMidpoint().y + 250;
+		// gamePlayState.targetCamFollow.x = this.getMidpoint().x;
 
-		// playState.defaultCamZoom = 0.25;
+		// gamePlayState.defaultCamZoom = 0.25;
 	}
 	
 

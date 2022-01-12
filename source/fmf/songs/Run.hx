@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.FlxG;
 import flixel.util.FlxColor;
 import flixel.FlxSprite;
@@ -18,25 +18,25 @@ class Run extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.8;
+		gamePlayState.defaultCamZoom = 0.8;
 
 		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/hell', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.5;
 		bg.scale.x = 1.5;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var bgmid:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/middlething', 'mods'));
 		bgmid.antialiasing = true;
 		bgmid.scale.y = 1.5;
 		bgmid.scale.x = 1.5;
-		playState.add(bgmid);
+		gamePlayState.add(bgmid);
 
 		var theydead:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/theydead', 'mods'));
 		theydead.antialiasing = true;
 		theydead.scale.y = 1;
 		theydead.scale.x = 1;
-		playState.add(theydead);
+		gamePlayState.add(theydead);
 
 
 		var stageFront:FlxSprite = new FlxSprite(-650, -600).loadGraphic(Paths.image('bg/bob/ground', 'mods'));
@@ -45,7 +45,7 @@ class Run extends SongPlayer
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
 		stageFront.active = false;
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 
 	}
 

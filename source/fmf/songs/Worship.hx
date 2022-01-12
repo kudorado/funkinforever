@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.addons.effects.FlxTrail;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -19,13 +19,13 @@ class Worship extends SongPlayer
 	override function loadMap()
 	{
 
-		playState.defaultCamZoom = 0.75;
+		gamePlayState.defaultCamZoom = 0.75;
 
 		var bg:FlxSprite = new FlxSprite(-200, -700).loadGraphic(Paths.image('bg/sacredmass/church1/base-dark', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.3;
 		bg.scale.x = 1.3;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 	}
 
@@ -45,14 +45,14 @@ class Worship extends SongPlayer
 	{
 		if (FlxG.save.data.distractions)
 		{
-			if (playState.curBeat % 6 == 0)
+			if (gamePlayState.curBeat % 6 == 0)
 			{
 				if (FlxG.save.data.distractions)
 				{
 					trail.visible = true;
 				}
 			}
-			else if (playState.curBeat % 16 == 0)
+			else if (gamePlayState.curBeat % 16 == 0)
 			{
 				if (FlxG.save.data.distractions)
 					trail.visible = false;
@@ -73,7 +73,7 @@ class Worship extends SongPlayer
 			trail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
 			trail.color = FlxColor.PINK;
 
-			playState.add(trail);
+			gamePlayState.add(trail);
 			trail.visible = false;
 		}
 	}

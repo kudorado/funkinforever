@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -16,20 +16,20 @@ class PlayTime extends SongPlayer
 
 	override function loadMap()
 	{
-        playState.defaultCamZoom = 0.6;
+        gamePlayState.defaultCamZoom = 0.6;
 		var bg:FlxSprite = new FlxSprite(-669, -362).loadGraphic(Paths.image('bg/huggy_wuggy/factory', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
 		bg.scale.x = 1.2;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
         var bg1:FlxSprite = new FlxSprite(-669, -250).loadGraphic(Paths.image('bg/huggy_wuggy/shadow', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1.2;
 		bg1.scale.x = 1.2;
-		bg1.cameras = [playState.camHUD];
+		bg1.cameras = [gamePlayState.camHUD];
 
-		playState.add(bg1);
+		gamePlayState.add(bg1);
 
 
 
@@ -80,18 +80,18 @@ class PlayTime extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x + 150;
-		playState.targetCamFollow.y -= 100;
-		playState.defaultCamZoom = 0.75;
+		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x + 150;
+		gamePlayState.targetCamFollow.y -= 100;
+		gamePlayState.defaultCamZoom = 0.75;
 
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		playState.targetCamFollow.y = 400;
-		playState.defaultCamZoom = 0.6;
+		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		gamePlayState.targetCamFollow.y = 400;
+		gamePlayState.defaultCamZoom = 0.6;
 
 
 	}

@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -20,35 +20,35 @@ class TripleTroubleSonic extends SongPlayer
 
     override function loadMap()
     {
-        playState.defaultCamZoom = 0.85;
+        gamePlayState.defaultCamZoom = 0.85;
 
         var sky:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/Phase3/Glitch', 'mods'));
         sky.antialiasing = true;
         sky.scale.x = 1;
         sky.scale.y = 1;
         sky.scrollFactor.set(0.95, 0.95);
-        playState.add(sky);
+        gamePlayState.add(sky);
 
         var backtrees:FlxSprite = new FlxSprite(-168, -141).loadGraphic(Paths.image('bg/sonic/Phase3/Trees2', 'mods'));
         backtrees.antialiasing = true;
         backtrees.scale.x = 1;
         backtrees.scale.y = 1;
         backtrees.scrollFactor.set(0.95, 0.95);
-        playState.add(backtrees);
+        gamePlayState.add(backtrees);
 
         var trees:FlxSprite = new FlxSprite(-324, -150).loadGraphic(Paths.image('bg/sonic/Phase3/Trees', 'mods'));
         trees.antialiasing = true;
         trees.scale.x = 1;
         trees.scale.y = 1;
         trees.scrollFactor.set(0.95, 0.95);
-        playState.add(trees);
+        gamePlayState.add(trees);
 
         var Grass:FlxSprite = new FlxSprite(-324, -150).loadGraphic(Paths.image('bg/sonic/Phase3/Grass', 'mods'));
         Grass.antialiasing = true;
         Grass.scale.x = 1;
         Grass.scale.y = 1;
         Grass.scrollFactor.set(0.95, 0.95);
-        playState.add(Grass);
+        gamePlayState.add(Grass);
 
     }
 
@@ -97,8 +97,8 @@ class TripleTroubleSonic extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        playState.targetCamFollow.y += 150;
-        playState.defaultCamZoom = 0.9;
+        gamePlayState.targetCamFollow.y += 150;
+        gamePlayState.defaultCamZoom = 0.9;
 
 
     }
@@ -115,7 +115,7 @@ class TripleTroubleSonic extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        playState.defaultCamZoom = 1;
+        gamePlayState.defaultCamZoom = 1;
     }
 
     override function createGFAnimationOffsets()

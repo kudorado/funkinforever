@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 #if windows
 import Discord.DiscordClient;
 #end

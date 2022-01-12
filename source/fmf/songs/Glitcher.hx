@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -16,18 +16,18 @@ class Glitcher extends SongPlayer
 
 	override function loadMap()
 	{
-		playState.defaultCamZoom = 0.85;
+		gamePlayState.defaultCamZoom = 0.85;
 
 		var bg:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/hex/glitcher/stageback', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 2;
 		bg.scale.x = 2;
-		playState.add(bg);
+		gamePlayState.add(bg);
 	}
 
 	override function updateCamFollowDad()
 	{
-		playState.targetCamFollow.y = dad.getGraphicMidpoint().y - 125;
+		gamePlayState.targetCamFollow.y = dad.getGraphicMidpoint().y - 125;
 	}
 
 	override function createDadAnimations():Void

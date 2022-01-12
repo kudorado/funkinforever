@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.FlxG;
 import flixel.util.FlxColor;
 import flixel.FlxSprite;
@@ -45,7 +45,7 @@ class Eeeeaaaooo extends Trueform
 		halloweenBG.y -= 125;
 		halloweenBG.x += 350;
 
-		playState.add(halloweenBG);
+		gamePlayState.add(halloweenBG);
 		
 	}
 

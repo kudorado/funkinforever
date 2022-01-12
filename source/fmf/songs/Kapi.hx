@@ -1,5 +1,5 @@
 package fmf.songs;
-
+import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -18,21 +18,21 @@ class Kapi extends SongPlayer
 
 	override function loadMap()
 	{
-		var daBG = PlayState.CURRENT_SONG == 'wocky' ? "stageback" : 'sunset';
+		var daBG = GamePlayState.CURRENT_SONG == 'wocky' ? "stageback" : 'sunset';
 
 
 		var bg:FlxSprite = new FlxSprite(-500, -200).loadGraphic(Paths.image('bg/kapi/' + daBG, 'mods'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = false;
-		playState.add(bg);
+		gamePlayState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-400, 550).loadGraphic(Paths.image('bg/kapi/stagefront', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
-		playState.add(stageFront);
+		gamePlayState.add(stageFront);
 		
 	}
 

@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
@@ -42,10 +42,10 @@ class AnimationDebug extends FlxState
 		gridBG.scrollFactor.set(0.5, 0.5);
 		add(gridBG);
 
-		//@notrace("get song: " + PlayState.RAW_SONG_NAME);
+		//@notrace("get song: " + GamePlayState.RAW_SONG_NAME);
 		if (isDad)
 		{
-			var song = SongPlayerManager.getCurrentSong(PlayState.RAW_SONG_NAME);
+			var song = SongPlayerManager.getCurrentSong(GamePlayState.RAW_SONG_NAME);
 
 			song.createDad();
 
@@ -60,7 +60,7 @@ class AnimationDebug extends FlxState
 		}
 		else
 		{
-			var song = SongPlayerManager.getCurrentSong(PlayState.RAW_SONG_NAME);
+			var song = SongPlayerManager.getCurrentSong(GamePlayState.RAW_SONG_NAME);
 			song.createBF();
 			song.createStoryBF();
 			
@@ -210,7 +210,7 @@ class AnimationDebug extends FlxState
 
 		if (FlxG.keys.justPressed.ENTER)
 		{
-			FlxG.switchState(new PlayState());
+			FlxG.switchState(new GamePlayState());
 		}
 		super.update(elapsed);
 	}

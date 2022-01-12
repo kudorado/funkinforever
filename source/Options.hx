@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 import lime.app.Application;
 import lime.system.DisplayMode;
 import flixel.util.FlxColor;
@@ -980,13 +980,13 @@ class OffsetMenu extends Option
         //KODURADO//@notrace("switch");
         var poop:String = Highscore.formatSong("Tutorial", 1);
 
-        PlayState.SONG = Song.loadFromJson(poop, "Tutorial");
-        PlayState.isStoryMode = false;
-        PlayState.storyDifficulty = 0;
-        PlayState.storyWeek = 0;
-        PlayState.offsetTesting = true;
-        //KODURADO//@notrace('CUR WEEK' + PlayState.storyWeek);
-        LoadingState.loadAndSwitchState(new PlayState());
+        GamePlayState.SONG = Song.loadFromJson(poop, "Tutorial");
+        GamePlayState.isStoryMode = false;
+        GamePlayState.storyDifficulty = 0;
+        GamePlayState.storyWeek = 0;
+        GamePlayState.offsetTesting = true;
+        //KODURADO//@notrace('CUR WEEK' + GamePlayState.storyWeek);
+        LoadingState.loadAndSwitchState(new GamePlayState());
         return false;
     }
 

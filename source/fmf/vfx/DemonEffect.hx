@@ -1,5 +1,6 @@
 package fmf.vfx;
 
+import state.*;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.FlxSprite;
 
@@ -25,12 +26,12 @@ class DemonEffect extends MadEffect
 		super.getVFX(i, vfx);
 		vfx.setGraphicSize(Std.int(vfx.width * 1.25));
 
-		vfx.cameras = [PlayState.instance.camGame];
-		vfx.x =  -75 + (PlayState.boyfriend().x + i * 50);
-		vfx.y = PlayState.boyfriend().y;
+		vfx.cameras = [GamePlayState.instance.camGame];
+		vfx.x =  -75 + (GamePlayState.boyfriend().x + i * 50);
+		vfx.y = GamePlayState.boyfriend().y;
 
-		PlayState.instance.remove(PlayState.boyfriend());
-		PlayState.instance.add(PlayState.boyfriend());
+		GamePlayState.instance.remove(GamePlayState.boyfriend());
+		GamePlayState.instance.add(GamePlayState.boyfriend());
 
 	}
 }

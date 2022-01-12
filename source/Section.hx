@@ -1,5 +1,5 @@
 package;
-
+import state.*;
 typedef SwagSection =
 {
 	var sectionNotes:Array<Dynamic>;
