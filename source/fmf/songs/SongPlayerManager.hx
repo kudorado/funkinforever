@@ -514,6 +514,9 @@ class SongPlayerManager
 
 			case 'faker':
 				songPlayer = new Faker();
+
+			case 'black-sun':
+				songPlayer = new BlackSun();
 		}
 
 		return songPlayer;

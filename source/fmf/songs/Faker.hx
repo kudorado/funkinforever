@@ -24,7 +24,7 @@ class Faker extends SongPlayer
 
     override function createGFAnimations()
     {
-        gf.animation.addByPrefix("dance", 'Gf dance00');
+        gf.animation.addByPrefix("dance", 'Gf dance00', true);
         gf.animation.addByPrefix('sad', 'Gf miss00');
         gf.playAnim("dance");
     }
