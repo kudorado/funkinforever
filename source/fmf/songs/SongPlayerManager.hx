@@ -1,4 +1,6 @@
 package fmf.songs;
+import flixel.system.debug.Tooltip.TooltipOverlay;
+import flixel.addons.ui.FlxMultiKey;
 import state.*;
 import flixel.addons.weapon.FlxWeapon.FlxTypedWeapon;
 import Options.DownscrollOption;
@@ -517,6 +519,12 @@ class SongPlayerManager
 
 			case 'black-sun':
 				songPlayer = new BlackSun();
+
+			case 'milk':
+				songPlayer = new Milk();
+
+			case 'too-fest':
+				songPlayer = new TooFest();
 		}
 
 		return songPlayer;
