@@ -16,13 +16,13 @@ using StringTools;
  */
 class AlphabetShit extends Alphabet
 {
-	public static var daVisible:Float = 90;
+	public static var daVisible:Float = 0;
 
 	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, shouldMove:Bool = false)
 	{
 		super(x, y, text, bold, typed, shouldMove);
 		visible = false;
-		
+
 		new FlxTimer().start(0.1, function(tmr:FlxTimer)
 		{
 			visible = true;

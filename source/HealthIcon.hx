@@ -44,12 +44,12 @@ class HealthIcon extends FlxSprite
 		
 		if (scrollable)
 		{
-			if (y < AlphabetShit.daVisible + 15)
-			{
-				visible = false;
-			}
-			else
-				visible = true;
+			// if (y < AlphabetShit.daVisible)
+			// {
+			// 	visible = false;
+			// }
+			// else
+			visible = true;
 		}
 	
 	}
