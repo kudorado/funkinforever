@@ -3161,7 +3161,10 @@ class GamePlayState extends MusicBeatState
 	
 			if (combo > 5 && gf().animOffsets.exists('sad'))
 			{
-				gf().playAnim('sad');
+				gf().playAnimForce('sad', 0.5, function()
+				{
+					gf().playAnim('idle');
+				});
 			}
 
 			songScore -= 500;

@@ -18,8 +18,12 @@ class GF extends Character
 	{
 		if (animation.curAnim == null ||  !animation.curAnim.name.startsWith('hair'))
 		{
-			danced = !danced;
+			if (animation.curAnim != null && !animation.curAnim.finished)
+				return;
 
+			danced = !danced;
+			playAnim('idle');
+			
 			if (danced)
 				playAnim('danceRight');
 			else
