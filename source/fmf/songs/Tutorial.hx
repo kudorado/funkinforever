@@ -11,6 +11,7 @@ class Tutorial extends SongPlayer
 		
 		gf.alpha = 0;
 		dad.scrollFactor.set(0.95, 0.95);
+		gamePlayState.daTutorial = true;
 	}
 
 	override function getDadVersion():Character

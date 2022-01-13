@@ -61,7 +61,7 @@ class Parish extends SongPlayer
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
-		animation.addByPrefix('idle', 'BF idle dance00', 18, false);
+		animation.addByPrefix('idle', 'BF idle dance00', 6, false);
 		animation.addByPrefix('singUP', 'BF NOTE UP00', 24, false);
 		animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT00', 24, false);
 		animation.addByPrefix('singLEFT', 'BF NOTE LEFT00', 24, false);

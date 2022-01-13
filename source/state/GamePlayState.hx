@@ -175,7 +175,7 @@ class GamePlayState extends MusicBeatState
 
 	private var curSong:String = "";
 
-	public var gfSpeed:Int = 1;
+	public var gfSpeed:Float = 1;
 	public var health:Float = 2; // making public because sethealth doesnt work without it
 
 	private var combo:Int = 0;
@@ -208,6 +208,8 @@ class GamePlayState extends MusicBeatState
 	var npsTxt:FlxText;
 	var speedTxt:FlxText;
 
+	var gfTimer:Float;
+	public var daTutorial:Bool;
 
 
 	var lerpScore:Int;
@@ -672,6 +674,9 @@ class GamePlayState extends MusicBeatState
 		kadeEngineWatermark.cameras = [camHUD];
 
 		startingSong = true;
+
+		gfSpeed = (SONG.bpm);
+
 
 		//@notrace('starting');
 
@@ -1565,6 +1570,25 @@ class GamePlayState extends MusicBeatState
 		#end
 
 		super.update(elapsed);
+
+		gfTimer += elapsed;
+		//1 / bps
+		//1 / (bpm / 60)
+		var daBeat = (1.0 / (gfSpeed / 60));
+		if (gfTimer > daBeat)
+		{
+			if (daTutorial)
+			{
+				if (dad().animation.curAnim != null && dad().animation.curAnim.finished)
+				{
+					dad().dance();
+				}
+			}
+			else
+				gf().dance();
+
+			gfTimer = 0;
+		}
 
 		var daX = FlxMath.lerp(camFollow.x, targetCamFollow.x, (1 / 30.0) * camFollowSpeed);
 		var daY = FlxMath.lerp(camFollow.y, targetCamFollow.y, (1 / 30.0) * camFollowSpeed);
@@ -3458,6 +3482,7 @@ class GamePlayState extends MusicBeatState
 		#end
 
 		songPlayer.midSongEventUpdate(curBeat);
+		
 
 		if (SONG.notes[Math.floor(curStep / 16)] != null)
 		{
@@ -3498,11 +3523,6 @@ class GamePlayState extends MusicBeatState
 
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
-
-		if (curBeat % gfSpeed == 0)
-		{
-			gf().dance();
-		}
 
 		if (playAsDad)
 		{

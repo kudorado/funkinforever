@@ -22,7 +22,7 @@ class Sarv extends Boyfriend
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		animation.addByPrefix('idle', 'BF idle dance0', 24, false);
+		animation.addByPrefix('idle', 'BF idle dance0', 6, false);
 		animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
 		animation.addByPrefix('singRIGHT', 'BF NOTE LEFT0', 24, false);
 		animation.addByPrefix('singLEFT', 'BF NOTE RIGHT0', 24, false);
