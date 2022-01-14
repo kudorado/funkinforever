@@ -20,7 +20,7 @@ class Chaos extends SongPlayer
 
     override function loadMap()
     {
-        gamePlayState.defaultCamZoom = 0.7;
+        gamePlayState.defaultCamZoom = 0.55;
 
         var sky:FlxSprite = new FlxSprite(-98, -264).loadGraphic(Paths.image('bg/sonic/Chamber/Wall_instance_10000', 'mods'));
         sky.antialiasing = true;
@@ -55,10 +55,10 @@ class Chaos extends SongPlayer
         thechamber.scrollFactor.set(0.95, 0.95);
         gamePlayState.add(thechamber);
 
-        var pebles:FlxSprite = new FlxSprite(-147, -709).loadGraphic(Paths.image('bg/sonic/Chamber/Pebles_1', 'mods'));
+        var pebles:FlxSprite = new FlxSprite(965, 965).loadGraphic(Paths.image('bg/sonic/Chamber/Pebles_1', 'mods'));
         pebles.antialiasing = true;
-        pebles.scale.x = 1;
-        pebles.scale.y = 1;
+        pebles.scale.x = 1.534;
+        pebles.scale.y = 1.534;
         pebles.scrollFactor.set(0.95, 0.95);
         gamePlayState.add(pebles);
 
