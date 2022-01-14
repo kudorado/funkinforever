@@ -246,15 +246,6 @@ class SongManager
 			}
 		),
 
-		// new SongData	
-		// (
-		// 	{
-		// 		folder: 'week_sonic',
-		// 		character: 'sonic',
-		// 		songTitle: 'V.S Sonic.exe',
-		// 		songList: ['Too-Slow', 'Endless', 'You-Cant-Run']
-		// 	}
-		// ),
 
 		new SongData	
 		(
