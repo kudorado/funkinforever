@@ -157,16 +157,11 @@ class BaseSong
 	{
 		var animation = gf.animation;
 		animation.addByPrefix('cheer', 'GF Cheer', 24, false);
-		animation.addByPrefix('singLEFT', 'GF left note', 24, false);
-		animation.addByPrefix('singRIGHT', 'GF Right Note', 24, false);
-		animation.addByPrefix('singUP', 'GF Up Note', 24, false);
-		animation.addByPrefix('singDOWN', 'GF Down Note', 24, false);
 		animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
 		animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 		animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-		animation.addByIndices('hairBlow', "GF Dancing Beat Hair blowing", [0, 1, 2, 3], "", 24);
-		animation.addByIndices('hairFall', "GF Dancing Beat Hair Landing", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "", 24, false);
 		animation.addByPrefix('scared', 'GF FEAR 0', 24);
+		animation.addByPrefix('idle', 'GF Dancing Beat0', 24, false);
 
 		gf.animation = animation;
 	}
@@ -176,17 +171,10 @@ class BaseSong
 	{
 		gf.addOffset('cheer');
 		gf.addOffset('sad', -2, -2);
-		gf.addOffset('danceLeft', 0, -9);
-		gf.addOffset('danceRight', 0, -9);
-
-		gf.addOffset("singUP", 0, 4);
-		gf.addOffset("singRIGHT", 0, -20);
-		gf.addOffset("singLEFT", 0, -19);
-		gf.addOffset("singDOWN", 0, -20);
-		gf.addOffset('hairBlow', 45, -8);
-		gf.addOffset('hairFall', 0, -9);
-
 		gf.addOffset('scared', -2, -17);
+		gf.addOffset('danceRight', 0, -9);
+		gf.addOffset('danceLeft', 0, -9);
+		gf.addOffset('idle', 0, -9);
 
 		gf.playAnim('danceRight');
 		gf.dance();
@@ -199,7 +187,7 @@ class BaseSong
 	}
 
 	// create GF
-	private function createGF()
+	public function createGF()
 	{
 		gf = getGFVersion();
 
@@ -235,6 +223,8 @@ class BaseSong
 		animation.addByPrefix('singDOWN', 'GF Down Note', 24, false);
 		animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
 		animation.addByIndices('idle', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+		animation.addByIndices('scared', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+
 	}
 
 	// create dad animation offsets

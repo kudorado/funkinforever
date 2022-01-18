@@ -182,7 +182,7 @@ class Cycles extends SongPlayer
         super.dadNoteEvent(noteData);
         if (noteData.noteData == 2)
         {
-            gf.playAnimForce("scared", 0.35);
+            gf.playAnimForce("scared", 0.5);
         }
     }
 

@@ -35,7 +35,10 @@ class Ruv extends SongPlayer
 	override function dadNoteEvent(noteData:Note)
 	{
 		gamePlayState.shakeNormal();
-		GamePlayState.songPlayer.gf.playAnimForce("scared", 0.35);
+		if(gamePlayState.daTutorial)
+			GamePlayState.songPlayer.dad.playAnimForce("scared", 0.5);
+		else
+			GamePlayState.songPlayer.gf.playAnimForce("scared", 0.5);
 	}
 
 

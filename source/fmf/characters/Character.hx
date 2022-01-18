@@ -78,6 +78,16 @@ class Character extends FlxSprite
         if (!isVisible)
             return;
         
+		if (callback == null)
+		{
+            //create default callback
+			callback = function()
+			{
+                playAnim('idle', true);
+            };
+        }
+
+
         playAnim(anim, true);
         lockAnim(lockDuration, callback);
     }

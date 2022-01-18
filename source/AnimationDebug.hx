@@ -13,24 +13,30 @@ import fmf.songs.*;
 /**
 	*DEBUG MODE
  */
+enum DebugCharacter
+{	
+	BF;
+	DAD;
+	GF;
+}
 class AnimationDebug extends FlxState
 {
-	var bf:PlayableCharacter;
-	var dad:Character;
+
 	var char:Character;
 	var textAnim:FlxText;
 	var dumbTexts:FlxTypedGroup<FlxText>;
 	var animList:Array<String> = [];
 	var curAnim:Int = 0;
-	var isDad:Bool = true;
 	var camFollow:FlxObject;
 
 	var flipBF:Bool;
 
-	public function new(isDad:Bool, flipBF:Bool = false)
+	var debugCharacter:DebugCharacter;
+
+	public function new(debugChar:DebugCharacter, flipBF:Bool = false)
 	{
 		super();
-		this.isDad = isDad;
+		this.debugCharacter = debugChar;
 		this.flipBF = flipBF;
 	}
 
@@ -43,28 +49,27 @@ class AnimationDebug extends FlxState
 		add(gridBG);
 
 		//@notrace("get song: " + GamePlayState.RAW_SONG_NAME);
-		if (isDad)
+		if (debugCharacter == DAD)
 		{
 			var song = SongPlayerManager.getCurrentSong(GamePlayState.RAW_SONG_NAME);
 
 			song.createDad();
 
-
-			dad = song.dad;
+			var dad = song.dad;
 			dad.debugMode = true;
 			dad.screenCenter();
 			add(dad);
 
 			char = dad;
-			dad.flipX = false;
+			char.flipX = false;
 		}
-		else
+		else if(debugCharacter == BF)
 		{
 			var song = SongPlayerManager.getCurrentSong(GamePlayState.RAW_SONG_NAME);
 			song.createBF();
 			song.createStoryBF();
 			
-			bf = song.bf;
+			var bf = song.bf;
 			bf.debugMode = true;
 			bf.screenCenter();
 			add(bf);
@@ -76,6 +81,18 @@ class AnimationDebug extends FlxState
 				char.flipX = !char.flipX;
 
 			// bf.flipX = true;
+		}
+
+		else if (debugCharacter == GF)
+		{
+			var song = SongPlayerManager.getCurrentSong(GamePlayState.RAW_SONG_NAME);
+			song.createGF();
+			
+			var gf = song.gf;
+			gf.debugMode = true;
+			gf.screenCenter();
+			add(gf);
+			char = gf;
 		}
 
 		dumbTexts = new FlxTypedGroup<FlxText>();

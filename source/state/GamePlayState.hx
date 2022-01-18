@@ -1690,7 +1690,7 @@ class GamePlayState extends MusicBeatState
 		#if debug
 		if (FlxG.keys.justPressed.EIGHT)
 		{
-			FlxG.switchState(new AnimationDebug(true));
+			FlxG.switchState(new AnimationDebug(DAD));
 			#if windows
 			if (luaModchart != null)
 			{
@@ -1703,7 +1703,7 @@ class GamePlayState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.ZERO)
 		{
-			FlxG.switchState(new AnimationDebug(false));
+			FlxG.switchState(new AnimationDebug(BF));
 			#if windows
 			if (luaModchart != null)
 			{
@@ -1715,9 +1715,14 @@ class GamePlayState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.NINE)
 		{
-			FlxG.switchState(new AnimationDebug(false, true));
+			FlxG.switchState(new AnimationDebug(BF, true));
 		}
-	
+
+		if (FlxG.keys.justPressed.SIX)
+		{
+			FlxG.switchState(new AnimationDebug(GF, true));
+		}
+		
 		#end
 		#end
 	
