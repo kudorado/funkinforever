@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.FlxG;
 import flixel.util.FlxColor;
@@ -242,7 +245,7 @@ class EsAnimal extends SongPlayer
 		}
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid2'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);

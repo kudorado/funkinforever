@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.math.FlxPoint;
 import fmf.characters.*;
@@ -316,7 +319,7 @@ class Senpai extends SongPlayer
 		note.updateHitbox();
 	}
 
-	override function getBFIcon(icon:HealthIcon)
+	override function getBFIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('bf', [21, 21], 0, false, true);
@@ -324,7 +327,7 @@ class Senpai extends SongPlayer
 		icon.antialiasing = false;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [22, 22], 0, false, false);

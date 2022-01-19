@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
@@ -89,7 +92,7 @@ class Diagraphephobia extends DreamOfPeace
 		super.createGFAnimationOffsets();
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('health_icon/eteled/icons/icon-eteled2', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 2], 0, false, false);

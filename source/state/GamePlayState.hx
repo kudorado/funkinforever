@@ -1,11 +1,14 @@
 package state; 
 
+import ui.*;
+import reactor.*;
+import controls.*;
+import state.*;
+
 import flixel.ui.FlxButton;
 import flixel.addons.editors.ogmo.FlxOgmo3Loader.Point;
 import flixel.system.debug.FlxDebugger;
 import extension.admob.AdMob;
-import WeekCompleteSubstate.WeekCompleteSubState;
-import ui.Controller;
 import ui.FlxVirtualPad.FlxActionMode;
 import ui.FlxVirtualPad.FlxDPadMode;
 import ui.Controller;
@@ -196,8 +199,8 @@ class GamePlayState extends MusicBeatState
 	private var generatedMusic:Bool = false;
 	private var startingSong:Bool = false;
 
-	public var iconP1:HealthIcon; // making these public again because i may be stupid
-	public var iconP2:HealthIcon; // what could go wrong?
+	public var iconP1:Icon; // making these public again because i may be stupid
+	public var iconP2:Icon; // what could go wrong?
 	public var camHUD:FlxCamera;
 	public var camGame:FlxCamera;
 
@@ -600,7 +603,7 @@ class GamePlayState extends MusicBeatState
 			+ " "
 			+ getDiff());
 
-			// + (Main.watermarks ? " - KE " + MainMenuState.kadeEngineVer : ""));
+			// + (Main.watermarks ? " - KE " + MenuState.kadeEngineVer : ""));
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		kadeEngineWatermark.scrollFactor.set();
 		// add(kadeEngineWatermark);
@@ -616,8 +619,8 @@ class GamePlayState extends MusicBeatState
 		// if (botPlayShit)
 		// 	add(botgamePlayState);
 
-		iconP1 = new HealthIcon();
-		iconP2 = new HealthIcon();
+		iconP1 = new Icon();
+		iconP2 = new Icon();
 
 		
 		songPlayer.getDadIcon(iconP2);
@@ -705,7 +708,7 @@ class GamePlayState extends MusicBeatState
 
 		createBlackFadeOut();
 
-		LoadingState.hasCachedSong = true;
+		LibraryLoadState.hasCachedSong = true;
 
 		calculateNPS();
 		
@@ -1796,7 +1799,7 @@ class GamePlayState extends MusicBeatState
 
 			pauseGame();
 
-			LoadingState.createBlackFadeIn(this,function(){
+			LibraryLoadState.createBlackFadeIn(this,function(){
 				openSubState(new GameOverSubstate(boyfriend().getScreenPosition().x, boyfriend().getScreenPosition().y));
 			}, camHUD, true);
 
@@ -2250,6 +2253,7 @@ class GamePlayState extends MusicBeatState
 	}
 
 	public var targetCamFollow:FlxPoint;
+
 	public function setCamFollowPosition(x:Float, y:Float)
 	{
 		lockCamFollow = true;
@@ -2285,7 +2289,7 @@ class GamePlayState extends MusicBeatState
 		{
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			offsetTesting = false;
-			LoadingState.loadAndSwitchState(new OptionsMenu());
+			LibraryLoadState.loadAndSwitchState(new OptionsMenu());
 			FlxG.save.data.offset = offsetTest;
 		}
 		else
@@ -2366,7 +2370,7 @@ class GamePlayState extends MusicBeatState
 
 					moveNext();
 
-					// LoadingState.loadAndSwitchState(new GamePlayState());
+					// LibraryLoadState.loadAndSwitchState(new GamePlayState());
 				}
 			}
 			else

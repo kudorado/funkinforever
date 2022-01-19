@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -42,7 +45,7 @@ class Daidem extends SongPlayer
 		dad.animation = animation;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/entity_origins/icons/icon-daidem', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);

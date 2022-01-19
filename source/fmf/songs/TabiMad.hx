@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import fmf.skins.*;
 import flixel.addons.effects.FlxTrail;
@@ -242,7 +245,7 @@ class TabiMad extends Tabi
 		super.bfNoteEvent(noteData);
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [14, 15], 0, false, false);

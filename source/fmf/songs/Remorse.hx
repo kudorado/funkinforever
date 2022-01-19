@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.animation.FlxAnimationController;
 import flixel.graphics.atlas.FlxAtlas;
@@ -162,7 +165,7 @@ class Remorse extends Whitty
 		}
 	}
 	
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/whitty/remorse/updike_icons', 'mods'), true, 172, 126);
 		icon.animation.add('dad', [0, 1], 0, false, false);

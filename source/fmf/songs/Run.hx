@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.FlxG;
 import flixel.util.FlxColor;
@@ -96,7 +99,7 @@ class Run extends SongPlayer
 		gf.y -= 200;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/bob/iconGrid', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [28, 29], 0, false, false);

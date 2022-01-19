@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import fmf.characters.*;
 import flixel.FlxG;
@@ -53,7 +56,7 @@ class Monster extends Spookez
 	
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [19, 20], 0, false, false);

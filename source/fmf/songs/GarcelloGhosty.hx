@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
@@ -70,7 +73,7 @@ class GarcelloGhosty extends GarcelloDead
 		}
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [28, 29], 0, false, false);

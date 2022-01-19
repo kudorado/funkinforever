@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -68,7 +71,7 @@ class CensoryOverload extends Carefree
         dad.y = 327;
     }
 
-    public override function getDadIcon(icon:HealthIcon)
+    public override function getDadIcon(icon:Icon)
     {
         icon.loadGraphic(Paths.image('bg/qt/iconGrid', 'mods'), true, 150, 150);
         icon.animation.add('dad', [28, 29], 0, false, false);

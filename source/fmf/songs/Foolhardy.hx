@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -72,7 +75,7 @@ class Foolhardy extends SongPlayer
         super.createGFAnimationOffsets();
     }
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('health_icon/zardy/shit', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);

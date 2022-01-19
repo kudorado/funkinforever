@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
@@ -73,14 +76,14 @@ class Plaything extends SongPlayer
         bf.y += 427;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('health_icon/eteled/icons/icon-eteled2', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 2], 0, false, false);
 		icon.animation.play("dad");
 	}
 
-    // public override function getBFIcon(icon:HealthIcon)
+    // public override function getBFIcon(icon:Icon)
     // {
     //     icon.loadGraphic(Paths.image('health_icon/eteled/icons/icon-bf-austin'), true, 150, 150);
     //     icon.animation.add('bf', [0, 1], 0, false, true);

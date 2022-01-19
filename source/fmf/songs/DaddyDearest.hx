@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
@@ -104,7 +107,7 @@ class DaddyDearest extends SongPlayer
 		}
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [17, 18], 0, false, false);

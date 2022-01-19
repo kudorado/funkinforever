@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import fmf.songs.SongPlayer;
 import fmf.songs.PlayableCharacter;
@@ -41,7 +44,7 @@ class Miku extends SongPlayer
 		dad.frames = tex;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/miku/iconGrid', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [10, 11], 0, false, false);

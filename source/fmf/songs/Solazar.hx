@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
@@ -134,7 +137,7 @@ class Solazar extends SongPlayer
 		bf.x += 150;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/solazar/iconGrid', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [3, 5], 0, false, false);

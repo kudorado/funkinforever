@@ -1,4 +1,7 @@
  package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.group.FlxSpriteGroup;
 import flixel.util.FlxColor;
@@ -163,7 +166,7 @@ class Whitroll extends SongPlayer
 		gf.x = 	750;
 	}
 
-	override function getBFIcon(icon:HealthIcon)
+	override function getBFIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('health_icon/cw_icon', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [5, 6], 0, false, false);
@@ -171,7 +174,7 @@ class Whitroll extends SongPlayer
 	
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('health_icon/cw_icon', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);

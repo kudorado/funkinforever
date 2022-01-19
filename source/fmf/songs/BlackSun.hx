@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 
 import fmf.vfx.VFX;
 import fmf.skins.*;
@@ -160,7 +163,7 @@ class BlackSun extends SongPlayer
         gf.y += 105;
     }
 
-    public override function getDadIcon(icon:HealthIcon)
+    public override function getDadIcon(icon:Icon)
     {
         icon.loadGraphic(Paths.image('health_icon/sonic/iconGrid_1', 'mods'), true, 150, 150);
         icon.animation.add('dad', [36, 37], 0, false, false);

@@ -1,5 +1,7 @@
 package state;
 
+import reactor.*;
+
 import ui.Controller;
 import ui.FlxVirtualPad;
 import extension.admob.AdMob;
@@ -126,7 +128,7 @@ class GameOverSubstate extends MusicBeatSubstate
         Controller.init(this, UP_DOWN, A);
         Controller._pad.cameras = [GamePlayState.instance.camHUD];
 
-		LoadingState.createBlackFadeOut(this, GamePlayState.instance.camHUD);
+		LibraryLoadState.createBlackFadeOut(this, GamePlayState.instance.camHUD);
 
     }
 
@@ -173,7 +175,7 @@ class GameOverSubstate extends MusicBeatSubstate
 					GamePlayState.instance.gameNa();
                     AdMob.showInterstitial(60);
                     // FlxG.sound.play(Paths.music('gameOverEnd'));
-					LoadingState.createBlackFadeIn(this, function()
+					LibraryLoadState.createBlackFadeIn(this, function()
 					{
 						FlxG.resetState();
 					}, GamePlayState.instance.camHUD);
@@ -183,7 +185,7 @@ class GameOverSubstate extends MusicBeatSubstate
                     GamePlayState.instance.gameNa();
                     AdMob.showInterstitial(60);
                     // FlxG.sound.play(Paths.music('gameOverEnd'));
-					LoadingState.createBlackFadeIn(this, function()
+					LibraryLoadState.createBlackFadeIn(this, function()
 					{
 						FlxG.switchState(new SelectionState());
 					}, GamePlayState.instance.camHUD);
@@ -195,7 +197,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
                     AdMob.showInterstitial(60);
 					// FlxG.sound.play(Paths.music('gameOverEnd'));
-					LoadingState.createBlackFadeIn(this, function()
+					LibraryLoadState.createBlackFadeIn(this, function()
 					{
 						if (GamePlayState.isStoryMode)
 							FlxG.switchState(new StoryState());

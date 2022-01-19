@@ -2,6 +2,9 @@ package state;
 
 import extension.admob.AdMob;
 import fmf.songs.*;
+import state.*;
+import selection.*;
+import reactor.*;
 
 import ui.FlxVirtualPad.FlxActionMode;
 import ui.FlxVirtualPad.FlxDPadMode;
@@ -236,7 +239,7 @@ class StoryState extends MusicBeatState
 		Controller.init(this, FULL, A_B);
 
 
-		LoadingState.clearCachedSong();
+		LibraryLoadState.clearCachedSong();
 		
 		changeWeek(0);
 		super.create();
@@ -311,7 +314,7 @@ class StoryState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
-			FlxG.switchState(new MainMenuState());
+			FlxG.switchState(new MenuState());
 		}
 
 		super.update(elapsed);
@@ -369,7 +372,7 @@ class StoryState extends MusicBeatState
 			GamePlayState.campaignScore = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				LoadingState.loadAndSwitchState(new SelectionState(), true);
+				LibraryLoadState.loadAndSwitchState(new SelectionState(), true);
 			});
 		}
 	}

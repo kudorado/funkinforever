@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.tweens.FlxTween;
 import flixel.effects.FlxFlicker;

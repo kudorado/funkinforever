@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import flixel.system.debug.Tooltip.TooltipOverlay;
 import flixel.addons.ui.FlxMultiKey;
 import state.*;

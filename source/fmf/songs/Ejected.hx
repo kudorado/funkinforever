@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 //import js.html.Client;
 ////import js.html.AbortController;
@@ -146,7 +149,7 @@ class Ejected extends SongPlayer
         bf.y += 350;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/impostor/red/iconGrid','mods'), true, 150, 150);
 		icon.animation.add('dad', [26, 27], 0, false, false);

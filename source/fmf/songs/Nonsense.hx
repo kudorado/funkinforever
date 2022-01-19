@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -99,7 +102,7 @@ class Nonsense extends SongPlayer
 		super.createBFAnimationOffsets();
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid2'), true, 150, 150);
 		icon.animation.add('dad', [4, 5], 0, false, false);

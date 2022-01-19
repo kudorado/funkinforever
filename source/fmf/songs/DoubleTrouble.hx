@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
@@ -87,7 +90,7 @@ class DoubleTrouble extends SongPlayer
 		super.createGFAnimationOffsets();
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('health_icon/impostor_v4/icons/icon-impostors', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);

@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import fmf.skins.*;
 import flixel.util.FlxColor;
@@ -179,7 +182,7 @@ class Parasite extends SongPlayer
 		super.createBFAnimationOffsets();
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [50, 51], 0, false, false);

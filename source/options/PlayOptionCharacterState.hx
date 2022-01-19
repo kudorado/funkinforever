@@ -189,7 +189,7 @@ class PlayOptionCharacterState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 					selectedSomethin = true;
 					AdMob.showInterstitial();
-                    FlxG.switchState(new MainMenuState());
+                    FlxG.switchState(new MenuState());
                 }
 
     
@@ -235,13 +235,13 @@ class PlayOptionCharacterState extends MusicBeatState
 
                                                     
                                     
-                                    //         FlxG.switchState(new MainMenuState());
+                                    //         FlxG.switchState(new MenuState());
 									// 	//KUDORADO//@notrace("Story Menu Selected");
                                     //     case 'Hitbox':
 									// 	remove(_pad);
 									// 	_pad.alpha = 0;
 									// 	_hb.visible = true;
-									// 	FlxG.switchState(new MainMenuState());
+									// 	FlxG.switchState(new MenuState());
 									// 	save();
 
     

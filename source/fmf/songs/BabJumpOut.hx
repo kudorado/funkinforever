@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -92,7 +95,7 @@ class BabJumpOut extends SongPlayer
 		bf.x += 250;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/bab/gloopy','mods'), true, 150, 150);
 		icon.animation.add('dad', [2, 1], 0, false, false);

@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -69,7 +72,7 @@ class KapiFan extends Kapi
 	}
 
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/kapi/iconGrid', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [2, 3], 0, false, false);

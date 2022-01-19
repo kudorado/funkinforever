@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
@@ -80,7 +83,7 @@ class Ballistic extends Whitty
 	}
 
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [42, 43], 0, false, false);

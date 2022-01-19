@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import fmf.vfx.VFX;
 import fmf.skins.*;
@@ -123,7 +126,7 @@ class YouCantRun extends SongPlayer
         gf.playAnim('idle');
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('health_icon/sonic/iconGrid', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [24, 25], 0, false, false);

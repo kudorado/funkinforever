@@ -136,7 +136,7 @@ class GameOverState extends MusicBeatSubstate
 						FlxG.switchState(new FreePlayState());
 					}
 					else{
-						FlxG.switchState(new MainMenuState());
+						FlxG.switchState(new MenuState());
 					}
 			}
 

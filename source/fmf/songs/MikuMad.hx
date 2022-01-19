@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -39,7 +42,7 @@ class MikuMad extends Miku
 		dad.addOffset("singDOWN", 0, -3);
 
 	}
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/miku/iconGrid', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [24, 25], 0, false, false);

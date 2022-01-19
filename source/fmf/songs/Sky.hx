@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -59,7 +62,7 @@ class Sky extends SongPlayer
 	}
 
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/sky/iconGrid', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [24, 25], 0, false, false);

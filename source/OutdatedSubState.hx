@@ -44,7 +44,7 @@ class OutdatedSubState extends MusicBeatState
 		
 		var txt:FlxText = new FlxText(0, 0, FlxG.width,
 			"Your Kade Engine is outdated!\nYou are on "
-			+ MainMenuState.kadeEngineVer
+			+ MenuState.kadeEngineVer
 			+ "\nwhile the most recent version is " + needVer + "."
 			+ "\n\nWhat's new:\n\n"
 			+ currChanges
@@ -91,7 +91,7 @@ class OutdatedSubState extends MusicBeatState
 		if (controls.BACK)
 		{
 			leftState = true;
-			FlxG.switchState(new MainMenuState());
+			FlxG.switchState(new MenuState());
 		}
 		super.update(elapsed);
 	}

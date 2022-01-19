@@ -1,4 +1,6 @@
 package;
+
+import reactor.*;
 import state.*;
 import flixel.FlxCamera;
 import flixel.addons.ui.FlxUIText;
@@ -93,8 +95,8 @@ class ChartingState extends MusicBeatState
 	var player2:Character = new Character(0,0);
 	var player1:Boyfriend = new Boyfriend(0,0);
 
-	var leftIcon:HealthIcon;
-	var rightIcon:HealthIcon;
+	var leftIcon:Icon;
+	var rightIcon:Icon;
 
 	private var lastNote:Note;
 	var claps:Array<Note> = [];
@@ -158,8 +160,8 @@ class ChartingState extends MusicBeatState
 		Conductor.changeBPM(_song.bpm);
 		Conductor.mapBPMChanges(_song);
 
-		leftIcon = new HealthIcon();
-		rightIcon = new HealthIcon();
+		leftIcon = new Icon();
+		rightIcon = new Icon();
 		leftIcon.scrollFactor.set(1, 1);
 		rightIcon.scrollFactor.set(1, 1);
 
@@ -878,7 +880,7 @@ class ChartingState extends MusicBeatState
 			GamePlayState.SONG = _song;
 			FlxG.sound.music.stop();
 			vocals.stop();
-			LoadingState.loadAndSwitchState(new GamePlayState());
+			LibraryLoadState.loadAndSwitchState(new GamePlayState());
 		}
 
 		if (FlxG.keys.justPressed.E)
@@ -1469,13 +1471,13 @@ class ChartingState extends MusicBeatState
 	function loadJson(song:String):Void
 	{
 		GamePlayState.SONG = Song.loadFromJson(song.toLowerCase(), song.toLowerCase());
-		LoadingState.loadAndSwitchState(new ChartingState());
+		LibraryLoadState.loadAndSwitchState(new ChartingState());
 	}
 
 	function loadAutosave():Void
 	{
 		GamePlayState.SONG = Song.parseJSONshit(FlxG.save.data.autosave);
-		LoadingState.loadAndSwitchState(new ChartingState());
+		LibraryLoadState.loadAndSwitchState(new ChartingState());
 	}
 
 	function autosaveSong():Void

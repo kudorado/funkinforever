@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.util.FlxTimer;
 import flixel.util.FlxColor;
@@ -197,7 +200,7 @@ class Mom extends SongPlayer
 		gamePlayState.targetCamFollow.x = bf.getMidpoint().x - 300;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [7, 7], 0, false, false);

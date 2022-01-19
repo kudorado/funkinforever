@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.math.FlxRandom;
 import flixel.util.FlxColor;
@@ -259,7 +262,7 @@ class Echoes extends SongPlayer
 		}
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('health_icon/starlingMayhemIconGrid', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [47, 48], 0, false, false);

@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 //import js.html.rtc.PeerConnectionIceEvent;
 import flixel.util.FlxColor;
@@ -100,7 +103,7 @@ class SussusMoogus extends SongPlayer
         bf.y += 50;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/impostor/red/iconGrid','mods'), true, 150, 150);
 		icon.animation.add('dad', [24,25], 0, false, false);

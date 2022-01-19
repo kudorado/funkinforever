@@ -209,7 +209,7 @@ class PlayOptionState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 					selectedSomethin = true;
 					AdMob.showInterstitial();
-                    FlxG.switchState(new MainMenuState());
+                    FlxG.switchState(new MenuState());
                 }
 
     
@@ -242,30 +242,30 @@ class PlayOptionState extends MusicBeatState
 
                                     var daChoice:String = optionShit[curSelected];
 									// save();
-									// FlxG.switchState(new MainMenuState());
+									// FlxG.switchState(new MenuState());
                                     switch (daChoice)
                                     {
 
 										case "Character":
-											LoadingState.loadAndSwitchState(new PlayOptionCharacterState());
+											LibraryLoadState.loadAndSwitchState(new PlayOptionCharacterState());
                                        case 'Enemy':
-											LoadingState.loadAndSwitchState(new PlayOptionEnemyState());
+											LibraryLoadState.loadAndSwitchState(new PlayOptionEnemyState());
 										case 'Back':
 											GamePlayState.SONG = _song;
-											LoadingState.loadAndSwitchState(new GamePlayState());
+											LibraryLoadState.loadAndSwitchState(new GamePlayState());
 
 									}
 
 
                                                     
                                     
-                                    //         FlxG.switchState(new MainMenuState());
+                                    //         FlxG.switchState(new MenuState());
 									// 	//KUDORADO//@notrace("Story Menu Selected");
                                     //     case 'Hitbox':
 									// 	remove(_pad);
 									// 	_pad.alpha = 0;
 									// 	_hb.visible = true;
-									// 	FlxG.switchState(new MainMenuState());
+									// 	FlxG.switchState(new MenuState());
 									// 	save();
 
     

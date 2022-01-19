@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
@@ -107,7 +110,7 @@ class TrickyMask extends SongPlayer
 		bf.y += 50;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [44, 45], 0, false, false);

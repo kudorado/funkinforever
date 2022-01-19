@@ -1,4 +1,7 @@
 package fmf.songs;
+import reactor.*;
+import ui.*;
+
 import state.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
@@ -125,7 +128,7 @@ class BabSwing extends SongPlayer
 		bf.x += 200;
 	}
 
-	public override function getDadIcon(icon:HealthIcon)
+	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/bab/iconGrid','mods'), true, 150, 150);
 		icon.animation.add('dad', [30,32], 0, false, false);

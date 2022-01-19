@@ -1,6 +1,11 @@
 package state;
 
 import state.*;
+import ui.*;
+import reactor.*;
+import selection.*;
+
+
 import flixel.graphics.frames.FlxAtlasFrames;
 import extension.admob.AdMob;
 import fmf.songs.*;
@@ -43,7 +48,7 @@ class FreePlayState extends MusicBeatState
 	private var grpSongs:FlxTypedGroup<AlphabetShit>;
 	private var curPlaying:Bool = false;
 
-	private var iconArray:Array<HealthIcon> = [];
+	private var iconArray:Array<Icon> = [];
 	private var videoArray:Array<VideoIcon> = [];
 
 
@@ -149,7 +154,7 @@ class FreePlayState extends MusicBeatState
 
 
 			var baseSong:BaseSong = SongPlayerManager.getCurrentSong(songs[i].songName);
-			var icon:HealthIcon = new HealthIcon();
+			var icon:Icon = new Icon();
 			icon.scrollable = true;
 
 			if (!shitSong)
@@ -334,11 +339,11 @@ class FreePlayState extends MusicBeatState
 		AdMob.hideBanner();
 
 		Controller.init(this, FULL, A_B);
-		LoadingState.createBlackFadeOut(this);
+		LibraryLoadState.createBlackFadeOut(this);
 
 		AdMob.onInterstitialEvent = onRewarded;
 
-		LoadingState.clearCachedSong();
+		LibraryLoadState.clearCachedSong();
 
 		// Debugger.create(this, camera);
 
@@ -394,7 +399,7 @@ class FreePlayState extends MusicBeatState
 			// FlxG.sound.music.stop();
 			// #end
 
-			FlxG.switchState(new MainMenuState());
+			FlxG.switchState(new MenuState());
 		}
 
 		if (accepted)
@@ -447,7 +452,7 @@ class FreePlayState extends MusicBeatState
 		GamePlayState.storyDifficulty = StoryState.curDifficulty;
 		GamePlayState.storyWeek = songs[curSelected].week;
 
-		LoadingState.loadAndSwitchState(new SelectionState());
+		LibraryLoadState.loadAndSwitchState(new SelectionState());
 	}
 
 	function changeDiff(change:Int = 0)

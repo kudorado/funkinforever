@@ -87,7 +87,7 @@ class OptionsMenu extends MusicBeatState
 
         Controller.init(this, FULL, A_B);
 
-        LoadingState.createBlackFadeOut(this);
+        LibraryLoadState.createBlackFadeOut(this);
 
         super.create();
     }
@@ -100,7 +100,7 @@ class OptionsMenu extends MusicBeatState
         FlxG.sound.play(Paths.sound("scrollMenu"), 0.4);
 
         if (!isCat)
-            FlxG.switchState(new MainMenuState());
+            FlxG.switchState(new MenuState());
         else if (Controller.BACK)
         {
             isCat = false;

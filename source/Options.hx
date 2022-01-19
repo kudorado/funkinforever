@@ -1,5 +1,7 @@
 package;
 import state.*;
+import selection.*;
+
 import lime.app.Application;
 import lime.system.DisplayMode;
 import flixel.util.FlxColor;
@@ -9,7 +11,7 @@ import openfl.display.FPS;
 import openfl.Lib;
 import fmf.characters.*;
 import fmf.songs.*;
-import ui.CustomControlsState;
+import ui.*;
 
 
 
@@ -436,7 +438,7 @@ class CustomControlOption extends Option
     public override function press():Bool
     {
         OptionsMenu.instance.lockState();
-        LoadingState.createBlackFadeIn(OptionsMenu.instance, function()
+        LibraryLoadState.createBlackFadeIn(OptionsMenu.instance, function()
         {
             FlxG.switchState(new CustomControlsState());
         });
@@ -934,7 +936,7 @@ class CustomizationOption extends Option
     public override function press():Bool
     {
       
-        LoadingState.loadAndSwitchState(new SelectionState());
+        LibraryLoadState.loadAndSwitchState(new SelectionState());
         return true;
     }
 
@@ -955,7 +957,7 @@ class PlaymodeOption extends Option
     public override function press():Bool
     {
       
-        LoadingState.loadAndSwitchState(new SelectionState());
+        LibraryLoadState.loadAndSwitchState(new SelectionState());
         return true;
     }
 
@@ -986,7 +988,7 @@ class OffsetMenu extends Option
         GamePlayState.storyWeek = 0;
         GamePlayState.offsetTesting = true;
         //KODURADO//@notrace('CUR WEEK' + GamePlayState.storyWeek);
-        LoadingState.loadAndSwitchState(new GamePlayState());
+        LibraryLoadState.loadAndSwitchState(new GamePlayState());
         return false;
     }
 

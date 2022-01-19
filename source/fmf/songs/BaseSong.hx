@@ -1,6 +1,10 @@
 package fmf.songs;
-
+import reactor.*;
+import ui.*;
 import state.*;
+import selection.*;
+
+
 import flixel.FlxBasic;
 import Options.PcOption;
 import Options.VFXOption;
@@ -481,7 +485,7 @@ class BaseSong
 	//--------------------------------------------------------------------------------------------------------
 	//---------------------------------------------- ARROW & NOTE --------------------------------------------
 	// set icon bf
-	public function getBFIcon(icon:HealthIcon)
+	public function getBFIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('bf', [0, 1], 0, false, true);
@@ -489,7 +493,7 @@ class BaseSong
 	}
 
 	// set icon dad
-	public function getDadIcon(icon:HealthIcon)
+	public function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [16, 6], 0, false, false);
