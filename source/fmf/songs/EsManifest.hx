@@ -67,7 +67,9 @@ class EsManifest extends SongPlayer
 
 	override function createGFAnimationOffsets()
 	{
-		super.createGFAnimationOffsets();
+		gf.addOffset('idle', 0, 0);
+		gf.addOffset('sad', 0, 0);
+
 		gf.x -= 175;
 		gf.y -= 200;
 
