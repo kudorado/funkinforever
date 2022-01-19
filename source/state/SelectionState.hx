@@ -198,6 +198,9 @@ class SelectionState extends MusicBeatState
 			grpPlayModes.add(weekThing);
 			weekThing.antialiasing = true;
 		}
+		
+		trace (grpPlayModes.length);
+
 
 		// create skin
 		for (i in 0...SkinManager.skinList.length)
@@ -414,14 +417,18 @@ class SelectionState extends MusicBeatState
 
 				case 4:
 					selectedItem = grpControls.members[curControl];
-				
+
 				case 5:
+					selectedItem = grpScrolls.members[curScroll];
+						
+				case 6:
 					selectedItem = grpPlayModes.members[curPlayMode];
 
 			}
 
 			if (selectedItem == null || selectedItem.isUnlocked)
 			{
+				trace('selection: ' + selectedItem);
 				// chamge it to play menu
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				curSelection = 0;
