@@ -532,6 +532,9 @@ class SongPlayerManager
 			
 			case 'chasing':
 				songPlayer = new Chasing();
+
+			case 'darkness':
+				songPlayer = new Darkness();
 		}
 
 		return songPlayer;
