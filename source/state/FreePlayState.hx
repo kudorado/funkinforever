@@ -136,6 +136,8 @@ class FreePlayState extends MusicBeatState
 		addSong('shit', curWeek, false);
 
 		songWeek.text = i.songTitle.toUpperCase();
+		songWeek.x = 10;
+
 		songWeekId.text =  (curWeek + 1) + "/" + totalWeek;
 
 		grpSongs = new FlxTypedGroup<AlphabetShit>();
@@ -248,8 +250,10 @@ class FreePlayState extends MusicBeatState
 
 		diffText = new FlxText(FlxG.width * 0.9, songWeek.y, 0, "", 24);
 		diffText.font = songWeek.font;
-		diffText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT);
-		diffText.alignment = LEFT;
+		diffText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		diffText.alignment = RIGHT;
+		diffText.x = FlxG.width - (diffText.width + 10);
+
 		// diffText.screenCenter(X);
 		diffText.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 
@@ -339,11 +343,11 @@ class FreePlayState extends MusicBeatState
 		AdMob.hideBanner();
 
 		Controller.init(this, FULL, A_B);
-		LibraryLoadState.createBlackFadeOut(this);
+		LoadingState.createBlackFadeOut(this);
 
 		AdMob.onInterstitialEvent = onRewarded;
 
-		LibraryLoadState.clearCachedSong();
+		LoadingState.clearCachedSong();
 
 		// Debugger.create(this, camera);
 
@@ -443,16 +447,16 @@ class FreePlayState extends MusicBeatState
 
 		var curSong = songs[curSelected];
 
-		GamePlayState.playingSong = SongManager.songs[curSong.week];
-		GamePlayState.SONG = Song.loadFromJson(poop, SongManager.songs[curSong.week].folder + songLowercase);
-		GamePlayState.SONG_NAME = songLowercase;
-		GamePlayState.RAW_SONG_NAME = songs[curSelected].songName;
+		GameState.playingSong = SongManager.songs[curSong.week];
+		GameState.SONG = Song.loadFromJson(poop, SongManager.songs[curSong.week].folder + songLowercase);
+		GameState.SONG_NAME = songLowercase;
+		GameState.RAW_SONG_NAME = songs[curSelected].songName;
 
-		GamePlayState.isStoryMode = false;
-		GamePlayState.storyDifficulty = StoryState.curDifficulty;
-		GamePlayState.storyWeek = songs[curSelected].week;
+		GameState.isStoryMode = false;
+		GameState.storyDifficulty = StoryState.curDifficulty;
+		GameState.storyWeek = songs[curSelected].week;
 
-		LibraryLoadState.loadAndSwitchState(new SelectionState());
+		LoadingState.loadAndSwitchState(new SelectionState());
 	}
 
 	function changeDiff(change:Int = 0)
@@ -473,6 +477,8 @@ class FreePlayState extends MusicBeatState
 
 		getDiff();
 		diffText.text = daDiff;
+		diffText.x = FlxG.width - (diffText.width + 10);
+
 		// diffText.text = (curSongId) +   "." +  songHighscore.toUpperCase() + " " + daDiff;
 
 		// diffText.text = songHighscore.toUpperCase() + " " + daDiff; 
@@ -570,6 +576,7 @@ class FreePlayState extends MusicBeatState
 
 		var curSong = songs[curSelected];
 		diffText.text = daDiff;
+		diffText.x = FlxG.width - (diffText.width + 10);
 
 		// diffText.text = (curSongId) + "." +  songHighscore.toUpperCase() + " " + daDiff;
 		// diffText.text = songHighscore.toUpperCase() + " " + daDiff  + "("  + curWeek + "/" + totalWeek + ")";

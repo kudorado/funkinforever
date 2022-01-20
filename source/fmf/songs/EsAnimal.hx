@@ -58,7 +58,7 @@ class EsAnimal extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 
 		
 		var bg:FlxSprite = new FlxSprite(-600, -600).loadGraphic(Paths.image('bg/annie/evilBG', 'mods'));
@@ -75,8 +75,8 @@ class EsAnimal extends SongPlayer
 		stageFront.scale.x = 1.5;
 		stageFront.scale.y = 1.5;
 
-		gamePlayState.add(bg);
-		gamePlayState.add(stageFront);
+		gameState.add(bg);
+		gameState.add(stageFront);
 
 	}
 	override function midSongEventUpdate(curBeat:Int)

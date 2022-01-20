@@ -21,7 +21,7 @@ class Stay extends Trueform
     override function loadMap()
     {
 
-        gamePlayState.defaultCamZoom = 0.9;
+        gameState.defaultCamZoom = 0.9;
 
         hole = new FlxSprite(-650, 600);
         hole.loadGraphic(Paths.image('bg/trueform/trollge/gfshit', 'mods'), true, 512, 512);
@@ -36,21 +36,21 @@ class Stay extends Trueform
         bg.scale.x = 1.5;   
         bg.scale.y = 1.5;
 
-        gamePlayState.add(bg);
+        gameState.add(bg);
 
         var bg1:FlxSprite = new FlxSprite(-200, 200).loadGraphic(Paths.image('bg/trueform/bob/fg', 'mods'));
         bg1.antialiasing = true;
         bg1.scrollFactor.set(0.9, 0.9);
 
         bg1.y -= 250;
-        gamePlayState.add(bg1);
+        gameState.add(bg1);
 
         var stageFront:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('bg/trueform/bob/ground', 'mods'));
         stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
         stageFront.updateHitbox();
         stageFront.antialiasing = true;
         stageFront.scrollFactor.set(0.9, 0.9);
-        gamePlayState.add(stageFront);
+        gameState.add(stageFront);
 
     }
 
@@ -78,9 +78,9 @@ class Stay extends Trueform
     
     override function midSongEventUpdate(curBeat:Int)
     {
-        if (curBeat % gamePlayState.gfSpeed == 0 && gamePlayState.turn == -1)
+        if (curBeat % gameState.gfSpeed == 0 && gameState.turn == -1)
         {
-            gamePlayState.shakeNormal();
+            gameState.shakeNormal();
         }
     }
 
@@ -107,7 +107,7 @@ class Stay extends Trueform
         bob.scale.x = 0.9;
         bob.scale.y = 0.9;
 
-        gamePlayState.add(bob);
+        gameState.add(bob);
 
     }
 }

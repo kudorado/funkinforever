@@ -65,10 +65,10 @@ class Note extends FlxSprite
 
 		this.noteData = noteData;
 
-		var daStage:String = GamePlayState.curStage;
+		var daStage:String = GameState.curStage;
 
 		//get note skin depending on what song are playing.
-		GamePlayState.songPlayer.getNoteSkin(this);
+		GameState.songPlayer.getNoteSkin(this);
 
 		switch (noteData)
 		{
@@ -116,7 +116,7 @@ class Note extends FlxSprite
 
 			x -= width / 2;
 
-			if (GamePlayState.curStage.startsWith('school'))
+			if (GameState.curStage.startsWith('school'))
 				x += 30;
 
 			if (prevNote.isSustainNote)
@@ -137,7 +137,7 @@ class Note extends FlxSprite
 				if(FlxG.save.data.scrollSpeed != 1)
 					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * FlxG.save.data.scrollSpeed;
 				else
-					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * GamePlayState.SONG.speed;
+					prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * GameState.SONG.speed;
 		
 				prevNote.updateHitbox();
 

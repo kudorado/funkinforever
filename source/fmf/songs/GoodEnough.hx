@@ -25,26 +25,26 @@ class GoodEnough extends SongPlayer
 		bg.antialiasing = true;
 		bg.scale.y = 1.5;
 		bg.scale.x = 1.5;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
         var bg1:FlxSprite = new FlxSprite(0, -151).loadGraphic(Paths.image('bg/annie/philly/city', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1.5;
 		bg1.scale.x = 1.5;
-		gamePlayState.add(bg1);
+		gameState.add(bg1);
 
 
         var bg2:FlxSprite = new FlxSprite(0, -218).loadGraphic(Paths.image('bg/annie/philly/behindTrain', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 1.5;
 		bg2.scale.x = 1.5;
-		gamePlayState.add(bg2);
+		gameState.add(bg2);
 
         var bg3:FlxSprite = new FlxSprite(0, -224).loadGraphic(Paths.image('bg/annie/philly/street', 'mods'));
 		bg3.antialiasing = true;
 		bg3.scale.y = 1.5;
 		bg3.scale.x = 1.5;
-		gamePlayState.add(bg3);
+		gameState.add(bg3);
 	}
 
 	override function createDadAnimations():Void
@@ -94,15 +94,15 @@ class GoodEnough extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		gamePlayState.targetCamFollow.y = 360;
+		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
+		gameState.targetCamFollow.y = 360;
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		gamePlayState.targetCamFollow.y = 360;
+		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		gameState.targetCamFollow.y = 360;
 
 	}
 

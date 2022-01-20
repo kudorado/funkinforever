@@ -97,7 +97,7 @@ class EsManifest extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 
 		var hallowTex = Paths.getSparrowAtlas('bg/sky/bg', 'mods');
 		var bg = new FlxSprite(-200, -200);
@@ -112,7 +112,7 @@ class EsManifest extends SongPlayer
 		bg.x += 400;
 		bg.y += 300;
 
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 	}
 	override function midSongEventUpdate(curBeat:Int)

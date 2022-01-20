@@ -33,7 +33,7 @@ class TabiMad extends Tabi
 		var sumsticks:FlxSprite = new FlxSprite(-600, -325).loadGraphic(Paths.image('bg/tabi/mad/overlayingsticks', 'mods'));
 		sumsticks.antialiasing = true;
 		sumsticks.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(sumsticks);
+		gameState.add(sumsticks);
 	}
 
 	override function getDefaultSkin():Skin
@@ -68,7 +68,7 @@ class TabiMad extends Tabi
 	override function loadMap()
 	{
 	
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 
 		siniFireBehind = new FlxTypedGroup<SiniFire>();
 		siniFireFront = new FlxTypedGroup<SiniFire>();
@@ -76,7 +76,7 @@ class TabiMad extends Tabi
 		genocideBG = new FlxSprite(-900, -300).loadGraphic(Paths.image('bg/tabi/fire/wadsaaa', 'mods'));
 		genocideBG.antialiasing = true;
 		genocideBG.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(genocideBG);
+		gameState.add(genocideBG);
 
 
 		for (i in 0...2)
@@ -89,13 +89,13 @@ class TabiMad extends Tabi
 			siniFireBehind.add(daFire);
 		}
 
-		gamePlayState.add(siniFireBehind);
+		gameState.add(siniFireBehind);
 
 		// genocide board is already in genocidebg but u know shit layering for fire lol
 		genocideBoard = new FlxSprite(genocideBG.x, genocideBG.y).loadGraphic(Paths.image('bg/tabi/fire/boards', 'mods'));
 		genocideBoard.antialiasing = true;
 		genocideBoard.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(genocideBoard);
+		gameState.add(genocideBoard);
 
 		// front fire shit
 
@@ -129,20 +129,20 @@ class TabiMad extends Tabi
 		siniFireFront.add(fire3);
 		siniFireFront.add(fire4);
 
-		gamePlayState.add(siniFireFront);
+		gameState.add(siniFireFront);
 
 		// more layering shit
 		var fuckYouFurniture:FlxSprite = new FlxSprite(genocideBG.x, genocideBG.y).loadGraphic(Paths.image('bg/tabi/fire/glowyfurniture', 'mods'));
 		fuckYouFurniture.antialiasing = true;
 		fuckYouFurniture.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(fuckYouFurniture);
+		gameState.add(fuckYouFurniture);
 
 		#if !mobile
-		GamePlayState.songOffset = -650;
+		GameState.songOffset = -650;
 		#end
 		
 		#if mobile
-		GamePlayState.songOffset = -300;
+		GameState.songOffset = -300;
 		#end
 
 
@@ -201,7 +201,7 @@ class TabiMad extends Tabi
 			trail = new FlxTrail(dad, null, 1, 12, 0.85, 0.069);
 			trail.color = FlxColor.RED;
 
-			gamePlayState.add(trail);
+			gameState.add(trail);
 			trail.visible = false;
 		}
 
@@ -210,10 +210,10 @@ class TabiMad extends Tabi
 
 	override function dadNoteEvent(noteData:Note)
 	{
-		if (gamePlayState.curBeat % 6 == 0)
+		if (gameState.curBeat % 6 == 0)
 		{
-			gamePlayState.defaultCamZoom = 1.15;
-			gamePlayState.shakeGenocide();
+			gameState.defaultCamZoom = 1.15;
+			gameState.shakeGenocide();
 
 			if (FlxG.save.data.distractions)
 			{
@@ -223,8 +223,8 @@ class TabiMad extends Tabi
 		}
 		else
 		{
-			gamePlayState.defaultCamZoom = 0.95;
-			gamePlayState.shakePrettyBig();
+			gameState.defaultCamZoom = 0.95;
+			gameState.shakePrettyBig();
 
 			if (FlxG.save.data.distractions)
 				trail.visible = false;
@@ -236,12 +236,12 @@ class TabiMad extends Tabi
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.y = dad.getMidpoint().y + 50;
+		gameState.targetCamFollow.y = dad.getMidpoint().y + 50;
 	}
 
 	override function bfNoteEvent(noteData:Note)
 	{
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 		super.bfNoteEvent(noteData);
 	}
 

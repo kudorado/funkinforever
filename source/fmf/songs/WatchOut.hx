@@ -33,7 +33,7 @@ class WatchOut extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.7;
+		gameState.defaultCamZoom = 0.7;
 		var bg:FlxSprite = new FlxSprite(-596, -350).loadGraphic(Paths.image('bg/impostor_v4/airship', 'mods'));
 		bg.antialiasing = true;
 
@@ -41,7 +41,7 @@ class WatchOut extends SongPlayer
 		bg.scale.y = 1.35;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
     override function getDefaultSkin():Skin

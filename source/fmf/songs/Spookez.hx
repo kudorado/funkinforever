@@ -24,7 +24,7 @@ class Spookez extends SongPlayer
 		halloweenBG.animation.addByPrefix('lightning', 'halloweem bg lightning strike', 24, false);
 		halloweenBG.animation.play('idle');
 		halloweenBG.antialiasing = true;
-		gamePlayState.add(halloweenBG);
+		gameState.add(halloweenBG);
 	}
 
 	override function getGFTex()

@@ -34,7 +34,7 @@ class BlackSun extends SongPlayer
 
     override function loadMap()
     {
-        gamePlayState.defaultCamZoom = 0.7;
+        gameState.defaultCamZoom = 0.7;
 
         var sSKY:FlxSprite = new FlxSprite(-414, -240.8).loadGraphic(Paths.image('bg/sonic/exeBg/sky', 'mods'));
         sSKY.antialiasing = true;
@@ -42,7 +42,7 @@ class BlackSun extends SongPlayer
         sSKY.active = false;
         sSKY.scale.x = 1.2;
         sSKY.scale.y = 1.2;
-        gamePlayState.add(sSKY);
+        gameState.add(sSKY);
 
         var trees:FlxSprite = new FlxSprite(-290.55, -298.3).loadGraphic(Paths.image('bg/sonic/exeBg/backtrees', 'mods'));
         trees.antialiasing = true;
@@ -50,7 +50,7 @@ class BlackSun extends SongPlayer
         trees.active = false;
         trees.scale.x = 1.2;
         trees.scale.y = 1.2;
-        gamePlayState.add(trees);
+        gameState.add(trees);
 
         var bg2:FlxSprite = new FlxSprite(-306, -334.65).loadGraphic(Paths.image('bg/sonic/exeBg/trees', 'mods'));
         bg2.updateHitbox();
@@ -59,7 +59,7 @@ class BlackSun extends SongPlayer
         bg2.active = false;
         bg2.scale.x = 1.2;
         bg2.scale.y = 1.2;
-        gamePlayState.add(bg2);
+        gameState.add(bg2);
 
         var bg:FlxSprite = new FlxSprite(-309.95, -240.2).loadGraphic(Paths.image('bg/sonic/exeBg/ground', 'mods'));
         bg.antialiasing = true;
@@ -67,7 +67,7 @@ class BlackSun extends SongPlayer
         bg.active = false;
         bg.scale.x = 1.2;
         bg.scale.y = 1.2;
-        gamePlayState.add(bg);
+        gameState.add(bg);
 
         var treething:FlxSprite = new FlxSprite(-409.95, -340.2);
         treething.frames = Paths.getSparrowAtlas('bg/sonic/exeBg/ExeAnimatedBG_Assets', 'mods');
@@ -75,12 +75,12 @@ class BlackSun extends SongPlayer
         treething.animation.play('idle');
         treething.antialiasing = true;
         treething.scrollFactor.set(1, 1);
-        gamePlayState.add(treething);
+        gameState.add(treething);
 
         var tails:FlxSprite = new FlxSprite(700, 500).loadGraphic(Paths.image('bg/sonic/exeBg/TailsCorpse', 'mods'));
         tails.antialiasing = true;
         tails.scrollFactor.set(1, 1);
-        gamePlayState.add(tails);
+        gameState.add(tails);
     }
 
     function AnimateBG():Void
@@ -97,7 +97,7 @@ class BlackSun extends SongPlayer
         bgAnim.x = 3900;
         bgAnim.y = -200;
 
-        gamePlayState.add(bgAnim);
+        gameState.add(bgAnim);
     }
 
     override function getDefaultSkin():Skin
@@ -143,16 +143,16 @@ class BlackSun extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        gamePlayState.targetCamFollow.y -= 150;
-        gamePlayState.defaultCamZoom = 0.6;
+        gameState.targetCamFollow.y -= 150;
+        gameState.defaultCamZoom = 0.6;
 
     }
 
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        gamePlayState.targetCamFollow.y += 15;
-        gamePlayState.defaultCamZoom = 0.85;
+        gameState.targetCamFollow.y += 15;
+        gameState.defaultCamZoom = 0.85;
     }
 
     override function createGFAnimationOffsets()

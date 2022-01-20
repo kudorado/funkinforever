@@ -17,18 +17,18 @@ class Cessation extends CensoryOverload
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		createTV();
 	}
 
 	override function createTV()
 	{
-        gamePlayState.defaultCamZoom = 0.9;
+        gameState.defaultCamZoom = 0.9;
 		var bg:FlxSprite = new FlxSprite(100, 356).loadGraphic(Paths.image('bg/qt/TV_V5', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		gamePlayState.add(bg);
+		gameState.add(bg);
     }
 }

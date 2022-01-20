@@ -30,7 +30,7 @@ class TikyHell extends TikyMask
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		defaultCamZoom = gamePlayState.defaultCamZoom;
+		defaultCamZoom = gameState.defaultCamZoom;
 
 		animation.addByPrefix('idle', 'Idle', 24, false);
 		animation.addByPrefix('singUP', 'Proper Up0', 24, false);
@@ -89,7 +89,7 @@ class TikyHell extends TikyMask
 
 	override function noteEventDad(noteData:Note)
 	{
-		if (gamePlayState.bfTurn)
+		if (gameState.bfTurn)
 		{
 			smolFrame = 0;
 			return;
@@ -102,7 +102,7 @@ class TikyHell extends TikyMask
 		}
 
 		smolTiky();
-		gamePlayState.defaultCamZoom = defaultCamZoom;
+		gameState.defaultCamZoom = defaultCamZoom;
 	}
 
 	private function biggeTiky()
@@ -113,10 +113,10 @@ class TikyHell extends TikyMask
 		this.x = largePos.x;
 		this.y = largePos.y;
 
-		gamePlayState.targetCamFollow.y = this.getMidpoint().y + 250;
-		gamePlayState.targetCamFollow.x = this.getMidpoint().x;
+		gameState.targetCamFollow.y = this.getMidpoint().y + 250;
+		gameState.targetCamFollow.x = this.getMidpoint().x;
 
-		gamePlayState.defaultCamZoom = 0.4;
+		gameState.defaultCamZoom = 0.4;
 	}
 
 	private function smolTiky()

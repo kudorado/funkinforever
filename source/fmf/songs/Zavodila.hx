@@ -21,13 +21,13 @@ class Zavodila extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.75;
+		gameState.defaultCamZoom = 0.75;
 
 		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/happysky', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 2;
 		bg.scale.x = 2;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 
 		var stageFront:FlxSprite = new FlxSprite(-650, -600).loadGraphic(Paths.image('bg/bob/nothappy_ground', 'mods'));
@@ -36,7 +36,7 @@ class Zavodila extends SongPlayer
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
 		stageFront.active = false;
-		gamePlayState.add(stageFront);
+		gameState.add(stageFront);
 
 	}
 
@@ -72,8 +72,8 @@ class Zavodila extends SongPlayer
 	
 	override function dadNoteEvent(noteData:Note)
 	{
-		gamePlayState.shakeNormal();
-		GamePlayState.songPlayer.gf.playAnimForce("scared", 0.5);
+		gameState.shakeNormal();
+		GameState.songPlayer.gf.playAnimForce("scared", 0.5);
 	}
 
 	override function createBFAnimationOffsets()
@@ -91,16 +91,16 @@ class Zavodila extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		gamePlayState.targetCamFollow.y = bf.getGraphicMidpoint().y - 200;
-		gamePlayState.targetCamFollow.x = bf.getGraphicMidpoint().x - 250;
+		gameState.targetCamFollow.y = bf.getGraphicMidpoint().y - 200;
+		gameState.targetCamFollow.x = bf.getGraphicMidpoint().x - 250;
 
 	}
 
 	override function updateCamFollowDad()
 	{
 
-		gamePlayState.targetCamFollow.y = dad.getGraphicMidpoint().y - 200;
-		gamePlayState.targetCamFollow.x = dad.getGraphicMidpoint().x + 350;
+		gameState.targetCamFollow.y = dad.getGraphicMidpoint().y - 200;
+		gameState.targetCamFollow.x = dad.getGraphicMidpoint().x + 350;
 
 	}
 

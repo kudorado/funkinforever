@@ -18,10 +18,10 @@ class PlayableCharacter extends Character
     //should pa heyable!
     private var heyable:Bool;
 
-    public var gamePlayState(get, never):GamePlayState;
+    public var gameState(get, never):GameState;
 
-    public inline function get_gamePlayState()
-        return GamePlayState.instance;
+    public inline function get_gameState()
+        return GameState.instance;
 
     public override function new(x:Float = 700, y:Float = 200, label:String = 'none')
     {
@@ -69,7 +69,7 @@ class PlayableCharacter extends Character
     override function update(elapsed:Float)
     {
     
-        if (GamePlayState.playAsDad)
+        if (GameState.playAsDad)
         {
             dadBehaviour(elapsed);
         }

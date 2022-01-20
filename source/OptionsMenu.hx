@@ -1,5 +1,8 @@
 package;
+
+import ui.*;
 import state.*;
+
 import extension.admob.AdMob;
 import fmf.skins.*;
 import ui.Controller;
@@ -87,7 +90,7 @@ class OptionsMenu extends MusicBeatState
 
         Controller.init(this, FULL, A_B);
 
-        LibraryLoadState.createBlackFadeOut(this);
+        LoadingState.createBlackFadeOut(this);
 
         super.create();
     }

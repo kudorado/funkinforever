@@ -25,7 +25,7 @@ class Carefree extends SongPlayer
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		createTV();
 
@@ -33,13 +33,13 @@ class Carefree extends SongPlayer
 
 	function createTV()
 	{
-		gamePlayState.defaultCamZoom = 0.9;
+		gameState.defaultCamZoom = 0.9;
 
 		var bg:FlxSprite = new FlxSprite(100, 356).loadGraphic(Paths.image('bg/qt/TV_V2_off', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
 	override function createDadAnimations():Void
@@ -87,15 +87,15 @@ class Carefree extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		gamePlayState.targetCamFollow.y = 360;
+		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
+		gameState.targetCamFollow.y = 360;
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		gamePlayState.targetCamFollow.y = 360;
+		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		gameState.targetCamFollow.y = 360;
 
 	}
 

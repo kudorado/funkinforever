@@ -19,13 +19,13 @@ class Encore extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.75;
+		gameState.defaultCamZoom = 0.75;
 
 		var bg:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/hex/WIRE/WIREStageBack', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.6;
 		bg.scale.x = 1.6;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
 	override function createDadAnimations():Void
@@ -57,7 +57,7 @@ class Encore extends SongPlayer
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.y = dad.getGraphicMidpoint().y - 50;
+		gameState.targetCamFollow.y = dad.getGraphicMidpoint().y - 50;
 	}
 
 	override function createBFAnimationOffsets()

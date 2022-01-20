@@ -18,7 +18,7 @@ class Miku extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 		var bg:FlxSprite = new FlxSprite(-275, -138).loadGraphic(Paths.image('bg/miku/stageback', "mods"));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
@@ -26,7 +26,7 @@ class Miku extends SongPlayer
 		bg.setGraphicSize(Std.int(bg.width * 1.25));
 
 		bg.active = true;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var hallowTex = Paths.getSparrowAtlas('bg/miku/bunch_of_simps', 'mods');
 		
@@ -105,6 +105,6 @@ class Miku extends SongPlayer
 	override function createCharacters()
 	{
 		super.createCharacters();
-		gamePlayState.add(simp);
+		gameState.add(simp);
 	}
 }

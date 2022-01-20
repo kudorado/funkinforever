@@ -26,7 +26,7 @@ class BabJumpOut extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 
 		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/happy/happy_sky', 'mods'));
 		bg1.antialiasing = true;
@@ -34,21 +34,21 @@ class BabJumpOut extends SongPlayer
 		bg1.scale.x = 0.5;
 		//bg1.scrollFactor.set(0.9,0.9);
 		
-		gamePlayState.add(bg1);
+		gameState.add(bg1);
 
 		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/happy/happy_back', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 0.5;
 		bg2.scale.x = 0.5;
 		//bg2.scrollFactor.set(0.9,0.9);
-		gamePlayState.add(bg2);
+		gameState.add(bg2);
 
 		var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/day/happy/happy_front', 'mods'));
 		bg.antialiasing = true;
 		//bg.scrollFactor.set(0.9,0.9);
 		bg.scale.y = 0.75;
 		bg.scale.x = 0.75;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
 	override function createDadAnimations():Void
@@ -104,14 +104,14 @@ class BabJumpOut extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		gamePlayState.targetCamFollow.x -=  200;
-		gamePlayState.targetCamFollow.y -= 60;
+		gameState.targetCamFollow.x -=  200;
+		gameState.targetCamFollow.y -= 60;
 	}
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.x += 100;
-		gamePlayState.targetCamFollow.y -= 60;
+		gameState.targetCamFollow.x += 100;
+		gameState.targetCamFollow.y -= 60;
 	}
 
 }

@@ -30,7 +30,7 @@ class Remorse extends Whitty
 		bg.scale.x = 1;
 		bg.scale.y = 1;
 		bg.scrollFactor.set(0.9, 0.9);
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		bgRemorse = new FlxSprite(-600, -448).loadGraphic(Paths.image('bg/whitty/remorse/wall-dark', 'mods'));
 		bgRemorse.antialiasing = true;
@@ -38,7 +38,7 @@ class Remorse extends Whitty
 		bgRemorse.scale.y = 1;
 		bgRemorse.scrollFactor.set(0.9, 0.9);
 		bgRemorse.alpha = 0;
-		gamePlayState.add(bgRemorse);
+		gameState.add(bgRemorse);
 
 
 	}

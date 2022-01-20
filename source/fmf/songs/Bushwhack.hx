@@ -29,7 +29,7 @@ class Bushwhack extends SongPlayer
         bgAnim.scale.y = 1.65;
 		bgAnim.x = 0;
 		bgAnim.y = 111;
-        gamePlayState.add(bgAnim);
+        gameState.add(bgAnim);
 
 	}
 

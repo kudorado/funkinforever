@@ -13,9 +13,9 @@ import fmf.characters.*;
 
 class Clown
 {
-	public var gamePlayState(get, never):GamePlayState;
-	public inline function get_gamePlayState()
-		return GamePlayState.instance;
+	public var gameState(get, never):GameState;
+	public inline function get_gameState()
+		return GameState.instance;
 	
 	public static var TrickyLinesSing:Array<String> = ["SUFFER", "TIKY", "SUS", "IIMARKY", "NANOBIT", "INCORRECT", "INCOMPLETE", "INSUFFICIENT", "INVALID", "CORRECTION", "MISTAKE", "REDUCE", "ERROR", "ADJUSTING", "IMPROBABLE", "IMPLAUSIBLE", "MISJUDGED"];
 	public static var TrickyLinesMiss:Array<String> = ["TERRIBLE", "WASTE", "MISS CALCULTED", "PREDICTED", "FAILURE", "DISGUSTING", "ABHORRENT", "FORESEEN", "CONTEMPTIBLE", "PROGNOSTICATE", "DISPICABLE", "REPREHENSIBLE"];
@@ -41,7 +41,7 @@ class Clown
 
 		tstatic.alpha = 0;
 
-		gamePlayState.add(tstatic);
+		gameState.add(tstatic);
 	}
 
 	public function new()
@@ -66,7 +66,7 @@ class Clown
 
 	public function createSpookyText(text:String, x:Float = -1111111111111, y:Float = -1111111111111):Void
 	{
-		spookySteps = gamePlayState.curStep;
+		spookySteps = gameState.curStep;
 		spookyRendered = true;
 		tstatic.alpha = 0.5;
 		FlxG.sound.play(Paths.sound('staticSound', 'preload'));
@@ -77,7 +77,7 @@ class Clown
 		spookyText.bold = true;
 		spookyText.text = text;
 
-		gamePlayState.add(spookyText);
+		gameState.add(spookyText);
 	}
 
 	public function update(elapsed:Float)
@@ -94,11 +94,11 @@ class Clown
 
 	public function automaticRemoveSpooky()
 	{
-		if (spookyRendered && spookySteps + 3 < gamePlayState.curStep)
+		if (spookyRendered && spookySteps + 3 < gameState.curStep)
 		{
 			if (resetSpookyText)
 			{
-				gamePlayState.remove(spookyText);
+				gameState.remove(spookyText);
 				spookyRendered = false;
 			}
 

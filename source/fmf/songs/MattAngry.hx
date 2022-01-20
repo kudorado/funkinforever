@@ -18,12 +18,12 @@ class MattAngry extends Matt
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 		var bg:FlxSprite = new FlxSprite(-600, -100).loadGraphic(Paths.image('bg/matt/arenanightbg', "mods"));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = true;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-650, -425).loadGraphic(Paths.image('bg/matt/boxingnight3', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1));
@@ -31,7 +31,7 @@ class MattAngry extends Matt
 		stageFront.scrollFactor.set(0.9, 0.9);
 
 		stageFront.active = true;
-		gamePlayState.add(stageFront);
+		gameState.add(stageFront);
 
 	}
 

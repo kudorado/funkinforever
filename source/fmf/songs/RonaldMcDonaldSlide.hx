@@ -20,24 +20,24 @@ class RonaldMcDonaldSlide extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_sky', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 0.5;
 		bg1.scale.x = 0.5;
 		
-		gamePlayState.add(bg1);
+		gameState.add(bg1);
 		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_back', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 0.5;
 		bg2.scale.x = 0.5;
-		gamePlayState.add(bg2);
+		gameState.add(bg2);
 
 		var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/sunset/happy/bosip_front', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 0.75;
 		bg.scale.x = 0.75;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
 	override function createDadAnimations():Void
@@ -90,15 +90,15 @@ class RonaldMcDonaldSlide extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		gamePlayState.targetCamFollow.x =  dad.getMidpoint().x + 300;
-		gamePlayState.targetCamFollow.y =  dad.getMidpoint().y;
+		gameState.targetCamFollow.x =  dad.getMidpoint().x + 300;
+		gameState.targetCamFollow.y =  dad.getMidpoint().y;
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.x =  dad.getMidpoint().x + 50;
-		gamePlayState.targetCamFollow.y =  dad.getMidpoint().y;
+		gameState.targetCamFollow.x =  dad.getMidpoint().x + 50;
+		gameState.targetCamFollow.y =  dad.getMidpoint().y;
 
 	}
 

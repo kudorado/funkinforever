@@ -23,7 +23,7 @@ class PurpleSpecimens extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.7;
+		gameState.defaultCamZoom = 0.7;
 		var bg:FlxSprite = new FlxSprite(-54, -136).loadGraphic(Paths.image('bg/impostor_v4/halloween_bg_low', 'mods'));
 		bg.antialiasing = true;
 
@@ -31,7 +31,7 @@ class PurpleSpecimens extends SongPlayer
 		bg.scale.y = 1.1;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
     override function getDefaultSkin():Skin
@@ -83,15 +83,15 @@ class PurpleSpecimens extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowBF();
-        gamePlayState.targetCamFollow.y -= 80;
-		gamePlayState.targetCamFollow.x += 100;
+        gameState.targetCamFollow.y -= 80;
+		gameState.targetCamFollow.x += 100;
     }
 
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        gamePlayState.targetCamFollow.y -= 50;
-		gamePlayState.targetCamFollow.x -= 60;
+        gameState.targetCamFollow.y -= 50;
+		gameState.targetCamFollow.x -= 60;
     }
 
 	public override function getDadIcon(icon:Icon)

@@ -24,7 +24,7 @@ class IIMarky extends Boyfriend
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		defaultCamZoom = gamePlayState.defaultCamZoom;
+		defaultCamZoom = gameState.defaultCamZoom;
 
 		animation.addByPrefix('idle', 'BF idle dance', 24, false);
 		animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
@@ -43,7 +43,7 @@ class IIMarky extends Boyfriend
 	
 	override function noteEventBF(noteData:Note)
 	{
-		gamePlayState.defaultCamZoom = 1.1;
+		gameState.defaultCamZoom = 1.1;
 		whiteBG.color = FlxColor.BLACK;
 
 		
@@ -55,14 +55,14 @@ class IIMarky extends Boyfriend
 
 	override function noteEventDad(noteData:Note)
 	{
-		if (gamePlayState.bfTurn)
+		if (gameState.bfTurn)
 			return;
 
 		if(whiteBG.alpha > 0)
 			FlxTween.tween(whiteBG, {alpha: 0}, whiteBG.alpha, {});
 
 
-		gamePlayState.defaultCamZoom = defaultCamZoom;
+		gameState.defaultCamZoom = defaultCamZoom;
 		super.noteEventDad(noteData);
 	}
 
@@ -99,10 +99,10 @@ class IIMarky extends Boyfriend
 		whiteBG.alpha = 0;
 		whiteBG.screenCenter(X);
 
-		gamePlayState.remove(this);
-		gamePlayState.add(whiteBG);
+		gameState.remove(this);
+		gameState.add(whiteBG);
 
-		gamePlayState.add(this);
+		gameState.add(this);
 
 	}
 

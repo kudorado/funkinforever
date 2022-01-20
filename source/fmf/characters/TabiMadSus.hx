@@ -26,7 +26,7 @@ class TabiMadSus extends Boyfriend
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		defaultCamZoom = gamePlayState.defaultCamZoom;
+		defaultCamZoom = gameState.defaultCamZoom;
 
 		animation.addByPrefix('idle', 'MadTabiIdle', 24, false);
 
@@ -43,10 +43,10 @@ class TabiMadSus extends Boyfriend
 
 	override function noteEventBF(noteData:Note)
 	{
-		if (gamePlayState.curBeat % 6 == 0)
+		if (gameState.curBeat % 6 == 0)
 		{
-			gamePlayState.defaultCamZoom = 1.15;
-			gamePlayState.shakeGenocide();
+			gameState.defaultCamZoom = 1.15;
+			gameState.shakeGenocide();
 
 			if (FlxG.save.data.distractions)
 			{
@@ -55,8 +55,8 @@ class TabiMadSus extends Boyfriend
 		}
 		else
 		{
-			gamePlayState.defaultCamZoom = 0.95;
-			gamePlayState.shakePrettyBig();
+			gameState.defaultCamZoom = 0.95;
+			gameState.shakePrettyBig();
 
 			if (FlxG.save.data.distractions)	
 				trail.visible = false;
@@ -65,7 +65,7 @@ class TabiMadSus extends Boyfriend
 
 	override function noteEventDad(noteData:Note)
 	{
-		gamePlayState.defaultCamZoom = defaultCamZoom;
+		gameState.defaultCamZoom = defaultCamZoom;
 	}
 
 	// create animation offset for BF
@@ -98,7 +98,7 @@ class TabiMadSus extends Boyfriend
 			trail = new FlxTrail(this, null, 1, 12, 0.85, 0.069);
 			trail.color = FlxColor.RED;
 
-			gamePlayState.add(trail);
+			gameState.add(trail);
 			trail.visible = false;
 		}
 	}

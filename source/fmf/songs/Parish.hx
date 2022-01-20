@@ -22,13 +22,13 @@ class Parish extends SongPlayer
 	override function loadMap()
 	{
 		
-		gamePlayState.defaultCamZoom = 0.75;
+		gameState.defaultCamZoom = 0.75;
 
 		var bg:FlxSprite = new FlxSprite(-200, -700).loadGraphic(Paths.image('bg/sacredmass/church1/base', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.3;
 		bg.scale.x = 1.3;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 	}
 
@@ -39,7 +39,7 @@ class Parish extends SongPlayer
 			trail = new FlxTrail(dad, null, 4, 24, 0.3, 0.1);
 			trail.color = FlxColor.WHITE;
 
-			gamePlayState.add(trail);
+			gameState.add(trail);
 			trail.visible = false;
 		}
 	}

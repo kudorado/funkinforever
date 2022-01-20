@@ -23,13 +23,13 @@ class TrickyEx extends TrickyMask
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/clown/fourth/bg', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 3;
 		bg.scale.x = 3;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var fg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('bg/clown/fourth/daBackground', 'mods'));
 		fg.antialiasing = true;
@@ -37,7 +37,7 @@ class TrickyEx extends TrickyMask
 		fg.y = -175;
 		fg.scale.y = 1;
 		fg.scale.x = 1;
-		gamePlayState.add(fg);
+		gameState.add(fg);
 
 
 		clown = new ExClown();
@@ -113,8 +113,8 @@ class TrickyEx extends TrickyMask
 		createDad();
 
 
-		gamePlayState.add(gf);
-		gamePlayState.add(bf);
+		gameState.add(gf);
+		gameState.add(bf);
 		
 
 		var hole = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/clown/fourth/Spawnhole_Ground_BACK', 'mods'));
@@ -123,8 +123,8 @@ class TrickyEx extends TrickyMask
 		hole.y = dad.y + 500;
 		hole.scale.y = 1.5;
 		hole.scale.x = 1;
-		gamePlayState.add(hole);
-		gamePlayState.add(dad);
+		gameState.add(hole);
+		gameState.add(dad);
 
 	}
 

@@ -48,7 +48,7 @@ class Eeeeaaaooo extends Trueform
 		halloweenBG.y -= 125;
 		halloweenBG.x += 350;
 
-		gamePlayState.add(halloweenBG);
+		gameState.add(halloweenBG);
 		
 	}
 

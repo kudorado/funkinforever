@@ -33,8 +33,8 @@ class RuvSus extends Boyfriend
 
 	override function noteEventBF(noteData:Note)
 	{
-		gamePlayState.shakeNormal();
-		GamePlayState.songPlayer.gf.playAnimForce("scared", 0.35);
+		gameState.shakeNormal();
+		GameState.songPlayer.gf.playAnimForce("scared", 0.35);
 	}
 
 	// create animation offset for BF

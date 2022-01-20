@@ -23,8 +23,8 @@ class Promenade extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.75;
-		gamePlayState.camFollowSpeed = 1;
+		gameState.defaultCamZoom = 0.75;
+		gameState.camFollowSpeed = 1;
 
 		var bg:FlxSprite = new FlxSprite(-911, -555).loadGraphic(Paths.image('bg/entity/NikusaBG', 'mods'));
 		bg.antialiasing = true;
@@ -33,7 +33,7 @@ class Promenade extends SongPlayer
 		bg.scale.y = 1.335;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 	}
 
@@ -79,15 +79,15 @@ class Promenade extends SongPlayer
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		gamePlayState.defaultCamZoom = 0.5;
+		gameState.defaultCamZoom = 0.5;
 
 	}
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		gamePlayState.targetCamFollow.y += 225;
-		gamePlayState.defaultCamZoom = 0.75;
+		gameState.targetCamFollow.y += 225;
+		gameState.defaultCamZoom = 0.75;
 	}
 
 	override function createBF()
@@ -101,8 +101,8 @@ class Promenade extends SongPlayer
 	{
 		if(curBeat == 15)
 		{
-			gamePlayState.camZooming = true;
-			gamePlayState.defaultCamZoom = 0.75;
+			gameState.camZooming = true;
+			gameState.defaultCamZoom = 0.75;
 		}
 	}
 

@@ -26,21 +26,21 @@ class GarcelloDead extends Garcello
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.85;
+		gameState.defaultCamZoom = 0.85;
 
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/garcello/garStagebgAlt', 'mods'));
 		bg.antialiasing = true;
 		// bg.active = false;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/garcello/garStagealt', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
 		// stageFront.active = false;
-		gamePlayState.add(stageFront);
+		gameState.add(stageFront);
 
 		createDeadBody();
 		createSmoke();
@@ -49,7 +49,7 @@ class GarcelloDead extends Garcello
 
 	private function addSmoke()
 	{
-		gamePlayState.add(smoke);
+		gameState.add(smoke);
 	}
 
 	private function createDeadBody()
@@ -58,7 +58,7 @@ class GarcelloDead extends Garcello
 		garcelloDead.setGraphicSize(Std.int(garcelloDead.width));
 		garcelloDead.updateHitbox();
 		garcelloDead.antialiasing = true;
-		gamePlayState.add(garcelloDead);
+		gameState.add(garcelloDead);
 
 	}
 
@@ -114,12 +114,12 @@ class GarcelloDead extends Garcello
 			case 209:
 				new FlxTimer().start(0.25, function(tm:FlxTimer)
 				{
-					gamePlayState.defaultCamZoom = 1.3;
+					gameState.defaultCamZoom = 1.3;
 					dad.playAnim('coolGuy', true);
 					dad.lockAnim(1, function()
 					{
 						dad.dance();
-						gamePlayState.defaultCamZoom = 0.85;
+						gameState.defaultCamZoom = 0.85;
 
 					});
 				});

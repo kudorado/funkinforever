@@ -62,12 +62,12 @@ class Sadness extends SongPlayer
 
 	override function loadMap()
 	{
-        gamePlayState.defaultCamZoom = 0.85;
+        gameState.defaultCamZoom = 0.85;
 		var bg:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/blueballs_incident/sadi/sad', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
 		bg.scale.x = 1.2;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
 	override function getGFTex()
@@ -133,8 +133,8 @@ class Sadness extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		gamePlayState.targetCamFollow.y -= 50;
-		gamePlayState.defaultCamZoom = 0.85;
+		gameState.targetCamFollow.y -= 50;
+		gameState.defaultCamZoom = 0.85;
 
 	}
 
@@ -142,9 +142,9 @@ class Sadness extends SongPlayer
 	{
 		super.updateCamFollowBF();
 
-		gamePlayState.defaultCamZoom = 0.7;
-		gamePlayState.targetCamFollow.x += 150;
-		gamePlayState.targetCamFollow.y += 25;
+		gameState.defaultCamZoom = 0.7;
+		gameState.targetCamFollow.x += 150;
+		gameState.targetCamFollow.y += 25;
 
 	}
 

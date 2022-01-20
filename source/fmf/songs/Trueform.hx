@@ -18,8 +18,8 @@ class Trueform extends Tutorial
 	{
 		var dumbShit = new FlxSprite(-1000, -300).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
 		dumbShit.scrollFactor.set(1, 1);
-		dumbShit.cameras = [gamePlayState.camGame];
-		gamePlayState.add(dumbShit);
+		dumbShit.cameras = [gameState.camGame];
+		gameState.add(dumbShit);
 	}
 
 	override function getDadTex()
@@ -78,13 +78,13 @@ class Trueform extends Tutorial
 
 		hole.setGraphicSize(Std.int(hole.width * 1.25));
 
-		gamePlayState.add(dad);
-		gamePlayState.add(hole);
+		gameState.add(dad);
+		gameState.add(hole);
 
 		dad.y -= 100;
 		hole.y -= 225;
 
-		gamePlayState.add(bf);
+		gameState.add(bf);
 
 
 		gf.alpha = 0;

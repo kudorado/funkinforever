@@ -25,7 +25,7 @@ class CensoryOverload extends Carefree
         bg.antialiasing = true;
         bg.scale.y = 1;
         bg.scale.x = 1;
-        gamePlayState.add(bg);
+        gameState.add(bg);
 
         createTV();
 
@@ -33,12 +33,12 @@ class CensoryOverload extends Carefree
 
 	override function createTV()
 	{
-		gamePlayState.defaultCamZoom = 0.9;
+		gameState.defaultCamZoom = 0.9;
 		var bg:FlxSprite = new FlxSprite(100, 356).loadGraphic(Paths.image('bg/qt/TV_V3', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
     override function createDadAnimations():Void

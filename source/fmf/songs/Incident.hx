@@ -49,7 +49,7 @@ class Incident extends Trueform
 	{
 		super.loadMap();
 
-		gamePlayState.defaultCamZoom = 0.9;
+		gameState.defaultCamZoom = 0.9;
 
 		hole = new FlxSprite(-650, 600);
 		hole.loadGraphic(Paths.image('bg/trueform/sky/gfshit', 'mods'), true, 512, 512);
@@ -64,7 +64,7 @@ class Incident extends Trueform
 		bg.scrollFactor.set(0.9, 0.9);
 
 		bg.y -= 650;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 
 		whiteBG = new FlxSprite(-600, -200).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.WHITE);
@@ -82,9 +82,9 @@ class Incident extends Trueform
 
 
 
-		gamePlayState.add(bg);
-		gamePlayState.add(gfbg);
-		gamePlayState.add(whiteBG);
+		gameState.add(bg);
+		gameState.add(gfbg);
+		gameState.add(whiteBG);
 
 
 
@@ -95,7 +95,7 @@ class Incident extends Trueform
 		switch(curBeat)
 		{
 			case 1 | 287 | 660:
-				gamePlayState.camZooming = true;
+				gameState.camZooming = true;
 
 				hole.alpha = 0;
 				whiteBG.color = FlxColor.BLACK;
@@ -103,7 +103,7 @@ class Incident extends Trueform
 				FlxTween.tween(bf, {alpha: 1}, 0.5, {});
 				dad.alpha = 0;
 				gfbg.alpha = 0;
-				gamePlayState.defaultCamZoom = 1.1;
+				gameState.defaultCamZoom = 1.1;
 
 			case 32 | 353:
 
@@ -112,7 +112,7 @@ class Incident extends Trueform
 				gfbg.alpha = 1;
 				bf.alpha = 0.25;
 				whiteBG.alpha = 0;
-				gamePlayState.defaultCamZoom = 0.9;
+				gameState.defaultCamZoom = 0.9;
 
 
 			case 97:

@@ -28,7 +28,7 @@ class KapiFan extends Kapi
 		bg.scale.y = 1.25;
 
 		bg.active = false;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
 	override function createDadAnimations():Void

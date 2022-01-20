@@ -28,11 +28,11 @@ class EtternaFunctions
     public static function getNotes():Int
     {
         var notes:Int = 0;
-        for (i in 0...GamePlayState.SONG.notes.length) 
+        for (i in 0...GameState.SONG.notes.length) 
         {
-            for (ii in 0...GamePlayState.SONG.notes[i].sectionNotes.length)
+            for (ii in 0...GameState.SONG.notes[i].sectionNotes.length)
             {
-                var n = GamePlayState.SONG.notes[i].sectionNotes[ii];
+                var n = GameState.SONG.notes[i].sectionNotes[ii];
                 if (n[1] <= 0)
                     notes++;
             }
@@ -43,12 +43,12 @@ class EtternaFunctions
     public static function getHolds():Int
         {
             var notes:Int = 0;
-            for (i in 0...GamePlayState.SONG.notes.length) 
+            for (i in 0...GameState.SONG.notes.length) 
             {
-                //@notrace(GamePlayState.SONG.notes[i]);
-                for (ii in 0...GamePlayState.SONG.notes[i].sectionNotes.length)
+                //@notrace(GameState.SONG.notes[i]);
+                for (ii in 0...GameState.SONG.notes[i].sectionNotes.length)
                 {
-                    var n = GamePlayState.SONG.notes[i].sectionNotes[ii];
+                    var n = GameState.SONG.notes[i].sectionNotes[ii];
                     //@notrace(n);
                     if (n[1] > 0)
                         notes++;

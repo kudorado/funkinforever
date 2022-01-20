@@ -23,8 +23,8 @@ class ShotgunShell extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.55;
-		gamePlayState.camFollowSpeed = 1;
+		gameState.defaultCamZoom = 0.55;
+		gameState.camFollowSpeed = 1;
 
 		var bg:FlxSprite = new FlxSprite(-600, -113).loadGraphic(Paths.image('bg/entity/aldryx/AldryxBG', 'mods'));
 		bg.antialiasing = true;
@@ -32,7 +32,7 @@ class ShotgunShell extends SongPlayer
 		bg.scale.y = 1.1;
 		
 		bg.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 	}
 
@@ -95,16 +95,16 @@ class ShotgunShell extends SongPlayer
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		gamePlayState.targetCamFollow.y += 50;
-		gamePlayState.defaultCamZoom = 0.55;
+		gameState.targetCamFollow.y += 50;
+		gameState.defaultCamZoom = 0.55;
 
 	}
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		gamePlayState.targetCamFollow.y += 225;
-		gamePlayState.defaultCamZoom = 0.7;
+		gameState.targetCamFollow.y += 225;
+		gameState.defaultCamZoom = 0.7;
 
 	}
 

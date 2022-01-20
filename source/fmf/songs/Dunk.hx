@@ -21,13 +21,13 @@ class Dunk extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 1;
+		gameState.defaultCamZoom = 1;
 
 		var bg:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/hex/normal/stageback', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 2;
 		bg.scale.x = 2;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 
 	}
@@ -65,7 +65,7 @@ class Dunk extends SongPlayer
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.y = dad.getGraphicMidpoint().y - 50;
+		gameState.targetCamFollow.y = dad.getGraphicMidpoint().y - 50;
 	}
 
 

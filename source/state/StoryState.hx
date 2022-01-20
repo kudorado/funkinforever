@@ -239,7 +239,7 @@ class StoryState extends MusicBeatState
 		Controller.init(this, FULL, A_B);
 
 
-		LibraryLoadState.clearCachedSong();
+		LoadingState.clearCachedSong();
 		
 		changeWeek(0);
 		super.create();
@@ -340,10 +340,10 @@ class StoryState extends MusicBeatState
 
 			}
 
-			GamePlayState.storyPlaylist = SongManager.songs[curWeek].copySongList;
-			GamePlayState.playingSong = SongManager.songs[curWeek];
+			GameState.storyPlaylist = SongManager.songs[curWeek].copySongList;
+			GameState.playingSong = SongManager.songs[curWeek];
 			
-			GamePlayState.isStoryMode = true;
+			GameState.isStoryMode = true;
 			selectedWeek = true;
 
 			var diffic = "";
@@ -357,22 +357,22 @@ class StoryState extends MusicBeatState
 
 			}
 
-			GamePlayState.storyDifficulty = curDifficulty;
-			GamePlayState.SONG_NAME = SongFilter.filter(GamePlayState.storyPlaylist[0]);
-			GamePlayState.RAW_SONG_NAME = (GamePlayState.storyPlaylist[0]);
+			GameState.storyDifficulty = curDifficulty;
+			GameState.SONG_NAME = SongFilter.filter(GameState.storyPlaylist[0]);
+			GameState.RAW_SONG_NAME = (GameState.storyPlaylist[0]);
 
-			var daSong = GamePlayState.SONG_NAME + diffic;
-			var daFolder = GamePlayState.playingSong.folder + StringTools.replace(GamePlayState.storyPlaylist[0], " ", "-").toLowerCase();
+			var daSong = GameState.SONG_NAME + diffic;
+			var daFolder = GameState.playingSong.folder + StringTools.replace(GameState.storyPlaylist[0], " ", "-").toLowerCase();
 
 			//@notrace("daFolder: " + daFolder);
 			
-			GamePlayState.SONG = Song.loadFromJson(daSong, daFolder);
+			GameState.SONG = Song.loadFromJson(daSong, daFolder);
 
-			GamePlayState.storyWeek = curWeek;
-			GamePlayState.campaignScore = 0;
+			GameState.storyWeek = curWeek;
+			GameState.campaignScore = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				LibraryLoadState.loadAndSwitchState(new SelectionState(), true);
+				LoadingState.loadAndSwitchState(new SelectionState(), true);
 			});
 		}
 	}

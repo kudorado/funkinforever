@@ -24,12 +24,12 @@ class Parasite extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.6;
+		gameState.defaultCamZoom = 0.6;
 
 		var dumbShit = new FlxSprite(-1000, -300).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.WHITE);
 		dumbShit.scrollFactor.set(1, 1);
-		dumbShit.cameras = [gamePlayState.camGame];
-		gamePlayState.add(dumbShit);
+		dumbShit.cameras = [gameState.camGame];
+		gameState.add(dumbShit);
 
 		var bg:FlxSprite = new FlxSprite();
 
@@ -52,7 +52,7 @@ class Parasite extends SongPlayer
 
 		bg.scrollFactor.set(0, 0);
 
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var tower:FlxSprite = new FlxSprite(-207, -724).loadGraphic(Paths.image('bg/entity/tower', 'mods'));
 
@@ -61,21 +61,21 @@ class Parasite extends SongPlayer
 		tower.scale.y = 0.8;
 		tower.scrollFactor.set(0.7, 0.7);
 
-		gamePlayState.add(tower);
+		gameState.add(tower);
 
 		rock = new FlxSprite(-570, -303).loadGraphic(Paths.image('bg/entity/rock', 'mods'));
 		rock.scale.x = 1;
 		rock.scale.y = 1;
 		rock.scrollFactor.set(0.85, 0.85);
 
-		gamePlayState.add(rock);
+		gameState.add(rock);
 
 
 		var stageFront:FlxSprite = new FlxSprite(-1030, -648	).loadGraphic(Paths.image('bg/entity/floor', 'mods'));
 
 		stageFront.scale.x = 1;
 		stageFront.scale.y = 1;
-		gamePlayState.add(stageFront);
+		gameState.add(stageFront);
 
 		
 	}
@@ -196,7 +196,7 @@ class Parasite extends SongPlayer
 	{
 		rock.y -= speed * dir * elapsed;
 
-		if (gamePlayState.curBeat % checkBeat == 0 && gamePlayState.curBeat > 5)
+		if (gameState.curBeat % checkBeat == 0 && gameState.curBeat > 5)
 		{
 			dir *= -1;
 		}

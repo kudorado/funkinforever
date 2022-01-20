@@ -20,7 +20,7 @@ class SkyTired extends Sky
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 
 		var hallowTex = Paths.getSparrowAtlas('bg/sky/bg_annoyed', 'mods');
 		var bg = new FlxSprite(-200, -300);
@@ -33,7 +33,7 @@ class SkyTired extends Sky
 		bg.scale.x = 2;
 		bg.scale.y = 2;
 
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 	}
 

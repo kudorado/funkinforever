@@ -50,10 +50,10 @@ class AnimationState extends FlxState
 		gridBG.scrollFactor.set(0.5, 0.5);
 		add(gridBG);
 
-		//@notrace("get song: " + GamePlayState.RAW_SONG_NAME);
+		//@notrace("get song: " + GameState.RAW_SONG_NAME);
 		if (debugCharacter == DAD)
 		{
-			var song = SongPlayerManager.getCurrentSong(GamePlayState.RAW_SONG_NAME);
+			var song = SongPlayerManager.getCurrentSong(GameState.RAW_SONG_NAME);
 
 			song.createDad();
 
@@ -67,7 +67,7 @@ class AnimationState extends FlxState
 		}
 		else if(debugCharacter == BF)
 		{
-			var song = SongPlayerManager.getCurrentSong(GamePlayState.RAW_SONG_NAME);
+			var song = SongPlayerManager.getCurrentSong(GameState.RAW_SONG_NAME);
 			song.createBF();
 			song.createStoryBF();
 			
@@ -87,7 +87,7 @@ class AnimationState extends FlxState
 
 		else if (debugCharacter == GF)
 		{
-			var song = SongPlayerManager.getCurrentSong(GamePlayState.RAW_SONG_NAME);
+			var song = SongPlayerManager.getCurrentSong(GameState.RAW_SONG_NAME);
 			song.createGF();
 			
 			var gf = song.gf;
@@ -229,7 +229,7 @@ class AnimationState extends FlxState
 
 		if (FlxG.keys.justPressed.ENTER)
 		{
-			FlxG.switchState(new GamePlayState());
+			FlxG.switchState(new GameState());
 		}
 		super.update(elapsed);
 	}

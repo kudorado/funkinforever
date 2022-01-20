@@ -34,77 +34,77 @@ class Faker extends SongPlayer
 
     override function loadMap()
     {
-        gamePlayState.defaultCamZoom = 0.7;
+        gameState.defaultCamZoom = 0.7;
 
         var sky:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/sky', 'mods'));
         sky.antialiasing = true;
         sky.scale.x = 1;
         sky.scale.y = 1;
         sky.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(sky);
+        gameState.add(sky);
 
         var mountains:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/mountains', 'mods'));
         mountains.antialiasing = true;
         mountains.scale.x = 1;
         mountains.scale.y = 1;
         mountains.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(mountains);
+        gameState.add(mountains);
 
         var grass:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/grass', 'mods'));
         grass.antialiasing = true;
         grass.scale.x = 1;
         grass.scale.y = 1;
         grass.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(grass);
+        gameState.add(grass);
 
         var plant:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/plant', 'mods'));
         plant.antialiasing = true;
         plant.scale.x = 1;
         plant.scale.y = 1;
         plant.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(plant);
+        gameState.add(plant);
 
         var tree1:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/tree1', 'mods'));
         tree1.antialiasing = true;
         tree1.scale.x = 1;
         tree1.scale.y = 1;
         tree1.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(tree1);
+        gameState.add(tree1);
 
         var tree2:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/tree2', 'mods'));
         tree2.antialiasing = true;
         tree2.scale.x = 1;
         tree2.scale.y = 1;
         tree2.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(tree2);
+        gameState.add(tree2);
 
         var pillar1:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/pillar1', 'mods'));
         pillar1.antialiasing = true;
         pillar1.scale.x = 1;
         pillar1.scale.y = 1;
         pillar1.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(pillar1);
+        gameState.add(pillar1);
 
         var pillar2:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/pillar2', 'mods'));
         pillar2.antialiasing = true;
         pillar2.scale.x = 1;
         pillar2.scale.y = 1;
         pillar2.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(pillar2);
+        gameState.add(pillar2);
 
         var flower1:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/flower1', 'mods'));
         flower1.antialiasing = true;
         flower1.scale.x = 1;
         flower1.scale.y = 1;
         flower1.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(flower1);
+        gameState.add(flower1);
 
         var flower2:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/sonic/fakerBG/flower2', 'mods'));
         flower2.antialiasing = true;
         flower2.scale.x = 1;
         flower2.scale.y = 1;
         flower2.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(flower2);
+        gameState.add(flower2);
     }
 
     override function getDefaultSkin():Skin
@@ -150,13 +150,13 @@ class Faker extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        gamePlayState.targetCamFollow.y -= 50;
+        gameState.targetCamFollow.y -= 50;
     }
 
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        gamePlayState.targetCamFollow.y -= 150;
+        gameState.targetCamFollow.y -= 150;
     }
 
     override function createGFAnimationOffsets()

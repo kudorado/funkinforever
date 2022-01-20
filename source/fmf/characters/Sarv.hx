@@ -40,14 +40,14 @@ class Sarv extends Boyfriend
 	{
 		if (FlxG.save.data.distractions)
 		{
-			if (gamePlayState.curBeat % 6 == 0)
+			if (gameState.curBeat % 6 == 0)
 			{
 				if (FlxG.save.data.distractions)
 				{
 					trail.visible = true;
 				}
 			}
-			else if(gamePlayState.curBeat % 16 == 0)
+			else if(gameState.curBeat % 16 == 0)
 			{
 				if (FlxG.save.data.distractions)
 					trail.visible = false;
@@ -89,7 +89,7 @@ class Sarv extends Boyfriend
 			trail = new FlxTrail(this, null, 4, 24, 0.3, 0.069);
 			trail.color = FlxColor.PINK;
 
-			gamePlayState.add(trail);
+			gameState.add(trail);
 			trail.visible = false;
 		}
 	}

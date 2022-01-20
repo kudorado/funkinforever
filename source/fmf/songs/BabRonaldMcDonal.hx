@@ -22,7 +22,7 @@ class BabRonaldMcDonal extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.3;
+		gameState.defaultCamZoom = 0.3;
 
 		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/happy/happy_sky', 'mods'));
 		bg1.antialiasing = true;
@@ -30,21 +30,21 @@ class BabRonaldMcDonal extends SongPlayer
 		bg1.scale.x = 0.5;
 		//bg1.scrollFactor.set(0.9,0.9);
 		
-		gamePlayState.add(bg1);
+		gameState.add(bg1);
 
 		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/day/happy/happy_back', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 0.5;
 		bg2.scale.x = 0.5;
 		//bg2.scrollFactor.set(0.9,0.9);
-		gamePlayState.add(bg2);
+		gameState.add(bg2);
 
 		var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/day/happy/happy_front', 'mods'));
 		bg.antialiasing = true;
 		//bg.scrollFactor.set(0.9,0.9);
 		bg.scale.y = 0.75;
 		bg.scale.x = 0.75;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
 	override function createDadAnimations():Void
@@ -96,12 +96,12 @@ class BabRonaldMcDonal extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		gamePlayState.targetCamFollow.x = bf.getGraphicMidpoint().x - 300;
+		gameState.targetCamFollow.x = bf.getGraphicMidpoint().x - 300;
 	}
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.x = dad.getGraphicMidpoint().x + 350;
+		gameState.targetCamFollow.x = dad.getGraphicMidpoint().x + 350;
 	}
 
 }

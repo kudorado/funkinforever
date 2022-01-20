@@ -1,6 +1,8 @@
 package state;
 
 import reactor.*;
+import ui.*;
+
 
 import extension.admob.AdMob;
 import flixel.graphics.frames.FlxTileFrames;
@@ -247,7 +249,7 @@ class CustomControlsState extends MusicBeatSubstate
 		if (exitbutton.justPressed || androidback || controls.BACK)
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
-			LibraryLoadState.createBlackFadeIn(this, function()
+			LoadingState.createBlackFadeIn(this, function()
 			{
 				FlxG.switchState(new SelectionState());
 			});
@@ -258,7 +260,7 @@ class CustomControlsState extends MusicBeatSubstate
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 
 			save();
-			LibraryLoadState.createBlackFadeIn(this, function()
+			LoadingState.createBlackFadeIn(this, function()
 			{
 				FlxG.switchState(new SelectionState());
 			});		

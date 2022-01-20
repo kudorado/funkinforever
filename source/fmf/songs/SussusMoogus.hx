@@ -21,13 +21,13 @@ class SussusMoogus extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 
 		var bg1:FlxSprite = new FlxSprite(0, -300).loadGraphic(Paths.image('bg/impostor/red/polusSky', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1.4;
 		bg1.scale.x = 1.4;
-		gamePlayState.add(bg1);
+		gameState.add(bg1);
 
         
 
@@ -36,7 +36,7 @@ class SussusMoogus extends SongPlayer
 		bg3.scale.y = 1;
 		bg3.scale.x = 1;
         bg3.scrollFactor.set(0.6,0.6);
-		gamePlayState.add(bg3);
+		gameState.add(bg3);
 
 
         var bg2:FlxSprite = new FlxSprite(200, 150).loadGraphic(Paths.image('bg/impostor/red/polusWarehouse', 'mods'));
@@ -44,7 +44,7 @@ class SussusMoogus extends SongPlayer
 		bg2.scale.y = 1;
 		bg2.scale.x = 1;
         bg2.scrollFactor.set(0.8,0.8);
-		gamePlayState.add(bg2);
+		gameState.add(bg2);
         
 
         var bg3:FlxSprite = new FlxSprite(-250, 300).loadGraphic(Paths.image('bg/impostor/red/polusHills', 'mods'));
@@ -52,13 +52,13 @@ class SussusMoogus extends SongPlayer
 		bg3.scale.y = 1;
 		bg3.scale.x = 1;
         bg3.scrollFactor.set(0.8,0.8);
-		gamePlayState.add(bg3);
+		gameState.add(bg3);
 
         var bg4:FlxSprite = new FlxSprite(-0, 600).loadGraphic(Paths.image('bg/impostor/red/polusGround', 'mods'));
 		bg4.antialiasing = true;
 		bg4.scale.y = 1.4;
 		bg4.scale.x = 1.4;
-		gamePlayState.add(bg4);
+		gameState.add(bg4);
 
 	}
 
@@ -113,15 +113,15 @@ class SussusMoogus extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		gamePlayState.targetCamFollow.x = bf.getMidpoint().x - 240;
-		gamePlayState.targetCamFollow.y = bf.getMidpoint().y - 150;
+		gameState.targetCamFollow.x = bf.getMidpoint().x - 240;
+		gameState.targetCamFollow.y = bf.getMidpoint().y - 150;
 	}
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		gamePlayState.targetCamFollow.x = bf.getMidpoint().x - 500;
-		gamePlayState.targetCamFollow.y = bf.getMidpoint().y - 150;
+		gameState.targetCamFollow.x = bf.getMidpoint().x - 500;
+		gameState.targetCamFollow.y = bf.getMidpoint().y - 150;
 	}
 
 }

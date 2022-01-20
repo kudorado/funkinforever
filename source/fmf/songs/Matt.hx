@@ -13,12 +13,12 @@ class Matt extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 		var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('bg/matt/swordfight', "mods"));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = true;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
     override function getDadTex()

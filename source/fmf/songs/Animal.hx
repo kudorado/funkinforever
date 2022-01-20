@@ -22,15 +22,15 @@ class Animal extends SongPlayer
 	{
 		var bg:FlxSprite = new FlxSprite(-340, -770).loadGraphic(Paths.image('bg/annie/christmas/evilBG', 'mods'));
 		bg.antialiasing = true;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
         var bg2:FlxSprite = new FlxSprite(544, -325).loadGraphic(Paths.image('bg/annie/christmas/evilTree', 'mods'));
 		bg2.antialiasing = true;
-		gamePlayState.add(bg2);
+		gameState.add(bg2);
 
         var bg1:FlxSprite = new FlxSprite(0, 542).loadGraphic(Paths.image('bg/annie/christmas/evilSnow', 'mods'));
 		bg1.antialiasing = true;
-		gamePlayState.add(bg1);
+		gameState.add(bg1);
 	}
 
 	override function createDadAnimations():Void
@@ -77,15 +77,15 @@ class Animal extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		gamePlayState.targetCamFollow.y = 360;
+		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
+		gameState.targetCamFollow.y = 360;
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		gamePlayState.targetCamFollow.y = 360;
+		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		gameState.targetCamFollow.y = 360;
 
 	}
 

@@ -25,7 +25,7 @@ class Perfume extends Whitroll
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 1;
+		gameState.defaultCamZoom = 1;
 		
 		var citycolor:FlxSprite = new FlxSprite( -125, -150.75);
 		citycolor.loadGraphic(Paths.image("bg/date/citycolor", 'mods'));
@@ -77,7 +77,7 @@ class Perfume extends Whitroll
 		deco.antialiasing = true;
 		deco.scale.y = 1;
 		deco.scale.x = 1;
-		gamePlayState.add(deco);
+		gameState.add(deco);
 		
 		createHeartThings();
 		add(wallbg);
@@ -95,7 +95,7 @@ class Perfume extends Whitroll
 		light.antialiasing = true;
 		light.scale.y = 1;
 		light.scale.x = 1;
-		gamePlayState.add(light);
+		gameState.add(light);
 	}
 
 	override function createCharacters()
@@ -158,7 +158,7 @@ class Perfume extends Whitroll
 						&& charswhohavewalked.contains(characters_walking.animation.curAnim.name))
 					{ // if it's still the same character
 						characters_walking.animation.play(chars[FlxG.random.int(0, chars.length - 1)]); // change the character (i should make this a function)
-						if (gamePlayState.curBeat > stopSTOPITSTOPITNOW)
+						if (gameState.curBeat > stopSTOPITSTOPITNOW)
 							moveNOWWW = false;
 					}
 					else
@@ -179,7 +179,7 @@ class Perfume extends Whitroll
 						&& charswhohavewalked.contains(characters_walking.animation.curAnim.name))
 					{ // if it's still the same character
 						characters_walking.animation.play(chars[FlxG.random.int(0, chars.length - 1)]); // change the character
-						if (gamePlayState.curBeat > stopSTOPITSTOPITNOW)
+						if (gameState.curBeat > stopSTOPITSTOPITNOW)
 							moveNOWWW = false;
 					}
 					else
@@ -200,7 +200,7 @@ class Perfume extends Whitroll
 						&& charswhohavewalked.contains(characters_walking.animation.curAnim.name))
 					{ // if it's still the same character
 						characters_walking.animation.play(chars[FlxG.random.int(0, chars.length - 1)]); // change the character (i should make this a function)
-						if (gamePlayState.curBeat > stopSTOPITSTOPITNOW)
+						if (gameState.curBeat > stopSTOPITSTOPITNOW)
 							moveNOWWW = false;
 					}
 					else

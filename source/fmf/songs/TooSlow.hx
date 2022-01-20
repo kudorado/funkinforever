@@ -23,7 +23,7 @@ class TooSlow extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.95;
+		gameState.defaultCamZoom = 0.95;
 		var sky:FlxSprite = new FlxSprite(-286, -42).loadGraphic(Paths.image('bg/sonic/Sonic_Stages/sky', 'mods'));
 		sky.antialiasing = true;
 
@@ -31,7 +31,7 @@ class TooSlow extends SongPlayer
 		sky.scale.y = 1.35;
 
 		sky.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(sky);
+		gameState.add(sky);
 
         var floor2:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/Sonic_Stages/floor2', 'mods'));
 		floor2.antialiasing = true;
@@ -40,7 +40,7 @@ class TooSlow extends SongPlayer
 		floor2.scale.y = 1;
 
 		floor2.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(floor2);
+		gameState.add(floor2);
 
         var floor1:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/Sonic_Stages/floor1', 'mods'));
 		floor1.antialiasing = true;
@@ -49,7 +49,7 @@ class TooSlow extends SongPlayer
 		floor1.scale.y = 1;
 
 		floor1.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(floor1);
+		gameState.add(floor1);
 
         var eggman:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/Sonic_Stages/eggman', 'mods'));
 		eggman.antialiasing = true;
@@ -58,7 +58,7 @@ class TooSlow extends SongPlayer
 		eggman.scale.y = 1;
 
 		eggman.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(eggman);
+		gameState.add(eggman);
 
         var knuckle:FlxSprite = new FlxSprite(303, -99).loadGraphic(Paths.image('bg/sonic/Sonic_Stages/knuckle', 'mods'));
 		knuckle.antialiasing = true;
@@ -67,7 +67,7 @@ class TooSlow extends SongPlayer
 		knuckle.scale.y = 1;
 
 		knuckle.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(knuckle);
+		gameState.add(knuckle);
 
         var tail:FlxSprite = new FlxSprite(-418, -153).loadGraphic(Paths.image('bg/sonic/Sonic_Stages/tail', 'mods'));
 		tail.antialiasing = true;
@@ -76,7 +76,7 @@ class TooSlow extends SongPlayer
 		tail.scale.y = 1;
 
 		tail.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(tail);
+		gameState.add(tail);
 
 		var sticklol:FlxSprite = new FlxSprite(-237, -271).loadGraphic(Paths.image('bg/sonic/Sonic_Stages/sticklol', 'mods'));
 		sticklol.antialiasing = true;
@@ -85,7 +85,7 @@ class TooSlow extends SongPlayer
 		sticklol.scale.y = 1;
 
 		sticklol.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(sticklol);
+		gameState.add(sticklol);
 
 	}
 
@@ -133,8 +133,8 @@ class TooSlow extends SongPlayer
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		gamePlayState.targetCamFollow.y += 150;
-		gamePlayState.defaultCamZoom = 0.9;
+		gameState.targetCamFollow.y += 150;
+		gameState.defaultCamZoom = 0.9;
 
 
 	}
@@ -151,7 +151,7 @@ class TooSlow extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowDad();
-		gamePlayState.defaultCamZoom = 1;
+		gameState.defaultCamZoom = 1;
 	}
 
 	override function createGFAnimationOffsets()

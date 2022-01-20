@@ -22,13 +22,13 @@ class Worship extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.75;
+		gameState.defaultCamZoom = 0.75;
 
 		var bg:FlxSprite = new FlxSprite(-200, -700).loadGraphic(Paths.image('bg/sacredmass/church1/base-dark', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.3;
 		bg.scale.x = 1.3;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 	}
 
@@ -48,14 +48,14 @@ class Worship extends SongPlayer
 	{
 		if (FlxG.save.data.distractions)
 		{
-			if (gamePlayState.curBeat % 6 == 0)
+			if (gameState.curBeat % 6 == 0)
 			{
 				if (FlxG.save.data.distractions)
 				{
 					trail.visible = true;
 				}
 			}
-			else if (gamePlayState.curBeat % 16 == 0)
+			else if (gameState.curBeat % 16 == 0)
 			{
 				if (FlxG.save.data.distractions)
 					trail.visible = false;
@@ -76,7 +76,7 @@ class Worship extends SongPlayer
 			trail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
 			trail.color = FlxColor.PINK;
 
-			gamePlayState.add(trail);
+			gameState.add(trail);
 			trail.visible = false;
 		}
 	}

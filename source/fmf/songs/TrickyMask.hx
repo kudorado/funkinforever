@@ -23,12 +23,12 @@ class TrickyMask extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.85;
+		gameState.defaultCamZoom = 0.85;
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/clown/red', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var fg:FlxSprite = new FlxSprite();
 		fg.frames =  Paths.getSparrowAtlas('bg/clown/tricky_floor', 'mods');
@@ -39,7 +39,7 @@ class TrickyMask extends SongPlayer
 		fg.x = 150;
 		fg.scale.y = 1.75;
 		fg.scale.x = 1.75;
-		gamePlayState.add(fg);
+		gameState.add(fg);
 
 		clown = new Clown();
 		clown.createStaticBG();

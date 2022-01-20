@@ -20,14 +20,14 @@ class TrickyHell extends TrickyMask
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.5;
+		gameState.defaultCamZoom = 0.5;
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/clown/red', 'mods'));
 		bg.antialiasing = true;
 
 
 		bg.scale.y = 2.5;
 		bg.scale.x = 2.5;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 		
 		var stageFront:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/clown/hellclown/island_but_red', 'mods'));
 
@@ -36,7 +36,7 @@ class TrickyHell extends TrickyMask
 
 		stageFront.scale.x = 3;
 		stageFront.scale.y = 3;
-		gamePlayState.add(stageFront);
+		gameState.add(stageFront);
 
 		clown = new HellClown();
 		clown.createStaticBG();
@@ -92,8 +92,8 @@ class TrickyHell extends TrickyMask
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.y = dad.getMidpoint().y + 250;
-		gamePlayState.targetCamFollow.x = dad.getMidpoint().x;
+		gameState.targetCamFollow.y = dad.getMidpoint().y + 250;
+		gameState.targetCamFollow.x = dad.getMidpoint().x;
 	}
 
 	override function dadNoteEvent(noteData:Note)

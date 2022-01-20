@@ -23,28 +23,28 @@ class Cycles extends SongPlayer
 
     override function loadMap()
     {
-        gamePlayState.defaultCamZoom = 0.8;
+        gameState.defaultCamZoom = 0.8;
 
         var sky:FlxSprite = new FlxSprite(-320, -400).loadGraphic(Paths.image('bg/sonic/LordXStage_1/sky', 'mods'));
         sky.antialiasing = true;
         sky.scale.x = 1;
         sky.scale.y = 1;
         sky.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(sky);
+        gameState.add(sky);
 
         var hills1:FlxSprite = new FlxSprite(-149, -117).loadGraphic(Paths.image('bg/sonic/LordXStage_1/hills1', 'mods'));
         hills1.antialiasing = true;
         hills1.scale.x = 1;
         hills1.scale.y = 1;
         hills1.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(hills1);
+        gameState.add(hills1);
 
         var floor:FlxSprite = new FlxSprite(-149, -117).loadGraphic(Paths.image('bg/sonic/LordXStage_1/floor', 'mods'));
         floor.antialiasing = true;
         floor.scale.x = 1;
         floor.scale.y = 1;
         floor.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(floor);
+        gameState.add(floor);
 
         AddNotKnuckles_Assets();
         //TreeAnimatedMoment();
@@ -55,7 +55,7 @@ class Cycles extends SongPlayer
         tree.scale.x = 1;
         tree.scale.y = 1;
         tree.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(tree);
+        gameState.add(tree);
 
 
         var smallflower:FlxSprite = new FlxSprite(-149, -117).loadGraphic(Paths.image('bg/sonic/LordXStage_1/smallflower', 'mods'));
@@ -63,7 +63,7 @@ class Cycles extends SongPlayer
         smallflower.scale.x = 1;
         smallflower.scale.y = 1;
         smallflower.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(smallflower);
+        gameState.add(smallflower);
 
         var smallflower1:FlxSprite = new FlxSprite(-149, -117).loadGraphic(Paths.image('bg/sonic/LordXStage_1/smallflower', 'mods'));
         smallflower1.antialiasing = true;
@@ -71,14 +71,14 @@ class Cycles extends SongPlayer
         smallflower1.scale.y = 1;
         smallflower1.scrollFactor.set(0.95, 0.95);
         smallflower1.flipX = true;
-        gamePlayState.add(smallflower1);
+        gameState.add(smallflower1);
 
         var smallflowe2:FlxSprite = new FlxSprite(-149, -117).loadGraphic(Paths.image('bg/sonic/LordXStage_1/smallflowe2', 'mods'));
         smallflowe2.antialiasing = true;
         smallflowe2.scale.x = 1;
         smallflowe2.scale.y = 1;
         smallflowe2.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(smallflowe2);
+        gameState.add(smallflowe2);
     }
 
     function AddNotKnuckles_Assets()
@@ -95,7 +95,7 @@ class Cycles extends SongPlayer
         bgAnim.x = 467;
         bgAnim.y = -75;
 
-        gamePlayState.add(bgAnim);
+        gameState.add(bgAnim);
     }
 
     function TreeAnimatedMoment()
@@ -112,7 +112,7 @@ class Cycles extends SongPlayer
         treeAnimatedMoment.x = 271;
         treeAnimatedMoment.y = -40;
 
-        gamePlayState.add(treeAnimatedMoment);
+        gameState.add(treeAnimatedMoment);
     }
 
     function WeirdAssFlower_Assets()
@@ -129,7 +129,7 @@ class Cycles extends SongPlayer
         weirdAssFlower_Assets.x = 57;
         weirdAssFlower_Assets.y = -34;
 
-        gamePlayState.add(weirdAssFlower_Assets);
+        gameState.add(weirdAssFlower_Assets);
     }
 
     override function getDefaultSkin():Skin
@@ -174,8 +174,8 @@ class Cycles extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        gamePlayState.targetCamFollow.y += 150;
-        gamePlayState.defaultCamZoom = 0.9;
+        gameState.targetCamFollow.y += 150;
+        gameState.defaultCamZoom = 0.9;
 
 
     }
@@ -192,7 +192,7 @@ class Cycles extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        gamePlayState.defaultCamZoom = 1;
+        gameState.defaultCamZoom = 1;
     }
 
     override function createGFAnimationOffsets()

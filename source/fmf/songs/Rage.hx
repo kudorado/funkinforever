@@ -19,12 +19,12 @@ class Rage extends Sadness
 
 	override function loadMap()
 	{
-        gamePlayState.defaultCamZoom = 0.85;
+        gameState.defaultCamZoom = 0.85;
 		var bg:FlxSprite = new FlxSprite(157, -426).loadGraphic(Paths.image('bg/blueballs_incident/ragi/B0', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
 		bg.scale.x = 1.2;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
 

@@ -19,20 +19,20 @@ class PlayTime extends SongPlayer
 
 	override function loadMap()
 	{
-        gamePlayState.defaultCamZoom = 0.6;
+        gameState.defaultCamZoom = 0.6;
 		var bg:FlxSprite = new FlxSprite(-669, -362).loadGraphic(Paths.image('bg/huggy_wuggy/factory', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.2;
 		bg.scale.x = 1.2;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
         var bg1:FlxSprite = new FlxSprite(-669, -250).loadGraphic(Paths.image('bg/huggy_wuggy/shadow', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1.2;
 		bg1.scale.x = 1.2;
-		bg1.cameras = [gamePlayState.camHUD];
+		bg1.cameras = [gameState.camHUD];
 
-		gamePlayState.add(bg1);
+		gameState.add(bg1);
 
 
 
@@ -83,18 +83,18 @@ class PlayTime extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x + 150;
-		gamePlayState.targetCamFollow.y -= 100;
-		gamePlayState.defaultCamZoom = 0.75;
+		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x + 150;
+		gameState.targetCamFollow.y -= 100;
+		gameState.defaultCamZoom = 0.75;
 
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		gamePlayState.targetCamFollow.y = 400;
-		gamePlayState.defaultCamZoom = 0.6;
+		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		gameState.targetCamFollow.y = 400;
+		gameState.defaultCamZoom = 0.6;
 
 
 	}

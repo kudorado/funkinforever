@@ -21,19 +21,19 @@ class Annie extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.85;
+		gameState.defaultCamZoom = 0.85;
 		
 		var bg:FlxSprite = new FlxSprite(-400, -200).loadGraphic(Paths.image('garcello/garStagebg', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('garcello/garStage', 'mods'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
-		gamePlayState.add(stageFront);
+		gameState.add(stageFront);
 
 	}
 

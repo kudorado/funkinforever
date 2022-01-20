@@ -26,13 +26,13 @@ class Meltdown extends Sabotage
     override function loadMap()
     {
 
-        gamePlayState.defaultCamZoom = 0.8;
+        gameState.defaultCamZoom = 0.8;
 
         var bg1:FlxSprite = new FlxSprite(0, -300).loadGraphic(Paths.image('bg/impostor/red/polusSky', 'mods'));
         bg1.antialiasing = true;
         bg1.scale.y = 1.4;
         bg1.scale.x = 1.4;
-        gamePlayState.add(bg1);
+        gameState.add(bg1);
 
         
 
@@ -41,7 +41,7 @@ class Meltdown extends Sabotage
         bg3.scale.y = 1;
         bg3.scale.x = 1;
         bg3.scrollFactor.set(0.6,0.6);
-        gamePlayState.add(bg3);
+        gameState.add(bg3);
 
 
         var bg2:FlxSprite = new FlxSprite(200, 150).loadGraphic(Paths.image('bg/impostor/red/polusWarehouse', 'mods'));
@@ -49,7 +49,7 @@ class Meltdown extends Sabotage
         bg2.scale.y = 1;
         bg2.scale.x = 1;
         bg2.scrollFactor.set(0.8,0.8);
-        gamePlayState.add(bg2);
+        gameState.add(bg2);
         
 
         var bg3:FlxSprite = new FlxSprite(-250, 300).loadGraphic(Paths.image('bg/impostor/red/polusHills', 'mods'));
@@ -57,25 +57,25 @@ class Meltdown extends Sabotage
         bg3.scale.y = 1;
         bg3.scale.x = 1;
         bg3.scrollFactor.set(0.8,0.8);
-        gamePlayState.add(bg3);
+        gameState.add(bg3);
 
         var crowd:FlxSprite = new FlxSprite(250, 350).loadGraphic(Paths.image('bg/impostor/red/crowd', 'mods'));
         crowd.antialiasing = true;
         crowd.scale.y = 1;
         crowd.scale.x = 1;
-        gamePlayState.add(crowd);
+        gameState.add(crowd);
 
         var bg4:FlxSprite = new FlxSprite(-0, 600).loadGraphic(Paths.image('bg/impostor/red/polusGround', 'mods'));
         bg4.antialiasing = true;
         bg4.scale.y = 1.4;
         bg4.scale.x = 1.4;
-        gamePlayState.add(bg4);
+        gameState.add(bg4);
 
         var bfdead:FlxSprite = new FlxSprite(900, 750).loadGraphic(Paths.image('bg/impostor/red/bfdead', 'mods'));
         bfdead.antialiasing = true;
         bfdead.scale.y = 1;
         bfdead.scale.x = 1;
-        gamePlayState.add(bfdead);
+        gameState.add(bfdead);
     }
 
 	override function createDadAnimations():Void

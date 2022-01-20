@@ -1,4 +1,4 @@
-package;
+package state;
 import state.*;
 #if windows
 import Discord.DiscordClient;

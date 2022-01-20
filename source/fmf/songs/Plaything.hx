@@ -23,7 +23,7 @@ class Plaything extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.7;
+		gameState.defaultCamZoom = 0.7;
 		var bg:FlxSprite = new FlxSprite(-451, -234).loadGraphic(Paths.image('bg/eteled/glitchhallway', 'mods'));
 		bg.antialiasing = true;
 
@@ -31,7 +31,7 @@ class Plaything extends SongPlayer
 		bg.scale.y = 1.35;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 	}
 

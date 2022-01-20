@@ -50,11 +50,11 @@ class DaddyDearest extends SongPlayer
 
 	override function midSongEventUpdate(curBeat:Int):Void
 	{
-		if (gamePlayState.gfStep())
+		if (gameState.gfStep())
 		{
-			if (GamePlayState.CURRENT_SONG == "bopeebo")
+			if (GameState.CURRENT_SONG == "bopeebo")
 			{
-				switch (GamePlayState.CURRENT_SONG)
+				switch (GameState.CURRENT_SONG)
 				{
 					case 'bopeebo':
 						bopeebooMidSongEvent(curBeat);
@@ -84,7 +84,7 @@ class DaddyDearest extends SongPlayer
 		switch (curBeat)
 		{
 			case 128, 129, 130:
-				gamePlayState.vocals.volume = 0;
+				gameState.vocals.volume = 0;
 		}
 	}
 
@@ -93,17 +93,17 @@ class DaddyDearest extends SongPlayer
 		switch (curBeat)
 		{
 			case 16:
-				gamePlayState.camZooming = true;
-				gamePlayState.gfSpeed = 2;
+				gameState.camZooming = true;
+				gameState.gfSpeed = 2;
 
 			case 48:
-				gamePlayState.gfSpeed = 1;
+				gameState.gfSpeed = 1;
 
 			case 80:
-				gamePlayState.gfSpeed = 2;
+				gameState.gfSpeed = 2;
 				
 			case 112:
-				gamePlayState.gfSpeed = 1;
+				gameState.gfSpeed = 1;
 		}
 	}
 

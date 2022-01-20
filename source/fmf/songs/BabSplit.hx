@@ -27,7 +27,7 @@ class BabSplit extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 
 		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/night/BG1', 'mods'));
 		bg1.antialiasing = true;
@@ -35,14 +35,14 @@ class BabSplit extends SongPlayer
 		bg1.scale.x = 0.5;
 		//bg1.scrollFactor.set(0.9,0.9);
 		
-		gamePlayState.add(bg1);
+		gameState.add(bg1);
 
 		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/night/BG2', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 0.5;
 		bg2.scale.x = 0.5;
 		//bg2.scrollFactor.set(0.9,0.9);
-		gamePlayState.add(bg2);
+		gameState.add(bg2);
 
 
 		bobsipAnim = new FlxSprite(0, 0);
@@ -60,7 +60,7 @@ class BabSplit extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			gamePlayState.add(bobsipAnim);
+			gameState.add(bobsipAnim);
 		}
 
 		
@@ -70,14 +70,14 @@ class BabSplit extends SongPlayer
 		//bg.scrollFactor.set(0.9,0.9);
 		bg.scale.y = 0.75;
 		bg.scale.x = 0.75;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var bg4:FlxSprite = new FlxSprite(-1400, -500).loadGraphic(Paths.image('bg/bab/night/BG4', 'mods'));
 		bg4.antialiasing = true;
 		
 		bg4.scale.y = 0.5;
 		bg4.scale.x = 0.5;
-		gamePlayState.add(bg4);
+		gameState.add(bg4);
 
 		pc = new FlxSprite(0, 0);
 		pc.frames = Paths.getSparrowAtlas('bg/bab/night/pc', 'mods');
@@ -98,7 +98,7 @@ class BabSplit extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			gamePlayState.add(pc);
+			gameState.add(pc);
 		}
 
 		pixcelthing = new FlxSprite(0, 0);
@@ -114,7 +114,7 @@ class BabSplit extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			gamePlayState.add(pixcelthing);
+			gameState.add(pixcelthing);
 		}
 		
 	}
@@ -170,20 +170,20 @@ class BabSplit extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		gamePlayState.targetCamFollow.x -= 300;
-		gamePlayState.targetCamFollow.y -= 100;
+		gameState.targetCamFollow.x -= 300;
+		gameState.targetCamFollow.y -= 100;
 	}
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		gamePlayState.targetCamFollow.x += 200;
+		gameState.targetCamFollow.x += 200;
 	}
 
 	override function dadNoteEvent(noteData:Note)
 	{
 		super.dadNoteEvent(noteData);
-		var lastNote = gamePlayState.lastNote;
+		var lastNote = gameState.lastNote;
 		pc.animation.play(lastNote);
 	}
 }

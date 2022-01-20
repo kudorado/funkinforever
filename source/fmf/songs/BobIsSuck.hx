@@ -22,13 +22,13 @@ class BobIsSuck extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 
 		var bg:FlxSprite = new FlxSprite(-400, -300).loadGraphic(Paths.image('bg/bob/nothappy_sky', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 2;
 		bg.scale.x = 2;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		
 
@@ -39,7 +39,7 @@ class BobIsSuck extends SongPlayer
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
 		stageFront.active = false;
-		gamePlayState.add(stageFront);
+		gameState.add(stageFront);
 
 		ronDie = new FlxSprite(-700, 500).loadGraphic(Paths.image('bg/bob/GoodHeDied', 'mods'));
 		ronDie.antialiasing = true;
@@ -95,7 +95,7 @@ class BobIsSuck extends SongPlayer
 	override function createCharacters()
 	{
 		super.createCharacters();
-		gamePlayState.add(ronDie);
+		gameState.add(ronDie);
 	
 	}
 

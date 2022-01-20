@@ -1,6 +1,6 @@
-package;
+package state;
+
 import reactor.*;
-import state.*;
 
 import flixel.addons.ui.FlxUIText;
 import haxe.zip.Writer;
@@ -98,8 +98,8 @@ class ChartingState extends MusicBeatState
 	{
 		curSection = lastSection;
 
-		if (GamePlayState.SONG != null)
-			_song = GamePlayState.SONG;
+		if (GameState.SONG != null)
+			_song = GameState.SONG;
 		else
 		{
 			_song = {
@@ -137,7 +137,7 @@ class ChartingState extends MusicBeatState
 
 		updateGrid();
 
-		loadSong(_song.song, GamePlayState.playingSong.folder);
+		loadSong(_song.song, GameState.playingSong.folder);
 		Conductor.changeBPM(_song.bpm);
 		Conductor.mapBPMChanges(_song);
 
@@ -146,8 +146,8 @@ class ChartingState extends MusicBeatState
 		leftIcon = new Icon();
 		rightIcon = new Icon();
 
-		GamePlayState.songPlayer.getBFIcon(leftIcon);
-		GamePlayState.songPlayer.getBFIcon(rightIcon);
+		GameState.songPlayer.getBFIcon(leftIcon);
+		GameState.songPlayer.getBFIcon(rightIcon);
 
 		leftIcon.scrollFactor.set(1, 1);
 		rightIcon.scrollFactor.set(1, 1);
@@ -228,7 +228,7 @@ class ChartingState extends MusicBeatState
 
 		var reloadSong:FlxButton = new FlxButton(saveButton.x + saveButton.width + 10, saveButton.y, "Reload Audio", function()
 		{
-			loadSong(_song.song, GamePlayState.playingSong.folder);
+			loadSong(_song.song, GameState.playingSong.folder);
 		});
 
 		var reloadSongJson:FlxButton = new FlxButton(reloadSong.x, saveButton.y + 30, "Reload JSON", function()
@@ -777,10 +777,10 @@ class ChartingState extends MusicBeatState
 		{
 			lastSection = curSection;
 
-			GamePlayState.SONG = _song;
+			GameState.SONG = _song;
 			FlxG.sound.music.stop();
 			vocals.stop();
-			LibraryLoadState.loadAndSwitchState(new GamePlayState());
+			LoadingState.loadAndSwitchState(new GameState());
 		}
 
 		if (FlxG.keys.justPressed.E)
@@ -1301,14 +1301,14 @@ class ChartingState extends MusicBeatState
 
 	function loadJson(song:String):Void
 	{
-		GamePlayState.SONG = Song.loadFromJson(song.toLowerCase(), GamePlayState.playingSong.folder);
-		LibraryLoadState.loadAndSwitchState(new ChartingState());
+		GameState.SONG = Song.loadFromJson(song.toLowerCase(), GameState.playingSong.folder);
+		LoadingState.loadAndSwitchState(new ChartingState());
 	}
 
 	function loadAutosave():Void
 	{
-		GamePlayState.SONG = Song.parseJSONshit(FlxG.save.data.autosave);
-		LibraryLoadState.loadAndSwitchState(new ChartingState());
+		GameState.SONG = Song.parseJSONshit(FlxG.save.data.autosave);
+		LoadingState.loadAndSwitchState(new ChartingState());
 	}
 
 	function autosaveSong():Void

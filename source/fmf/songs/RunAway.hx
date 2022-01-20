@@ -23,7 +23,7 @@ class RunAway extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 		var bg:FlxSprite = new FlxSprite(-750, -408).loadGraphic(Paths.image('bg/impostor_v4/runaway', 'mods'));
 		bg.antialiasing = true;
 
@@ -31,7 +31,7 @@ class RunAway extends SongPlayer
 		bg.scale.y = 1.1;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
     override function getDefaultSkin():Skin
@@ -80,7 +80,7 @@ class RunAway extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowBF();
-        gamePlayState.targetCamFollow.y -= 100;
+        gameState.targetCamFollow.y -= 100;
     }
 
     override function updateCamFollowDad()

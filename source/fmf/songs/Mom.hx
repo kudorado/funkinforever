@@ -1,6 +1,6 @@
 package fmf.songs;
 import reactor.*;
-import ui.*;
+import ui.*; 
 
 import state.*;
 import flixel.util.FlxTimer;
@@ -23,18 +23,18 @@ class Mom extends SongPlayer
 	{
 		var skyBG:FlxSprite = new FlxSprite(-120, -50).loadGraphic(Paths.image('limo/limoSunset', 'week4'));
 		skyBG.scrollFactor.set(0.1, 0.1);
-		gamePlayState.add(skyBG);
+		gameState.add(skyBG);
 
 		var bgLimo:FlxSprite = new FlxSprite(-200, 480);
 		bgLimo.frames = Paths.getSparrowAtlas('limo/bgLimo', 'week4');
 		bgLimo.animation.addByPrefix('drive', "background limo pink", 24);
 		bgLimo.animation.play('drive');
 		bgLimo.scrollFactor.set(0.4, 0.4);
-		gamePlayState.add(bgLimo);
+		gameState.add(bgLimo);
 		if (FlxG.save.data.distractions)
 		{
 			grpLimoDancers = new FlxTypedGroup<BackgroundDancer>();
-			gamePlayState.add(grpLimoDancers);
+			gameState.add(grpLimoDancers);
 
 			for (i in 0...5)
 			{
@@ -46,7 +46,7 @@ class Mom extends SongPlayer
 
 		var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('limo/limoOverlay', 'week4'));
 		overlayShit.alpha = 0.5;
-		gamePlayState.add(overlayShit);
+		gameState.add(overlayShit);
 
 		// var shaderBullshit = new BlendModeEffect(new OverlayShader(), FlxColor.RED);
 
@@ -67,7 +67,7 @@ class Mom extends SongPlayer
 		if (FlxG.save.data.distractions)
 		{
 			resetFastCar();
-			gamePlayState.add(fastCar);
+			gameState.add(fastCar);
 		}
 	}
 
@@ -144,10 +144,10 @@ class Mom extends SongPlayer
 		createBF();
 		createDad();
 
-		gamePlayState.add(gf);
-		gamePlayState.add(limo);
-		gamePlayState.add(dad);
-		gamePlayState.add(bf);
+		gameState.add(gf);
+		gameState.add(limo);
+		gameState.add(dad);
+		gameState.add(bf);
 	}
 
 	function resetFastCar():Void
@@ -192,12 +192,12 @@ class Mom extends SongPlayer
 
 	public override function updateCamFollowDad():Void
 	{
-		gamePlayState.targetCamFollow.y = dad.getMidpoint().y;
+		gameState.targetCamFollow.y = dad.getMidpoint().y;
 	}
 
 	override function updateCamFollowBF():Void
 	{
-		gamePlayState.targetCamFollow.x = bf.getMidpoint().x - 300;
+		gameState.targetCamFollow.x = bf.getMidpoint().x - 300;
 	}
 
 	public override function getDadIcon(icon:Icon)

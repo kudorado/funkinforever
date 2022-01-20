@@ -29,7 +29,7 @@ class TooFest extends SongPlayer
 
     override function loadMap()
     {
-        gamePlayState.defaultCamZoom = 0.7;
+        gameState.defaultCamZoom = 0.7;
 
         var sSKY:FlxSprite = new FlxSprite(-552, -137).loadGraphic(Paths.image('bg/sonic/sanicbg', 'mods'));
         sSKY.antialiasing = true;
@@ -37,7 +37,7 @@ class TooFest extends SongPlayer
         sSKY.active = false;
         sSKY.scale.x = 1.4;
         sSKY.scale.y = 1.4;
-        gamePlayState.add(sSKY);
+        gameState.add(sSKY);
     }
 
     override function getDefaultSkin():Skin
@@ -77,13 +77,13 @@ class TooFest extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        //gamePlayState.targetCamFollow.y -= 150;
+        //gameState.targetCamFollow.y -= 150;
     }
 
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        //gamePlayState.targetCamFollow.y -= 50;
+        //gameState.targetCamFollow.y -= 50;
     }
 
     override function createGFAnimationOffsets()

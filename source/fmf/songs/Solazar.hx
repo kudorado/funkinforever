@@ -23,7 +23,7 @@ class Solazar extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.6;
+		gameState.defaultCamZoom = 0.6;
 		var bg:FlxSprite = new FlxSprite(391, -274).loadGraphic(Paths.image('bg/solazar/The_void', 'mods'));
 		bg.antialiasing = true;
 
@@ -32,7 +32,7 @@ class Solazar extends SongPlayer
 
 		bg.scrollFactor.set(0.1, 0.1);
 		bg.active = false;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-900, -600).loadGraphic(Paths.image('bg/solazar/Void_Front', 'mods'));
 		
@@ -43,7 +43,7 @@ class Solazar extends SongPlayer
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.95, 0.95);
 		stageFront.active = false;
-		gamePlayState.add(stageFront);
+		gameState.add(stageFront);
 	}
 
 	override function getDefaultSkin():Skin
@@ -119,7 +119,7 @@ class Solazar extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		gamePlayState.targetCamFollow.y += 500;
+		gameState.targetCamFollow.y += 500;
 	}
 
 	override function updateCamFollowDad()

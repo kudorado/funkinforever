@@ -4,6 +4,7 @@ import ui.*;
 import reactor.*;
 import controls.*;
 import state.*;
+//shit
 
 import flixel.ui.FlxButton;
 import flixel.addons.editors.ogmo.FlxOgmo3Loader.Point;
@@ -76,9 +77,9 @@ import sys.FileSystem;
 
 using StringTools;
 
-class GamePlayState extends MusicBeatState
+class GameState extends MusicBeatState
 {
-	public static var instance:GamePlayState = null;
+	public static var instance:GameState = null;
 
 	//SONG name in the json file
 	public static var CURRENT_SONG:String;
@@ -708,7 +709,7 @@ class GamePlayState extends MusicBeatState
 
 		createBlackFadeOut();
 
-		LibraryLoadState.hasCachedSong = true;
+		LoadingState.hasCachedSong = true;
 
 		calculateNPS();
 		
@@ -937,7 +938,13 @@ class GamePlayState extends MusicBeatState
 
 	var npsShit:Int;
 
+	public var gfNodSpeed:Float;
 
+	public function updateGFNodSpeed()
+	{
+		var daBeat = (1.0 / (gfSpeed / 60));
+		gfNodSpeed =  1 / daBeat;
+	}
 
 	private function generateSong(dataPath:String):Void
 	{
@@ -1799,7 +1806,7 @@ class GamePlayState extends MusicBeatState
 
 			pauseGame();
 
-			LibraryLoadState.createBlackFadeIn(this,function(){
+			LoadingState.createBlackFadeIn(this,function(){
 				openSubState(new GameOverSubstate(boyfriend().getScreenPosition().x, boyfriend().getScreenPosition().y));
 			}, camHUD, true);
 
@@ -2289,7 +2296,7 @@ class GamePlayState extends MusicBeatState
 		{
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			offsetTesting = false;
-			LibraryLoadState.loadAndSwitchState(new OptionsMenu());
+			LoadingState.loadAndSwitchState(new OptionsMenu());
 			FlxG.save.data.offset = offsetTest;
 		}
 		else
@@ -2360,8 +2367,8 @@ class GamePlayState extends MusicBeatState
 					// FlxTransitionableState.skipNextTransOut = true;
 					prevCamFollow = camFollow;
 					
-					GamePlayState.SONG_NAME = nextSongLowercase;
-					GamePlayState.RAW_SONG_NAME = storyPlaylist[0];
+					GameState.SONG_NAME = nextSongLowercase;
+					GameState.RAW_SONG_NAME = storyPlaylist[0];
 					SONG = Song.loadFromJson(nextSongLowercase + difficulty, playingSong.folder + storyPlaylist[0]);
 				
 					CURRENT_SONG = SONG_NAME;
@@ -2370,7 +2377,7 @@ class GamePlayState extends MusicBeatState
 
 					moveNext();
 
-					// LibraryLoadState.loadAndSwitchState(new GamePlayState());
+					// LoadingState.loadAndSwitchState(new GameState());
 				}
 			}
 			else
@@ -3087,7 +3094,9 @@ class GamePlayState extends MusicBeatState
 					{
 						if (mashViolations != 0)
 							mashViolations--;
-						scoreTxt.color = FlxColor.WHITE;
+
+
+						accuracyTxt.color = FlxColor.WHITE;
 						goodNoteHit(coolNote);
 					}
 				}

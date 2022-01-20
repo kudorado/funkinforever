@@ -37,7 +37,7 @@ class NonsenseTired extends Nonsense
 		super.createCharacters();
 		changeDad('common sense');
 		whiteBG = new FlxSprite(-600, -200).makeGraphic(FlxG.width * 4, FlxG.height * 4, FlxColor.WHITE);
-		gamePlayState.add(whiteBG);
+		gameState.add(whiteBG);
 		whiteBG.alpha = 0;
 		
 	}
@@ -60,19 +60,19 @@ class NonsenseTired extends Nonsense
 		{
 
 			case 60 | 124 | 204 | 235:
-				gamePlayState.defaultCamZoom = 0.8;
+				gameState.defaultCamZoom = 0.8;
 
 			case 61 | 125 | 205 | 236:
 				//shake
 				whiteBG.alpha = 1;
 				FlxTween.tween(whiteBG, {alpha: 0}, 0.25, {});
-				gamePlayState.shakeBig();
+				gameState.shakeBig();
 
 			case 62 | 126 | 147 | 206 | 237:
-				gamePlayState.defaultCamZoom = 0.6;
+				gameState.defaultCamZoom = 0.6;
 
 			case 144:
-				gamePlayState.defaultCamZoom = 0.85;
+				gameState.defaultCamZoom = 0.85;
 				dad.playAnimForce("ohno", 1.166, function()
 				{
 					changeDad("highlights");

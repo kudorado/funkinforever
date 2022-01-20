@@ -21,7 +21,7 @@ class GFTutorial extends Character
 
 	override function update(elapsed:Float)
 	{
-		if (GamePlayState.playAsDad)
+		if (GameState.playAsDad)
 		{
 			bfBehaviour(elapsed);
 		}

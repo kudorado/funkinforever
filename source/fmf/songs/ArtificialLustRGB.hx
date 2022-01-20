@@ -20,7 +20,7 @@ class ArtificialLustRGB extends ArtificialLust
 		bg.antialiasing = true;
 		bg.scale.y = 1;
 		bg.scale.x = 1;
-		//gamePlayState.add(bg);
+		//gameState.add(bg);
 	}
 
 	override function createStage()
@@ -29,7 +29,7 @@ class ArtificialLustRGB extends ArtificialLust
 		stage.antialiasing = true;
 		stage.scale.y = 1;
 		stage.scale.x = 1;
-		//gamePlayState.add(stage);
+		//gameState.add(stage);
 	}
 
 	override function createHeadlight()
@@ -43,7 +43,7 @@ class ArtificialLustRGB extends ArtificialLust
 		headlight.scale.y = 2;
 		headlight.x = 657;
 		headlight.y = -150;
-		//gamePlayState.add(headlight);
+		//gameState.add(headlight);
 	}
 
 	override function createSimp()
@@ -57,13 +57,13 @@ class ArtificialLustRGB extends ArtificialLust
 		simp.scale.y = 1;
 		simp.x = 0;
 		simp.y = 753;
-		//gamePlayState.add(simp);
+		//gameState.add(simp);
 	}
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.6;
-		gamePlayState.defaultCamZoom = camZoomShit;
+		gameState.defaultCamZoom = 0.6;
+		gameState.defaultCamZoom = camZoomShit;
 
 		createBG();
 		createStage();
@@ -94,7 +94,7 @@ class ArtificialLustRGB extends ArtificialLust
 
 		if (FlxG.save.data.distractions)
 		{
-			//gamePlayState.add(max);
+			//gameState.add(max);
 		}
 	}
 
@@ -119,7 +119,7 @@ class ArtificialLustRGB extends ArtificialLust
 
 		if (FlxG.save.data.distractions)
 		{
-			//gamePlayState.add(abel);
+			//gameState.add(abel);
 		}
 	}
 

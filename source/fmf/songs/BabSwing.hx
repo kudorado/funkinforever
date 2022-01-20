@@ -28,19 +28,19 @@ class BabSwing extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 
 		var bg1:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/BG1', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 0.5;
 		bg1.scale.x = 0.5;
-		gamePlayState.add(bg1);
+		gameState.add(bg1);
 
 		var bg2:FlxSprite = new FlxSprite(-1200, -500).loadGraphic(Paths.image('bg/bab/sunset/BG2', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 0.5;
 		bg2.scale.x = 0.5;
-		gamePlayState.add(bg2);
+		gameState.add(bg2);
 
 		bgAnim = new FlxSprite(0, 0);
 		bgAnim.frames = Paths.getSparrowAtlas('bg/bab/sunset/femboy_and_edgy', 'mods');
@@ -57,7 +57,7 @@ class BabSwing extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			gamePlayState.add(bgAnim);
+			gameState.add(bgAnim);
 		}
 
 		bgAnim2 = new FlxSprite(0, 0);
@@ -74,7 +74,7 @@ class BabSwing extends SongPlayer
 
 		if (FlxG.save.data.distractions)
 		{
-			gamePlayState.add(bgAnim2);
+			gameState.add(bgAnim2);
 		}
 
 		var bg:FlxSprite = new FlxSprite(-560, -140).loadGraphic(Paths.image('bg/bab/sunset/BG3', 'mods'));
@@ -82,7 +82,7 @@ class BabSwing extends SongPlayer
 		bg.scrollFactor.set(0.9,0.9);
 		bg.scale.y = 0.75;
 		bg.scale.x = 0.75;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		
 
@@ -137,14 +137,14 @@ class BabSwing extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		gamePlayState.targetCamFollow.x -= 200;
-		gamePlayState.targetCamFollow.y -= 100;
+		gameState.targetCamFollow.x -= 200;
+		gameState.targetCamFollow.y -= 100;
 	}
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		gamePlayState.targetCamFollow.x += 200;
+		gameState.targetCamFollow.x += 200;
 	}
 
 }

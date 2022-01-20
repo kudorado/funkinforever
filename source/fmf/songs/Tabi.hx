@@ -45,15 +45,15 @@ class Tabi extends SongPlayer
 
     override function loadMap()
     {
-        gamePlayState.defaultCamZoom = 0.7;
+        gameState.defaultCamZoom = 0.7;
         var bg:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('bg/tabi/normal_stage', 'mods'));
         bg.antialiasing = true;
         bg.scrollFactor.set(0.95, 0.95);
 
-        gamePlayState.add(bg);
+        gameState.add(bg);
 
         #if !mobile
-        // GamePlayState.songOffset = -500;
+        // GameState.songOffset = -500;
         #end
     }
 
@@ -102,7 +102,7 @@ class Tabi extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowBF();
-        gamePlayState.targetCamFollow.y -= 50;
+        gameState.targetCamFollow.y -= 50;
             
     }
 
@@ -111,7 +111,7 @@ class Tabi extends SongPlayer
         var sumtable:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('bg/tabi/sumtable', 'mods'));
         sumtable.antialiasing = true;
         sumtable.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(sumtable);
+        gameState.add(sumtable);
     }
 
     public override function getDadIcon(icon:Icon)

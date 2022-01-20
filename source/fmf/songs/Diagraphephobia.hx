@@ -23,7 +23,7 @@ class Diagraphephobia extends DreamOfPeace
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.7;
+		gameState.defaultCamZoom = 0.7;
 		var bg:FlxSprite = new FlxSprite(-451, -234).loadGraphic(Paths.image('bg/eteled/corruptback', 'mods'));
 		bg.antialiasing = true;
 
@@ -31,7 +31,7 @@ class Diagraphephobia extends DreamOfPeace
 		bg.scale.y = 1.35;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 
 
@@ -49,7 +49,7 @@ class Diagraphephobia extends DreamOfPeace
 		bg1.scale.x = 1.6;
 		bg1.scrollFactor.set(0.95, 0.95);
 		bg1.animation.play('idle');
-		gamePlayState.add(bg1);
+		gameState.add(bg1);
 
 	}
 

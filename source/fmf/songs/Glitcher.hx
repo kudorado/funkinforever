@@ -19,18 +19,18 @@ class Glitcher extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.85;
+		gameState.defaultCamZoom = 0.85;
 
 		var bg:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/hex/glitcher/stageback', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 2;
 		bg.scale.x = 2;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.y = dad.getGraphicMidpoint().y - 125;
+		gameState.targetCamFollow.y = dad.getGraphicMidpoint().y - 125;
 	}
 
 	override function createDadAnimations():Void

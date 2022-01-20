@@ -25,7 +25,7 @@ class Whitty extends SongPlayer
 		bg.scale.x = 1.3;
 		bg.scale.y = 1.3;
 		bg.scrollFactor.set(0.9, 0.9);
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('bg/whitty/whittyFront', "mods"));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
@@ -33,7 +33,7 @@ class Whitty extends SongPlayer
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
 		stageFront.active = false;
-		gamePlayState.add(stageFront);
+		gameState.add(stageFront);
 
 	}
 

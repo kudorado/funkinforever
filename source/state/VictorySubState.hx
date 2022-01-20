@@ -1,5 +1,10 @@
 package state;
+
 import state.*;
+import ui.*;
+
+
+
 import ui.Controller;
 import ui.FlxVirtualPad;
 import extension.admob.AdMob;
@@ -35,7 +40,7 @@ class VictorySubState extends MusicBeatSubstate
 
         super();
 
-        GamePlayState.instance.pauseGame();
+        GameState.instance.pauseGame();
 
         pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast', 'shared'), true, true);
 		pauseMusic.volume = 0;
@@ -74,7 +79,7 @@ class VictorySubState extends MusicBeatSubstate
 
 
         var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
-        levelInfo.text += GamePlayState.CURRENT_SONG.toUpperCase();
+        levelInfo.text += GameState.CURRENT_SONG.toUpperCase();
         levelInfo.scrollFactor.set();
         levelInfo.setFormat(Paths.font("vcr.ttf"), 32);
         levelInfo.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
@@ -120,9 +125,9 @@ class VictorySubState extends MusicBeatSubstate
         cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
         Controller.init(this, UP_DOWN, A);
-        Controller._pad.cameras = [GamePlayState.instance.camHUD];
+        Controller._pad.cameras = [GameState.instance.camHUD];
 
-		LibraryLoadState.createBlackFadeOut(this, GamePlayState.instance.camHUD);
+		LoadingState.createBlackFadeOut(this, GameState.instance.camHUD);
 
     }
 
@@ -152,35 +157,35 @@ class VictorySubState extends MusicBeatSubstate
             switch (daSelected)
             {
                 case "Next Song":
-					GamePlayState.instance.gameNa();
+					GameState.instance.gameNa();
                     AdMob.showInterstitial(60);
 
-                    LibraryLoadState.createBlackFadeIn(this, function()
+                    LoadingState.createBlackFadeIn(this, function()
 					{
-                        LibraryLoadState.loadAndSwitchState(new GamePlayState(), true);
-					}, GamePlayState.instance.camHUD);
+                        LoadingState.loadAndSwitchState(new GameState(), true);
+					}, GameState.instance.camHUD);
 				          
 
 				case 'Customization':
-                    GamePlayState.instance.gameNa();
+                    GameState.instance.gameNa();
                     AdMob.showInterstitial(60);
 
-                    LibraryLoadState.createBlackFadeIn(this, function()
+                    LoadingState.createBlackFadeIn(this, function()
 					{
                         FlxG.switchState(new SelectionState());
-					}, GamePlayState.instance.camHUD);
+					}, GameState.instance.camHUD);
 
                 case "Exit to menu":
-					GamePlayState.instance.gameNa();
+					GameState.instance.gameNa();
                     AdMob.showInterstitial(60);
 					// FlxG.sound.play(Paths.music('gameOverEnd'));
-					LibraryLoadState.createBlackFadeIn(this, function()
+					LoadingState.createBlackFadeIn(this, function()
 					{
-						if (GamePlayState.isStoryMode)
+						if (GameState.isStoryMode)
 							FlxG.switchState(new StoryState());
 						else
 							FlxG.switchState(new FreePlayState());
-					}, GamePlayState.instance.camHUD);
+					}, GameState.instance.camHUD);
 
             }
 

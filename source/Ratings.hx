@@ -9,13 +9,13 @@ class Ratings
 		if(FlxG.save.data.botplay)
 			ranking = "BotPlay";
 
-        if (GamePlayState.misses == 0 && GamePlayState.bads == 0 && GamePlayState.shits == 0 && GamePlayState.goods == 0) // Marvelous (SICK) Full Combo
+        if (GameState.misses == 0 && GameState.bads == 0 && GameState.shits == 0 && GameState.goods == 0) // Marvelous (SICK) Full Combo
             ranking = "(MFC)";
-        else if (GamePlayState.misses == 0 && GamePlayState.bads == 0 && GamePlayState.shits == 0 && GamePlayState.goods >= 1) // Good Full Combo (Nothing but Goods & Sicks)
+        else if (GameState.misses == 0 && GameState.bads == 0 && GameState.shits == 0 && GameState.goods >= 1) // Good Full Combo (Nothing but Goods & Sicks)
             ranking = "(GFC)";
-        else if (GamePlayState.misses == 0) // Regular FC
+        else if (GameState.misses == 0) // Regular FC
             ranking = "(FC)";
-        else if (GamePlayState.misses < 10) // Single Digit Combo Breaks
+        else if (GameState.misses < 10) // Single Digit Combo Breaks
             ranking = "(SDCB)";
         else
             ranking = "(Clear)";
@@ -135,7 +135,7 @@ class Ratings
         return 
         (FlxG.save.data.npsDisplay ? "NPS: " + nps + " (Max " + maxNPS + ")" + (!FlxG.save.data.botplay ? " | " : "") : "") + (!FlxG.save.data.botplay ?	// NPS Toggle
         "Score:" + (Conductor.safeFrames != 10 ? score + " (" + scoreDef + ")" : "" + score) + 									// Score
-        " | Combo Breaks:" + GamePlayState.misses + 																				// Misses/Combo Breaks
+        " | Combo Breaks:" + GameState.misses + 																				// Misses/Combo Breaks
         " | Accuracy:" + (FlxG.save.data.botplay ? "N/A" : HelperFunctions.truncateFloat(accuracy, 2) + " %") +  				// Accuracy
         " | " + GenerateLetterRank(accuracy) : ""); 																			// Letter Rank
     }

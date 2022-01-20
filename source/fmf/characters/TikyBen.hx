@@ -22,7 +22,7 @@ class TikyBen extends TikyHell
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		defaultCamZoom = gamePlayState.defaultCamZoom;
+		defaultCamZoom = gameState.defaultCamZoom;
 
 		animation.addByPrefix('idle', 'Phase 3 Tricky Idle0', 24, false);
 		animation.addByPrefix('singUP', 'Proper Up0', 24, false);
@@ -45,10 +45,10 @@ class TikyBen extends TikyHell
 		// this.x = largePos.x;
 		// this.y = largePos.y;
 
-		// gamePlayState.targetCamFollow.y = this.getMidpoint().y + 250;
-		// gamePlayState.targetCamFollow.x = this.getMidpoint().x;
+		// gameState.targetCamFollow.y = this.getMidpoint().y + 250;
+		// gameState.targetCamFollow.x = this.getMidpoint().x;
 
-		// gamePlayState.defaultCamZoom = 0.25;
+		// gameState.defaultCamZoom = 0.25;
 	}
 	
 

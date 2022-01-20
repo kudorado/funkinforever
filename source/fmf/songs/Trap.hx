@@ -40,7 +40,7 @@ class Trap extends Trueform
 	{
 		super.loadMap();
 
-		gamePlayState.defaultCamZoom = 0.9;
+		gameState.defaultCamZoom = 0.9;
 
 		hole = new FlxSprite(-650, 600);
 		hole.loadGraphic(Paths.image('bg/trueform/sky/gfshit', 'mods'), true, 512, 512);
@@ -64,7 +64,7 @@ class Trap extends Trueform
 
 		bg.y += 250;
 
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 	}
 

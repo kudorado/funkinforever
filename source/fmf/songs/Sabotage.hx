@@ -26,7 +26,7 @@ class Sabotage extends SussusMoogus
 	override function loadMap()
 	{
         super.loadMap();
-		gamePlayState.defaultCamZoom = 0.8;
+		gameState.defaultCamZoom = 0.8;
 	}
 
 	override function createGFAnimationOffsets()

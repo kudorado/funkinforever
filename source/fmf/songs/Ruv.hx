@@ -20,28 +20,28 @@ class Ruv extends SongPlayer
 	override function loadMap()
 	{
 
-		gamePlayState.defaultCamZoom = 0.75;
+		gameState.defaultCamZoom = 0.75;
 
 		var bg:FlxSprite = new FlxSprite(-200, -700).loadGraphic(Paths.image('bg/sacredmass/church2/base', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.3;
 		bg.scale.x = 1.3;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var bg2:FlxSprite = new FlxSprite(-200, -700).loadGraphic(Paths.image('bg/sacredmass/church2/pillarbroke', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 1.3;
 		bg2.scale.x = 1.3;
-		gamePlayState.add(bg2);
+		gameState.add(bg2);
 
 	}
 	override function dadNoteEvent(noteData:Note)
 	{
-		gamePlayState.shakeNormal();
-		if(gamePlayState.daTutorial)
-			GamePlayState.songPlayer.dad.playAnimForce("scared", 0.5);
+		gameState.shakeNormal();
+		if(gameState.daTutorial)
+			GameState.songPlayer.dad.playAnimForce("scared", 0.5);
 		else
-			GamePlayState.songPlayer.gf.playAnimForce("scared", 0.5);
+			GameState.songPlayer.gf.playAnimForce("scared", 0.5);
 	}
 
 

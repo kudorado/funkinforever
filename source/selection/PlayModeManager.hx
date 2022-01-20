@@ -45,22 +45,22 @@ class PlayModeManager
 			case 0:
 				FlxG.save.data.musicListening = false;
 				FlxG.save.data.botplay = false;
-				GamePlayState.playAsDad = false;
+				GameState.playAsDad = false;
 
 			case 1:
 				FlxG.save.data.musicListening = false;
 				FlxG.save.data.botplay = false;
-				GamePlayState.playAsDad = true;
+				GameState.playAsDad = true;
 
 			case 2:
 				FlxG.save.data.musicListening = false;
 				FlxG.save.data.botplay = true;
-				GamePlayState.playAsDad = false;
+				GameState.playAsDad = false;
 
 			case 3:
 				FlxG.save.data.botplay = true;
 				FlxG.save.data.musicListening = true;
-				GamePlayState.playAsDad = false;
+				GameState.playAsDad = false;
 
 		}
 

@@ -19,24 +19,24 @@ class FirstTown extends SongPlayer
 
 	override function loadMap()
 	{
-        gamePlayState.defaultCamZoom = 0.5;
+        gameState.defaultCamZoom = 0.5;
 		var bg:FlxSprite = new FlxSprite(311, -378).loadGraphic(Paths.image('bg/camellia/BG_CITY', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.3;
 		bg.scale.x = 1.3;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var bg1:FlxSprite = new FlxSprite(309, -267).loadGraphic(Paths.image('bg/camellia/BG_WALL', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1.4;
 		bg1.scale.x = 1.4;
-		gamePlayState.add(bg1);
+		gameState.add(bg1);
 
         var bg2:FlxSprite = new FlxSprite(309, -100).loadGraphic(Paths.image('bg/camellia/FG_Floor', 'mods'));
 		bg2.antialiasing = true;
 		bg2.scale.y = 1.4;
 		bg2.scale.x = 1.4;
-		gamePlayState.add(bg2);
+		gameState.add(bg2);
 	}
 
 
@@ -86,15 +86,15 @@ class FirstTown extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
-		gamePlayState.targetCamFollow.y = 360;
+		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x + 120;
+		gameState.targetCamFollow.y = 360;
 
 	}
 
 	override function updateCamFollowDad()
 	{
-		gamePlayState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
-		gamePlayState.targetCamFollow.y = 360;
+		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
+		gameState.targetCamFollow.y = 360;
 
 	}
 

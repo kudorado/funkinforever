@@ -1,6 +1,7 @@
 package;
 import state.*;
 import selection.*;
+import ui.*;
 
 import lime.app.Application;
 import lime.system.DisplayMode;
@@ -438,7 +439,7 @@ class CustomControlOption extends Option
     public override function press():Bool
     {
         OptionsMenu.instance.lockState();
-        LibraryLoadState.createBlackFadeIn(OptionsMenu.instance, function()
+        LoadingState.createBlackFadeIn(OptionsMenu.instance, function()
         {
             FlxG.switchState(new CustomControlsState());
         });
@@ -936,7 +937,7 @@ class CustomizationOption extends Option
     public override function press():Bool
     {
       
-        LibraryLoadState.loadAndSwitchState(new SelectionState());
+        LoadingState.loadAndSwitchState(new SelectionState());
         return true;
     }
 
@@ -957,7 +958,7 @@ class PlaymodeOption extends Option
     public override function press():Bool
     {
       
-        LibraryLoadState.loadAndSwitchState(new SelectionState());
+        LoadingState.loadAndSwitchState(new SelectionState());
         return true;
     }
 
@@ -982,13 +983,13 @@ class OffsetMenu extends Option
         //KODURADO//@notrace("switch");
         var poop:String = Highscore.formatSong("Tutorial", 1);
 
-        GamePlayState.SONG = Song.loadFromJson(poop, "Tutorial");
-        GamePlayState.isStoryMode = false;
-        GamePlayState.storyDifficulty = 0;
-        GamePlayState.storyWeek = 0;
-        GamePlayState.offsetTesting = true;
-        //KODURADO//@notrace('CUR WEEK' + GamePlayState.storyWeek);
-        LibraryLoadState.loadAndSwitchState(new GamePlayState());
+        GameState.SONG = Song.loadFromJson(poop, "Tutorial");
+        GameState.isStoryMode = false;
+        GameState.storyDifficulty = 0;
+        GameState.storyWeek = 0;
+        GameState.offsetTesting = true;
+        //KODURADO//@notrace('CUR WEEK' + GameState.storyWeek);
+        LoadingState.loadAndSwitchState(new GameState());
         return false;
     }
 

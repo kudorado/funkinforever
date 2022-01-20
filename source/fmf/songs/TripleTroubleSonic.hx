@@ -23,35 +23,35 @@ class TripleTroubleSonic extends SongPlayer
 
     override function loadMap()
     {
-        gamePlayState.defaultCamZoom = 0.85;
+        gameState.defaultCamZoom = 0.85;
 
         var sky:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/Phase3/Glitch', 'mods'));
         sky.antialiasing = true;
         sky.scale.x = 1;
         sky.scale.y = 1;
         sky.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(sky);
+        gameState.add(sky);
 
         var backtrees:FlxSprite = new FlxSprite(-168, -141).loadGraphic(Paths.image('bg/sonic/Phase3/Trees2', 'mods'));
         backtrees.antialiasing = true;
         backtrees.scale.x = 1;
         backtrees.scale.y = 1;
         backtrees.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(backtrees);
+        gameState.add(backtrees);
 
         var trees:FlxSprite = new FlxSprite(-324, -150).loadGraphic(Paths.image('bg/sonic/Phase3/Trees', 'mods'));
         trees.antialiasing = true;
         trees.scale.x = 1;
         trees.scale.y = 1;
         trees.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(trees);
+        gameState.add(trees);
 
         var Grass:FlxSprite = new FlxSprite(-324, -150).loadGraphic(Paths.image('bg/sonic/Phase3/Grass', 'mods'));
         Grass.antialiasing = true;
         Grass.scale.x = 1;
         Grass.scale.y = 1;
         Grass.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(Grass);
+        gameState.add(Grass);
 
     }
 
@@ -100,8 +100,8 @@ class TripleTroubleSonic extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        gamePlayState.targetCamFollow.y += 150;
-        gamePlayState.defaultCamZoom = 0.9;
+        gameState.targetCamFollow.y += 150;
+        gameState.defaultCamZoom = 0.9;
 
 
     }
@@ -118,7 +118,7 @@ class TripleTroubleSonic extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        gamePlayState.defaultCamZoom = 1;
+        gameState.defaultCamZoom = 1;
     }
 
     override function createGFAnimationOffsets()

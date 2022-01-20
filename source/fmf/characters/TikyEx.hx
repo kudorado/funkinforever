@@ -68,7 +68,7 @@ class TikyEx extends TikyMask
 
 		hole.scale.y = 1.5;
 		hole.scale.x = 1;
-		gamePlayState.add(hole);
+		gameState.add(hole);
 	}
 
 	override function noteEventBF(noteData:Note)

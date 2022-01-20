@@ -83,7 +83,7 @@ class ControlItem extends Item
 	{
 		if (isCustom())
 		{
-			LibraryLoadState.createBlackFadeIn(SelectionState.instance, function()
+			LoadingState.createBlackFadeIn(SelectionState.instance, function()
 			{
 				FlxG.switchState(new CustomControlsState());
 			});

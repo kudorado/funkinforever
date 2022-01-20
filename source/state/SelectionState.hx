@@ -369,7 +369,7 @@ class SelectionState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
-			if (GamePlayState.isStoryMode)
+			if (GameState.isStoryMode)
 			{
 				FlxG.switchState(new StoryState());
 			}
@@ -394,9 +394,9 @@ class SelectionState extends MusicBeatState
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
-				LibraryLoadState.loadWeekSplash(this, function()
+				LoadingState.loadWeekSplash(this, function()
 				{
-					FlxG.switchState(new GamePlayState());
+					FlxG.switchState(new GameState());
 				});
 			});
 		}

@@ -37,7 +37,7 @@ class GFSus extends Boyfriend
 	override function noteEventBF(noteData:Note)
 	{
 		super.noteEventBF(noteData);
-		gamePlayState.targetCamFollow.y = this.getMidpoint().y - 150;
+		gameState.targetCamFollow.y = this.getMidpoint().y - 150;
 	}
 
 	// create animation offset for BF

@@ -23,14 +23,14 @@ class SunshineSonic extends SongPlayer
 
     override function loadMap()
     {
-        gamePlayState.defaultCamZoom = 0.8;
+        gameState.defaultCamZoom = 0.8;
 
         var sky:FlxSprite = new FlxSprite(-147, -153).loadGraphic(Paths.image('bg/sonic/TailsBG', 'mods'));
         sky.antialiasing = true;
         sky.scale.x = 1;
         sky.scale.y = 1;
         sky.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(sky);
+        gameState.add(sky);
     }
 
     override function getDefaultSkin():Skin
@@ -81,8 +81,8 @@ class SunshineSonic extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        gamePlayState.targetCamFollow.y += 150;
-        gamePlayState.defaultCamZoom = 0.9;
+        gameState.targetCamFollow.y += 150;
+        gameState.defaultCamZoom = 0.9;
 
 
     }
@@ -99,7 +99,7 @@ class SunshineSonic extends SongPlayer
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        gamePlayState.defaultCamZoom = 1;
+        gameState.defaultCamZoom = 1;
     }
 
     override function createGFAnimationOffsets()

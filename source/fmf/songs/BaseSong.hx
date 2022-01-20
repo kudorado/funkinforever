@@ -1,9 +1,11 @@
 package fmf.songs;
+
 import reactor.*;
 import ui.*;
 import state.*;
 import selection.*;
-
+import fmf.skins.*;
+import fmf.vfx.*;
 
 import flixel.FlxBasic;
 import Options.PcOption;
@@ -11,8 +13,7 @@ import Options.VFXOption;
 import Options.SkinOption;
 import Options.DFJKOption;
 import flixel.system.debug.interaction.tools.Transform;
-import fmf.skins.*;
-import fmf.vfx.*;
+
 import MenuCharacter.CharacterSetting;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -36,9 +37,9 @@ class BaseSong
 
 	// characters shit
 	public var bf:PlayableCharacter;
-	public var gamePlayState(get, never):GamePlayState;
-	public inline function get_gamePlayState()
-		return GamePlayState.instance;
+	public var gameState(get, never):GameState;
+	public inline function get_gameState()
+		return GameState.instance;
 	
 	public var gf:Character;
 	public var dad:Character;
@@ -102,12 +103,12 @@ class BaseSong
 	// what map should we load
 	function loadMap():Void
 	{
-		gamePlayState.defaultCamZoom = 0.9;
+		gameState.defaultCamZoom = 0.9;
 		var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
 		bg.active = false;
-		gamePlayState.add(bg);
+		gameState.add(bg);
 
 		var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront'));
 		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
@@ -115,7 +116,7 @@ class BaseSong
 		stageFront.antialiasing = true;
 		stageFront.scrollFactor.set(0.9, 0.9);
 		stageFront.active = false;
-		gamePlayState.add(stageFront);
+		gameState.add(stageFront);
 
 		var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
 		stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
@@ -124,7 +125,7 @@ class BaseSong
 		stageCurtains.scrollFactor.set(1.3, 1.3);
 		stageCurtains.active = false;
 
-		gamePlayState.add(stageCurtains);
+		gameState.add(stageCurtains);
 	}
 
 	// what character should we create
@@ -136,13 +137,13 @@ class BaseSong
 
 		gf.scrollFactor.set(0.95, 0.95);
 
-		gamePlayState.add(gf);
-		gamePlayState.add(dad);
-		gamePlayState.add(bf);
+		gameState.add(gf);
+		gameState.add(dad);
+		gameState.add(bf);
 
 		bf.characterAddedEvent();
 
-		if (GamePlayState.isStoryMode)
+		if (GameState.isStoryMode)
 			createStoryBF();
 	}
 
@@ -274,7 +275,7 @@ class BaseSong
 
 	private function switchDad(song:SongPlayer, createDad:Bool = true, destroyOldDad:Bool = true)
 	{
-		gamePlayState.remove(dad);
+		gameState.remove(dad);
 
 		if(destroyOldDad)
 			dad.destroy();
@@ -286,8 +287,8 @@ class BaseSong
 		dad = song.dad;
 		
 		
-		gamePlayState.add(dad);
-		dad.playAnim(gamePlayState.lastNote, true);
+		gameState.add(dad);
+		dad.playAnim(gameState.lastNote, true);
 
 	}
 
@@ -295,12 +296,12 @@ class BaseSong
 	{
 		if (bf != null)
 		{
-			gamePlayState.remove(bf);
+			gameState.remove(bf);
 			bf.destroy();
 		}
 
 		this.bf = pc;
-		gamePlayState.add(bf);
+		gameState.add(bf);
 	}
 
 	private function changePc(pcName:String)
@@ -356,7 +357,7 @@ class BaseSong
 
 	public function add(obj:FlxBasic)
 	{
-		gamePlayState.add(obj);
+		gameState.add(obj);
 	}
 
 	private function createBFAnimationOffsets():Void
@@ -369,18 +370,18 @@ class BaseSong
 	// dialogue handle
 	public function createDialogue(callback:Void->Void):Void
 	{
-		var path = GamePlayState.CURRENT_SONG + '/' + GamePlayState.CURRENT_SONG + '-dialogue';
-		dialogue = CoolUtil.coolTextFile(Paths.txt(GamePlayState.playingSong.folder + path));
+		var path = GameState.CURRENT_SONG + '/' + GameState.CURRENT_SONG + '-dialogue';
+		dialogue = CoolUtil.coolTextFile(Paths.txt(GameState.playingSong.folder + path));
 		dialogueBox = new DialogueBox(false, dialogue);
 		dialogueBox.scrollFactor.set();
 		dialogueBox.finishThing = callback;
-		dialogueBox.cameras = [gamePlayState.camHUD];
+		dialogueBox.cameras = [gameState.camHUD];
 		//@notrace("Create dialogue at path: " + path);
 	}
 
 	public function showDialogue():Void
 	{
-		gamePlayState.add(dialogueBox);
+		gameState.add(dialogueBox);
 		//@notrace('whee mai dialgue siht!');
 	}
 
@@ -391,13 +392,13 @@ class BaseSong
 	// show ready, set, go image and sound
 	public function startCountdown():Void
 	{
-		gamePlayState.talking = false;
-		gamePlayState.startedCountdown = true;
+		gameState.talking = false;
+		gameState.startedCountdown = true;
 		Conductor.songPosition = 0;
 		Conductor.songPosition -= Conductor.crochet * 5;
 
 		var swagCounter:Int = 0;
-		gamePlayState.startTimer = new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
+		gameState.startTimer = new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
 		{
 			dad.dance();
 			gf.dance();
@@ -433,7 +434,7 @@ class BaseSong
 		readySprite.scrollFactor.set();
 		readySprite.updateHitbox();
 		readySprite.screenCenter();
-		gamePlayState.add(readySprite);
+		gameState.add(readySprite);
 		FlxTween.tween(readySprite, {y: readySprite.y += 100, alpha: 0}, Conductor.crochet / 1000, {
 			ease: FlxEase.cubeInOut,
 			onComplete: function(twn:FlxTween)
@@ -450,7 +451,7 @@ class BaseSong
 		setSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 		setSprite.scrollFactor.set();
 		setSprite.screenCenter();
-		gamePlayState.add(setSprite);
+		gameState.add(setSprite);
 		FlxTween.tween(setSprite, {y: setSprite.y += 100, alpha: 0}, Conductor.crochet / 1000, {
 			ease: FlxEase.cubeInOut,
 			onComplete: function(twn:FlxTween)
@@ -468,7 +469,7 @@ class BaseSong
 		goSprite.scrollFactor.set();
 		goSprite.updateHitbox();
 		goSprite.screenCenter();
-		gamePlayState.add(goSprite);
+		gameState.add(goSprite);
 
 		FlxTween.tween(goSprite, {y: goSprite.y += 100, alpha: 0}, Conductor.crochet / 1000, {
 			ease: FlxEase.cubeInOut,
@@ -479,7 +480,7 @@ class BaseSong
 		});
 
 		FlxG.sound.play(Paths.sound('introGo' + introType()), 0.6);
-		gamePlayState.isGameStarted = true;
+		gameState.isGameStarted = true;
 	}
 
 	//--------------------------------------------------------------------------------------------------------
@@ -576,8 +577,8 @@ class BaseSong
 	// camera follow initalize
 	public function applyCamPosition():Void
 	{
-		gamePlayState.camFollow = new FlxObject(0, 0, 1, 1);
-		gamePlayState.setCamFollowPosition(camPos.x, camPos.y);
+		gameState.camFollow = new FlxObject(0, 0, 1, 1);
+		gameState.setCamFollowPosition(camPos.x, camPos.y);
 	}
 
 	//--------------------------------------------------------------------------------------------------------

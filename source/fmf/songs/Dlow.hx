@@ -22,7 +22,7 @@ class Dlow extends SongPlayer
 
 	override function loadMap()
 	{
-		gamePlayState.defaultCamZoom = 0.7;
+		gameState.defaultCamZoom = 0.7;
 		var bg:FlxSprite = new FlxSprite(-540, -115).loadGraphic(Paths.image('bg/impostor_v4/airship_1', 'mods'));
 		bg.antialiasing = true;
 
@@ -30,7 +30,7 @@ class Dlow extends SongPlayer
 		bg.scale.y = 1.35;
 
 		bg.scrollFactor.set(0.95, 0.95);
-		gamePlayState.add(bg);
+		gameState.add(bg);
 	}
 
     override function getDefaultSkin():Skin

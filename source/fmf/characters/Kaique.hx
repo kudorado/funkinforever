@@ -25,7 +25,7 @@ class Kaique extends TikyMask
 	// create animation for BF
 	public override function createAnimations():Void
 	{
-		defaultCamZoom = gamePlayState.defaultCamZoom;
+		defaultCamZoom = gameState.defaultCamZoom;
 
 		animation.addByPrefix('idle', 'BF idle dance', 24, false);
 		animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
@@ -47,11 +47,11 @@ class Kaique extends TikyMask
 		if (FlxG.random.bool(35) && !clown.spookyRendered && !noteData.isSustainNote) // create spooky text :flushed:
 			clown.noteEvent(noteData, x, y);
 
-		gamePlayState.shakeMinimal();
+		gameState.shakeMinimal();
 
 
-		if(gamePlayState.curBeat % 6 == 0)
-			GamePlayState.songPlayer.gf.playAnimForce("cheer", 0.1);
+		if(gameState.curBeat % 6 == 0)
+			GameState.songPlayer.gf.playAnimForce("cheer", 0.1);
 
 		super.noteEventBF(noteData);
 		
@@ -59,10 +59,10 @@ class Kaique extends TikyMask
 
 	override function noteEventDad(noteData:Note)
 	{
-		if (gamePlayState.bfTurn)
+		if (gameState.bfTurn)
 			return;
 
-		gamePlayState.defaultCamZoom = defaultCamZoom;
+		gameState.defaultCamZoom = defaultCamZoom;
 
 		super.noteEventDad(noteData);
 	}

@@ -38,7 +38,7 @@ class KaiqueClown extends Clown
 		tstatic.animation.play('static');
 
 		tstatic.alpha = 0;
-		gamePlayState.add(tstatic);
+		gameState.add(tstatic);
 	}
 
 	public override function createSpookyText(text:String, x:Float = -1111111111111, y:Float = -1111111111111):Void
@@ -46,7 +46,7 @@ class KaiqueClown extends Clown
 
 		var col:FlxColor = new FlxRandom().color();
 
-		spookySteps = gamePlayState.curStep;
+		spookySteps = gameState.curStep;
 		spookyRendered = true;
 		tstatic.alpha = 0.5;
 		tstatic.color = col;
@@ -58,7 +58,7 @@ class KaiqueClown extends Clown
 		spookyText.bold = true;
 		spookyText.text = text;
 
-		gamePlayState.add(spookyText);
+		gameState.add(spookyText);
 	}
 
 }
