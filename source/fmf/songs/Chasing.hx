@@ -22,28 +22,28 @@ class Chasing extends SongPlayer
 
     override function loadMap()
     {
-        gamePlayState.defaultCamZoom = 0.7;
+        gameState.defaultCamZoom = 0.8;
 
-        var sky:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/tails/happy/SKY', 'mods'));
+        var sky:FlxSprite = new FlxSprite(-348, -64).loadGraphic(Paths.image('bg/tails/happy/SKY', 'mods'));
         sky.antialiasing = true;
         sky.scale.x = 1;
         sky.scale.y = 1;
         sky.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(sky);
+        gameState.add(sky);
 
-        var floor2:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/tails/happy/FLOOR2', 'mods'));
+        var floor2:FlxSprite = new FlxSprite(-348, -64).loadGraphic(Paths.image('bg/tails/happy/FLOOR2', 'mods'));
         floor2.antialiasing = true;
         floor2.scale.x = 1;
         floor2.scale.y = 1;
         floor2.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(floor2);
+        gameState.add(floor2);
 
-        var floor1:FlxSprite = new FlxSprite(-864, -396).loadGraphic(Paths.image('bg/tails/happy/FLOOR1', 'mods'));
+        var floor1:FlxSprite = new FlxSprite(-348, -64).loadGraphic(Paths.image('bg/tails/happy/FLOOR1', 'mods'));
         floor1.antialiasing = true;
         floor1.scale.x = 1;
         floor1.scale.y = 1;
         floor1.scrollFactor.set(0.95, 0.95);
-        gamePlayState.add(floor1);
+        gameState.add(floor1);
     }
 
     override function getDefaultSkin():Skin
@@ -67,35 +67,36 @@ class Chasing extends SongPlayer
     {
             
         dad.addOffset('idle', 0, 0);
-        dad.addOffset('singUP', 0, 21);
-        dad.addOffset('singRIGHT', 0, -8);
-        dad.addOffset('singLEFT', 0, -6);
-        dad.addOffset('singDOWN', 0, -23.5);
+        dad.addOffset('singUP', 18, 42);
+        dad.addOffset('singRIGHT', -76, -17);
+        dad.addOffset('singLEFT', 4, -12);
+        dad.addOffset('singDOWN', -68, -47);
 
         dad.scale.x = 1;
         dad.scale.y = 1;
-        dad.x = -13;
-        dad.y = 260;
+        dad.x = 204;
+        dad.y = 479;
         dad.dance();
 
     }
 
     override function createBFAnimationOffsets() 
     {
-        bf.x -= 60;
-        bf.y += 40;
+        bf.x += 50;
+        bf.y += 60;
     }
 
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        gamePlayState.targetCamFollow.y -= 50;
+        gameState.targetCamFollow.y -= 50;
     }
 
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        gamePlayState.targetCamFollow.y -= 150;
+        gameState.targetCamFollow.y -= 50;
+        gameState.targetCamFollow.x -= 100;
     }
 
     override function createGFAnimationOffsets()
