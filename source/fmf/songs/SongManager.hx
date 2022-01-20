@@ -349,6 +349,16 @@ class SongManager
 				songList: ['Shotgun-shell', 'Parasite[ENTITY]', 'Godrays[ENTITY]', 'Promenade']
 			}
 		),
+
+		new SongData
+		(
+			{
+				folder: 'week_tails',
+				character: 'tails',
+				songTitle: 'V.S Tails EXE',
+				songList: ['Chasing', 'Darkness', 'Sidekick', 'Octane']
+			}
+		),
 	];
 //-----------------------------------------------------------
 

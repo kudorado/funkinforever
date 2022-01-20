@@ -1,4 +1,5 @@
 package fmf.songs;
+import MenuCharacter.CharacterSetting;
 import reactor.*;
 import ui.*;
 
@@ -528,6 +529,9 @@ class SongPlayerManager
 
 			case 'too-fest':
 				songPlayer = new TooFest();
+			
+			case 'chasing':
+				songPlayer = new Chasing();
 		}
 
 		return songPlayer;
