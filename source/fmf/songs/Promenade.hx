@@ -97,6 +97,15 @@ class Promenade extends SongPlayer
 		bf.y += 364;
 	}
 
+	override function midSongEventUpdate(curBeat:Int)
+	{
+		if(curBeat == 15)
+		{
+			gamePlayState.camZooming = true;
+			gamePlayState.defaultCamZoom = 0.75;
+		}
+	}
+
 	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('bg/entity/icons/icon-niku', 'mods'), true, 150, 150);
