@@ -721,6 +721,9 @@ class PcManager
 			case 'sonic_ssbf':
 				return new SSBF(700, 425);
 
+			case 'bf_dark':
+				return new BF_Dark(700, 425);
+
 		}
 
 		return new Boyfriend(700, 425); 
