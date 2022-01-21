@@ -496,6 +496,7 @@ class GameState extends MusicBeatState
 		healthBarBG = new FlxSprite(0, FlxG.height * 0.9).loadGraphic(Paths.image('healthBar'));
 
 		healthBarBG.color = FlxColor.BLACK;
+		
 		healthBarBG.alpha = 0.85;
 
 		if (FlxG.save.data.downscroll)
@@ -3113,7 +3114,8 @@ class GameState extends MusicBeatState
 				if (mashViolations > 8)
 				{
 					//@notrace('mash violations ' + mashViolations);
-					scoreTxt.color = FlxColor.RED;
+					accuracyTxt.color = FlxColor.RED;
+
 					noteMiss(0, null);
 				}
 				else
