@@ -31,6 +31,7 @@ class VictorySubState extends MusicBeatSubstate
     var pauseMusic:FlxSound;
 
     var mode:String;
+    
 
 
     public function new(x:Float, y:Float)

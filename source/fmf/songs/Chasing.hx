@@ -107,8 +107,8 @@ class Chasing extends SongPlayer
 
     public override function getDadIcon(icon:Icon)
     {
-        icon.loadGraphic(Paths.image('health_icon/sonic/iconGrid_1', 'mods'), true, 150, 150);
-        icon.animation.add('dad', [34, 35], 0, false, false);
+        icon.loadGraphic(Paths.image('health_icon/tails/icons/icon-tailsHappy', 'mods'), true, 150, 150);
+        icon.animation.add('dad', [0, 1], 0, false, false);
         icon.animation.play("dad");
     }
 }

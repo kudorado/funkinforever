@@ -116,7 +116,7 @@ class Darkness extends SongPlayer
 
 	public override function getDadIcon(icon:Icon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/sonic/iconGrid', 'mods'), true, 150, 150);
+        icon.loadGraphic(Paths.image('health_icon/tails/icons/icon-tails-dark', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [24, 25], 0, false, false);
 		icon.animation.play("dad");
 	}

@@ -23,7 +23,7 @@ class TripleTroubleSonic extends SongPlayer
 
     override function loadMap()
     {
-        gameState.defaultCamZoom = 0.85;
+        gameState.defaultCamZoom = 0.8;
 
         var sky:FlxSprite = new FlxSprite(-324, -92).loadGraphic(Paths.image('bg/sonic/Phase3/Glitch', 'mods'));
         sky.antialiasing = true;
@@ -75,15 +75,15 @@ class TripleTroubleSonic extends SongPlayer
     {
             
         dad.addOffset('idle', 0, 0);
-        dad.addOffset('singUP', 48, 65);
-        dad.addOffset('singRIGHT', 23, -21);
-        dad.addOffset('singLEFT', 118, -19);
-        dad.addOffset('singDOWN', 42, -83);
+        dad.addOffset('singUP', 25, 44);
+        dad.addOffset('singRIGHT', 16, -13);
+        dad.addOffset('singLEFT', 86, -9);
+        dad.addOffset('singDOWN', 39, -55);
 
-        dad.scale.x = 1.7;
-		dad.scale.y = 1.7;
-		dad.x = 311;
-		dad.y = 262;
+        dad.scale.x = 1.15;
+		dad.scale.y = 1.15;
+		dad.x = 337;
+		dad.y = 402;
 
         dad.dance();
 
