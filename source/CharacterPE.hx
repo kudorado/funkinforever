@@ -99,10 +99,13 @@ class CharacterPE extends Character
 
 			default:
 				var daLibrary = 'mods';
-				var imgDirectory = "characters/";
-				var dataDirectory = "datas/";
-	
-				var characterPath:String = dataDirectory + GameState.playingSong.folder +  curCharacter + '.json';
+				
+				var songFolder = GameState.playingSong.folder;
+				var imgDirectory = "psychengine/" + songFolder;
+				var dataDirectory = "images/psychengine/" + songFolder;
+
+
+				var characterPath:String = dataDirectory + "characters/" +   curCharacter + '.json';
 				
 				var path:String = Paths.getPath(characterPath, TEXT, daLibrary);
 			
@@ -113,7 +116,7 @@ class CharacterPE extends Character
 				//packer
 				//texture
 
-				var daTexture = json.image.replace('characters/', '');
+				var daTexture =  "images/" + json.image;
 
 				switch (spriteType)
 				{

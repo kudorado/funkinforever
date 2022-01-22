@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<TextureAtlas imagePath="pibbysponge.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="pibby idle0000" x="0" y="0" width="306" height="338" frameX="0" frameY="-19" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0001" x="0" y="0" width="306" height="338" frameX="0" frameY="-19" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0002" x="306" y="0" width="301" height="347" frameX="0" frameY="-10" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0003" x="306" y="0" width="301" height="347" frameX="0" frameY="-10" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0004" x="607" y="0" width="296" height="353" frameX="0" frameY="-4" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0005" x="607" y="0" width="296" height="353" frameX="0" frameY="-4" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0006" x="903" y="0" width="296" height="355" frameX="0" frameY="-2" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0007" x="903" y="0" width="296" height="355" frameX="0" frameY="-2" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0008" x="1199" y="0" width="295" height="357" frameX="0" frameY="0" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0009" x="1199" y="0" width="295" height="357" frameX="0" frameY="0" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0010" x="1199" y="0" width="295" height="357" frameX="0" frameY="0" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0011" x="1199" y="0" width="295" height="357" frameX="0" frameY="0" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0012" x="1199" y="0" width="295" height="357" frameX="0" frameY="0" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby idle0013" x="1199" y="0" width="295" height="357" frameX="0" frameY="0" frameWidth="306" frameHeight="357"/>
+	<SubTexture name="pibby scared0000" x="1494" y="0" width="296" height="342" frameX="0" frameY="-16" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0001" x="0" y="357" width="295" height="342" frameX="-1" frameY="-16" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0002" x="295" y="357" width="291" height="349" frameX="0" frameY="-9" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0003" x="586" y="357" width="290" height="349" frameX="-1" frameY="-9" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0004" x="876" y="357" width="286" height="357" frameX="0" frameY="-1" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0005" x="1162" y="357" width="285" height="357" frameX="-1" frameY="-1" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0006" x="1447" y="357" width="286" height="358" frameX="0" frameY="0" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0007" x="1733" y="357" width="285" height="358" frameX="-1" frameY="0" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0008" x="0" y="715" width="284" height="357" frameX="-1" frameY="-1" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0009" x="0" y="715" width="284" height="357" frameX="-1" frameY="-1" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0010" x="0" y="715" width="284" height="357" frameX="-1" frameY="-1" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0011" x="0" y="715" width="284" height="357" frameX="-1" frameY="-1" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0012" x="0" y="715" width="284" height="357" frameX="-1" frameY="-1" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby scared0013" x="0" y="715" width="284" height="357" frameX="-1" frameY="-1" frameWidth="296" frameHeight="358"/>
+	<SubTexture name="pibby shocked0000" x="284" y="715" width="283" height="357" frameX="0" frameY="0" frameWidth="305" frameHeight="357"/>
+	<SubTexture name="pibby shocked0001" x="567" y="715" width="281" height="355" frameX="-10" frameY="-2" frameWidth="305" frameHeight="357"/>
+	<SubTexture name="pibby shocked0002" x="848" y="715" width="279" height="355" frameX="-26" frameY="-2" frameWidth="305" frameHeight="357"/>
+	<SubTexture name="pibby shocked0003" x="1127" y="715" width="276" height="355" frameX="-25" frameY="-2" frameWidth="305" frameHeight="357"/>
+	<SubTexture name="pibby shocked0004" x="1403" y="715" width="275" height="355" frameX="-24" frameY="-2" frameWidth="305" frameHeight="357"/>
+	<SubTexture name="pibby shocked0005" x="1403" y="715" width="275" height="355" frameX="-24" frameY="-2" frameWidth="305" frameHeight="357"/>
+	<SubTexture name="pibby shocked0006" x="1403" y="715" width="275" height="355" frameX="-24" frameY="-2" frameWidth="305" frameHeight="357"/>
+	<SubTexture name="pibby shocked0007" x="1403" y="715" width="275" height="355" frameX="-24" frameY="-2" frameWidth="305" frameHeight="357"/>
+	<SubTexture name="pibby shocked0008" x="1403" y="715" width="275" height="355" frameX="-24" frameY="-2" frameWidth="305" frameHeight="357"/>
+	<SubTexture name="pibby shocked0009" x="1403" y="715" width="275" height="355" frameX="-24" frameY="-2" frameWidth="305" frameHeight="357"/>
+	<SubTexture name="pibby shocked0010" x="1403" y="715" width="275" height="355" frameX="-24" frameY="-2" frameWidth="305" frameHeight="357"/>
+	<SubTexture name="pibby terrified0000" x="1678" y="715" width="301" height="337" frameX="0" frameY="-25" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0001" x="0" y="1072" width="299" height="337" frameX="-2" frameY="-25" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0002" x="299" y="1072" width="296" height="347" frameX="0" frameY="-15" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0003" x="595" y="1072" width="294" height="347" frameX="-2" frameY="-15" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0004" x="889" y="1072" width="291" height="357" frameX="0" frameY="-5" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0005" x="1180" y="1072" width="289" height="357" frameX="-2" frameY="-5" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0006" x="1469" y="1072" width="291" height="361" frameX="0" frameY="-1" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0007" x="0" y="1433" width="289" height="361" frameX="-2" frameY="-1" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0008" x="289" y="1433" width="290" height="362" frameX="0" frameY="0" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0009" x="579" y="1433" width="288" height="362" frameX="-2" frameY="0" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0010" x="289" y="1433" width="290" height="362" frameX="0" frameY="0" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0011" x="579" y="1433" width="288" height="362" frameX="-2" frameY="0" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0012" x="289" y="1433" width="290" height="362" frameX="0" frameY="0" frameWidth="301" frameHeight="362"/>
+	<SubTexture name="pibby terrified0013" x="579" y="1433" width="288" height="362" frameX="-2" frameY="0" frameWidth="301" frameHeight="362"/>
+</TextureAtlas>
