@@ -19,7 +19,6 @@ class Character extends FlxSprite
     public var isVisible:Bool = true;
 
     public var daBF = false;
-
     public var label:String;
 
     public function new(x:Float = 700, y:Float = 200, label:String = 'none')

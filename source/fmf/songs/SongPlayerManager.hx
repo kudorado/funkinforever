@@ -538,6 +538,10 @@ class SongPlayerManager
 
 			case 'sidekick':
 				songPlayer = new Sidekick();
+
+			case 'octane':
+				songPlayer = new Octane();
+
 		}
 
 		return songPlayer;

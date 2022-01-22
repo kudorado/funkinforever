@@ -268,9 +268,21 @@ class BaseSong
 			return;
 		}
 
-		getDadTex();
-		createDadAnimations();
-		createDadAnimationOffsets();
+		//detect Psych engine character or not
+		var daPE = Type.getClassName(Type.getClass(dad));
+
+		trace("dadShit: " + daPE);
+
+		var PE =  daPE.toLowerCase() == "characterpe" ;
+
+		if (!PE) // if psych engine character, just ignore.
+		{
+			getDadTex();
+			createDadAnimations();
+			createDadAnimationOffsets();
+		}
+
+		
 	}
 
 	private function switchDad(song:SongPlayer, createDad:Bool = true, destroyOldDad:Bool = true)
