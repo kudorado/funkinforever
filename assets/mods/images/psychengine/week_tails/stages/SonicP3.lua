@@ -10,8 +10,8 @@ function onCreate()
 	scaleObject('ground', 1.1, 1.1);
 
 	makeAnimatedLuaSprite('gf-dark','characters/GF_dark',150,150)addAnimationByPrefix('gf-dark','dance','GF Dancing Beat',24,true)
-   objectPlayAnimation('gf-dark','dance',false)
-   setScrollFactor('gf-dark', 0.9, 0.9);
+	objectPlayAnimation('gf-dark','dance',false)
+	setScrollFactor('gf-dark', 0.9, 0.9);
 
 	addLuaSprite('static', false);
 	addLuaSprite('ground', false);

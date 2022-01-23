@@ -23,7 +23,7 @@ class Octane extends Sidekick
 		var songFolder = GameState.playingSong.folder;
 		var dataDirectory = "assets/mods/images/psychengine/" + songFolder;
 
-		var luaFile:String = (dataDirectory + "stages/sad.lua");//, TEXT, 'mods');
+		var luaFile:String = (dataDirectory + "stages/SonicP3.lua");
 		var lua = new FunkinLua(luaFile);
 		lua.call('onCreate', []);
 	}

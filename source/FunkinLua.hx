@@ -45,6 +45,20 @@ class FunkinLua {
 	public static var Function_Stop = 1;
 	public static var Function_Continue = 0;
 
+	var songFolder(get, never):String;
+	inline function get_songFolder():String
+	{
+		return GameState.playingSong.folder;
+	} 
+
+	var daPath(get, never):String;
+	inline function get_daPath():String
+	{
+		return "psychengine/" + songFolder;
+	} 
+
+	var daLibrary:String = 'mods';
+
 	#if LUA_ALLOWED
 	public var lua:State = null;
 	#end
@@ -799,12 +813,10 @@ class FunkinLua {
 			resetSpriteTag(tag);
 			var leSprite:ModchartSprite = new ModchartSprite(x, y);
 			if(image != null && image.length > 0) {
-				var songFolder = GameState.playingSong.folder;
-				var daPath = "psychengine/" + songFolder;
-				var daTexture =  "images/" + image;
-				// lime.app.Application.current.window.alert(daPath + daTexture, 'FUCK YOU!');
-				leSprite.loadGraphic(Paths.image(daPath + daTexture, 'mods'));
-				lime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
+				
+				var daTexture =  daPath + "images/" + image;
+				leSprite.loadGraphic(Paths.image(daTexture, daLibrary));
+				// lime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
 
 			}
 			leSprite.antialiasing = true;//true; //true; //ClientPrefs.globalAntialiasing;
@@ -815,7 +827,10 @@ class FunkinLua {
 			tag = tag.replace('.', '');
 			resetSpriteTag(tag);
 			var leSprite:ModchartSprite = new ModchartSprite(x, y);
-			leSprite.frames = Paths.getSparrowAtlas(image);
+			
+			var daTexture = daPath	+ "images/" + image;
+
+			leSprite.frames = Paths.getSparrowAtlas(daTexture, daLibrary);
 			leSprite.antialiasing = true;//true; //true; //ClientPrefs.globalAntialiasing;
 			GameState.instance.modchartSprites.set(tag, leSprite);
 		});
@@ -925,7 +940,7 @@ class FunkinLua {
 							}
 							// GameState.instance.insert(position, shit);
 							getInstance().add(shit);
-							lime.app.Application.current.window.alert(shit.debugName(), 'ADD SPRITE!');
+							// lime.app.Application.current.window.alert(shit.debugName(), 'ADD SPRITE!');
 						}
 					}
 					shit.wasAdded = true;
