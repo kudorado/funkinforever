@@ -28,7 +28,7 @@ class Sidekick extends SongPlayer
     override function createGFAnimations()
     {
         gf.animation.addByPrefix("idle", 'GF Dancing Beat00', true);
-        gf.animation.addByPrefix('sad', 'Gf sad00');
+            gf.animation.addByPrefix('sad', 'Gf sad00');
         gf.playAnim("idle");
     }
 
@@ -112,15 +112,15 @@ class Sidekick extends SongPlayer
 
     }
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
-		super.updateCamFollowDad();
+		super.updateCamFollowdaddy();
 		gameState.targetCamFollow.y += 100;
 	}
 
 	override function updateCamFollowBF()
 	{
-		super.updateCamFollowDad();
+		super.updateCamFollowdaddy();
         gameState.targetCamFollow.y -= 100;
 	}
 

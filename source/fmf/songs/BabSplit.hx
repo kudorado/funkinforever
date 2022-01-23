@@ -174,9 +174,9 @@ class BabSplit extends SongPlayer
 		gameState.targetCamFollow.y -= 100;
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
-		super.updateCamFollowDad();
+		super.updateCamFollowdaddy();
 		gameState.targetCamFollow.x += 200;
 	}
 

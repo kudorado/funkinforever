@@ -55,7 +55,7 @@ class SongPlayer extends BaseSong
 	//public function noteEvent(noteData:Note):Void{bf.noteEventDad(noteData); }
 	
 	// update camera follow dad depending on song
-	public function updateCamFollowDad():Void{}
+	public function updateCamFollowdaddy():Void{}
 
 	// update camera follow bf depending on song
 	public function updateCamFollowBF():Void{} 

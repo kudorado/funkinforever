@@ -139,7 +139,7 @@ class BabJumpIn extends SongPlayer
 		gameState.targetCamFollow.x = bf.getGraphicMidpoint().x - 300;
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
 		gameState.targetCamFollow.x = dad.getGraphicMidpoint().x + 350;
 	}

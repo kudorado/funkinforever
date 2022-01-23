@@ -87,9 +87,9 @@ class PurpleSpecimens extends SongPlayer
 		gameState.targetCamFollow.x += 100;
     }
 
-    override function updateCamFollowDad()
+    override function updateCamFollowdaddy()
     {
-        super.updateCamFollowDad();
+        super.updateCamFollowdaddy();
         gameState.targetCamFollow.y -= 50;
 		gameState.targetCamFollow.x -= 60;
     }

@@ -215,9 +215,9 @@ class Reactor extends SongPlayer
 		gameState.targetCamFollow.y = bf.getMidpoint().y - 250;
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
-		super.updateCamFollowDad();
+		super.updateCamFollowdaddy();
 		gameState.targetCamFollow.x = bf.getMidpoint().x - 500;
 		gameState.targetCamFollow.y = bf.getMidpoint().y - 250;
 	}

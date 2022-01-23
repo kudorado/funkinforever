@@ -1,89 +1,89 @@
-package;
-import state.*;
-#if windows
-import Sys.sleep;
-import discord_rpc.DiscordRpc;
+// package;
+// import state.*;
+// #if windows
+// import Sys.sleep;
+// import discord_rpc.DiscordRpc;
 
-using StringTools;
+// using StringTools;
 
-class DiscordClient
-{
-	public function new()
-	{
-		//@notrace("Discord Client starting...");
-		DiscordRpc.start({
-			clientID: "557069829501091850", // change this to what ever the fuck you want lol
-			onReady: onReady,
-			onError: onError,
-			onDisconnected: onDisconnected
-		});
-		//@notrace("Discord Client started.");
+// class DiscordClient
+// {
+// 	public function new()
+// 	{
+// 		//@notrace("Discord Client starting...");
+// 		DiscordRpc.start({
+// 			clientID: "557069829501091850", // change this to what ever the fuck you want lol
+// 			onReady: onReady,
+// 			onError: onError,
+// 			onDisconnected: onDisconnected
+// 		});
+// 		//@notrace("Discord Client started.");
 
-		while (true)
-		{
-			DiscordRpc.process();
-			sleep(2);
-			////@notrace("Discord Client Update");
-		}
+// 		while (true)
+// 		{
+// 			DiscordRpc.process();
+// 			sleep(2);
+// 			////@notrace("Discord Client Update");
+// 		}
 
-		DiscordRpc.shutdown();
-	}
+// 		DiscordRpc.shutdown();
+// 	}
 
-	public static function shutdown()
-	{
-		DiscordRpc.shutdown();
-	}
+// 	public static function shutdown()
+// 	{
+// 		DiscordRpc.shutdown();
+// 	}
 
-	static function onReady()
-	{
-		DiscordRpc.presence({
-			details: "In the Menus",
-			state: null,
-			largeImageKey: 'icon',
-			largeImageText: "fridaynightfunkin"
-		});
-	}
+// 	static function onReady()
+// 	{
+// 		DiscordRpc.presence({
+// 			details: "In the Menus",
+// 			state: null,
+// 			largeImageKey: 'icon',
+// 			largeImageText: "fridaynightfunkin"
+// 		});
+// 	}
 
-	static function onError(_code:Int, _message:String)
-	{
-		//@notrace('Error! $_code : $_message');
-	}
+// 	static function onError(_code:Int, _message:String)
+// 	{
+// 		//@notrace('Error! $_code : $_message');
+// 	}
 
-	static function onDisconnected(_code:Int, _message:String)
-	{
-		//@notrace('Disconnected! $_code : $_message');
-	}
+// 	static function onDisconnected(_code:Int, _message:String)
+// 	{
+// 		//@notrace('Disconnected! $_code : $_message');
+// 	}
 
-	public static function initialize()
-	{
-		var DiscordDaemon = sys.thread.Thread.create(() ->
-		{
-			new DiscordClient();
-		});
-		//@notrace("Discord Client initialized");
-	}
+// 	public static function initialize()
+// 	{
+// 		var DiscordDaemon = sys.thread.Thread.create(() ->
+// 		{
+// 			new DiscordClient();
+// 		});
+// 		//@notrace("Discord Client initialized");
+// 	}
 
-	public static function changePresence(details:String, state:Null<String>, ?smallImageKey : String, ?hasStartTimestamp : Bool, ?endTimestamp: Float)
-	{
-		var startTimestamp:Float = if(hasStartTimestamp) Date.now().getTime() else 0;
+// 	public static function changePresence(details:String, state:Null<String>, ?smallImageKey : String, ?hasStartTimestamp : Bool, ?endTimestamp: Float)
+// 	{
+// 		var startTimestamp:Float = if(hasStartTimestamp) Date.now().getTime() else 0;
 
-		if (endTimestamp > 0)
-		{
-			endTimestamp = startTimestamp + endTimestamp;
-		}
+// 		if (endTimestamp > 0)
+// 		{
+// 			endTimestamp = startTimestamp + endTimestamp;
+// 		}
 
-		DiscordRpc.presence({
-			details: details,
-			state: state,
-			largeImageKey: 'icon',
-			largeImageText: "fridaynightfunkin",
-			smallImageKey : smallImageKey,
-			// Obtained times are in milliseconds so they are divided so Discord can use it
-			startTimestamp : Std.int(startTimestamp / 1000),
-            endTimestamp : Std.int(endTimestamp / 1000)
-		});
+// 		DiscordRpc.presence({
+// 			details: details,
+// 			state: state,
+// 			largeImageKey: 'icon',
+// 			largeImageText: "fridaynightfunkin",
+// 			smallImageKey : smallImageKey,
+// 			// Obtained times are in milliseconds so they are divided so Discord can use it
+// 			startTimestamp : Std.int(startTimestamp / 1000),
+//             endTimestamp : Std.int(endTimestamp / 1000)
+// 		});
 
-		////@notrace('Discord RPC Updated. Arguments: $details, $state, $smallImageKey, $hasStartTimestamp, $endTimestamp');
-	}
-}
-#end
+// 		////@notrace('Discord RPC Updated. Arguments: $details, $state, $smallImageKey, $hasStartTimestamp, $endTimestamp');
+// 	}
+// }
+// #end

@@ -78,9 +78,9 @@ class SunshineSonic extends SongPlayer
         bf.x += 352;
     }
 
-    override function updateCamFollowDad()
+    override function updateCamFollowdaddy()
     {
-        super.updateCamFollowDad();
+        super.updateCamFollowdaddy();
         gameState.targetCamFollow.y += 150;
         gameState.defaultCamZoom = 0.9;
 
@@ -98,7 +98,7 @@ class SunshineSonic extends SongPlayer
 
     override function updateCamFollowBF()
     {
-        super.updateCamFollowDad();
+        super.updateCamFollowdaddy();
         gameState.defaultCamZoom = 1;
     }
 

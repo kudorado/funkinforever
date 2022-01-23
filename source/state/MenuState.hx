@@ -22,7 +22,7 @@ import lime.app.Application;
 import ui.FlxVirtualPad;
 
 #if windows
-import Discord.DiscordClient;
+//import Discord.DiscordClient;
 #end
 
 using StringTools;
@@ -56,7 +56,7 @@ class MenuState extends MusicBeatState
 	{
 		#if windows
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		//DiscordClient.changePresence("In the Menus", null);
 		#end
 
 		if (!FlxG.sound.music.playing)

@@ -209,7 +209,7 @@ class Senpai extends SongPlayer
 			bgGirls.dance();
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
 	gameState.targetCamFollow.y = dad.getMidpoint().y - 430;
 	gameState.targetCamFollow.x = dad.getMidpoint().x - 100;

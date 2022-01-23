@@ -320,7 +320,7 @@ class ArtificialLust extends SongPlayer
 		gameState.targetCamFollow.y = 360;
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
 		if (showTime)
 		{

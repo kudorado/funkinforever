@@ -169,9 +169,9 @@ class Godrays extends SongPlayer
 		gameState.targetCamFollow.y += 500;
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
-		super.updateCamFollowDad();
+		super.updateCamFollowdaddy();
 		gameState.defaultCamZoom = 0.5;
 	}
 

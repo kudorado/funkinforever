@@ -28,7 +28,7 @@ class Glitcher extends SongPlayer
 		gameState.add(bg);
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
 		gameState.targetCamFollow.y = dad.getGraphicMidpoint().y - 125;
 	}

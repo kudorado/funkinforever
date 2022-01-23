@@ -351,7 +351,7 @@ class DialogueBox extends FlxSpriteGroup
 
 
 					// FlxTween.tween(GameState.dad, {scale.x: 1}, 0.5, null);
-					// FlxTween.tween(GameState.dad(), {alpha: 1}, 1, null);
+					// FlxTween.tween(GameState.daddy(), {alpha: 1}, 1, null);
 
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)

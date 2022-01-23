@@ -55,7 +55,7 @@ class Encore extends SongPlayer
 		dad.y -= 330;
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
 		gameState.targetCamFollow.y = dad.getGraphicMidpoint().y - 50;
 	}

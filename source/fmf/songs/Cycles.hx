@@ -171,9 +171,9 @@ class Cycles extends SongPlayer
         bf.x += 200;
     }
 
-    override function updateCamFollowDad()
+    override function updateCamFollowdaddy()
     {
-        super.updateCamFollowDad();
+        super.updateCamFollowdaddy();
         gameState.targetCamFollow.y += 150;
         gameState.defaultCamZoom = 0.9;
 
@@ -191,7 +191,7 @@ class Cycles extends SongPlayer
 
     override function updateCamFollowBF()
     {
-        super.updateCamFollowDad();
+        super.updateCamFollowdaddy();
         gameState.defaultCamZoom = 1;
     }
 

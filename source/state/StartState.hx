@@ -31,7 +31,7 @@ import lime.app.Application;
 import openfl.Assets;
 
 #if windows
-import Discord.DiscordClient;
+// //import Discord.DiscordClient;
 #end
 
 #if cpp

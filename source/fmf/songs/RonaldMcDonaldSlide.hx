@@ -95,7 +95,7 @@ class RonaldMcDonaldSlide extends SongPlayer
 
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
 		gameState.targetCamFollow.x =  dad.getMidpoint().x + 50;
 		gameState.targetCamFollow.y =  dad.getMidpoint().y;

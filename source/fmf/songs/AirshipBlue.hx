@@ -86,9 +86,9 @@ class AirshipBlue extends SongPlayer
         gameState.targetCamFollow.y -= 100;
     }
 
-    override function updateCamFollowDad()
+    override function updateCamFollowdaddy()
     {
-        super.updateCamFollowDad();
+        super.updateCamFollowdaddy();
         gameState.targetCamFollow.y += 350;
     }
 

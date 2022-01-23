@@ -97,15 +97,15 @@ class Darkness extends SongPlayer
 
     }
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
-		super.updateCamFollowDad();
+		super.updateCamFollowdaddy();
 		//gameState.targetCamFollow.y += 150
 	}
 
 	override function updateCamFollowBF()
 	{
-		super.updateCamFollowDad();
+		super.updateCamFollowdaddy();
 	}
 
 	override function createGFAnimationOffsets()

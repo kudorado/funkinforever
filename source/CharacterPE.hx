@@ -62,6 +62,7 @@ class CharacterPE extends Character
 	public var idleSuffix:String = '';
 	public var danceIdle:Bool = false; //Character use "danceLeft" and "danceRight" instead of "idle"
 	
+	public var alreadyLoaded:Bool;
 
 	public var healthIcon:String = 'face';
 	public var animationsArray:Array<AnimArray> = [];
@@ -90,7 +91,7 @@ class CharacterPE extends Character
 		#end
 		curCharacter = character;
 		this.isPlayer = isPlayer;
-		antialiasing = true;// ClientPrefs.globalAntialiasing;
+		antialiasing = true;// true; //true; //ClientPrefs.globalAntialiasing;
 		var library:String = null;
 		switch (curCharacter)
 		{
@@ -153,7 +154,7 @@ class CharacterPE extends Character
 					healthColorArray = json.healthbar_colors;
 
 				antialiasing = !noAntialiasing;
-				// if(!ClientPrefs.globalAntialiasing) antialiasing = false;
+				// if(!true; //ClientPrefs.globalAntialiasing) antialiasing = false;
 
 				animationsArray = json.animations;
 				if(animationsArray != null && animationsArray.length > 0) {

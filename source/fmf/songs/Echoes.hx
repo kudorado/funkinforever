@@ -216,7 +216,7 @@ class Echoes extends SongPlayer
 
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
 		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
 		gameState.targetCamFollow.y = 360;

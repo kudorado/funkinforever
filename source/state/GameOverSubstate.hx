@@ -31,12 +31,17 @@ class GameOverSubstate extends MusicBeatSubstate
     var mode:String;
 	private var videoArray:Array<VideoIcon> = [];
 
+	public static var instance:GameOverSubstate;
+    //
+
     public function new(x:Float, y:Float)
     {
 
         AdMob.hideBanner();
 
         super();
+
+        instance = this;
 
         AdMob.onInterstitialEvent = onRewarded;
 

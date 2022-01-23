@@ -176,9 +176,9 @@ class Chaos extends SongPlayer
         bf.x += 2100;
     }
 
-    override function updateCamFollowDad()
+    override function updateCamFollowdaddy()
     {
-        super.updateCamFollowDad();
+        super.updateCamFollowdaddy();
         gameState.targetCamFollow.y += 150;
         //gameState.defaultCamZoom = 0.7;
 
@@ -187,7 +187,7 @@ class Chaos extends SongPlayer
 
     override function updateCamFollowBF()
     {
-        super.updateCamFollowDad();
+        super.updateCamFollowdaddy();
         //gameState.defaultCamZoom = 0.7;
         gameState.targetCamFollow.y -= 150;
         gameState.targetCamFollow.x -= 100;

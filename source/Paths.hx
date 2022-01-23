@@ -6,9 +6,103 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
 import openfl.utils.Assets as OpenFlAssets;
 
+import flash.media.Sound;
+
+using StringTools;
+
+
 class Paths
 {
+	//lua shit
+//-----------------------
+	#if (haxe >= "4.0.0")
+	public static var customImagesLoaded:Map<String, Bool> = new Map();
+	public static var customSoundsLoaded:Map<String, Sound> = new Map();
+	#else
+	public static var customImagesLoaded:Map<String, Bool> = new Map<String, Bool>();
+	public static var customSoundsLoaded:Map<String, Sound> = new Map<String, Sound>();
+	#end
+
+	public static var ignoreModFolders:Array<String> = [
+		'characters', 'custom_events', 'custom_notetypes', 'data', 'songs', 'music', 'sounds', 'videos', 'images', 'stages', 'weeks', 'fonts', 'scripts'
+	];
+
 	inline public static var SOUND_EXT = #if web "mp3" #else "ogg" #end;
+	inline public static var VIDEO_EXT = "mp4";
+	
+	static public var currentModDirectory:String = '';
+
+	public inline static function modsJson(key:String)
+	{
+		return modFolders('data/' + key + '.json');
+	}
+
+	public inline static function formatToSongPath(path:String)
+	{
+		return path.toLowerCase().replace(' ', '-');
+	}
+	
+	static public function modFolders(key:String)
+	{
+		if (currentModDirectory != null && currentModDirectory.length > 0)
+		{
+			var fileToCheck:String = mods(currentModDirectory + '/' + key);
+			if (1 + 1 == 2)//FileSystem.exists(fileToCheck) 
+			{
+				return fileToCheck;
+			}
+		}
+		return 'mods/' + key;
+	}
+	
+	inline static public function mods(key:String = '')
+	{
+		return 'mods/' + key;
+	}
+
+	inline static public function modsFont(key:String)
+	{
+		return modFolders('fonts/' + key);
+	}
+
+
+	inline static public function modsVideo(key:String)
+	{
+		return modFolders('videos/' + key + '.' + VIDEO_EXT);
+	}
+
+	inline static public function modsMusic(key:String)
+	{
+		return modFolders('music/' + key + '.' + SOUND_EXT);
+	}
+
+	inline static public function modsSounds(key:String)
+	{
+		return modFolders('sounds/' + key + '.' + SOUND_EXT);
+	}
+
+	inline static public function modsSongs(key:String)
+	{
+		return modFolders('songs/' + key + '.' + SOUND_EXT);
+	}
+
+	inline static public function modsImages(key:String)
+	{
+		return modFolders('images/' + key + '.png');
+	}
+
+	inline static public function modsXml(key:String)
+	{
+		return modFolders('images/' + key + '.xml');
+	}
+
+	inline static public function modsTxt(key:String)
+	{
+		return modFolders('images/' + key + '.txt');
+	}
+	
+
+//-----------------------
 
 	static var currentLevel:String;
 
@@ -16,6 +110,8 @@ class Paths
 	{
 		currentLevel = name.toLowerCase();
 	}
+
+
 
 	
 	public static function getPath(file:String, type:AssetType, library:Null<String> = null)
@@ -52,6 +148,7 @@ class Paths
 		return 'assets/$file';
 	}
 
+	
 	inline static public function file(file:String, type:AssetType = TEXT, ?library:String)
 	{
 		return getPath(file, type, library);

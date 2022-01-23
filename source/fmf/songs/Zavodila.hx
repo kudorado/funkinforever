@@ -96,7 +96,7 @@ class Zavodila extends SongPlayer
 
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
 
 		gameState.targetCamFollow.y = dad.getGraphicMidpoint().y - 200;

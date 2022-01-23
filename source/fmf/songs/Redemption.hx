@@ -103,7 +103,7 @@ class Redemption extends Sadness
 	
 	}
 
-	override function updateCamFollowDad()
+	override function updateCamFollowdaddy()
 	{
 		super.updateCamFollowBF();
 

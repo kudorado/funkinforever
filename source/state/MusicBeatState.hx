@@ -1,7 +1,8 @@
 package state;
 import state.*;
 #if windows
-import Discord.DiscordClient;
+// then fuck you
+// //import Discord.DiscordClient;
 #end
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;

@@ -18,6 +18,15 @@ class Octane extends Sidekick
 		return new CharacterPE(400, 400, "cough");
 	}
 
+	override function loadMap()
+	{
+		var songFolder = GameState.playingSong.folder;
+		var dataDirectory = "assets/mods/images/psychengine/" + songFolder;
+
+		var luaFile:String = (dataDirectory + "stages/sad.lua");//, TEXT, 'mods');
+		var lua = new FunkinLua(luaFile);
+		lua.call('onCreate', []);
+	}
 
 	override function createDad()
 	{

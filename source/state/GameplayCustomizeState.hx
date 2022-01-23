@@ -9,7 +9,7 @@ import flixel.FlxCamera;
 import flixel.math.FlxPoint;
 import flixel.FlxObject;
 #if windows
-import Discord.DiscordClient;
+//import Discord.DiscordClient;
 import sys.thread.Thread;
 #end
 
@@ -47,7 +47,7 @@ class GameplayCustomizeState extends MusicBeatState
     public override function create() {
         #if windows
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("Customizing Gameplay", null);
+		//DiscordClient.changePresence("Customizing Gameplay", null);
 		#end
 
         sick = new FlxSprite().loadGraphic(Paths.image('sick','shared'));

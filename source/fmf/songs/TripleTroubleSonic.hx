@@ -97,9 +97,9 @@ class TripleTroubleSonic extends SongPlayer
         
     }
 
-    override function updateCamFollowDad()
+    override function updateCamFollowdaddy()
     {
-        super.updateCamFollowDad();
+        super.updateCamFollowdaddy();
         gameState.targetCamFollow.y += 150;
         gameState.defaultCamZoom = 0.9;
 
@@ -117,7 +117,7 @@ class TripleTroubleSonic extends SongPlayer
 
     override function updateCamFollowBF()
     {
-        super.updateCamFollowDad();
+        super.updateCamFollowdaddy();
         gameState.defaultCamZoom = 1;
     }
 

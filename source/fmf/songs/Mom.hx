@@ -190,7 +190,7 @@ class Mom extends SongPlayer
 		}
 	}
 
-	public override function updateCamFollowDad():Void
+	public override function updateCamFollowdaddy():Void
 	{
 		gameState.targetCamFollow.y = dad.getMidpoint().y;
 	}
