@@ -164,43 +164,33 @@ class GameState extends MusicBeatState
 	}
 
 	public function moveCamera(isDad:Bool)
+	{
+		if (isDad)
 		{
-			//TODO
-			// if(isDad)
-			// {
-			// 	camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
-			// 	camFollow.x += dad.cameraPosition[0];
-			// 	camFollow.y += dad.cameraPosition[1];
-			// 	tweenCamIn();
-			// }
-			// else
-			// {
-			// 	camFollow.set(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
-	
-			// 	switch (curStage)
-			// 	{
-			// 		case 'limo':
-			// 			camFollow.x = boyfriend.getMidpoint().x - 300;
-			// 		case 'mall':
-			// 			camFollow.y = boyfriend.getMidpoint().y - 200;
-			// 		case 'school' | 'schoolEvil':
-			// 			camFollow.x = boyfriend.getMidpoint().x - 200;
-			// 			camFollow.y = boyfriend.getMidpoint().y - 200;
-			// 	}
-			// 	camFollow.x -= boyfriend.cameraPosition[0];
-			// 	camFollow.y += boyfriend.cameraPosition[1];
-	
-			// 	if (Paths.formatToSongPath(SONG.song) == 'tutorial' && cameraTwn == null && FlxG.camera.zoom != 1)
-			// 	{
-			// 		cameraTwn = FlxTween.tween(FlxG.camera, {zoom: 1}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut, onComplete:
-			// 			function (twn:FlxTween)
-			// 			{
-			// 				cameraTwn = null;
-			// 			}
-			// 		});
-			// 	}
-			// }
+			camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
+			camFollow.x += dad.cameraPosition[0];
+			camFollow.y += dad.cameraPosition[1];
+			tweenCamIn();
 		}
+		else
+		{
+			camFollow.set(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
+
+			camFollow.x -= bf().cameraPosition[0];
+			camFollow.y += bf().cameraPosition[1];
+
+			if (Paths.formatToSongPath(SONG.song) == 'tutorial' && cameraTwn == null && FlxG.camera.zoom != 1)
+			{
+				cameraTwn = FlxTween.tween(FlxG.camera, {zoom: 1}, (Conductor.stepCrochet * 4 / 1000), {
+					ease: FlxEase.elasticInOut,
+					onComplete: function(twn:FlxTween)
+					{
+						cameraTwn = null;
+					}
+				});
+			}
+		}
+	}
 
 	
 	function startCharacterLua(name:String)
@@ -1526,6 +1516,25 @@ class GameState extends MusicBeatState
 	
 	}
 
+	function whereAmI()
+	{
+		if ((health <= 0 || instakillOnMiss) && !isOver)
+		{
+			isOver = true;
+			bf().stunned = true;
+			persistentUpdate = false;
+			persistentDraw = true;
+			paused = true;
+
+			pauseGame();
+
+			LoadingState.createBlackFadeIn(this, function()
+			{
+				openSubState(new GameOverSubstate(bf().getScreenPosition().x, bf().getScreenPosition().y));
+			}, camHUD, true);
+		}
+	}
+
 	function createBounds()
 	{
 		boundMin = new FlxText(0, 0, "");
@@ -2593,38 +2602,9 @@ class GameState extends MusicBeatState
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
 
-		if (health <= 0 && !isOver)
-		{
-			isOver = true;
-			bf().stunned = true;
-			persistentUpdate = false;
-			persistentDraw = true;
-			paused = true;
+		whereAmI();
+		
 
-			pauseGame();
-
-			LoadingState.createBlackFadeIn(this,function(){
-				openSubState(new GameOverSubstate(bf().getScreenPosition().x, bf().getScreenPosition().y));
-			}, camHUD, true);
-
-			#if windows
-			// Game Over doesn't get his own variable because it's only used here
-			//////DiscordClient.changePresence("GAME OVER -- "
-			// 	+ CURRENT_SONG
-			// 	+ " ("
-			// 	+ storyDifficultyText
-			// 	+ ") "
-			// 	+ Ratings.GenerateLetterRank(accuracy),
-			// 	"\nAcc: "
-			// 	+ HelperFunctions.truncateFloat(accuracy, 2)
-			// 	+ "% | Score: "
-			// 	+ songScore
-			// 	+ " | Misses: "
-			// 	+ misses, iconRPC);
-			#end
-
-			// FlxG.switchState(new GameOverState(bf().getScreenPosition().x, bf().getScreenPosition().y));
-		}
 		if (FlxG.save.data.resetButton)
 		{
 			if (FlxG.keys.justPressed.R)
@@ -3995,9 +3975,31 @@ class GameState extends MusicBeatState
 
 	function noteMiss(direction:Int = 1, daNote:Note):Void
 	{
-		var stunned:Bool = playAsDad ? daddy().stunned : bf().stunned;
-		if (!stunned)
+		
+		// var stunned:Bool = playAsDad ? daddy().stunned : bf().stunned;
+		var amIHandSomeBabe = true;//true//verytrue
+		if (amIHandSomeBabe)
 		{
+			// Dupe note remove, copy shit from psych engine
+			// Sorry :( and thank you bbpanzu
+			notes.forEachAlive(function(note:Note)
+			{
+				if (daNote != note
+					&& daNote.mustPress
+					&& daNote.noteData == note.noteData
+					&& daNote.isSustainNote == note.isSustainNote
+					&& Math.abs(daNote.strumTime - note.strumTime) < 1)
+				{
+					note.kill();
+					notes.remove(note, true);
+					note.destroy();
+				}
+			});
+
+			if (instakillOnMiss)
+			{
+				whereAmI();
+			}
 	
 			if (combo > 5 && baby().animOffsets.exists('sad'))
 			{

@@ -95,8 +95,8 @@ class FunkinLua {
 		#end
 
 		// // Lua shit
-		// set('Function_Stop', Function_Stop);
-		// set('Function_Continue', Function_Continue);
+		set('Function_Stop', Function_Stop);
+		set('Function_Continue', Function_Continue);
 		// set('luaDebugMode', false);
 		// set('luaDeprecatedWarnings', true);
 		// set('inChartEditor', false);
@@ -147,7 +147,7 @@ class FunkinLua {
 		// // Gameplay settings
 		// set('healthGainMult', GameState.instance.healthGain);
 		// set('healthLossMult', GameState.instance.healthLoss);
-		// set('instakillOnMiss', GameState.instance.instakillOnMiss);
+		set('instakillOnMiss', GameState.instance.instakillOnMiss);
 		// set('botPlay', GameState.instance.cpuControlled);
 		// set('practice', GameState.instance.practiceMode);
 
@@ -636,60 +636,62 @@ class FunkinLua {
 			return GameState.instance.health;
 		});
 		
-		// Lua_helper.add_callback(lua, "getColorFromHex", function(color:String) {
-		// 	if(!color.startsWith('0x')) color = '0xff' + color;
-		// 	return Std.parseInt(color);
-		// });
-		// Lua_helper.add_callback(lua, "keyJustPressed", function(name:String) {
-		// 	var key:Bool = false;
-		// 	switch(name) {
-		// 		case 'left': key = GameState.instance.getControl('LEFT_P');
-		// 		case 'down': key = GameState.instance.getControl('DOWN_P');
-		// 		case 'up': key = GameState.instance.getControl('UP_P');
-		// 		case 'right': key = GameState.instance.getControl('RIGHT_P');
-		// 		case 'accept': key = GameState.instance.getControl('ACCEPT');
-		// 		case 'back': key = GameState.instance.getControl('BACK');
-		// 		case 'pause': key = GameState.instance.getControl('PAUSE');
-		// 		case 'reset': key = GameState.instance.getControl('RESET');
-		// 		case 'space': key = FlxG.keys.justPressed.SPACE;//an extra key for convinience
-		// 	}
-		// 	return key;
-		// });
-		// Lua_helper.add_callback(lua, "keyPressed", function(name:String) {
-		// 	var key:Bool = false;
-		// 	switch(name) {
-		// 		case 'left': key = GameState.instance.getControl('LEFT');
-		// 		case 'down': key = GameState.instance.getControl('DOWN');
-		// 		case 'up': key = GameState.instance.getControl('UP');
-		// 		case 'right': key = GameState.instance.getControl('RIGHT');
-		// 		case 'space': key = FlxG.keys.pressed.SPACE;//an extra key for convinience
-		// 	}
-		// 	return key;
-		// });
-		// Lua_helper.add_callback(lua, "keyReleased", function(name:String) {
-		// 	var key:Bool = false;
-		// 	switch(name) {
-		// 		case 'left': key = GameState.instance.getControl('LEFT_R');
-		// 		case 'down': key = GameState.instance.getControl('DOWN_R');
-		// 		case 'up': key = GameState.instance.getControl('UP_R');
-		// 		case 'right': key = GameState.instance.getControl('RIGHT_R');
-		// 		case 'space': key = FlxG.keys.justReleased.SPACE;//an extra key for convinience
-		// 	}
-		// 	return key;
-		// });
-		// Lua_helper.add_callback(lua, "addCharacterToList", function(name:String, type:String) {
-		// 	var charType:Int = 0;
-		// 	switch(type.toLowerCase()) {
-		// 		case 'dad': charType = 1;
-		// 		case 'gf' | 'girlfriend': charType = 2;
-		// 	}
-		// 	GameState.instance.addCharacterToList(name, charType);
-		// });
+		Lua_helper.add_callback(lua, "getColorFromHex", function(color:String) {
+			if(!color.startsWith('0x')) color = '0xff' + color;
+			return Std.parseInt(color);
+		});
+		Lua_helper.add_callback(lua, "keyJustPressed", function(name:String) {
+			var key:Bool = false;
+			switch(name) {
+				case 'left': key = GameState.instance.getControl('LEFT_P');
+				case 'down': key = GameState.instance.getControl('DOWN_P');
+				case 'up': key = GameState.instance.getControl('UP_P');
+				case 'right': key = GameState.instance.getControl('RIGHT_P');
+				case 'accept': key = GameState.instance.getControl('ACCEPT');
+				case 'back': key = GameState.instance.getControl('BACK');
+				case 'pause': key = GameState.instance.getControl('PAUSE');
+				case 'reset': key = GameState.instance.getControl('RESET');
+				case 'space': key = FlxG.keys.justPressed.SPACE;//an extra key for convinience
+			}
+			return key;
+		});
+		Lua_helper.add_callback(lua, "keyPressed", function(name:String) {
+			var key:Bool = false;
+			switch(name) {
+				case 'left': key = GameState.instance.getControl('LEFT');
+				case 'down': key = GameState.instance.getControl('DOWN');
+				case 'up': key = GameState.instance.getControl('UP');
+				case 'right': key = GameState.instance.getControl('RIGHT');
+				case 'space': key = FlxG.keys.pressed.SPACE;//an extra key for convinience
+			}
+			return key;
+		});
+		Lua_helper.add_callback(lua, "keyReleased", function(name:String) {
+			var key:Bool = false;
+			switch(name) {
+				case 'left': key = GameState.instance.getControl('LEFT_R');
+				case 'down': key = GameState.instance.getControl('DOWN_R');
+				case 'up': key = GameState.instance.getControl('UP_R');
+				case 'right': key = GameState.instance.getControl('RIGHT_R');
+				case 'space': key = FlxG.keys.justReleased.SPACE;//an extra key for convinience
+			}
+			return key;
+		});
+		Lua_helper.add_callback(lua, "addCharacterToList", function(name:String, type:String) {
+			var charType:Int = 0;
+			switch(type.toLowerCase()) {
+				case 'dad': charType = 1;
+				case 'gf' | 'girlfriend': charType = 2;
+			}
+			GameState.instance.addCharacterToList(name, charType);
+		});
+
 		// Lua_helper.add_callback(lua, "precacheImage", function(name:String) {
 		// 	#if MODS_ALLOWED
 		// 	Paths.addCustomGraphic(name);
 		// 	#end
 		// });
+
 		// Lua_helper.add_callback(lua, "precacheSound", function(name:String) {
 		// 	CoolUtil.precacheSound(name);
 		// });
@@ -700,64 +702,65 @@ class FunkinLua {
 			//trace('Triggered event: ' + name + ', ' + value1 + ', ' + value2);
 		});
 
-		// Lua_helper.add_callback(lua, "startCountdown", function(variable:String) {
-		// 	GameState.instance.startCountdown();
-		// });
-		// Lua_helper.add_callback(lua, "endSong", function() {
-		// 	GameState.instance.KillNotes();
-		// 	GameState.instance.endSong();
-		// });
-		// Lua_helper.add_callback(lua, "getSongPosition", function() {
-		// 	return Conductor.songPosition;
-		// });
+		Lua_helper.add_callback(lua, "startCountdown", function(variable:String) {
+			GameState.instance.startCountdown();
+		});
+		Lua_helper.add_callback(lua, "endSong", function() {
+			GameState.instance.KillNotes();
+			GameState.instance.endSong();
+		});
 
-		// Lua_helper.add_callback(lua, "getCharacterX", function(type:String) {
-		// 	switch(type.toLowerCase()) {
-		// 		case 'dad' | 'opponent':
-		// 			return GameState.instance.dadGroup.x;
-		// 		case 'gf' | 'girlfriend':
-		// 			return GameState.instance.gfGroup.x;
-		// 		default:
-		// 			return GameState.instance.boyfriendGroup.x;
-		// 	}
-		// });
-		// Lua_helper.add_callback(lua, "setCharacterX", function(type:String, value:Float) {
-		// 	switch(type.toLowerCase()) {
-		// 		case 'dad' | 'opponent':
-		// 			GameState.instance.dadGroup.x = value;
-		// 		case 'gf' | 'girlfriend':
-		// 			GameState.instance.gfGroup.x = value;
-		// 		default:
-		// 			GameState.instance.boyfriendGroup.x = value;
-		// 	}
-		// });
-		// Lua_helper.add_callback(lua, "getCharacterY", function(type:String) {
-		// 	switch(type.toLowerCase()) {
-		// 		case 'dad' | 'opponent':
-		// 			return GameState.instance.dadGroup.y;
-		// 		case 'gf' | 'girlfriend':
-		// 			return GameState.instance.gfGroup.y;
-		// 		default:
-		// 			return GameState.instance.boyfriendGroup.y;
-		// 	}
-		// });
-		// Lua_helper.add_callback(lua, "setCharacterY", function(type:String, value:Float) {
-		// 	switch(type.toLowerCase()) {
-		// 		case 'dad' | 'opponent':
-		// 			GameState.instance.dadGroup.y = value;
-		// 		case 'gf' | 'girlfriend':
-		// 			GameState.instance.gfGroup.y = value;
-		// 		default:
-		// 			GameState.instance.boyfriendGroup.y = value;
-		// 	}
-		// });
-		// Lua_helper.add_callback(lua, "cameraSetTarget", function(target:String) {
-		// 	var isDad:Bool = false;
-		// 	if(target == 'dad') {
-		// 		isDad = true;
-		// 	}
-		// 	GameState.instance.moveCamera(isDad);
-		// });
+		Lua_helper.add_callback(lua, "getSongPosition", function() {
+			return Conductor.songPosition;
+		});
+
+		Lua_helper.add_callback(lua, "getCharacterX", function(type:String) {
+			switch(type.toLowerCase()) {
+				case 'dad' | 'opponent':
+					return GameState.instance.dadGroup.x;
+				case 'gf' | 'girlfriend':
+					return GameState.instance.gfGroup.x;
+				default:
+					return GameState.instance.boyfriendGroup.x;
+			}
+		});
+		Lua_helper.add_callback(lua, "setCharacterX", function(type:String, value:Float) {
+			switch(type.toLowerCase()) {
+				case 'dad' | 'opponent':
+					GameState.instance.dadGroup.x = value;
+				case 'gf' | 'girlfriend':
+					GameState.instance.gfGroup.x = value;
+				default:
+					GameState.instance.boyfriendGroup.x = value;
+			}
+		});
+		Lua_helper.add_callback(lua, "getCharacterY", function(type:String) {
+			switch(type.toLowerCase()) {
+				case 'dad' | 'opponent':
+					return GameState.instance.dadGroup.y;
+				case 'gf' | 'girlfriend':
+					return GameState.instance.gfGroup.y;
+				default:
+					return GameState.instance.boyfriendGroup.y;
+			}
+		});
+		Lua_helper.add_callback(lua, "setCharacterY", function(type:String, value:Float) {
+			switch(type.toLowerCase()) {
+				case 'dad' | 'opponent':
+					GameState.instance.dadGroup.y = value;
+				case 'gf' | 'girlfriend':
+					GameState.instance.gfGroup.y = value;
+				default:
+					GameState.instance.boyfriendGroup.y = value;
+			}
+		});
+		Lua_helper.add_callback(lua, "cameraSetTarget", function(target:String) {
+			var isDad:Bool = false;
+			if(target == 'dad') {
+				isDad = true;
+			}
+			GameState.instance.moveCamera(isDad);
+		});
 		Lua_helper.add_callback(lua, "cameraShake", function(camera:String, intensity:Float, duration:Float) {
 			cameraFromString(camera).shake(intensity, duration);
 		});
@@ -1016,38 +1019,38 @@ class FunkinLua {
 			}
 		});
 
-		// Lua_helper.add_callback(lua, "setObjectCamera", function(obj:String, camera:String = '') {
-		// 	if(GameState.instance.modchartSprites.exists(obj)) {
-		// 		GameState.instance.modchartSprites.get(obj).cameras = [cameraFromString(camera)];
-		// 		return true;
-		// 	}
-		// 	else if(GameState.instance.modchartTexts.exists(obj)) {
-		// 		GameState.instance.modchartTexts.get(obj).cameras = [cameraFromString(camera)];
-		// 		return true;
-		// 	}
+		Lua_helper.add_callback(lua, "setObjectCamera", function(obj:String, camera:String = '') {
+			if(GameState.instance.modchartSprites.exists(obj)) {
+				GameState.instance.modchartSprites.get(obj).cameras = [cameraFromString(camera)];
+				return true;
+			}
+			else if(GameState.instance.modchartTexts.exists(obj)) {
+				GameState.instance.modchartTexts.get(obj).cameras = [cameraFromString(camera)];
+				return true;
+			}
 
-		// 	var object:FlxObject = Reflect.getProperty(getInstance(), obj);
-		// 	if(object != null) {
-		// 		object.cameras = [cameraFromString(camera)];
-		// 		return true;
-		// 	}
-		// 	luaTrace("Object " + obj + " doesn't exist!");
-		// 	return false;
-		// });
-		// Lua_helper.add_callback(lua, "setBlendMode", function(obj:String, blend:String = '') {
-		// 	if(GameState.instance.modchartSprites.exists(obj)) {
-		// 		GameState.instance.modchartSprites.get(obj).blend = blendModeFromString(blend);
-		// 		return true;
-		// 	}
+			var object:FlxObject = Reflect.getProperty(getInstance(), obj);
+			if(object != null) {
+				object.cameras = [cameraFromString(camera)];
+				return true;
+			}
+			luaTrace("Object " + obj + " doesn't exist!");
+			return false;
+		});
+		Lua_helper.add_callback(lua, "setBlendMode", function(obj:String, blend:String = '') {
+			if(GameState.instance.modchartSprites.exists(obj)) {
+				GameState.instance.modchartSprites.get(obj).blend = blendModeFromString(blend);
+				return true;
+			}
 
-		// 	var spr:FlxSprite = Reflect.getProperty(getInstance(), obj);
-		// 	if(spr != null) {
-		// 		spr.blend = blendModeFromString(blend);
-		// 		return true;
-		// 	}
-		// 	luaTrace("Object " + obj + " doesn't exist!");
-		// 	return false;
-		// });
+			var spr:FlxSprite = Reflect.getProperty(getInstance(), obj);
+			if(spr != null) {
+				spr.blend = blendModeFromString(blend);
+				return true;
+			}
+			luaTrace("Object " + obj + " doesn't exist!");
+			return false;
+		});
 		Lua_helper.add_callback(lua, "screenCenter", function(obj:String, pos:String = 'xy') {
 			var spr:FlxSprite;
 			if(GameState.instance.modchartSprites.exists(obj)) {
