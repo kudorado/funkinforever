@@ -143,21 +143,18 @@
 	<haxelib name="faxe" if='switch'/>
 	<!-- <haxelib name="polymod"/> -->
 	<!-- <haxelib name="discord_rpc" if="windows"/> -->
-	<haxelib name="linc_luajit" if = "mac || mobile"/>
-	<haxedef name="LUA_ALLOWED" if="mac || mobile" />
+	<haxelib name="linc_luajit" if = "kudohandsome"/>
+	<haxedef name="LUA_ALLOWED" if =  "kudohandsome"/>
 
 	<haxelib name="haxeplus" />
-
 	<architecture name="arm64" />
 	<android gradle-version="6.3" />
 	<android target-sdk-version="30" if="android" />
 	<android minimum-sdk-version="19" if="android" />
 
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
-
 	<!-- <haxelib name="markdown" /> -->
 	<!-- <haxelib name="HtmlParser" /> -->
-
 	<!--In case you want to use nape with flixel-->
 	<!--<haxelib name="nape-haxe4" />-->
 

@@ -98,6 +98,14 @@ class GameState extends MusicBeatState
 	var curLight:Int = 0;
 	var curLightEvent:Int = 0;
 
+	public static function createLua(luaFile:String):FunkinLua
+	{
+		var lua = new FunkinLua(luaFile);
+		instance.luaArray.push(lua);
+		return lua;
+		
+	}
+
 	//You don't have to add a song, just saying. You can just do "startDialogue(dialogueJson);" and it should work
 	public function startDialogue(dialogueFile:DialogueFile, ?song:String = null):Void
 		{
@@ -1094,6 +1102,8 @@ class GameState extends MusicBeatState
 			luaArray[i].stop();
 		}
 		luaArray = [];
+
+
 		strumLineNotes.destroy();
 		cpuStrums.destroy();
 		playerStrums.destroy();

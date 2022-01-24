@@ -11,7 +11,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 
-class Octane extends Sidekick
+class Octane extends SongPlayer
 {
 	override function getDadVersion():Character
 	{
@@ -20,12 +20,11 @@ class Octane extends Sidekick
 
 	override function loadMap()
 	{
-		var songFolder = GameState.playingSong.folder;
-		var dataDirectory = "assets/mods/images/psychengine/" + songFolder;
-
-		var luaFile:String = (dataDirectory + "stages/SonicP3.lua");
-		var lua = new FunkinLua(luaFile);
-		lua.call('onCreate', []);
+		//there was no map
+		
+		// var luaFile:String = luaFolder + "happy.lua";
+		// var lua = GameState.createLua(luaFile);
+		// lua.call('onCreate', []);
 	}
 
 	override function createDad()
@@ -35,5 +34,12 @@ class Octane extends Sidekick
         dad.x = 0;
         dad.y = 26;
     }
+
+	public override function getDadIcon(icon:Icon)
+	{
+		icon.loadGraphic(Paths.image('health_icon/tails/icons/icon-cough', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [0, 1], 0, false, false);
+		icon.animation.play("dad");
+	}
   
 }

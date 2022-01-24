@@ -30,6 +30,19 @@ import Song.SwagSong;
 // base song hold variable and some helper function
 class BaseSong
 {
+
+//lua shit
+//---------------------------------------
+	var songFolder(get, never):String;
+	inline function get_songFolder()
+		return GameState.playingSong.folder;
+
+	var luaFolder(get, never):String;
+	inline function get_luaFolder()
+		return "assets/mods/images/psychengine/" + songFolder + "stages/";
+
+//---------------------------------
+//---------------------------------------
 	//---------------------------------------- VARIABLES -----------------------------------------------------
 	// skin
 	public var skin:Skin;
