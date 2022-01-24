@@ -21,16 +21,16 @@ class Octane extends SongPlayer
 	override function loadMap()
 	{
 		//there was no map
-		
-		// var luaFile:String = luaFolder + "happy.lua";
-		// var lua = GameState.createLua(luaFile);
-		// lua.call('onCreate', []);
+
+		// var daPath = "images/psychengine/week_tails/stages/SonicP2.lua";
+		var luaFile:String = luaFolder + "happy.lua";
+		var lua = GameState.createLua(luaFile);
+		lua.call('onCreate', []);
 	}
 
 	override function createDad()
 	{
         super.createDad();
-
         dad.x = 0;
         dad.y = 26;
     }

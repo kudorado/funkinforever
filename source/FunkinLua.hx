@@ -73,8 +73,8 @@ class FunkinLua {
 		LuaL.openlibs(lua);
 		Lua.init_callbacks(lua);
 
-		//trace('Lua version: ' + Lua.version());
-		//trace("LuaJIT version: " + Lua.versionJIT());
+		// trace('Lua version: ' + Lua.version());
+		// trace("LuaJIT version: " + Lua.versionJIT());
 
 		var result:Dynamic = LuaL.dofile(lua, script);
 		var resultStr:String = Lua.tostring(lua, result);
@@ -84,6 +84,7 @@ class FunkinLua {
 			lua = null;
 			return;
 		}
+		
 		scriptName = script;
 		trace('Lua file loaded succesfully:' + script);
 

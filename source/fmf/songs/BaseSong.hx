@@ -38,8 +38,13 @@ class BaseSong
 		return GameState.playingSong.folder;
 
 	var luaFolder(get, never):String;
-	inline function get_luaFolder()
+	inline function get_luaFolder(){
+		#if ios 
+		return "assets/assets/mods/images/psychengine/" + songFolder + "stages/";
+		#else 
 		return "assets/mods/images/psychengine/" + songFolder + "stages/";
+		#end
+	}
 
 //---------------------------------
 //---------------------------------------

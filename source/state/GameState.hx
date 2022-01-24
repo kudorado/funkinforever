@@ -100,8 +100,10 @@ class GameState extends MusicBeatState
 
 	public static function createLua(luaFile:String):FunkinLua
 	{
+
 		var lua = new FunkinLua(luaFile);
 		instance.luaArray.push(lua);
+
 		return lua;
 		
 	}

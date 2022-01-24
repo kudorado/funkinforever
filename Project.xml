@@ -143,8 +143,8 @@
 	<haxelib name="faxe" if='switch'/>
 	<!-- <haxelib name="polymod"/> -->
 	<!-- <haxelib name="discord_rpc" if="windows"/> -->
-	<haxelib name="linc_luajit" if = "kudohandsome"/>
-	<haxedef name="LUA_ALLOWED" if =  "kudohandsome"/>
+	<haxelib name="linc_luajit" unless = "html5"/>
+	<haxedef name="LUA_ALLOWED" unless =  "html5"/>
 
 	<haxelib name="haxeplus" />
 	<architecture name="arm64" />
