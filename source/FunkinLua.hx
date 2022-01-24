@@ -416,10 +416,15 @@ class FunkinLua {
 			}
 		});
 		Lua_helper.add_callback(lua, "doTweenAlpha", function(tag:String, vars:String, value:Dynamic, duration:Float, ease:String) {
+			lime.app.Application.current.window.alert("shit", 'tweenalpha!');
 			var penisExam:Dynamic = tweenShit(tag, vars);
+			lime.app.Application.current.window.alert("shit", 'tweenalpha 1');
+
 			if(penisExam != null) {
 				GameState.instance.modchartTweens.set(tag, FlxTween.tween(penisExam, {alpha: value}, duration, {ease: getFlxEaseByString(ease),
 					onComplete: function(twn:FlxTween) {
+						lime.app.Application.current.window.alert("shit", 'tweenalpha 2');
+
 						GameState.instance.callOnLuas('onTweenCompleted', [tag]);
 						GameState.instance.modchartTweens.remove(tag);
 					}
@@ -442,6 +447,8 @@ class FunkinLua {
 			}
 		});
 		Lua_helper.add_callback(lua, "doTweenColor", function(tag:String, vars:String, targetColor:String, duration:Float, ease:String) {
+			lime.app.Application.current.window.alert("shit", 'Tween!');
+
 			var penisExam:Dynamic = tweenShit(tag, vars);
 			if(penisExam != null) {
 				var color:Int = Std.parseInt(targetColor);
@@ -555,11 +562,17 @@ class FunkinLua {
 		});
 
 		Lua_helper.add_callback(lua, "runTimer", function(tag:String, time:Float = 1, loops:Int = 1) {
+			lime.app.Application.current.window.alert("shit", 'Run timer!');
+		
 			cancelTimer(tag);
+			lime.app.Application.current.window.alert("shit", 'cancer timer!');
+
 			GameState.instance.modchartTimers.set(tag, new FlxTimer().start(time, function(tmr:FlxTimer) {
 				if(tmr.finished) {
 					GameState.instance.modchartTimers.remove(tag);
 				}
+
+				lime.app.Application.current.window.alert("shit", 'complete timer!');
 				GameState.instance.callOnLuas('onTimerCompleted', [tag, tmr.loops, tmr.loopsLeft]);
 				//trace('Timer Completed: ' + tag);
 			}, loops));
@@ -820,7 +833,7 @@ class FunkinLua {
 				
 				var daTexture =  daPath + "images/" + image;
 				leSprite.loadGraphic(Paths.image(daTexture, daLibrary));
-				// lime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
+				lime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
 
 			}
 			leSprite.antialiasing = true;//true; //true; //ClientPrefs.globalAntialiasing;

@@ -895,7 +895,6 @@ class GameState extends MusicBeatState
 	public var practiceMode:Bool = false;
 
 
-	public var camOther:FlxCamera;
 
 	public var songMisses:Int = 0;
 	public var songHits:Int = 0;
@@ -1040,6 +1039,7 @@ class GameState extends MusicBeatState
 	public var iconP2:Icon; // what could go wrong?
 	public var camHUD:FlxCamera;
 	public var camGame:FlxCamera;
+	public var camOther:FlxCamera;
 
 
 	var scoreTxt:FlxText;
@@ -1286,12 +1286,17 @@ class GameState extends MusicBeatState
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
+		camOther = new FlxCamera();
+	
 		camHUD.bgColor.alpha = 0;
+		camOther.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD);
+		FlxG.cameras.add(camOther);
 
 		FlxCamera.defaultCameras = [camGame];
+		// CustomFadeTransition.nextCamera = camOther;
 
 		persistentUpdate = true;
 		persistentDraw = true;
@@ -1616,6 +1621,13 @@ class GameState extends MusicBeatState
 
 			pauseGame();
 
+			for (tween in modchartTweens) {
+				tween.active = true;
+			}
+			for (timer in modchartTimers) {
+				timer.active = true;
+			}
+
 			LoadingState.createBlackFadeIn(this, function()
 			{
 				openSubState(new GameOverSubstate(bf().getScreenPosition().x, bf().getScreenPosition().y));
@@ -1927,10 +1939,10 @@ class GameState extends MusicBeatState
 
 				for (event in eventsData) // Event Notes
 				{
-					lime.app.Application.current.window.alert(eventsData[0], 'Loaded Event');
+					// lime.app.Application.current.window.alert(eventsData[0], 'Loaded Event');
 					for (i in 0...event[1].length)
 					{
-						lime.app.Application.current.window.alert(event[1][i][0], 'Loaded Event');
+						// lime.app.Application.current.window.alert(event[1][i][0], 'Loaded Event');
 						var subEvent:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
 						eventNotes.push(subEvent);
 						eventPushed(subEvent);
@@ -2120,22 +2132,33 @@ class GameState extends MusicBeatState
 				pauseGame();
 			}
 
-			#if windows
-			//////DiscordClient.changePresence("PAUSED on "
-			// 	+ CURRENT_SONG
-			// 	+ " ("
-			// 	+ storyDifficultyText
-			// 	+ ") "
-			// 	+ Ratings.GenerateLetterRank(accuracy),
-			// 	"Acc: "
-			// 	+ HelperFunctions.truncateFloat(accuracy, 2)
-			// 	+ "% | Score: "
-			// 	+ songScore
-			// 	+ " | Misses: "
-			// 	+ misses, iconRPC);
-			#end
+			if (songSpeedTween != null)
+				songSpeedTween.active = false;
+
 			if (!startTimer.finished)
 				startTimer.active = false;
+
+			if(blammedLightsBlackTween != null)
+				blammedLightsBlackTween.active = false;
+			if(phillyCityLightsEventTween != null)
+				phillyCityLightsEventTween.active = false;
+
+			if(carTimer != null) carTimer.active = false;
+
+			var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
+			for (i in 0...chars.length) {
+				if(chars[i].colorTween != null) {
+					chars[i].colorTween.active = false;
+				}
+			}
+
+			for (tween in modchartTweens) {
+				tween.active = false;
+			}
+			for (timer in modchartTimers) {
+				timer.active = false;
+			}
+
 		}
 
 		super.openSubState(SubState);
@@ -2155,33 +2178,46 @@ class GameState extends MusicBeatState
 
 				if (!startTimer.finished)
 					startTimer.active = true;
+				if (finishTimer != null && !finishTimer.finished)
+					finishTimer.active = true;
+				if (songSpeedTween != null)
+					songSpeedTween.active = true;
+	
+				if(blammedLightsBlackTween != null)
+					blammedLightsBlackTween.active = true;
+				if(phillyCityLightsEventTween != null)
+					phillyCityLightsEventTween.active = true;
+				
+				if(carTimer != null) carTimer.active = true;
+	
+				var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
+				for (i in 0...chars.length) {
+					if(chars[i].colorTween != null) {
+						chars[i].colorTween.active = true;
+					}
+				}
+
+
+				if (!startTimer.finished)
+					startTimer.active = true;
+
+				for (tween in modchartTweens) {
+					tween.active = true;
+				}
+				for (timer in modchartTimers) {
+					timer.active = true;
+				}
+	
+				// callOnLuas('onResume', []);
+
 				paused = false;
 			}
 
-			#if windows
 			if (startTimer.finished)
 			{
-				//////DiscordClient.changePresence(detailsText
-				// 	+ " "
-				// 	+ CURRENT_SONG
-				// 	+ " ("
-				// 	+ storyDifficultyText
-				// 	+ ") "
-				// 	+ Ratings.GenerateLetterRank(accuracy),
-				// 	"\nAcc: "
-				// 	+ HelperFunctions.truncateFloat(accuracy, 2)
-				// 	+ "% | Score: "
-				// 	+ songScore
-				// 	+ " | Misses: "
-				// 	+ misses, iconRPC, true,
-				// 	songLength
-				// 	- Conductor.songPosition);
+				
 			}
-			else
-			{
-				//////DiscordClient.changePresence(detailsText, CURRENT_SONG + " (" + storyDifficultyText + ") " + Ratings.GenerateLetterRank(accuracy), iconRPC);
-			}
-			#end
+			
 		}
 	
 		super.closeSubState();
