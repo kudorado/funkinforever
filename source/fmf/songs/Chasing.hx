@@ -20,6 +20,13 @@ class Chasing extends SongPlayer
         dad.frames = tex;
     }
 
+	override function createLua()
+	{
+        // get event
+        var luaFile = SongPlayer.luaFolder + "custom_events/Image Flash.lua";
+		GameState.createLua(luaFile);
+    }
+
     override function loadMap()
     {
         gameState.defaultCamZoom = 0.8;
@@ -86,15 +93,15 @@ class Chasing extends SongPlayer
         bf.y += 60;
     }
 
-    override function updateCamFollowdaddy()
+    override function updateCamFollowDad()
     {
-        super.updateCamFollowdaddy();
+        super.updateCamFollowDad();
         gameState.targetCamFollow.y -= 50;
     }
 
     override function updateCamFollowBF()
     {
-        super.updateCamFollowdaddy();
+        super.updateCamFollowDad();
         gameState.targetCamFollow.y -= 50;
         gameState.targetCamFollow.x -= 100;
     }

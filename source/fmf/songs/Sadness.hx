@@ -138,7 +138,7 @@ class Sadness extends SongPlayer
 
 	}
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
 		super.updateCamFollowBF();
 

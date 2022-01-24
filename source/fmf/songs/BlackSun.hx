@@ -140,9 +140,9 @@ class BlackSun extends SongPlayer
         bf.y += (557 - 425);
     }
 
-    override function updateCamFollowdaddy()
+    override function updateCamFollowDad()
     {
-        super.updateCamFollowdaddy();
+        super.updateCamFollowDad();
         gameState.targetCamFollow.y -= 150;
         gameState.defaultCamZoom = 0.6;
 
@@ -150,7 +150,7 @@ class BlackSun extends SongPlayer
 
     override function updateCamFollowBF()
     {
-        super.updateCamFollowdaddy();
+        super.updateCamFollowDad();
         gameState.targetCamFollow.y += 15;
         gameState.defaultCamZoom = 0.85;
     }

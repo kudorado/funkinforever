@@ -170,9 +170,9 @@ class Heartbass extends Perfume
 		//fuck you.
 	}
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
-		super.updateCamFollowdaddy();
+		super.updateCamFollowDad();
 
 		if(dancing)
 			gameState.targetCamFollow.y = bf.getMidpoint().y - 200;

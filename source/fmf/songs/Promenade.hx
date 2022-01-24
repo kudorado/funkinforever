@@ -76,9 +76,9 @@ class Promenade extends SongPlayer
 		gf.visible = false;
 	}
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
-		super.updateCamFollowdaddy();
+		super.updateCamFollowDad();
 		gameState.defaultCamZoom = 0.5;
 
 	}

@@ -90,7 +90,7 @@ class TrickyHell extends TrickyMask
 		icon.animation.play("dad");
 	}
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
 		gameState.targetCamFollow.y = dad.getMidpoint().y + 250;
 		gameState.targetCamFollow.x = dad.getMidpoint().x;

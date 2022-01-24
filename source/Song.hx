@@ -10,6 +10,8 @@ using StringTools;
 
 typedef SwagSong =
 {
+	var events:Array<Dynamic>;
+
 	var song:String;
 	var notes:Array<SwagSection>;
 	var bpm:Float;

@@ -74,15 +74,15 @@ class Milk extends SongPlayer
 
     }
 
-    override function updateCamFollowdaddy()
+    override function updateCamFollowDad()
     {
-        super.updateCamFollowdaddy();
+        super.updateCamFollowDad();
         //gameState.targetCamFollow.y -= 150;
     }
 
     override function updateCamFollowBF()
     {
-        super.updateCamFollowdaddy();
+        super.updateCamFollowDad();
         //gameState.targetCamFollow.y -= 50;
     }
 

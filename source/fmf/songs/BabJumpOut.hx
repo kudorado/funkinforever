@@ -108,7 +108,7 @@ class BabJumpOut extends SongPlayer
 		gameState.targetCamFollow.y -= 60;
 	}
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
 		gameState.targetCamFollow.x += 100;
 		gameState.targetCamFollow.y -= 60;

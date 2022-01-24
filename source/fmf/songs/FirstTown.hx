@@ -91,7 +91,7 @@ class FirstTown extends SongPlayer
 
 	}
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
 		gameState.targetCamFollow.x = gf.getGraphicMidpoint().x - 120;
 		gameState.targetCamFollow.y = 360;

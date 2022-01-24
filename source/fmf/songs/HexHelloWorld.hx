@@ -55,7 +55,7 @@ class HexHelloWorld extends SongPlayer
 		dad.y -= 400;
 	}
 
-    override function updateCamFollowdaddy()
+    override function updateCamFollowDad()
 	{
 		gameState.targetCamFollow.y = dad.getGraphicMidpoint().y - 50;
 	}

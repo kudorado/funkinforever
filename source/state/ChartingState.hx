@@ -105,6 +105,7 @@ class ChartingState extends MusicBeatState
 			_song = {
 				song: 'Test',
 				notes: [],
+				events: [],
 				bpm: 150,
 				needsVoices: true,
 				player1: 'bf',

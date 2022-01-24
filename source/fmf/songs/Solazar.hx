@@ -122,9 +122,9 @@ class Solazar extends SongPlayer
 		gameState.targetCamFollow.y += 500;
 	}
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
-		super.updateCamFollowdaddy();
+		super.updateCamFollowDad();
 	}
 	
 		

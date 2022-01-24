@@ -147,15 +147,15 @@ class Faker extends SongPlayer
         bf.y += 40;
     }
 
-    override function updateCamFollowdaddy()
+    override function updateCamFollowDad()
     {
-        super.updateCamFollowdaddy();
+        super.updateCamFollowDad();
         gameState.targetCamFollow.y -= 50;
     }
 
     override function updateCamFollowBF()
     {
-        super.updateCamFollowdaddy();
+        super.updateCamFollowDad();
         gameState.targetCamFollow.y -= 150;
     }
 

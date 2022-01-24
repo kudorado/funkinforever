@@ -16,9 +16,30 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup;
 import Song.SwagSong;
 
+
 // base class execute song data
 class SongPlayer extends BaseSong
 {
+
+//lua shit
+//---------------------------------------------------------------
+
+	public static var folder(get, never):String;
+	static inline function get_folder()
+		return GameState.playingSong.folder;
+
+	public static var luaFolder(get, never):String;
+	static inline function get_luaFolder()
+	{
+		#if ios
+		return "assets/assets/mods/images/psychengine/" + folder;
+		#else
+		return "assets/mods/images/psychengine/" + folder;
+		#end
+	}
+
+
+//-------------------------------------------------------------
 
 //----------------------------------- INITIALIZE -------------------------------------------------------
 
@@ -55,7 +76,7 @@ class SongPlayer extends BaseSong
 	//public function noteEvent(noteData:Note):Void{bf.noteEventDad(noteData); }
 	
 	// update camera follow dad depending on song
-	public function updateCamFollowdaddy():Void{}
+	public function updateCamFollowDad():Void{}
 
 	// update camera follow bf depending on song
 	public function updateCamFollowBF():Void{} 

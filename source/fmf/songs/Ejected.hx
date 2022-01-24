@@ -163,9 +163,9 @@ class Ejected extends SongPlayer
 		gameState.targetCamFollow.y = bf.getMidpoint().y - 150;
 	}
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
-		super.updateCamFollowdaddy();
+		super.updateCamFollowDad();
 		gameState.targetCamFollow.x = bf.getMidpoint().x - 500;
 		gameState.targetCamFollow.y = bf.getMidpoint().y - 150;
 	}

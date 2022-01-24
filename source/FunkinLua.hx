@@ -560,7 +560,7 @@ class FunkinLua {
 				if(tmr.finished) {
 					GameState.instance.modchartTimers.remove(tag);
 				}
-				// GameState.instance.callOnLuas('onTimerCompleted', [tag, tmr.loops, tmr.loopsLeft]);
+				GameState.instance.callOnLuas('onTimerCompleted', [tag, tmr.loops, tmr.loopsLeft]);
 				//trace('Timer Completed: ' + tag);
 			}, loops));
 		});
@@ -794,21 +794,21 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "characterPlayAnim", function(character:String, anim:String, ?forced:Bool = false) {
 			switch(character.toLowerCase()) {
 				case 'dad':
-					if(GameState.instance.dad.animOffsets.exists(anim))
-						GameState.instance.dad.playAnim(anim, forced);
+					if(GameState.instance.dadPE.animOffsets.exists(anim))
+						GameState.instance.dadPE.playAnim(anim, forced);
 				case 'gf' | 'girlfriend':
-					if(GameState.instance.gf.animOffsets.exists(anim))
-						GameState.instance.gf.playAnim(anim, forced);
+					if(GameState.instance.gfPE.animOffsets.exists(anim))
+						GameState.instance.gfPE.playAnim(anim, forced);
 				default: 
-					if(GameState.instance.boyfriend.animOffsets.exists(anim))
-						GameState.instance.boyfriend.playAnim(anim, forced);
+					if(GameState.instance.bfPE.animOffsets.exists(anim))
+						GameState.instance.bfPE.playAnim(anim, forced);
 			}
 		});
 		Lua_helper.add_callback(lua, "characterDance", function(character:String) {
 			switch(character.toLowerCase()) {
-				case 'dad': GameState.instance.dad.dance();
-				case 'gf' | 'girlfriend': GameState.instance.gf.dance();
-				default: GameState.instance.boyfriend.dance();
+				case 'dad': GameState.instance.dadPE.dance();
+				case 'gf' | 'girlfriend': GameState.instance.gfPE.dance();
+				default: GameState.instance.bfPE.dance();
 			}
 		});
 
@@ -932,7 +932,7 @@ class FunkinLua {
 					{
 						if(GameState.instance.isDead)
 						{
-							// GameOverSubstate.instance.insert(GameOverSubstate.instance.members.indexOf(GameOverSubstate.instance.boyfriend), shit);
+							// GameOverSubstate.instance.insert(GameOverSubstate.instance.members.indexOf(GameOverSubstate.instance.bfPE), shit);
 						}
 						else
 						{

@@ -92,9 +92,9 @@ class ShotgunShell extends SongPlayer
 	}
 
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
-		super.updateCamFollowdaddy();
+		super.updateCamFollowDad();
 		gameState.targetCamFollow.y += 50;
 		gameState.defaultCamZoom = 0.55;
 

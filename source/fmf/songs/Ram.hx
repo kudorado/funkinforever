@@ -40,7 +40,7 @@ class Ram extends SongPlayer
 		dad.animation = animation;
 	}
 	
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
 		gameState.targetCamFollow.y = dad.getGraphicMidpoint().y - 50;
 	}

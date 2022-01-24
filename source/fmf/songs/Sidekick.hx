@@ -112,15 +112,15 @@ class Sidekick extends SongPlayer
 
     }
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
-		super.updateCamFollowdaddy();
+		super.updateCamFollowDad();
 		gameState.targetCamFollow.y += 100;
 	}
 
 	override function updateCamFollowBF()
 	{
-		super.updateCamFollowdaddy();
+		super.updateCamFollowDad();
         gameState.targetCamFollow.y -= 100;
 	}
 

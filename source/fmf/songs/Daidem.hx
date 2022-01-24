@@ -69,7 +69,7 @@ class Daidem extends SongPlayer
 	
 	}
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
 		gameState.targetCamFollow.y = dad.getMidpoint().y - 100;
 	}

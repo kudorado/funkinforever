@@ -33,18 +33,7 @@ class BaseSong
 
 //lua shit
 //---------------------------------------
-	var songFolder(get, never):String;
-	inline function get_songFolder()
-		return GameState.playingSong.folder;
 
-	var luaFolder(get, never):String;
-	inline function get_luaFolder(){
-		#if ios 
-		return "assets/assets/mods/images/psychengine/" + songFolder + "stages/";
-		#else 
-		return "assets/mods/images/psychengine/" + songFolder + "stages/";
-		#end
-	}
 
 //---------------------------------
 //---------------------------------------
@@ -102,9 +91,15 @@ class BaseSong
 	// initalize function
 	public function init():Void
 	{
+		createLua();
 		loadMap();
 		createCharacters();
 		initVariables();
+	}
+
+	function createLua()
+	{
+
 	}
 
 	function initVariables()
@@ -289,7 +284,7 @@ class BaseSong
 		//detect Psych engine character or not
 		var daPE = Type.getClassName(Type.getClass(dad));
 
-		trace("dadShit: " + daPE);
+		// trace("dadShit: " + daPE);
 
 		var PE =  daPE.toLowerCase() == "characterpe" ;
 

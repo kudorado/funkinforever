@@ -83,9 +83,9 @@ class RunAway extends SongPlayer
         gameState.targetCamFollow.y -= 100;
     }
 
-    override function updateCamFollowdaddy()
+    override function updateCamFollowDad()
     {
-        super.updateCamFollowdaddy();
+        super.updateCamFollowDad();
     }
 
 	public override function getDadIcon(icon:Icon)

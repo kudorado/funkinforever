@@ -234,7 +234,7 @@ class TabiMad extends Tabi
 		super.dadNoteEvent(noteData);
 	}
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
 		gameState.targetCamFollow.y = dad.getMidpoint().y + 50;
 	}

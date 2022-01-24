@@ -121,7 +121,7 @@ class SenpaiEvil extends Senpai
 		// no mse shit
 	}
 
-	override function updateCamFollowdaddy()
+	override function updateCamFollowDad()
 	{
 		gameState.targetCamFollow.y = dad.getMidpoint().y;
 		gameState.targetCamFollow.x = dad.getMidpoint().x + 250;

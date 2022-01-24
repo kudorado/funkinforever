@@ -23,9 +23,9 @@ class Octane extends SongPlayer
 		//there was no map
 
 		// var daPath = "images/psychengine/week_tails/stages/SonicP2.lua";
-		var luaFile:String = luaFolder + "happy.lua";
-		var lua = GameState.createLua(luaFile);
-		lua.call('onCreate', []);
+		// var luaFile:String = SongPlayer.luaFolder + "stages/happy.lua";
+		// GameState.createLua(luaFile);
+		// lua.call('onCreate', []);
 	}
 
 	override function createDad()
