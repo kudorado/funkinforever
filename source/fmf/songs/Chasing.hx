@@ -32,28 +32,10 @@ class Chasing extends SongPlayer
 
     override function loadMap()
     {
-        gameState.defaultCamZoom = 0.8;
+        gameState.defaultCamZoom = 1;
+        var happy = SongPlayer.luaFolder + "stages/happy.lua";
+		GameState.createLua(happy);
 
-        var sky:FlxSprite = new FlxSprite(-348, -64).loadGraphic(Paths.image('bg/tails/happy/SKY', 'mods'));
-        sky.antialiasing = true;
-        sky.scale.x = 1;
-        sky.scale.y = 1;
-        sky.scrollFactor.set(0.95, 0.95);
-        gameState.add(sky);
-
-        var floor2:FlxSprite = new FlxSprite(-348, -64).loadGraphic(Paths.image('bg/tails/happy/FLOOR2', 'mods'));
-        floor2.antialiasing = true;
-        floor2.scale.x = 1;
-        floor2.scale.y = 1;
-        floor2.scrollFactor.set(0.95, 0.95);
-        gameState.add(floor2);
-
-        var floor1:FlxSprite = new FlxSprite(-348, -64).loadGraphic(Paths.image('bg/tails/happy/FLOOR1', 'mods'));
-        floor1.antialiasing = true;
-        floor1.scale.x = 1;
-        floor1.scale.y = 1;
-        floor1.scrollFactor.set(0.95, 0.95);
-        gameState.add(floor1);
     }
 
     override function getDefaultSkin():Skin
