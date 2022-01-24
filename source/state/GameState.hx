@@ -186,11 +186,22 @@ class GameState extends MusicBeatState
 
 		var lua = new FunkinLua(luaFile);
 		instance.luaArray.push(lua);
-		lime.app.Application.current.window.alert(luaFile, 'Create Lua');
+		// lime.app.Application.current.window.alert(luaFile, 'Create Lua');
 		lua.call('onCreate', []);
-
 		return lua;
-		
+	}
+
+	public static function createLuas(luaFiles:Array<String>)
+	{
+		var luas:Array<FunkinLua> = [];
+		for (luaFile in luaFiles)
+		{
+			var lua = new FunkinLua(luaFile);
+			luas.push(lua);
+			instance.luaArray.push(lua);
+			// lime.app.Application.current.window.alert(luaFile, 'Create Lua');
+			lua.call('onCreate', []);
+		}
 	}
 
 	//You don't have to add a song, just saying. You can just do "startDialogue(dialogueJson);" and it should work
@@ -1920,7 +1931,7 @@ class GameState extends MusicBeatState
 		// lime.app.Application.current.window.alert(modPath, 'Mod event path');
 		// var daPath = FileSystem.exists(modPath) ? modPath : file;
 
-		lime.app.Application.current.window.alert(file + ", exist: " + FileSystem.exists(file), 'Event path');
+		// lime.app.Application.current.window.alert(file + ", exist: " + FileSystem.exists(file), 'Event path');
 		#if sys
 		if (FileSystem.exists(file))
 		{
@@ -1935,7 +1946,7 @@ class GameState extends MusicBeatState
 			//check ass
 			if (eventsData != null)
 			{
-				lime.app.Application.current.window.alert("yeah", 'Loaded Event');
+				// lime.app.Application.current.window.alert("yeah", 'Loaded Event');
 
 				for (event in eventsData) // Event Notes
 				{
@@ -2143,7 +2154,7 @@ class GameState extends MusicBeatState
 			if(phillyCityLightsEventTween != null)
 				phillyCityLightsEventTween.active = false;
 
-			if(carTimer != null) carTimer.active = false;
+			// if(carTimer != null) carTimer.active = false;
 
 			var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
 			for (i in 0...chars.length) {
@@ -2178,8 +2189,9 @@ class GameState extends MusicBeatState
 
 				if (!startTimer.finished)
 					startTimer.active = true;
-				if (finishTimer != null && !finishTimer.finished)
-					finishTimer.active = true;
+				// if (finishTimer != null && !finishTimer.finished)
+					// finishTimer.active = true;
+
 				if (songSpeedTween != null)
 					songSpeedTween.active = true;
 	
@@ -2188,7 +2200,7 @@ class GameState extends MusicBeatState
 				if(phillyCityLightsEventTween != null)
 					phillyCityLightsEventTween.active = true;
 				
-				if(carTimer != null) carTimer.active = true;
+				// if(carTimer != null) carTimer.active = true;
 	
 				var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
 				for (i in 0...chars.length) {

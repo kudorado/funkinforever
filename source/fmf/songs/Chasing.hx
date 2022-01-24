@@ -23,8 +23,11 @@ class Chasing extends SongPlayer
 	override function createLua()
 	{
         // get event
-        var luaFile = SongPlayer.luaFolder + "custom_events/Image Flash.lua";
-		GameState.createLua(luaFile);
+        var flash = SongPlayer.luaFolder + "custom_events/flash.lua";
+        var changeBG = SongPlayer.luaFolder + "custom_events/bg.lua";
+
+		GameState.createLuas([flash, changeBG]);
+
     }
 
     override function loadMap()

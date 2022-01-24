@@ -416,14 +416,14 @@ class FunkinLua {
 			}
 		});
 		Lua_helper.add_callback(lua, "doTweenAlpha", function(tag:String, vars:String, value:Dynamic, duration:Float, ease:String) {
-			lime.app.Application.current.window.alert("shit", 'tweenalpha!');
+			luaTrace('tweenalpha!');
 			var penisExam:Dynamic = tweenShit(tag, vars);
-			lime.app.Application.current.window.alert("shit", 'tweenalpha 1');
+			luaTrace('tweenalpha 1!');
 
 			if(penisExam != null) {
 				GameState.instance.modchartTweens.set(tag, FlxTween.tween(penisExam, {alpha: value}, duration, {ease: getFlxEaseByString(ease),
 					onComplete: function(twn:FlxTween) {
-						lime.app.Application.current.window.alert("shit", 'tweenalpha 2');
+						luaTrace('tweenalpha 2!');
 
 						GameState.instance.callOnLuas('onTweenCompleted', [tag]);
 						GameState.instance.modchartTweens.remove(tag);
@@ -447,12 +447,14 @@ class FunkinLua {
 			}
 		});
 		Lua_helper.add_callback(lua, "doTweenColor", function(tag:String, vars:String, targetColor:String, duration:Float, ease:String) {
-			lime.app.Application.current.window.alert("shit", 'Tween!');
-
+			// luaTrace('doTweenColor!');
 			var penisExam:Dynamic = tweenShit(tag, vars);
 			if(penisExam != null) {
-				var color:Int = Std.parseInt(targetColor);
-				if(!targetColor.startsWith('0x')) color = Std.parseInt('0xff' + targetColor);
+				var color:Int; //= Std.parseInt(targetColor);
+				if (!targetColor.startsWith('0x'))
+					color = Std.parseInt('0xff' + targetColor);
+				else
+					color = Std.parseInt(targetColor);
 
 				var curColor:FlxColor = penisExam.color;
 				curColor.alphaFloat = penisExam.alpha;
@@ -562,20 +564,21 @@ class FunkinLua {
 		});
 
 		Lua_helper.add_callback(lua, "runTimer", function(tag:String, time:Float = 1, loops:Int = 1) {
-			lime.app.Application.current.window.alert("shit", 'Run timer!');
-		
+			// luaTrace('run timer!');
+
 			cancelTimer(tag);
 			lime.app.Application.current.window.alert("shit", 'cancer timer!');
-
 			GameState.instance.modchartTimers.set(tag, new FlxTimer().start(time, function(tmr:FlxTimer) {
 				if(tmr.finished) {
 					GameState.instance.modchartTimers.remove(tag);
 				}
 
-				lime.app.Application.current.window.alert("shit", 'complete timer!');
 				GameState.instance.callOnLuas('onTimerCompleted', [tag, tmr.loops, tmr.loopsLeft]);
 				//trace('Timer Completed: ' + tag);
 			}, loops));
+
+			lime.app.Application.current.window.alert("shit", 'fuck that timer!');
+
 		});
 		Lua_helper.add_callback(lua, "cancelTimer", function(tag:String) {
 			cancelTimer(tag);
