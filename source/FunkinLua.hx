@@ -421,13 +421,14 @@ class FunkinLua {
 			if(penisExam != null) {
 				GameState.instance.modchartTweens.set(tag, FlxTween.tween(penisExam, {alpha: value}, duration, {ease: getFlxEaseByString(ease),
 					onComplete: function(twn:FlxTween) {
-
+						lime.app.Application.current.window.alert(penisExam, 'doTweenAlpha');
 						GameState.instance.callOnLuas('onTweenCompleted', [tag]);
 						GameState.instance.modchartTweens.remove(tag);
 					}
 				}));
 			} else {
-				luaTrace('Couldnt find object: ' + vars);
+						lime.app.Application.current.window.alert("Couldnt find object!", 'doTweenAlpha');
+				// luaTrace('Couldnt find object: ' + vars);
 			}
 		});
 		Lua_helper.add_callback(lua, "doTweenZoom", function(tag:String, vars:String, value:Dynamic, duration:Float, ease:String) {
@@ -564,7 +565,7 @@ class FunkinLua {
 			// luaTrace('run timer!');
 
 			cancelTimer(tag);
-			lime.app.Application.current.window.alert("shit", 'cancer timer!');
+			// lime.app.Application.current.window.alert("shit", 'cancer timer!');
 			GameState.instance.modchartTimers.set(tag, new FlxTimer().start(time, function(tmr:FlxTimer) {
 				if(tmr.finished) {
 					GameState.instance.modchartTimers.remove(tag);
@@ -574,7 +575,7 @@ class FunkinLua {
 				//trace('Timer Completed: ' + tag);
 			}, loops));
 
-			lime.app.Application.current.window.alert("shit", 'fuck that timer!');
+			// lime.app.Application.current.window.alert("shit", 'fuck that timer!');
 
 		});
 		Lua_helper.add_callback(lua, "cancelTimer", function(tag:String) {
@@ -833,7 +834,7 @@ class FunkinLua {
 				
 				var daTexture =  daPath + "images/" + image;
 				leSprite.loadGraphic(Paths.image(daTexture, daLibrary));
-				lime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
+				// lime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
 
 			}
 			leSprite.antialiasing = true;//true; //true; //ClientPrefs.globalAntialiasing;
