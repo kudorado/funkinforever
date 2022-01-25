@@ -8,6 +8,7 @@ import llua.Convert;
 #end
 
 import state.*;
+import fmf.songs.SongPlayer;
 
 import flixel.FlxG;
 import flixel.input.keyboard.FlxKey;
@@ -830,34 +831,24 @@ class FunkinLua {
 			}
 		});
 
-		Lua_helper.add_callback(lua, "makeLuaSprite", function(tag:String, image:String, x:Float, y:Float)
+		Lua_helper.add_callback(lua, "makeLuaSprite", function(tag:String, image:String, x:Float, y:Float, group:String = '')
 		{
 			tag = tag.replace('.', '');
-			resetSpriteTag(tag);
-			var leSprite:ModchartSprite = new ModchartSprite(x, y, tag);
-			if (image != null && image.length > 0)
-			{
-				var daTexture = daPath + "images/" + image;
-				leSprite.loadGraphic(Paths.image(daTexture, daLibrary));
-				// lime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
-			}
-
-			leSprite.antialiasing = true; // true; //true; //ClientPrefs.globalAntialiasing;
-			GameState.instance.modchartSprites.set(tag, leSprite);
-
-			leSprite.active = true;
+			resetSpriteTag(tag, group);
+			makeLuaSprite(tag, image, x, y, group);
 		});
 
-		Lua_helper.add_callback(lua, "makeAnimatedLuaSprite", function(tag:String, image:String, x:Float, y:Float) {
-			tag = tag.replace('.', '');
-			resetSpriteTag(tag);
-			var leSprite:ModchartSprite = new ModchartSprite(x, y, tag);
-			
-			var daTexture = daPath	+ "images/" + image;
+		Lua_helper.add_callback(lua, 'loadLuaFile', function(luaFile:String)
+		{
+			GameState.createLua(SongPlayer.luaFolder + luaFile);
+		});
+	
 
-			leSprite.frames = Paths.getSparrowAtlas(daTexture, daLibrary);
-			leSprite.antialiasing = true;//true; //true; //ClientPrefs.globalAntialiasing;
-			GameState.instance.modchartSprites.set(tag, leSprite);
+		Lua_helper.add_callback(lua, "makeAnimatedLuaSprite", function(tag:String, image:String, x:Float, y:Float, group:String = '')
+		{
+			tag = tag.replace('.', '');
+			resetSpriteTag(tag, group);
+			makeAnimatedLuaSprite(tag, image, x, y, group);
 		});
 
 		Lua_helper.add_callback(lua, "makeGraphic", function(obj:String, width:Int, height:Int, color:String) {
@@ -944,61 +935,8 @@ class FunkinLua {
 		{
 			if (GameState.instance.modchartSprites.exists(tag))
 			{
-				var shit:ModchartSprite = GameState.instance.modchartSprites.get(tag);
-				if (group != "")
-				{
-					// no group, create one
-					if (!GameState.instance.modchartSpritesGroup.exists(group))
-					{
-						GameState.instance.modchartSpritesGroup.set(group, []);
-						trace('No group with name: ' + group + ", create new()");
-					}
-
-					trace('Add tag ' + tag + " to group " + group);
-
-					var spriteGroup = GameState.instance.modchartSpritesGroup.get(group);
-					spriteGroup.push(shit);
-					GameState.instance.modchartSpritesGroup.set(group, spriteGroup);
-				}
-
-				if (!shit.wasAdded)
-				{
-					if (front)
-					{
-						getInstance().add(shit);
-						trace("Add luaSprite: " + tag);
-					}
-					else
-					{
-						if (GameState.instance.isDead)
-						{
-							trace("you die: " + tag);
-							// GameOverSubstate.instance.insert(GameOverSubstate.instance.members.indexOf(GameOverSubstate.instance.bfPE), shit);
-						}
-						else
-						{
-							var position:Int = GameState.instance.members.indexOf(GameState.instance.gfGroup);
-							if (GameState.instance.members.indexOf(GameState.instance.boyfriendGroup) < position)
-							{
-								position = GameState.instance.members.indexOf(GameState.instance.boyfriendGroup);
-							}
-							else if (GameState.instance.members.indexOf(GameState.instance.dadGroup) < position)
-							{
-								position = GameState.instance.members.indexOf(GameState.instance.dadGroup);
-							}
-							// GameState.instance.insert(position, shit);
-							getInstance().add(shit);
-
-							trace("Add luaSprite: " + tag);
-
-							// lime.app.Application.current.window.alert(shit.debugName(), 'ADD SPRITE!');
-						}
-					}
-					shit.wasAdded = true;
-					// trace('added a thing: ' + tag);
-				}
-				else
-					trace(tag + ' was added, ignore');
+				addLuaSpriteToGroup(tag, group);
+				addLuaSprite(tag, front);
 			}
 			else
 			{
@@ -1015,18 +953,37 @@ class FunkinLua {
 				var spriteGroup = GameState.instance.modchartSpritesGroup.get(group);
 				for (leSprite in spriteGroup)
 				{
-					removeLuaSprite(leSprite.tag, destroy, '');
+					removeLuaSprite(leSprite.tag, destroy, group);
 				}
-
 				//then remove group
-				GameState.instance.modchartSpritesGroup.remove(group);
+				// GameState.instance.modchartSpritesGroup.remove(group);
+				// trace("Delete group " + group);
+
 			}
 			else 
 				trace('group ' + group + " not found");
 
 		});
+		
+
+		Lua_helper.add_callback(lua, "addLuaSpriteToGroup", function(tag:String, group:String)
+		{
+			addLuaSpriteToGroup(tag, group);
+		});
 
 			
+		Lua_helper.add_callback(lua, "addLuaSpriteGroup", function(group:String, front:Bool = false)
+		{
+			if (GameState.instance.modchartSpritesGroup.exists(group))
+			{
+				//if found group, just call out add sprite for every element inside
+				var spriteGroup = GameState.instance.modchartSpritesGroup.get(group);
+				for (sprite in spriteGroup)
+				{
+					addLuaSprite(sprite.tag, front);
+				}
+			}
+		});
 
 
 		Lua_helper.add_callback(lua, "setGraphicSize", function(obj:String, x:Int, y:Int = 0) {
@@ -1631,18 +1588,21 @@ class FunkinLua {
 		GameState.instance.modchartTexts.remove(tag);
 	}
 
-	function resetSpriteTag(tag:String) {
-		if(!GameState.instance.modchartSprites.exists(tag)) {
+	function resetSpriteTag(tag:String, group:String) {
+		if (!GameState.instance.modchartSprites.exists(tag))
+		{
 			return;
 		}
 		
-		var pee:ModchartSprite = GameState.instance.modchartSprites.get(tag);
-		pee.kill();
-		if(pee.wasAdded) {
-			GameState.instance.remove(pee, true);
-		}
-		pee.destroy();
-		GameState.instance.modchartSprites.remove(tag);
+		//this more optimize babe
+		removeLuaSprite(tag, true, group);
+		// var pee:ModchartSprite = GameState.instance.modchartSprites.get(tag);
+		// pee.kill();
+		// if(pee.wasAdded) {
+		// 	GameState.instance.remove(pee, true);
+		// }
+		// pee.destroy();
+		// GameState.instance.modchartSprites.remove(tag);
 	}
 
 	function cancelTween(tag:String) {
@@ -1855,6 +1815,76 @@ class FunkinLua {
 
 //----------------------------------------------__Exect__---------------------------
 
+	function makeLuaSprite(tag:String, image:String, x:Float, y:Float, group:String = '')
+	{
+		var leSprite:ModchartSprite = new ModchartSprite(x, y, tag);
+		if (image != null && image.length > 0)
+		{
+			var daTexture = daPath + "images/" + image;
+			leSprite.loadGraphic(Paths.image(daTexture, daLibrary));
+			// lime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
+		}
+
+		leSprite.antialiasing = true; // true; //true; //ClientPrefs.globalAntialiasing;
+		GameState.instance.modchartSprites.set(tag, leSprite);
+		leSprite.active = true;
+	}
+
+	function makeAnimatedLuaSprite(tag:String, image:String, x:Float, y:Float, group:String = '')
+	{
+		var leSprite:ModchartSprite = new ModchartSprite(x, y, tag);
+
+		var daTexture = daPath + "images/" + image;
+
+		leSprite.frames = Paths.getSparrowAtlas(daTexture, daLibrary);
+		leSprite.antialiasing = true; // true; //true; //ClientPrefs.globalAntialiasing;
+		GameState.instance.modchartSprites.set(tag, leSprite);
+	}
+	
+	
+	function addLuaSprite(tag:String, front:Bool)
+	{
+		var shit:ModchartSprite = GameState.instance.modchartSprites.get(tag);
+		if (!shit.wasAdded)
+		{
+			if (front)
+			{
+				getInstance().add(shit);
+				trace("Add luaSprite: " + tag);
+			}
+			else
+			{
+				if (GameState.instance.isDead)
+				{
+					trace("you die: " + tag);
+					// GameOverSubstate.instance.insert(GameOverSubstate.instance.members.indexOf(GameOverSubstate.instance.bfPE), shit);
+				}
+				else
+				{
+					var position:Int = GameState.instance.members.indexOf(GameState.instance.gfGroup);
+					if (GameState.instance.members.indexOf(GameState.instance.boyfriendGroup) < position)
+					{
+						position = GameState.instance.members.indexOf(GameState.instance.boyfriendGroup);
+					}
+					else if (GameState.instance.members.indexOf(GameState.instance.dadGroup) < position)
+					{
+						position = GameState.instance.members.indexOf(GameState.instance.dadGroup);
+					}
+					GameState.instance.insert(position, shit);
+					// getInstance().add(shit);
+
+					trace("Add luaSprite: " + tag);
+
+					// lime.app.Application.current.window.alert(shit.debugName(), 'ADD SPRITE!');
+				}
+			}
+			shit.wasAdded = true;
+			// trace('added a thing: ' + tag);
+		}
+		else
+			trace(tag + ' was added, ignore');
+	}
+
 	function removeLuaSprite(tag:String, destroy:Bool, group:String)
 	{
 		if (!GameState.instance.modchartSprites.exists(tag))
@@ -1863,18 +1893,6 @@ class FunkinLua {
 		}
 
 		var pee:ModchartSprite = GameState.instance.modchartSprites.get(tag);
-		if (group != "")
-		{
-			if (GameState.instance.modchartSpritesGroup.exists(group))
-			{
-				trace('Remove: ' + tag + ", from group: " + group);
-
-				var spriteGroup = GameState.instance.modchartSpritesGroup.get(group);
-				spriteGroup.remove(pee);
-				GameState.instance.modchartSpritesGroup.set(group, spriteGroup);
-			}
-		}
-
 		if (destroy)
 		{
 			pee.kill();
@@ -1890,7 +1908,42 @@ class FunkinLua {
 		{
 			pee.destroy();
 			GameState.instance.modchartSprites.remove(tag);
+			
+			if (group != "")
+			{
+				if (GameState.instance.modchartSpritesGroup.exists(group))
+				{
+					var spriteGroup = GameState.instance.modchartSpritesGroup.get(group);
+					if (spriteGroup.contains(pee))
+						spriteGroup.remove(pee);
+			
+					GameState.instance.modchartSpritesGroup.set(group, spriteGroup);
+				}
+			}
+
 		}
+	}
+
+	function addLuaSpriteToGroup(tag:String, group:String)
+	{
+		if (group != null && group != '')
+		{
+			var shit:ModchartSprite = GameState.instance.modchartSprites.get(tag);
+			// no group, create one
+			if (!GameState.instance.modchartSpritesGroup.exists(group))
+			{
+				GameState.instance.modchartSpritesGroup.set(group, []);
+				trace('No group with name: ' + group + ", create new()");
+			}
+
+			trace('Add tag ' + tag + " to group " + group);
+
+			var spriteGroup = GameState.instance.modchartSpritesGroup.get(group);
+			spriteGroup.push(shit);
+			GameState.instance.modchartSpritesGroup.set(group, spriteGroup);
+		}
+		else
+			trace('Cant add null or empty group!');
 	}
 //----------------------------------------------------------------------------------
 }

@@ -45,9 +45,10 @@ class ModchartSprite extends FlxSprite
 {
 	//why you don't add tag for it babe
 	public var tag:String;
+	public var group:String;
 	public var wasAdded:Bool = false;
 
-	public function new(x:Float, y:Float, tag:String)
+	public function new(x:Float, y:Float, tag:String = '', group:String = '')
 	{
 		super(x, y);
 		this.tag = tag;

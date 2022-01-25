@@ -91,6 +91,7 @@ class BaseSong
 	// initalize function
 	public function init():Void
 	{
+		loadMapGroup();
 		createLua();
 		loadMap();
 		createCharacters();
@@ -119,6 +120,14 @@ class BaseSong
 
 		camPos = new FlxPoint(dad.x, dad.y);
 		// setCamPosition();
+	}
+
+
+	function loadMapGroup()
+	{
+		gameState.add(gameState.gfGroup);
+		gameState.add(gameState.dadGroup);
+		gameState.add(gameState.boyfriendGroup);
 	}
 
 	// what map should we load
