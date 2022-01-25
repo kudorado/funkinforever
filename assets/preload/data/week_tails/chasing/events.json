@@ -7,7 +7,7 @@
 		"player3": null,
 		"events": [
 			[
-				591.4776119403,
+				59104.4776119403,
 				[
 					[
 						"Image Flash",
@@ -17,12 +17,17 @@
 				]
 			],
 			[
-				676.9900497512,
+				67601.9900497512,
 				[
 					[
 						"Replace stage layer",
 						"sad",
 						"happy"
+					],
+					[
+						"Change Character",
+						"1",
+						"tails"
 					]
 				]
 			]

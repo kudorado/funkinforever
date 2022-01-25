@@ -1,9 +1,8 @@
 package fmf.characters;
 
 import fmf.characters.*;
+import fmf.characters.BaseCharacter.CharacterFile;
 import state.*;
-
-
 // import animateatlas.AtlasFrameMaker;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -21,80 +20,22 @@ import openfl.utils.AssetType;
 import openfl.utils.Assets;
 import haxe.Json;
 import haxe.format.JsonParser;
+
 // import fmf.characteres.CharacterMixes.CharacterType;
-
 using StringTools;
-
-typedef CharacterFile = {
-	var animations:Array<AnimArray>;
-	var image:String;
-	var scale:Float;
-	var sing_duration:Float;
-	var healthicon:String;
-
-	var position:Array<Float>;
-	var camera_position:Array<Float>;
-
-	var flip_x:Bool;
-	var no_antialiasing:Bool;
-	var healthbar_colors:Array<Int>;
-}
-
-typedef AnimArray = {
-	var anim:String;
-	var name:String;
-	var fps:Int;
-	var loop:Bool;
-	var indices:Array<Int>;
-	var offsets:Array<Int>;
-}
 
 class CharacterPE extends Character
 {
-		
-
-	public var isPlayer:Bool = false;
-	public var curCharacter:String = DEFAULT_CHARACTER;
-
-	public var colorTween:FlxTween;
-	public var heyTimer:Float = 0;
-	public var specialAnim:Bool = false;
-	public var animationNotes:Array<Dynamic> = [];
-	public var singDuration:Float = 4; //Multiplier of how long a character holds the sing pose
-	public var idleSuffix:String = '';
-	public var danceIdle:Bool = false; //Character use "danceLeft" and "danceRight" instead of "idle"
-	
-	public var alreadyLoaded:Bool;
-
-	public var healthIcon:String = 'face';
-	public var animationsArray:Array<AnimArray> = [];
-
-	public var positionArray:Array<Float> = [0, 0];
-	public var cameraPosition:Array<Float> = [0, 0];
-
-	public var hasMissAnimations:Bool = false;
-
-	//Used on Character Editor
-	public var imageFile:String = '';
-	public var jsonScale:Float = 1;
-	public var noAntialiasing:Bool = false;
-	public var originalFlipX:Bool = false;
-	public var healthColorArray:Array<Int> = [255, 0, 0];
-
-	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
-	
 	override function onCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
-		peOnCreate(x, y, character, isPlayer);	
+		peOnCreate(x, y, character, isPlayer);
 	}
-
 
 	override function onUpdate(elapsed:Float)
 	{
 		peOnUpdate(elapsed);
 	}
 
-		
 	function peOnCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 		characterType = PsychEngine;
@@ -214,26 +155,6 @@ class CharacterPE extends Character
 		if (isPlayer)
 		{
 			flipX = !flipX;
-
-			/*// Doesn't flip for BF, since his are already in the right place???
-				if (!curCharacter.startsWith('bf'))
-				{
-					// var animArray
-					if(animation.getByName('singLEFT') != null && animation.getByName('singRIGHT') != null)
-					{
-						var oldRight = animation.getByName('singRIGHT').frames;
-						animation.getByName('singRIGHT').frames = animation.getByName('singLEFT').frames;
-						animation.getByName('singLEFT').frames = oldRight;
-					}
-
-					// IF THEY HAVE MISS ANIMATIONS??
-					if (animation.getByName('singLEFTmiss') != null && animation.getByName('singRIGHTmiss') != null)
-					{
-						var oldMiss = animation.getByName('singRIGHTmiss').frames;
-						animation.getByName('singRIGHTmiss').frames = animation.getByName('singLEFTmiss').frames;
-						animation.getByName('singLEFTmiss').frames = oldMiss;
-					}
-			}*/
 		}
 	}
 
@@ -350,17 +271,8 @@ class CharacterPE extends Character
 		pePlayAnim(AnimName, Force, Reversed, Frame);
 	}
 
-	public function recalculateDanceIdle() {
-		danceIdle = (animation.getByName('danceLeft' + idleSuffix) != null && animation.getByName('danceRight' + idleSuffix) != null);
-	}
-
 	public override function addOffset(name:String, x:Float = 0, y:Float = 0)
 	{
-		peAddOffset(name,x ,y);
-	}
-
-	public function quickAnimAdd(name:String, anim:String)
-	{
-		animation.addByPrefix(name, anim, 24, false);
+		peAddOffset(name, x, y);
 	}
 }

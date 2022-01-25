@@ -9,7 +9,7 @@
 			"fps": 24,
 			"anim": "singLEFT",
 			"indices": [],
-			"name": "Cough left"
+			"name": "cough left"
 		},
 		{
 			"loop": false,
@@ -20,7 +20,7 @@
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "Cough down"
+			"name": "cough down"
 		},
 		{
 			"loop": false,
@@ -31,7 +31,7 @@
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "Cough up"
+			"name": "cough up"
 		},
 		{
 			"loop": false,
@@ -42,7 +42,7 @@
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "Cough right"
+			"name": "cough right"
 		},
 		{
 			"loop": false,
@@ -53,7 +53,7 @@
 			"fps": 24,
 			"anim": "idle",
 			"indices": [],
-			"name": "Cough idle"
+			"name": "cough idle"
 		}
 	],
 	"no_antialiasing": false,

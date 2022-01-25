@@ -696,7 +696,6 @@ class GameState extends MusicBeatState
 
 			case 'Change Character':
 				var charType:Int = 0;
-				trace('sus');
 
 				switch (value1)
 				{
@@ -709,26 +708,21 @@ class GameState extends MusicBeatState
 						if (Math.isNaN(charType)) charType = 0;
 				}
 
-				trace('susss');
-
 				switch(charType) {
 					case 0:
 						//Todo 
 						// if(bfPE.curCharacter != value2) {
-						trace('sussy');
 							if (!boyfriendMap.exists(value2))
 							{
 								addCharacterToList(value2, charType);
 							}
-							trace('sussy1');
 
 							if(bfPE != null)
 								bfPE.visible = false;
 
 							songPlayer.bf.visible = false;
 							bfPE = boyfriendMap.get(value2);
-
-							trace('sussy1.5');
+							// songPlayer.bf = bfPE;
 
 							if (!bfPE.alreadyLoaded)
 							{
@@ -737,15 +731,12 @@ class GameState extends MusicBeatState
 							}
 
 							bfPE.visible = true;
+
 							//todo
 							// iconP1.changeIcon(bfPE.healthIcon);
 						// }
 
-						trace('sussy2');
-
 						setOnLuas('boyfriendName', bfPE.curCharacter);
-
-						trace('sussy3');
 
 
 					case 1:
@@ -763,6 +754,12 @@ class GameState extends MusicBeatState
 						songPlayer.dad.visible = false;
 						dadPE = dadMap.get(value2);
 
+						//re add shit
+						remove(dadPE);
+						add(dadPE);
+						songPlayer.dad = dadPE;
+
+						//todo
 						// if (!dadPE.curCharacter.startsWith('gf'))
 						// {
 						// 	if (wasGf)
@@ -1380,7 +1377,6 @@ class GameState extends MusicBeatState
 		boyfriendGroup = new FlxSpriteGroup(0, 0);
 		dadGroup = new FlxSpriteGroup(0, 0);
 		gfGroup = new FlxSpriteGroup(0, 0);
-
 
 		songPlayer.init();
 
@@ -3057,6 +3053,7 @@ class GameState extends MusicBeatState
 					{
 						setLastNote(daNote);
 						dad().playAnim(lastNote, true);
+					
 					}
 
 					//enemy note highlight

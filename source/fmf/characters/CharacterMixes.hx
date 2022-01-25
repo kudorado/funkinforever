@@ -12,7 +12,6 @@ using StringTools;
 // Character  and character PE
 class CharacterMixes extends CharacterPE
 {
-
 //------------------------------- base character function -------------------------------------------
 
 	override function onCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)

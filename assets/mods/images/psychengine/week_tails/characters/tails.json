@@ -60,7 +60,7 @@
 	"image": "characters/Tails",
 	"position": [
 		52,
-		320
+		400
 	],
 	"healthicon": "tails",
 	"flip_x": false,

@@ -14,19 +14,8 @@ using StringTools;
 //the character class holding behaviour 
 class Character extends BaseCharacter
 {
-	// public CharacterType characterType;
-
-    public var animOffsets:Map<String, Array<Dynamic>>;
-    public var debugMode:Bool = false;
-    public var holdTimer:Float = 0;
-    public var stunned:Bool;
-
-    public var isVisible:Bool = true;
-
-    public var daBF = false;
-    public var label:String;
-
-	override function onCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
+    //shit
+    override function onCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 		defaultOnCreate(x, y, character);
 	}
@@ -100,9 +89,6 @@ class Character extends BaseCharacter
         
 //-------------------------------------------------------------------------------------
 
-    private var danced:Bool = false;
-    private var isLockAnim:Bool;
-
 	public function dance():Void
 	{
         defaultDance();
@@ -129,36 +115,15 @@ class Character extends BaseCharacter
         playAnim(anim, true);
         lockAnim(lockDuration, callback);
     }
-
-    public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
-    {
-       defaultPlayAnim(AnimName, Force, Reversed, Frame);
-    }
-
-    public function addOffset(name:String, x:Float = 0, y:Float = 0)
-    {
-		defaultAddOffset(name, x, y);
-    }
-
-
-	public function bindAnim()
+    
+	public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
 	{
-		isLockAnim = true;
+		defaultPlayAnim(AnimName, Force, Reversed, Frame);
 	}
 
-	public function lockAnim(duration:Float, callback:Void->Void = null)
+	public function addOffset(name:String, x:Float = 0, y:Float = 0)
 	{
-		if (isLockAnim)
-			return;
-
-		isLockAnim = true;
-		new FlxTimer().start(duration, function(tmr:FlxTimer)
-		{
-			isLockAnim = false;
-
-			if (callback != null)
-				callback();
-		});
+		defaultAddOffset(name, x, y);
 	}
 
 

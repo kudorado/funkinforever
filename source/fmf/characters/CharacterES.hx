@@ -16,14 +16,7 @@ class CharacterES extends CharacterMixes
 	override function onCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 		characterType = Default;
-		switch (characterType)
-		{
-			case PsychEngine:
-				peOnCreate(x, y, character, isPlayer);
-
-			default:
-				defaultOnCreate(x, y, character);
-		}
+		defaultOnCreate(x, y, character);
 	}
 
 }

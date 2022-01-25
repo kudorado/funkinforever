@@ -44,6 +44,13 @@ class Chasing extends SongPlayer
         return new AgotiSkin();
     }
 
+	override function createGF()
+	{
+		super.createGF();
+		gf.x = 80;
+		gf.y = 160;
+	}
+
     override function createDadAnimations():Void
     {
         var animation = dad.animation;
@@ -67,16 +74,16 @@ class Chasing extends SongPlayer
 
         dad.scale.x = 1;
         dad.scale.y = 1;
-        dad.x = 204;
-        dad.y = 479;
+        dad.x = -140;
+        dad.y = 400;
         dad.dance();
 
     }
 
     override function createBFAnimationOffsets() 
     {
-        bf.x += 50;
-        bf.y += 60;
+        bf.x -= 200;
+        bf.y -= 10;
     }
 
     override function updateCamFollowDad()

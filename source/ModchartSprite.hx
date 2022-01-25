@@ -52,6 +52,7 @@ class ModchartSprite extends FlxSprite
 	{
 		super(x, y);
 		this.tag = tag;
+		this.group = group;
 	}
 	//public var isInFront:Bool = false;
 }
