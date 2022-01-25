@@ -1,4 +1,4 @@
-package fmf.songs;
+package fmf.characters;
 import reactor.*;
 import ui.*;
 
@@ -23,11 +23,11 @@ class PlayableCharacter extends Character
     public inline function get_gameState()
         return GameState.instance;
 
-    public override function new(x:Float = 700, y:Float = 200, label:String = 'none')
-    {
-        super(x, y);
+	override function onCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
+	{
+        super.onCreate(x, y, character, isPlayer);
         daBF = true;
-    }
+	}
 
     public function getTex():Void
     {

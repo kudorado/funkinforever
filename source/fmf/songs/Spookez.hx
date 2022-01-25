@@ -39,7 +39,7 @@ class Spookez extends SongPlayer
 		dad.frames = tex;
 	}
 
-	override function getDadVersion():Character
+	override function getDadVersion()
 	{
 		return new Spooky(100, 100);
 	}

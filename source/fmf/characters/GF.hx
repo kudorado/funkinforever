@@ -7,7 +7,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 using StringTools;
 
-class GF extends Character
+class GF extends CharacterES
 {
 	override function debugName():String
 	{

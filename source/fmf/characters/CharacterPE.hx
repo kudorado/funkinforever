@@ -1,4 +1,4 @@
-package;
+package fmf.characters;
 
 import fmf.characters.*;
 import state.*;
@@ -21,6 +21,8 @@ import openfl.utils.AssetType;
 import openfl.utils.Assets;
 import haxe.Json;
 import haxe.format.JsonParser;
+// import fmf.characteres.CharacterMixes.CharacterType;
+
 using StringTools;
 
 typedef CharacterFile = {
@@ -80,9 +82,22 @@ class CharacterPE extends Character
 	public var healthColorArray:Array<Int> = [255, 0, 0];
 
 	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
-	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
+	
+	override function onCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
-		super(x, y);
+		peOnCreate(x, y, character, isPlayer);	
+	}
+
+
+	override function onUpdate(elapsed:Float)
+	{
+		peOnUpdate(elapsed);
+	}
+
+		
+	function peOnCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
+	{
+		characterType = PsychEngine;
 
 		#if (haxe >= "4.0.0")
 		animOffsets = new Map();
@@ -91,36 +106,33 @@ class CharacterPE extends Character
 		#end
 		curCharacter = character;
 		this.isPlayer = isPlayer;
-		antialiasing = true;// true; //true; //ClientPrefs.globalAntialiasing;
+		antialiasing = true; // true; //true; //ClientPrefs.globalAntialiasing;
 		var library:String = null;
 		switch (curCharacter)
 		{
-			//case 'your character name in case you want to hardcode them instead':
-		
+			// case 'your character name in case you want to hardcode them instead':
 
 			default:
 				var daLibrary = 'mods';
-				
+
 				var songFolder = GameState.playingSong.folder;
 				var imgDirectory = "psychengine/" + songFolder;
 				var dataDirectory = "images/psychengine/" + songFolder;
 
+				var characterPath:String = dataDirectory + "characters/" + curCharacter + '.json';
 
-				var characterPath:String = dataDirectory + "characters/" +   curCharacter + '.json';
-				
 				var path:String = Paths.getPath(characterPath, TEXT, daLibrary);
-			
-				
+
 				var rawJson = Assets.getText(path);
 				// lime.app.Application.current.window.alert(characterPath, 'Raw Json');
 
 				var json:CharacterFile = cast Json.parse(rawJson);
 				var spriteType = "sparrow";
-				//sparrow
-				//packer
-				//texture
+				// sparrow
+				// packer
+				// texture
 
-				var daTexture =  "images/" + json.image;
+				var daTexture = "images/" + json.image;
 
 				switch (spriteType)
 				{
@@ -130,13 +142,14 @@ class CharacterPE extends Character
 					case "sparrow":
 						frames = Paths.getSparrowAtlas(imgDirectory + daTexture, daLibrary);
 
-					// case "texture":
+						// case "texture":
 						// frames = AtlasFrameMaker.construct(imgDirectory + json.image, daLibrary);
 				}
-			
+
 				imageFile = daTexture;
 
-				if(json.scale != 1) {
+				if (json.scale != 1)
+				{
 					jsonScale = json.scale;
 					setGraphicSize(Std.int(width * jsonScale));
 					updateHitbox();
@@ -148,43 +161,53 @@ class CharacterPE extends Character
 				healthIcon = json.healthicon;
 				singDuration = json.sing_duration;
 				flipX = !!json.flip_x;
-				if(json.no_antialiasing) {
+				if (json.no_antialiasing)
+				{
 					antialiasing = false;
 					noAntialiasing = true;
 				}
 
-				if(json.healthbar_colors != null && json.healthbar_colors.length > 2)
+				if (json.healthbar_colors != null && json.healthbar_colors.length > 2)
 					healthColorArray = json.healthbar_colors;
 
 				antialiasing = !noAntialiasing;
 				// if(!true; //ClientPrefs.globalAntialiasing) antialiasing = false;
 
 				animationsArray = json.animations;
-				if(animationsArray != null && animationsArray.length > 0) {
-					for (anim in animationsArray) {
+				if (animationsArray != null && animationsArray.length > 0)
+				{
+					for (anim in animationsArray)
+					{
 						var animAnim:String = '' + anim.anim;
 						var animName:String = '' + anim.name;
 						var animFps:Int = anim.fps;
-						var animLoop:Bool = !!anim.loop; //Bruh
+						var animLoop:Bool = !!anim.loop; // Bruh
 						var animIndices:Array<Int> = anim.indices;
-						if(animIndices != null && animIndices.length > 0) {
+						if (animIndices != null && animIndices.length > 0)
+						{
 							animation.addByIndices(animAnim, animName, animIndices, "", animFps, animLoop);
-						} else {
+						}
+						else
+						{
 							animation.addByPrefix(animAnim, animName, animFps, animLoop);
 						}
 
-						if(anim.offsets != null && anim.offsets.length > 1) {
+						if (anim.offsets != null && anim.offsets.length > 1)
+						{
 							addOffset(anim.anim, anim.offsets[0], anim.offsets[1]);
 						}
 					}
-				} else {
+				}
+				else
+				{
 					quickAnimAdd('idle', 'BF idle dance');
 				}
-				//trace('Loaded file to character ' + curCharacter);
+				// trace('Loaded file to character ' + curCharacter);
 		}
 		originalFlipX = flipX;
 
-		if(animOffsets.exists('singLEFTmiss') || animOffsets.exists('singDOWNmiss') || animOffsets.exists('singUPmiss') || animOffsets.exists('singRIGHTmiss')) hasMissAnimations = true;
+		if (animOffsets.exists('singLEFTmiss') || animOffsets.exists('singDOWNmiss') || animOffsets.exists('singUPmiss') || animOffsets.exists('singRIGHTmiss'))
+			hasMissAnimations = true;
 		recalculateDanceIdle();
 		dance();
 
@@ -193,44 +216,45 @@ class CharacterPE extends Character
 			flipX = !flipX;
 
 			/*// Doesn't flip for BF, since his are already in the right place???
-			if (!curCharacter.startsWith('bf'))
-			{
-				// var animArray
-				if(animation.getByName('singLEFT') != null && animation.getByName('singRIGHT') != null)
+				if (!curCharacter.startsWith('bf'))
 				{
-					var oldRight = animation.getByName('singRIGHT').frames;
-					animation.getByName('singRIGHT').frames = animation.getByName('singLEFT').frames;
-					animation.getByName('singLEFT').frames = oldRight;
-				}
+					// var animArray
+					if(animation.getByName('singLEFT') != null && animation.getByName('singRIGHT') != null)
+					{
+						var oldRight = animation.getByName('singRIGHT').frames;
+						animation.getByName('singRIGHT').frames = animation.getByName('singLEFT').frames;
+						animation.getByName('singLEFT').frames = oldRight;
+					}
 
-				// IF THEY HAVE MISS ANIMATIONS??
-				if (animation.getByName('singLEFTmiss') != null && animation.getByName('singRIGHTmiss') != null)
-				{
-					var oldMiss = animation.getByName('singRIGHTmiss').frames;
-					animation.getByName('singRIGHTmiss').frames = animation.getByName('singLEFTmiss').frames;
-					animation.getByName('singLEFTmiss').frames = oldMiss;
-				}
+					// IF THEY HAVE MISS ANIMATIONS??
+					if (animation.getByName('singLEFTmiss') != null && animation.getByName('singRIGHTmiss') != null)
+					{
+						var oldMiss = animation.getByName('singRIGHTmiss').frames;
+						animation.getByName('singRIGHTmiss').frames = animation.getByName('singLEFTmiss').frames;
+						animation.getByName('singLEFTmiss').frames = oldMiss;
+					}
 			}*/
 		}
 	}
 
-	override function update(elapsed:Float)
+	function peOnUpdate(elapsed:Float)
 	{
-		if(!debugMode && animation.curAnim != null)
+		if (!debugMode && animation.curAnim != null)
 		{
-			if(heyTimer > 0)
+			if (heyTimer > 0)
 			{
 				heyTimer -= elapsed;
-				if(heyTimer <= 0)
+				if (heyTimer <= 0)
 				{
-					if(specialAnim && animation.curAnim.name == 'hey' || animation.curAnim.name == 'cheer')
+					if (specialAnim && animation.curAnim.name == 'hey' || animation.curAnim.name == 'cheer')
 					{
 						specialAnim = false;
 						dance();
 					}
 					heyTimer = 0;
 				}
-			} else if(specialAnim && animation.curAnim.finished)
+			}
+			else if (specialAnim && animation.curAnim.finished)
 			{
 				specialAnim = false;
 				dance();
@@ -250,22 +274,18 @@ class CharacterPE extends Character
 				}
 			}
 
-			if(animation.curAnim.finished && animation.getByName(animation.curAnim.name + '-loop') != null)
+			if (animation.curAnim.finished && animation.getByName(animation.curAnim.name + '-loop') != null)
 			{
 				playAnim(animation.curAnim.name + '-loop');
 			}
 		}
-		super.update(elapsed);
 	}
 
-	/**
-	 * FOR GF DANCING SHIT
-	 */
-	public override function dance()
+	function peDance()
 	{
 		if (!debugMode && !specialAnim)
 		{
-			if(danceIdle)
+			if (danceIdle)
 			{
 				danced = !danced;
 
@@ -274,13 +294,14 @@ class CharacterPE extends Character
 				else
 					playAnim('danceLeft' + idleSuffix);
 			}
-			else if(animation.getByName('idle' + idleSuffix) != null) {
-					playAnim('idle' + idleSuffix);
+			else if (animation.getByName('idle' + idleSuffix) != null)
+			{
+				playAnim('idle' + idleSuffix);
 			}
 		}
 	}
 
-	public override function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
+	function pePlayAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0)
 	{
 		specialAnim = false;
 		animation.play(AnimName, Force, Reversed, Frame);
@@ -311,13 +332,31 @@ class CharacterPE extends Character
 		}
 	}
 
+	function peAddOffset(name:String, x:Float = 0, y:Float = 0)
+	{
+		animOffsets[name] = [x, y];
+	}
+
+	/**
+	 * FOR GF DANCING SHIT
+	 */
+	public override function dance()
+	{
+		peDance();
+	}
+
+	public override function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
+	{
+		pePlayAnim(AnimName, Force, Reversed, Frame);
+	}
+
 	public function recalculateDanceIdle() {
 		danceIdle = (animation.getByName('danceLeft' + idleSuffix) != null && animation.getByName('danceRight' + idleSuffix) != null);
 	}
 
 	public override function addOffset(name:String, x:Float = 0, y:Float = 0)
 	{
-		animOffsets[name] = [x, y];
+		peAddOffset(name,x ,y);
 	}
 
 	public function quickAnimAdd(name:String, anim:String)

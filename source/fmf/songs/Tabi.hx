@@ -57,7 +57,7 @@ class Tabi extends SongPlayer
         #end
     }
 
-    override function getDadVersion():Character
+    override function getDadVersion()
     {
         return new Dad(100, 100);
     }

@@ -1,4 +1,4 @@
-package;
+package fmf.characters;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -7,7 +7,7 @@ import flixel.util.FlxTimer;
 
 using StringTools;
 
-class BoyfriendPE extends CharacterPE
+class BoyfriendMixes extends CharacterPE
 {
 	public var startedDeath:Bool = false;
 

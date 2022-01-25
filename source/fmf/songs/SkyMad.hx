@@ -100,7 +100,7 @@ class SkyMad extends SongPlayer
 		gf.animation.addByPrefix('sad', 'GF miss0');
 	}
 
-	override function getGFVersion():Character
+	override function getGFVersion()
 	{
 		return new GFIdle();
 	}

@@ -114,7 +114,7 @@ class Godrays extends SongPlayer
 		gf.frames = tex;
 	}
 
-	override function getGFVersion():Character
+	override function getGFVersion()
 	{
 		return  new GFIdle();
 	}

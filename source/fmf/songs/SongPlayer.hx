@@ -86,7 +86,7 @@ class SongPlayer extends BaseSong
 //------------------------------------- BF -------------------------------------------------------------
 
 	//get bf version, if you want to create special behaviour for bf, here you go.	
-	// private override function getBFVersion():Character{ return super.getBFVersion(); }
+	// private override function getBFVersion(){ return super.getBFVersion(); }
 	//get texture of bf and set into bf itself
 	//create animations for bf
 	//create animation offsets for bf
@@ -96,7 +96,7 @@ class SongPlayer extends BaseSong
 
 //------------------------------------- DAD ------------------------------------------------------------
 	//basically same as BF
-	private override function getDadVersion():Character{ return super.getDadVersion(); }
+	private override function getDadVersion(){ return super.getDadVersion(); }
 	private override function getDadTex():Void { super.getDadTex(); };
 	private override function createDadAnimations():Void{ super.createDadAnimations();}
 	private override function createDadAnimationOffsets():Void{ super.createDadAnimationOffsets();}
@@ -104,7 +104,7 @@ class SongPlayer extends BaseSong
 
 //------------------------------------- GF -------------------------------------------------------------
 	// basically same as BF
-	private override function getGFVersion():Character{ return super.getGFVersion(); }
+	private override function getGFVersion(){ return super.getGFVersion(); }
 	private override function getGFTex():Void { super.getGFTex(); };
 	private override function createGFAnimations():Void{ super.createGFAnimations();}
 	private override function createGFAnimationOffsets():Void{ super.createGFAnimationOffsets();}

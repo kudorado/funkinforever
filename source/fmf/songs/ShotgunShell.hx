@@ -86,7 +86,7 @@ class ShotgunShell extends SongPlayer
 		gf.animation.addByPrefix('sad', 'gf sad0');
 	}
 
-	override function getGFVersion():Character
+	override function getGFVersion()
 	{
 		return new GFIdle();
 	}

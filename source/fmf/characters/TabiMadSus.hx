@@ -2,7 +2,6 @@ package fmf.characters;
 import state.*;
 import flixel.util.FlxColor;
 import flixel.addons.effects.FlxTrail;
-import fmf.songs.PlayableCharacter;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;

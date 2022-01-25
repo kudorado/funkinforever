@@ -121,6 +121,7 @@ class GameState extends MusicBeatState
 			if (eventNotes[0][3] != null)
 				value2 = eventNotes[0][3];
 
+			trace("triggerEventNote " + eventNotes[0][1] + " with args: " + value1 + ", " + value2);
 			triggerEventNote(eventNotes[0][1], value1, value2);
 			eventNotes.shift();
 		}
@@ -326,7 +327,7 @@ class GameState extends MusicBeatState
 			case 0:
 				if (!boyfriendMap.exists(newCharacter))
 				{
-					var newBoyfriend:BoyfriendPE = new BoyfriendPE(0, 0, newCharacter);
+					var newBoyfriend:BoyfriendMixes = new BoyfriendMixes(0, 0, newCharacter);
 					boyfriendMap.set(newCharacter, newBoyfriend);
 					boyfriendGroup.add(newBoyfriend);
 					startCharacterPos(newBoyfriend);
@@ -338,7 +339,7 @@ class GameState extends MusicBeatState
 			case 1:
 				if (!dadMap.exists(newCharacter))
 				{
-					var newDad:CharacterPE = new CharacterPE(0, 0, newCharacter);
+					var newDad:CharacterMixes = new CharacterMixes(0, 0, newCharacter);
 					dadMap.set(newCharacter, newDad);
 					dadGroup.add(newDad);
 					startCharacterPos(newDad, true);
@@ -350,7 +351,7 @@ class GameState extends MusicBeatState
 			case 2:
 				if (!gfMap.exists(newCharacter))
 				{
-					var newGf:CharacterPE = new CharacterPE(0, 0, newCharacter);
+					var newGf:CharacterMixes = new CharacterMixes(0, 0, newCharacter);
 					newGf.scrollFactor.set(0.95, 0.95);
 					gfMap.set(newCharacter, newGf);
 					gfGroup.add(newGf);
@@ -802,7 +803,7 @@ class GameState extends MusicBeatState
 		#if LUA_ALLOWED
 		for (i in 0...luaArray.length)
 		{
-			var ret:Dynamic = luaArray[i].call(event, args);
+			var ret:Dynamic = luaArray[i].call(event, args);			
 			if (ret != FunkinLua.Function_Continue)
 			{
 				returnVal = ret;
@@ -837,13 +838,13 @@ class GameState extends MusicBeatState
 	//event variables
 	private var isCameraOnForcedPos:Bool = false;
 	#if (haxe >= "4.0.0")
-	public var boyfriendMap:Map<String, BoyfriendPE> = new Map();
-	public var dadMap:Map<String, CharacterPE> = new Map();
-	public var gfMap:Map<String, CharacterPE> = new Map();
+	public var boyfriendMap:Map<String, BoyfriendMixes> = new Map();
+	public var dadMap:Map<String, CharacterMixes> = new Map();
+	public var gfMap:Map<String, CharacterMixes> = new Map();
 	#else
-	public var boyfriendMap:Map<String, Boyfriend> = new Map<String, BoyfriendPE>();
-	public var dadMap:Map<String, CharacterPE> = new Map<String, CharacterPE>();
-	public var gfMap:Map<String, CharacterPE> = new Map<String, CharacterPE>();
+	public var boyfriendMap:Map<String, Boyfriend> = new Map<String, CharacterMixes>();
+	public var dadMap:Map<String, CharacterMixes> = new Map<String, CharacterMixes>();
+	public var gfMap:Map<String, CharacterMixes> = new Map<String, CharacterMixes>();
 	#end
 
 	public var BF_X:Float = 770;
@@ -886,9 +887,9 @@ class GameState extends MusicBeatState
 	public var dadGroup:FlxSpriteGroup;
 	public var gfGroup:FlxSpriteGroup;
 
-	public var dadPE:CharacterPE;
-	public var gfPE:CharacterPE;
-	public var bfPE:BoyfriendPE;
+	public var dadPE:CharacterMixes;
+	public var gfPE:CharacterMixes;
+	public var bfPE:BoyfriendMixes;
 
 	public var eventNotes:Array<Dynamic> = [];
 	// Handles the new epic mega sexy cam code that i've done
@@ -982,12 +983,12 @@ class GameState extends MusicBeatState
 
 	public var vocals:FlxSound;
 
-	public static function dad():Character
+	public static function dad()
 	{
 		return songPlayer.dad;
 	}
 
-	public static function gf():Character
+	public static function gf()
 	{
 		return songPlayer.gf;
 	}
@@ -1957,6 +1958,7 @@ class GameState extends MusicBeatState
 						var subEvent:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
 						eventNotes.push(subEvent);
 						eventPushed(subEvent);
+						trace('push custom event: ' + subEvent);
 					}
 				}
 			}
@@ -2040,6 +2042,7 @@ class GameState extends MusicBeatState
 					var subEvent:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
 					eventNotes.push(subEvent);
 					eventPushed(subEvent);
+					trace('push song event: ' + subEvent);
 				}
 			}
 		}

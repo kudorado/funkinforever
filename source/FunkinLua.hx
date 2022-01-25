@@ -417,11 +417,11 @@ class FunkinLua {
 		});
 		Lua_helper.add_callback(lua, "doTweenAlpha", function(tag:String, vars:String, value:Dynamic, duration:Float, ease:String) {
 			var penisExam:Dynamic = tweenShit(tag, vars);
-
 			if(penisExam != null) {
+				trace('Tween:' + tag);
 				GameState.instance.modchartTweens.set(tag, FlxTween.tween(penisExam, {alpha: value}, duration, {ease: getFlxEaseByString(ease),
 					onComplete: function(twn:FlxTween) {
-						lime.app.Application.current.window.alert(penisExam, 'doTweenAlpha');
+						// lime.app.Application.current.window.alert(penisExam, 'doTweenAlpha');
 						GameState.instance.callOnLuas('onTweenCompleted', [tag]);
 						GameState.instance.modchartTweens.remove(tag);
 					}

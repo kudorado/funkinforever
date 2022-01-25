@@ -102,6 +102,14 @@ class BaseSong
 
 	}
 
+	function copyCharacters()
+	{
+		// gameState.dadPE = dad;
+		// gameState.bfPE = bf;
+		// gameState.gfPE = gf;
+
+	}
+
 	function initVariables()
 	{
 		loadSkin();

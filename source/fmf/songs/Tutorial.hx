@@ -17,7 +17,7 @@ class Tutorial extends SongPlayer
 		gameState.daTutorial = true;
 	}
 
-	override function getDadVersion():Character
+	override function getDadVersion()
 	{
 		return new GFTutorial(100, 100);
 	}

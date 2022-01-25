@@ -5,7 +5,6 @@ import flixel.math.FlxPoint;
 import fmf.songs.Clown;
 import flixel.util.FlxColor;
 import flixel.addons.effects.FlxTrail;
-import fmf.songs.PlayableCharacter;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;

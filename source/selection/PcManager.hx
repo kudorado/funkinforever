@@ -3,7 +3,6 @@ package selection;
 import flixel.FlxSubState;
 import flixel.FlxG;
 import fmf.songs.BaseSong;
-import fmf.songs.PlayableCharacter;
 import fmf.characters.*;
 
 

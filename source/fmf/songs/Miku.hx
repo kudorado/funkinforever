@@ -4,7 +4,6 @@ import ui.*;
 
 import state.*;
 import fmf.songs.SongPlayer;
-import fmf.songs.PlayableCharacter;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;

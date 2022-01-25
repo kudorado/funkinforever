@@ -48,7 +48,7 @@ class Garcello extends SongPlayer
 		dad.animation = animation;
 	}
 
-	override function getDadVersion():Character
+	override function getDadVersion()
 	{
 		return new Dad(0, 125);
 	}

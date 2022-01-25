@@ -48,7 +48,7 @@ class Ballistic extends Whitty
 
 	}
 
-	override function getGFVersion():Character
+	override function getGFVersion()
 	{
 		return new GFWhitty(375, 275);
 	}

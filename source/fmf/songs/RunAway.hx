@@ -39,7 +39,7 @@ class RunAway extends SongPlayer
         return new AgotiSkin();
     }
 
-	override function getDadVersion():Character
+	override function getDadVersion()
 	{
 		return new BlackImpostor();
 	}

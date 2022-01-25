@@ -45,7 +45,7 @@ class TrickyEx extends TrickyMask
 
 	}
 
-	override function getGFVersion():Character
+	override function getGFVersion()
 	{
 		return new GFTricky(400, 250);
 	}

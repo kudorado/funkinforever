@@ -13,7 +13,7 @@ import MenuCharacter.CharacterSetting;
 
 class Octane extends SongPlayer
 {
-	override function getDadVersion():Character
+	override function getDadVersion()
 	{
 		return new CharacterPE(400, 400, "cough");
 	}
