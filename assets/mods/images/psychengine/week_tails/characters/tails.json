@@ -59,7 +59,7 @@
 	"no_antialiasing": false,
 	"image": "characters/Tails",
 	"position": [
-		52,
+		-140,
 		400
 	],
 	"healthicon": "tails",
