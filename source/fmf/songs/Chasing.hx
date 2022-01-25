@@ -34,7 +34,11 @@ class Chasing extends SongPlayer
     {
         gameState.defaultCamZoom = 1;
         var happy = SongPlayer.luaFolder + "stages/happy.lua";
+        var sad = SongPlayer.luaFolder + "stages/sad.lua";
+
 		GameState.createLua(happy);
+
+
 
     }
 

@@ -15,10 +15,10 @@ function onCreate()
 	setScrollFactor('grass', 0.9, 0.9);
 	scaleObject('grass', 1.1, 1.1);
 
-	addLuaSprite('sky', false);
-	addLuaSprite('floor1', false);
-	addLuaSprite('floor2', false);
-	addLuaSprite('grass', false);
+	addLuaSprite('sky', false, 'happy');
+	addLuaSprite('floor1', false, 'happy');
+	addLuaSprite('floor2', false, 'happy');
+	addLuaSprite('grass', false, 'happy');
 
 	close(true); --For performance reasons, close this script once the stage is fully loaded, as this script won't be used anymore after loading the stage
 end

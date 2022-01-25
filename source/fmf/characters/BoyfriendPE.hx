@@ -7,7 +7,7 @@ import flixel.util.FlxTimer;
 
 using StringTools;
 
-class BoyfriendMixes extends CharacterPE
+class BoyfriendPE extends CharacterPE
 {
 	public var startedDeath:Bool = false;
 

@@ -327,7 +327,7 @@ class GameState extends MusicBeatState
 			case 0:
 				if (!boyfriendMap.exists(newCharacter))
 				{
-					var newBoyfriend:BoyfriendMixes = new BoyfriendMixes(0, 0, newCharacter);
+					var newBoyfriend:BoyfriendPE = new BoyfriendPE(0, 0, newCharacter);
 					boyfriendMap.set(newCharacter, newBoyfriend);
 					boyfriendGroup.add(newBoyfriend);
 					startCharacterPos(newBoyfriend);
@@ -339,7 +339,7 @@ class GameState extends MusicBeatState
 			case 1:
 				if (!dadMap.exists(newCharacter))
 				{
-					var newDad:CharacterMixes = new CharacterMixes(0, 0, newCharacter);
+					var newDad:CharacterPE = new CharacterPE(0, 0, newCharacter);
 					dadMap.set(newCharacter, newDad);
 					dadGroup.add(newDad);
 					startCharacterPos(newDad, true);
@@ -351,7 +351,7 @@ class GameState extends MusicBeatState
 			case 2:
 				if (!gfMap.exists(newCharacter))
 				{
-					var newGf:CharacterMixes = new CharacterMixes(0, 0, newCharacter);
+					var newGf:CharacterPE = new CharacterPE(0, 0, newCharacter);
 					newGf.scrollFactor.set(0.95, 0.95);
 					gfMap.set(newCharacter, newGf);
 					gfGroup.add(newGf);
@@ -696,72 +696,115 @@ class GameState extends MusicBeatState
 
 			case 'Change Character':
 				var charType:Int = 0;
-				switch(value1) {
+				trace('sus');
+
+				switch (value1)
+				{
 					case 'gf' | 'girlfriend':
 						charType = 2;
 					case 'dad' | 'opponent':
 						charType = 1;
 					default:
 						charType = Std.parseInt(value1);
-						if(Math.isNaN(charType)) charType = 0;
+						if (Math.isNaN(charType)) charType = 0;
 				}
+
+				trace('susss');
 
 				switch(charType) {
 					case 0:
-						if(bfPE.curCharacter != value2) {
-							if(!boyfriendMap.exists(value2)) {
+						//Todo 
+						// if(bfPE.curCharacter != value2) {
+						trace('sussy');
+							if (!boyfriendMap.exists(value2))
+							{
 								addCharacterToList(value2, charType);
 							}
+							trace('sussy1');
 
-							bfPE.visible = false;
+							if(bfPE != null)
+								bfPE.visible = false;
+
+							songPlayer.bf.visible = false;
 							bfPE = boyfriendMap.get(value2);
-							if(!bfPE.alreadyLoaded) {
+
+							trace('sussy1.5');
+
+							if (!bfPE.alreadyLoaded)
+							{
 								bfPE.alpha = 1;
 								bfPE.alreadyLoaded = true;
 							}
+
 							bfPE.visible = true;
-							iconP1.changeIcon(bfPE.healthIcon);
-						}
+							//todo
+							// iconP1.changeIcon(bfPE.healthIcon);
+						// }
+
+						trace('sussy2');
+
 						setOnLuas('boyfriendName', bfPE.curCharacter);
 
-					case 1:
-						if(dadPE.curCharacter != value2) {
-							if(!dadMap.exists(value2)) {
-								addCharacterToList(value2, charType);
-							}
+						trace('sussy3');
 
-							var wasGf:Bool = dadPE.curCharacter.startsWith('gf');
-							dadPE.visible = false;
-							dadPE = dadMap.get(value2);
-							if(!dadPE.curCharacter.startsWith('gf')) {
-								if(wasGf) {
-									gfPE.visible = true;
-								}
-							} else {
-								gfPE.visible = false;
-							}
-							if(!dadPE.alreadyLoaded) {
-								dadPE.alpha = 1;
-								dadPE.alreadyLoaded = true;
-							}
-							dadPE.visible = true;
-							iconP2.changeIcon(dadPE.healthIcon);
+
+					case 1:
+						// if(dadPE.curCharacter != value2) {
+						if (!dadMap.exists(value2))
+						{
+							addCharacterToList(value2, charType);
 						}
+
+						//todo
+						// var wasGf:Bool = dadPE.curCharacter.startsWith('gf');
+						if (dadPE != null)
+							dadPE.visible = false;
+
+						songPlayer.dad.visible = false;
+						dadPE = dadMap.get(value2);
+
+						// if (!dadPE.curCharacter.startsWith('gf'))
+						// {
+						// 	if (wasGf)
+						// 	{
+						// 		if(gfPE)
+						// 		gfPE.visible = true;
+						// 	}
+						// }
+						// else
+						// {
+						// 	gfPE.visible = false;
+						// }
+						if (!dadPE.alreadyLoaded)
+						{
+							dadPE.alpha = 1;
+							dadPE.alreadyLoaded = true;
+						}
+
+						dadPE.visible = true;
+						// iconP2.changeIcon(dadPE.healthIcon);
+						// }
 						setOnLuas('dadName', dadPE.curCharacter);
 
 					case 2:
-						if(gfPE.curCharacter != value2) {
-							if(!gfMap.exists(value2)) {
-								addCharacterToList(value2, charType);
-							}
-
-							gfPE.visible = false;
-							gfPE = gfMap.get(value2);
-							if(!gfPE.alreadyLoaded) {
-								gfPE.alpha = 1;
-								gfPE.alreadyLoaded = true;
-							}
+						// if(gfPE.curCharacter != value2) {
+						if (!gfMap.exists(value2))
+						{
+							addCharacterToList(value2, charType);
 						}
+
+						if(gfPE  != null)
+							gfPE.visible = false;
+
+						songPlayer.gf.visible = false;
+
+						gfPE = gfMap.get(value2);
+						if (!gfPE.alreadyLoaded)
+						{
+							gfPE.alpha = 1;
+							gfPE.alreadyLoaded = true;
+						}
+						// }
 						setOnLuas('gfName', gfPE.curCharacter);
 				}
 				// reloadHealthBarColors();
@@ -820,6 +863,8 @@ class GameState extends MusicBeatState
 	public var modchartSounds:Map<String, FlxSound> = new Map<String, FlxSound>();
 	public var modchartTexts:Map<String, ModchartText> = new Map<String, ModchartText>();
 
+	public var modchartSpritesGroup:Map<String, Array<ModchartSprite>>  = new Map<String, Array<ModchartSprite>>();
+
 
 
 	public static var ratingStuff:Array<Dynamic> = [
@@ -838,13 +883,13 @@ class GameState extends MusicBeatState
 	//event variables
 	private var isCameraOnForcedPos:Bool = false;
 	#if (haxe >= "4.0.0")
-	public var boyfriendMap:Map<String, BoyfriendMixes> = new Map();
-	public var dadMap:Map<String, CharacterMixes> = new Map();
-	public var gfMap:Map<String, CharacterMixes> = new Map();
+	public var boyfriendMap:Map<String, BoyfriendPE> = new Map();
+	public var dadMap:Map<String, CharacterPE> = new Map();
+	public var gfMap:Map<String, CharacterPE> = new Map();
 	#else
-	public var boyfriendMap:Map<String, Boyfriend> = new Map<String, CharacterMixes>();
-	public var dadMap:Map<String, CharacterMixes> = new Map<String, CharacterMixes>();
-	public var gfMap:Map<String, CharacterMixes> = new Map<String, CharacterMixes>();
+	public var boyfriendMap:Map<String, BoyfriendPE> = new Map<String, CharacterPE>();
+	public var dadMap:Map<String, CharacterPE> = new Map<String, CharacterPE>();
+	public var gfMap:Map<String, CharacterPE> = new Map<String, CharacterPE>();
 	#end
 
 	public var BF_X:Float = 770;
@@ -887,9 +932,9 @@ class GameState extends MusicBeatState
 	public var dadGroup:FlxSpriteGroup;
 	public var gfGroup:FlxSpriteGroup;
 
-	public var dadPE:CharacterMixes;
-	public var gfPE:CharacterMixes;
-	public var bfPE:BoyfriendMixes;
+	public var dadPE:CharacterPE;
+	public var gfPE:CharacterPE;
+	public var bfPE:BoyfriendPE;
 
 	public var eventNotes:Array<Dynamic> = [];
 	// Handles the new epic mega sexy cam code that i've done
