@@ -59,8 +59,8 @@
 	"no_antialiasing": false,
 	"image": "characters/Beast",
 	"position": [
-		-100,
-		-200
+		-50,
+		200
 	],
 	"healthicon": "sonic",
 	"flip_x": false,

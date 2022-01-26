@@ -47,7 +47,7 @@ class Sidekick extends SongPlayer
 
         createFII_BG();
 
-        var sky:FlxSprite = new FlxSprite(-387, -242).loadGraphic(Paths.image('bg/tails/SonicP3/ground', 'mods'));
+        var sky:FlxSprite = new FlxSprite(-387, -203).loadGraphic(Paths.image('bg/tails/SonicP3/ground', 'mods'));
 		sky.antialiasing = true;
 		sky.scale.x = 1;
 		sky.scale.y = 1;

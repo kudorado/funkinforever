@@ -24,7 +24,16 @@
 			[
 				12650.406593407,
 				[
-					
+					[
+						"Change Character X",
+						"2",
+						"-50"
+					],
+					[
+						"Change Character",
+						"3",
+						"sonic"
+					],
 					[
 						"Image Flash",
 						"white",

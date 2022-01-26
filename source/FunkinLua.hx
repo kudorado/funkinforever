@@ -1863,7 +1863,12 @@ class FunkinLua {
 				else
 				{
 					var position:Int = GameState.instance.members.indexOf(GameState.instance.gfGroup);
-					if (GameState.instance.members.indexOf(GameState.instance.boyfriendGroup) < position)
+				
+					if (GameState.instance.members.indexOf(GameState.instance.player3Group) < position)
+					{
+						position = GameState.instance.members.indexOf(GameState.instance.player3Group);
+					}
+					else if (GameState.instance.members.indexOf(GameState.instance.boyfriendGroup) < position)
 					{
 						position = GameState.instance.members.indexOf(GameState.instance.boyfriendGroup);
 					}
@@ -1871,6 +1876,7 @@ class FunkinLua {
 					{
 						position = GameState.instance.members.indexOf(GameState.instance.dadGroup);
 					}
+				
 					GameState.instance.insert(position, shit);
 					// getInstance().add(shit);
 
@@ -1943,8 +1949,8 @@ class FunkinLua {
 			spriteGroup.push(shit);
 			GameState.instance.modchartSpritesGroup.set(group, spriteGroup);
 		}
-		else
-			trace('Cant add null or empty group!');
+		// else
+			// trace('Cant add null or empty group!');
 	}
 //----------------------------------------------------------------------------------
 }
