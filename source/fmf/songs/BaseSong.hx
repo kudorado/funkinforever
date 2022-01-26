@@ -91,10 +91,10 @@ class BaseSong
 	// initalize function
 	public function init():Void
 	{
-		loadMapGroup();
 		loadLua();
 		loadMap();
 		createCharacters();
+		loadMapGroup();
 		initVariables();
 	}
 

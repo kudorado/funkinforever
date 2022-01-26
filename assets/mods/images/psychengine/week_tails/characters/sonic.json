@@ -59,8 +59,8 @@
 	"no_antialiasing": false,
 	"image": "characters/Beast",
 	"position": [
-		-50,
-		200
+		83,
+		71
 	],
 	"healthicon": "sonic",
 	"flip_x": false,
@@ -74,5 +74,5 @@
 		0
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 2
 }

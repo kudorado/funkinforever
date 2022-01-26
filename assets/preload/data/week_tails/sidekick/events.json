@@ -7,7 +7,7 @@
 		"player3": null,
 		"events": [
 			[
-				843.6043956044,
+				84395.6043956044,
 				[
 					[
 						"Image Flash",
@@ -22,12 +22,17 @@
 				]
 			],
 			[
-				12650.406593407,
+				126593.406593407,
 				[
 					[
 						"Change Character X",
-						"2",
-						"-50"
+						"1",
+						"-25"
+					],
+					[
+						"Change Character Y",
+						"1",
+						"400"
 					],
 					[
 						"Change Character",

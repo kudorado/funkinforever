@@ -659,11 +659,10 @@ class GameState extends MusicBeatState
 
 			case 'Play Animation':
 				//trace('Anim to play: ' + value1);
-				var char:CharacterPE = dadPE;
+				var char:CharacterPE = bfPE;
 				switch(value2.toLowerCase().trim()) {
 					case 'player3':
 						char = player3;
-
 					case 'bf' | 'boyfriend':
 						char = bfPE;
 					case 'gf' | 'girlfriend':
@@ -673,8 +672,9 @@ class GameState extends MusicBeatState
 						if(Math.isNaN(val2)) val2 = 0;
 		
 						switch(val2) {
-							case 1: char = bfPE;
+							case 1: char = dadPE;
 							case 2: char = gfPE;
+							case 3: char = player3;
 						}
 				}
 				
@@ -795,8 +795,8 @@ class GameState extends MusicBeatState
 						dadPE = dadMap.get(value2);
 
 						//re add shit
-						remove(dadPE);
-						add(dadPE);
+						// remove(dadPE);
+						// add(dadPE);
 						songPlayer.dad = dadPE;
 
 						//todo
@@ -857,20 +857,10 @@ class GameState extends MusicBeatState
 						player3 = player3Map.get(value2);
 					
 						//readd 
-						remove(player3);
-						add(player3);
+						// remove(player3);
+						// add(player3);
 
-						if (songPlayer.dad != null)
-						{	
-							remove(songPlayer.dad);
-							add(songPlayer.dad);
-						}
-
-						if(dadPE != null)
-						{
-							remove(dadPE);
-							add(dadPE);	
-						}
+					
 
 						if (!player3.alreadyLoaded)
 						{
@@ -880,7 +870,20 @@ class GameState extends MusicBeatState
 
 						player3.visible = true;
 
-						
+						// if (songPlayer.dad != null)
+						// {
+						// 	remove(songPlayer.dad);
+						// 	add(songPlayer.dad);
+						// }
+
+						// if (dadPE != null)
+						// {
+						// 	trace('re add dadpe');
+
+						// 	remove(dadPE);
+						// 	add(dadPE);
+						// }
+
 						
 						setOnLuas('player3Name', player3.curCharacter);
 
@@ -930,10 +933,52 @@ class GameState extends MusicBeatState
 				
 					case 3:
 						//player3
-					
-
 
 				}
+
+				case 'Change Character Y':
+					var charType:Int = 0;
+	
+					switch (value1)
+					{
+						case 'player3':
+							charType = 3;
+						case 'gf' | 'girlfriend':
+							charType = 2;
+						case 'dad' | 'opponent':
+							charType = 1;
+						default:
+							charType = Std.parseInt(value1);
+							if (Math.isNaN(charType)) charType = 0;
+					}
+	
+					var newY = Std.parseInt(value2);
+					if (Math.isNaN(newY)) newY = 0;
+	
+	
+					switch (charType)
+					{
+						//todo 
+						//refactor name shit
+	
+						case 0:
+							//bf
+						case 1:
+							//dad
+							if (dadPE != null)
+								dadPE.y = newY;	
+	
+							if(songPlayer.dad != null)
+								songPlayer.dad.y = newY;
+							
+						case 2:
+							//gf
+					
+						case 3:
+							//player3
+	
+					}
+
 
 			case 'Change Scroll Speed':
 				var val1:Float = Std.parseFloat(value1);
@@ -4365,7 +4410,7 @@ class GameState extends MusicBeatState
 			// Dupe note remove, copy shit from psych engine
 			// Sorry :( and thank you bbpanzu
 
-			//fuck you crash code :(
+			//fuck you bbpanzu, crash code :(
 
 			// notes.forEachAlive(function(note:Note)
 			// {

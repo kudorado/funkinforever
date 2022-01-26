@@ -47,10 +47,10 @@ class Sidekick extends SongPlayer
 
         createFII_BG();
 
-        var sky:FlxSprite = new FlxSprite(-387, -203).loadGraphic(Paths.image('bg/tails/SonicP3/ground', 'mods'));
+        var sky:FlxSprite = new FlxSprite(-376, -203).loadGraphic(Paths.image('bg/tails/SonicP3/ground', 'mods'));
 		sky.antialiasing = true;
-		sky.scale.x = 1;
-		sky.scale.y = 1;
+		sky.scale.x = 1.1;
+		sky.scale.y = 1.1;
 		sky.scrollFactor.set(0.95, 0.95);
 		gameState.add(sky);
 
@@ -63,10 +63,10 @@ class Sidekick extends SongPlayer
         FII_BG.animation.addByPrefix('idle', 'MenuSTATICNEW', 24, true);
         FII_BG.animation.play('idle');
         FII_BG.antialiasing = true;
-        FII_BG.scale.x = 3;
-        FII_BG.scale.y = 3;
-        FII_BG.x = 255;
-        FII_BG.y = 2;
+        FII_BG.scale.x = 3.5;
+        FII_BG.scale.y = 3.5;
+        FII_BG.x = 155;
+        FII_BG.y = 100;
         gameState.add(FII_BG);
 
     }

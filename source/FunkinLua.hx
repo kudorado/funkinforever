@@ -1848,7 +1848,7 @@ class FunkinLua {
 		var shit:ModchartSprite = GameState.instance.modchartSprites.get(tag);
 		if (!shit.wasAdded)
 		{
-			if (front)
+			if (front || (GameState.instance.gfGroup == null || GameState.instance.gfGroup.length == 0))
 			{
 				getInstance().add(shit);
 				trace("Add luaSprite: " + tag);
