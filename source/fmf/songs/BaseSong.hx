@@ -92,13 +92,13 @@ class BaseSong
 	public function init():Void
 	{
 		loadMapGroup();
-		createLua();
+		loadLua();
 		loadMap();
 		createCharacters();
 		initVariables();
 	}
 
-	function createLua()
+	function loadLua()
 	{
 
 	}
@@ -126,6 +126,7 @@ class BaseSong
 	function loadMapGroup()
 	{
 		gameState.add(gameState.gfGroup);
+		gameState.add(gameState.player3Group);
 		gameState.add(gameState.dadGroup);
 		gameState.add(gameState.boyfriendGroup);
 	}

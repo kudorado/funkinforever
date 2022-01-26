@@ -237,11 +237,12 @@ class GameState extends MusicBeatState
 
 	function startCharacterPos(char:CharacterPE, ?gfCheck:Bool = false)
 	{
-		if (gfCheck && char.curCharacter.startsWith('gf'))
+		if (gfCheck && char != null && char.curCharacter.startsWith('gf'))
 		{ // IF DAD IS GIRLFRIEND, HE GOES TO HER POSITION
 			char.setPosition(GF_X, GF_Y);
 			char.scrollFactor.set(0.95, 0.95);
 		}
+
 		char.x += char.positionArray[0];
 		char.y += char.positionArray[1];
 	}
@@ -360,6 +361,19 @@ class GameState extends MusicBeatState
 					newGf.alreadyLoaded = false;
 					startCharacterLua(newGf.curCharacter);
 				}
+
+			case 3:
+				if (!player3Map.exists(newCharacter))
+				{
+					var newPlayer3:CharacterPE = new CharacterPE(0, 0, newCharacter);
+					player3Map.set(newCharacter, newPlayer3);
+					player3Group.add(newPlayer3);
+					startCharacterPos(player3);
+					newPlayer3.alpha = 0.00001;
+					newPlayer3.alreadyLoaded = false;
+					startCharacterLua(newPlayer3.curCharacter);
+				}
+
 		}
 	}
 	
@@ -628,6 +642,9 @@ class GameState extends MusicBeatState
 				//trace('Anim to play: ' + value1);
 				var char:CharacterPE = dadPE;
 				switch(value2.toLowerCase().trim()) {
+					case 'character3':
+						char = player3;
+
 					case 'bf' | 'boyfriend':
 						char = bfPE;
 					case 'gf' | 'girlfriend':
@@ -641,6 +658,7 @@ class GameState extends MusicBeatState
 							case 2: char = gfPE;
 						}
 				}
+				
 				char.playAnim(value1, true);
 				char.specialAnim = true;
 
@@ -699,6 +717,8 @@ class GameState extends MusicBeatState
 
 				switch (value1)
 				{
+					case 'player3':
+						charType = 3;
 					case 'gf' | 'girlfriend':
 						charType = 2;
 					case 'dad' | 'opponent':
@@ -722,6 +742,7 @@ class GameState extends MusicBeatState
 
 							songPlayer.bf.visible = false;
 							bfPE = boyfriendMap.get(value2);
+
 							// songPlayer.bf = bfPE;
 
 							if (!bfPE.alreadyLoaded)
@@ -803,6 +824,37 @@ class GameState extends MusicBeatState
 						}
 						// }
 						setOnLuas('gfName', gfPE.curCharacter);
+
+					case 3:
+						// if(dadPE.curCharacter != value2) {
+							if (!player3Map.exists(value2))
+								{
+									addCharacterToList(value2, charType);
+								}
+		
+								//todo
+								// var wasGf:Bool = dadPE.curCharacter.startsWith('gf');
+								if (player3 != null)
+									player3.visible = false;
+		
+								player3 = player3Map.get(value2);
+		
+								//re add shit
+								remove(player3);
+								add(player3);
+		
+								//todo
+							
+								if (!player3.alreadyLoaded)
+								{
+									dadPE.alpha = 1;
+									dadPE.alreadyLoaded = true;
+								}
+		
+								player3.visible = true;
+								setOnLuas('player3Name', player3.curCharacter);
+
+
 				}
 				// reloadHealthBarColors();
 			
@@ -883,10 +935,13 @@ class GameState extends MusicBeatState
 	public var boyfriendMap:Map<String, BoyfriendPE> = new Map();
 	public var dadMap:Map<String, CharacterPE> = new Map();
 	public var gfMap:Map<String, CharacterPE> = new Map();
+	public var player3Map:Map<String, CharacterPE> = new Map();
+
 	#else
 	public var boyfriendMap:Map<String, BoyfriendPE> = new Map<String, CharacterPE>();
 	public var dadMap:Map<String, CharacterPE> = new Map<String, CharacterPE>();
 	public var gfMap:Map<String, CharacterPE> = new Map<String, CharacterPE>();
+	public var player3Map:Map<String, CharacterPE> = new Map<String, CharacterPE>();
 	#end
 
 	public var BF_X:Float = 770;
@@ -928,10 +983,12 @@ class GameState extends MusicBeatState
 	public var boyfriendGroup:FlxSpriteGroup;
 	public var dadGroup:FlxSpriteGroup;
 	public var gfGroup:FlxSpriteGroup;
+	public var player3Group:FlxSpriteGroup;
 
 	public var dadPE:CharacterPE;
 	public var gfPE:CharacterPE;
 	public var bfPE:BoyfriendPE;
+	public var player3:CharacterPE;
 
 	public var eventNotes:Array<Dynamic> = [];
 	// Handles the new epic mega sexy cam code that i've done
@@ -1377,6 +1434,7 @@ class GameState extends MusicBeatState
 		boyfriendGroup = new FlxSpriteGroup(0, 0);
 		dadGroup = new FlxSpriteGroup(0, 0);
 		gfGroup = new FlxSpriteGroup(0, 0);
+		player3Group = new FlxSpriteGroup(0, 0);
 
 		songPlayer.init();
 

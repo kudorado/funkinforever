@@ -1,0 +1,1380 @@
+{
+	"song": {
+		"speed": 2.8,
+		"stage": "SonicP3",
+		"player1": "bf-dark",
+		"player2": "sonic",
+		"player3": null,
+		"events": [
+			[
+				843.6043956044,
+				[
+					[
+						"Image Flash",
+						"white",
+						"0.2"
+					],
+					[
+						"Change Character",
+						"1",
+						"tails-dark"
+					]
+				]
+			],
+			[
+				12650.406593407,
+				[
+					
+					[
+						"Image Flash",
+						"white",
+						"0.2"
+					]
+				]
+			],
+			[
+				150329.67032967,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				150659.340659341,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				150824.175824176,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				150989.010989011,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				151318.681318681,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				151483.516483517,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				151648.351648352,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				151813.186813187,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				151978.021978022,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				152142.857142857,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				152307.692307692,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				152472.527472527,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				152637.362637363,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				152802.197802198,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				152967.032967033,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				153131.868131868,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				153296.703296703,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				153461.538461538,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				153626.373626374,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				153791.208791209,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				153956.043956044,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				154285.714285714,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				154615.384615385,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				154945.054945055,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				155109.89010989,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				155274.725274725,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				155439.56043956,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				155604.395604396,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				155769.230769231,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				155934.065934066,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				156098.901098901,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				156263.736263736,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				156428.571428571,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				156593.406593407,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				156758.241758242,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				156923.076923077,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				157087.912087912,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				157417.582417582,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				157582.417582418,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				157747.252747253,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				157912.087912088,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				158076.923076923,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				158241.758241758,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				168791.208791209,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				169450.549450549,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				169780.21978022,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				170109.89010989,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				170439.56043956,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				170769.230769231,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				171098.901098901,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				171428.571428571,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				172087.912087912,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				172417.582417582,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				172747.252747253,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				173076.923076923,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				173406.593406593,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				173736.263736264,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				174065.934065934,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				174230.769230769,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				174395.604395604,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				174560.439560439,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				174725.274725275,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				174890.10989011,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				175054.945054945,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				175219.78021978,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				175384.615384615,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				175549.45054945,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				175714.285714286,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				175879.120879121,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				176043.956043956,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				176208.791208791,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				176373.626373626,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				176538.461538461,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				176703.296703297,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				177032.967032967,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				177197.802197802,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				177362.637362637,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				177527.472527472,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				177692.307692308,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				177857.142857143,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				178021.978021978,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				178186.813186813,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				178351.648351648,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				178516.483516483,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				178681.318681319,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				178846.153846154,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				179010.989010989,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				179340.659340659,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				189890.10989011,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				190054.945054945,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				190219.78021978,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				190384.615384615,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				190549.45054945,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				190879.120879121,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				191043.956043956,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				191208.791208791,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				191373.626373626,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				191538.461538461,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				191703.296703296,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				191868.131868132,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				192197.802197802,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				192527.472527472,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				192857.142857143,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				193186.813186813,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				193516.483516483,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				193846.153846154,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				194175.824175824,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				194505.494505494,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				194835.164835165,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				195164.835164835,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				195494.505494505,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				195659.34065934,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				195824.175824176,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				195989.010989011,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				196153.846153846,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				196483.516483516,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				197142.857142857,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				197472.527472527,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				197637.362637362,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				197802.197802197,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				198131.868131868,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					],
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				198461.538461538,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				198626.373626373,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				198791.208791208,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				198956.043956044,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				199120.879120879,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			],
+			[
+				199285.714285714,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				199450.549450549,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				199615.384615384,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				199780.219780219,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"player3"
+					]
+				]
+			],
+			[
+				199945.054945055,
+				[
+					[
+						"Play Animation",
+						"singLEFT",
+						"player3"
+					]
+				]
+			],
+			[
+				200109.89010989,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"player3"
+					]
+				]
+			],
+			[
+				200439.56043956,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"player3"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"player3Version": "player3-dark",
+		"bpm": 182,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Sidekick"
+	}
+}

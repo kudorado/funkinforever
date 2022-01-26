@@ -20,7 +20,7 @@ class Chasing extends SongPlayer
         dad.frames = tex;
     }
 
-	override function createLua()
+	override function loadLua()
 	{
         // get event
         var flash = SongPlayer.luaFolder + "custom_events/flash.lua";

@@ -32,6 +32,14 @@ class Sidekick extends SongPlayer
         gf.playAnim("idle");
     }
 
+	override function loadLua()
+	{
+		// get event
+		var flash = SongPlayer.luaFolder + "custom_events/flash.lua";
+
+		GameState.createLua(flash);
+	}
+
 
 	override function loadMap()
 	{
