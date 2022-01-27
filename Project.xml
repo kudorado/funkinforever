@@ -59,7 +59,7 @@
 	<assets path="assets/preload" rename="assets" exclude="*.mp3" unless="web"/>
 	
 	<!-- <define name="PRELOAD_ALL" /> -->
-	<define name="PRELOAD_ALL" unless="mac" />
+	<define name="PRELOAD_ALL" unless="kudoWatchingPorn" />
 	<!-- <define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/> -->
 	<!-- shit -->
 	<section if="PRELOAD_ALL">
