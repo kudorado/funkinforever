@@ -129,11 +129,13 @@ class GameState extends MusicBeatState
 				var charType:Int = 0;
 				switch (event[3].toLowerCase())
 				{
+					case 'boyfriend' | 'bf' | '0':
+						charType = 0;
 					case 'player3' | '3':
 						charType = 3;
-					case 'gf' | 'girlfriend' | '1':
+					case 'gf' | 'girlfriend' | '2':
 						charType = 2;
-					case 'dad' | 'opponent' | '0':
+					case 'dad' | 'opponent' | '1':
 						charType = 1;
 					default:
 						charType = Std.parseInt(event[3]);
@@ -800,36 +802,28 @@ class GameState extends MusicBeatState
 
 				switch(charType) {
 					case 0:
-						//Todo 
+						// Todo
 						// if(bfPE.curCharacter != value2) {
-							if (!boyfriendMap.exists(value2))
-							{
-								addCharacterToList(value2, charType);
-							}
+						if (!boyfriendMap.exists(value2))
+						{
+							addCharacterToList(value2, charType);
+						}
 
-							if(bfPE != null)
-								bfPE.visible = false;
+						if (bfPE != null)
+							bfPE.visible = false;
 
 						if (songPlayer.bf != null && songPlayer.bf.visible)
 							songPlayer.bf.visible = false;
 
+						bfPE = boyfriendMap.get(value2);
 
-							bfPE = boyfriendMap.get(value2);
+						if (!bfPE.alreadyLoaded)
+						{
+							bfPE.alpha = 1;
+							bfPE.alreadyLoaded = true;
+						}
 
-							// songPlayer.bf = bfPE;
-
-							if (!bfPE.alreadyLoaded)
-							{
-								bfPE.alpha = 1;
-								bfPE.alreadyLoaded = true;
-							}
-
-							bfPE.visible = true;
-
-							//todo
-							// iconP1.changeIcon(bfPE.healthIcon);
-						// }
-
+						bfPE.visible = true;
 						setOnLuas('boyfriendName', bfPE.curCharacter);
 
 
@@ -931,7 +925,6 @@ class GameState extends MusicBeatState
 				// if(bgGirls != null) bgGirls.swapDanceType();
 			case 'Change Character X':
 				var charType:Int = 0;
-
 				switch (value1)
 				{
 					case 'player3':
