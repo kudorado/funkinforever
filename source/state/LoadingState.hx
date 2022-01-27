@@ -50,10 +50,10 @@ class LoadingState extends MusicBeatState
 			if (GameState.SONG.needsVoices)
 				checkLoadSong(getVocalPath());
 			checkLibrary("shared");
-			if (GameState.storyWeek > 0)
+			// if (GameState.storyWeek > 0)
 				checkLibrary("mods");
-			else
-				checkLibrary("tutorial");
+			// else
+				// checkLibrary("tutorial");
 
 			var fadeTime = 0.5;
 			FlxG.camera.fade(FlxG.camera.bgColor, fadeTime, true);

@@ -4,6 +4,8 @@ import ui.*;
 import reactor.*;
 import controls.*;
 
+import openfl.utils.Assets;
+
 import Achievements;
 import StageData;
 import FunkinLua;
@@ -1796,8 +1798,6 @@ class GameState extends MusicBeatState
 
 		createBlackFadeOut();
 
-		LoadingState.hasCachedSong = true;
-
 		calculateNPS();
 		
 		listeningModeCheck();
@@ -1805,6 +1805,7 @@ class GameState extends MusicBeatState
 		createBounds();
 
 		super.create();
+		LoadingState.hasCachedSong = true;
 
 		AdMob.hideBanner();
 	
@@ -2098,7 +2099,7 @@ class GameState extends MusicBeatState
 		if (FileSystem.exists(file))
 		{
 		#else
-		if (OpenFlAssets.exists(file))
+		if (Assets.exists(file))
 		{
 		#end
 			var eventsData:Array<Dynamic> = 
@@ -2226,10 +2227,11 @@ class GameState extends MusicBeatState
 
 			var midScroll = FlxG.save.data.scrollId <= 1;
 			// midScroll ? STRUM_X_MIDDLESCROLL : STRUM_X
-			var babyArrow:StrumNote = new StrumNote(0, strumLine.y, i, player);
+			var babyArrow:StrumNote = new StrumNote(0, strumLine.y);
 			
 			// get arrow skin depending on song playing
 			songPlayer.getArrowSkin(i, babyArrow);
+			
 
 			babyArrow.updateHitbox();
 			babyArrow.scrollFactor.set();
@@ -2311,19 +2313,30 @@ class GameState extends MusicBeatState
 			if (!startTimer.finished)
 				startTimer.active = false;
 
-			if(blammedLightsBlackTween != null)
-				blammedLightsBlackTween.active = false;
-			if(phillyCityLightsEventTween != null)
-				phillyCityLightsEventTween.active = false;
+			// if(blammedLightsBlackTween != null)
+			// 	blammedLightsBlackTween.active = false;
+			// if(phillyCityLightsEventTween != null)
+			// 	phillyCityLightsEventTween.active = false;
 
 			// if(carTimer != null) carTimer.active = false;
 
-			var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
-			for (i in 0...chars.length) {
-				if(chars[i].colorTween != null) {
-					chars[i].colorTween.active = false;
-				}
-			}
+			//Todo
+			//do it later due no case use and lazy dude.
+
+			// var chars:Array<CharacterPE> = [];
+
+			// if(bfPE != null)
+			// 	chars.push(bfPE);
+
+			// if(bfPE != null)
+			// 	chars.push(bfPE);
+
+				
+			// for (i in 0...chars.length) {
+			// 	if(chars[i].colorTween != null) {
+			// 		chars[i].colorTween.active = false;
+			// 	}
+			// }
 
 			for (tween in modchartTweens) {
 				tween.active = false;
@@ -2357,19 +2370,23 @@ class GameState extends MusicBeatState
 				if (songSpeedTween != null)
 					songSpeedTween.active = true;
 	
-				if(blammedLightsBlackTween != null)
-					blammedLightsBlackTween.active = true;
-				if(phillyCityLightsEventTween != null)
-					phillyCityLightsEventTween.active = true;
+				//Todo
+				//do it later due no case use and lazy dude.
+		
+
+				// if(blammedLightsBlackTween != null)
+				// 	blammedLightsBlackTween.active = true;
+				// if(phillyCityLightsEventTween != null)
+				// 	phillyCityLightsEventTween.active = true;
 				
-				// if(carTimer != null) carTimer.active = true;
+				// // if(carTimer != null) carTimer.active = true;
 	
-				var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
-				for (i in 0...chars.length) {
-					if(chars[i].colorTween != null) {
-						chars[i].colorTween.active = true;
-					}
-				}
+				// var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
+				// for (i in 0...chars.length) {
+				// 	if(chars[i].colorTween != null) {
+				// 		chars[i].colorTween.active = true;
+				// 	}
+				// }
 
 
 				if (!startTimer.finished)

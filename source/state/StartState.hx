@@ -278,7 +278,8 @@ class StartState extends MusicBeatState
 
 			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
-				  FlxG.switchState(new MenuState()); // fail but we go anyway
+				// LoadingState.loadAndSwitchState(new MenuState()); // preload mods folder
+				FlxG.switchState(new MenuState()); // fail but we go anyway
 			});
 		}
 
