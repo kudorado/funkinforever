@@ -2017,7 +2017,8 @@ class GameState extends MusicBeatState
 			}
 		}
 
-		// var lastSections = SONG.notes[SONG.notes.length - 1].sectionNotes;
+		// var lastSections = SONG.notes[ - 1].sectionNotes;
+
 		var shit = (maxTime - minTime);
 		var npsData = noteCount / shit;
 		var npm = npsData * 60;
@@ -2025,7 +2026,6 @@ class GameState extends MusicBeatState
 	}
 
 	var npsShit:Int;
-
 	public var gfNodSpeed:Float;
 
 	public function updateGFNodSpeed()
@@ -2849,42 +2849,7 @@ class GameState extends MusicBeatState
 	
 
 		updateSongPosBar();
-	
-		if (generatedMusic && SONG.notes[Std.int(curStep / 16)] != null)
-		{
-			// Make sure Girlfriend cheers only for certain songs
-			if (allowedToHeadbang)
-			{
-				// Don't animate GF if something else is already animating her (eg. train passing)
-				if (gf().animation.curAnim.name == 'danceLeft'
-					|| gf().animation.curAnim.name == 'danceRight'
-					|| gf().animation.curAnim.name == 'idle')
-				{
-				}
-			}
-
-			if (!SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != dad().getMidpoint().x + 150)
-			{
-				if (turn == -1) // repeat
- 					camFollowSafeFrame = 0;
-
-				setCamFollowDad();
-
-				songPlayer.updateCamFollowDad();
-				turn = -1;
-			}
-
-			if (SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != bf().getMidpoint().x - 100 && !lockCamFollow)
-			{
-				if (turn == 1) // repeat
-					camFollowSafeFrame = 0;
-			
-
-				setCamFollowBF();
-				turn = 1;
-				songPlayer.updateCamFollowBF();
-			}
-		}
+		updateCamFollow();
 
 		if (camZooming)
 		{
@@ -3307,6 +3272,47 @@ class GameState extends MusicBeatState
 	{
 		lockCamFollow = true;
 		targetCamFollow = new FlxPoint(x, y);
+	}
+
+	function updateCamFollow()
+	{
+		var note = Std.int(curStep / 16);
+		//always soon than one note
+		
+		if (generatedMusic && SONG.notes[note] != null)
+		{
+			// Make sure Girlfriend cheers only for certain songs
+			if (allowedToHeadbang)
+			{
+				// Don't animate GF if something else is already animating her (eg. train passing)
+				if (gf().animation.curAnim.name == 'danceLeft'
+					|| gf().animation.curAnim.name == 'danceRight'
+					|| gf().animation.curAnim.name == 'idle')
+				{
+				}
+			}
+
+			if (!SONG.notes[note].mustHitSection && camFollow.x != dad().getMidpoint().x + 150)
+			{
+				if (turn == -1) // repeat
+					camFollowSafeFrame = 0;
+
+				setCamFollowDad();
+
+				songPlayer.updateCamFollowDad();
+				turn = -1;
+			}
+
+			if (SONG.notes[note].mustHitSection && camFollow.x != bf().getMidpoint().x - 100 && !lockCamFollow)
+			{
+				if (turn == 1) // repeat
+					camFollowSafeFrame = 0;
+
+				setCamFollowBF();
+				turn = 1;
+				songPlayer.updateCamFollowBF();
+			}
+		}
 	}
 
 	function clamp(raw:Float, min:Float, max:Float)
