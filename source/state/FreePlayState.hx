@@ -22,11 +22,6 @@ import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import lime.utils.Assets;
 
-
-#if windows
-//import Discord.DiscordClient;
-#end
-
 using StringTools;
 
 class FreePlayState extends MusicBeatState
@@ -289,18 +284,6 @@ class FreePlayState extends MusicBeatState
 		// fetch song shits from SongManager
 		songs = new Array<SongMetadata>();
 		loadWeek();
-
-		
-
-
-		// for(i in songs)
-			//@notrace(i.songName);
-
-
-		 #if windows
-		 // Updating Discord Rich Presence
-		////DiscordClient.changePresence("In the Freeplay Menu", null);
-		 #end
 
 		var isDebug:Bool = false;
 

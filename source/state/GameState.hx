@@ -72,9 +72,6 @@ import lime.utils.Assets;
 import openfl.display.BlendMode;
 import openfl.display.StageQuality;
 import openfl.filters.ShaderFilter;
-#if windows
-//import Discord.DiscordClient;
-#end
 
 #if sys
 import Sys;
@@ -658,28 +655,85 @@ class GameState extends MusicBeatState
 				}
 
 			case 'Play Animation':
-				//trace('Anim to play: ' + value1);
-				var char:CharacterPE = bfPE;
-				switch(value2.toLowerCase().trim()) {
-					case 'player3':
-						char = player3;
+
+				// todo
+				// create enum shit
+				var playerShit:Int = 0 ;
+
+				switch (value2.toLowerCase().trim())
+				{
 					case 'bf' | 'boyfriend':
-						char = bfPE;
+						playerShit = 0;
+
+					case 'dad' | 'opponent':
+						playerShit = 1;
+
 					case 'gf' | 'girlfriend':
-						char = gfPE;
+						playerShit = 2;
+
+					case 'player3':
+						playerShit = 3;
+
 					default:
 						var val2:Int = Std.parseInt(value2);
-						if(Math.isNaN(val2)) val2 = 0;
+						if(Math.isNaN(val2)) playerShit = 0;
 		
-						switch(val2) {
-							case 1: char = dadPE;
-							case 2: char = gfPE;
-							case 3: char = player3;
-						}
+						
 				}
 				
-				char.playAnim(value1, true);
-				char.specialAnim = true;
+				switch (playerShit)
+				{
+					case 0:
+						if (bfPE != null)
+						{
+							bfPE.playAnim(value1, true);
+							bfPE.specialAnim = true;
+						}
+						if (songPlayer.bf != null)
+						{
+							//todo
+							//play anim force.
+							songPlayer.bf.playAnim(value1, true);
+						}
+						
+					case 1:
+						if (dadPE != null)
+						{
+							dadPE.playAnim(value1, true);
+							dadPE.specialAnim = true;
+						}
+						if (songPlayer.dad != null)
+						{
+							//todo
+							//play anim force.
+							songPlayer.dad.playAnim(value1, true);
+						}
+
+					case 2:
+						if (gfPE != null)
+						{
+							gfPE.playAnim(value1, true);
+							gfPE.specialAnim = true;
+						}
+						if (songPlayer.gf != null)
+						{
+							//todo
+							//play anim force.
+							songPlayer.gf.playAnim(value1, true);
+						}
+	
+					case 3:
+						player3.playAnim(value1, true);
+						player3.specialAnim = true;
+				}
+
+				trace('call event Play Animation: ' + value1 + ", character: " + playerShit);
+
+				
+				// trace('trim: ' + value2.toLowerCase().trim());
+
+				// char.playAnim(value1, true);
+				// char.specialAnim = true;
 
 			case 'Camera Follow Pos':
 				var val1:Float = Std.parseFloat(value1);
@@ -1191,14 +1245,6 @@ class GameState extends MusicBeatState
 	public var camFollowSpeed:Float = 1;
 
 
-	#if windows
-	// Discord RPC variables
-	var storyDifficultyText:String = "";
-	var iconRPC:String = "";
-	var detailsText:String = "";
-	var detailsPausedText:String = "";
-	#end
-
 	public var vocals:FlxSound;
 
 	public static function dad()
@@ -1450,68 +1496,10 @@ class GameState extends MusicBeatState
 		// pre lowercasing the song name (create)
 		var songLowercase = SongFilter.filter(CURRENT_SONG);
 
-		#if windows
-		executeModchart = FileSystem.exists(Paths.lua(songLowercase + "/modchart"));
-		#end
 		#if !cpp
 		executeModchart = false; // FORCE disable for non cpp targets
 		#end
 
-		//@notrace('Mod chart: ' + executeModchart + " - " + Paths.lua(songLowercase + "/modchart"));
-
-		#if windows
-		// Making difficulty text for Discord Rich Presence.
-		switch (storyDifficulty)
-		{
-			case 0:
-				storyDifficultyText = "Easy";
-			case 1:
-				storyDifficultyText = "Normal";
-			case 2:
-				storyDifficultyText = "Hard";
-		}
-
-		iconRPC = SONG.player2;
-
-		// To avoid having duplicate images in Discord assets
-		switch (iconRPC)
-		{
-			case 'senpai-angry':
-				iconRPC = 'senpai';
-			case 'monster-christmas':
-				iconRPC = 'monster';
-			case 'mom-car':
-				iconRPC = 'mom';
-		}
-
-		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
-		if (isStoryMode)
-		{
-			detailsText = "Story Mode: Week " + storyWeek;
-		}
-		else
-		{
-			detailsText = "Freeplay";
-		}
-
-		// String for when the game is paused
-		detailsPausedText = "Paused - " + detailsText;
-
-		// Updating Discord Rich Presence.
-		//DiscordClient.changePresence(detailsText
-		// 	+ " "
-		// 	+ CURRENT_SONG
-		// 	+ " ("
-		// 	+ storyDifficultyText
-		// 	+ ") "
-		// 	+ Ratings.GenerateLetterRank(accuracy),
-		// 	"\nAcc: "
-		// 	+ HelperFunctions.truncateFloat(accuracy, 2)
-		// 	+ "% | Score: "
-		// 	+ songScore
-		// 	+ " | Misses: "
-		// 	+ misses, iconRPC);
-		#end
 
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
@@ -1909,9 +1897,6 @@ class GameState extends MusicBeatState
 
 	var luaWiggles:Array<WiggleEffect> = [];
 
-	#if windows
-	// public static var luaModchart:ModchartState = null;
-	#end
 	
 	function getDiff():String
 	{
@@ -1952,14 +1937,6 @@ class GameState extends MusicBeatState
 		generateStaticArrows(0);
 		generateStaticArrows(1);
 
-		#if windows
-		// if (executeModchart)
-		// {
-		// 	luaModchart = ModchartState.createModchartState();
-		// 	luaModchart.executeState('start', [CURRENT_SONG]);
-		// }
-		#end
-
 		songPlayer.startCountdown();
 	}
 
@@ -1997,22 +1974,7 @@ class GameState extends MusicBeatState
 			createSongPosBar();
 		}
 
-		#if windows
-		// Updating Discord Rich Presence (with Time Left)
-		//////DiscordClient.changePresence(detailsText
-		// 	+ " "
-		// 	+ CURRENT_SONG
-		// 	+ " ("
-		// 	+ storyDifficultyText
-		// 	+ ") "
-		// 	+ Ratings.GenerateLetterRank(accuracy),
-		// 	"\nAcc: "
-		// 	+ HelperFunctions.truncateFloat(accuracy, 2)
-		// 	+ "% | Score: "
-		// 	+ songScore
-		// 	+ " | Misses: "
-		// 	+ misses, iconRPC);
-		#end
+	
 	}
 
 	public function shakeMinimal()
@@ -2130,7 +2092,6 @@ class GameState extends MusicBeatState
 		var songLowercase = SongFilter.filter(CURRENT_SONG); 
 		
 		// Per song offset check
-		// #if windows
 		// var songPath = 'assets/data/' + songLowercase + '/';
 
 		// for (file in sys.FileSystem.readDirectory(songPath))
@@ -2151,7 +2112,6 @@ class GameState extends MusicBeatState
 		// 		}
 		// 	}
 		// }
-		// #end
 
 		var file:String =  "assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
 		// var modPath = SongPlayer.luaFolder + "data/" + SONG_NAME + '/events.json';
@@ -2565,21 +2525,6 @@ class GameState extends MusicBeatState
 		vocals.time = Conductor.songPosition;
 		vocals.play();
 
-		#if windows
-		//////DiscordClient.changePresence(detailsText
-		// 	+ " "
-		// 	+ CURRENT_SONG
-		// 	+ " ("
-		// 	+ storyDifficultyText
-		// 	+ ") "
-		// 	+ Ratings.GenerateLetterRank(accuracy),
-		// 	"\nAcc: "
-		// 	+ HelperFunctions.truncateFloat(accuracy, 2)
-		// 	+ "% | Score: "
-		// 	+ songScore
-		// 	+ " | Misses: "
-		// 	+ misses, iconRPC);
-		#end
 	}
 
 	private var paused:Bool = false;
@@ -2720,59 +2665,6 @@ class GameState extends MusicBeatState
 		if (botPlayShit && FlxG.keys.justPressed.ONE)
 			camHUD.visible = !camHUD.visible;
 
-		#if windows
-		// if (executeModchart && luaModchart != null && songStarted)
-		// {
-		// 	luaModchart.setVar('songPos', Conductor.songPosition);
-		// 	// luaModchart.setVar('hudZoom', camHUD.zoom);
-		// 	luaModchart.setVar('cameraZoom', camGame.zoom);
-		// 	luaModchart.executeState('update', [elapsed]);
-
-		// 	for (i in luaWiggles)
-		// 	{
-		// 		//@notrace('wiggle le gaming');
-		// 		i.update(elapsed);
-		// 	}
-
-		// 	/*for (i in 0...strumLineNotes.length) {
-		// 		var member = strumLineNotes.members[i];
-		// 		member.x = luaModchart.getVar("strum" + i + "X", "float");
-		// 		member.y = luaModchart.getVar("strum" + i + "Y", "float");
-		// 		member.angle = luaModchart.getVar("strum" + i + "Angle", "float");
-		// 	}*/
-
-		// 	camGame.angle = luaModchart.getVar('cameraAngle', 'float');
-		// 	camHUD.angle = luaModchart.getVar('camHudAngle', 'float');
-
-		// 	if (luaModchart.getVar("showOnlyStrums", 'bool'))
-		// 	{
-		// 		healthBarBG.visible = false;
-		// 		kadeEngineWatermark.visible = false;
-		// 		healthBar.visible = false;
-		// 		iconP1.visible = false;
-		// 		iconP2.visible = false;
-		// 	}
-		// 	else
-		// 	{
-		// 		healthBarBG.visible = true;
-		// 		kadeEngineWatermark.visible = true;
-		// 		healthBar.visible = true;
-		// 		iconP1.visible = true;
-		// 		iconP2.visible = true;
-		// 	}
-
-		// 	var p1 = luaModchart.getVar("strumLine1Visible", 'bool');
-		// 	var p2 = luaModchart.getVar("strumLine2Visible", 'bool');
-
-		// 	for (i in 0...4)
-		// 	{
-		// 		strumLineNotes.members[i].visible = p1;
-		// 		if (i <= playerStrums.length)
-		// 			playerStrums.members[i].visible = p2;
-		// 	}
-		// }
-		#end
-
 		// reverse iterate to remove oldest notes first and not invalidate the iteration
 		// stop iteration as soon as a note is not removed
 		// all notes should be kept in the correct order and this is optimal, safe to do every frame/update
@@ -2864,17 +2756,7 @@ class GameState extends MusicBeatState
 		
 		if (FlxG.keys.justPressed.SEVEN)
 		{
-			#if windows
-			//////DiscordClient.changePresence("Chart Editor", null, null, true);
-			#end
 			FlxG.switchState(new ChartingState());
-			#if windows
-			// if (luaModchart != null)
-			// {
-			// 	luaModchart.die();
-			// 	luaModchart = null;
-			// }
-			#end
 		}
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
@@ -2931,26 +2813,12 @@ class GameState extends MusicBeatState
 		if (FlxG.keys.justPressed.EIGHT)
 		{
 			FlxG.switchState(new AnimationState(DAD));
-			#if windows
-			if (luaModchart != null)
-			{
-				luaModchart.die();
-				luaModchart = null;
-			}
-			#end
 		}
 
 
 		if (FlxG.keys.justPressed.ZERO)
 		{
 			FlxG.switchState(new AnimationState(BF));
-			#if windows
-			if (luaModchart != null)
-			{
-				luaModchart.die();
-				luaModchart = null;
-			}
-			#end
 		}
 
 		if (FlxG.keys.justPressed.NINE)
@@ -2981,11 +2849,6 @@ class GameState extends MusicBeatState
 				{
 				}
 			}
-
-			#if windows
-			// if (luaModchart != null)
-			// 	luaModchart.setVar("mustHit", SONG.notes[Std.int(curStep / 16)].mustHitSection);
-			#end
 
 			if (!SONG.notes[Std.int(curStep / 16)].mustHitSection && camFollow.x != dad().getMidpoint().x + 150)
 			{
@@ -3043,24 +2906,6 @@ class GameState extends MusicBeatState
 				FlxG.sound.music.stop();
 
 				openSubState(new GameOverSubstate(bf().getScreenPosition().x, bf().getScreenPosition().y));
-
-				#if windows
-				// Game Over doesn't get his own variable because it's only used here
-				//////DiscordClient.changePresence("GAME OVER -- "
-				// 	+ CURRENT_SONG
-				// 	+ " ("
-				// 	+ storyDifficultyText
-				// 	+ ") "
-				// 	+ Ratings.GenerateLetterRank(accuracy),
-				// 	"\nAcc: "
-				// 	+ HelperFunctions.truncateFloat(accuracy, 2)
-				// 	+ "% | Score: "
-				// 	+ songScore
-				// 	+ " | Misses: "
-				// 	+ misses, iconRPC);
-				#end
-
-				// FlxG.switchState(new GameOverState(bf().getScreenPosition().x, bf().getScreenPosition().y));
 			}
 		}
 
@@ -3253,10 +3098,6 @@ class GameState extends MusicBeatState
 						});
 					}
 
-					// #if windows
-					// if (luaModchart != null)
-					// 	luaModchart.executeState('playerTwoSing', [Math.abs(daNote.noteData), Conductor.songPosition]);
-					// #end
 					//songPlayer.noteEvent(daNote);
 					//trigger when dad hit a note
 					if(playAsDad)
@@ -3451,13 +3292,6 @@ class GameState extends MusicBeatState
 		botPlayShit = false;
 		FlxG.save.data.scrollSpeed = 1;
 	
-		#if windows
-		// if (luaModchart != null)
-		// {
-		// 	luaModchart.die();
-		// 	luaModchart = null;
-		// }
-		#end
 		
 		songPlayer.endSongEvent(endSongCallback);	
 
@@ -3518,14 +3352,7 @@ class GameState extends MusicBeatState
 					transOut = FlxTransitionableState.defaultTransOut;
 
 					backHome();
-					#if windows
-					// if (luaModchart != null)
-					// {
-					// 	luaModchart.die();
-					// 	luaModchart = null;
-					// }
-					#end
-
+				
 					StoryState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryState.weekUnlocked.length - 1))] = true;
 
 					if (SONG.validScore)
@@ -4172,27 +3999,6 @@ class GameState extends MusicBeatState
 		var holdArray:Array<Bool> = [mcontrols.LEFT, mcontrols.DOWN, mcontrols.UP, mcontrols.RIGHT];
 		var pressArray:Array<Bool> = [mcontrols.LEFT_P, mcontrols.DOWN_P, mcontrols.UP_P, mcontrols.RIGHT_P];
 		var releaseArray:Array<Bool> = [mcontrols.LEFT_R, mcontrols.DOWN_R, mcontrols.UP_R, mcontrols.RIGHT_R];
-		#if windows
-		// if (luaModchart != null)
-		// {
-		// 	if (mcontrols.LEFT_P)
-		// 	{
-		// 		luaModchart.executeState('keyPressed', ["left"]);
-		// 	};
-		// 	if (mcontrols.DOWN_P)
-		// 	{
-		// 		luaModchart.executeState('keyPressed', ["down"]);
-		// 	};
-		// 	if (mcontrols.UP_P)
-		// 	{
-		// 		luaModchart.executeState('keyPressed', ["up"]);
-		// 	};
-		// 	if (mcontrols.RIGHT_P)
-		// 	{
-		// 		luaModchart.executeState('keyPressed', ["right"]);
-		// 	};
-		// };
-		#end
 
 		// Prevent player input if botplay is on
 		if (botPlayShit)
@@ -4483,11 +4289,6 @@ class GameState extends MusicBeatState
 				}
 			}
 			
-			#if windows
-			// if (luaModchart != null)
-			// 	luaModchart.executeState('playerOneMiss', [direction, Conductor.songPosition]);
-			#end
-
 			updateAccuracy();
 		}
 	}
@@ -4611,11 +4412,7 @@ class GameState extends MusicBeatState
 						bf().playAnim('singLEFT', true);
 				}
 			}
-			#if windows
-			// if (luaModchart != null)
-			// 	luaModchart.executeState('playerOneSing', [note.noteData, Conductor.songPosition]);
-			#end
-
+		
 			effectStrums.forEach(function(spr:FlxSprite)
 			{
 				if (Math.abs(note.noteData) == spr.ID && spr.animation.finished)
@@ -4673,40 +4470,6 @@ class GameState extends MusicBeatState
 			resyncVocals();
 		}
 
-		#if windows
-		// if (executeModchart && luaModchart != null)
-		// {
-		// 	luaModchart.setVar('curStep', curStep);
-		// 	luaModchart.executeState('stepHit', [curStep]);
-		// }
-		#end
-
-		// yes this updates every step.
-		// yes this is bad
-		// but i'm doing it to update misses and accuracy
-		#if windows
-		// Song duration in a float, useful for the time left feature
-		songLength = FlxG.sound.music.length;
-
-	
-
-		// Updating Discord Rich Presence (with Time Left)
-		//////DiscordClient.changePresence(detailsText
-		// 	+ " "
-		// 	+ CURRENT_SONG
-		// 	+ " ("
-		// 	+ storyDifficultyText
-		// 	+ ") "
-		// 	+ Ratings.GenerateLetterRank(accuracy),
-		// 	"Acc: "
-		// 	+ HelperFunctions.truncateFloat(accuracy, 2)
-		// 	+ "% | Score: "
-		// 	+ songScore
-		// 	+ " | Misses: "
-		// 	+ misses, iconRPC, true,
-		// 	songLength
-		// 	- Conductor.songPosition);
-		#end
 	}
 
 	var lightningStrikeBeat:Int = 0;
@@ -4720,14 +4483,6 @@ class GameState extends MusicBeatState
 		{
 			notes.sort(FlxSort.byY, (FlxG.save.data.downscroll ? FlxSort.ASCENDING : FlxSort.DESCENDING));
 		}
-
-		#if windows
-		// if (executeModchart && luaModchart != null)
-		// {
-		// 	luaModchart.setVar('curBeat', curBeat);
-		// 	luaModchart.executeState('beatHit', [curBeat]);
-		// }
-		#end
 
 		songPlayer.midSongEventUpdate(curBeat);
 		

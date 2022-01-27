@@ -22,10 +22,6 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.net.curl.CURLCode;
 
-#if windows
-// //import Discord.DiscordClient;
-#end
-
 using StringTools;
 
 class StoryState extends MusicBeatState
@@ -73,11 +69,6 @@ class StoryState extends MusicBeatState
 	{
 
 		AdMob.hideBanner();
-
-		#if windows
-		// Updating Discord Rich Presence
-		//DiscordClient.changePresence("In the Story Mode Menu", null);
-		#end
 
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;

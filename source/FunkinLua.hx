@@ -36,9 +36,7 @@ import Type.ValueType;
 import Controls;
 import DialogueBoxPsych;
 
-#if windows
-import Discord;
-#end
+
 
 using StringTools;
 
@@ -1283,9 +1281,7 @@ class FunkinLua {
 		});
 
 		Lua_helper.add_callback(lua, "changePresence", function(details:String, state:Null<String>, ?smallImageKey:String, ?hasStartTimestamp:Bool, ?endTimestamp:Float) {
-			#if windows
-			//DiscordClient.changePresence(details, state, smallImageKey, hasStartTimestamp, endTimestamp);
-			#end
+		
 		});
 
 
@@ -1537,9 +1533,7 @@ class FunkinLua {
 			luaTrace('musicFadeOut is deprecated! Use soundFadeOut instead.', false, true);
 		});
 
-		#if windows
-		// Discord.DiscordClient.addLuaCallbacks(lua);
-		#end
+
 
 		call('onCreate', []);
 		#end

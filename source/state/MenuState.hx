@@ -21,10 +21,6 @@ import flixel.util.FlxTimer;
 import lime.app.Application;
 import ui.FlxVirtualPad;
 
-#if windows
-//import Discord.DiscordClient;
-#end
-
 using StringTools;
 
 class MenuState extends MusicBeatState
@@ -54,10 +50,6 @@ class MenuState extends MusicBeatState
 
 	override function create()
 	{
-		#if windows
-		// Updating Discord Rich Presence
-		//DiscordClient.changePresence("In the Menus", null);
-		#end
 
 		if (!FlxG.sound.music.playing)
 		{

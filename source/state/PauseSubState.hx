@@ -5,9 +5,7 @@ import ui.Controller;
 import extension.admob.AdMob;
 
 import openfl.Lib;
-#if windows
-import llua.Lua;
-#end
+
 import Controls.Control;
 import flixel.FlxG;
 import flixel.FlxSprite;

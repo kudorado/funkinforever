@@ -37,9 +37,6 @@ import Type.ValueType;
 import Controls;
 import DialogueBoxPsych;
 
-#if windows
-import Discord;
-#end
 
 using StringTools;
 

@@ -20,16 +20,6 @@ class Chasing extends SongPlayer
         dad.frames = tex;
     }
 
-	override function loadLua()
-	{
-        // get event
-        var flash = SongPlayer.luaFolder + "custom_events/flash.lua";
-        var changeBG = SongPlayer.luaFolder + "custom_events/bg.lua";
-
-		GameState.createLuas([flash, changeBG]);
-
-    }
-
     override function loadMap()
     {
         gameState.defaultCamZoom = 1;

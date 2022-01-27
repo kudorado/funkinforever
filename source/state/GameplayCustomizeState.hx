@@ -8,10 +8,6 @@ import flixel.math.FlxMath;
 import flixel.FlxCamera;
 import flixel.math.FlxPoint;
 import flixel.FlxObject;
-#if windows
-//import Discord.DiscordClient;
-import sys.thread.Thread;
-#end
 
 import flixel.group.FlxGroup.FlxTypedGroup;
 import openfl.ui.Keyboard;
@@ -45,11 +41,7 @@ class GameplayCustomizeState extends MusicBeatState
     private var camHUD:FlxCamera;
     
     public override function create() {
-        #if windows
-		// Updating Discord Rich Presence
-		//DiscordClient.changePresence("Customizing Gameplay", null);
-		#end
-
+       
         sick = new FlxSprite().loadGraphic(Paths.image('sick','shared'));
         sick.scrollFactor.set();
         background = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback','shared'));
