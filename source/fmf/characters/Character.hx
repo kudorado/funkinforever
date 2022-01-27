@@ -111,9 +111,9 @@ class Character extends BaseCharacter
             };
         }
 
-
         playAnim(anim, true);
         lockAnim(lockDuration, callback);
+
     }
     
 	public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
@@ -125,6 +125,5 @@ class Character extends BaseCharacter
 	{
 		defaultAddOffset(name, x, y);
 	}
-
 
 }

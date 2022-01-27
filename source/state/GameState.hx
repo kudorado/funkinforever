@@ -84,9 +84,6 @@ class GameState extends MusicBeatState
 {
 
 //Lua and Psych engine friends
-
-
-
 //-------------------------------------------------
 	var debugNum:Int = 0;
 	private var noteTypeMap:Map<String, Bool> = new Map<String, Bool>();
@@ -813,7 +810,10 @@ class GameState extends MusicBeatState
 							if(bfPE != null)
 								bfPE.visible = false;
 
+						if (songPlayer.bf != null && songPlayer.bf.visible)
 							songPlayer.bf.visible = false;
+
+
 							bfPE = boyfriendMap.get(value2);
 
 							// songPlayer.bf = bfPE;
@@ -845,27 +845,11 @@ class GameState extends MusicBeatState
 						if (dadPE != null)
 							dadPE.visible = false;
 
-						songPlayer.dad.visible = false;
+						if (songPlayer.dad != null && songPlayer.dad.visible)
+							songPlayer.dad.visible = false;
+
 						dadPE = dadMap.get(value2);
 
-						//re add shit
-						// remove(dadPE);
-						// add(dadPE);
-						songPlayer.dad = dadPE;
-
-						//todo
-						// if (!dadPE.curCharacter.startsWith('gf'))
-						// {
-						// 	if (wasGf)
-						// 	{
-						// 		if(gfPE)
-						// 		gfPE.visible = true;
-						// 	}
-						// }
-						// else
-						// {
-						// 	gfPE.visible = false;
-						// }
 						if (!dadPE.alreadyLoaded)
 						{
 							dadPE.alpha = 1;
@@ -873,8 +857,6 @@ class GameState extends MusicBeatState
 						}
 
 						dadPE.visible = true;
-						// iconP2.changeIcon(dadPE.healthIcon);
-						// }
 						setOnLuas('dadName', dadPE.curCharacter);
 
 					case 2:
@@ -1994,7 +1976,7 @@ class GameState extends MusicBeatState
 
 	public function shakeGenocide()
 	{
-		bf().playAnim("scared", true);
+		playAnimAllBF('scared', true);
 		camGame.shake();
 	}
 
@@ -2148,8 +2130,6 @@ class GameState extends MusicBeatState
 					}
 				}
 			}
-
-
 
 		}
 
@@ -2613,6 +2593,29 @@ class GameState extends MusicBeatState
 		}
 	}
 
+	public var bfCamFollowY(get, never):Float;
+	inline function get_bfCamFollowY()
+	{
+		var offsetY = 0;
+		return clamp(bf().getMidpoint().y - 100 + offsetY, songPlayer.bfCamFollowYMin(), songPlayer.bfCamFollowYMax());
+	}
+
+
+	public function setCamFollowBF()
+	{
+		var offsetX = 0;
+		setCamFollowPosition(bf().getMidpoint().x - 100 + offsetX, bfCamFollowY);
+	}
+
+	public function setCamFollowDad()
+	{
+		var offsetX = 0;
+		var offsetY = 0;
+
+		setCamFollowPosition(dad().getMidpoint().x + 150 + offsetX, dad().getMidpoint().y - 100 + offsetY);
+	}
+
+
 	function updateTextShit()
 	{
 		if (itFuckingEnd)
@@ -2855,10 +2858,8 @@ class GameState extends MusicBeatState
 				if (turn == -1) // repeat
  					camFollowSafeFrame = 0;
 
-				var offsetX = 0;
-				var offsetY = 0;
+				setCamFollowDad();
 
-				setCamFollowPosition(dad().getMidpoint().x + 150 + offsetX, dad().getMidpoint().y - 100 + offsetY);
 				songPlayer.updateCamFollowDad();
 				turn = -1;
 			}
@@ -2867,14 +2868,9 @@ class GameState extends MusicBeatState
 			{
 				if (turn == 1) // repeat
 					camFollowSafeFrame = 0;
-				
-				var offsetX = 0;
-				var offsetY = 0;
+			
 
-
-				setCamFollowPosition(bf().getMidpoint().x - 100 + offsetX,
-				clamp(bf().getMidpoint().y - 100 + offsetY, songPlayer.bfCamFollowYMin(), songPlayer.bfCamFollowYMax()));
-				
+				setCamFollowBF();
 				turn = 1;
 				songPlayer.updateCamFollowBF();
 			}
@@ -3068,14 +3064,12 @@ class GameState extends MusicBeatState
 						else
 							fuckNote += altAnim;
 						
-						//@notrace("fuckNote: " + fuckNote);
-						bf().playAnim(fuckNote, true);
+						playAnimAllBF(fuckNote, true);
 					}
 					else
 					{
 						setLastNote(daNote);
-						dad().playAnim(lastNote, true);
-					
+						playAnimAllDad(lastNote, true);
 					}
 
 					//enemy note highlight
@@ -4152,10 +4146,12 @@ class GameState extends MusicBeatState
 		{
 			if (dad().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || botPlayShit))
 			{
-				if (dad().animation.curAnim.name.startsWith('sing')
-					&& !dad().animation.curAnim.name.endsWith('miss'))
+				if (dad().animation.curAnim.name.startsWith('sing') && !dad().animation.curAnim.name.endsWith('miss'))
+				{
 					// && (bf().animation.curAnim != null && bf().animation.curAnim.finished))
-					dad().playAnim('idle'); // .idle();
+					playAnimAllDad('idle');
+
+				}
 			}
 		}
 
@@ -4166,7 +4162,7 @@ class GameState extends MusicBeatState
 				if (bf().animation.curAnim.name.startsWith('sing')
 					&& !bf().animation.curAnim.name.endsWith('miss'))
 					// && (bf().animation.curAnim != null && bf().animation.curAnim.finished))
-					bf().playAnim('idle');//, false, false, 10);
+					playAnimAllBF('idle');
 			}
 		}
 
@@ -4276,18 +4272,22 @@ class GameState extends MusicBeatState
 			}
 			else
 			{
+				var fuckyou:String = '';
 				switch (direction)
 				{
 					case 0:
-						bf().playAnim('singLEFTmiss', true);
+						fuckyou = 'singLEFTmiss';
 					case 1:
-						bf().playAnim('singDOWNmiss', true);
+						fuckyou = 'singDOWNmiss';
 					case 2:
-						bf().playAnim('singUPmiss', true);
+						fuckyou = 'singUPmiss';
 					case 3:
-						bf().playAnim('singRIGHTmiss', true);
+						fuckyou = 'singRIGHTmiss';
 				}
+
+				playAnimAllBF(fuckyou, true);
 			}
+
 			
 			updateAccuracy();
 		}
@@ -4386,17 +4386,21 @@ class GameState extends MusicBeatState
 
 			if (playAsDad)
 			{
+				var noteShit:String = "";
 				switch (note.noteData)
 				{
 					case 2:
-						dad().playAnim('singUP', true);
+						noteShit = 'singUP';
 					case 3:
-						dad().playAnim('singRIGHT', true);
+						noteShit = 'singRIGHT';
 					case 1:
-						dad().playAnim('singDOWN', true);
+						noteShit = 'singDOWN';
 					case 0:
-						dad().playAnim('singLEFT', true);
+						noteShit = 'singLEFT';
 				}
+				
+				playAnimAllDad(noteShit, true);
+				
 			}
 			else
 			{
@@ -4532,7 +4536,7 @@ class GameState extends MusicBeatState
 			if (!dad().animation.curAnim.name.startsWith("idle")
 				 && dad().animation.curAnim.finished)
 			{
-				dad().playAnim('idle');
+				playAnimAllDad('idle');
 			}
 		}	
 		else
@@ -4540,10 +4544,49 @@ class GameState extends MusicBeatState
 			if (!bf().animation.curAnim.name.startsWith("idle")
 				 && bf().animation.curAnim.finished)
 			{
-				bf().playAnim('idle');//, false, false, 10);
+				playAnimAllBF('idle');
 			}
 		}
+	}
 
+//-----------here we make shit again ----------------------------
+
+	function playAnimAllBF(anim:String, force:Bool = false)
+	{
+		if (bf() != null && bf().visible)
+			bf().playAnim(anim, force);
+
+		if (bfPE != null && bfPE.visible)
+			bfPE.playAnim(anim, force);
+		
+		//todo
+		//add player 4 in bf side yeah fuck you!
+		// if (player4 != null && player4.visible)
+			// player4.playAnim(anim, force);
+	}
+
+	function playAnimAllDad(anim:String, force:Bool = false)
+	{
+		if (dad() != null && dad().visible)
+			dad().playAnim(anim, force);
+
+		if (dadPE != null && dadPE.visible)
+			dadPE.playAnim(anim, force);
+
+		if (player3 != null && player3.visible)
+			player3.playAnim(anim, force);
 
 	}
+
+	function playAnimaAllGF(anim:String, force:Bool = false)
+	{
+		if (gf() != null && gf().visible)
+			gf().playAnim(anim, force);
+
+		if (gfPE != null && gfPE.visible)
+			gfPE.playAnim(anim, force);
+	}
+
+//---------------------------------------------------------------------------------------------------------
+
 }

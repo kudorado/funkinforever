@@ -26,6 +26,9 @@ using StringTools;
 
 class CharacterPE extends Character
 {
+	//i dunno how to name this
+	public var handsome:Bool = true;
+
 	override function onCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 		peOnCreate(x, y, character, isPlayer);

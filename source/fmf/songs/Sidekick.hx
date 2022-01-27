@@ -43,7 +43,7 @@ class Sidekick extends SongPlayer
 
 	override function loadMap()
 	{
-		gameState.defaultCamZoom = 0.85;
+		gameState.defaultCamZoom = 0.7;
 
         createFII_BG();
 
