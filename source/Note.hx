@@ -36,11 +36,62 @@ class Note extends FlxSprite
 
 	public var rating:String = "shit";
 
+	//lua ah
+	public var noteSplashTexture:String = null;
+
+	
+	public var noteType(default, set):String = null;
+	private function set_noteType(value:String):String
+	{
+		noteSplashTexture = GameState.SONG.splashSkin;
+
+		if (noteData > -1 && noteType != value)
+		{
+			switch (value)
+			{
+				case 'Hurt Note':
+					ignoreNote = mustPress;
+					reloadNote('HURT');
+					noteSplashTexture = 'HURTnoteSplashes';
+					if (isSustainNote)
+					{
+						missHealth = 0.1;
+					}
+					else
+					{
+						missHealth = 0.3;
+					}
+					hitCausesMiss = true;
+				case 'No Animation':
+				// shit
+				// noAnimation = true;
+				case 'GF Sing':
+					// oh shit
+					// gfNote = true;
+			}
+			noteType = value;
+		}
+		noteSplashHue = colorSwap.hue;
+		noteSplashSat = colorSwap.saturation;
+		noteSplashBrt = colorSwap.brightness;
+		return value;
+	}
+	
+	public var ignoreNote:Bool = false;
+	public var noAnimation:Bool = false;
+	public var hitCausesMiss:Bool = false;
+	public var gfNote:Bool = false;
+	public var missHealth:Float = 0.0475;
+
+	public var noteSplashHue:Float = 0;
+	public var noteSplashSat:Float = 0;
+	public var noteSplashBrt:Float = 0;
+	public var colorSwap:ColorSwap;
+
+
 	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false)
 	{
 		super();
-
-
 
 		if (mustPress && (!FlxG.save.data.showDadNote || !FlxG.save.data.showDad))
 		{
@@ -144,6 +195,107 @@ class Note extends FlxSprite
 			}
 		}
 	}
+
+//--------------------------- Psych engine shit ------------------------------------
+	
+	function reloadNote(?prefix:String = '', ?texture:String = '', ?suffix:String = '')
+	{
+		if (prefix == null)
+			prefix = '';
+		if (texture == null)
+			texture = '';
+		if (suffix == null)
+			suffix = '';
+
+		var skin:String = texture;
+		if (texture.length < 1)
+		{
+			skin = GameState.SONG.arrowSkin;
+			if (skin == null || skin.length < 1)
+			{
+				skin = 'assets';
+			}
+		}
+
+		var animName:String = null;
+		if (animation.curAnim != null)
+		{
+			animName = animation.curAnim.name;
+		}
+
+		var arraySkin:Array<String> = skin.split('/');
+		arraySkin[arraySkin.length - 1] = prefix + arraySkin[arraySkin.length - 1] + suffix;
+
+		var lastScaleY:Float = scale.y;
+		var blahblah:String = arraySkin.join('/');
+	
+		if(1 + 1 == 2)
+		{
+			var daTexture = FunkinLua.daPath + "images/" + texture;
+			frames = Paths.getSparrowAtlas(daTexture, FunkinLua.daLibrary);
+			loadNoteAnims();
+			antialiasing = true;
+		}
+		if (isSustainNote)
+		{
+			scale.y = lastScaleY;
+		}
+		updateHitbox();
+
+		if (animName != null)
+			animation.play(animName, true);
+
+	}
+
+	function loadNoteAnims()
+	{
+		animation.addByPrefix('greenScroll', 'green0');
+		animation.addByPrefix('redScroll', 'red0');
+		animation.addByPrefix('blueScroll', 'blue0');
+		animation.addByPrefix('purpleScroll', 'purple0');
+
+		if (isSustainNote)
+		{
+			animation.addByPrefix('purpleholdend', 'pruple end hold');
+			animation.addByPrefix('greenholdend', 'green hold end');
+			animation.addByPrefix('redholdend', 'red hold end');
+			animation.addByPrefix('blueholdend', 'blue hold end');
+
+			animation.addByPrefix('purplehold', 'purple hold piece');
+			animation.addByPrefix('greenhold', 'green hold piece');
+			animation.addByPrefix('redhold', 'red hold piece');
+			animation.addByPrefix('bluehold', 'blue hold piece');
+		}
+
+		setGraphicSize(Std.int(width * 0.7));
+		updateHitbox();
+	}
+
+	function loadPixelNoteAnims()
+	{
+		if (isSustainNote)
+		{
+			animation.add('purpleholdend', [PURP_NOTE + 4]);
+			animation.add('greenholdend', [GREEN_NOTE + 4]);
+			animation.add('redholdend', [RED_NOTE + 4]);
+			animation.add('blueholdend', [BLUE_NOTE + 4]);
+
+			animation.add('purplehold', [PURP_NOTE]);
+			animation.add('greenhold', [GREEN_NOTE]);
+			animation.add('redhold', [RED_NOTE]);
+			animation.add('bluehold', [BLUE_NOTE]);
+		}
+		else
+		{
+			animation.add('greenScroll', [GREEN_NOTE + 4]);
+			animation.add('redScroll', [RED_NOTE + 4]);
+			animation.add('blueScroll', [BLUE_NOTE + 4]);
+			animation.add('purpleScroll', [PURP_NOTE + 4]);
+		}
+	}
+
+
+
 
 	override function update(elapsed:Float)
 	{

@@ -1,15 +1,15 @@
 package;
 import state.*;
+import fmf.songs.SongPlayer;
+
 import fmf.songs.SongFilter;
 import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
 import openfl.utils.Assets as OpenFlAssets;
-
 import flash.media.Sound;
 
 using StringTools;
-
 
 class Paths
 {
@@ -30,7 +30,7 @@ class Paths
 	inline public static var SOUND_EXT = #if web "mp3" #else "ogg" #end;
 	inline public static var VIDEO_EXT = "mp4";
 	
-	static public var currentModDirectory:String = '';
+	static public var currentModDirectory:String = 'mods';
 
 	public inline static function modsJson(key:String)
 	{
@@ -44,15 +44,7 @@ class Paths
 	
 	static public function modFolders(key:String)
 	{
-		if (currentModDirectory != null && currentModDirectory.length > 0)
-		{
-			var fileToCheck:String = mods(currentModDirectory + '/' + key);
-			if (1 + 1 == 2)//FileSystem.exists(fileToCheck) 
-			{
-				return fileToCheck;
-			}
-		}
-		return 'mods/' + key;
+		return SongPlayer.luaFolder + key;
 	}
 	
 	inline static public function mods(key:String = '')

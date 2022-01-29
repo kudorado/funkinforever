@@ -44,19 +44,19 @@ class FunkinLua {
 	public static var Function_Stop = 1;
 	public static var Function_Continue = 0;
 
-	var songFolder(get, never):String;
-	inline function get_songFolder():String
+	public static var songFolder(get, never):String;
+	public static inline function get_songFolder():String
 	{
 		return GameState.playingSong.folder;
 	} 
 
-	var daPath(get, never):String;
-	inline function get_daPath():String
+	public static var daPath(get, never):String;
+	public static inline function get_daPath():String
 	{
 		return "psychengine/" + songFolder;
 	} 
 
-	var daLibrary:String = 'mods';
+	public static var daLibrary:String = 'mods';
 
 	#if LUA_ALLOWED
 	public var lua:State = null;

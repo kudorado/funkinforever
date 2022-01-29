@@ -184,7 +184,6 @@ class GameState extends MusicBeatState
 
 	public static function createLua(luaFile:String):FunkinLua
 	{
-
 		var lua = new FunkinLua(luaFile);
 		instance.luaArray.push(lua);
 		// lime.app.Application.current.window.alert(luaFile, 'Create Lua');
@@ -1554,6 +1553,32 @@ class GameState extends MusicBeatState
 			//@notrace('song looks gucci');
 
 		generateSong(CURRENT_SONG);
+		#if LUA_ALLOWED
+		for (notetype in noteTypeMap.keys())
+		{
+			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
+			if (FileSystem.exists(luaToLoad))
+			{
+				createLua(luaToLoad);
+			}
+		}
+
+		for (event in eventPushedMap.keys())
+		{
+			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
+			if(FileSystem.exists(luaToLoad))
+			{
+				createLua(luaToLoad);
+			}
+		}
+		#end
+
+
+		noteTypeMap.clear();
+		noteTypeMap = null;
+		eventPushedMap.clear();
+		eventPushedMap = null;
+
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 
@@ -2187,6 +2212,11 @@ class GameState extends MusicBeatState
 				else
 				{
 				}
+
+				if (!noteTypeMap.exists(swagNote.noteType))
+				{
+					noteTypeMap.set(swagNote.noteType, true);
+				}
 			}
 			daBeats += 1;
 		}
@@ -2227,7 +2257,7 @@ class GameState extends MusicBeatState
 
 			var midScroll = FlxG.save.data.scrollId <= 1;
 			// midScroll ? STRUM_X_MIDDLESCROLL : STRUM_X
-			var babyArrow:StrumNote = new StrumNote(0, strumLine.y);
+			var babyArrow:StrumNote = new StrumNote(0, strumLine.y, i, player);
 			
 			// get arrow skin depending on song playing
 			songPlayer.getArrowSkin(i, babyArrow);

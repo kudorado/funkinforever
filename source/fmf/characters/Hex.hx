@@ -34,10 +34,10 @@ class Hex extends Boyfriend
 		animation.addByPrefix('jump', 'Dad Jump0', 24, false);
 
 
-		animation.addByPrefix('singUPmiss', 'Dad Miss note UP MISS0', 1, false);
-		animation.addByPrefix('singLEFTmiss', 'Dad Miss Note LEFT MISS0', 1, false);
-		animation.addByPrefix('singRIGHTmiss', 'Dad Miss Note RIGHT MISS0', 1, false);
-		animation.addByPrefix('singDOWNmiss', 'Dad Miss Note DOWN MISS0', 1, false);	
+		animation.addByPrefix('singUPmiss', 'Dad Miss Note sussy UP MISS0', 1, false);
+		animation.addByPrefix('singLEFTmiss', 'Dad Miss Note sussy LEFT MISS0', 1, false);
+		animation.addByPrefix('singRIGHTmiss', 'Dad Miss Note sussy RIGHT MISS0', 1, false);
+		animation.addByPrefix('singDOWNmiss', 'Dad Miss Note sussy DOWN MISS0', 1, false);	
 	}
 
 	public override function createAnimationOffsets():Void

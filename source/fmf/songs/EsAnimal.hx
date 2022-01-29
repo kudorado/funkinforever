@@ -53,6 +53,14 @@ class EsAnimal extends SongPlayer
 	{
 		super.createBF();
 		bf.x += 200;
+		bf.y += 75;
+	}
+
+	override function createStoryBF()
+	{
+		changePc('bf');
+		bf.x += 200;
+		bf.y += 75;
 	}
 
 	override function loadMap()
@@ -95,18 +103,18 @@ class EsAnimal extends SongPlayer
 			case 40:
 				changeDad("headache");
 				dad.x -= 100;
-				dad.y -= 50;
+				dad.y = 220;
 
 			case 48:
 				changePc("matt");
 				
 				bf.x += 100;
-				bf.y += 25;
+				bf.y += 50;
 
 			case 53:
 				changeDad("miku");
-				dad.x = 50;
-				dad.y = 256;
+				dad.x = 106;
+				dad.y = 225;
 
 			case 63:
 				changePc("monika");
@@ -115,54 +123,54 @@ class EsAnimal extends SongPlayer
 
 			case 72:
 				changeDad("casanova");
-				dad.x = -81;
-				dad.y = 252;
+				dad.x = 50;
+				dad.y = 225;
 
 
 			case 88:
 				changePc("ruv");
 				bf.x += 100;
-				bf.y += 75;
+				bf.y = 240;
 
 
 			case 96:
 				changeDad("hdsenpaimad");
 				dad.scale.x = 1.2;
 				dad.scale.y = 1.2;
-				dad.x -= 25;
-				dad.y -= 200;
+				dad.x = 225;
+				dad.y = 150;
 
 			case 104:
 				changePc("tankman");
-				dad.y += 25;
-				dad.x += 25;
+				bf.y += 25;
+				bf.x += 25;
 
 			case 112:
 				changeDad("liz");
-				dad.x -= 225;
-				dad.y += 200;
+				dad.x = 253;
+				dad.y = 475;
 
 			case 128:
 				changePc("playable gf");
-				bf.x += 50;
-				bf.y -= 75;
+				bf.x = 780;
+				bf.y = 260;
 
 			case 144:
 				changeDad("fresh");
-
-				dad.x += 75;
-				dad.y += 25;
+				dad.x = 205;
+				dad.y = 150;
 
 			case 152:
 				changePc("mom");
 				bf.x += 100;
+				bf.x += 85;
 
 				
 			case 160:
 				changeDad("frisk");
 
-				dad.x -= 175;
-				dad.y += 300;
+				dad.x = 260;
+				dad.y = 530;
 
 
 			case 168:
@@ -172,28 +180,28 @@ class EsAnimal extends SongPlayer
 
 			case 176:
 				changeDad("lo-fight");
+				dad.x = 122;
 				dad.y += 75;
 			
 			case 184:
 				changePc("hex");
 				bf.x += 50;
-				bf.y -= 50;
+				bf.y += 25;
 
 
 			case 192:
 				changeDad("philly");
 				dad.y += 225;
 
-
 				changePc("kapi");
-
-				bf.x += 50;
+				bf.x = 800;
+				bf.y = 380;
 
 			case 212:
 				changeDad("parasite");
 
-				dad.y += 50;
-				dad.x += 75;
+				dad.x = 275;
+				dad.y = 420;
 
 			case 220:
 				changePc("tabi");
@@ -217,8 +225,8 @@ class EsAnimal extends SongPlayer
 
 			case 268:
 				changePc("sky tired");
-				bf.x += 150;
-				bf.y += 75;
+				bf.x = 875;
+				bf.y = 420;
 
 
 

@@ -7,12 +7,12 @@ import fmf.characters.*;
 import flixel.FlxG;
 import flixel.FlxSprite;
 
-class Monster extends Spookez
+class Monster extends SongPlayer
 {
 	override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/monster/Monster_Assets', 'mods');
-		var tex2 = Paths.getSparrowAtlas('pc/dad/dad_miss', 'mods');
+		var tex2 = Paths.getSparrowAtlas('pc/monster/Monster_Assets_miss', 'mods');
 
 		for (frame in tex2.frames)
 		{
@@ -26,16 +26,22 @@ class Monster extends Spookez
 	{
 		var animation = dad.animation;
 
-		animation.addByPrefix('idle', 'monster idle', 24, false);
-		animation.addByPrefix('danceLeft', 'monster idle', 24, false);
-		animation.addByPrefix('danceRight', 'monster idle', 24, false);
+		animation.addByPrefix('idle', 'monster idle0', 24, false);
+		animation.addByPrefix('danceLeft', 'monster idle0', 24, false);
+		animation.addByPrefix('danceRight', 'monster idle0', 24, false);
 
-		animation.addByPrefix('singUP', 'monster up note', 24, false);
-		animation.addByPrefix('singDOWN', 'monster down', 24, false);
-		animation.addByPrefix('singLEFT', 'Monster left note', 24, false);
-		animation.addByPrefix('singRIGHT', 'Monster Right note', 24, false);
+		animation.addByPrefix('singUP', 'monster up note0', 24, false);
+		animation.addByPrefix('singDOWN', 'monster down0', 24, false);
+		animation.addByPrefix('singLEFT', 'Monster left note0', 24, false);
+		animation.addByPrefix('singRIGHT', 'Monster Right note0', 24, false);
+	
+		animation.addByPrefix('singUPmiss', 'Monster up note MISS0', 1, false);
+		animation.addByPrefix('singDOWNmiss', 'Monster down MISS0', 1, false);
+		animation.addByPrefix('singLEFTmiss', 'Monster left note MISS0', 1, false);
+		animation.addByPrefix('singRIGHTmiss', 'Monster Right note MISS0', 1, false);
 
 		dad.animation = animation;
+
 	}
 
 	override function createDadAnimationOffsets():Void

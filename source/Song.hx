@@ -25,10 +25,10 @@ typedef SwagSong =
 	var gfVersion:String;
 	var noteStyle:String;
 	var stage:String;
+	
 	var validScore:Bool;
-
-	// var arrowSkin:String;
-	// var splashSkin:String;
+	var arrowSkin:String;
+	var splashSkin:String;
 	
 }
 

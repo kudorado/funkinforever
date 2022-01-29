@@ -36,6 +36,7 @@ class EsManifest extends SongPlayer
 
 	}
 
+
 	override function createDadAnimationOffsets()
 	{
 		super.createDadAnimationOffsets();
@@ -93,6 +94,15 @@ class EsManifest extends SongPlayer
 		bf.x += 200;
 		bf.y += 25;
 	}
+
+	override function createStoryBF()
+	{
+		changePc('bf');
+
+		bf.x += 200;
+		bf.y += 25;
+	}
+	
 
 	override function loadMap()
 	{
@@ -154,7 +164,7 @@ class EsManifest extends SongPlayer
 				changeDad("drunkannie");
 
 				dad.x -= 200;
-				dad.y -= 100;
+				dad.y -= 50;
 
 			case 94:
 				//garcello
@@ -212,7 +222,9 @@ class EsManifest extends SongPlayer
 
 			case 198:
 				changePc("kapi");	
-				bf.x += 125;	
+				bf.x += 125;
+				bf.y -= 75;
+
 			case 205:
 				//hex
 				changeDad("roro");
@@ -227,31 +239,37 @@ class EsManifest extends SongPlayer
 
 			case 216:
 				changeDad("chara");
-				dad.y += 100;
 				dad.x -= 150;
+				dad.y = 450;
+
 
 			case 232:
 				changePc("sans");	
 				bf.x += 75;
-				bf.x += 50;
+				bf.y = 220;
 
 			case 248:
 				changeDad("ballistic");
+				dad.x += 100;
+				dad.y = 185;
 
 			case 264:
 				changePc("agoti crazy");
 				bf.x += 100;
+				bf.y += 25;
 
 			case 280:
 				changeDad("disappearance");
 				
-				dad.x -= 300;
-				dad.y -= 100;
+				dad.x = 150;
+				dad.y = 185;
+				// dad.x -= 300;
+				// dad.y -= 100;
 
 			case 311:
 				changeDad('guraamelia');
-				dad.x -= 250;
-				dad.y += 150;
+				dad.x -= 200;
+				dad.y += 75;
 
 				changePc('hex');
 				bf.x +=	 150;
@@ -259,12 +277,12 @@ class EsManifest extends SongPlayer
 
 			case 342:
 				changePc("botan");
-				bf.x += 100;
-				bf.y += 50;
+				bf.x += 50;
+				bf.y += 0;
 			
 			case 376:
 				changeDad("genocide");
-				dad.x += 450;
+				dad.x += 525;
 				dad.y += 50;
 
 			case 392:
@@ -275,12 +293,12 @@ class EsManifest extends SongPlayer
 			case 408:
 				changeDad("tord");
 				dad.x -= 150;
-				dad.y += 50;
+				dad.y += 75;
 
 			case 415:
 				changePc("tom");
 				bf.x += 250;
-				bf.y -= 25;
+				bf.y += 25;
 
 
 

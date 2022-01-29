@@ -58,6 +58,13 @@ class EsGarcelloTired extends Garcello
 		bf.y += 50;
 	}
 
+	override function createStoryBF()
+	{
+		changePc('bf');
+		bf.y += 50;
+	}
+		
+
 	public override function getDadIcon(icon:Icon)
 	{
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);

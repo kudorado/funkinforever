@@ -35,6 +35,7 @@ class SongManager
 			}
 		),
 
+
 		new SongData
 		(
 			{
