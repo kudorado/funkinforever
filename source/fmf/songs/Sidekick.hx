@@ -47,7 +47,7 @@ class Sidekick extends SongPlayer
 
         createFII_BG();
 
-        var sky:FlxSprite = new FlxSprite(-400, -203).loadGraphic(Paths.image('bg/tails/SonicP3/ground', 'mods'));
+        var sky:FlxSprite = new FlxSprite(-500, -203).loadGraphic(Paths.image('bg/tails/SonicP3/ground', 'mods'));
 		sky.antialiasing = true;
 		sky.scale.x = 1.1;
 		sky.scale.y = 1.1;
@@ -65,7 +65,7 @@ class Sidekick extends SongPlayer
         FII_BG.antialiasing = true;
         FII_BG.scale.x = 3.5;
         FII_BG.scale.y = 3.5;
-        FII_BG.x = 155;
+        FII_BG.x = 225;
         FII_BG.y = 100;
         gameState.add(FII_BG);
 
@@ -124,8 +124,8 @@ class Sidekick extends SongPlayer
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		gameState.targetCamFollow.y += 100;
-        gameState.defaultCamZoom = 0.7;
+		// gameState.targetCamFollow.y += 100;
+        gameState.defaultCamZoom = 0.8;
 
 	}
 

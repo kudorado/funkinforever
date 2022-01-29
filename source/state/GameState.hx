@@ -2607,22 +2607,52 @@ class GameState extends MusicBeatState
 	inline function get_bfCamFollowY()
 	{
 		var offsetY = 0;
-		return clamp(bf().getMidpoint().y - 100 + offsetY, songPlayer.bfCamFollowYMin(), songPlayer.bfCamFollowYMax());
+		var bfY:Float = 0;
+
+		if (bf() != null && bf().visible)
+			bfY =  bf().getMidpoint().y;
+		
+		if(bfPE != null && bfPE.visible)
+			bfY = bfPE.getMidpoint().y;
+
+		return clamp(bfY - 100 + offsetY, songPlayer.bfCamFollowYMin(), songPlayer.bfCamFollowYMax());
 	}
 
 
 	public function setCamFollowBF()
 	{
 		var offsetX = 0;
-		setCamFollowPosition(bf().getMidpoint().x - 100 + offsetX, bfCamFollowY);
+		var bfX:Float = 0;
+		if (bf() != null && bf().visible)
+			bfX = bf().getMidpoint().x;
+
+		if (bfPE != null && bfPE.visible)
+			bfX = bfPE.getMidpoint().x;
+
+		setCamFollowPosition(bfX - 100 + offsetX, bfCamFollowY);
 	}
 
 	public function setCamFollowDad()
 	{
 		var offsetX = 0;
 		var offsetY = 0;
+		var dadX:Float = 0;
+		var dadY:Float = 0;
 
-		setCamFollowPosition(dad().getMidpoint().x + 150 + offsetX, dad().getMidpoint().y - 100 + offsetY);
+
+		if (dad() != null && dad().visible)
+		{
+			dadX = dad().getMidpoint().x;
+			dadY = dad().getMidpoint().y;
+		}
+
+		if (dadPE != null && dadPE.visible)
+		{
+			dadX = dadPE.getMidpoint().x;
+			dadY = dadPE.getMidpoint().y;
+		}
+		
+		setCamFollowPosition(dadX + 150 + offsetX, dadY - 100 + offsetY);
 	}
 
 
