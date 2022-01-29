@@ -939,7 +939,7 @@ class FunkinLua {
 			}
 			else
 			{
-				trace('oh shit, the tag already add: ' + tag);
+				trace('oh shit, no tag was found, cant add: ' + tag);
 			}
 
 		});
@@ -1842,7 +1842,7 @@ class FunkinLua {
 		var shit:ModchartSprite = GameState.instance.modchartSprites.get(tag);
 		if (!shit.wasAdded)
 		{
-			if (front || (GameState.instance.gfGroup == null || GameState.instance.gfGroup.length == 0))
+			if (front || !GameState.songPlayer.mapLoaded)
 			{
 				getInstance().add(shit);
 				trace("Add luaSprite: " + tag);
@@ -1856,25 +1856,45 @@ class FunkinLua {
 				}
 				else
 				{
-					var position:Int = GameState.instance.members.indexOf(GameState.instance.gfGroup);
+					var position:Int = 0;
+
+					// then check character of psych engine as well
+					if (GameState.songPlayer.gf != null)
+					{
+						position =  GameState.instance.members.indexOf(GameState.songPlayer.gf);
+					}
+					else
+					{
+						position = GameState.instance.members.indexOf(GameState.instance.gfGroup);
+					}
+					// recheck shit
+					if (GameState.songPlayer.dad != null && GameState.instance.members.indexOf(GameState.songPlayer.dad) < position)
+					{
+						position = GameState.instance.members.indexOf(GameState.songPlayer.dad);
+					}
+					else if (GameState.songPlayer.bf != null && GameState.instance.members.indexOf(GameState.songPlayer.bf) < position)
+					{
+						position = GameState.instance.members.indexOf(GameState.songPlayer.bf);
+					}
+					
 				
-					if (GameState.instance.members.indexOf(GameState.instance.player3Group) < position)
+					else if (GameState.instance.members.indexOf(GameState.instance.player3Group) < position)
 					{
 						position = GameState.instance.members.indexOf(GameState.instance.player3Group);
-					}
-					else if (GameState.instance.members.indexOf(GameState.instance.boyfriendGroup) < position)
-					{
-						position = GameState.instance.members.indexOf(GameState.instance.boyfriendGroup);
 					}
 					else if (GameState.instance.members.indexOf(GameState.instance.dadGroup) < position)
 					{
 						position = GameState.instance.members.indexOf(GameState.instance.dadGroup);
 					}
-				
+					else if (GameState.instance.members.indexOf(GameState.instance.boyfriendGroup) < position)
+					{
+						position = GameState.instance.members.indexOf(GameState.instance.boyfriendGroup);
+					}
+
 					GameState.instance.insert(position, shit);
 					// getInstance().add(shit);
 
-					trace("Add luaSprite: " + tag);
+					trace("Insert luaSprite: " + tag);
 
 					// lime.app.Application.current.window.alert(shit.debugName(), 'ADD SPRITE!');
 				}

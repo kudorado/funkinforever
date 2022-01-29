@@ -33,12 +33,11 @@ class BaseSong
 
 //lua shit
 //---------------------------------------
-
-
 //---------------------------------
 //---------------------------------------
 	//---------------------------------------- VARIABLES -----------------------------------------------------
 	// skin
+	public var mapLoaded:Bool;
 	public var skin:Skin;
 	public var vfx:VFX;
 
@@ -93,6 +92,8 @@ class BaseSong
 	{
 		loadLua();
 		loadMap();
+		mapLoaded = true;
+
 		createCharacters();
 		loadMapGroup();
 		initVariables();

@@ -43,11 +43,11 @@ class Sidekick extends SongPlayer
 
 	override function loadMap()
 	{
-		gameState.defaultCamZoom = 0.7;
+		gameState.defaultCamZoom = 0.85;
 
         createFII_BG();
 
-        var sky:FlxSprite = new FlxSprite(-376, -203).loadGraphic(Paths.image('bg/tails/SonicP3/ground', 'mods'));
+        var sky:FlxSprite = new FlxSprite(-400, -203).loadGraphic(Paths.image('bg/tails/SonicP3/ground', 'mods'));
 		sky.antialiasing = true;
 		sky.scale.x = 1.1;
 		sky.scale.y = 1.1;
@@ -110,6 +110,7 @@ class Sidekick extends SongPlayer
         changePc('bf_dark');
         bf.x -= 88;
         bf.y -= 100;
+
     }
 	
     override function createBF()
@@ -124,12 +125,16 @@ class Sidekick extends SongPlayer
 	{
 		super.updateCamFollowDad();
 		gameState.targetCamFollow.y += 100;
+        gameState.defaultCamZoom = 0.7;
+
 	}
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowDad();
         gameState.targetCamFollow.y -= 100;
+        gameState.defaultCamZoom = 0.85;
+
 	}
 
 	override function createGFAnimationOffsets()
