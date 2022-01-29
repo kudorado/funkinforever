@@ -87,6 +87,7 @@ class EsGarcelloTired extends Garcello
 			case 32:
 				//gf
 				changePc('playable gf');
+				bf.x = 818;
 				bf.y -= 50;
 				
 			case 41:
@@ -98,6 +99,7 @@ class EsGarcelloTired extends Garcello
 			case 45:
 				//dad angel
 				changePc('dad angel');
+				bf.x = 850;
 				bf.y += 150;
 
 			case 49:
@@ -107,6 +109,7 @@ class EsGarcelloTired extends Garcello
 
 			case 52:
 				changePc('mom angel');
+				bf.x = 888;
 				bf.y += 100;
 				
 			case 60:
@@ -131,8 +134,10 @@ class EsGarcelloTired extends Garcello
 				changeDad('tom');
 				changePc('tord');
 
-				dad.x -= 200;
-				bf.x += 250;
+				dad.x -= 175;
+				dad.y += 50;
+
+				bf.x += 200;
 
 			case 68:
 				changeDad('guraamelia');
@@ -145,17 +150,19 @@ class EsGarcelloTired extends Garcello
 
 			case 70:
 				changeDad('my-battle');
+				dad.x = 97;
+				dad.y = 292;
+
 				changePc('blantad');
 
 			case 80:
 				changePc('ex gf');
 				bf.x += 150;
+				bf.y  -= 25;
 
 			case 88:
 				changeDad('miku');
-
-				// dad.x -= 350;
-				dad.y += 400;
+				dad.y = 225;
 
 			case 95:
 				changePc('hex');
@@ -175,6 +182,7 @@ class EsGarcelloTired extends Garcello
 
 			case 113:
 				changePc('nene');
+				bf.y = 385;
 
 			case 120:
 				changeDad('lo-fight');
@@ -182,8 +190,8 @@ class EsGarcelloTired extends Garcello
 
 			case 128:
 				changePc('agoti');
-				bf.y += 50;
-				bf.x += 100;
+				bf.x = 950;
+				bf.y = 550;
 
 			case 136:
 				changeDad("wocky");
@@ -191,17 +199,19 @@ class EsGarcelloTired extends Garcello
 				dad.scale.x = 1;
 				dad.scale.y = 1;
 
-				dad.x -= 225;
+				dad.x =  10;
 				dad.y += 25;
 
 
 			case 152:
 				changePc("liz");
+				bf.x = 740;
+				bf.y = 460;
 
 			case 158:
 				changeDad("sky");
-				dad.x -= 100;
-				dad.y -= 50;
+				dad.x = 50;
+				dad.y = 360;
 				
 				dad.scale.x = 1.2;
 				dad.scale.y = 1.2;

@@ -319,9 +319,10 @@ class BaseSong
 
 	private function switchDad(song:SongPlayer, createDad:Bool = true, destroyOldDad:Bool = true)
 	{
-		gameState.remove(dad);
+		if (destroyOldDad && dad != null)
+			gameState.remove(dad);
 
-		if(destroyOldDad)
+		if (destroyOldDad && dad != null)
 			dad.destroy();
 
 		if (createDad)
