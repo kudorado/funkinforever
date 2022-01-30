@@ -1,0 +1,10 @@
+{
+	"confirm_anim": "Menu GetReady",
+	"idle_anim": "Menu Hank",
+	"position": [
+		161,
+		132
+	],
+	"scale": 0.65,
+	"image": "hankmenu"
+}
