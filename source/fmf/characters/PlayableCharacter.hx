@@ -48,9 +48,10 @@ class PlayableCharacter extends Character
         animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
         animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
         animation.addByPrefix('hey', 'BF HEY', 24, false);
-        animation.addByPrefix('scared', 'BF idle shaking', 24);
-        animation.addByPrefix('hurt', 'BF hit0', 24);
-        animation.addByPrefix('dodge', 'Boyfriend dodge0', 24);
+        animation.addByPrefix('scared', 'BF idle shaking', 24, false);
+        animation.addByPrefix('hurt', 'BF hit0', 24, false);
+        animation.addByPrefix('hit', 'BF hit0', 24, false);
+        animation.addByPrefix('dodge', 'Boyfriend dodge0', 24, false);
 
         //custom event for bf, only have in some mods 
         //nosense shit
@@ -147,6 +148,12 @@ class PlayableCharacter extends Character
         addOffset("singDOWNmiss", -13, -27);
         addOffset("hey", -6, 4);
         addOffset('scared', -7, 0);
+
+        addOffset('hit', -6, 4);
+        addOffset('hurt', -6, 4);
+        addOffset('scared', -6, 4);
+        addOffset('dodge', -6, 4);
+
 
         playAnim('idle');
         flipX = false;

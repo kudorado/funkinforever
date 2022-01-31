@@ -30,7 +30,7 @@ function goodNoteHit(id, direction, noteType, isSustainNote)
 end
 
 function noteMiss(id, direction, noteType, isSustainNote)
-	if noteType == 'Bullet_Note' and difficulty == 2 then
+	if noteType == 'Bullet_Note' and difficulty >= 2 then
 		setProperty('health', -1);
 		playSound('hankshoot', 0.5);
 		characterPlayAnim('dad', shootAnims[direction + 1], false, true);

@@ -435,6 +435,17 @@ end
 function noteMiss(id, direction, noteType, isSustainNote)
 	-- Called after the note miss calculations
 	-- Player missed a note by letting it go offscreen
+	if noteType == 'Bullet_Note' then
+		addLuaSprite('shot', true); --creating the bullet offscreen for later
+		bulletposY[direction]() --executes functions in bulletposY at direction
+		doTweenX('shotTweenX1', 'shot', -200, 0.01, 'linear');
+		doTweenX('shotTweenX2', 'shot', 2000, 0.2, 'linear');
+		if curBeat > 246 and difficulty >= 2 then --if hellclown appears
+			objectPlayAnimation('sanford', 'shoot', false);
+			objectPlayAnimation('deimos', 'shoot', false);
+		end
+	end
+
 	if curStep >= 684 then
 		cancelTimer('hpdrain');
 		runTimer('leverexit', 1.4, 1);
