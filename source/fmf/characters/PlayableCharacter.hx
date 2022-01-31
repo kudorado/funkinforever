@@ -49,6 +49,17 @@ class PlayableCharacter extends Character
         animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
         animation.addByPrefix('hey', 'BF HEY', 24, false);
         animation.addByPrefix('scared', 'BF idle shaking', 24);
+        animation.addByPrefix('hurt', 'BF hit0', 24);
+        animation.addByPrefix('dodge', 'Boyfriend dodge0', 24);
+
+        //custom event for bf, only have in some mods 
+        //nosense shit
+        // animation.addByPrefix('bruh', 'BF bruh0', 24);
+        // animation.addByPrefix('dab', 'BF dab0', 24);
+        // animation.addByPrefix('gun', 'BF gun away0', 24);
+        // animation.addByPrefix('idle-derp', 'BF idle Derp0', 24);
+
+
     }
 
     public function hey()
