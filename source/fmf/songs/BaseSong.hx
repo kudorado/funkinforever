@@ -30,7 +30,6 @@ import Song.SwagSong;
 // base song hold variable and some helper function
 class BaseSong
 {
-
 //lua shit
 //---------------------------------------
 //---------------------------------

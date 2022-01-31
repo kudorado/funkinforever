@@ -64,15 +64,24 @@ class Note extends FlxSprite
 					}
 					hitCausesMiss = true;
 				case 'No Animation':
-				// shit
-				// noAnimation = true;
+					// shit
+					noAnimation = true;
 				case 'GF Sing':
+					gfNote = true;
 
 				case 'Bullet_Note':
 					// trace('load bullet note yeah!');
 					reloadNote('Bullet_Note', 'nevada/notes/Bullet_Note');
 					// oh shit
 					// gfNote = true;
+
+				case 'Hell Note':
+					reloadNote('Hell Note', 'nevada/notes/placeholderEX');
+
+				case 'EX Note':
+					reloadNote("EX Note", 'nevada/notes/EX Note');
+
+
 			}
 			noteType = value;
 		}

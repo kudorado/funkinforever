@@ -54,16 +54,16 @@ class Accelerant extends SongPlayer
 	override function createGF()
 	{
 		super.createGF();
-		gf.x = 107;
-		gf.y = 288;
+		gf.x = 293;
+		gf.y = 242;
 
 	}
 
 	override function createBF()
 	{
 		super.createBF();
-		bf.x -= 230;
-		bf.y += 104;
+		bf.x -= 100;
+		bf.y += 150;
 
 	}
 

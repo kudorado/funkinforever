@@ -221,6 +221,8 @@ stepHitFuncs = { --a bunch of timed events, timed to steps
 	[664] = function() --yeet gf gets into position, 664
 		addLuaSprite('yeet', false);
 		addLuaSprite('speaker', false);
+		removeObject('gf');
+
 	end,
 	[665] = function() --gf gets yeeted off the speaker, 665
 		doTweenZoom('tikyarrives', 'camGame', 0.85, 1, 'circInOut');
@@ -250,7 +252,8 @@ stepHitFuncs = { --a bunch of timed events, timed to steps
 		doTweenZoom('hold the phone', 'camGame', 0.7, 1, 'circInOut');
 	end,
 	[937] = function() --tiky falls, 937
-		setProperty('gf.visible', false);
+		removeObject('gf');
+		-- setProperty('gf.visible', false);
 		addLuaSprite('tiky', false);
 		objectPlayAnimation('skidaddle', true); --making tricky play the wiggling animation
 		doTweenY('tikygoestoheaven', 'tiky', -450, 0.38, 'expoOut'); --tricky flies off

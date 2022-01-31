@@ -863,10 +863,16 @@ class GameState extends MusicBeatState
 							addCharacterToList(value2, charType);
 						}
 
-						if(gfPE  != null)
+						if (gfPE != null)
+						{
 							gfPE.visible = false;
+						}
 
-						songPlayer.gf.visible = false;
+						if (songPlayer.gf != null)
+						{
+							songPlayer.gf.visible = false;
+						}
+
 
 						gfPE = gfMap.get(value2);
 						if (!gfPE.alreadyLoaded)
@@ -2131,10 +2137,9 @@ class GameState extends MusicBeatState
 		if (Assets.exists(file))
 		{
 		#end
-			var eventsData:Array<Dynamic> = 
-			Song.loadFromJson("events", SongPlayer.folder + SONG_NAME).events;
-			// var eventsData:Array<Dynamic> = Song.loadFromJson(SONG_NAME + '/events').events;
-
+			var jsonEvent= Song.loadFromJson("events", SongPlayer.folder + SONG_NAME);
+			var eventsData = jsonEvent.events;
+		
 			//check ass
 			if (eventsData != null)
 			{
@@ -2152,9 +2157,32 @@ class GameState extends MusicBeatState
 						trace('push custom event: ' + subEvent);
 					}
 				}
+
+				//this shouldn't be add, but idk
+				//old system
+				// var notesData = jsonEvent.notes;
+
+				// for (section in notesData)
+				// {
+				// 	for (songNotes in section.sectionNotes)
+				// 	{
+				// 		if (songNotes[1] < 0)
+				// 		{
+				// 			eventNotes.push([songNotes[0], songNotes[1], songNotes[2], songNotes[3], songNotes[4]]);
+				// 			eventPushed(songNotes);
+
+				// 			trace('push custom notes event: ' + subEvent);
+				// 		}
+				// 	}
+				// }
+
 			}
+			else
+				trace('Null event shit: ' + SONG_NAME);
 
 		}
+		else 
+			trace('No event found for song: ' + SONG_NAME);
 
 
 		var daBeats:Int = 0; // Not exactly representative of 'daBeats' lol, just how much it has looped
@@ -2186,6 +2214,7 @@ class GameState extends MusicBeatState
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
 				swagNote.sustainLength = songNotes[2];
 				swagNote.scrollFactor.set(0, 0);
+				swagNote.gfNote = (section.gfSection && (songNotes[1]<4));
 				swagNote.noteType = songNotes[3];
 				if(!Std.isOfType(songNotes[3], String)) swagNote.noteType = noteTypeList[songNotes[3]]; //Backward compatibility + compatibility with Week 7 charts
 
@@ -2202,6 +2231,8 @@ class GameState extends MusicBeatState
 					unspawnNotes.push(sustainNote);
 
 					sustainNote.mustPress = gottaHitNote;
+					sustainNote.gfNote = (section.gfSection && (songNotes[1]<4));
+					sustainNote.noteType = swagNote.noteType;
 
 					if (sustainNote.mustPress)
 					{
@@ -2243,6 +2274,9 @@ class GameState extends MusicBeatState
 				}
 			}
 		}
+		else
+			trace('Empty events: ' + SONG_NAME);
+
 		// //@notrace(unspawnNotes.length);
 		// playerCounter += 1;
 
@@ -3106,12 +3140,24 @@ class GameState extends MusicBeatState
 						else
 							fuckNote += altAnim;
 						
-						playAnimAllBF(fuckNote, true);
+						if (daNote.gfNote)
+						{
+							playAnimAllGF(fuckNote, true);
+						}
+						else
+							playAnimAllBF(fuckNote, true);
 					}
 					else
 					{
 						setLastNote(daNote);
-						playAnimAllDad(lastNote, true);
+						if ((daNote.gfNote))
+						{
+							playAnimAllGF(lastNote, true);
+						}
+						else
+							playAnimAllDad(lastNote, true);
+
+
 					}
 
 					//enemy note highlight
@@ -4347,11 +4393,13 @@ class GameState extends MusicBeatState
 
 			songPlayer.playerMissNoteEvent();
 
-			//songPlayer.missNoteEvent(daNote);
-			
+			// if (daNote.gfNote)
+			// {
+			// 	// temp ignore
+			// }
 			if (playAsDad)
 			{
-				//temp ignore
+				// temp ignore
 			}
 			else
 			{
@@ -4371,18 +4419,21 @@ class GameState extends MusicBeatState
 				playAnimAllBF(fuckyou, true);
 			}
 
-			var dNote = notes.members.indexOf(daNote);
-			var nData = daNote.noteData;
-			var nType = daNote.noteType;
-			var isSus  = daNote.isSustainNote;
-		
+
+			//some time the note killed for some reason idk
 			if (daNote == null)
 			{
 				trace('Null at: callOnLuas(noteMiss)');
 			}
 			else
+			{
+				var dNote = notes.members.indexOf(daNote);
+				var nData = daNote.noteData;
+				var nType = daNote.noteType;
+				var isSus = daNote.isSustainNote;
+
 				callOnLuas('noteMiss', [dNote, nData, nType, isSus]);
-			
+			}
 			// callOnLuas('noteMiss', [notes.members.indexOf(daNote), daNote.noteData, daNote.noteType, daNote.isSustainNote]);
 
 			updateAccuracy();
@@ -4497,23 +4548,36 @@ class GameState extends MusicBeatState
 					case 0:
 						noteShit = 'singLEFT';
 				}
-				
-				playAnimAllDad(noteShit, true);
+
+				if (note.gfNote)
+				{
+					playAnimAllGF(noteShit, true);
+				}
+				else
+					playAnimAllDad(noteShit, true);
 				
 			}
 			else
 			{
+				var noteShit:String = "";
 				switch (note.noteData)
 				{
 					case 2:
-						bf().playAnim('singUP', true);
+						noteShit = 'singUP';
 					case 3:
-						bf().playAnim('singRIGHT', true);
+						noteShit = 'singRIGHT';
 					case 1:
-						bf().playAnim('singDOWN', true);
+						noteShit = 'singDOWN';
 					case 0:
-						bf().playAnim('singLEFT', true);
+						noteShit = 'singLEFT';
 				}
+
+				if (note.gfNote)
+				{
+					playAnimAllGF(noteShit, true);
+				}
+				else
+					playAnimAllBF(noteShit, true);
 			}
 		
 			effectStrums.forEach(function(spr:FlxSprite)
@@ -4579,6 +4643,9 @@ class GameState extends MusicBeatState
 			resyncVocals();
 		}
 
+		setOnLuas('curStep', curStep);
+		callOnLuas('onStepHit', []);
+
 	}
 
 	var lightningStrikeBeat:Int = 0;
@@ -4602,6 +4669,10 @@ class GameState extends MusicBeatState
 			{
 				Conductor.changeBPM(SONG.notes[Math.floor(curStep / 16)].bpm);
 				FlxG.log.add('CHANGED BPM!');
+
+				setOnLuas('curBpm', Conductor.bpm);
+				setOnLuas('crochet', Conductor.crochet);
+				setOnLuas('stepCrochet', Conductor.stepCrochet);
 			}
 			// else
 			// Conductor.changeBPM(SONG.bpm);
@@ -4652,6 +4723,9 @@ class GameState extends MusicBeatState
 				playAnimAllBF('idle');
 			}
 		}
+
+		setOnLuas('curBeat', curBeat);//DAWGG?????
+		callOnLuas('onBeatHit', []);
 	}
 
 //-----------here we make shit again ----------------------------
@@ -4696,21 +4770,33 @@ class GameState extends MusicBeatState
 		}
 	}
 
-	public function playAnimAllGF(anim:String, force:Bool = false, specialAnim:Bool = false)
+public function playAnimAllGF(anim:String, force:Bool = false, specialAnim:Bool = false)
 	{
 		if (gf() != null && gf().visible)
 		{
 			gf().playAnim(anim, force);
 			gf().specialAnim = specialAnim;
-
 		}
 		if (gfPE != null && gfPE.visible)
 		{
 			gfPE.playAnim(anim, force);
 			gfPE.specialAnim = specialAnim;
-
 		}
 	}
+
+
+	public function removeAllGF()
+	{
+		if (gf() != null && gf().visible)
+		{
+			gf().visible = false;
+		}
+		if (gfPE != null && gfPE.visible)
+		{
+			gfPE.visible = false;
+		}
+	}
+	
 
 //---------------------------------------------------------------------------------------------------------
 

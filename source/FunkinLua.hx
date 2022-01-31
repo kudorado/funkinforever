@@ -101,18 +101,17 @@ class FunkinLua {
 		// set('inChartEditor', false);
 
 		// // Song/Week shit
-		// set('curBpm', Conductor.bpm);
-		// set('bpm', GameState.SONG.bpm);
-		// set('scrollSpeed', GameState.SONG.speed);
-		// set('crochet', Conductor.crochet);
-		// set('stepCrochet', Conductor.stepCrochet);
-		// set('songLength', FlxG.sound.music.length);
-		// set('songName', GameState.SONG.song);
-		// set('startedCountdown', false);
-
-		// set('isStoryMode', GameState.isStoryMode);
-		// set('difficulty', GameState.storyDifficulty);
-		// set('weekRaw', GameState.storyWeek);
+		set('curBpm', Conductor.bpm);
+		set('bpm', GameState.SONG.bpm);
+		set('scrollSpeed', GameState.SONG.speed);
+		set('crochet', Conductor.crochet);
+		set('stepCrochet', Conductor.stepCrochet);
+		set('songLength', FlxG.sound.music.length);
+		set('songName', GameState.SONG.song);
+		set('startedCountdown', false);
+		set('isStoryMode', GameState.isStoryMode);
+		set('difficulty', GameState.storyDifficulty);
+		set('weekRaw', GameState.storyWeek);
 		// // set('week', WeekData.weeksList[GameState.storyWeek]);
 		// set('seenCutscene', GameState.seenCutscene);
 
@@ -125,8 +124,8 @@ class FunkinLua {
 		// set('screenHeight', FlxG.height);
 
 		// // GameState cringe ass nae nae bullcrap
-		// set('curBeat', 0);
-		// set('curStep', 0);
+		set('curBeat', 0);
+		set('curStep', 0);
 
 		// set('score', 0);
 		// set('misses', 0);
@@ -176,15 +175,15 @@ class FunkinLua {
 		// set('middlescroll', ClientPrefs.middleScroll);
 		// set('framerate', ClientPrefs.framerate);
 		// set('ghostTapping', ClientPrefs.ghostTapping);
-		// set('hideHud', ClientPrefs.hideHud);
+		set('hideHud', false);
 		// set('timeBarType', ClientPrefs.timeBarType);
 		// set('scoreZoom', ClientPrefs.scoreZoom);
 		// set('cameraZoomOnBeat', ClientPrefs.camZooms);
-		// set('flashingLights', ClientPrefs.flashing);
+		set('flashingLights', true);
 		// set('noteOffset', ClientPrefs.noteOffset);
 		// set('healthBarAlpha', ClientPrefs.healthBarAlpha);
 		// set('noResetButton', ClientPrefs.noReset);
-		// set('lowQuality', ClientPrefs.lowQuality);
+		set('lowQuality', false);
 
 		// Lua_helper.add_callback(lua, "addLuaScript", function(luaFile:String, ?ignoreAlreadyRunning:Bool = false) { //would be dope asf. 
 		// 	var cervix = luaFile + ".lua";
@@ -1041,6 +1040,17 @@ class FunkinLua {
 			
 		});
 
+		Lua_helper.add_callback(lua, "removeObject", function(name:String)
+		{
+			switch (name)
+			{
+				//use case for hank accelerant
+				case 'gf' | 'girlfriend':
+					GameState.instance.removeAllGF();
+			}
+		});
+	
+
 		Lua_helper.add_callback(lua, "setObjectCamera", function(obj:String, camera:String = '') {
 			if(GameState.instance.modchartSprites.exists(obj)) {
 				GameState.instance.modchartSprites.get(obj).cameras = [cameraFromString(camera)];
@@ -1845,7 +1855,7 @@ class FunkinLua {
 	{
 		var shit:ModchartSprite = GameState.instance.modchartSprites.get(tag);
 		if (!shit.wasAdded)
-		{
+	{
 			if (front || !GameState.songPlayer.mapLoaded)
 			{
 				getInstance().add(shit);

@@ -1172,6 +1172,7 @@ class ChartingState extends MusicBeatState
 			bpm: _song.bpm,
 			changeBPM: false,
 			mustHitSection: true,
+			gfSection:false,
 			sectionNotes: [],
 			typeOfSection: 0,
 			altAnim: false
