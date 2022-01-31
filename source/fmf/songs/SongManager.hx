@@ -360,6 +360,16 @@ class SongManager
 				songList: ['Chasing', 'Darkness', 'Sidekick', 'Octane']
 			}
 		),
+
+		new SongData
+		(
+			{
+				folder: 'week_hank',
+				character: 'hank',
+				songTitle: 'V.S Hank',
+				songList: ['Accelerant']
+			}
+		),
 	];
 //-----------------------------------------------------------
 

@@ -45,6 +45,7 @@ class Note extends FlxSprite
 	{
 		noteSplashTexture = GameState.SONG.splashSkin;
 
+		// trace('set noteType: ' + value);
 		if (noteData > -1 && noteType != value)
 		{
 			switch (value)
@@ -66,6 +67,10 @@ class Note extends FlxSprite
 				// shit
 				// noAnimation = true;
 				case 'GF Sing':
+
+				case 'Bullet_Note':
+					// trace('load bullet note yeah!');
+					reloadNote('Bullet_Note', 'nevada/notes/Bullet_Note');
 					// oh shit
 					// gfNote = true;
 			}
@@ -120,6 +125,8 @@ class Note extends FlxSprite
 
 		//get note skin depending on what song are playing.
 		GameState.songPlayer.getNoteSkin(this);
+
+		colorSwap = new ColorSwap();
 
 		switch (noteData)
 		{

@@ -704,15 +704,15 @@ class FunkinLua {
 			GameState.instance.addCharacterToList(name, charType);
 		});
 
-		// Lua_helper.add_callback(lua, "precacheImage", function(name:String) {
-		// 	#if MODS_ALLOWED
-		// 	Paths.addCustomGraphic(name);
-		// 	#end
-		// });
+		Lua_helper.add_callback(lua, "precacheImage", function(name:String) {
+			#if MODS_ALLOWED
+			// Paths.addCustomGraphic(name);
+			#end
+		});
 
-		// Lua_helper.add_callback(lua, "precacheSound", function(name:String) {
-		// 	CoolUtil.precacheSound(name);
-		// });
+		Lua_helper.add_callback(lua, "precacheSound", function(name:String) {
+			// CoolUtil.precacheSound(name);
+		});
 		Lua_helper.add_callback(lua, "triggerEvent", function(name:String, arg1:Dynamic, arg2:Dynamic) {
 			var value1:String = arg1;
 			var value2:String = arg2;
@@ -809,17 +809,21 @@ class FunkinLua {
 		// 	var cam:FlxCamera = cameraFromString(camera);
 		// 	return FlxG.mouse.getScreenPosition(cam).y;
 		// });
-		Lua_helper.add_callback(lua, "characterPlayAnim", function(character:String, anim:String, ?forced:Bool = false) {
+		Lua_helper.add_callback(lua, "characterPlayAnim", function(character:String, anim:String, ?forced:Bool = false, specialAnim:Bool = false) {
 			switch(character.toLowerCase()) {
 				case 'dad':
-					if(GameState.instance.dadPE.animOffsets.exists(anim))
-						GameState.instance.dadPE.playAnim(anim, forced);
+					GameState.instance.playAnimAllDad(anim, forced, specialAnim);
+					// if(GameState.instance.dadPE.animOffsets.exists(anim))
+						// GameState.instance.dadPE.playAnim(anim, forced);
 				case 'gf' | 'girlfriend':
-					if(GameState.instance.gfPE.animOffsets.exists(anim))
-						GameState.instance.gfPE.playAnim(anim, forced);
+					GameState.instance.playAnimAllGF(anim, forced, specialAnim);
+					// if(GameState.instance.gfPE.animOffsets.exists(anim))
+					// 	GameState.instance.gfPE.playAnim(anim, forced);
 				default: 
-					if(GameState.instance.bfPE.animOffsets.exists(anim))
-						GameState.instance.bfPE.playAnim(anim, forced);
+					GameState.instance.playAnimAllBF(anim, forced, specialAnim);
+
+					// if(GameState.instance.bfPE.animOffsets.exists(anim))
+					// 	GameState.instance.bfPE.playAnim(anim, forced);
 			}
 		});
 		Lua_helper.add_callback(lua, "characterDance", function(character:String) {

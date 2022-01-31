@@ -542,6 +542,10 @@ class SongPlayerManager
 			case 'octane':
 				songPlayer = new Octane();
 
+			case 'accelerant':
+				songPlayer = new Accelerant();
+
+
 		}
 
 		return songPlayer;

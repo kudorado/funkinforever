@@ -100,6 +100,9 @@ class CharacterPE extends Character
 				}
 
 				positionArray = json.position;
+				// this.x = positionArray[0];
+				// this.y = positionArray[1];
+
 				cameraPosition = json.camera_position;
 
 				healthIcon = json.healthicon;
@@ -141,6 +144,8 @@ class CharacterPE extends Character
 							addOffset(anim.anim, anim.offsets[0], anim.offsets[1]);
 						}
 					}
+				
+
 				}
 				else
 				{

@@ -97,11 +97,18 @@ class BaseSong
 		createCharacters();
 		loadMapGroup();
 		initVariables();
+		addSpriteLuaFront();
+		
 	}
 
 	function loadLua()
 	{
 
+	}
+
+	function addSpriteLuaFront()
+	{
+		//add the sprite lua front, call group after the character loaded, then releaae it.
 	}
 
 	function copyCharacters()
@@ -234,10 +241,18 @@ class BaseSong
 			gf.alpha = 0;
 			return;
 		}
+		// detect Psych engine character or not
+		var daPE = Type.getClassName(Type.getClass(gf));
+		trace("gfShit: " + daPE);
 
-		getGFTex();
-		createGFAnimations();
-		createGFAnimationOffsets();
+		var PE = daPE.toLowerCase() == "fmf.characters.characterpe";
+
+		if (!PE)
+		{
+			getGFTex();
+			createGFAnimations();
+			createGFAnimationOffsets();
+		}
 	}
 
 	//--------------------------------------------------------------------------------------------------------
@@ -302,10 +317,9 @@ class BaseSong
 
 		//detect Psych engine character or not
 		var daPE = Type.getClassName(Type.getClass(dad));
+		trace("dadShit: " + daPE);
 
-		// trace("dadShit: " + daPE);
-
-		var PE =  daPE.toLowerCase() == "characterpe" ;
+		var PE =  daPE.toLowerCase() == "fmf.characters.characterpe";
 
 		if (!PE) // if psych engine character, just ignore.
 		{

@@ -3,7 +3,7 @@ function onCreate()
 	camX = 'camFollow.x';
 	nevada = true;
 	
-	setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'bfded'); --put in mods/sounds/
+	-- setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'bfded'); --put in mods/sounds/
 	
     makeLuaSprite('city', 'nevada/nevada_city', -600, -100) --the background
 		addLuaSprite('city', false);
@@ -69,7 +69,6 @@ function onCreate()
 		setProperty('yeet.scale.y', getProperty('yeet.scale.y') + 0.5);
 			
 	makeLuaSprite('shot', 'nevada/tracer', 2000, 640); --da Bullet
-		addLuaSprite('shot', true); --creating the bullet offscreen for later
 		
 	if not lowQuality then
 		makeLuaSprite('foreground', 'nevada/nevada_foreground', -970, -215); --the foreground, aka tent with the word MADNESS on it
@@ -418,6 +417,7 @@ bulletposY = {
 
 function goodNoteHit(id, direction, noteType, isSustainNote, character, animId, forced) --making the shot from hank's gun sync position with it
 	if noteType == 'Bullet_Note' then
+		addLuaSprite('shot', true); --creating the bullet offscreen for later
 		bulletposY[direction]() --executes functions in bulletposY at direction
 		doTweenX('shotTweenX1', 'shot', -200, 0.01, 'linear');
 		doTweenX('shotTweenX2', 'shot', 2000, 0.2, 'linear');

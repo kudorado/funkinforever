@@ -85,6 +85,8 @@ using StringTools;
 class GameState extends MusicBeatState
 {
 
+	public static var noteTypeList:Array<String> = // Used for backwards compatibility with 0.1 - 0.3.2 charts, though, you should add your hardcoded custom note types here too.
+		['', 'Alt Animation', 'Hey!', 'Hurt Note', 'GF Sing', 'No Animation'];
 //Lua and Psych engine friends
 //-------------------------------------------------
 	var debugNum:Int = 0;
@@ -1557,6 +1559,7 @@ class GameState extends MusicBeatState
 		for (notetype in noteTypeMap.keys())
 		{
 			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
+			trace('try load custom note: ' + luaToLoad);
 			if (FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
@@ -1566,6 +1569,7 @@ class GameState extends MusicBeatState
 		for (event in eventPushedMap.keys())
 		{
 			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
+			trace('try load custom event: ' + luaToLoad);
 			if(FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
@@ -1933,8 +1937,8 @@ class GameState extends MusicBeatState
 
 	public function startCountdown():Void
 	{
+		callOnLuas('onStartCountdown', []);
 		inCutscene = false;
-
 		generateStaticArrows(0);
 		generateStaticArrows(1);
 
@@ -2182,6 +2186,8 @@ class GameState extends MusicBeatState
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
 				swagNote.sustainLength = songNotes[2];
 				swagNote.scrollFactor.set(0, 0);
+				swagNote.noteType = songNotes[3];
+				if(!Std.isOfType(songNotes[3], String)) swagNote.noteType = noteTypeList[songNotes[3]]; //Backward compatibility + compatibility with Week 7 charts
 
 				var susLength:Float = swagNote.sustainLength;
 				susLength = susLength / Conductor.stepCrochet;
@@ -2215,6 +2221,7 @@ class GameState extends MusicBeatState
 
 				if (!noteTypeMap.exists(swagNote.noteType))
 				{
+					trace('add custom note type!');
 					noteTypeMap.set(swagNote.noteType, true);
 				}
 			}
@@ -4364,9 +4371,25 @@ class GameState extends MusicBeatState
 				playAnimAllBF(fuckyou, true);
 			}
 
+			var dNote = notes.members.indexOf(daNote);
+			var nData = daNote.noteData;
+			var nType = daNote.noteType;
+			var isSus  = daNote.isSustainNote;
+		
+			if (daNote == null)
+			{
+				trace('Null at: callOnLuas(noteMiss)');
+			}
+			else
+				callOnLuas('noteMiss', [dNote, nData, nType, isSus]);
 			
+			// callOnLuas('noteMiss', [notes.members.indexOf(daNote), daNote.noteData, daNote.noteType, daNote.isSustainNote]);
+
 			updateAccuracy();
+
+
 		}
+
 	}
 
 	/*function badNoteCheck()
@@ -4529,6 +4552,12 @@ class GameState extends MusicBeatState
 
 			note.wasGoodHit = true;
 			vocals.volume = 1;
+			
+			var isSus:Bool = note.isSustainNote; //GET OUT OF MY HEAD, GET OUT OF MY HEAD, GET OUT OF MY HEAD
+			var leData:Int = Math.round(Math.abs(note.noteData));
+			var leType:String = note.noteType;
+
+			callOnLuas('goodNoteHit', [notes.members.indexOf(note), leData, leType, isSus]);
 
 			note.kill();
 			notes.remove(note, true);
@@ -4627,40 +4656,60 @@ class GameState extends MusicBeatState
 
 //-----------here we make shit again ----------------------------
 
-	function playAnimAllBF(anim:String, force:Bool = false)
+	public function playAnimAllBF(anim:String, force:Bool = false, specialAnim:Bool = false)
 	{
 		if (bf() != null && bf().visible)
+		{
 			bf().playAnim(anim, force);
+			bf().specialAnim = specialAnim;
+		}
 
 		if (bfPE != null && bfPE.visible)
+		{
 			bfPE.playAnim(anim, force);
-		
+			bfPE.specialAnim = specialAnim;
+		}
 		//todo
 		//add player 4 in bf side yeah fuck you!
 		// if (player4 != null && player4.visible)
 			// player4.playAnim(anim, force);
 	}
 
-	function playAnimAllDad(anim:String, force:Bool = false)
+	public function playAnimAllDad(anim:String, force:Bool = false, specialAnim:Bool = false)
 	{
 		if (dad() != null && dad().visible)
+		{
 			dad().playAnim(anim, force);
+			dad().specialAnim = specialAnim;
+		}
 
 		if (dadPE != null && dadPE.visible)
+		{
 			dadPE.playAnim(anim, force);
+			dadPE.specialAnim = specialAnim;
+		}
 
 		if (player3 != null && player3.visible)
+		{
 			player3.playAnim(anim, force);
-
+			player3.specialAnim = specialAnim;
+		}
 	}
 
-	function playAnimaAllGF(anim:String, force:Bool = false)
+	public function playAnimAllGF(anim:String, force:Bool = false, specialAnim:Bool = false)
 	{
 		if (gf() != null && gf().visible)
+		{
 			gf().playAnim(anim, force);
+			gf().specialAnim = specialAnim;
 
+		}
 		if (gfPE != null && gfPE.visible)
+		{
 			gfPE.playAnim(anim, force);
+			gfPE.specialAnim = specialAnim;
+
+		}
 	}
 
 //---------------------------------------------------------------------------------------------------------

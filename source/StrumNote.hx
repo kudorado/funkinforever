@@ -19,6 +19,7 @@ class StrumNote extends FlxSprite
 	
 	public var texture(default, set):String = null;
 	private function set_texture(value:String):String {
+		trace('set texture shit: ' + value);
 		if(texture != value) {
 			texture = value;
 			reloadNote();
