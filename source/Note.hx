@@ -81,6 +81,11 @@ class Note extends FlxSprite
 				case 'EX Note':
 					reloadNote("EX Note", 'nevada/notes/EX Note');
 
+				case 'Eye Note':
+					reloadNote("Eye Note", 'notesEye');
+
+
+
 
 			}
 			noteType = value;

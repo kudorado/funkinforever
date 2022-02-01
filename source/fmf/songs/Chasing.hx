@@ -87,13 +87,13 @@ class Chasing extends SongPlayer
     override function updateCamFollowDad()
     {
         super.updateCamFollowDad();
-        gameState.targetCamFollow.y -= 50;
+        gameState.targetCamFollow.y += 50;
     }
 
     override function updateCamFollowBF()
     {
         super.updateCamFollowDad();
-        gameState.targetCamFollow.y -= 50;
+        gameState.targetCamFollow.y += 50;
         gameState.targetCamFollow.x -= 100;
     }
 

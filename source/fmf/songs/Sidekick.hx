@@ -124,7 +124,18 @@ class Sidekick extends SongPlayer
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		// gameState.targetCamFollow.y += 100;
+
+		if (GameState.instance.player3 == null || (!GameState.instance.player3.visible))
+		{
+			if (GameState.instance.curBeat < 253)//oh shit lazy recording
+				gameState.targetCamFollow.y += 125;
+			else
+				gameState.targetCamFollow.y -= 25;
+		}
+
+		if (GameState.instance.player3 != null && GameState.instance.player3.visible)
+			gameState.targetCamFollow.y -= 150;
+
         gameState.defaultCamZoom = 0.8;
 
 	}
@@ -132,8 +143,8 @@ class Sidekick extends SongPlayer
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowDad();
-        gameState.targetCamFollow.y -= 100;
         gameState.defaultCamZoom = 0.85;
+        gameState.targetCamFollow.y -= 100;
 
 	}
 
