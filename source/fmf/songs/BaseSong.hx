@@ -212,7 +212,7 @@ class BaseSong
 	private function createGFAnimationOffsets():Void
 	{
 		gf.addOffset('cheer');
-		gf.addOffset('sad', -2, -2);
+		gf.addOffset('sad', -2, -20);
 		gf.addOffset('scared', -2, -17);
 		gf.addOffset('danceRight', 0, -9);
 		gf.addOffset('danceLeft', 0, -9);

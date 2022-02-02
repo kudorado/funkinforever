@@ -2,8 +2,6 @@ function onCreate()
 	camY = 'camFollow.y';
 	camX = 'camFollow.x';
 	nevada = true;
-	
-	x
 	-- setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'bfded'); --put in mods/sounds/
 	
     makeLuaSprite('city', 'nevada/nevada_city', -600, -100) --the background
@@ -87,9 +85,9 @@ function onCreate()
 			
 	if difficulty >= 2 then --don't need hellclown if the difficulty isn't "fucked"
 		if not lowQuality then
-			makeAnimatedLuaSprite('hellclown', 'nevada/hellclown', 180, 1500); --hellclown,
-			makeAnimatedLuaSprite('lefthand', 'nevada/hand', -300, 2050); --his left hand,
-			makeAnimatedLuaSprite('righthand', 'nevada/hand', 1000, 2050); --and his right hand.
+			makeAnimatedLuaSprite('hellclown', 'nevada/hellclown', 20, 1500); --hellclown,
+			makeAnimatedLuaSprite('lefthand', 'nevada/hand', -360, 2050); --his left hand,
+			makeAnimatedLuaSprite('righthand', 'nevada/hand', 840, 2050); --and his right hand.
 			
 				addAnimationByPrefix('hellclown', 'idle', 'hellclown idle', 12, true);
 				addAnimationByPrefix('lefthand', 'idle', 'hand idle', 14, true);
@@ -339,8 +337,8 @@ randomEnemyFuncs = { --da climbing enemies
 				runTimer('gruntdeath', 0.810, 1);
 			end,
 			[3] = function()
-				doTweenX('gruntTweenX', 'grunt', 370, 0.01, 'linear');
-				doTweenY('gruntTweenY', 'grunt', 150, 0.01, 'linear');
+				doTweenX('gruntTweenX', 'grunt', 300, 0.01, 'linear');
+				doTweenY('gruntTweenY', 'grunt', 200, 0.01, 'linear');
 				objectPlayAnimation('grunt', 'gruntdie', true);
 				runTimer('gruntdeath', 0.810, 1);
 			end,
@@ -361,8 +359,8 @@ randomEnemyFuncs = { --da climbing enemies
 				runTimer('agentdeath', 0.810, 1);
 			end,
 			[3] = function()
-				doTweenX('agentTweenX', 'agent', 370, 0.01, 'linear');
-				doTweenY('agentTweenY', 'agent', 150, 0.01, 'linear');
+				doTweenX('agentTweenX', 'agent', 300, 0.01, 'linear');
+				doTweenY('agentTweenY', 'agent', 200, 0.01, 'linear');
 				objectPlayAnimation('agent', 'agentdie', true);
 				runTimer('agentdeath', 0.810, 1);
 			end,
@@ -383,8 +381,8 @@ randomEnemyFuncs = { --da climbing enemies
 				runTimer('engiedeath', 0.810, 1);
 			end,
 			[3] = function()
-				doTweenX('engineerTweenX', 'engineer', 370, 0.01, 'linear');
-				doTweenY('engineerTweenY', 'engineer', 170, 0.01, 'linear');
+				doTweenX('engineerTweenX', 'engineer', 300, 0.01, 'linear');
+				doTweenY('engineerTweenY', 'engineer', 220, 0.01, 'linear');
 				objectPlayAnimation('engineer', 'engineerdie', true);
 				runTimer('engiedeath', 0.810, 1);
 			end,
@@ -393,10 +391,10 @@ randomEnemyFuncs = { --da climbing enemies
 }
 
 function onBeatHit()
-	if curBeat >= 5 and difficulty == 1 then --248
+	if curBeat >= 248 and difficulty == 1 then --248
 		if curBeat % 5 == 0 then
 			enemy = math.floor(math.random(1, 3));
-			location = math.floor(math.(1, 3));
+			location = math.floor(math.random(1, 3));
 			randomEnemyFuncs[enemy]();
 			locationFuncs[location]();
 		end
