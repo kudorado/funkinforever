@@ -3,6 +3,7 @@ function onCreate()
 	camX = 'camFollow.x';
 	nevada = true;
 	
+	x
 	-- setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'bfded'); --put in mods/sounds/
 	
     makeLuaSprite('city', 'nevada/nevada_city', -600, -100) --the background
@@ -34,15 +35,15 @@ function onCreate()
 				setProperty('deimos.scale.x', getProperty('deimos.scale.x') + 0.26);
 				setProperty('deimos.scale.y', getProperty('deimos.scale.y') + 0.26);
 		
-		--makeAnimatedLuaSprite('shotflashDeimos', nil, -790, 0);
-			--doTweenColor('shotflashDeimosColorTween', 'shotflashDeimos', 'cccccc', 0.01, 'linear');			addAnimationByPrefix('deimos', 'shoot', 'deimous shoot', 20, false);
-			--makeGraphic('shotflashDeimos', 400, 300, 'cccccc');
-			--setBlendMode('shotflashDeimos', 'screen');
+		-- makeAnimatedLuaSprite('shotflashDeimos', nil, -790, 0);
+		-- 	doTweenColor('shotflashDeimosColorTween', 'shotflashDeimos', 'cccccc', 0.01, 'linear');			addAnimationByPrefix('deimos', 'shoot', 'deimous shoot', 20, false);
+		-- 	makeGraphic('shotflashDeimos', 400, 300, 'cccccc');
+		-- 	setBlendMode('shotflashDeimos', 'screen');
 		
-		--makeLuaSprite('shotflashSanford', nil, 1370, 0);
-			--doTweenColor('shotflashDeimosColorTween', 'shotflashSanford', 'cccccc', 0.01, 'linear');			addAnimationByPrefix('sanford', 'shoot', 'stanford shoot', 20, false);
-			--makeGraphic('shotflashSanford', 400, 300, 'cccccc');
-			--setBlendMode('shotflashSanford', 'screen');
+		-- makeLuaSprite('shotflashSanford', nil, 1370, 0);
+		-- 	doTweenColor('shotflashDeimosColorTween', 'shotflashSanford', 'cccccc', 0.01, 'linear');			addAnimationByPrefix('sanford', 'shoot', 'stanford shoot', 20, false);
+		-- 	makeGraphic('shotflashSanford', 400, 300, 'cccccc');
+		-- 	setBlendMode('shotflashSanford', 'screen');
 	end
 			
 	makeAnimatedLuaSprite('tiky', 'nevada/tikyfall', 340, -50); -- tricky falling off the speaker
@@ -53,10 +54,11 @@ function onCreate()
 			setProperty('stage.scale.x', getProperty('stage.scale.x') + 0.6);
 			setProperty('stage.scale.y', getProperty('stage.scale.y') + 0.8);
 			
-	makeAnimatedLuaSprite('speaker', 'nevada/speakers', 185, 460); --the speakers that tricky sings on, and later falls off of
+	makeAnimatedLuaSprite('speaker', 'nevada/speakers', 30, 493); --the speakers that tricky sings on, and later falls off of
 		addAnimationByPrefix('speaker', 'idle', 'GF Dancing Beat', 24, true);
 			setLuaSpriteScrollFactor('speaker', 1, 1);
-	
+			-- addLuaSprite('speaker', false);
+
 	makeAnimatedLuaSprite('hotdog', 'nevada/gfhotdog', 2000, 500); --creating gf walking in with a hotdog
 		addAnimationByPrefix('hotdog', 'enter', 'girlfriend walk', 8, true);
 		addAnimationByPrefix('hotdog', 'idle', 'girlfriend dance idle', 24, true);
@@ -76,14 +78,14 @@ function onCreate()
 				setProperty('foreground.scale.x', getProperty('foreground.scale.x') + 0.75);
 				setProperty('foreground.scale.y', getProperty('foreground.scale.y') + 0.8);
 	
-		makeAnimatedLuaSprite('laserdot', 'nevada/laser', 520, 210); --x 520 y 210
+		makeAnimatedLuaSprite('laserdot', 'nevada/laser', 350, 225); --x 520 y 210
 			addAnimationByPrefix('laserdot', 'enter', 'laser idle', 24, false);
 			addAnimationByPrefix('laserdot', 'bop', 'laser bop', 24, true);
 			setProperty('laserdot.scale.x', getProperty('laserdot.scale.x') + 0.6);
 			setProperty('laserdot.scale.y', getProperty('laserdot.scale.y') + 0.6);
 	end	
 			
-	if difficulty == 2 then --don't need hellclown if the difficulty isn't "fucked"
+	if difficulty >= 2 then --don't need hellclown if the difficulty isn't "fucked"
 		if not lowQuality then
 			makeAnimatedLuaSprite('hellclown', 'nevada/hellclown', 180, 1500); --hellclown,
 			makeAnimatedLuaSprite('lefthand', 'nevada/hand', -300, 2050); --his left hand,
@@ -139,7 +141,7 @@ function onCreate()
 	end
 	--a bunch of precaching to brace for lag
 	
-	if difficulty == 2 then
+	if difficulty >= 2 then
 		precacheImage('nevada/notes/EX Note');
 		precacheImage('nevada/gremlin');
 		if not lowQuality then
@@ -170,7 +172,7 @@ function onCreate()
 	precacheSound('hankshoot');
 	precacheSound('hankreadyupsound');
 	precacheSound('Screamfade');
-	if difficulty == 2 then
+	if difficulty >= 2 then
 		precacheSound('hellclown');
 	end
 end
@@ -220,8 +222,8 @@ stepHitFuncs = { --a bunch of timed events, timed to steps
 	end,
 	[664] = function() --yeet gf gets into position, 664
 		addLuaSprite('yeet', false);
-		addLuaSprite('speaker', false);
 		removeObject('gf');
+		addLuaSprite('speaker', false);
 
 	end,
 	[665] = function() --gf gets yeeted off the speaker, 665
@@ -231,7 +233,7 @@ stepHitFuncs = { --a bunch of timed events, timed to steps
 		removeLuaSprite('laserdot', false);
 	end,
 	[684] = function() --lever, 684
-		if difficulty == 2 then
+		if difficulty >= 2 then
 			if not hideHud then
 				addLuaSprite('lever', false);
 				objectPlayAnimation('lever', 'enter', true);
@@ -255,13 +257,13 @@ stepHitFuncs = { --a bunch of timed events, timed to steps
 		removeObject('gf');
 		-- setProperty('gf.visible', false);
 		addLuaSprite('tiky', false);
-		objectPlayAnimation('skidaddle', true); --making tricky play the wiggling animation
-		doTweenY('tikygoestoheaven', 'tiky', -450, 0.38, 'expoOut'); --tricky flies off
+		objectPlayAnimation('tiky', 'skidaddle', true); --making tricky play the wiggling animation
+		doTweenY('tikygoestoheaven', 'tiky', -500, 0.38, 'expoOut'); --tricky flies off
 		playSound('Screamfade', 0.9); --HAAAAAAAY
 	end,
 	[992] = function() --992
 		if not lowQuality then
-			if difficulty == 2 then --checking if the difficulty is "fucked" (hard)
+			if difficulty >= 2 then --checking if the difficulty is "fucked" (hard)
 				removeLuaSprite('stage', false);
 				removeLuaSprite('speaker', false);
 				setProperty('hellclown.visible', true);
@@ -310,11 +312,11 @@ function onStepHit()
 end
 
 function onMoveCamera(focus) --camera changes a bit after hellclown appears
-	if focus == 'boyfriend' and difficulty == 2 and curStep >= 992 then --992
+	if focus == 'boyfriend' and difficulty >= 2 and curStep >= 992 then --992
 		setProperty(camY, getProperty(camY) - 100);
 		setProperty(camX, getProperty(camX) - 150);
 		-- called when the camera focus on boyfriend
-	elseif focus == 'dad' and difficulty == 2 and curStep >= 992 then --992
+	elseif focus == 'dad' and difficulty >= 2 and curStep >= 992 then --992
 		setProperty(camY, getProperty(camY) - 100);
 		setProperty(camX, getProperty(camX) + 150);
 		-- called when the camera focus on dad
@@ -391,10 +393,10 @@ randomEnemyFuncs = { --da climbing enemies
 }
 
 function onBeatHit()
-	if curBeat >= 248 and difficulty == 1 then --248
+	if curBeat >= 5 and difficulty == 1 then --248
 		if curBeat % 5 == 0 then
 			enemy = math.floor(math.random(1, 3));
-			location = math.floor(math.random(1, 3));
+			location = math.floor(math.(1, 3));
 			randomEnemyFuncs[enemy]();
 			locationFuncs[location]();
 		end
@@ -424,7 +426,7 @@ function goodNoteHit(id, direction, noteType, isSustainNote, character, animId, 
 		bulletposY[direction]() --executes functions in bulletposY at direction
 		doTweenX('shotTweenX1', 'shot', -200, 0.01, 'linear');
 		doTweenX('shotTweenX2', 'shot', 2000, 0.2, 'linear');
-		if curBeat > 246 and difficulty == 2 then --if hellclown appears
+		if curBeat > 246 and difficulty >= 2 then --if hellclown appears
 			objectPlayAnimation('sanford', 'shoot', false);
 			objectPlayAnimation('deimos', 'shoot', false);
 		end

@@ -181,9 +181,9 @@ class ArtificialLust extends SongPlayer
 		createDad();
 
 		gf.scrollFactor.set(0.95, 0.95);
-		gameState.add(gf);
-		gameState.add(bf);
-		gameState.add(dad);
+		gameState.gfGroup.add(gf);
+		gameState.boyfriendGroup.add(bf);
+		gameState.dadGroup.add(dad);
 
 		bf.characterAddedEvent();
 
@@ -418,8 +418,8 @@ class ArtificialLust extends SongPlayer
 		gameState.add(eventSong.simp);
 		gameState.add(eventSong.abel);
 		gameState.add(eventSong.max);
-		gameState.add(gf);
-		gameState.add(bf);
+		gameState.gfGroup.add(gf);
+		gameState.boyfriendGroup.add(bf);
 
 		eventSong.abel.animation.play('idle');
 		eventSong.max.animation.play('idle');
@@ -445,8 +445,8 @@ class ArtificialLust extends SongPlayer
 		gameState.add(simp);
 		gameState.add(abel);
 		gameState.add(max);
-		gameState.add(bf);
-		gameState.add(gf);
+		gameState.boyfriendGroup.add(bf);
+		gameState.gfGroup.add(gf);
 
 		abel.animation.play('idle');
 		max.animation.play('idle');

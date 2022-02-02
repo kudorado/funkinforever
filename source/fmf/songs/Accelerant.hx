@@ -41,21 +41,19 @@ class Accelerant extends SongPlayer
 	{
 		super.createDad();
 		dad.x = -116;
-		dad.y = 518;
+		dad.y = 469;
 		dad.scale.x = 1.5;
 		dad.scale.y = 1.5;
 	}
 
-	override function getGFVersion()
-	{
-		return new CharacterPE('gf-handsup');
-	}
 
 	override function createGF()
 	{
 		super.createGF();
-		gf.x = 293;
-		gf.y = 242;
+		gf.x = 47;
+		gf.y = 220;
+		gf.scale.x = 1.093;
+		gf.scale.y = 1.093;
 
 	}
 
@@ -63,13 +61,13 @@ class Accelerant extends SongPlayer
 	{
 		super.createBF();
 		bf.x -= 100;
-		bf.y += 150;
+		bf.y += 100;
 
 	}
 
 	public override function getDadIcon(icon:Icon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/tails/icons/icon-cough', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/hank/icon-hank', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}

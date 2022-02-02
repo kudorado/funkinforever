@@ -83,7 +83,7 @@ class Incident extends Trueform
 
 
 		gameState.add(bg);
-		gameState.add(gfbg);
+		gameState.gfGroup.add(gfbg);
 		gameState.add(whiteBG);
 
 

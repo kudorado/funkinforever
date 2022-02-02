@@ -92,9 +92,8 @@ class BaseSong
 		loadLua();
 		loadMap();
 		mapLoaded = true;
-
-		createCharacters();
 		loadMapGroup();
+		createCharacters();
 		initVariables();
 		addSpriteLuaFront();
 		
@@ -175,9 +174,9 @@ class BaseSong
 
 		gf.scrollFactor.set(0.95, 0.95);
 
-		gameState.add(gf);
-		gameState.add(dad);
-		gameState.add(bf);
+		gameState.gfGroup.add(gf);
+		gameState.dadGroup.add(dad);
+		gameState.boyfriendGroup.add(bf);
 
 		bf.characterAddedEvent();
 
@@ -345,7 +344,7 @@ class BaseSong
 		dad = song.dad;
 		
 		
-		gameState.add(dad);
+		gameState.dadGroup.add(dad);
 		dad.playAnim(gameState.lastNote, true);
 
 	}
@@ -359,7 +358,7 @@ class BaseSong
 		}
 
 		this.bf = pc;
-		gameState.add(bf);
+		gameState.boyfriendGroup.add(bf);
 	}
 
 	private function changePc(pcName:String)

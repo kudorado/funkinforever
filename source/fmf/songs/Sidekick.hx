@@ -27,9 +27,9 @@ class Sidekick extends SongPlayer
 
     override function createGFAnimations()
     {
-        gf.animation.addByPrefix("idle", 'GF Dancing Beat00', true);
-            gf.animation.addByPrefix('sad', 'Gf sad00');
-        gf.playAnim("idle");
+		gf.animation.addByPrefix("idle", 'GF Dancing Beat00', true);
+		gf.animation.addByPrefix('sad', 'Gf sad00');
+		gf.playAnim("idle");
     }
 
 	override function loadLua()
@@ -127,7 +127,8 @@ class Sidekick extends SongPlayer
 
 		if (GameState.instance.player3 == null || (!GameState.instance.player3.visible))
 		{
-			if (GameState.instance.curBeat < 253)//oh shit lazy recording
+			// oh shit lazy recording
+			if (GameState.instance.curBeat < 253)
 				gameState.targetCamFollow.y += 125;
 			else
 				gameState.targetCamFollow.y -= 25;

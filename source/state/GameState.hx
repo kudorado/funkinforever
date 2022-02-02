@@ -111,16 +111,38 @@ class GameState extends MusicBeatState
 				break;
 			}
 
-			var value1:String = '';
-			if (eventNotes[0][2] != null)
-				value1 = eventNotes[0][2];
+			var eventValue = Std.parseInt(eventNotes[0][1]);
 
-			var value2:String = '';
-			if (eventNotes[0][3] != null)
-				value2 = eventNotes[0][3];
+			if (eventValue == -1)
+			{
+				// old event detected
+				var value1:String = '';
+				if (eventNotes[0][3] != null)
+					value1 = eventNotes[0][3];
 
-			trace("triggerEventNote " + eventNotes[0][1] + " with args: " + value1 + ", " + value2);
-			triggerEventNote(eventNotes[0][1], value1, value2);
+				var value2:String = '';
+				if (eventNotes[0][4] != null)
+					value2 = eventNotes[0][4];
+
+				trace("triggerEventNote[ " + leStrumTime + ']' + eventNotes[0][2] + " with args: " + value1 + ", " + value2);
+				triggerEventNote(eventNotes[0][2], value1, value2);
+			}
+			else
+			{
+				// this is new event system
+				var value1:String = '';
+				if (eventNotes[0][2] != null)
+					value1 = eventNotes[0][2];
+
+				var value2:String = '';
+				if (eventNotes[0][3] != null)
+					value2 = eventNotes[0][3];
+
+				trace("triggerEventNote " + eventNotes[0][1] + " with args: " + value1 + ", " + value2);
+				triggerEventNote(eventNotes[0][1], value1, value2);
+			}
+
+		
 			eventNotes.shift();
 		}
 	}
@@ -145,15 +167,22 @@ class GameState extends MusicBeatState
 						charType = Std.parseInt(event[3]);
 						if (Math.isNaN(charType)) charType = 0;
 				}
-
 				var newCharacter:String = event[4];
 				addCharacterToList(newCharacter, charType);
+
+
+			default:
+				if (!eventPushedMap.exists(event[1]))
+				{
+					trace('Pushed event: ' + event[1]);
+					eventPushedMap.set(event[1], true);
+				}
+
 		}
 
-		if (!eventPushedMap.exists(event[1]))
-		{
-			eventPushedMap.set(event[1], true);
-		}
+	
+
+		
 	}
 
 	function eventNoteEarlyTrigger(event:Array<Dynamic>):Float
@@ -184,13 +213,12 @@ class GameState extends MusicBeatState
 	var curLight:Int = 0;
 	var curLightEvent:Int = 0;
 
-	public static function createLua(luaFile:String):FunkinLua
+	public static function createLua(luaFile:String)
 	{
 		var lua = new FunkinLua(luaFile);
 		instance.luaArray.push(lua);
 		// lime.app.Application.current.window.alert(luaFile, 'Create Lua');
 		lua.call('onCreate', []);
-		return lua;
 	}
 
 	public static function createLuas(luaFiles:Array<String>)
@@ -335,6 +363,7 @@ class GameState extends MusicBeatState
 			case 0:
 				if (!boyfriendMap.exists(newCharacter))
 				{
+					trace('add new bf: '  + newCharacter);
 					var newBoyfriend:BoyfriendPE = new BoyfriendPE(0, 0, newCharacter);
 					boyfriendMap.set(newCharacter, newBoyfriend);
 					boyfriendGroup.add(newBoyfriend);
@@ -342,11 +371,17 @@ class GameState extends MusicBeatState
 					newBoyfriend.alpha = 0.00001;
 					newBoyfriend.alreadyLoaded = false;
 					startCharacterLua(newBoyfriend.curCharacter);
+
+
+					// turn on for debug
+					// newBoyfriend.visible = true;
+					// newBoyfriend.alpha = 1;
 				}
 
 			case 1:
 				if (!dadMap.exists(newCharacter))
 				{
+					trace('add new dad: '  + newCharacter);
 					var newDad:CharacterPE = new CharacterPE(0, 0, newCharacter);
 					dadMap.set(newCharacter, newDad);
 					dadGroup.add(newDad);
@@ -354,11 +389,17 @@ class GameState extends MusicBeatState
 					newDad.alpha = 0.00001;
 					newDad.alreadyLoaded = false;
 					startCharacterLua(newDad.curCharacter);
+
+					//turn on for debug
+					// newDad.visible = true;
+					// newDad.alpha = 1;
+
 				}
 
 			case 2:
 				if (!gfMap.exists(newCharacter))
 				{
+					trace('add new gf: '  + newCharacter);
 					var newGf:CharacterPE = new CharacterPE(0, 0, newCharacter);
 					newGf.scrollFactor.set(0.95, 0.95);
 					gfMap.set(newCharacter, newGf);
@@ -367,12 +408,17 @@ class GameState extends MusicBeatState
 					newGf.alpha = 0.00001;
 					newGf.alreadyLoaded = false;
 					startCharacterLua(newGf.curCharacter);
+
+					// turn on for debug
+					// newGf.visible = true;
+					// newGf.alpha = 1;
+
 				}
 
 			case 3:
 				if (!player3Map.exists(newCharacter))
 				{
-					trace('createNewCharacter: ' + newCharacter);
+					trace('add new player3: ' + newCharacter);
 
 					var newPlayer3:CharacterPE = new CharacterPE(0, 0, newCharacter);
 					player3Map.set(newCharacter, newPlayer3);
@@ -381,6 +427,12 @@ class GameState extends MusicBeatState
 					newPlayer3.alpha = 0.00001;
 					newPlayer3.alreadyLoaded = false;
 					startCharacterLua(newPlayer3.curCharacter);
+
+				
+					// turn on for debug
+					// 	newPlayer3.visible = true;
+					// 	newPlayer3.alpha = 1;
+
 				}
 
 		}
@@ -468,6 +520,7 @@ class GameState extends MusicBeatState
 	}
 
 	public function triggerEventNote(eventName:String, value1:String, value2:String) {
+		// trace('trigger event: ' + eventName);
 		switch(eventName) {
 			case 'Hey!':
 				var value:Int = 0;
@@ -665,10 +718,10 @@ class GameState extends MusicBeatState
 				switch (value2.toLowerCase().trim())
 				{
 					case 'bf' | 'boyfriend':
-						playerShit = 0;
+						playerShit = 1;
 
 					case 'dad' | 'opponent':
-						playerShit = 1;
+						playerShit = 0;
 
 					case 'gf' | 'girlfriend':
 						playerShit = 2;
@@ -685,7 +738,7 @@ class GameState extends MusicBeatState
 				
 				switch (playerShit)
 				{
-					case 0:
+					case 1:
 						if (bfPE != null)
 						{
 							bfPE.playAnim(value1, true);
@@ -698,7 +751,7 @@ class GameState extends MusicBeatState
 							songPlayer.bf.playAnim(value1, true);
 						}
 						
-					case 1:
+					case 0:
 						if (dadPE != null)
 						{
 							dadPE.playAnim(value1, true);
@@ -854,6 +907,8 @@ class GameState extends MusicBeatState
 						}
 
 						dadPE.visible = true;
+						trace('change dad to: ' + value2);
+
 						setOnLuas('dadName', dadPE.curCharacter);
 
 					case 2:
@@ -880,6 +935,9 @@ class GameState extends MusicBeatState
 							gfPE.alpha = 1;
 							gfPE.alreadyLoaded = true;
 						}
+						gfPE.visible = true;
+
+
 						// }
 						setOnLuas('gfName', gfPE.curCharacter);
 
@@ -1047,8 +1105,7 @@ class GameState extends MusicBeatState
 
 	public function callOnLuas(event:String, args:Array<Dynamic>):Dynamic
 	{
-		var returnVal:Dynamic = null;
-		 FunkinLua.Function_Continue;
+		var returnVal:Dynamic = FunkinLua.Function_Continue;
 		#if LUA_ALLOWED
 		for (i in 0...luaArray.length)
 		{
@@ -2137,44 +2194,50 @@ class GameState extends MusicBeatState
 		if (Assets.exists(file))
 		{
 		#end
-			var jsonEvent= Song.loadFromJson("events", SongPlayer.folder + SONG_NAME);
+			var jsonEvent = Song.loadFromJson("events", SongPlayer.folder + SONG_NAME);
 			var eventsData = jsonEvent.events;
 		
 			//check ass
-			if (eventsData != null)
+			if (jsonEvent != null)
 			{
 				// lime.app.Application.current.window.alert("yeah", 'Loaded Event');
 
-				for (event in eventsData) // Event Notes
+				// check this or crash your ass
+				if (eventsData != null) 
 				{
-					// lime.app.Application.current.window.alert(eventsData[0], 'Loaded Event');
-					for (i in 0...event[1].length)
+					for (event in eventsData) // Event Notes
 					{
-						// lime.app.Application.current.window.alert(event[1][i][0], 'Loaded Event');
-						var subEvent:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
-						eventNotes.push(subEvent);
-						eventPushed(subEvent);
-						trace('push custom event: ' + subEvent);
+						// lime.app.Application.current.window.alert(eventsData[0], 'Loaded Event');
+						for (i in 0...event[1].length)
+						{
+							// lime.app.Application.current.window.alert(event[1][i][0], 'Loaded Event');
+							var subEvent:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
+							eventNotes.push(subEvent);
+							eventPushed(subEvent);
+							trace('push custom event: ' + subEvent);
+						}
 					}
 				}
 
 				//this shouldn't be add, but idk
 				//old system
-				// var notesData = jsonEvent.notes;
-
-				// for (section in notesData)
-				// {
-				// 	for (songNotes in section.sectionNotes)
-				// 	{
-				// 		if (songNotes[1] < 0)
-				// 		{
-				// 			eventNotes.push([songNotes[0], songNotes[1], songNotes[2], songNotes[3], songNotes[4]]);
-				// 			eventPushed(songNotes);
-
-				// 			trace('push custom notes event: ' + subEvent);
-				// 		}
-				// 	}
-				// }
+				var notesData = jsonEvent.notes;
+				if (notesData != null)
+				{
+					for (section in notesData)
+					{
+						for (songNotes in section.sectionNotes)
+						{
+							if (songNotes[1] < 0)
+							{
+								var subEvent:Array<Dynamic> = [songNotes[0], songNotes[1], songNotes[2], songNotes[3], songNotes[4]];
+								eventNotes.push(subEvent);
+								eventPushed(subEvent);
+								trace('push old system custom event: ' + subEvent);
+							}
+						}
+					}
+				}
 
 			}
 			else
@@ -2185,13 +2248,24 @@ class GameState extends MusicBeatState
 			trace('No event found for song: ' + SONG_NAME);
 
 
-		var daBeats:Int = 0; // Not exactly representative of 'daBeats' lol, just how much it has looped
+		 // Not exactly representative of 'daBeats' lol, 
+		// just how much it has looped
+		var daBeats:Int = 0;
 		for (section in noteData)
 		{
 			var coolSection:Int = Std.int(section.lengthInSteps / 4);
 
 			for (songNotes in section.sectionNotes)
 			{
+				//old event shit, i hate you bjtch
+				// if this is not number, this was an event shit, fuck you
+				if (Std.is(songNotes[2], std.String))
+				{
+					// trace('i capture an event shit: ' + daBeats);
+					continue;
+				}
+
+
 				var daStrumTime:Float = songNotes[0] + FlxG.save.data.offset + songOffset;
 				if (daStrumTime < 0)
 					daStrumTime = 0;
@@ -2204,7 +2278,7 @@ class GameState extends MusicBeatState
 				{
 					gottaHitNote = (playAsDad ? section.mustHitSection : !section.mustHitSection);
 				}
-
+			
 				var oldNote:Note;
 				if (unspawnNotes.length > 0)
 					oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
@@ -2216,32 +2290,30 @@ class GameState extends MusicBeatState
 				swagNote.scrollFactor.set(0, 0);
 				swagNote.gfNote = (section.gfSection && (songNotes[1]<4));
 				swagNote.noteType = songNotes[3];
-				if(!Std.isOfType(songNotes[3], String)) swagNote.noteType = noteTypeList[songNotes[3]]; //Backward compatibility + compatibility with Week 7 charts
 
+			
+				if (!Std.isOfType(songNotes[3], String))
+					swagNote.noteType = noteTypeList[songNotes[3]]; // Backward compatibility + compatibility with Week 7 charts
 				var susLength:Float = swagNote.sustainLength;
+
 				susLength = susLength / Conductor.stepCrochet;
 				unspawnNotes.push(swagNote);
-
 				for (susNote in 0...Math.floor(susLength))
 				{
 					oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
-
 					var sustainNote:Note = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + Conductor.stepCrochet, daNoteData, oldNote, true);
+
 					sustainNote.scrollFactor.set();
 					unspawnNotes.push(sustainNote);
-
 					sustainNote.mustPress = gottaHitNote;
-					sustainNote.gfNote = (section.gfSection && (songNotes[1]<4));
+					sustainNote.gfNote = (section.gfSection && (songNotes[1] < 4));
 					sustainNote.noteType = swagNote.noteType;
-
 					if (sustainNote.mustPress)
 					{
 						sustainNote.x += FlxG.width / 2; // general offset
 					}
 				}
-
 				swagNote.mustPress = gottaHitNote;
-
 				if (swagNote.mustPress)
 				{
 					swagNote.x += FlxG.width / 2; // general offset
@@ -2249,12 +2321,14 @@ class GameState extends MusicBeatState
 				else
 				{
 				}
-
+				// if not type wasn't add to list, just add it.
 				if (!noteTypeMap.exists(swagNote.noteType))
 				{
 					trace('add custom note type!');
 					noteTypeMap.set(swagNote.noteType, true);
 				}
+				
+
 			}
 			daBeats += 1;
 		}
@@ -2281,6 +2355,11 @@ class GameState extends MusicBeatState
 		// playerCounter += 1;
 
 		unspawnNotes.sort(sortByShit);
+		if (eventNotes.length > 1)
+		{ // No need to sort if there's a single one or none at all
+			eventNotes.sort(sortByTime);
+		}
+
 		checkEventNote();
 		generatedMusic = true;
 	}

@@ -113,8 +113,8 @@ class TrickyEx extends TrickyMask
 		createDad();
 
 
-		gameState.add(gf);
-		gameState.add(bf);
+		gameState.gfGroup.add(gf);
+		gameState.boyfriendGroup.add(bf);
 		
 
 		var hole = new FlxSprite(0, 0).loadGraphic(Paths.image('bg/clown/fourth/Spawnhole_Ground_BACK', 'mods'));
@@ -124,7 +124,7 @@ class TrickyEx extends TrickyMask
 		hole.scale.y = 1.5;
 		hole.scale.x = 1;
 		gameState.add(hole);
-		gameState.add(dad);
+		gameState.dadGroup.add(dad);
 
 	}
 

@@ -132,10 +132,10 @@ class Godrays extends SongPlayer
 
 		gf.scrollFactor.set(0.95, 0.95);
 
-		gameState.add(gf);
+		gameState.gfGroup.add(gf);
 		createAldryx();
-		gameState.add(dad);
-		gameState.add(bf);
+		gameState.dadGroup.add(dad);
+		gameState.boyfriendGroup.add(bf);
 
 		bf.characterAddedEvent();
 

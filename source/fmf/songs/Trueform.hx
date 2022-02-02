@@ -78,13 +78,13 @@ class Trueform extends Tutorial
 
 		hole.setGraphicSize(Std.int(hole.width * 1.25));
 
-		gameState.add(dad);
+		gameState.dadGroup.add(dad);
 		gameState.add(hole);
 
 		dad.y -= 100;
 		hole.y -= 225;
 
-		gameState.add(bf);
+		gameState.boyfriendGroup.add(bf);
 
 
 		gf.alpha = 0;

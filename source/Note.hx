@@ -14,6 +14,18 @@ using StringTools;
 
 class Note extends FlxSprite
 {
+
+//holy shit fuck old even system, I hate you!!!
+
+	// public var isEventNote:Bool;
+	// public var eventShitName:String;
+	// public var eventShitValue:String;
+	// public var eventShitTarget:String;
+
+
+//---------------------------------------
+
+
 	public var strumTime:Float = 0;
 
 	public var mustPress:Bool = false;
@@ -83,11 +95,14 @@ class Note extends FlxSprite
 
 				case 'Eye Note':
 					reloadNote("Eye Note", 'notesEye');
-
-
+					
+				case 'Play Animation':
+					this.visible = false;
 
 
 			}
+
+
 			noteType = value;
 		}
 		noteSplashHue = colorSwap.hue;

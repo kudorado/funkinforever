@@ -53,12 +53,12 @@ class Redemption extends Sadness
 		gfanim.x = 1270;
 		gfanim.y = 91;
 	
-		gameState.add(gfanim);
+		gameState.gfGroup.add(gfanim);
 
 		bfanim.frames = Paths.getSparrowAtlas('bg/blueballs_incident/redemp/bfanim', 'mods');
 		bfanim.animation.addByPrefix('BF idle dance','BF idle dance',12, false);
 		bfanim.antialiasing = true;
-		gameState.add(bfanim);
+		gameState.boyfriendGroup.add(bfanim);
 		bfanim.alpha = 0;
 		bfanim.x = 1513;
 		bfanim.y = 496;

@@ -144,10 +144,10 @@ class Mom extends SongPlayer
 		createBF();
 		createDad();
 
-		gameState.add(gf);
+		gameState.gfGroup.add(gf);
 		gameState.add(limo);
-		gameState.add(dad);
-		gameState.add(bf);
+		gameState.dadGroup.add(dad);
+		gameState.boyfriendGroup.add(bf);
 	}
 
 	function resetFastCar():Void

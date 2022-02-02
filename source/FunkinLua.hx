@@ -1870,29 +1870,10 @@ class FunkinLua {
 				}
 				else
 				{
-					var position:Int = 0;
 
-					// then check character of psych engine as well
-					if (GameState.songPlayer.gf != null)
-					{
-						position =  GameState.instance.members.indexOf(GameState.songPlayer.gf);
-					}
-					else
-					{
-						position = GameState.instance.members.indexOf(GameState.instance.gfGroup);
-					}
-					// recheck shit
-					if (GameState.songPlayer.dad != null && GameState.instance.members.indexOf(GameState.songPlayer.dad) < position)
-					{
-						position = GameState.instance.members.indexOf(GameState.songPlayer.dad);
-					}
-					else if (GameState.songPlayer.bf != null && GameState.instance.members.indexOf(GameState.songPlayer.bf) < position)
-					{
-						position = GameState.instance.members.indexOf(GameState.songPlayer.bf);
-					}
-					
-				
-					else if (GameState.instance.members.indexOf(GameState.instance.player3Group) < position)
+					var position = GameState.instance.members.indexOf(GameState.instance.gfGroup);
+
+					if (GameState.instance.members.indexOf(GameState.instance.player3Group) < position)
 					{
 						position = GameState.instance.members.indexOf(GameState.instance.player3Group);
 					}
@@ -1916,8 +1897,8 @@ class FunkinLua {
 			shit.wasAdded = true;
 			// trace('added a thing: ' + tag);
 		}
-		else
-			trace(tag + ' was added, ignore');
+		// else
+			// trace(tag + ' was added, ignore');
 	}
 
 	function removeLuaSprite(tag:String, destroy:Bool, group:String)

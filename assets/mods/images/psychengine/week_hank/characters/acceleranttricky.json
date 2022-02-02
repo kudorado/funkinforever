@@ -92,8 +92,8 @@
 	"no_antialiasing": false,
 	"image": "characters/acceleranttricky",
 	"position": [
-		225,
-		44
+		265,
+		215
 	],
 	"healthicon": "trickymask",
 	"flip_x": false,

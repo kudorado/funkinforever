@@ -75,7 +75,7 @@ class Meltdown extends Sabotage
         bfdead.antialiasing = true;
         bfdead.scale.y = 1;
         bfdead.scale.x = 1;
-        gameState.add(bfdead);
+        gameState.boyfriendGroup.add(bfdead);
     }
 
 	override function createDadAnimations():Void
