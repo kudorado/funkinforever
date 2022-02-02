@@ -14,6 +14,8 @@ import MenuCharacter.CharacterSetting;
 class Accelerant extends SongPlayer
 {	
 
+	var clown:HankClown;
+
 	override function loadLua()
 	{
 		//autoload itself 
@@ -30,13 +32,16 @@ class Accelerant extends SongPlayer
 		var nevada = SongPlayer.luaFolder + "stages/nevada.lua";
 		GameState.createLua(nevada);
 		gameState.defaultCamZoom = 0.65;
+
+		clown = new HankClown();
+		clown.createStaticBG();
 	}
 
 
-	override function getGFVersion()
-	{
-		return new CharacterPE('acceleranttricky');
-	}
+	// override function getGFVersion()
+	// {
+	// 	return new CharacterPE('acceleranttricky');
+	// }
 
 	override function getDadVersion()
 	{
@@ -78,5 +83,44 @@ class Accelerant extends SongPlayer
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
+
+	override function update(elapsed:Float)
+	{
+		super.update(elapsed);
+		clown.update(elapsed);
+	}
+
+	override function playerMissNoteEvent()
+	{
+		if (FlxG.random.bool(10) && !clown.spookyRendered &&
+			((gameState.curStep >= 665 && gameState.curStep < 937) || (gameState.curStep > 937 && GameState.storyDifficulty >= 2)))
+			clown.createMissText(dad.x, dad.y);
+
+		super.playerMissNoteEvent();
+	}
+
+	override function midSongStepUpdate()
+	{
+		if (gameState.curStep == 937)
+		{
+			clown.createHankMissText(dad.x, dad.y);
+		}
+
+		clown.midSongStepUpdate();
+		super.midSongStepUpdate();
+	}	
+
+	override function dadNoteEvent(noteData:Note)
+	{
+		if (FlxG.random.bool(5) && !clown.spookyRendered && 
+			((gameState.curStep >= 665 && gameState.curStep < 937) || 
+			(gameState.curStep > 937 && GameState.storyDifficulty >= 2)))
+			clown.noteEvent(noteData, dad.x, dad.y);
+
+		super.dadNoteEvent(noteData);
+	}
+	
+
+		
   
 }

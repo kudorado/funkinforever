@@ -40,7 +40,7 @@ class Clown
 		tstatic.animation.play('static');
 
 		tstatic.alpha = 0;
-
+		tstatic.cameras = [gameState.camHUD];
 		gameState.add(tstatic);
 	}
 
@@ -76,7 +76,7 @@ class Clown
 		spookyText.x += 50;
 		spookyText.bold = true;
 		spookyText.text = text;
-
+		
 		gameState.add(spookyText);
 	}
 
