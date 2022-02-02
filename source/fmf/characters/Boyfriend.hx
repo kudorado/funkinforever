@@ -13,18 +13,25 @@ class Boyfriend extends PlayableCharacter
 
 	override function createAnimationOffsets()
 	{
-		addOffset('idle', -6, -1);
-		addOffset("singUP", -56, 30);
-		addOffset("singRIGHT", 1, -8);
-		addOffset("singLEFT", -50, -9);
-		addOffset("singDOWN", -18, -53);
+		addOffset('idle', -6, 1);
+        addOffset("hey", -6, 1);
+        addOffset('scared', -6, 1);
 
-		addOffset("singUPmiss", -41, 25);
-		addOffset("singRIGHTmiss", -45, 18);
-		addOffset("singLEFTmiss", -2, 14);
-		addOffset("singDOWNmiss", -10, -26);
-		addOffset("hey", -6, 3);
-		addOffset('scared', -7, -1);
+        addOffset("singUP", -56, -1);
+        addOffset("singRIGHT", -5, -3);
+        addOffset("singLEFT", -51, -1);
+        addOffset("singDOWN", -16, -1);
+
+        addOffset("singUPmiss", -41, 1);
+        addOffset("singRIGHTmiss", -45, -2);
+        addOffset("singLEFTmiss", -14, -2);
+        addOffset("singDOWNmiss", -11, -5);
+
+        addOffset('hit', -37, 1);
+        addOffset('hurt', -37, 1);
+        addOffset('scared', -6, 1);
+        addOffset('dodge', -16, 1);
+
 
 		playAnim('idle');
 		flipX = false;

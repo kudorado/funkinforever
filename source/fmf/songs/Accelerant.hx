@@ -32,6 +32,12 @@ class Accelerant extends SongPlayer
 		gameState.defaultCamZoom = 0.65;
 	}
 
+
+	override function getGFVersion()
+	{
+		return new CharacterPE('acceleranttricky');
+	}
+
 	override function getDadVersion()
 	{
 		return new CharacterPE('hank');
@@ -44,6 +50,7 @@ class Accelerant extends SongPlayer
 		dad.y = 469;
 		dad.scale.x = 1.5;
 		dad.scale.y = 1.5;
+		
 	}
 
 

@@ -1,100 +1,101 @@
-<?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="tiky.png">
-<SubTexture name="tiky land0000" x="0" y="0" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky land0001" x="759" y="0" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky land0002" x="1518" y="0" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky land0003" x="2277" y="0" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky land0004" x="0" y="921" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky land0005" x="759" y="921" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky land0006" x="1518" y="921" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky land0007" x="2277" y="921" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky land0008" x="0" y="1842" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky land0009" x="759" y="1842" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky idle0000" x="1518" y="1842" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0001" x="2067" y="1842" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0002" x="0" y="2763" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0003" x="549" y="2763" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0004" x="1098" y="2763" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0005" x="1647" y="2763" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0006" x="0" y="3216" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0007" x="549" y="3216" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0008" x="1098" y="3216" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0009" x="1647" y="3216" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0010" x="0" y="3669" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0011" x="549" y="3669" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0012" x="1098" y="3669" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky idle0013" x="1647" y="3669" width="549" height="453" frameX="0" frameY="0" frameWidth="549" frameHeight="453" />
-<SubTexture name="tiky left0000" x="0" y="4122" width="543" height="460" frameX="0" frameY="0" frameWidth="543" frameHeight="460" />
-<SubTexture name="tiky left0001" x="543" y="4122" width="543" height="460" frameX="0" frameY="0" frameWidth="543" frameHeight="460" />
-<SubTexture name="tiky left0002" x="1086" y="4122" width="543" height="460" frameX="0" frameY="0" frameWidth="543" frameHeight="460" />
-<SubTexture name="tiky left0003" x="1629" y="4122" width="543" height="460" frameX="0" frameY="0" frameWidth="543" frameHeight="460" />
-<SubTexture name="tiky left0000" x="0" y="4582" width="543" height="460" frameX="0" frameY="0" frameWidth="543" frameHeight="460" />
-<SubTexture name="tiky left0004" x="543" y="4582" width="543" height="460" frameX="0" frameY="0" frameWidth="543" frameHeight="460" />
-<SubTexture name="tiky left0005" x="1086" y="4582" width="543" height="460" frameX="0" frameY="0" frameWidth="543" frameHeight="460" />
-<SubTexture name="tiky left0006" x="1629" y="4582" width="543" height="460" frameX="0" frameY="0" frameWidth="543" frameHeight="460" />
-<SubTexture name="tiky left0007" x="0" y="5042" width="543" height="460" frameX="0" frameY="0" frameWidth="543" frameHeight="460" />
-<SubTexture name="tiky right0000" x="543" y="5042" width="604" height="322" frameX="-15" frameY="-13" frameWidth="611" frameHeight="403" />
-<SubTexture name="tiky right0001" x="1147" y="5042" width="604" height="337" frameX="-15" frameY="-14" frameWidth="611" frameHeight="403" />
-<SubTexture name="tiky right0002" x="1751" y="5042" width="611" height="348" frameX="0" frameY="0" frameWidth="611" frameHeight="403" />
-<SubTexture name="tiky right0003" x="0" y="5502" width="611" height="363" frameX="0" frameY="0" frameWidth="611" frameHeight="403" />
-<SubTexture name="tiky right0004" x="611" y="5502" width="611" height="363" frameX="0" frameY="0" frameWidth="611" frameHeight="403" />
-<SubTexture name="tiky right0005" x="1222" y="5502" width="611" height="391" frameX="0" frameY="0" frameWidth="611" frameHeight="403" />
-<SubTexture name="tiky right0006" x="1833" y="5502" width="611" height="391" frameX="0" frameY="0" frameWidth="611" frameHeight="403" />
-<SubTexture name="tiky right0007" x="0" y="5893" width="611" height="403" frameX="0" frameY="0" frameWidth="611" frameHeight="403" />
-<SubTexture name="tiky down0000" x="611" y="5893" width="559" height="464" frameX="0" frameY="0" frameWidth="559" frameHeight="464" />
-<SubTexture name="tiky down0001" x="1170" y="5893" width="559" height="464" frameX="0" frameY="0" frameWidth="559" frameHeight="464" />
-<SubTexture name="tiky down0002" x="1729" y="5893" width="559" height="464" frameX="0" frameY="0" frameWidth="559" frameHeight="464" />
-<SubTexture name="tiky down0003" x="0" y="6357" width="559" height="464" frameX="0" frameY="0" frameWidth="559" frameHeight="464" />
-<SubTexture name="tiky down0004" x="559" y="6357" width="559" height="464" frameX="0" frameY="0" frameWidth="559" frameHeight="464" />
-<SubTexture name="tiky down0005" x="1118" y="6357" width="559" height="464" frameX="0" frameY="0" frameWidth="559" frameHeight="464" />
-<SubTexture name="tiky down0006" x="1677" y="6357" width="559" height="464" frameX="0" frameY="0" frameWidth="559" frameHeight="464" />
-<SubTexture name="tiky down0007" x="0" y="6821" width="559" height="464" frameX="0" frameY="0" frameWidth="559" frameHeight="464" />
-<SubTexture name="tiky down0008" x="559" y="6821" width="559" height="464" frameX="0" frameY="0" frameWidth="559" frameHeight="464" />
-<SubTexture name="tiky down0009" x="1118" y="6821" width="559" height="464" frameX="0" frameY="0" frameWidth="559" frameHeight="464" />
-<SubTexture name="tiky down0010" x="1677" y="6821" width="559" height="464" frameX="0" frameY="0" frameWidth="559" frameHeight="464" />
-<SubTexture name="tiky singup0000" x="0" y="7285" width="503" height="453" frameX="0" frameY="0" frameWidth="503" frameHeight="453" />
-<SubTexture name="tiky singup0001" x="503" y="7285" width="503" height="453" frameX="0" frameY="0" frameWidth="503" frameHeight="453" />
-<SubTexture name="tiky singup0002" x="1006" y="7285" width="503" height="453" frameX="0" frameY="0" frameWidth="503" frameHeight="453" />
-<SubTexture name="tiky singup0003" x="1509" y="7285" width="503" height="453" frameX="0" frameY="0" frameWidth="503" frameHeight="453" />
-<SubTexture name="tiky singup0004" x="0" y="7738" width="503" height="453" frameX="0" frameY="0" frameWidth="503" frameHeight="453" />
-<SubTexture name="tiky singup0005" x="503" y="7738" width="503" height="453" frameX="0" frameY="0" frameWidth="503" frameHeight="453" />
-<SubTexture name="tiky singup0006" x="1006" y="7738" width="503" height="453" frameX="0" frameY="0" frameWidth="503" frameHeight="453" />
-<SubTexture name="tiky singup0007" x="1509" y="7738" width="503" height="453" frameX="0" frameY="0" frameWidth="503" frameHeight="453" />
-<SubTexture name="tiky singup0008" x="0" y="8191" width="503" height="453" frameX="0" frameY="0" frameWidth="503" frameHeight="453" />
-<SubTexture name="tiky singup0009" x="503" y="8191" width="503" height="453" frameX="0" frameY="0" frameWidth="503" frameHeight="453" />
-<SubTexture name="tiky singup0010" x="1006" y="8191" width="503" height="453" frameX="0" frameY="0" frameWidth="503" frameHeight="453" />
-<SubTexture name="tiky up-alt0000" x="1509" y="8191" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0001" x="0" y="9112" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0002" x="759" y="9112" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0003" x="1518" y="9112" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0004" x="2277" y="9112" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0005" x="0" y="10033" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0006" x="759" y="10033" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0007" x="1518" y="10033" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0008" x="2277" y="10033" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0009" x="0" y="10954" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0010" x="759" y="10954" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0011" x="1518" y="10954" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0012" x="2277" y="10954" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0013" x="0" y="11875" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0014" x="759" y="11875" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0015" x="1518" y="11875" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0016" x="2277" y="11875" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0017" x="0" y="12796" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0018" x="759" y="12796" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky up-alt0019" x="1518" y="12796" width="759" height="921" frameX="0" frameY="0" frameWidth="759" frameHeight="921" />
-<SubTexture name="tiky holup0000" x="2277" y="12796" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0001" x="0" y="13717" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0002" x="576" y="13717" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0003" x="1152" y="13717" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0004" x="1728" y="13717" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0005" x="0" y="14216" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0006" x="576" y="14216" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0007" x="1152" y="14216" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0008" x="1728" y="14216" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0009" x="0" y="14715" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0010" x="576" y="14715" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0011" x="1152" y="14715" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0012" x="1728" y="14715" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
-<SubTexture name="tiky holup0013" x="0" y="15214" width="576" height="499" frameX="0" frameY="0" frameWidth="576" frameHeight="499" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:4cb503e93d0ab275efa9884b1fd8ea07:ea2cd95b4781e57dc3d6fee693050a0b:f453aa68ba7f46f6f6a1355af7a8f5f7$ -->
+<TextureAtlas imagePath="acceleranttricky.png" width="3776" height="3964">
+    <SubTexture name="tiky down0000" x="1703" y="487" width="549" height="462" frameX="-3" frameY="-1" frameWidth="559" frameHeight="464"/>
+    <SubTexture name="tiky down0001" x="1724" y="1847" width="549" height="375" frameX="-3" frameY="-1" frameWidth="559" frameHeight="464"/>
+    <SubTexture name="tiky down0002" x="454" y="2905" width="557" height="366" frameX="-1" frameY="-5" frameWidth="559" frameHeight="464"/>
+    <SubTexture name="tiky down0003" x="454" y="2905" width="557" height="366" frameX="-1" frameY="-5" frameWidth="559" frameHeight="464"/>
+    <SubTexture name="tiky down0004" x="454" y="2905" width="557" height="366" frameX="-1" frameY="-5" frameWidth="559" frameHeight="464"/>
+    <SubTexture name="tiky down0005" x="454" y="2905" width="557" height="366" frameX="-1" frameY="-5" frameWidth="559" frameHeight="464"/>
+    <SubTexture name="tiky down0006" x="454" y="2905" width="557" height="366" frameX="-1" frameY="-5" frameWidth="559" frameHeight="464"/>
+    <SubTexture name="tiky down0007" x="454" y="2905" width="557" height="366" frameX="-1" frameY="-5" frameWidth="559" frameHeight="464"/>
+    <SubTexture name="tiky down0008" x="453" y="3273" width="557" height="366" frameX="-1" frameY="-5" frameWidth="559" frameHeight="464"/>
+    <SubTexture name="tiky down0009" x="1013" y="2971" width="557" height="385" frameX="-1" frameY="-5" frameWidth="559" frameHeight="464"/>
+    <SubTexture name="tiky down0010" x="1013" y="2971" width="557" height="385" frameX="-1" frameY="-5" frameWidth="559" frameHeight="464"/>
+    <SubTexture name="tiky holup0000" x="1140" y="1" width="574" height="481" frameX="-1" frameY="-17" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0001" x="568" y="509" width="574" height="446" frameX="-1" frameY="-17" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0002" x="1144" y="484" width="557" height="458" frameX="-2" frameY="-17" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0003" x="1144" y="484" width="557" height="458" frameX="-2" frameY="-17" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0004" x="1144" y="484" width="557" height="458" frameX="-2" frameY="-17" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0005" x="1" y="1924" rotated="true" width="480" height="565" frameX="-10" frameY="-1" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0006" x="1" y="1924" rotated="true" width="480" height="565" frameX="-10" frameY="-1" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0007" x="1" y="1924" rotated="true" width="480" height="565" frameX="-10" frameY="-1" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0008" x="1" y="2491" rotated="true" width="451" height="574" frameX="-1" frameY="-17" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0009" x="2274" y="1" width="574" height="450" frameX="-1" frameY="-17" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0010" x="2274" y="1" width="574" height="450" frameX="-1" frameY="-17" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0011" x="2274" y="1" width="574" height="450" frameX="-1" frameY="-17" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0012" x="1" y="3067" rotated="true" width="450" height="574" frameX="-1" frameY="-17" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky holup0013" x="2850" y="1" width="574" height="450" frameX="-1" frameY="-17" frameWidth="576" frameHeight="499"/>
+    <SubTexture name="tiky idle0000" x="483" y="2047" width="545" height="427" frameX="-3" frameY="-10" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0001" x="483" y="2476" width="545" height="427" frameX="-3" frameY="-10" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0002" x="1012" y="3358" width="546" height="425" frameX="-2" frameY="-12" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0003" x="1572" y="3002" width="547" height="419" frameX="-1" frameY="-17" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0004" x="1560" y="3423" width="542" height="419" frameX="-6" frameY="-5" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0005" x="2274" y="453" width="542" height="424" frameX="-6" frameY="-4" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0006" x="2254" y="879" width="539" height="422" frameX="-7" frameY="-1" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0007" x="2818" y="453" width="539" height="432" frameX="-7" frameY="-2" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0008" x="1702" y="951" width="536" height="451" frameX="-9" frameY="-1" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0009" x="2795" y="887" width="536" height="418" frameX="-9" frameY="-1" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0010" x="2795" y="887" width="536" height="418" frameX="-9" frameY="-1" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0011" x="2795" y="887" width="536" height="418" frameX="-9" frameY="-1" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0012" x="2795" y="887" width="536" height="418" frameX="-9" frameY="-1" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky idle0013" x="2795" y="887" width="536" height="418" frameX="-9" frameY="-1" frameWidth="549" frameHeight="453"/>
+    <SubTexture name="tiky land0000" x="1" y="1" width="565" height="770" frameX="-1" frameY="-1" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky land0001" x="1" y="1" width="565" height="770" frameX="-1" frameY="-1" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky land0002" x="1" y="773" width="553" height="577" frameX="-181" frameY="-343" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky land0003" x="1" y="773" width="553" height="577" frameX="-181" frameY="-343" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky land0004" x="1716" y="1" rotated="true" width="556" height="484" frameX="-231" frameY="-328" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky land0005" x="1716" y="1" rotated="true" width="556" height="484" frameX="-231" frameY="-328" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky land0006" x="2245" y="1303" width="525" height="458" frameX="-233" frameY="-417" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky land0007" x="2245" y="1303" width="525" height="458" frameX="-233" frameY="-417" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky land0008" x="1702" y="1404" width="541" height="441" frameX="-216" frameY="-431" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky land0009" x="1702" y="1404" width="541" height="441" frameX="-216" frameY="-431" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky left0000" x="2275" y="1763" width="526" height="447" frameX="-16" frameY="-1" frameWidth="543" frameHeight="460"/>
+    <SubTexture name="tiky left0001" x="1167" y="944" width="533" height="454" frameX="-1" frameY="-5" frameWidth="543" frameHeight="460"/>
+    <SubTexture name="tiky left0002" x="2803" y="1757" width="526" height="447" frameX="-16" frameY="-1" frameWidth="543" frameHeight="460"/>
+    <SubTexture name="tiky left0003" x="2275" y="1763" width="526" height="447" frameX="-16" frameY="-1" frameWidth="543" frameHeight="460"/>
+    <SubTexture name="tiky left0004" x="2803" y="2206" width="526" height="447" frameX="-16" frameY="-1" frameWidth="543" frameHeight="460"/>
+    <SubTexture name="tiky left0005" x="2803" y="2206" width="526" height="447" frameX="-16" frameY="-1" frameWidth="543" frameHeight="460"/>
+    <SubTexture name="tiky left0006" x="2275" y="2212" width="526" height="447" frameX="-16" frameY="-1" frameWidth="543" frameHeight="460"/>
+    <SubTexture name="tiky left0007" x="2772" y="1307" width="526" height="448" frameX="-16" frameY="-1" frameWidth="543" frameHeight="460"/>
+    <SubTexture name="tiky right0000" x="1" y="3643" width="602" height="320" frameX="-4" frameY="-42" frameWidth="611" frameHeight="403"/>
+    <SubTexture name="tiky right0001" x="1120" y="1853" width="602" height="335" frameX="-4" frameY="-34" frameWidth="611" frameHeight="403"/>
+    <SubTexture name="tiky right0002" x="3426" y="1" rotated="true" width="346" height="609" frameX="-1" frameY="-29" frameWidth="611" frameHeight="403"/>
+    <SubTexture name="tiky right0003" x="556" y="1348" width="609" height="361" frameX="-1" frameY="-21" frameWidth="611" frameHeight="403"/>
+    <SubTexture name="tiky right0004" x="556" y="1348" width="609" height="361" frameX="-1" frameY="-21" frameWidth="611" frameHeight="403"/>
+    <SubTexture name="tiky right0005" x="556" y="957" width="609" height="389" frameX="-1" frameY="-7" frameWidth="611" frameHeight="403"/>
+    <SubTexture name="tiky right0006" x="556" y="957" width="609" height="389" frameX="-1" frameY="-7" frameWidth="611" frameHeight="403"/>
+    <SubTexture name="tiky right0007" x="509" y="1711" width="609" height="334" frameX="-1" frameY="-1" frameWidth="611" frameHeight="403"/>
+    <SubTexture name="tiky singup0000" x="3331" y="1307" rotated="true" width="444" height="497" frameX="-1" frameY="-8" frameWidth="503" frameHeight="453"/>
+    <SubTexture name="tiky singup0001" x="3331" y="1806" rotated="true" width="444" height="497" frameX="-1" frameY="-8" frameWidth="503" frameHeight="453"/>
+    <SubTexture name="tiky singup0002" x="3331" y="2305" rotated="true" width="430" height="497" frameX="-5" frameY="-1" frameWidth="503" frameHeight="453"/>
+    <SubTexture name="tiky singup0003" x="2186" y="2661" width="497" height="430" frameX="-5" frameY="-1" frameWidth="503" frameHeight="453"/>
+    <SubTexture name="tiky singup0004" x="2121" y="3093" width="497" height="430" frameX="-5" frameY="-1" frameWidth="503" frameHeight="453"/>
+    <SubTexture name="tiky singup0005" x="2104" y="3525" width="497" height="430" frameX="-5" frameY="-1" frameWidth="503" frameHeight="453"/>
+    <SubTexture name="tiky singup0006" x="2685" y="2661" width="497" height="430" frameX="-5" frameY="-1" frameWidth="503" frameHeight="453"/>
+    <SubTexture name="tiky singup0007" x="2620" y="3093" width="497" height="430" frameX="-5" frameY="-1" frameWidth="503" frameHeight="453"/>
+    <SubTexture name="tiky singup0008" x="2603" y="3525" width="497" height="430" frameX="-5" frameY="-1" frameWidth="503" frameHeight="453"/>
+    <SubTexture name="tiky singup0009" x="3184" y="2804" width="497" height="430" frameX="-5" frameY="-1" frameWidth="503" frameHeight="453"/>
+    <SubTexture name="tiky singup0010" x="3119" y="3236" width="497" height="430" frameX="-5" frameY="-1" frameWidth="503" frameHeight="453"/>
+    <SubTexture name="tiky up-alt0000" x="1030" y="2190" width="579" height="387" frameX="-76" frameY="-497" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0001" x="1609" y="2613" width="575" height="387" frameX="-81" frameY="-494" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0002" x="1611" y="2224" width="579" height="387" frameX="-76" frameY="-497" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0003" x="1030" y="2579" width="577" height="390" frameX="-80" frameY="-498" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0004" x="1030" y="2190" width="579" height="387" frameX="-76" frameY="-497" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0005" x="1609" y="2613" width="575" height="387" frameX="-81" frameY="-494" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0006" x="1611" y="2224" width="579" height="387" frameX="-76" frameY="-497" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0007" x="1030" y="2579" width="577" height="390" frameX="-80" frameY="-498" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0008" x="1030" y="2190" width="579" height="387" frameX="-76" frameY="-497" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0009" x="1609" y="2613" width="575" height="387" frameX="-81" frameY="-494" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0010" x="1611" y="2224" width="579" height="387" frameX="-76" frameY="-497" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0011" x="1030" y="2579" width="577" height="390" frameX="-80" frameY="-498" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0012" x="568" y="1" width="570" height="506" frameX="-147" frameY="-376" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0013" x="1" y="1352" rotated="true" width="506" height="570" frameX="-147" frameY="-376" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0014" x="1167" y="1400" width="533" height="451" frameX="-198" frameY="-430" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0015" x="1167" y="1400" width="533" height="451" frameX="-198" frameY="-430" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0016" x="2245" y="1303" width="525" height="458" frameX="-233" frameY="-417" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0017" x="2245" y="1303" width="525" height="458" frameX="-233" frameY="-417" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0018" x="1702" y="1404" width="541" height="441" frameX="-216" frameY="-431" frameWidth="759" frameHeight="921"/>
+    <SubTexture name="tiky up-alt0019" x="1702" y="1404" width="541" height="441" frameX="-216" frameY="-431" frameWidth="759" frameHeight="921"/>
 </TextureAtlas>

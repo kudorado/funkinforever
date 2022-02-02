@@ -136,23 +136,23 @@ class PlayableCharacter extends Character
     // create animation offset for BF
     public function createAnimationOffsets():Void
     {
-        addOffset('idle', -6, -1);
-        addOffset("singUP", -56, 30);
-        addOffset("singRIGHT", -51, -8);
-        addOffset("singLEFT", 1, -7);
-        addOffset("singDOWN", -17, -53);
+        addOffset('idle', -0, -0);
+        addOffset("singUP", -0, 0);
+        addOffset("singRIGHT", -0, -0);
+        addOffset("singLEFT", 0, -0);
+        addOffset("singDOWN", -0, -0);
 
-        addOffset("singUPmiss", -48, 29);
-        addOffset("singRIGHTmiss", -8, 24);
-        addOffset("singLEFTmiss", -48, -18);
-        addOffset("singDOWNmiss", -13, -27);
-        addOffset("hey", -6, 4);
-        addOffset('scared', -7, 0);
+        addOffset("singUPmiss", -0, 0);
+        addOffset("singRIGHTmiss", -0, 0);
+        addOffset("singLEFTmiss", -0, -0);
+        addOffset("singDOWNmiss", -0, -0);
+        addOffset("hey", -0, 0);
+        addOffset('scared', -0, 0);
 
-        addOffset('hit', -6, 4);
-        addOffset('hurt', -6, 4);
-        addOffset('scared', -6, 4);
-        addOffset('dodge', -6, 4);
+        addOffset('hit', -0, 0);
+        addOffset('hurt', -0, 0);
+        addOffset('scared', -0, 0);
+        addOffset('dodge', -0, 0);
 
 
         playAnim('idle');
