@@ -91,7 +91,18 @@ class Note extends FlxSprite
 					reloadNote('Hell Note', 'nevada/notes/placeholderEX');
 
 				case 'EX Note':
+					ignoreNote = mustPress;
 					reloadNote("EX Note", 'nevada/notes/EX Note');
+					noteSplashTexture = 'HURTnoteSplashes';
+					if (isSustainNote)
+					{
+						missHealth = 0.2;
+					}
+					else
+					{
+						missHealth = 1;
+					}
+					hitCausesMiss = true;
 
 				case 'Eye Note':
 					reloadNote("Eye Note", 'notesEye');

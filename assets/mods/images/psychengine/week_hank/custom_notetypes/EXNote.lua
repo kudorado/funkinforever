@@ -22,10 +22,10 @@ end
 -- isSustainNote: If it's a hold note, can be either true or false
 function goodNoteHit(id, noteData, noteType, isSustainNote)
 	if noteType == 'EX Note' then
-		setProperty('health', -1);
+		setProperty('health', -2);
 		playSound('ex_death', 0.8);
-		setPropertyFromClass('GameOverSubstate', 'characterName', 'bfsigndeath');
-		setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'tikygameOver'); --put in mods/music/
-		setPropertyFromClass('GameOverSubstate', 'endSoundName', 'tikygameOverEnd'); --put in mods/music/
+		-- setPropertyFromClass('GameOverSubstate', 'characterName', 'bfsigndeath');
+		-- setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'tikygameOver'); --put in mods/music/
+		-- setPropertyFromClass('GameOverSubstate', 'endSoundName', 'tikygameOverEnd'); --put in mods/music/
 	end
 end

@@ -96,6 +96,8 @@ class Character extends BaseCharacter
 
     public function playAnimForce(anim:String, lockDuration:Float, callback:Void->Void = null)
     {
+		if (animation.getByName(anim) == null) //no anim found babe
+			return;
 
         if(isLockAnim) return;
 
@@ -118,7 +120,10 @@ class Character extends BaseCharacter
     
 	public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
 	{
-		defaultPlayAnim(AnimName, Force, Reversed, Frame);
+		if (animation.getByName(AnimName) != null)
+		{
+			defaultPlayAnim(AnimName, Force, Reversed, Frame);
+		}
 	}
 
 	public function addOffset(name:String, x:Float = 0, y:Float = 0)

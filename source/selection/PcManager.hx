@@ -601,7 +601,7 @@ class PcManager
 				return new Tankman(700, 300);
 
 			case 'spooky':
-				return new SpookySus(700, 425);
+				return new SpookySus(700, 375);
 
 			case 'lila':
 				return new LilaSus();

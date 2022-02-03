@@ -1921,11 +1921,22 @@ class GameState extends MusicBeatState
 			for (timer in modchartTimers) {
 				timer.active = true;
 			}
-
-			LoadingState.createBlackFadeIn(this, function()
+		
+			if (true)
 			{
-				openSubState(new GameOverSubstate(bf().getScreenPosition().x, bf().getScreenPosition().y));
-			}, camHUD, true);
+			// 	var bfX = bf() != null && bf().visible ? bf().x : bfPE.x;
+			// 	var bfY = bf() != null && bf().visible ? bf().y : bfPE.y;
+
+			// 	openSubState(new StoryGameOverSubstate(bfX, bfY, camFollowPos.x, camFollowPos.y));
+			// }
+			// else
+			// {
+				LoadingState.createBlackFadeIn(this, function()
+				{
+					openSubState(new GameOverSubstate(bf().getScreenPosition().x, bf().getScreenPosition().y));
+				}, camHUD, true);
+			}
+
 		}
 	}
 
@@ -4605,6 +4616,45 @@ class GameState extends MusicBeatState
 
 		if (!note.wasGoodHit)
 		{
+			if(botPlayShit && (note.ignoreNote || note.hitCausesMiss)) return;
+			if (note.hitCausesMiss)
+			{
+				noteMiss(note);
+				//TODO
+				// if (!note.noteSplashDisabled && !note.isSustainNote)
+				// {
+				// 	spawnNoteSplashOnNote(note);
+				// }
+
+				switch (note.noteType)
+				{
+					case 'Hurt Note' | 'EX Note' | 'Hell Note': // Hurt note
+						if (bf() != null && bf().animation.getByName('hurt') != null)
+						{
+							bf().playAnim('hurt', true);
+							bf().specialAnim = true;
+						}
+
+						if (bfPE != null && bfPE.animation.getByName('hurt') != null)
+						{
+							bfPE.playAnim('hurt', true);
+							bfPE.specialAnim = true;
+						}
+
+				}
+
+				note.wasGoodHit = true;
+				if (!note.isSustainNote)
+				{
+					note.kill();
+					notes.remove(note, true);
+					note.destroy();
+				}
+				return;
+			}
+
+
+
 			if (!note.isSustainNote)
 			{
 				popUpScore(note);
