@@ -75,6 +75,13 @@ import openfl.display.BlendMode;
 import openfl.display.StageQuality;
 import openfl.filters.ShaderFilter;
 
+
+//custom transition data
+import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
+import flixel.addons.transition.FlxTransitionableState;
+import flixel.addons.transition.TransitionData;
+import flixel.graphics.FlxGraphic;
+
 #if sys
 import Sys;
 import sys.FileSystem;
@@ -87,8 +94,9 @@ class GameState extends MusicBeatState
 
 	public static var noteTypeList:Array<String> = // Used for backwards compatibility with 0.1 - 0.3.2 charts, though, you should add your hardcoded custom note types here too.
 		['', 'Alt Animation', 'Hey!', 'Hurt Note', 'GF Sing', 'No Animation'];
-//Lua and Psych engine friends
-//-------------------------------------------------
+
+	// Lua and Psych engine friends
+	//-------------------------------------------------
 	var debugNum:Int = 0;
 	private var noteTypeMap:Map<String, Bool> = new Map<String, Bool>();
 	private var eventPushedMap:Map<String, Bool> = new Map<String, Bool>();
@@ -172,7 +180,9 @@ class GameState extends MusicBeatState
 
 
 			default:
-				if (!eventPushedMap.exists(event[1]))
+				var evKey = Std.parseInt(event[1]);
+
+				if ((Math.isNaN(evKey) || evKey != -1) && !eventPushedMap.exists(event[1]))
 				{
 					trace('Pushed event: ' + event[1]);
 					eventPushedMap.set(event[1], true);
@@ -1511,6 +1521,7 @@ class GameState extends MusicBeatState
 	override public function create()
 	{
 
+
 		instance = this;
 		
 		AdMob.hideBanner();
@@ -1550,6 +1561,7 @@ class GameState extends MusicBeatState
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 
+		trace('total camera: ' + FlxG.cameras.list.length);
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD);
 		FlxG.cameras.add(camOther);
@@ -1562,6 +1574,9 @@ class GameState extends MusicBeatState
 
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
+
+
+
 
 		//@notrace('INFORMATION ABOUT WHAT U PLAYIN WIT:\nFRAMES: ' + Conductor.safeFrames + '\nZONE: ' + Conductor.safeZoneOffset + '\nTS: '
 			// + Conductor.timeScale + '\nBotPlay : ' + botPlayShit);
@@ -1622,7 +1637,7 @@ class GameState extends MusicBeatState
 		for (notetype in noteTypeMap.keys())
 		{
 			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
-			trace('try load custom note: ' + luaToLoad);
+			// trace('try load custom: ' + luaToLoad);
 			if (FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
@@ -1632,7 +1647,7 @@ class GameState extends MusicBeatState
 		for (event in eventPushedMap.keys())
 		{
 			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
-			trace('try load custom event: ' + luaToLoad);
+			trace('load custom event: ' + luaToLoad);
 			if(FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
@@ -1647,6 +1662,7 @@ class GameState extends MusicBeatState
 		eventPushedMap = null;
 
 
+		trace('1653');
 		camFollow = new FlxObject(0, 0, 1, 1);
 
 		var daX = songPlayer.bf.x;
@@ -1844,6 +1860,7 @@ class GameState extends MusicBeatState
 		npsTxt.cameras = [camHUD];
 		songName.cameras = [camHUD];
 
+		trace('1851');
 
 		// // doof.cameras = [camHUD];
 		// if (FlxG.save.data.songPosition)
@@ -1888,7 +1905,7 @@ class GameState extends MusicBeatState
 		Controller._pad.cameras = [camHUD];
 
 
-		createBlackFadeOut();
+		trace('1896');
 
 		calculateNPS();
 		
@@ -1896,11 +1913,18 @@ class GameState extends MusicBeatState
 
 		createBounds();
 
-		super.create();
-		LoadingState.hasCachedSong = true;
 
+
+
+		super.create();
+		SelectionState.didLoadout = false;
+		LoadingState.hasCachedSong = true;
 		AdMob.hideBanner();
-	
+
+
+		createBlackFadeOut();
+
+
 	}
 
 	function whereAmI()
@@ -2332,13 +2356,16 @@ class GameState extends MusicBeatState
 				else
 				{
 				}
-				// if not type wasn't add to list, just add it.
-				if (!noteTypeMap.exists(swagNote.noteType))
+
+				if (swagNote.noteType != null && swagNote.noteType != '')
 				{
-					trace('add custom note type!');
-					noteTypeMap.set(swagNote.noteType, true);
+					// if not type wasn't add to list, just add it.
+					if (!noteTypeMap.exists(swagNote.noteType))
+					{
+						// trace('add custom note type!');
+						noteTypeMap.set(swagNote.noteType, true);
+					}
 				}
-				
 
 			}
 			daBeats += 1;
@@ -2708,19 +2735,21 @@ class GameState extends MusicBeatState
 	}
 	public function switchState(callback:Void->Void)
 	{
+		LoadingState.setDynamicTransition();
+		
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
 		restartGame = true;
-		camHUD.visible = true;
+		camOther.visible = true;
 
 		var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
 
-		blackScreen.cameras = [camHUD];
+		blackScreen.cameras = [camOther];
 		blackScreen.alpha = 0;
 		add(blackScreen);
 
-		FlxTween.tween(blackScreen, {alpha: 1}, {});
+		FlxTween.tween(blackScreen, {alpha: 1}, 1,  {});
 		new FlxTimer().start(1.1, function(tmr:FlxTimer)
 		{
 			//place shit here
@@ -3675,7 +3704,7 @@ class GameState extends MusicBeatState
 		restartGame = true;
 		vocals.stop();
 		FlxG.sound.music.stop();
-		createEmptyBlack();
+		// createEmptyBlack();
 	}
 	
 	public function nextSong()
@@ -3784,14 +3813,14 @@ class GameState extends MusicBeatState
 		});
 	
 	}
-
 	private function createBlackFadeOut()
 	{
+		// LoadingState.createWeekLoadout(this, null, camOther, true);
 		var blackShit:FlxSprite = new FlxSprite().makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 		blackShit.scrollFactor.set(0.5, 0.5);
-		blackShit.cameras = [camHUD];
+		blackShit.cameras = [camOther];
 		add(blackShit);
-		FlxTween.tween(blackShit, {alpha: 0}, 0.5, {
+		FlxTween.tween(blackShit, {alpha: 0}, 1.5, {
 			ease: FlxEase.quartInOut,
 			onComplete: function(callback:FlxTween)
 			{

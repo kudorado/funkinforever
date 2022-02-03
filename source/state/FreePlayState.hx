@@ -439,7 +439,12 @@ class FreePlayState extends MusicBeatState
 		GameState.storyDifficulty = StoryState.curDifficulty;
 		GameState.storyWeek = songs[curSelected].week;
 
-		LoadingState.loadAndSwitchState(new SelectionState());
+		LoadingState.loadWeekSplash(this, function()
+		{
+			FlxG.switchState(new SelectionState());
+		});
+
+		// LoadingState.loadAndSwitchState(new SelectionState());
 	}
 
 	function changeDiff(change:Int = 0)

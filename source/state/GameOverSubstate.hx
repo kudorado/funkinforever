@@ -142,6 +142,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	{
         GameState.instance.revivePlayer();
         close();
+        GameState.instance.resyncTweens();
     }
 
     override function update(elapsed:Float)
@@ -175,8 +176,6 @@ class GameOverSubstate extends MusicBeatSubstate
                     #if !mobile
                     onRewarded("shit");
                     #end
-
-                    GameState.instance.resyncTweens();
 
                 case "Restart Song":
 					GameState.instance.gameNa();

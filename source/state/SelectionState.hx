@@ -25,11 +25,21 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.net.curl.CURLCode;
 
+//custom transition data
+import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
+import flixel.addons.transition.FlxTransitionableState;
+import flixel.addons.transition.TransitionData;
+import flixel.graphics.FlxGraphic;
+import flixel.math.FlxRect;
+import flixel.math.FlxPoint;
+
 using StringTools;
 
 class SelectionState extends MusicBeatState
 {
 	static public var instance:SelectionState;
+
+	static public var didLoadout:Bool;
 
 	var selectedItem:Item;
 
@@ -385,10 +395,16 @@ class SelectionState extends MusicBeatState
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
-				LoadingState.loadWeekSplash(this, function()
+				LoadingState.createBlackFadeIn(this, function()
 				{
-					FlxG.switchState(new GameState());
+					didLoadout = true;
+					LoadingState.setStaticTransition();
+					LoadingState.loadAndSwitchState(new GameState());
 				});
+			
+				// LoadingState.createWeekLoadout(this, function()
+				// {
+				// });
 			});
 		}
 		else

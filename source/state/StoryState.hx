@@ -363,7 +363,10 @@ class StoryState extends MusicBeatState
 			GameState.campaignScore = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				LoadingState.loadAndSwitchState(new SelectionState(), true);
+				LoadingState.createWeekLoadout(this, function()
+				{
+					LoadingState.loadAndSwitchState(new SelectionState(), true);
+				});
 			});
 		}
 	}

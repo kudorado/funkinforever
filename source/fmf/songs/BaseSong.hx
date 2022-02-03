@@ -241,7 +241,7 @@ class BaseSong
 		}
 		// detect Psych engine character or not
 		var daPE = Type.getClassName(Type.getClass(gf));
-		trace("gfShit: " + daPE);
+		// trace("gfShit: " + daPE);
 
 		var PE = daPE.toLowerCase() == "fmf.characters.characterpe";
 
@@ -315,7 +315,7 @@ class BaseSong
 
 		//detect Psych engine character or not
 		var daPE = Type.getClassName(Type.getClass(dad));
-		trace("dadShit: " + daPE);
+		// trace("dadShit: " + daPE);
 
 		var PE =  daPE.toLowerCase() == "fmf.characters.characterpe";
 

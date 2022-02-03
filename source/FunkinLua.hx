@@ -942,7 +942,7 @@ class FunkinLua {
 			}
 			else
 			{
-				trace('oh shit, no tag was found, cant add: ' + tag);
+				// trace('oh shit, no tag was found, cant add: ' + tag);
 			}
 
 		});
