@@ -4553,7 +4553,7 @@ class GameState extends MusicBeatState
 				var isSus = daNote.isSustainNote;
 
 				callOnLuas('noteMiss', [dNote, nData, nType, isSus]);
-				trace('callonlua note miss: ' + nType);
+				// trace('callonlua note miss: ' + nType);
 			}
 
 			updateAccuracy();
@@ -4876,22 +4876,20 @@ class GameState extends MusicBeatState
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
-		if (playAsDad)
+		// if (playAsDad)
+		// {
+		if (!dad().animation.curAnim.name.startsWith("idle")
+				&& dad().animation.curAnim.finished)
 		{
-			if (!dad().animation.curAnim.name.startsWith("idle")
-				 && dad().animation.curAnim.finished)
-			{
-				playAnimAllDad('idle');
-			}
-		}	
-		else
-		{
-			if (!bf().animation.curAnim.name.startsWith("idle")
-				 && bf().animation.curAnim.finished)
-			{
-				playAnimAllBF('idle');
-			}
+			playAnimAllDad('idle');
 		}
+
+		if (!bf().animation.curAnim.name.startsWith("idle")
+				&& bf().animation.curAnim.finished)
+		{
+			playAnimAllBF('idle');
+		}
+
 
 		setOnLuas('curBeat', curBeat);//DAWGG?????
 		callOnLuas('onBeatHit', []);

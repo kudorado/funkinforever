@@ -32,14 +32,14 @@ end
 
 function noteMiss(id, direction, noteType, isSustainNote)
 	if noteType == 'Bullet_Note' and difficulty >= 2 then
-		setProperty('health', -1);
+		setProperty('health', getProperty('health') -1);
 		playSound('hankshoot', 0.5);
 		characterPlayAnim('dad', shootAnims[direction + 1], false, true);
 		characterPlayAnim('boyfriend', 'hurt', true, true);
 
 		cameraShake('camGame', 0.01, 0.2)
 	elseif noteType == 'Bullet_Note' and difficulty == 1 then
-		setProperty('health', -0.5);
+		setProperty('health',  getProperty('health')  -0.5);
 		runTimer('bleed', 0.2, 20);
 		playSound('hankded', 0.6);
 		characterPlayAnim('dad', shootAnims[direction + 1], false, true);
@@ -54,6 +54,6 @@ function onTimerCompleted(tag, loops, loopsLeft)
 	-- loops = how many loops it will have done when it ends completely
 	-- loopsLeft = how many are remaining
 	if loopsLeft >= 1 then
-		setProperty('health', getProperty('health')-0.001);
+		setProperty('health', getProperty('health')-0.025);
 	end
 end

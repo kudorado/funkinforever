@@ -710,7 +710,7 @@ class FunkinLua {
 		});
 
 		Lua_helper.add_callback(lua, "precacheSound", function(name:String) {
-			// CoolUtil.precacheSound(name);
+			CoolUtil.precacheSound(name);
 		});
 		Lua_helper.add_callback(lua, "triggerEvent", function(name:String, arg1:Dynamic, arg2:Dynamic) {
 			var value1:String = arg1;
