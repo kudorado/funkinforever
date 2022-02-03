@@ -276,7 +276,8 @@ class CharacterPE extends Character
 
 	public override function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
 	{
-		pePlayAnim(AnimName, Force, Reversed, Frame);
+		if (animation.getByName(AnimName) != null)
+			pePlayAnim(AnimName, Force, Reversed, Frame);
 	}
 
 	public override function addOffset(name:String, x:Float = 0, y:Float = 0)

@@ -63,7 +63,7 @@ class Note extends FlxSprite
 			switch (value)
 			{
 				case 'Hurt Note':
-					ignoreNote = mustPress;
+					ignoreNote = true;
 					reloadNote('HURT');
 					noteSplashTexture = 'HURTnoteSplashes';
 					if (isSustainNote)
@@ -74,7 +74,7 @@ class Note extends FlxSprite
 					{
 						missHealth = 0.3;
 					}
-					hitCausesMiss = true;
+					hitCausesMiss = false;
 				case 'No Animation':
 					// shit
 					noAnimation = true;
@@ -88,10 +88,14 @@ class Note extends FlxSprite
 					// gfNote = true;
 
 				case 'Hell Note':
+					ignoreNote = true;
+					hitCausesMiss = true;
 					reloadNote('Hell Note', 'nevada/notes/placeholderEX');
 
 				case 'EX Note':
-					ignoreNote = mustPress;
+					ignoreNote = true;
+					hitCausesMiss = true;
+
 					reloadNote("EX Note", 'nevada/notes/EX Note');
 					noteSplashTexture = 'HURTnoteSplashes';
 					if (isSustainNote)
@@ -100,15 +104,14 @@ class Note extends FlxSprite
 					}
 					else
 					{
-						missHealth = 1;
+						missHealth = 2;
 					}
-					hitCausesMiss = true;
 
 				case 'Eye Note':
 					reloadNote("Eye Note", 'notesEye');
 					
 				case 'Play Animation':
-					this.visible = false;
+					// this.visible = false;
 
 
 			}

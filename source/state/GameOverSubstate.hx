@@ -176,8 +176,9 @@ class GameOverSubstate extends MusicBeatSubstate
                     onRewarded("shit");
                     #end
 
-                case "Restart Song":
+                    GameState.instance.resyncTweens();
 
+                case "Restart Song":
 					GameState.instance.gameNa();
                     AdMob.showInterstitial(60);
                     // FlxG.sound.play(Paths.music('gameOverEnd'));

@@ -2474,6 +2474,16 @@ class GameState extends MusicBeatState
 			if (!startTimer.finished)
 				startTimer.active = false;
 
+			for (tween in modchartTweens)
+			{
+				tween.active = false;
+			}
+			for (timer in modchartTimers)
+			{
+				timer.active = false;
+			}
+
+
 			// if(blammedLightsBlackTween != null)
 			// 	blammedLightsBlackTween.active = false;
 			// if(phillyCityLightsEventTween != null)
@@ -2499,18 +2509,36 @@ class GameState extends MusicBeatState
 			// 	}
 			// }
 
-			for (tween in modchartTweens) {
-				tween.active = false;
-			}
-			for (timer in modchartTimers) {
-				timer.active = false;
-			}
+		
 
 		}
 
 		super.openSubState(SubState);
 	}
 
+
+	public function resyncTweens()
+	{
+		if (!startTimer.finished)
+			startTimer.active = true;
+		// if (finishTimer != null && !finishTimer.finished)
+			// finishTimer.active = true;
+
+		if (songSpeedTween != null)
+			songSpeedTween.active = true;
+		
+		if (!startTimer.finished)
+			startTimer.active = true;
+
+		for (tween in modchartTweens) {
+			tween.active = true;
+		}
+		for (timer in modchartTimers) {
+			timer.active = true;
+		}
+
+
+	}
 
 	override function closeSubState()
 	{
@@ -2523,14 +2551,9 @@ class GameState extends MusicBeatState
 					resyncVocals();
 				}
 
-				if (!startTimer.finished)
-					startTimer.active = true;
-				// if (finishTimer != null && !finishTimer.finished)
-					// finishTimer.active = true;
 
-				if (songSpeedTween != null)
-					songSpeedTween.active = true;
-	
+				resyncTweens();
+
 				//Todo
 				//do it later due no case use and lazy dude.
 		
@@ -2550,16 +2573,6 @@ class GameState extends MusicBeatState
 				// }
 
 
-				if (!startTimer.finished)
-					startTimer.active = true;
-
-				for (tween in modchartTweens) {
-					tween.active = true;
-				}
-				for (timer in modchartTimers) {
-					timer.active = true;
-				}
-	
 				// callOnLuas('onResume', []);
 
 				paused = false;
@@ -3195,7 +3208,8 @@ class GameState extends MusicBeatState
 					}
 				}
 
-				if (!daNote.mustPress && daNote.wasGoodHit)
+				//opponent note hit
+				if (!daNote.mustPress && daNote.wasGoodHit && !daNote.ignoreNote)
 				{
 					camZooming = true;
 
@@ -3236,6 +3250,19 @@ class GameState extends MusicBeatState
 						}
 						else
 							playAnimAllBF(fuckNote, true);
+
+								
+						var isSus:Bool = daNote.isSustainNote; // GET OUT OF MY HEAD, GET OUT OF MY HEAD, GET OUT OF MY HEAD
+						var leData:Int = Math.round(Math.abs(daNote.noteData));
+						var leType:String = daNote.noteType;
+
+						// process note ev
+						// enemy good note hit
+						callOnLuas('goodNoteHit', [notes.members.indexOf(daNote), leData, leType, isSus]);
+				
+						if (leType != '')
+							trace('calllua: ' + leType);
+						
 					}
 					else
 					{
@@ -3249,6 +3276,8 @@ class GameState extends MusicBeatState
 
 
 					}
+
+			
 
 					//enemy note highlight
 					if (FlxG.save.data.cpuStrums)
@@ -3328,8 +3357,10 @@ class GameState extends MusicBeatState
 				// WIP interpolation shit? Need to fix the pause issue
 				// daNote.y = (strumLine.y - (songTime - daNote.strumTime) * (0.45 * SONG.speed));
 
-				if ((daNote.mustPress && daNote.tooLate && !FlxG.save.data.downscroll || daNote.mustPress && daNote.tooLate && FlxG.save.data.downscroll)
-					&& daNote.mustPress)
+				if ((daNote.mustPress &&  daNote.tooLate && !FlxG.save.data.downscroll) ||
+					(daNote.mustPress && daNote.tooLate && FlxG.save.data.downscroll))
+
+					
 				{
 					if (daNote.isSustainNote && daNote.wasGoodHit)
 					{
@@ -3344,7 +3375,7 @@ class GameState extends MusicBeatState
 						if(!isMidSongEvent)
 							vocals.volume = 0;
 
-						if (theFunne)
+						if (theFunne && !daNote.ignoreNote)
 							noteMiss(daNote.noteData, daNote);
 					}
 
@@ -4365,7 +4396,7 @@ class GameState extends MusicBeatState
 		{
 			if (dad().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || botPlayShit))
 			{
-				if (dad().animation.curAnim.name.startsWith('sing') && !dad().animation.curAnim.name.endsWith('miss'))
+				if (!dad().animation.curAnim.name.endsWith('miss'))
 				{
 					// && (bf().animation.curAnim != null && bf().animation.curAnim.finished))
 					playAnimAllDad('idle');
@@ -4378,8 +4409,7 @@ class GameState extends MusicBeatState
 		{
 			if (bf().holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || botPlayShit))
 			{
-				if (bf().animation.curAnim.name.startsWith('sing')
-					&& !bf().animation.curAnim.name.endsWith('miss'))
+				if (!bf().animation.curAnim.name.endsWith('miss'))
 					// && (bf().animation.curAnim != null && bf().animation.curAnim.finished))
 					playAnimAllBF('idle');
 			}
@@ -4523,8 +4553,8 @@ class GameState extends MusicBeatState
 				var isSus = daNote.isSustainNote;
 
 				callOnLuas('noteMiss', [dNote, nData, nType, isSus]);
+				trace('callonlua note miss: ' + nType);
 			}
-			// callOnLuas('noteMiss', [notes.members.indexOf(daNote), daNote.noteData, daNote.noteType, daNote.isSustainNote]);
 
 			updateAccuracy();
 
@@ -4616,11 +4646,13 @@ class GameState extends MusicBeatState
 
 		if (!note.wasGoodHit)
 		{
-			if(botPlayShit && (note.ignoreNote || note.hitCausesMiss)) return;
+			if (botPlayShit && (note.ignoreNote || note.hitCausesMiss))
+				return;
+
 			if (note.hitCausesMiss)
 			{
 				noteMiss(note);
-				//TODO
+				// TODO
 				// if (!note.noteSplashDisabled && !note.isSustainNote)
 				// {
 				// 	spawnNoteSplashOnNote(note);
@@ -4644,12 +4676,20 @@ class GameState extends MusicBeatState
 				}
 
 				note.wasGoodHit = true;
+				var isSus:Bool = note.isSustainNote; // GET OUT OF MY HEAD, GET OUT OF MY HEAD, GET OUT OF MY HEAD
+				var leData:Int = Math.round(Math.abs(note.noteData));
+				var leType:String = note.noteType;
+
+				//process note ev
+				callOnLuas('goodNoteHit', [notes.members.indexOf(note), leData, leType, isSus]);
+				
 				if (!note.isSustainNote)
 				{
 					note.kill();
 					notes.remove(note, true);
 					note.destroy();
 				}
+
 				return;
 			}
 

@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				8,
-				-84
+				38,
+				-81
 			],
 			"loop": false,
 			"anim": "idle-alt",
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				101,
-				11
+				108,
+				2
 			],
 			"loop": false,
 			"anim": "singRIGHT",
@@ -35,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				-15,
-				11
+				95,
+				7
 			],
 			"loop": false,
 			"anim": "RIGHTshoot",
@@ -46,8 +46,8 @@
 		},
 		{
 			"offsets": [
-				88,
-				11
+				102,
+				0
 			],
 			"loop": false,
 			"anim": "singRIGHT-alt",
@@ -57,8 +57,8 @@
 		},
 		{
 			"offsets": [
-				46,
-				15
+				156,
+				5
 			],
 			"loop": false,
 			"anim": "LEFTshoot",
@@ -68,8 +68,8 @@
 		},
 		{
 			"offsets": [
-				8,
-				1
+				2,
+				0
 			],
 			"loop": false,
 			"anim": "singUP",
@@ -79,7 +79,7 @@
 		},
 		{
 			"offsets": [
-				42,
+				82,
 				12
 			],
 			"loop": false,
@@ -135,8 +135,8 @@
 		},
 		{
 			"offsets": [
-				322,
-				16
+				311,
+				8
 			],
 			"indices": [
 				9,
@@ -152,8 +152,8 @@
 		},
 		{
 			"offsets": [
-				322,
-				16
+				302,
+				7
 			],
 			"indices": [],
 			"fps": 24,
@@ -163,8 +163,8 @@
 		},
 		{
 			"offsets": [
-				9,
-				0
+				119,
+				3
 			],
 			"indices": [],
 			"fps": 24,
@@ -174,8 +174,8 @@
 		},
 		{
 			"offsets": [
-				101,
-				11
+				104,
+				6
 			],
 			"indices": [
 				3,
@@ -192,8 +192,8 @@
 		},
 		{
 			"offsets": [
-				8,
-				1
+				2,
+				0
 			],
 			"indices": [
 				9,
@@ -209,8 +209,8 @@
 		},
 		{
 			"offsets": [
-				42,
-				12
+				83,
+				13
 			],
 			"indices": [
 				9,

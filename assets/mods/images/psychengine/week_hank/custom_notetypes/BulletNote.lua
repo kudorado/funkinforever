@@ -17,7 +17,7 @@ end
 local shootAnims = {"LEFTshoot", "DOWNshoot", "UPshoot", "RIGHTshoot"}
 function goodNoteHit(id, direction, noteType, isSustainNote)
 	if noteType == 'Bullet_Note' then
-		if difficulty == 2 then
+		if difficulty >= 2 then
 			playSound('hankshoot', 0.5);
 		end
 		characterPlayAnim('dad', shootAnims[direction + 1], false, true);
@@ -29,6 +29,7 @@ function goodNoteHit(id, direction, noteType, isSustainNote)
     end
 end
 
+
 function noteMiss(id, direction, noteType, isSustainNote)
 	if noteType == 'Bullet_Note' and difficulty >= 2 then
 		setProperty('health', -1);
@@ -38,7 +39,7 @@ function noteMiss(id, direction, noteType, isSustainNote)
 
 		cameraShake('camGame', 0.01, 0.2)
 	elseif noteType == 'Bullet_Note' and difficulty == 1 then
-		setProperty('health', getProperty('health')-0.8);
+		setProperty('health', -0.5);
 		runTimer('bleed', 0.2, 20);
 		playSound('hankded', 0.6);
 		characterPlayAnim('dad', shootAnims[direction + 1], false, true);
