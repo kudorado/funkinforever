@@ -35,6 +35,10 @@ import flixel.math.FlxPoint;
 
 class LoadingState extends MusicBeatState
 {
+
+	static public var didLoadout:Bool;
+
+    
     inline static var MIN_TIME = 1.0;
 
     var target:FlxState;

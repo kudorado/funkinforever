@@ -224,7 +224,7 @@ class MenuState extends MusicBeatState
 					{
 						//sky ugh
 						magenta.loadGraphic(Paths.image('menuDesat'));
-						// magenta.setGraphicSize(Std.int(magenta.width * 1.1));
+						magenta.setGraphicSize(Std.int(magenta.width));
 						magenta.screenCenter();
 						magenta.antialiasing = true;
 						magenta.scaleToFit();

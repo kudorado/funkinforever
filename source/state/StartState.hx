@@ -145,6 +145,7 @@ class StartState extends MusicBeatState
 
 
 		var daSplash:FlxSprite = new FlxSprite().loadGraphic(Paths.image('splash'));
+
 		daSplash.screenCenter();
 		daSplash.scaleToFit();
 
