@@ -82,21 +82,19 @@ class MenuState extends MusicBeatState
 		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
 		magenta.scrollFactor.x = 0;
 		magenta.scrollFactor.y = 0;
-		magenta.setGraphicSize(Std.int(magenta.width * 1.1));
-		magenta.updateHitbox();
+		// magenta.setGraphicSize(Std.int(magenta.width * 1.1));
+		// magenta.updateHitbox();
 		magenta.screenCenter();
 		magenta.visible = false;
 		magenta.antialiasing = true;
 
-		magenta.scaleToFit();
-
 		// magenta.color = 0xFFfd719b;
 
-		if (Main.daTabletShit)
-		{
-			magenta.scale.x *= Main.shitZoom;
-			magenta.scale.y *= Main.shitZoom;
-		}
+		// if (Main.daTabletShit)
+		// {
+		// 	magenta.scale.x *= Main.shitZoom;
+		// 	magenta.scale.y *= Main.shitZoom;
+		// }
 
 		add(magenta);
 		// magenta.scrollFactor.set();
@@ -214,7 +212,7 @@ class MenuState extends MusicBeatState
 			{
 				if (optionShit[curSelected] == 'donate')
 				{
-					fancyOpenURL("https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game");
+					// fancyOpenURL("https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game");
 				}
 				else
 				{
@@ -225,6 +223,12 @@ class MenuState extends MusicBeatState
 					if (optionShit[curSelected] == 'freeplay')
 					{
 						//sky ugh
+						magenta.loadGraphic(Paths.image('menuDesat'));
+						// magenta.setGraphicSize(Std.int(magenta.width * 1.1));
+						magenta.screenCenter();
+						magenta.antialiasing = true;
+						magenta.scaleToFit();
+
 						FlxG.sound.play(Paths.sound('sky-ugh'), 2);
 					}
 					else
@@ -232,9 +236,9 @@ class MenuState extends MusicBeatState
 						// remove(magenta);
 						magenta.loadGraphic(Paths.image('menuDeshit'));
 						// magenta.setGraphicSize(Std.int(magenta.width * 1.1));
-						// magenta.updateHitbox();
-						// magenta.screenCenter();
-						// magenta.antialiasing = true;
+						magenta.screenCenter();
+						magenta.antialiasing = true;
+						magenta.scaleToFit();
 						// add(magenta);
 						FlxG.sound.play(Paths.sound('gf-ugh'), 2);
 					}
@@ -247,11 +251,11 @@ class MenuState extends MusicBeatState
 							magenta.visible = true;
 						}, 1);
 					}
-
+				
 					menuItems.forEach(function(spr:FlxSprite)
 					{
 						if (curSelected != spr.ID)
-	{
+						{
 							FlxTween.tween(spr, {alpha: 0}, 1.3, {
 								ease: FlxEase.quadOut,
 								onComplete: function(twn:FlxTween)

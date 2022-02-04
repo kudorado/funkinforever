@@ -48,27 +48,29 @@ class WeekCompleteSubState extends MusicBeatSubstate
         bg.alpha = 0;
         bg.scrollFactor.set();
 		
-        if (Main.daTabletShit)
-		{
-			bg.scale.x = Main.shitZoom;
-			bg.scale.y = Main.shitZoom;
-		}
+        // if (Main.daTabletShit)
+		// {
+		// 	bg.scale.x = Main.shitZoom;
+		// 	bg.scale.y = Main.shitZoom;
+		// }
 
         add(bg);
 
         var bg1:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('victoryBG'));
         bg1.scrollFactor.x = 0;
         bg1.scrollFactor.y = 0;
-        bg1.setGraphicSize(Std.int(bg.width * 1));
-        bg1.updateHitbox();
+        // bg1.setGraphicSize(Std.int(bg.width * 1));
+        // bg1.updateHitbox();
         bg1.screenCenter();
+        bg1.scaleToFit();
+
         bg1.antialiasing = true;
 		
-        if (Main.daTabletShit)
-		{
-			bg1.scale.x = Main.shitZoom;
-			bg1.scale.y = Main.shitZoom;
-		}
+        // if (Main.daTabletShit)
+		// {
+		// 	bg1.scale.x = Main.shitZoom;
+		// 	bg1.scale.y = Main.shitZoom;
+		// }
 
         add(bg1);
 

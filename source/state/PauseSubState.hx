@@ -51,11 +51,11 @@ class PauseSubState extends MusicBeatSubstate
 		bg.alpha = 0;
 		bg.scrollFactor.set();
 
-		if (Main.daTabletShit)
-		{
-			bg.scale.x = 1.2;
-			bg.scale.y = 1.2;
-		}
+		// if (Main.daTabletShit)
+		// {
+		// 	bg.scale.x = 1.2;
+		// 	bg.scale.y = 1.2;
+		// }
 
 
 		add(bg);
@@ -111,7 +111,7 @@ class PauseSubState extends MusicBeatSubstate
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
 		Controller.init(this, UP_DOWN, A);
-        Controller._pad.cameras = [GameState.instance.camHUD];
+        Controller._pad.cameras = [GameState.instance.camOther];
 
 
 	}

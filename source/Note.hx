@@ -28,7 +28,8 @@ class Note extends FlxSprite
 
 	public var strumTime:Float = 0;
 	public var texture:String = '';
-	//shit
+	public var noteSplashDisabled:Bool = false;
+
 
 
 	public var mustPress:Bool = false;

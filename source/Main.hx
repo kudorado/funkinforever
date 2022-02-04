@@ -78,6 +78,7 @@ class Main extends Sprite
 		// 
 		// var stageWidth:Int = 2688;
 		// var stageHeight:Int = 1242;
+		trace(stageWidth + ',' + stageHeight);
 		
 		var kudoradoHandsome:Bool = true;
 		var daFactor:Float = (stageWidth / (stageHeight * 1.0));

@@ -58,22 +58,25 @@ class GameOverSubstate extends MusicBeatSubstate
         bg.alpha = 0;
         bg.scrollFactor.set();
 
-        if (Main.daTabletShit)
-		{
-			bg.scale.x = Main.fuckZoom;
-			bg.scale.y = Main.fuckZoom;
-		}
+        // if (Main.daTabletShit)
+		// {
+		// 	bg.scale.x = Main.fuckZoom;
+		// 	bg.scale.y = Main.fuckZoom;
+		// }
 
         add(bg);
 
         var bg1:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('pauseBG'));
         bg1.scrollFactor.x = 0;
         bg1.scrollFactor.y = 0;
-        bg1.setGraphicSize(Std.int(bg.width * 1));
-        bg1.updateHitbox();
+        // bg1.setGraphicSize(Std.int(bg.width * 1));
         bg1.screenCenter();
+        bg1.scaleToFit();
+
         bg1.antialiasing = true;
         add(bg1);
+
+
 
 
         var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
@@ -129,12 +132,15 @@ class GameOverSubstate extends MusicBeatSubstate
         changeSelection();
 
 
+
+
+		LoadingState.createBlackFadeOut(this, GameState.instance.camHUD);
+
         cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
         Controller.init(this, UP_DOWN, A);
-        Controller._pad.cameras = [GameState.instance.camHUD];
+        Controller._pad.cameras = [GameState.instance.camOther];
 
-		LoadingState.createBlackFadeOut(this, GameState.instance.camHUD);
 
     }
 

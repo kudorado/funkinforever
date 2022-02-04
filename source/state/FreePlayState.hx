@@ -66,6 +66,7 @@ class FreePlayState extends MusicBeatState
 		bg.screenCenter();
 		bg.antialiasing = true;
 		bg.scaleToFit();
+
 	}
 
 	function removeOldWeek()
@@ -213,16 +214,17 @@ class FreePlayState extends MusicBeatState
 		bg = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		bg.scrollFactor.x = 0;
 		bg.scrollFactor.y = 0.10;
-		bg.setGraphicSize(Std.int(bg.width * 1.1));
-		bg.updateHitbox();
+		// bg.setGraphicSize(Std.int(bg.width * 1.1));
+		// bg.updateHitbox();
 		bg.screenCenter();
+		bg.scaleToFit();
 		bg.antialiasing = true;
 
-		if (Main.daTabletShit)
-		{
-			bg.scale.x *= Main.shitZoom;
-			bg.scale.y *= Main.shitZoom;
-		}
+		// if (Main.daTabletShit)
+		// {
+		// 	bg.scale.x *= Main.shitZoom;
+		// 	bg.scale.y *= Main.shitZoom;
+		// }
 
 		add(bg);
 
