@@ -274,14 +274,14 @@ class LoadingState extends MusicBeatState
 
         var blackScreen:FlxSprite = new FlxSprite(0, 0);
         blackScreen.loadGraphic(Paths.image("loading/" + rand));
-        blackScreen.setGraphicSize(Std.int(FlxG.width), Std.int(FlxG.height));
         blackScreen.antialiasing = true;
         blackScreen.screenCenter();
+        blackScreen.scaleToFit();
 
         var loading:FlxSprite = new FlxSprite(0, 0);
         loading.loadGraphic(Paths.image("loading/loading"));
-        loading.setGraphicSize(Std.int(FlxG.width), Std.int(FlxG.height));
         loading.screenCenter();
+        blackScreen.scaleToFit();
         loading.antialiasing = true;
 
         if (cam == null)

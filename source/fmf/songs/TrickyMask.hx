@@ -47,11 +47,6 @@ class TrickyMask extends SongPlayer
 	}
 
 	
-	override function playerMissNoteEvent()
-	{
-		if (FlxG.random.bool(4) && !clown.spookyRendered)
-			clown.createMissText(dad.x, dad.y);
-	}
 
 
 	override function createDadAnimations():Void
@@ -87,7 +82,13 @@ class TrickyMask extends SongPlayer
 		clown.update(elapsed);
 
 	}
-
+	
+	override function playerMissNoteEvent()
+	{
+		if (FlxG.random.bool(4) && !clown.spookyRendered)
+			clown.createMissText(dad.x, dad.y);
+	}
+		
 	override function midSongStepUpdate()
 	{
 		super.midSongStepUpdate();

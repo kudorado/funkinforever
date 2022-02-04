@@ -1636,33 +1636,48 @@ class GameState extends MusicBeatState
 			//@notrace('song looks gucci');
 
 		generateSong(CURRENT_SONG);
+
+		trace('fffff 1');
 		#if LUA_ALLOWED
 		for (notetype in noteTypeMap.keys())
 		{
+			trace('fffff 2');
+
 			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
-			// trace('try load custom: ' + luaToLoad);
+			trace('try load custom: ' + luaToLoad);
 			if (FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
 			}
+
+			trace('fffff 4');
+
 		}
+		trace('fffff 4');
 
 		for (event in eventPushedMap.keys())
 		{
+			trace('fffff 5');
+
 			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
 			trace('load custom event: ' + luaToLoad);
 			if(FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
 			}
+			trace('fffff 7');
+
 		}
 		#end
+
+		trace('fffff 888');
 
 
 		noteTypeMap.clear();
 		noteTypeMap = null;
 		eventPushedMap.clear();
 		eventPushedMap = null;
+		trace('fffff 111');
 
 
 		// trace('1653');
@@ -1706,6 +1721,7 @@ class GameState extends MusicBeatState
 		healthBarBG.scrollFactor.set();
 		add(healthBarBG);
 
+		trace('fffff 2222');
 
 
 		if (playAsDad)
@@ -2223,6 +2239,9 @@ class GameState extends MusicBeatState
 		// lime.app.Application.current.window.alert(modPath, 'Mod event path');
 		// var daPath = FileSystem.exists(modPath) ? modPath : file;
 
+		trace('chess ass 00');
+
+
 		// lime.app.Application.current.window.alert(file + ", exist: " + FileSystem.exists(file), 'Event path');
 		#if sys
 		if (FileSystem.exists(file))
@@ -2234,19 +2253,26 @@ class GameState extends MusicBeatState
 			var jsonEvent = Song.loadFromJson("events", SongPlayer.folder + SONG_NAME);
 			var eventsData = jsonEvent.events;
 		
+			trace('chess ass 1');
 			//check ass
 			if (jsonEvent != null)
 			{
 				// lime.app.Application.current.window.alert("yeah", 'Loaded Event');
+				trace('chess ass 2');
 
 				// check this or crash your ass
 				if (eventsData != null) 
 				{
+					trace('chess ass 3');
+
 					for (event in eventsData) // Event Notes
 					{
+						trace('chess ass 4');
+
 						// lime.app.Application.current.window.alert(eventsData[0], 'Loaded Event');
 						for (i in 0...event[1].length)
 						{
+							trace('chess ass 5');
 							// lime.app.Application.current.window.alert(event[1][i][0], 'Loaded Event');
 							var subEvent:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
 							eventNotes.push(subEvent);
@@ -2258,15 +2284,22 @@ class GameState extends MusicBeatState
 
 				//this shouldn't be add, but idk
 				//old system
+				trace('12');
 				var notesData = jsonEvent.notes;
+				trace('13');
 				if (notesData != null)
 				{
+					trace('14');
+
 					for (section in notesData)
 					{
+						trace('16');
 						for (songNotes in section.sectionNotes)
 						{
+							trace('17');
 							if (songNotes[1] < 0)
 							{
+								trace('19');
 								var subEvent:Array<Dynamic> = [songNotes[0], songNotes[1], songNotes[2], songNotes[3], songNotes[4]];
 								eventNotes.push(subEvent);
 								eventPushed(subEvent);
@@ -2288,6 +2321,7 @@ class GameState extends MusicBeatState
 		 // Not exactly representative of 'daBeats' lol, 
 		// just how much it has looped
 		var daBeats:Int = 0;
+		trace('chess 111');
 		for (section in noteData)
 		{
 			var coolSection:Int = Std.int(section.lengthInSteps / 4);
@@ -2375,12 +2409,19 @@ class GameState extends MusicBeatState
 
 		//some song didn't have events field 
 		//will crash your ass
+		trace('chess 2222');
+
 		if (songData.events != null)
 		{
+			trace('chess 33333');
+
 			for (event in songData.events) // Event Notes
 			{
+				trace('chess 4444');
+
 				for (i in 0...event[1].length)
 				{
+					trace('chess 55555');
 					var subEvent:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
 					eventNotes.push(subEvent);
 					eventPushed(subEvent);
@@ -2393,6 +2434,7 @@ class GameState extends MusicBeatState
 
 		// //@notrace(unspawnNotes.length);
 		// playerCounter += 1;
+		trace('chess 55555');
 
 		unspawnNotes.sort(sortByShit);
 		if (eventNotes.length > 1)
@@ -2400,7 +2442,13 @@ class GameState extends MusicBeatState
 			eventNotes.sort(sortByTime);
 		}
 
+
+		trace('chess 777777');
+
 		checkEventNote();
+
+		trace('chess 999999');
+
 		generatedMusic = true;
 	}
 

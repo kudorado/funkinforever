@@ -62,16 +62,17 @@ class MenuState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('menuBG'));
 		bg.scrollFactor.x = 0;
 		bg.scrollFactor.y = 0;
-		bg.setGraphicSize(Std.int(bg.width * 1.1));
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = true;
-		
-		if (Main.daTabletShit)
-		{
-			bg.scale.x *= Main.shitZoom;
-			bg.scale.y *= Main.shitZoom;
-		}
+		bg.scaleToFit();
+	
+
+		// if (Main.daTabletShit)
+		// {
+		// 	bg.scale.x *= Main.shitZoom;
+		// 	bg.scale.y *= Main.shitZoom;
+		// }
 		
 		add(bg);
 
@@ -86,6 +87,9 @@ class MenuState extends MusicBeatState
 		magenta.screenCenter();
 		magenta.visible = false;
 		magenta.antialiasing = true;
+
+		magenta.scaleToFit();
+
 		// magenta.color = 0xFFfd719b;
 
 		if (Main.daTabletShit)

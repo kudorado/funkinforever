@@ -27,6 +27,9 @@ class Note extends FlxSprite
 
 
 	public var strumTime:Float = 0;
+	public var texture:String = '';
+	//shit
+
 
 	public var mustPress:Bool = false;
 	public var noteData:Int = 0;
@@ -57,7 +60,6 @@ class Note extends FlxSprite
 	{
 		noteSplashTexture = GameState.SONG.splashSkin;
 
-		// trace('set noteType: ' + value);
 		if (noteData > -1 && noteType != value)
 		{
 			switch (value)
@@ -119,9 +121,13 @@ class Note extends FlxSprite
 
 			noteType = value;
 		}
+
+		
 		noteSplashHue = colorSwap.hue;
 		noteSplashSat = colorSwap.saturation;
 		noteSplashBrt = colorSwap.brightness;
+
+
 		return value;
 	}
 	

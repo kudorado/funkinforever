@@ -63,9 +63,9 @@ class FreePlayState extends MusicBeatState
 	{
 		var char:String = SongManager.songs[curWeek].character;
 		bg.loadGraphic(Paths.image('freeplay/' + char));
-		bg.setGraphicSize(Std.int(bg.width * 1.1));
 		bg.screenCenter();
 		bg.antialiasing = true;
+		bg.scaleToFit();
 	}
 
 	function removeOldWeek()

@@ -1,5 +1,6 @@
 package;
 
+
 #if LUA_ALLOWED
 import llua.Lua;
 import llua.LuaL;
@@ -267,7 +268,9 @@ class FunkinLua {
 				return getGroupStuff(Reflect.getProperty(getInstance(), obj).members[index], variable);
 			}
 
+			// trace('this will crash your ass');
 			var leArray:Dynamic = Reflect.getProperty(getInstance(), obj)[index];
+			// trace('noooo');
 			if(leArray != null) {
 				if(Type.typeof(variable) == ValueType.TInt) {
 					return leArray[variable];
@@ -278,17 +281,25 @@ class FunkinLua {
 			return null;
 		});
 		Lua_helper.add_callback(lua, "setPropertyFromGroup", function(obj:String, index:Int, variable:Dynamic, value:Dynamic) {
+			// trace('ss yeah!');
 			if(Std.isOfType(Reflect.getProperty(getInstance(), obj), FlxTypedGroup)) {
 				setGroupStuff(Reflect.getProperty(getInstance(), obj).members[index], variable, value);
 				return;
 			}
 
+			// trace('crash yeah!');
 			var leArray:Dynamic = Reflect.getProperty(getInstance(), obj)[index];
+			// trace('no you dumn!: ' + leArray);
+
 			if(leArray != null) {
+
+				// trace('no you ddddd!');
+
 				if(Type.typeof(variable) == ValueType.TInt) {
 					leArray[variable] = value;
 					return;
 				}
+				// trace('no you 3333!');
 				setGroupStuff(leArray, variable, value);
 			}
 		});
@@ -1570,16 +1581,31 @@ class FunkinLua {
 		return Reflect.getProperty(leArray, variable);
 	}
 
-	function setGroupStuff(leArray:Dynamic, variable:String, value:Dynamic) {
+	function setGroupStuff(leArray:Dynamic, variable:String, value:Dynamic)
+	{
+
+		// trace('does it crash here?');
 		var killMe:Array<String> = variable.split('.');
+		// trace('no again?');
 		if(killMe.length > 1) {
+			// trace('check again?');
 			var coverMeInPiss:Dynamic = Reflect.getProperty(leArray, killMe[0]);
+
+			// trace('is this again?');
 			for (i in 1...killMe.length-1) {
 				coverMeInPiss = Reflect.getProperty(coverMeInPiss, killMe[i]);
+				// trace('is this shit?');
 			}
 			Reflect.setProperty(coverMeInPiss, killMe[killMe.length-1], value);
+			// trace('what the fuck is this shit?');
 			return;
 		}
+
+		// trace('he no, crash here: ' + Type.typeof(leArray));
+
+		//todo
+		//ok this crash due no property found!
+
 		Reflect.setProperty(leArray, variable, value);
 	}
 
