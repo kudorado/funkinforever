@@ -39,7 +39,6 @@ class SelectionState extends MusicBeatState
 {
 	static public var instance:SelectionState;
 
-	static public var didLoadout:Bool;
 
 	var selectedItem:Item;
 
@@ -402,7 +401,7 @@ class SelectionState extends MusicBeatState
 			{
 				LoadingState.createBlackFadeIn(this, function()
 				{
-					didLoadout = true;
+					LoadingState.didLoadout = true;
 					LoadingState.setStaticTransition();
 					LoadingState.loadAndSwitchState(new GameState());
 				});

@@ -1936,7 +1936,7 @@ class GameState extends MusicBeatState
 
 
 		super.create();
-		SelectionState.didLoadout = false;
+		LoadingState.didLoadout = false;
 		LoadingState.hasCachedSong = true;
 		AdMob.hideBanner();
 

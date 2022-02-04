@@ -74,7 +74,6 @@ class FreePlayState extends MusicBeatState
 
 		if (grpSongs != null)
 		{
-g
 			for (i in 0...videoArray.length)
 			{
 				var daMember = videoArray.pop();
