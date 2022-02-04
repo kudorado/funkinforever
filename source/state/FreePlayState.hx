@@ -26,6 +26,9 @@ using StringTools;
 
 class FreePlayState extends MusicBeatState
 {
+
+	var ohShitFuckyou:Bool;
+
 	var songs:Array<SongMetadata> = [];
 
 	var selector:FlxText;
@@ -389,8 +392,9 @@ class FreePlayState extends MusicBeatState
 			FlxG.switchState(new MenuState());
 		}
 
-		if (accepted)
+		if (accepted && !ohShitFuckyou)
 		{
+			ohShitFuckyou = true;
 			// pre lowercasing the song name (update)
 
 			// if (songs[curSelected].firstSong)

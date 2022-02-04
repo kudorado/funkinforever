@@ -319,6 +319,9 @@ class StoryState extends MusicBeatState
 	{
 		if (weekUnlocked[curWeek])
 		{
+			if (stopspamming)
+				return;
+
 			if (!stopspamming)
 			{
 				FlxG.sound.play(Paths.sound('confirmMenu'));
@@ -361,13 +364,11 @@ class StoryState extends MusicBeatState
 
 			GameState.storyWeek = curWeek;
 			GameState.campaignScore = 0;
-			new FlxTimer().start(1, function(tmr:FlxTimer)
+			LoadingState.loadWeekSplash(this, function()
 			{
-				LoadingState.createWeekLoadout(this, function()
-				{
-					LoadingState.loadAndSwitchState(new SelectionState(), true);
-				});
+				FlxG.switchState(new SelectionState());
 			});
+			
 		}
 	}
 

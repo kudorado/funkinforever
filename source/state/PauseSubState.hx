@@ -209,6 +209,7 @@ class PauseSubState extends MusicBeatSubstate
 
 					GameState.instance.switchState(function()
 					{
+						LoadingState.setStaticTransition();
 						FlxG.resetState();
 					});
 
@@ -217,7 +218,6 @@ class PauseSubState extends MusicBeatSubstate
 					close();
 					GameState.instance.restorePad();
 					AdMob.showInterstitial(60);
-
 
 					GameState.instance.switchState(function()
 					{

@@ -57,20 +57,20 @@ class LoadingState extends MusicBeatState
         {
             callbacks = new MultiCallback(onLoad);
             var introComplete = callbacks.add("introComplete");
-			trace('1');
+			// trace('1');
             checkLoadSong(getSongPath());
             if (GameState.SONG.needsVoices)
                 checkLoadSong(getVocalPath());
             checkLibrary("shared");
 
-			trace('2');
+			// trace('2');
 
             // if (GameState.storyWeek > 0)
 			
                 checkLibrary("mods");
             // else
                 // checkLibrary("tutorial");
-			trace('4');
+			// trace('4');
 
             var fadeTime = 0.5;
             FlxG.camera.fade(FlxG.camera.bgColor, fadeTime, true);
@@ -248,7 +248,7 @@ class LoadingState extends MusicBeatState
         blackScreen.alpha = 0;
 
         group.add(blackScreen);
-        FlxTween.tween(blackScreen, {alpha: 1}, {});
+        FlxTween.tween(blackScreen, {alpha: 1}, 0.5, {});
 
         new FlxTimer().start(1, function(tmr:FlxTimer)
         {
@@ -267,6 +267,10 @@ class LoadingState extends MusicBeatState
 
         var daImages:Array<String> = ['loading/1', 'loading/2'];
         var rand = FlxG.random.int(1, 2);
+
+        var fuckshit:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
+        fuckshit.screenCenter();
+
 
         var blackScreen:FlxSprite = new FlxSprite(0, 0);
         blackScreen.loadGraphic(Paths.image("loading/" + rand));
@@ -289,12 +293,15 @@ class LoadingState extends MusicBeatState
 
         blackScreen.cameras = [cam];
         loading.cameras = [cam];
-
+        fuckshit.cameras = [cam];
+        fuckshit.alpha = 1;
         blackScreen.alpha = 0;
         loading.alpha = 0;
 
+        group.add(fuckshit);
         group.add(blackScreen);
         group.add(loading);
+
 
         FlxTween.tween(blackScreen, {alpha: 1}, 0.25, {});
         FlxTween.tween(loading, {alpha: 1}, 0.25, {});
@@ -315,6 +322,7 @@ class LoadingState extends MusicBeatState
                 {
                     group.remove(blackScreen);
                     group.remove(loading);
+                    group.remove(fuckshit);
                 }
             });
 		});
@@ -334,9 +342,10 @@ class LoadingState extends MusicBeatState
 		FlxTransitionableState.skipNextTransIn = true;
 		FlxTransitionableState.skipNextTransOut = true;
 	}
-    
+
 	public static function setDynamicTransition()
 	{
+       
 		var diamond:FlxGraphic = FlxGraphic.fromClass(GraphicTransTileDiamond);
 		diamond.persist = true;
 		diamond.destroyOnNoUse = false;

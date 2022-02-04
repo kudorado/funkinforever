@@ -471,6 +471,14 @@ class PcManager
 		}),
 
 
+		new PcData
+		({
+			name: 'bf pibby',
+			cost: 1
+		}),
+
+
+
 	];
 
 	public static function getPc(pcName:String):PlayableCharacter
@@ -722,6 +730,9 @@ class PcManager
 
 			case 'bf_dark':
 				return new BF_Dark(700, 425);
+
+			case 'bf pibby':
+				return new BFPibby(700, 425);
 
 		}
 

@@ -200,7 +200,7 @@ class SelectionState extends MusicBeatState
 			weekThing.antialiasing = true;
 		}
 		
-		trace (grpPlayModes.length);
+		// trace (grpPlayModes.length);
 
 
 		// create skin
@@ -387,10 +387,15 @@ class SelectionState extends MusicBeatState
 	var selectedWeek:Bool = false;
 	var stopspamming:Bool = false;
 
+
 	function select()
 	{
+		if (stopspamming)
+			return;
+		
 		if (options[curSelection].toLowerCase() == 'play')
 		{
+			stopspamming = true;
 			//go babe
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)

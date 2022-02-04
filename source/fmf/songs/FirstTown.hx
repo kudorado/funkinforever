@@ -19,23 +19,23 @@ class FirstTown extends SongPlayer
 
 	override function loadMap()
 	{
-        gameState.defaultCamZoom = 0.5;
+		gameState.defaultCamZoom = 0.5;
 		var bg:FlxSprite = new FlxSprite(311, -378).loadGraphic(Paths.image('bg/camellia/BG_CITY', 'mods'));
 		bg.antialiasing = true;
 		bg.scale.y = 1.3;
 		bg.scale.x = 1.3;
 		gameState.add(bg);
 
-		var bg1:FlxSprite = new FlxSprite(309, -267).loadGraphic(Paths.image('bg/camellia/BG_WALL', 'mods'));
+		var bg1:FlxSprite = new FlxSprite(116, -108).loadGraphic(Paths.image('bg/camellia/BG_WALL', 'mods'));
 		bg1.antialiasing = true;
-		bg1.scale.y = 1.4;
-		bg1.scale.x = 1.4;
+		bg1.scale.y = 1.718;
+		bg1.scale.x = 1.718;
 		gameState.add(bg1);
 
-        var bg2:FlxSprite = new FlxSprite(309, -100).loadGraphic(Paths.image('bg/camellia/FG_Floor', 'mods'));
+        var bg2:FlxSprite = new FlxSprite(309, -148).loadGraphic(Paths.image('bg/camellia/FG_Floor', 'mods'));
 		bg2.antialiasing = true;
-		bg2.scale.y = 1.4;
-		bg2.scale.x = 1.4;
+		bg2.scale.y = 1.7;
+		bg2.scale.x = 1.7;
 		gameState.add(bg2);
 	}
 
@@ -58,23 +58,25 @@ class FirstTown extends SongPlayer
 
         dad.addOffset('idle',0, 0);
 
-		dad.addOffset('singUP', 5, 73);
-		dad.addOffset('singRIGHT', 0 , -22);
-		dad.addOffset('singLEFT', 94, 26);
-		dad.addOffset('singDOWN', 0, 77);
+		dad.addOffset('singDOWN', 0, 68);
+		dad.addOffset('singRIGHT', 1 , -3);
+		dad.addOffset('singUP', 4, 65);
+		dad.addOffset('singLEFT', 69, 14);
+
+
 		dad.dance();
-        dad.scale.x = 1;
-        dad.scale.y = 1;
-		dad.x = 150;
-		dad.y = 4;
+        dad.scale.x = 0.75;
+        dad.scale.y = 0.75;
+		dad.x = 182;
+		dad.y = 160;
 	
 	}
 
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.x += 913;
-		bf.y += 70;
+		bf.x += 787;
+		bf.y += 35;
 	}
 
 	override function createGFAnimationOffsets()

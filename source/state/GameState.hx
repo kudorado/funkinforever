@@ -533,47 +533,47 @@ class GameState extends MusicBeatState
 		// trace('trigger event: ' + eventName);
 		switch(eventName) {
 			case 'Hey!':
-				var value:Int = 0;
-				switch (value1.toLowerCase().trim())
-				{
-					case 'bf' | 'boyfriend' | '0':
-						value = 0;
+				// var value:Int = 0;
+				// switch (value1.toLowerCase().trim())
+				// {
+				// 	case 'bf' | 'boyfriend' | '0':
+				// 		value = 0;
 
-					case 'gf' | 'girlfriend' | '1':
-						value = 1;
+				// 	case 'gf' | 'girlfriend' | '1':
+				// 		value = 1;
 
-					case 'dad' | '2':
-						value = 2;
+				// 	case 'dad' | '2':
+				// 		value = 2;
 
-					case 'player3' | '3':
-						value = 3;
-				}
+				// 	case 'player3' | '3':
+				// 		value = 3;
+				// }
 
 
-				var time:Float = Std.parseFloat(value2);
-				if(Math.isNaN(time) || time <= 0) time = 0.6;
+				// var time:Float = Std.parseFloat(value2);
+				// if(Math.isNaN(time) || time <= 0) time = 0.6;
 
-				if(value != 0) {
-					if(dadPE.curCharacter.startsWith('gf')) { //Tutorial GF is actually Dad! The GF is an imposter!! ding ding ding ding ding ding ding, dindinding, end my suffering
-						dadPE.playAnim('cheer', true);
-						dadPE.specialAnim = true;
-						dadPE.heyTimer = time;
-					} else {
-						gfPE.playAnim('cheer', true);
-						gfPE.specialAnim = true;
-						gfPE.heyTimer = time;
-					}
+				// if(value != 0) {
+				// 	if(dadPE.curCharacter.startsWith('gf')) { //Tutorial GF is actually Dad! The GF is an imposter!! ding ding ding ding ding ding ding, dindinding, end my suffering
+				// 		dadPE.playAnim('cheer', true);
+				// 		dadPE.specialAnim = true;
+				// 		dadPE.heyTimer = time;
+				// 	} else {
+				// 		gfPE.playAnim('cheer', true);
+				// 		gfPE.specialAnim = true;
+				// 		gfPE.heyTimer = time;
+				// 	}
 
-					if(curStage == 'mall') {
-						// bottomBoppers.animation.play('hey', true);
-						// heyTimer = time;
-					}
-				}
-				if(value != 1) {
-					bfPE.playAnim('hey', true);
-					bfPE.specialAnim = true;
-					bfPE.heyTimer = time;
-				}
+				// 	if(curStage == 'mall') {
+				// 		// bottomBoppers.animation.play('hey', true);
+				// 		// heyTimer = time;
+				// 	}
+				// }
+				// if(value != 1) {
+				// 	bfPE.playAnim('hey', true);
+				// 	bfPE.specialAnim = true;
+				// 	bfPE.heyTimer = time;
+				// }
 
 			case 'Set GF Speed':
 				var value:Int = Std.parseInt(value1);
@@ -581,143 +581,143 @@ class GameState extends MusicBeatState
 				gfSpeed = value;
 
 			case 'Blammed Lights':
-				var lightId:Int = Std.parseInt(value1);
-				if(Math.isNaN(lightId)) lightId = 0;
+				// var lightId:Int = Std.parseInt(value1);
+				// if(Math.isNaN(lightId)) lightId = 0;
 
-				if(lightId > 0 && curLightEvent != lightId) {
-					if(lightId > 5) lightId = FlxG.random.int(1, 5, [curLightEvent]);
+				// if(lightId > 0 && curLightEvent != lightId) {
+				// 	if(lightId > 5) lightId = FlxG.random.int(1, 5, [curLightEvent]);
 
-					var color:Int = 0xffffffff;
-					switch(lightId) {
-						case 1: //Blue
-							color = 0xff31a2fd;
-						case 2: //Green
-							color = 0xff31fd8c;
-						case 3: //Pink
-							color = 0xfff794f7;
-						case 4: //Red
-							color = 0xfff96d63;
-						case 5: //Orange
-							color = 0xfffba633;
-					}
-					curLightEvent = lightId;
+				// 	var color:Int = 0xffffffff;
+				// 	switch(lightId) {
+				// 		case 1: //Blue
+				// 			color = 0xff31a2fd;
+				// 		case 2: //Green
+				// 			color = 0xff31fd8c;
+				// 		case 3: //Pink
+				// 			color = 0xfff794f7;
+				// 		case 4: //Red
+				// 			color = 0xfff96d63;
+				// 		case 5: //Orange
+				// 			color = 0xfffba633;
+				// 	}
+				// 	curLightEvent = lightId;
 
-					if(blammedLightsBlack.alpha == 0) {
-						if(blammedLightsBlackTween != null) {
-							blammedLightsBlackTween.cancel();
-						}
-						blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 1}, 1, {ease: FlxEase.quadInOut,
-							onComplete: function(twn:FlxTween) {
-								blammedLightsBlackTween = null;
-							}
-						});
+				// 	if(blammedLightsBlack.alpha == 0) {
+				// 		if(blammedLightsBlackTween != null) {
+				// 			blammedLightsBlackTween.cancel();
+				// 		}
+				// 		blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 1}, 1, {ease: FlxEase.quadInOut,
+				// 			onComplete: function(twn:FlxTween) {
+				// 				blammedLightsBlackTween = null;
+				// 			}
+				// 		});
 
-						var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
-						for (i in 0...chars.length) {
-							if(chars[i].colorTween != null) {
-								chars[i].colorTween.cancel();
-							}
-							chars[i].colorTween = FlxTween.color(chars[i], 1, FlxColor.WHITE, color, {onComplete: function(twn:FlxTween) {
-								chars[i].colorTween = null;
-							}, ease: FlxEase.quadInOut});
-						}
-					} else {
-						if(blammedLightsBlackTween != null) {
-							blammedLightsBlackTween.cancel();
-						}
-						blammedLightsBlackTween = null;
-						blammedLightsBlack.alpha = 1;
+				// 		var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
+				// 		for (i in 0...chars.length) {
+				// 			if(chars[i].colorTween != null) {
+				// 				chars[i].colorTween.cancel();
+				// 			}
+				// 			chars[i].colorTween = FlxTween.color(chars[i], 1, FlxColor.WHITE, color, {onComplete: function(twn:FlxTween) {
+				// 				chars[i].colorTween = null;
+				// 			}, ease: FlxEase.quadInOut});
+				// 		}
+				// 	} else {
+				// 		if(blammedLightsBlackTween != null) {
+				// 			blammedLightsBlackTween.cancel();
+				// 		}
+				// 		blammedLightsBlackTween = null;
+				// 		blammedLightsBlack.alpha = 1;
 
-						var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
-						for (i in 0...chars.length) {
-							if(chars[i].colorTween != null) {
-								chars[i].colorTween.cancel();
-							}
-							chars[i].colorTween = null;
-						}
-						dadPE.color = color;
-						bfPE.color = color;
-						gfPE.color = color;
-					}
+				// 		var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
+				// 		for (i in 0...chars.length) {
+				// 			if(chars[i].colorTween != null) {
+				// 				chars[i].colorTween.cancel();
+				// 			}
+				// 			chars[i].colorTween = null;
+				// 		}
+				// 		dadPE.color = color;
+				// 		bfPE.color = color;
+				// 		gfPE.color = color;
+				// 	}
 					
-					if(curStage == 'philly') {
-						if(phillyCityLightsEvent != null) {
-							phillyCityLightsEvent.forEach(function(spr:BGSprite) {
-								spr.visible = false;
-							});
-							phillyCityLightsEvent.members[lightId - 1].visible = true;
-							phillyCityLightsEvent.members[lightId - 1].alpha = 1;
-						}
-					}
-				} else {
-					if(blammedLightsBlack.alpha != 0) {
-						if(blammedLightsBlackTween != null) {
-							blammedLightsBlackTween.cancel();
-						}
-						blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 0}, 1, {ease: FlxEase.quadInOut,
-							onComplete: function(twn:FlxTween) {
-								blammedLightsBlackTween = null;
-							}
-						});
-					}
+				// 	if(curStage == 'philly') {
+				// 		if(phillyCityLightsEvent != null) {
+				// 			phillyCityLightsEvent.forEach(function(spr:BGSprite) {
+				// 				spr.visible = false;
+				// 			});
+				// 			phillyCityLightsEvent.members[lightId - 1].visible = true;
+				// 			phillyCityLightsEvent.members[lightId - 1].alpha = 1;
+				// 		}
+				// 	}
+				// } else {
+				// 	if(blammedLightsBlack.alpha != 0) {
+				// 		if(blammedLightsBlackTween != null) {
+				// 			blammedLightsBlackTween.cancel();
+				// 		}
+				// 		blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 0}, 1, {ease: FlxEase.quadInOut,
+				// 			onComplete: function(twn:FlxTween) {
+				// 				blammedLightsBlackTween = null;
+				// 			}
+				// 		});
+				// 	}
 
-					if(curStage == 'philly') {
-						phillyCityLights.forEach(function(spr:BGSprite) {
-							spr.visible = false;
-						});
-						phillyCityLightsEvent.forEach(function(spr:BGSprite) {
-							spr.visible = false;
-						});
+				// 	if(curStage == 'philly') {
+				// 		phillyCityLights.forEach(function(spr:BGSprite) {
+				// 			spr.visible = false;
+				// 		});
+				// 		phillyCityLightsEvent.forEach(function(spr:BGSprite) {
+				// 			spr.visible = false;
+				// 		});
 
-						var memb:FlxSprite = phillyCityLightsEvent.members[curLightEvent - 1];
-						if(memb != null) {
-							memb.visible = true;
-							memb.alpha = 1;
-							if(phillyCityLightsEventTween != null)
-								phillyCityLightsEventTween.cancel();
+				// 		var memb:FlxSprite = phillyCityLightsEvent.members[curLightEvent - 1];
+				// 		if(memb != null) {
+				// 			memb.visible = true;
+				// 			memb.alpha = 1;
+				// 			if(phillyCityLightsEventTween != null)
+				// 				phillyCityLightsEventTween.cancel();
 
-							phillyCityLightsEventTween = FlxTween.tween(memb, {alpha: 0}, 1, {onComplete: function(twn:FlxTween) {
-								phillyCityLightsEventTween = null;
-							}, ease: FlxEase.quadInOut});
-						}
-					}
+				// 			phillyCityLightsEventTween = FlxTween.tween(memb, {alpha: 0}, 1, {onComplete: function(twn:FlxTween) {
+				// 				phillyCityLightsEventTween = null;
+				// 			}, ease: FlxEase.quadInOut});
+				// 		}
+				// 	}
 
-					var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
-					for (i in 0...chars.length) {
-						if (chars[i].colorTween != null)
-						{
-							chars[i].colorTween.cancel();
-						}
-						chars[i].colorTween = FlxTween.color(chars[i], 1, chars[i].color, FlxColor.WHITE, {onComplete: function(twn:FlxTween) {
-							chars[i].colorTween = null;
-						}, ease: FlxEase.quadInOut});
-					}
+				// 	var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
+				// 	for (i in 0...chars.length) {
+				// 		if (chars[i].colorTween != null)
+				// 		{
+				// 			chars[i].colorTween.cancel();
+				// 		}
+				// 		chars[i].colorTween = FlxTween.color(chars[i], 1, chars[i].color, FlxColor.WHITE, {onComplete: function(twn:FlxTween) {
+				// 			chars[i].colorTween = null;
+				// 		}, ease: FlxEase.quadInOut});
+				// 	}
 
-					curLight = 0;
-					curLightEvent = 0;
-				}
+				// 	curLight = 0;
+				// 	curLightEvent = 0;
+				// }
 
 			case 'Kill Henchmen':
 				// killHenchmen();
 
 			case 'Add Camera Zoom':
 				// ClientPrefs.camZooms
-				if(true && FlxG.camera.zoom < 1.35) {
-					var camZoom:Float = Std.parseFloat(value1);
-					var hudZoom:Float = Std.parseFloat(value2);
-					if(Math.isNaN(camZoom)) camZoom = 0.015;
-					if(Math.isNaN(hudZoom)) hudZoom = 0.03;
+				// if(true && FlxG.camera.zoom < 1.35) {
+				// 	var camZoom:Float = Std.parseFloat(value1);
+				// 	var hudZoom:Float = Std.parseFloat(value2);
+				// 	if(Math.isNaN(camZoom)) camZoom = 0.015;
+				// 	if(Math.isNaN(hudZoom)) hudZoom = 0.03;
 
-					FlxG.camera.zoom += camZoom;
-					camHUD.zoom += hudZoom;
-				}
+				// 	FlxG.camera.zoom += camZoom;
+				// 	camHUD.zoom += hudZoom;
+				// }
 
 			case 'Trigger BG Ghouls':
 				//shet !ClientPrefs.lowQuality
-				if(curStage == 'schoolEvil' && true) {
-					// bgGhouls.dance(true);
-					// bgGhouls.visible = true;
-				}
+				// if(curStage == 'schoolEvil' && true) {
+				// 	// bgGhouls.dance(true);
+				// 	// bgGhouls.visible = true;
+				// }
 
 			case 'Play Animation':
 
@@ -829,9 +829,12 @@ class GameState extends MusicBeatState
 							case 2: char = gfPE;
 						}
 				}
-				char.idleSuffix = value2;
-				char.recalculateDanceIdle();
-
+				if (char != null)
+				{
+					char.idleSuffix = value2;
+					char.recalculateDanceIdle();
+				}
+				
 			case 'Screen Shake':
 				var valuesArray:Array<String> = [value1, value2];
 				var targetsArray:Array<FlxCamera> = [camGame, camHUD];
@@ -1662,7 +1665,7 @@ class GameState extends MusicBeatState
 		eventPushedMap = null;
 
 
-		trace('1653');
+		// trace('1653');
 		camFollow = new FlxObject(0, 0, 1, 1);
 
 		var daX = songPlayer.bf.x;
@@ -1860,7 +1863,7 @@ class GameState extends MusicBeatState
 		npsTxt.cameras = [camHUD];
 		songName.cameras = [camHUD];
 
-		trace('1851');
+		// trace('1851');
 
 		// // doof.cameras = [camHUD];
 		// if (FlxG.save.data.songPosition)
@@ -1905,7 +1908,7 @@ class GameState extends MusicBeatState
 		Controller._pad.cameras = [camHUD];
 
 
-		trace('1896');
+		// trace('1896');
 
 		calculateNPS();
 		
@@ -1920,7 +1923,6 @@ class GameState extends MusicBeatState
 		SelectionState.didLoadout = false;
 		LoadingState.hasCachedSong = true;
 		AdMob.hideBanner();
-
 
 		createBlackFadeOut();
 

@@ -10,9 +10,7 @@ import flash.Lib;
 import flixel.FlxG;
 import flixel.math.FlxMath;
 
- 
-@:bitmap("art/preloaderArt.png") class LogoImage extends BitmapData { }
- 
+@:bitmap("assets/preload/images/preloaderArt.png") class LogoImage extends BitmapData { }
 class Preloader extends FlxBasePreloader
 {
     public function new(MinDisplayTime:Float=3, ?AllowedURLs:Array<String>) 
@@ -44,19 +42,21 @@ class Preloader extends FlxBasePreloader
      
     override function update(Percent:Float):Void 
     {
-        if(Percent < 69)
-        {
-            // logo.scaleX += Percent / 1920;
-            // logo.scaleY += Percent / 1920;
-            // logo.x -= Percent * 0.6;
-            // logo.y -= Percent / 2;
-        }else{
+		if (Percent < 69)
+		{
+			// logo.scaleX += Percent / 1920;
+			// logo.scaleY += Percent / 1920;
+			// logo.x -= Percent * 0.6;
+			// logo.y -= Percent / 2;
+		}
+		else
+		{
 			logo.alpha = FlxMath.lerp(0, 1, ((100 - Percent) / 30));
-            // logo.scaleX = this._width / 1280;
-            // logo.scaleY = this._width / 1280;
-            // logo.x = ((this._width) / 2) - ((logo.width) / 2);
-            // logo.y = (this._height / 2) - ((logo.height) / 2);
-        }
+			// logo.scaleX = this._width / 1280;
+			// logo.scaleY = this._width / 1280;
+			// logo.x = ((this._width) / 2) - ((logo.width) / 2);
+			// logo.y = (this._height / 2) - ((logo.height) / 2);
+		}
         
         super.update(Percent);
     }
