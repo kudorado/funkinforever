@@ -25,10 +25,35 @@ class Note extends FlxSprite
 
 //---------------------------------------
 
+	var noteTypes:Array<String> = 
+	[
+		'Hell Note', 'EX Note', 'Hurt Note', 
+		'Eye Note', 'Bullet_Note'
+	];
+
+
 
 	public var strumTime:Float = 0;
 	public var texture:String = '';
 	public var noteSplashDisabled:Bool = false;
+
+
+	//psych shit
+	public var offsetX:Float = 0;
+	public var offsetY:Float = 0;
+	public var offsetAngle:Float = 0;
+	public var multAlpha:Float = 1;
+
+	public var copyX:Bool = true;
+	public var copyY:Bool = true;
+	public var copyAngle:Bool = true;
+	public var copyAlpha:Bool = true;
+
+	public var hitHealth:Float = 0.023;
+	public var missHealth:Float = 0.0475;
+	public var hitCausesMiss:Bool = false;
+	public var distance:Float = 2000;//plan on doing scroll directions soon -bb
+
 
 
 
@@ -65,62 +90,34 @@ class Note extends FlxSprite
 		{
 			switch (value)
 			{
-				case 'Hurt Note':
-					ignoreNote = true;
-					reloadNote('HURT');
-					noteSplashTexture = 'HURTnoteSplashes';
-					if (isSustainNote)
-					{
-						missHealth = 0.1;
-					}
-					else
-					{
-						missHealth = 0.3;
-					}
-					hitCausesMiss = false;
 				case 'No Animation':
 					// shit
 					noAnimation = true;
+				
+				case 'Play Animation':
+				// this.visible = false;
+
 				case 'GF Sing':
 					gfNote = true;
-
-				case 'Bullet_Note':
-					// trace('load bullet note yeah!');
-					reloadNote('Bullet_Note', 'nevada/notes/Bullet_Note');
-					// oh shit
-					// gfNote = true;
-
-				case 'Hell Note':
-					ignoreNote = true;
-					hitCausesMiss = true;
-					reloadNote('Hell Note', 'nevada/notes/placeholderEX');
-
-				case 'EX Note':
-					ignoreNote = true;
-					hitCausesMiss = true;
-
-					reloadNote("EX Note", 'nevada/notes/EX Note');
-					noteSplashTexture = 'HURTnoteSplashes';
-					if (isSustainNote)
-					{
-						missHealth = 0.2;
-					}
-					else
-					{
-						missHealth = 2;
-					}
-
-				case 'Eye Note':
-					reloadNote("Eye Note", 'notesEye');
-					
-				case 'Play Animation':
-					// this.visible = false;
 
 
 			}
 
+			if (texture != '')
+			{
+				for (note in noteTypes)
+				{
+					if (note == value)
+					{
+						// trace('reload note: ' + texture);
+						reloadNote(value, texture);
+						break;
+					}
+				}
+			}
 
 			noteType = value;
+
 		}
 
 		
@@ -134,9 +131,7 @@ class Note extends FlxSprite
 	
 	public var ignoreNote:Bool = false;
 	public var noAnimation:Bool = false;
-	public var hitCausesMiss:Bool = false;
 	public var gfNote:Bool = false;
-	public var missHealth:Float = 0.0475;
 
 	public var noteSplashHue:Float = 0;
 	public var noteSplashSat:Float = 0;

@@ -1621,6 +1621,15 @@ class GameState extends MusicBeatState
 		}
 		#end
 
+		for (note in unspawnNotes)
+		{
+			// re-set it again to load the texture, lmao
+			var tmp = note.noteType;
+			note.noteType = 'holyshitfuckyou';
+			note.noteType = tmp;
+		}
+
+
 		// trace('fffff 888');
 
 		noteTypeMap.clear();
@@ -2165,10 +2174,6 @@ class GameState extends MusicBeatState
 		#if sys
 		if (FileSystem.exists(file))
 		{
-		#else
-		if (Assets.exists(file))
-		{
-		#end
 			var jsonEvent = Song.loadFromJson("events", SongPlayer.folder + SONG_NAME);
 			var eventsData = jsonEvent.events;
 
@@ -2232,8 +2237,9 @@ class GameState extends MusicBeatState
 				trace('Null event shit: ' + SONG_NAME);
 		}
 
-	else
-		trace('No event found for song: ' + SONG_NAME);
+		#end
+
+		// trace('No event found for song: ' + SONG_NAME);
 		// Not exactly representative of 'daBeats' lol,
 		// just how much it has looped
 		var daBeats:Int = 0;
@@ -2275,6 +2281,7 @@ class GameState extends MusicBeatState
 				swagNote.scrollFactor.set(0, 0);
 				swagNote.gfNote = (section.gfSection && (songNotes[1] < 4));
 				swagNote.noteType = songNotes[3];
+
 				if (!Std.isOfType(songNotes[3], String))
 					swagNote.noteType = noteTypeList[songNotes[3]]; // Backward compatibility + compatibility with Week 7 charts
 				var susLength:Float = swagNote.sustainLength;
@@ -2345,9 +2352,9 @@ class GameState extends MusicBeatState
 		{ // No need to sort if there's a single one or none at all
 			eventNotes.sort(sortByTime);
 		}
-		// trace('chess 777777');
+
+
 		checkEventNote();
-		// trace('chess 999999');
 		generatedMusic = true;
 	}
 

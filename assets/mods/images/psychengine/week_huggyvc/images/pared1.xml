@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="pared1.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="wallrun10000" x="0" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10001" x="0" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10002" x="695" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10003" x="695" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10004" x="1390" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10005" x="1390" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10006" x="2085" y="0" width="699" height="1207"/>
+	<SubTexture name="wallrun10007" x="2085" y="0" width="699" height="1207"/>
+	<SubTexture name="wallrun10008" x="0" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10009" x="0" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10010" x="695" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10011" x="695" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10012" x="1390" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10013" x="1390" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10014" x="2085" y="0" width="699" height="1207"/>
+	<SubTexture name="wallrun10015" x="2085" y="0" width="699" height="1207"/>
+	<SubTexture name="wallrun10016" x="0" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10017" x="0" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10018" x="695" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10019" x="695" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10020" x="1390" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10021" x="1390" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+	<SubTexture name="wallrun10022" x="2085" y="0" width="699" height="1207"/>
+	<SubTexture name="wallrun10023" x="2085" y="0" width="699" height="1207"/>
+	<SubTexture name="wallrun10024" x="0" y="0" width="695" height="1207" frameX="0" frameY="0" frameWidth="699" frameHeight="1207"/>
+</TextureAtlas>

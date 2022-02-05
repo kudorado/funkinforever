@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				104
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "huggyup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				73
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "huggyright",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				75,
+				11
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "huggyleft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				-28
+			],
+			"anim": "singDDWN",
+			"fps": 24,
+			"name": "huggydown",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				76
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "huggyidle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				-28
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "huggydown",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/thuggy",
+	"position": [
+		560,
+		-20
+	],
+	"healthicon": "huggy",
+	"flip_x": false,
+	"healthbar_colors": [
+		40,
+		40,
+		255
+	],
+	"camera_position": [
+		-240,
+		-200
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

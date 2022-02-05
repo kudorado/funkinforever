@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Huggy_menu.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="huggy menu0000" x="0" y="0" width="1870" height="622"/>
+	<SubTexture name="huggy menu0001" x="0" y="0" width="1870" height="622"/>
+	<SubTexture name="huggy menu0002" x="1870" y="0" width="1870" height="622"/>
+	<SubTexture name="huggy menu0003" x="0" y="622" width="1870" height="622"/>
+	<SubTexture name="huggy menu0004" x="1870" y="622" width="1870" height="622"/>
+	<SubTexture name="huggy menu0005" x="0" y="1244" width="1870" height="622"/>
+	<SubTexture name="huggy menu0006" x="0" y="1244" width="1870" height="622"/>
+	<SubTexture name="huggy menu0007" x="1870" y="1244" width="1870" height="622"/>
+	<SubTexture name="huggy menu0008" x="0" y="1866" width="1870" height="622"/>
+	<SubTexture name="huggy menu0009" x="0" y="0" width="1870" height="622"/>
+</TextureAtlas>
