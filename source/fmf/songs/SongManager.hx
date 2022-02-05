@@ -317,7 +317,7 @@ class SongManager
 				folder: 'week_huggywuggy',
 				character: 'huggy',
 				songTitle: 'V.S Huggy Wuggy',
-				songList: ['Playtime']
+				songList: ['Playtime', 'Runtime']
 			}
 		),
 
