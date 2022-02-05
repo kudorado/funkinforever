@@ -1,8 +1,8 @@
 package fmf.songs;
+
 import MenuCharacter.CharacterSetting;
 import reactor.*;
 import ui.*;
-
 import flixel.system.debug.Tooltip.TooltipOverlay;
 import flixel.addons.ui.FlxMultiKey;
 import state.*;
@@ -19,8 +19,7 @@ import haxe.xml.Parser.XmlParserException;
 import fmf.characters.Littleman;
 import flixel.FlxG;
 
-
-//this class will handle which SongPlayer should be play
+// this class will handle which SongPlayer should be play
 class SongPlayerManager
 {
 	public static function getPcId():Int
@@ -47,10 +46,10 @@ class SongPlayerManager
 			case 'monster':
 				songPlayer = new Monster("monster");
 
-			case 'pico' | 'philly' | 'blammed' | 'philly nice' |  'philly-nice' | 'phillynice':
+			case 'pico' | 'philly' | 'blammed' | 'philly nice' | 'philly-nice' | 'phillynice':
 				songPlayer = new Philly("pico");
 
-			case 'satin-panties' | "high" | "milf"  | 'satin panties' | 'satinpanties':
+			case 'satin-panties' | "high" | "milf" | 'satin panties' | 'satinpanties':
 				songPlayer = new Mom("mom");
 
 			case 'cocoa' | 'eggnog':
@@ -101,7 +100,7 @@ class SongPlayerManager
 			case 'manifest[trueface]':
 				songPlayer = new Trap('sky');
 
-			case  'wife-forever': 
+			case 'wife-forever':
 				songPlayer = new Sky();
 
 			case 'sky':
@@ -118,10 +117,10 @@ class SongPlayerManager
 
 			case 'improbable-outset':
 				songPlayer = new TrickyMask();
-			
+
 			case 'madness':
 				songPlayer = new Tricky();
-			
+
 			case 'hellclown':
 				songPlayer = new TrickyHell();
 
@@ -151,7 +150,7 @@ class SongPlayerManager
 
 			case 'release':
 				songPlayer = new GarcelloDead();
-			
+
 			case 'fading':
 				songPlayer = new GarcelloGhosty();
 
@@ -175,7 +174,7 @@ class SongPlayerManager
 
 			case 'lila':
 				return new Lila();
-			
+
 			case 'tom':
 				return new Tom();
 
@@ -187,7 +186,7 @@ class SongPlayerManager
 
 			case 'senpaighosty':
 				return new SenpaiGhosty();
-		
+
 			case 'es-nerves':
 				songPlayer = new EsGarcelloTired();
 
@@ -208,7 +207,7 @@ class SongPlayerManager
 
 			case 'drunkannie' | 'monster-christmas':
 				songPlayer = new DrunkAnnie();
-				
+
 			case 'monika':
 				songPlayer = new Monika();
 
@@ -233,7 +232,7 @@ class SongPlayerManager
 			case 'carol':
 				songPlayer = new Carol();
 
-			case 'common sense' | 'common-sense': 
+			case 'common sense' | 'common-sense':
 				songPlayer = new Nonsense();
 
 			case 'calm' | 'calm-down':
@@ -244,7 +243,7 @@ class SongPlayerManager
 
 			case 'context':
 				songPlayer = new NonsenseAngry();
-				
+
 			case 'nonsensemad':
 				songPlayer = new NonsenseMad();
 
@@ -254,7 +253,7 @@ class SongPlayerManager
 			case 'godrays':
 				songPlayer = new Solazar();
 
-			case 'popipo' | 'siu' |'chug' | 'aishite':
+			case 'popipo' | 'siu' | 'chug' | 'aishite':
 				songPlayer = new Miku();
 
 			case 'disappearance':
@@ -271,7 +270,7 @@ class SongPlayerManager
 
 			case 'ron':
 				songPlayer = new Ron();
-			
+
 			case 'trouble':
 				songPlayer = new BobIsSuck();
 
@@ -287,18 +286,18 @@ class SongPlayerManager
 			case 'ram':
 				songPlayer = new Ram();
 
-			case 'hello-world': 
+			case 'hello-world':
 				songPlayer = new HexHelloWorld();
 
-			case 'glitcher': 
+			case 'glitcher':
 				songPlayer = new Glitcher();
 
-			case 'hex-virus' : 
+			case 'hex-virus':
 				songPlayer = new Encore();
-				
+
 			case 'parish':
 				songPlayer = new Parish();
-			
+
 			case 'worship':
 				songPlayer = new Worship();
 
@@ -307,17 +306,17 @@ class SongPlayerManager
 
 			case 'gospel':
 				songPlayer = new Gospel();
-			
+
 			// case 'casanova':
 			// 	songPlayer = new Selever();
-			
+
 			// case 'zavodila':
 			// 	songPlayer = new Zavodila();
 
-			// case 'gospel': 
+			// case 'gospel':
 			// 	songPlayer = new Gospel();
-			
-			case 'casanova': 
+
+			case 'casanova':
 				songPlayer = new Casanova();
 
 			case 'jump-in':
@@ -334,25 +333,25 @@ class SongPlayerManager
 
 			case 'jump-out':
 				songPlayer = new BabJumpOut();
-			
+
 			case 'sussus-moogus':
 				songPlayer = new SussusMoogus();
-			
+
 			case 'sabotage':
 				songPlayer = new Sabotage();
 
 			case 'meltdown':
 				songPlayer = new Meltdown();
 
-			case 'sussus-toogus': 
+			case 'sussus-toogus':
 				songPlayer = new SussusToogus();
 
 			case 'lights-down':
 				songPlayer = new LightsDown();
-			
+
 			case 'reactor':
 				songPlayer = new Reactor();
-			
+
 			case 'ejected':
 				songPlayer = new Ejected();
 
@@ -361,7 +360,7 @@ class SongPlayerManager
 
 			case 'careless':
 				songPlayer = new Careless();
-				
+
 			case 'censory-overload':
 				songPlayer = new CensoryOverload();
 
@@ -379,7 +378,7 @@ class SongPlayerManager
 
 			case 'good-enough':
 				songPlayer = new GoodEnough();
-			
+
 			case 'lover':
 				songPlayer = new Lover();
 
@@ -425,7 +424,7 @@ class SongPlayerManager
 			case 'whitroll':
 				songPlayer = new Whitroll();
 
-			case 'playtime': 
+			case 'playtime':
 				songPlayer = new PlayTime();
 
 			case 'promenade':
@@ -451,9 +450,9 @@ class SongPlayerManager
 
 			case 'godrays[entity]':
 				songPlayer = new Godrays();
-		
+
 			case 'shotgun-shell':
-				songPlayer = new  ShotgunShell();
+				songPlayer = new ShotgunShell();
 
 			case 'incident[bi]':
 				songPlayer = new BlueballsIncident();
@@ -466,7 +465,7 @@ class SongPlayerManager
 
 			case 'airship-blue':
 				songPlayer = new AirshipBlue();
-			
+
 			case 'dlow':
 				songPlayer = new Dlow();
 
@@ -499,10 +498,10 @@ class SongPlayerManager
 
 			case 'heartbass':
 				songPlayer = new Heartbass();
-	
+
 			case 'endless':
 				songPlayer = new Endless();
-			
+
 			case 'you-cant-run':
 				songPlayer = new YouCantRun();
 
@@ -529,7 +528,7 @@ class SongPlayerManager
 
 			case 'too-fest':
 				songPlayer = new TooFest();
-			
+
 			case 'chasing':
 				songPlayer = new Chasing();
 
@@ -545,13 +544,23 @@ class SongPlayerManager
 			case 'accelerant':
 				songPlayer = new Accelerant();
 
+<<<<<<< HEAD
 			case 'runtime':
 				songPlayer = new RunTime();
 
 
+=======
+			case 'corrupted-hero':
+				songPlayer = new CorruptedHero();
+			case 'brotherly-bond':
+				songPlayer = new BrotherlyBond();
+			case 'gummy-substance':
+				songPlayer = new GummySubstance();
+			case 'together-forever':
+				songPlayer = new TogetherForever();
+>>>>>>> f27dc860abef4ea41ccdbf1cd05f14037f2dd3c4
 		}
 
 		return songPlayer;
 	}
-
 }
