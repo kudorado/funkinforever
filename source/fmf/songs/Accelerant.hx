@@ -44,17 +44,7 @@ class Accelerant extends SongPlayer
 
 	override function getDadVersion()
 	{
-		return new CharacterPE('hank');
-	}
-
-	override function createDad()
-	{
-		super.createDad();
-		dad.x = -116;
-		dad.y = 469;
-		dad.scale.x = 1.5;
-		dad.scale.y = 1.5;
-		
+		return new CharacterPE(-116, 469, 'hank');
 	}
 
 

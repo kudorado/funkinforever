@@ -34,8 +34,6 @@ class PlayTime extends SongPlayer
 
 		gameState.add(bg1);
 
-
-
 	}
 
 	override function createDadAnimations():Void
@@ -99,10 +97,10 @@ class PlayTime extends SongPlayer
 
 	}
 
-    public override function getDadIcon(icon:Icon)
-    {
-        icon.loadGraphic(Paths.image('health_icon/icon_huggy/icon-huggy', 'mods'), true, 150, 150);
-        icon.animation.add('dad', [0, 1], 0, false, false);
-        icon.animation.play("dad");
-    }
+	public override function getDadIcon(icon:Icon)
+	{
+		icon.loadGraphic(Paths.image('psychengine/week_huggywuggy/images/icons/icon-huggy', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [16, 6], 0, false, false);
+		icon.animation.play("dad");
+	}
 }

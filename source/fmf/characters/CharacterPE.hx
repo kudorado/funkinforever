@@ -100,14 +100,28 @@ class CharacterPE extends Character
 				}
 
 				positionArray = json.position;
-				// this.x = positionArray[0];
-				// this.y = positionArray[1];
-
+			
 				cameraPosition = json.camera_position;
 
 				healthIcon = json.healthicon;
 				singDuration = json.sing_duration;
 				flipX = !!json.flip_x;
+
+
+				
+				if (x == 700 && y == 200)
+				{
+					//default, attemp load in array
+					this.x = positionArray[0];
+					this.y = positionArray[1];
+				}
+				else
+				{
+					//load it by passed value
+					this.x = x;
+					this.y = y;
+				}
+
 				if (json.no_antialiasing)
 				{
 					antialiasing = false;

@@ -34,8 +34,7 @@ class Sidekick extends SongPlayer
 
 	override function loadLua()
 	{
-		//no need load by rice
-
+		//no need rice load/
 		// get event
 		// var flash = SongPlayer.luaFolder + "custom_events/flash.lua";
 		// GameState.createLua(flash);
@@ -133,16 +132,12 @@ class Sidekick extends SongPlayer
 				gameState.targetCamFollow.y += 125;
 			else
 				gameState.targetCamFollow.y -= 25;
-
-			gameState.defaultCamZoom = 0.8;
 		}
 
 		if (GameState.instance.player3 != null && GameState.instance.player3.visible)
-		{
 			gameState.targetCamFollow.y -= 150;
-			gameState.defaultCamZoom = 0.7;
-		}
 
+        gameState.defaultCamZoom = 0.8;
 
 	}
 

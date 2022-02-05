@@ -14,20 +14,21 @@ class Dad extends Character
         return "dad";
     }
 
-    override function update(elapsed:Float)
-    {
-        if (GameState.playAsDad)
-        {
-            bfBehaviour(elapsed);
-        }
-        else
-        {
-            dadBehaviour(elapsed);
-        }
-        super.update(elapsed);
-    }
+	override function update(elapsed:Float)
+	{
+		onUpdate(elapsed);
+		if (GameState.playAsDad)
+		{
+			bfBehaviour(elapsed);
+		}
+		else
+		{
+			dadBehaviour(elapsed);
+		}
+		super.update(elapsed);
+	}
 
-    private function bfBehaviour(elapsed:Float)
+    private override function bfBehaviour(elapsed:Float)
     {
         if (animation == null || animation.curAnim == null || animation.curAnim.name == null)
             return;
@@ -46,7 +47,7 @@ class Dad extends Character
 
     }
 
-    private function dadBehaviour(elapsed:Float)
+	private override function dadBehaviour(elapsed:Float)
     {
         if (animation == null || animation.curAnim == null || animation.curAnim.name == null)
             return;

@@ -545,6 +545,9 @@ class SongPlayerManager
 			case 'accelerant':
 				songPlayer = new Accelerant();
 
+			case 'runtime':
+				songPlayer = new RunTime();
+
 
 		}
 

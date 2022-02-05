@@ -118,7 +118,7 @@
 		0
 	],
 	"healthicon": "bf",
-	"flip_x": true,
+	"flip_x": false,
 	"healthbar_colors": [
 		35,
 		85,

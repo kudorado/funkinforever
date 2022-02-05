@@ -89,12 +89,12 @@ class Character extends BaseCharacter
         
 //-------------------------------------------------------------------------------------
 
-	public function dance():Void
+	public override function dance():Void
 	{
         defaultDance();
 	}
 
-    public function playAnimForce(anim:String, lockDuration:Float, callback:Void->Void = null)
+    public override function playAnimForce(anim:String, lockDuration:Float, callback:Void->Void = null)
     {
 		if (animation.getByName(anim) == null) //no anim found babe
 			return;
@@ -118,7 +118,7 @@ class Character extends BaseCharacter
 
     }
     
-	public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
+	public override function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
 	{
 		if (animation.getByName(AnimName) != null)
 		{
@@ -126,7 +126,7 @@ class Character extends BaseCharacter
 		}
 	}
 
-	public function addOffset(name:String, x:Float = 0, y:Float = 0)
+	public override function addOffset(name:String, x:Float = 0, y:Float = 0)
 	{
 		defaultAddOffset(name, x, y);
 	}

@@ -21,6 +21,7 @@ class GFTutorial extends Character
 
 	override function update(elapsed:Float)
 	{
+		onUpdate(elapsed);
 		if (GameState.playAsDad)
 		{
 			bfBehaviour(elapsed);
@@ -31,8 +32,9 @@ class GFTutorial extends Character
 		}
 		super.update(elapsed);
 	}
+	
 
-	private function bfBehaviour(elapsed:Float)
+	private override function bfBehaviour(elapsed:Float)
 	{
 		if (animation == null || animation.curAnim == null || animation.curAnim.name == null)
 			return;
@@ -55,7 +57,7 @@ class GFTutorial extends Character
 		}
 	}
 
-	private function dadBehaviour(elapsed:Float)
+	private override function dadBehaviour(elapsed:Float)
 	{
 		if (animation == null || animation.curAnim == null || animation.curAnim.name == null)
 			return;
