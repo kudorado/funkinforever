@@ -28,7 +28,8 @@ class Note extends FlxSprite
 	var noteTypes:Array<String> = 
 	[
 		'Hell Note', 'EX Note', 'Hurt Note', 
-		'Eye Note', 'Bullet_Note'
+		'Eye Note', 'Bullet_Note',
+		'Sword'
 	];
 
 

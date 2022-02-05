@@ -544,12 +544,9 @@ class SongPlayerManager
 			case 'accelerant':
 				songPlayer = new Accelerant();
 
-<<<<<<< HEAD
 			case 'runtime':
 				songPlayer = new RunTime();
 
-
-=======
 			case 'corrupted-hero':
 				songPlayer = new CorruptedHero();
 			case 'brotherly-bond':
@@ -558,7 +555,6 @@ class SongPlayerManager
 				songPlayer = new GummySubstance();
 			case 'together-forever':
 				songPlayer = new TogetherForever();
->>>>>>> f27dc860abef4ea41ccdbf1cd05f14037f2dd3c4
 		}
 
 		return songPlayer;
