@@ -2177,14 +2177,8 @@ class GameState extends MusicBeatState
 		#else
 		file = "assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
 		#end
+		
 
-		// var modPath = SongPlayer.luaFolder + "data/" + SONG_NAME + '/events.json';
-		// lime.app.Application.current.window.alert(modPath, 'Mod event path');
-		// var daPath = FileSystem.exists(modPath) ? modPath : file;
-
-		// gtrace('chess ass 00');
-
-		// lime.app.Application.current.window.alert(file + ", exist: " + FileSystem.exists(file), 'Event path');
 		#if sys
 		if (FileSystem.exists(file))
 		{
@@ -2252,6 +2246,25 @@ class GameState extends MusicBeatState
 		}
 
 		#end
+
+
+		//load shit
+		var script:String = '';
+		#if mobile
+		script = "assets/assets/data/" + SongPlayer.folder + SONG_NAME + '/script.lua';
+		#else
+		script = "assets/data/" + SongPlayer.folder + SONG_NAME + '/script.lua';
+		#end
+
+		#if sys
+		if (FileSystem.exists(script))
+		{
+				createLua(script);
+		}
+
+		#end
+
+
 
 		// gtrace('No event found for song: ' + SONG_NAME);
 		// Not exactly representative of 'daBeats' lol,
