@@ -792,7 +792,6 @@ class GameState extends MusicBeatState
 						player3.specialAnim = true;
 				}
 
-				trace('call event Play Animation: ' + value1 + ", character: " + playerShit);
 
 				
 				// trace('trim: ' + value2.toLowerCase().trim());
@@ -1112,6 +1111,8 @@ class GameState extends MusicBeatState
 					});
 				}
 		}
+
+		trace('Call event: ' + eventName + value1 + "," + value2);
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
 
@@ -1677,7 +1678,7 @@ class GameState extends MusicBeatState
 		noteTypeMap = null;
 		eventPushedMap.clear();
 		eventPushedMap = null;
-		trace('fffff 111');
+		// trace('fffff 111');
 
 
 		// trace('1653');
@@ -2236,7 +2237,7 @@ class GameState extends MusicBeatState
 
 		var file:String = '';
 	
-		#if ios
+		#if mobile
 			file = "assets/assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
 		#else
 			file = "assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
@@ -2260,26 +2261,26 @@ class GameState extends MusicBeatState
 			var jsonEvent = Song.loadFromJson("events", SongPlayer.folder + SONG_NAME);
 			var eventsData = jsonEvent.events;
 		
-			trace('chess ass 1');
+			// trace('chess ass 1');
 			//check ass
 			if (jsonEvent != null)
 			{
 				// lime.app.Application.current.window.alert("yeah", 'Loaded Event');
-				trace('chess ass 2');
+				// trace('chess ass 2');
 
 				// check this or crash your ass
 				if (eventsData != null) 
 				{
-					trace('chess ass 3');
+					// trace('chess ass 3');
 
 					for (event in eventsData) // Event Notes
 					{
-						trace('chess ass 4');
+						// trace('chess ass 4');
 
 						// lime.app.Application.current.window.alert(eventsData[0], 'Loaded Event');
 						for (i in 0...event[1].length)
 						{
-							trace('chess ass 5');
+							// trace('chess ass 5');
 							// lime.app.Application.current.window.alert(event[1][i][0], 'Loaded Event');
 							var subEvent:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
 							eventNotes.push(subEvent);

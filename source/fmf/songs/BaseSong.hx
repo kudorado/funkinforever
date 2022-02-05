@@ -7,6 +7,11 @@ import selection.*;
 import fmf.skins.*;
 import fmf.vfx.*;
 
+#if sys
+import Sys;
+import sys.FileSystem;
+#end
+
 import flixel.FlxBasic;
 import Options.PcOption;
 import Options.VFXOption;
@@ -90,6 +95,7 @@ class BaseSong
 	public function init():Void
 	{
 		loadLua();
+		loadMapLua();
 		loadMap();
 		mapLoaded = true;
 		loadMapGroup();
@@ -102,6 +108,18 @@ class BaseSong
 	function loadLua()
 	{
 
+	}
+
+	function loadMapLua()
+	{
+		#if LUA_ALLOWED
+		var luaToLoad:String = Paths.modFolders('stages/' + GameState.SONG.stage + '.lua');
+		if (FileSystem.exists(luaToLoad))
+		{
+			trace('Load map: ' + luaToLoad);
+			GameState.createLua(luaToLoad);
+		}
+		#end
 	}
 
 	function addSpriteLuaFront()

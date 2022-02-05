@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:79226053e8b9a2f4dca3dcfcc99b8b55:0c75d04e13afb8cd3eda5c49672d99a7:92fe0f0e78815edc8e2042331121a407$ -->
-<TextureAtlas imagePath="FleetwayBGshit.png" width="4096" height="4096">
-    <SubTexture name="BGblue0000" x="1" y="1" width="2924" height="1457"/>
-    <SubTexture name="BGyellow0000" x="1" y="1460" width="2924" height="1457"/>
-</TextureAtlas>

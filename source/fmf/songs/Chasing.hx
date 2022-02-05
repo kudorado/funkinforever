@@ -22,19 +22,21 @@ class Chasing extends SongPlayer
 
 	override function loadLua()
 	{
+        //auto load, no need load by rice
+
 		// get event
-		var flash = SongPlayer.luaFolder + "custom_events/flash.lua";
-		var changeBG = SongPlayer.luaFolder + "custom_events/bg.lua";
-		GameState.createLuas([flash, changeBG]);
+		// var flash = SongPlayer.luaFolder + "custom_events/flash.lua";
+		// var changeBG = SongPlayer.luaFolder + "custom_events/bg.lua";
+		// GameState.createLuas([flash, changeBG]);
 	}
 
     override function loadMap()
     {
+        //auto load, no need load by rice
+
         gameState.defaultCamZoom = 1;
-        var happy = SongPlayer.luaFolder + "stages/happy.lua";
-
-		GameState.createLua(happy);
-
+        // var happy = SongPlayer.luaFolder + "stages/happy.lua";
+		// GameState.createLua(happy);
     }
 
     override function getDefaultSkin():Skin
