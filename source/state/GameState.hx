@@ -1898,7 +1898,7 @@ class GameState extends MusicBeatState
 				LoadingState.createBlackFadeIn(this, function()
 				{
 					openSubState(new GameOverSubstate(bf().getScreenPosition().x, bf().getScreenPosition().y));
-				}, camHUD, true);
+				}, camOther, true);
 			}
 		}
 	}
