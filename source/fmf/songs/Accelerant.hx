@@ -28,9 +28,9 @@ class Accelerant extends SongPlayer
 	}
 	override function loadMap()
 	{
-		var nevada = SongPlayer.luaFolder + "stages/nevada.lua";
-		GameState.createLua(nevada);
-		gameState.defaultCamZoom = 0.7;
+		// var nevada = SongPlayer.luaFolder + "stages/nevada.lua";
+		// GameState.createLua(nevada);
+		// gameState.defaultCamZoom = 0.7;
 
 		clown = new HankClown();
 		clown.createStaticBG();

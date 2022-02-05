@@ -34,10 +34,11 @@ class Sidekick extends SongPlayer
 
 	override function loadLua()
 	{
+		//no need load by rice
+		
 		// get event
-		var flash = SongPlayer.luaFolder + "custom_events/flash.lua";
-
-		GameState.createLua(flash);
+		// var flash = SongPlayer.luaFolder + "custom_events/flash.lua";
+		// GameState.createLua(flash);
 	}
 
 
