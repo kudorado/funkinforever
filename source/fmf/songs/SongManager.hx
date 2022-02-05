@@ -370,6 +370,16 @@ class SongManager
 				songList: ['Accelerant']
 			}
 		),
+
+		new SongData
+		(
+			{
+				folder: 'week_finnandjake',
+				character: 'finnandjake',
+				songTitle: 'Finn & Jake',
+				songList: ['Corrupted-hero', 'Brotherly-bond', 'Gummy-substance', 'Together-forever']
+			}
+		),
 	];
 //-----------------------------------------------------------
 
