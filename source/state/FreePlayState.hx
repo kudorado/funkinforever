@@ -22,6 +22,12 @@ import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import lime.utils.Assets;
 
+#if sys
+import Sys;
+import sys.FileSystem;
+#end
+
+
 using StringTools;
 
 class FreePlayState extends MusicBeatState
@@ -426,23 +432,18 @@ class FreePlayState extends MusicBeatState
 	function playLevel()
 	{
 		var songLowercase = SongFilter.filter(songs[curSelected].songName);
-
-		//@notrace(songLowercase);
-
 		var poop:String = Highscore.formatSong(songLowercase, StoryState.curDifficulty);
-
-		//@notrace(poop);
 
 		var curSong = songs[curSelected];
 
 		GameState.playingSong = SongManager.songs[curSong.week];
-		GameState.SONG = Song.loadFromJson(poop, SongManager.songs[curSong.week].folder + songLowercase);
 		GameState.SONG_NAME = songLowercase;
 		GameState.RAW_SONG_NAME = songs[curSelected].songName;
-
 		GameState.isStoryMode = false;
-		GameState.storyDifficulty = StoryState.curDifficulty;
 		GameState.storyWeek = songs[curSelected].week;
+
+		StoryState.loadDataFile(songLowercase);
+
 
 		LoadingState.loadWeekSplash(this, function()
 		{

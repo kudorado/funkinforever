@@ -985,7 +985,7 @@ class OffsetMenu extends Option
 
         GameState.SONG = Song.loadFromJson(poop, "Tutorial");
         GameState.isStoryMode = false;
-        GameState.storyDifficulty = 0;
+        // GameState.storyDifficulty = 0;
         GameState.storyWeek = 0;
         GameState.offsetTesting = true;
         //KODURADO//@notrace('CUR WEEK' + GameState.storyWeek);

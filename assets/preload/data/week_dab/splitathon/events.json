@@ -1,0 +1,99 @@
+{
+	"song": {
+		"speed": 3,
+		"stage": "farmland_splitathon",
+		"player1": "bf",
+		"player2": "dave_split",
+		"player3": null,
+		"events": [
+			[
+				313043.47826087,
+				[
+					[
+						"Change Character",
+						"1",
+						"bambi_split"
+					]
+				]
+			],
+			[
+				313108.695652175,
+				[
+					[
+						"Change Character",
+						"2",
+						"dave_split"
+					]
+				]
+			],
+			[
+				379826.086956523,
+				[
+					[
+						"Change Character",
+						"1",
+						"dave_split"
+					]
+				]
+			],
+			[
+				379891.304347827,
+				[
+					[
+						"Change Character",
+						"2",
+						"bambi_corn"
+					]
+				]
+			],
+			[
+				413217.391304349,
+				[
+					[
+						"Change Character",
+						"1",
+						"bambi_split"
+					]
+				]
+			],
+			[
+				413282.608695653,
+				[
+					[
+						"Change Character",
+						"2",
+						"dave_split"
+					]
+				]
+			],
+			[
+				546782.608695652,
+				[
+					[
+						"Change Character",
+						"1",
+						"dave_split"
+					]
+				]
+			],
+			[
+				546847.826086956,
+				[
+					[
+						"Change Character",
+						"2",
+						"bambi_corn"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "nogf",
+		"bpm": 230,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Splitathon"
+	}
+}

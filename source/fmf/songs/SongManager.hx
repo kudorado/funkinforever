@@ -380,6 +380,17 @@ class SongManager
 				songList: ['Corrupted-hero', 'Brotherly-bond', 'Gummy-substance', 'Together-forever']
 			}
 		),
+
+		new SongData
+		(
+			{
+				folder: 'week_dab',
+				character: 'dave',
+				songTitle: 'Dave\'s fun rapping battle!',
+				songList: ['House', 'Insanity', 'Polygonized']
+			}
+		),
+
 	];
 //-----------------------------------------------------------
 

@@ -58,7 +58,6 @@ class Song
 	public static function loadFromJson(jsonInput:String, ?folder:String):SwagSong
 	{
 		//@notrace("load song: " + jsonInput);
-		
 		// pre lowercasing the song name (update)
 		var folderLowercase = SongFilter.filter(folder);
 		//@notrace('loading ' + folderLowercase + '/' + jsonInput.toLowerCase());

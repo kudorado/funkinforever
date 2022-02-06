@@ -22,6 +22,13 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.net.curl.CURLCode;
 
+#if sys
+import Sys;
+import sys.FileSystem;
+#end
+
+
+
 using StringTools;
 
 class StoryState extends MusicBeatState
@@ -31,6 +38,15 @@ class StoryState extends MusicBeatState
 	var dad:MenuCharacter;
 	var bf:MenuCharacter;
 	var gf:MenuCharacter;
+
+
+	public static var difficulties:Array<Dynamic> = 
+	[
+		'baby', 'easy',
+		'normal', 'legacy',
+		'hard', 'hell',
+		'shit', 'unfair'
+	];
 
 
 	public static var curDifficulty:Int = 1;
@@ -340,27 +356,16 @@ class StoryState extends MusicBeatState
 			GameState.isStoryMode = true;
 			selectedWeek = true;
 
-			var diffic = "";
-
-			switch (curDifficulty)
-			{
-				case 0:
-					diffic = '-easy';
-				case 2 | 3:
-					diffic = '-hard';
-
-			}
-
-			GameState.storyDifficulty = curDifficulty;
 			GameState.SONG_NAME = SongFilter.filter(GameState.storyPlaylist[0]);
 			GameState.RAW_SONG_NAME = (GameState.storyPlaylist[0]);
 
-			var daSong = GameState.SONG_NAME + diffic;
-			var daFolder = GameState.playingSong.folder + StringTools.replace(GameState.storyPlaylist[0], " ", "-").toLowerCase();
+			// var daSong = GameState.SONG_NAME + diffic;
+			// var daFolder = GameState.playingSong.folder + StringTools.replace(GameState.storyPlaylist[0], " ", "-").toLowerCase();
 
-			//@notrace("daFolder: " + daFolder);
+	
+			loadDataFile(GameState.SONG_NAME);
 			
-			GameState.SONG = Song.loadFromJson(daSong, daFolder);
+
 
 			GameState.storyWeek = curWeek;
 			GameState.campaignScore = 0;
@@ -369,6 +374,68 @@ class StoryState extends MusicBeatState
 				FlxG.switchState(new SelectionState());
 			});
 			
+		}
+	}
+
+
+	public static function loadDataFile(songName:String)
+	{
+
+		var diffic = "";
+		switch (curDifficulty)
+		{
+			case 0:
+				diffic = '-easy';
+			case 2 | 3:
+				diffic = '-hard';
+		}
+
+		var songLowercase = songName;
+		var file = '';
+		var daDirectory = '';
+		var daSong = songName + diffic;
+
+		#if mobile
+		daDirectory = "assets/assets/data/" + SongPlayer.folder + songLowercase;
+		#else
+		daDirectory = "assets/data/" + SongPlayer.folder + songLowercase;
+		#end
+
+		file = daDirectory + '/' + daSong + '.json';
+
+		var oldSong = GameState.SONG;
+		GameState.SONG = null; // reset cache
+
+		if (!FileSystem.exists(file))
+		{
+			trace('oh shit not found difficult for this file: ' + file);
+			// so attempting to load other difficult
+			for (diff in StoryState.difficulties)
+			{
+				file = daDirectory + '/' + songLowercase + '-' + diff + '.json';
+				if (FileSystem.exists(file))
+				{
+					trace('load alternative difficult: ' + diff);
+					var popipo = songLowercase + '-' + diff;
+					GameState.SONG = Song.loadFromJson(popipo, GameState.playingSong.folder + songLowercase);
+					break;
+				}
+			}
+
+			// oh shit load freeplay again
+			if (GameState.SONG == null)
+			{
+				//re-set it
+				GameState.SONG = oldSong;
+				trace('data file not found for song: ' + songLowercase + ", forced reset state!");
+				FlxG.resetState();
+				return;
+			}
+		}
+		else
+		{
+			trace('data file loaded sucessful!: ' + file);
+			GameState.SONG = Song.loadFromJson(daSong, GameState.playingSong.folder + songLowercase);
 		}
 	}
 

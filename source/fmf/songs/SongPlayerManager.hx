@@ -555,6 +555,16 @@ class SongPlayerManager
 				songPlayer = new GummySubstance();
 			case 'together-forever':
 				songPlayer = new TogetherForever();
+
+
+			case 'house':
+				songPlayer = new House();
+
+			case 'insanity':
+				songPlayer = new Instanity();
+
+			case 'polygonized':
+				songPlayer = new Polygonized();
 		}
 
 		return songPlayer;

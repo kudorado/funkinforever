@@ -1299,7 +1299,10 @@ class GameState extends MusicBeatState
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
 
-	public static var storyDifficulty:Int = 1;
+	static public var storyDifficulty(get, never):Int;
+	static public inline function get_storyDifficulty()
+		return StoryState.curDifficulty;
+
 	public static var weekSong:Int = 0;
 	public static var shits:Int = 0;
 	public static var bads:Int = 0;
@@ -3636,13 +3639,6 @@ class GameState extends MusicBeatState
 				}
 				else
 				{
-					var difficulty:String = "";
-
-					if (storyDifficulty == 0)
-						difficulty = '-easy';
-
-					if (storyDifficulty == 2 || storyDifficulty == 3)
-						difficulty = '-hard';
 
 					// @notrace('LOADING NEXT SONG');
 					// pre lowercasing the next story song name
@@ -3670,7 +3666,7 @@ class GameState extends MusicBeatState
 
 					GameState.SONG_NAME = nextSongLowercase;
 					GameState.RAW_SONG_NAME = storyPlaylist[0];
-					SONG = Song.loadFromJson(nextSongLowercase + difficulty, playingSong.folder + storyPlaylist[0]);
+					StoryState.loadDataFile(nextSongLowercase);
 
 					CURRENT_SONG = SONG_NAME;
 
