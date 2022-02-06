@@ -386,10 +386,21 @@ class SongManager
 			{
 				folder: 'week_dab',
 				character: 'dave',
-				songTitle: 'Dave\'s fun rapping battle!',
+				songTitle: 'V.S Dave!',
 				songList: ['House', 'Insanity', 'Polygonized']
 			}
 		),
+
+		new SongData
+		(
+			{
+				folder: 'week_dab',
+				character: 'dave',
+				songTitle: 'V.S Bambi!',
+				songList: ['Blocked', 'Corn-Theft', 'Maze']
+			}
+		),
+
 
 	];
 //-----------------------------------------------------------

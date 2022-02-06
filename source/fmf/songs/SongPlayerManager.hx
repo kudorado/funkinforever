@@ -565,6 +565,17 @@ class SongPlayerManager
 
 			case 'polygonized':
 				songPlayer = new Polygonized();
+
+			case 'blocked':
+				songPlayer = new Blocked();
+
+			case 'corn-theft':
+				songPlayer = new CornTheft();
+
+			case 'maze':
+				songPlayer = new Maze();
+
+
 		}
 
 		return songPlayer;
