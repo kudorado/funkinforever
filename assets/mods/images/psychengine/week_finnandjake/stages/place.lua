@@ -14,14 +14,14 @@ function onCreate()
 
     makeAnimatedLuaSprite('pibby', 'pibbyshade', 1250, 430)
     addAnimationByPrefix('pibby', 'bounce', 'pibby idle', 24, false)
-    addLuaSprite('pibby', true)
+    addLuaSpriteLater('pibby');
 
     makeAnimatedLuaSprite('glitch', 'static', -600, -300);
     scaleObject('glitch', 2, 2);
     addAnimationByPrefix('glitch', 'glitchout', 'static glitch', 24, true);
     objectPlayAnimation('glitch', 'glitchout');
     addLuaSprite('glitch', true); -- false = add behind characters, true = add over characters
-    triggerEvent('Load Shader', '', '') -- delete if you dont want the shader
+    -- triggerEvent('Load Shader', '', '') -- delete if you dont want the shader
 
 end
 

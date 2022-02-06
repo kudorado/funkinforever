@@ -53,12 +53,6 @@ class CorruptedHero extends SongPlayer
 		bf.y = 362;
 	}
 
-
-	override function getGFVersion()
-	{
-		return new CharacterPE('finn');
-	}
-
 	override function getDadVersion()
 	{
 		return new CharacterPE('finn');
@@ -78,9 +72,7 @@ class CorruptedHero extends SongPlayer
 		super.createGF();
 		// gf.x = 47;
 		// gf.y = 220;
-		gf.scale.x = 0;
-		gf.scale.y = 0;
-
+		gf.visible = false;
 	}
 
 	override function createBF()

@@ -42,6 +42,9 @@ import DialogueBoxPsych;
 using StringTools;
 
 class FunkinLua {
+
+	public static var addLater:String = 'addLaterGroup';
+
 	public static var Function_Stop = 1;
 	public static var Function_Continue = 0;
 
@@ -819,7 +822,7 @@ class FunkinLua {
 		// 	var cam:FlxCamera = cameraFromString(camera);
 		// 	return FlxG.mouse.getScreenPosition(cam).y;
 		// });
-		Lua_helper.add_callback(lua, "characterPlayAnim", function(character:String, anim:String, ?forced:Bool = false, specialAnim:Bool = false) {
+		Lua_helper.add_callback(lua, "characterPlayAnim", function(character:String, anim:String, ?forced:Bool = false, specialAnim:Bool = true) {
 			switch(character.toLowerCase()) {
 				case 'dad':
 					GameState.instance.playAnimAllDad(anim, forced, specialAnim);
@@ -955,9 +958,21 @@ class FunkinLua {
 			{
 				// trace('oh shit, no tag was found, cant add: ' + tag);
 			}
-
 		});
 
+
+		Lua_helper.add_callback(lua, "addLuaSpriteLater", function(tag:String)
+		{
+			if (GameState.instance.modchartSprites.exists(tag))
+			{
+				addLuaSpriteToGroup(tag, addLater);
+			}
+			else
+			{
+				// trace('oh shit, no tag was found, cant add: ' + tag);
+			}
+		});
+	
 
 		Lua_helper.add_callback(lua, "removeLuaSpriteGroup", function(group:String, destroy:Bool = false)
 		{
@@ -987,15 +1002,7 @@ class FunkinLua {
 			
 		Lua_helper.add_callback(lua, "addLuaSpriteGroup", function(group:String, front:Bool = false)
 		{
-			if (GameState.instance.modchartSpritesGroup.exists(group))
-			{
-				//if found group, just call out add sprite for every element inside
-				var spriteGroup = GameState.instance.modchartSpritesGroup.get(group);
-				for (sprite in spriteGroup)
-				{
-					addLuaSprite(sprite.tag, front);
-				}
-			}
+			addLuaSpriteGroup(group, front);
 		});
 
 
@@ -1986,6 +1993,19 @@ class FunkinLua {
 		}
 		// else
 			// trace('Cant add null or empty group!');
+	}
+
+	public function addLuaSpriteGroup(group:String, front:Bool)
+	{
+		if (GameState.instance.modchartSpritesGroup.exists(group))
+		{
+			// if found group, just call out add sprite for every element inside
+			var spriteGroup = GameState.instance.modchartSpritesGroup.get(group);
+			for (sprite in spriteGroup)
+			{
+				addLuaSprite(sprite.tag, front);
+			}
+		}
 	}
 //----------------------------------------------------------------------------------
 }

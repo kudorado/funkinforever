@@ -129,6 +129,9 @@ class BaseSong
 		createCharacters();
 		initVariables();
 		
+
+		//add later sprites
+		GameState.instance.callOnLuas('addLuaSpriteGroup', [FunkinLua.addLater, true]);
 	}
 
 	function initVariables()
@@ -573,11 +576,7 @@ class BaseSong
 	// set icon dad
 	public function getDadIcon(icon:Icon)
 	{
-		if (iconLoaded != null && iconLoaded != '')
-			icon.loadGraphic(iconLoaded, true, 150, 150);
-		else
-			icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
-
+		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('dad', [16, 6], 0, false, false);
 		icon.animation.play("dad");
 	}

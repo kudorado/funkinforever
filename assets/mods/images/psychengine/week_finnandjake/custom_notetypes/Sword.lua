@@ -1,9 +1,9 @@
 function onCreate()
 	--Iterate over all notes
-	makeAnimatedLuaSprite('glitch', 'static', -600, -300);
-	scaleObject('glitch', 2, 2);
-	addAnimationByPrefix('glitch', 'glitchout', 'static glitch', 24, true);
-	objectPlayAnimation('glitch', 'glitchout');
+	makeAnimatedLuaSprite('glitchshit', 'static', -600, -300);
+	scaleObject('glitchshit', 2, 2);
+	addAnimationByPrefix('glitchshit', 'glitchout', 'static glitch', 24, true);
+	objectPlayAnimation('glitchshit', 'glitchout');
 	for i = 0, getProperty('unspawnNotes.length')-1 do
 		if getPropertyFromGroup('unspawnNotes', i, 'noteType') == 'Sword' then --Check if the note on the chart is a Bullet Note
 			setPropertyFromGroup('unspawnNotes', i, 'texture', 'Sword'); --Change texture
@@ -22,11 +22,11 @@ function goodNoteHit(id, direction, noteType, isSustainNote)
 	if noteType == 'Sword' then
 		playSound('slice', 0.6);
 		characterPlayAnim('girlfriend', 'finn slash', true);
-		setProperty('girlfriend.specialAnim', true);
+		-- setProperty('girlfriend.specialAnim', true);
 		characterPlayAnim('dad', 'finn slash', true);
-		setProperty('dad.specialAnim', true);
+		-- setProperty('dad.specialAnim', true);
 		characterPlayAnim('boyfriend', 'dodge', true);
-		setProperty('boyfriend.specialAnim', true);
+		-- setProperty('boyfriend.specialAnim', true);
 		cameraShake('camGame', 0.01, 0.2)
     end
 end
@@ -35,13 +35,13 @@ function noteMiss(id, direction, noteType, isSustainNote)
 	if noteType == 'Sword' then
 		setProperty('health', getProperty('health')-0.35);
 		playSound('slice', 0.6);
-		addLuaSprite('glitch', true); -- false = add behind characters, true = add over characters
+		addLuaSprite('glitchshit', true); -- false = add behind characters, true = add over characters
 		characterPlayAnim('girlfriend', 'attack', true);
 		characterPlayAnim('dad', 'attack', true);
 		characterPlayAnim('boyfriend', 'hurt', true);
-		setProperty('boyfriend.specialAnim', true);
-		setProperty('dad.specialAnim', true);
-		setProperty('girlfriend.specialAnim', true);
+		-- setProperty('boyfriend.specialAnim', true);
+		-- setProperty('dad.specialAnim', true);
+		-- setProperty('girlfriend.specialAnim', true);
 		cameraShake('camGame', 0.01, 0.2)
 	end
 end

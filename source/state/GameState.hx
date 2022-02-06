@@ -100,6 +100,169 @@ class GameState extends MusicBeatState
 		return FlxSort.byValues(FlxSort.ASCENDING, Obj1[0] - earlyTime1, Obj2[0] - earlyTime2);
 	}
 
+	function lightsEvent(value1:String)
+	{
+		var lightId:Int = Std.parseInt(value1);
+		if(Math.isNaN(lightId)) lightId = 0;
+
+		if(lightId > 0 && curLightEvent != lightId) {
+			if(lightId > 5) lightId = FlxG.random.int(1, 5, [curLightEvent]);
+
+			var color:Int = 0xffffffff;
+			switch(lightId) {
+				case 1: //Blue
+					color = 0xff31a2fd;
+				case 2: //Green
+					color = 0xff31fd8c;
+				case 3: //Pink
+					color = 0xfff794f7;
+				case 4: //Red
+					color = 0xfff96d63;
+				case 5: //Orange
+					color = 0xfffba633;
+			}
+			curLightEvent = lightId;
+
+			if (blammedLightsBlack.alpha == 0)
+			{
+				if (blammedLightsBlackTween != null)
+				{
+					blammedLightsBlackTween.cancel();
+				}
+				blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 1}, 1, {
+					ease: FlxEase.quadInOut,
+					onComplete: function(twn:FlxTween)
+					{
+						blammedLightsBlackTween = null;
+					}
+				});
+
+					var chars:Array<Character> = [dadPE, gfPE, player3, bfPE, bf(), dad(), gf()];
+				
+					for (i in 0...chars.length)
+					{
+						if (chars[i] == null)
+							continue;
+
+						if (chars[i].colorTween != null)
+						{
+							chars[i].colorTween.cancel();
+						}
+						chars[i].colorTween = FlxTween.color(chars[i], 1, FlxColor.WHITE, color, {
+							onComplete: function(twn:FlxTween)
+							{
+								chars[i].colorTween = null;
+							},
+							ease: FlxEase.quadInOut
+						});
+					}
+			}
+			else
+			{
+				if (blammedLightsBlackTween != null)
+				{
+					blammedLightsBlackTween.cancel();
+				}
+				blammedLightsBlackTween = null;
+				blammedLightsBlack.alpha = 1;
+
+				var chars:Array<Character> = [dadPE, gfPE, bfPE, player3, bf(), dad(), gf()];
+				for (i in 0...chars.length)
+				{
+					//skip shit
+					if (chars[i] == null)
+						continue;
+					
+					if (chars[i].colorTween != null)
+					{
+						chars[i].colorTween.cancel();
+					}
+					chars[i].colorTween = null;
+				}
+
+				for (i in 0...chars.length)
+				{
+					// skip shit
+					if (chars[i] == null)
+						continue;
+
+					chars[i].color = color;
+				}
+					// dadPE.color = color;
+					// bfPE.color = color;
+					// gfPE.color = color;
+			}
+
+			if (curStage == 'philly')
+			{
+				if (phillyCityLightsEvent != null)
+				{
+					phillyCityLightsEvent.forEach(function(spr:BGSprite)
+					{
+						spr.visible = false;
+					});
+					phillyCityLightsEvent.members[lightId - 1].visible = true;
+					phillyCityLightsEvent.members[lightId - 1].alpha = 1;
+				}
+			}
+		}
+		else
+		{
+			if (blammedLightsBlack.alpha != 0)
+			{
+				if (blammedLightsBlackTween != null)
+				{
+					blammedLightsBlackTween.cancel();
+				}
+				blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 0}, 1, {
+					ease: FlxEase.quadInOut,
+					onComplete: function(twn:FlxTween)
+					{
+						blammedLightsBlackTween = null;
+					}
+				});
+			}
+
+			// if(curStage == 'philly') {
+			// 	phillyCityLights.forEach(function(spr:BGSprite) {
+			// 		spr.visible = false;
+			// 	});
+			// 	phillyCityLightsEvent.forEach(function(spr:BGSprite) {
+			// 		spr.visible = false;
+			// 	});
+
+			// 	var memb:FlxSprite = phillyCityLightsEvent.members[curLightEvent - 1];
+			// 	if(memb != null) {
+			// 		memb.visible = true;
+			// 		memb.alpha = 1;
+			// 		if(phillyCityLightsEventTween != null)
+			// 			phillyCityLightsEventTween.cancel();
+
+			// 		phillyCityLightsEventTween = FlxTween.tween(memb, {alpha: 0}, 1, {onComplete: function(twn:FlxTween) {
+			// 			phillyCityLightsEventTween = null;
+			// 		}, ease: FlxEase.quadInOut});
+			// 	}
+			// }
+
+			var chars:Array<Character> = [dadPE, gfPE, bfPE, player3, bf(), dad(), gf()];
+			for (i in 0...chars.length)
+			{
+				if (chars[i] == null)
+					continue;
+				
+				if (chars[i].colorTween != null)
+				{
+					chars[i].colorTween.cancel();
+				}
+				chars[i].colorTween = FlxTween.color(chars[i], 1, chars[i].color, FlxColor.WHITE, {onComplete: function(twn:FlxTween) {
+					chars[i].colorTween = null;
+				}, ease: FlxEase.quadInOut});
+			}
+
+			curLight = 0;
+			curLightEvent = 0;
+		}
+	}
 	public function checkEventNote()
 	{
 		while (eventNotes.length > 0)
@@ -124,7 +287,7 @@ class GameState extends MusicBeatState
 				if (eventNotes[0][4] != null)
 					value2 = eventNotes[0][4];
 
-				gtrace("triggerEventNote[ " + leStrumTime + ']' + eventNotes[0][2] + " with args: " + value1 + ", " + value2);
+				trace("triggerEventNote[ " + leStrumTime + ']' + eventNotes[0][2] + " with args: " + value1 + ", " + value2);
 				triggerEventNote(eventNotes[0][2], value1, value2);
 			}
 			else
@@ -138,7 +301,7 @@ class GameState extends MusicBeatState
 				if (eventNotes[0][3] != null)
 					value2 = eventNotes[0][3];
 
-				gtrace("triggerEventNote " + eventNotes[0][1] + " with args: " + value1 + ", " + value2);
+				trace("triggerEventNote " + eventNotes[0][1] + " with args: " + value1 + ", " + value2);
 				triggerEventNote(eventNotes[0][1], value1, value2);
 			}
 
@@ -174,7 +337,7 @@ class GameState extends MusicBeatState
 
 				if ((Math.isNaN(evKey) || evKey != -1) && !eventPushedMap.exists(event[1]))
 				{
-					gtrace('Pushed event: ' + event[1]);
+					trace('Pushed event: ' + event[1]);
 					eventPushedMap.set(event[1], true);
 				}
 		}
@@ -263,7 +426,7 @@ class GameState extends MusicBeatState
 	{
 		if (char == null)
 		{
-			gtrace('Null character!');
+			trace('Null character!');
 			return;
 		}
 
@@ -358,7 +521,7 @@ class GameState extends MusicBeatState
 			case 0:
 				if (!boyfriendMap.exists(newCharacter))
 				{
-					gtrace('add new bf: ' + newCharacter);
+					trace('add new bf: ' + newCharacter);
 					var newBoyfriend:BoyfriendPE = new BoyfriendPE(0, 0, newCharacter);
 					boyfriendMap.set(newCharacter, newBoyfriend);
 					boyfriendGroup.add(newBoyfriend);
@@ -375,7 +538,7 @@ class GameState extends MusicBeatState
 			case 1:
 				if (!dadMap.exists(newCharacter))
 				{
-					gtrace('add new dad: ' + newCharacter);
+					trace('add new dad: ' + newCharacter);
 					var newDad:CharacterPE = new CharacterPE(0, 0, newCharacter);
 					dadMap.set(newCharacter, newDad);
 					dadGroup.add(newDad);
@@ -392,7 +555,7 @@ class GameState extends MusicBeatState
 			case 2:
 				if (!gfMap.exists(newCharacter))
 				{
-					gtrace('add new gf: ' + newCharacter);
+					trace('add new gf: ' + newCharacter);
 					var newGf:CharacterPE = new CharacterPE(0, 0, newCharacter);
 					newGf.scrollFactor.set(0.95, 0.95);
 					gfMap.set(newCharacter, newGf);
@@ -410,7 +573,7 @@ class GameState extends MusicBeatState
 			case 3:
 				if (!player3Map.exists(newCharacter))
 				{
-					gtrace('add new player3: ' + newCharacter);
+					trace('add new player3: ' + newCharacter);
 
 					var newPlayer3:CharacterPE = new CharacterPE(0, 0, newCharacter);
 					player3Map.set(newCharacter, newPlayer3);
@@ -495,7 +658,7 @@ class GameState extends MusicBeatState
 	public function getControl(key:String)
 	{
 		var pressed:Bool = Reflect.getProperty(controls, key);
-		// gtrace('Control result: ' + pressed);
+		// trace('Control result: ' + pressed);
 		return pressed;
 	}
 
@@ -511,7 +674,7 @@ class GameState extends MusicBeatState
 
 	public function triggerEventNote(eventName:String, value1:String, value2:String)
 	{
-		// gtrace('trigger event: ' + eventName);
+		trace('trigger event: ' + eventName);
 		switch (eventName)
 		{
 			case 'Hey!':
@@ -566,121 +729,7 @@ class GameState extends MusicBeatState
 				gfSpeed = value;
 
 			case 'Blammed Lights':
-			// var lightId:Int = Std.parseInt(value1);
-			// if(Math.isNaN(lightId)) lightId = 0;
-
-			// if(lightId > 0 && curLightEvent != lightId) {
-			// 	if(lightId > 5) lightId = FlxG.random.int(1, 5, [curLightEvent]);
-
-			// 	var color:Int = 0xffffffff;
-			// 	switch(lightId) {
-			// 		case 1: //Blue
-			// 			color = 0xff31a2fd;
-			// 		case 2: //Green
-			// 			color = 0xff31fd8c;
-			// 		case 3: //Pink
-			// 			color = 0xfff794f7;
-			// 		case 4: //Red
-			// 			color = 0xfff96d63;
-			// 		case 5: //Orange
-			// 			color = 0xfffba633;
-			// 	}
-			// 	curLightEvent = lightId;
-
-			// 	if(blammedLightsBlack.alpha == 0) {
-			// 		if(blammedLightsBlackTween != null) {
-			// 			blammedLightsBlackTween.cancel();
-			// 		}
-			// 		blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 1}, 1, {ease: FlxEase.quadInOut,
-			// 			onComplete: function(twn:FlxTween) {
-			// 				blammedLightsBlackTween = null;
-			// 			}
-			// 		});
-
-			// 		var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
-			// 		for (i in 0...chars.length) {
-			// 			if(chars[i].colorTween != null) {
-			// 				chars[i].colorTween.cancel();
-			// 			}
-			// 			chars[i].colorTween = FlxTween.color(chars[i], 1, FlxColor.WHITE, color, {onComplete: function(twn:FlxTween) {
-			// 				chars[i].colorTween = null;
-			// 			}, ease: FlxEase.quadInOut});
-			// 		}
-			// 	} else {
-			// 		if(blammedLightsBlackTween != null) {
-			// 			blammedLightsBlackTween.cancel();
-			// 		}
-			// 		blammedLightsBlackTween = null;
-			// 		blammedLightsBlack.alpha = 1;
-
-			// 		var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
-			// 		for (i in 0...chars.length) {
-			// 			if(chars[i].colorTween != null) {
-			// 				chars[i].colorTween.cancel();
-			// 			}
-			// 			chars[i].colorTween = null;
-			// 		}
-			// 		dadPE.color = color;
-			// 		bfPE.color = color;
-			// 		gfPE.color = color;
-			// 	}
-
-			// 	if(curStage == 'philly') {
-			// 		if(phillyCityLightsEvent != null) {
-			// 			phillyCityLightsEvent.forEach(function(spr:BGSprite) {
-			// 				spr.visible = false;
-			// 			});
-			// 			phillyCityLightsEvent.members[lightId - 1].visible = true;
-			// 			phillyCityLightsEvent.members[lightId - 1].alpha = 1;
-			// 		}
-			// 	}
-			// } else {
-			// 	if(blammedLightsBlack.alpha != 0) {
-			// 		if(blammedLightsBlackTween != null) {
-			// 			blammedLightsBlackTween.cancel();
-			// 		}
-			// 		blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 0}, 1, {ease: FlxEase.quadInOut,
-			// 			onComplete: function(twn:FlxTween) {
-			// 				blammedLightsBlackTween = null;
-			// 			}
-			// 		});
-			// 	}
-
-			// 	if(curStage == 'philly') {
-			// 		phillyCityLights.forEach(function(spr:BGSprite) {
-			// 			spr.visible = false;
-			// 		});
-			// 		phillyCityLightsEvent.forEach(function(spr:BGSprite) {
-			// 			spr.visible = false;
-			// 		});
-
-			// 		var memb:FlxSprite = phillyCityLightsEvent.members[curLightEvent - 1];
-			// 		if(memb != null) {
-			// 			memb.visible = true;
-			// 			memb.alpha = 1;
-			// 			if(phillyCityLightsEventTween != null)
-			// 				phillyCityLightsEventTween.cancel();
-
-			// 			phillyCityLightsEventTween = FlxTween.tween(memb, {alpha: 0}, 1, {onComplete: function(twn:FlxTween) {
-			// 				phillyCityLightsEventTween = null;
-			// 			}, ease: FlxEase.quadInOut});
-			// 		}
-			// 	}
-
-			// 	var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
-			// 	for (i in 0...chars.length) {
-			// 		if (chars[i].colorTween != null)
-			// 		{
-			// 			chars[i].colorTween.cancel();
-			// 		}
-			// 		chars[i].colorTween = FlxTween.color(chars[i], 1, chars[i].color, FlxColor.WHITE, {onComplete: function(twn:FlxTween) {
-			// 			chars[i].colorTween = null;
-			// 		}, ease: FlxEase.quadInOut});
-			// 	}
-
-			// 	curLight = 0;
-			// 	curLightEvent = 0;
-			// }
+				lightsEvent(value1);
 
 			case 'Kill Henchmen':
 			// killHenchmen();
@@ -774,7 +823,7 @@ class GameState extends MusicBeatState
 						player3.specialAnim = true;
 				}
 
-			// gtrace('trim: ' + value2.toLowerCase().trim());
+			// trace('trim: ' + value2.toLowerCase().trim());
 
 			// char.playAnim(value1, true);
 			// char.specialAnim = true;
@@ -795,7 +844,7 @@ class GameState extends MusicBeatState
 					// camFollow.setPosition(val1, val2);
 				}
 
-				gtrace('shit');
+				trace('shit');
 
 			case 'Alt Idle Animation':
 				var char:CharacterPE = dadPE;
@@ -912,7 +961,7 @@ class GameState extends MusicBeatState
 						}
 
 						dadPE.visible = true;
-						gtrace('change dad to: ' + value2);
+						trace('change dad to: ' + value2);
 
 						setOnLuas('dadName', dadPE.curCharacter);
 
@@ -976,7 +1025,7 @@ class GameState extends MusicBeatState
 
 						// if (dadPE != null)
 						// {
-						// 	gtrace('re add dadpe');
+						// 	trace('re add dadpe');
 
 						// 	remove(dadPE);
 						// 	add(dadPE);
@@ -1096,7 +1145,7 @@ class GameState extends MusicBeatState
 				}
 		}
 
-		gtrace('Call event: ' + eventName + value1 + "," + value2);
+		trace('Call event: ' + eventName + value1 + "," + value2);
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
 
@@ -1530,7 +1579,7 @@ class GameState extends MusicBeatState
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 
-		// gtrace('total camera: ' + FlxG.cameras.list.length);
+		// trace('total camera: ' + FlxG.cameras.list.length);
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD);
 		FlxG.cameras.add(camOther);
@@ -1544,10 +1593,10 @@ class GameState extends MusicBeatState
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
 
-		// @nogtrace('INFORMATION ABOUT WHAT U PLAYIN WIT:\nFRAMES: ' + Conductor.safeFrames + '\nZONE: ' + Conductor.safeZoneOffset + '\nTS: '
+		// @notrace('INFORMATION ABOUT WHAT U PLAYIN WIT:\nFRAMES: ' + Conductor.safeFrames + '\nZONE: ' + Conductor.safeZoneOffset + '\nTS: '
 		// + Conductor.timeScale + '\nBotPlay : ' + botPlayShit);
 
-		// @nogtrace("cur song shit: " + CURRENT_SONG);
+		// @notrace("cur song shit: " + CURRENT_SONG);
 
 		songPlayer = SongPlayerManager.getCurrentSong(RAW_SONG_NAME);
 
@@ -1589,40 +1638,40 @@ class GameState extends MusicBeatState
 		// startCountdown();
 
 		// if (CURRENT_SONG == null)
-		// @nogtrace('song is null???');
+		// @notrace('song is null???');
 		// else
-		// @nogtrace('song looks gucci');
+		// @notrace('song looks gucci');
 
 		generateSong(CURRENT_SONG);
 
-		// gtrace('fffff 1');
+		// trace('fffff 1');
 		#if LUA_ALLOWED
 		for (notetype in noteTypeMap.keys())
 		{
-			gtrace('fffff 2');
+			trace('fffff 2');
 
 			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
-			// gtrace('try load custom: ' + luaToLoad);
+			// trace('try load custom: ' + luaToLoad);
 			if (FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
 			}
 
-			gtrace('fffff 4');
+			trace('fffff 4');
 		}
-		// gtrace('fffff 4');
+		// trace('fffff 4');
 
 		for (event in eventPushedMap.keys())
 		{
-			gtrace('fffff 5');
+			trace('fffff 5');
 
 			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
-			// gtrace('load custom event: ' + luaToLoad);
+			// trace('load custom event: ' + luaToLoad);
 			if (FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
 			}
-			gtrace('fffff 7');
+			trace('fffff 7');
 		}
 		#end
 
@@ -1635,15 +1684,15 @@ class GameState extends MusicBeatState
 		}
 
 
-		gtrace('fffff 888');
+		trace('fffff 888');
 
 		noteTypeMap.clear();
 		noteTypeMap = null;
 		eventPushedMap.clear();
 		eventPushedMap = null;
-		// gtrace('fffff 111');
+		// trace('fffff 111');
 
-		// gtrace('1653');
+		// trace('1653');
 		camFollow = new FlxObject(0, 0, 1, 1);
 
 		var daX = songPlayer.bf.x;
@@ -1683,7 +1732,7 @@ class GameState extends MusicBeatState
 		healthBarBG.scrollFactor.set();
 		add(healthBarBG);
 
-		gtrace('fffff 2222');
+		trace('fffff 2222');
 
 		if (playAsDad)
 		{
@@ -1774,22 +1823,42 @@ class GameState extends MusicBeatState
 		if (FlxG.save.data.downscroll)
 			kadeEngineWatermark.y = FlxG.height * 0.9 + 45;
 
-		// botState = new FlxText(5, 5, "AUTO", 15);
-		// botState.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		// botState.scrollFactor.set();
-		// botState.cameras = [camHUD];
+	
 
-		// if (botPlayShit)
-		// 	add(botState);
+		if (!modchartSprites.exists('blammedLightsBlack'))
+		{ // Creates blammed light black fade in case you didn't make your own
+			blammedLightsBlack = new ModchartSprite(FlxG.width * -0.5, FlxG.height * -0.5);
+			blammedLightsBlack.makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
+			var position:Int = members.indexOf(gfGroup);
+			if (members.indexOf(boyfriendGroup) < position)
+			{
+				position = members.indexOf(boyfriendGroup);
+			}
+			else if (members.indexOf(dadGroup) < position)
+			{
+				position = members.indexOf(dadGroup);
+			}
+			insert(position, blammedLightsBlack);
+
+			blammedLightsBlack.wasAdded = true;
+			modchartSprites.set('blammedLightsBlack', blammedLightsBlack);
+		}
+		if (curStage == 'philly')
+			insert(members.indexOf(blammedLightsBlack) + 1, phillyCityLightsEvent);
+		blammedLightsBlack = modchartSprites.get('blammedLightsBlack');
+		blammedLightsBlack.alpha = 0.0;
+
+
+
 
 		iconP1 = new Icon();
 		iconP2 = new Icon();
-		gtrace('fffff 44');
+		trace('fffff 44');
 
 		songPlayer.getDadIcon(iconP2);
 		songPlayer.getBFIcon(iconP1);
 
-		gtrace('fffff 333333');
+		trace('fffff 333333');
 
 
 		iconP1.y = healthBar.y - (iconP1.height / 2); // so subtract half babe
@@ -1798,7 +1867,7 @@ class GameState extends MusicBeatState
 		iconP2.y = healthBar.y - (iconP2.height / 2); // subtract half babe
 		add(iconP2);
 
-		gtrace('fffff 9999');
+		trace('fffff 9999');
 
 		// new system disable heatlhbar and icon
 
@@ -1826,7 +1895,7 @@ class GameState extends MusicBeatState
 		npsTxt.cameras = [camHUD];
 		songName.cameras = [camHUD];
 
-		// gtrace('1851');
+		// trace('1851');
 
 		// // doof.cameras = [camHUD];
 		// if (FlxG.save.data.songPosition)
@@ -1844,7 +1913,7 @@ class GameState extends MusicBeatState
 
 		gfSpeed = (SONG.bpm);
 
-		// @nogtrace('starting');
+		// @notrace('starting');
 
 		if (isStoryMode)
 		{
@@ -1869,7 +1938,7 @@ class GameState extends MusicBeatState
 		Controller.init(this, NONE, B);
 		Controller._pad.cameras = [camHUD];
 
-		gtrace('1896');
+		trace('1896');
 
 		calculateNPS();
 
@@ -1884,7 +1953,7 @@ class GameState extends MusicBeatState
 
 		createBlackFadeOut();
 
-		gtrace('99999');
+		trace('99999');
 
 	}
 
@@ -2027,7 +2096,7 @@ class GameState extends MusicBeatState
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length;
 
-		// @nogtrace('songLength: ' + songLength);
+		// @notrace('songLength: ' + songLength);
 
 		if (kudoradoHandsome)
 		{
@@ -2131,7 +2200,7 @@ class GameState extends MusicBeatState
 		else
 			vocals = new FlxSound();
 
-		// @nogtrace('loaded vocals');
+		// @notrace('loaded vocals');
 
 		FlxG.sound.list.add(vocals);
 
@@ -2158,13 +2227,13 @@ class GameState extends MusicBeatState
 		// 	{
 		// 		if (path.endsWith('.offset'))
 		// 		{
-		// 			// @nogtrace('Found offset file: ' + path);
+		// 			// @notrace('Found offset file: ' + path);
 		// 			songOffset = Std.parseFloat(file.substring(0, file.indexOf('.off')));
 		// 			break;
 		// 		}
 		// 		else
 		// 		{
-		// 			// @nogtrace('Offset file not found. Creating one @: ' + songPath);
+		// 			// @notrace('Offset file not found. Creating one @: ' + songPath);
 		// 			sys.io.File.saveContent(songPath + songOffset + '.offset', '');
 		// 		}
 		// 	}
@@ -2185,64 +2254,64 @@ class GameState extends MusicBeatState
 			var jsonEvent = Song.loadFromJson("events", SongPlayer.folder + SONG_NAME);
 			var eventsData = jsonEvent.events;
 
-			// gtrace('chess ass 1');
+			// trace('chess ass 1');
 			// check ass
 			if (jsonEvent != null)
 			{
 				// lime.app.Application.current.window.alert("yeah", 'Loaded Event');
-				// gtrace('chess ass 2');
+				// trace('chess ass 2');
 
 				// check this or crash your ass
 				if (eventsData != null)
 				{
-					// gtrace('chess ass 3');
+					// trace('chess ass 3');
 
 					for (event in eventsData) // Event Notes
 					{
-						// gtrace('chess ass 4');
+						// trace('chess ass 4');
 
 						// lime.app.Application.current.window.alert(eventsData[0], 'Loaded Event');
 						for (i in 0...event[1].length)
 						{
-							// gtrace('chess ass 5');
+							// trace('chess ass 5');
 							// lime.app.Application.current.window.alert(event[1][i][0], 'Loaded Event');
 							var subEvent:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
 							eventNotes.push(subEvent);
 							eventPushed(subEvent);
-							gtrace('push custom event: ' + subEvent);
+							trace('push custom event: ' + subEvent);
 						}
 					}
 				}
 
 				// this shouldn't be add, but idk
 				// old system
-				// gtrace('12');
+				// trace('12');
 				var notesData = jsonEvent.notes;
-				// gtrace('13');
+				// trace('13');
 				if (notesData != null)
 				{
-					// gtrace('14');
+					// trace('14');
 
 					for (section in notesData)
 					{
-						// gtrace('16');
+						// trace('16');
 						for (songNotes in section.sectionNotes)
 						{
-							// gtrace('17');
+							// trace('17');
 							if (songNotes[1] < 0)
 							{
-								// gtrace('19');
+								// trace('19');
 								var subEvent:Array<Dynamic> = [songNotes[0], songNotes[1], songNotes[2], songNotes[3], songNotes[4]];
 								eventNotes.push(subEvent);
 								eventPushed(subEvent);
-								gtrace('push old system custom event: ' + subEvent);
+								trace('push old system custom event: ' + subEvent);
 							}
 						}
 					}
 				}
 			}
 			else
-				gtrace('Null event shit: ' + SONG_NAME);
+				trace('Null event shit: ' + SONG_NAME);
 		}
 
 		#end
@@ -2266,11 +2335,11 @@ class GameState extends MusicBeatState
 
 
 
-		// gtrace('No event found for song: ' + SONG_NAME);
+		// trace('No event found for song: ' + SONG_NAME);
 		// Not exactly representative of 'daBeats' lol,
 		// just how much it has looped
 		var daBeats:Int = 0;
-		// gtrace('chess 111');
+		// trace('chess 111');
 		for (section in noteData)
 		{
 			var coolSection:Int = Std.int(section.lengthInSteps / 4);
@@ -2279,9 +2348,12 @@ class GameState extends MusicBeatState
 			{
 				// old event shit, i hate you bjtch
 				// if this is not number, this was an event shit, fuck you
-				if (Std.is(songNotes[2], std.String))
+				if (Std.is(songNotes[2], std.String) || songNotes[1] < 0)
 				{
-					// gtrace('i capture an event shit: ' + daBeats);
+					var subEvent:Array<Dynamic> = [songNotes[0], songNotes[1], songNotes[2], songNotes[3], songNotes[4]];
+					eventNotes.push(subEvent);
+					eventPushed(subEvent);
+					trace('push in-song note event: ' + subEvent);
 					continue;
 				}
 				var daStrumTime:Float = songNotes[0] + FlxG.save.data.offset + songOffset;
@@ -2343,7 +2415,7 @@ class GameState extends MusicBeatState
 					// if not type wasn't add to list, just add it.
 					if (!noteTypeMap.exists(swagNote.noteType))
 					{
-						// gtrace('add custom note type!');
+						// trace('add custom note type!');
 						noteTypeMap.set(swagNote.noteType, true);
 					}
 				}
@@ -2352,28 +2424,28 @@ class GameState extends MusicBeatState
 		}
 		// some song didn't have events field
 		// will crash your ass
-		// gtrace('chess 2222');
+		// trace('chess 2222');
 		if (songData.events != null)
 		{
-			// gtrace('chess 33333');
+			// trace('chess 33333');
 			for (event in songData.events) // Event Notes
 			{
-				// gtrace('chess 4444');
+				// trace('chess 4444');
 				for (i in 0...event[1].length)
 				{
-					// gtrace('chess 55555');
+					// trace('chess 55555');
 					var subEvent:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
 					eventNotes.push(subEvent);
 					eventPushed(subEvent);
-					gtrace('push song event: ' + subEvent);
+					trace('push song event: ' + subEvent);
 				}
 			}
 		}
 		else
-			gtrace('Empty events: ' + SONG_NAME);
+			trace('Empty events: ' + SONG_NAME);
 		// //@notrace(unspawnNotes.length);
 		// playerCounter += 1;
-		gtrace('chess 55555');
+		trace('chess 55555');
 
 		unspawnNotes.sort(sortByShit);
 		if (eventNotes.length > 1)
@@ -2491,10 +2563,10 @@ class GameState extends MusicBeatState
 				timer.active = false;
 			}
 
-			// if(blammedLightsBlackTween != null)
-			// 	blammedLightsBlackTween.active = false;
-			// if(phillyCityLightsEventTween != null)
-			// 	phillyCityLightsEventTween.active = false;
+			if (blammedLightsBlackTween != null)
+				blammedLightsBlackTween.active = false;
+			if (phillyCityLightsEventTween != null)
+				phillyCityLightsEventTween.active = false;
 
 			// if(carTimer != null) carTimer.active = false;
 
@@ -2540,6 +2612,11 @@ class GameState extends MusicBeatState
 		{
 			timer.active = true;
 		}
+		if (blammedLightsBlackTween != null)
+			blammedLightsBlackTween.active = false;
+		if (phillyCityLightsEventTween != null)
+			phillyCityLightsEventTween.active = false;
+
 	}
 
 	override function closeSubState()
@@ -2556,23 +2633,6 @@ class GameState extends MusicBeatState
 				resyncTweens();
 
 				// Todo
-				// do it later due no case use and lazy dude.
-
-				// if(blammedLightsBlackTween != null)
-				// 	blammedLightsBlackTween.active = true;
-				// if(phillyCityLightsEventTween != null)
-				// 	phillyCityLightsEventTween.active = true;
-
-				// // if(carTimer != null) carTimer.active = true;
-
-				// var chars:Array<CharacterPE> = [bfPE, gfPE, dadPE];
-				// for (i in 0...chars.length) {
-				// 	if(chars[i].colorTween != null) {
-				// 		chars[i].colorTween.active = true;
-				// 	}
-				// }
-
-				// callOnLuas('onResume', []);
 
 				paused = false;
 			}
@@ -2762,7 +2822,7 @@ class GameState extends MusicBeatState
 					songTime = (songTime + Conductor.songPosition) / 2;
 					Conductor.lastSongPos = Conductor.songPosition;
 					// Conductor.songPosition += FlxG.elapsed * 1000;
-					// //@nogtrace('MISSED FRAME');
+					// //@notrace('MISSED FRAME');
 				}
 			}
 		}
@@ -3236,7 +3296,7 @@ class GameState extends MusicBeatState
 						callOnLuas('goodNoteHit', [notes.members.indexOf(daNote), leData, leType, isSus]);
 
 						if (leType != '')
-							gtrace('calllua: ' + leType);
+							trace('calllua: ' + leType);
 					}
 					else
 					{
@@ -3287,6 +3347,15 @@ class GameState extends MusicBeatState
 
 					if (SONG.needsVoices)
 						vocals.volume = 1;
+
+
+					if(daNote != null)
+						callOnLuas('opponentNoteHit', [
+							notes.members.indexOf(daNote),
+							Math.abs(daNote.noteData),
+							daNote.noteType,
+							daNote.isSustainNote
+						]);
 
 					daNote.active = false;
 
@@ -3575,7 +3644,7 @@ class GameState extends MusicBeatState
 					if (storyDifficulty == 2 || storyDifficulty == 3)
 						difficulty = '-hard';
 
-					// @nogtrace('LOADING NEXT SONG');
+					// @notrace('LOADING NEXT SONG');
 					// pre lowercasing the next story song name
 					var nextSongLowercase = SongFilter.filter(storyPlaylist[0]);
 
@@ -4242,7 +4311,7 @@ class GameState extends MusicBeatState
 				}
 			});
 
-			// //@nogtrace('\nCURRENT LINE:\n' + directionsAccounted);
+			// //@notrace('\nCURRENT LINE:\n' + directionsAccounted);
 
 			for (note in dumbNotes)
 			{
@@ -4297,7 +4366,7 @@ class GameState extends MusicBeatState
 			{
 				if (mashViolations > 8)
 				{
-					// @nogtrace('mash violations ' + mashViolations);
+					// @notrace('mash violations ' + mashViolations);
 					accuracyTxt.color = FlxColor.RED;
 
 					noteMiss(0, null);
@@ -4466,7 +4535,7 @@ class GameState extends MusicBeatState
 			// some time the note killed for some reason idk
 			if (daNote == null)
 			{
-				gtrace('Null at: callOnLuas(noteMiss)');
+				trace('Null at: callOnLuas(noteMiss)');
 			}
 			else
 			{
@@ -4476,7 +4545,7 @@ class GameState extends MusicBeatState
 				var isSus = daNote.isSustainNote;
 
 				callOnLuas('noteMiss', [dNote, nData, nType, isSus]);
-				// gtrace('callonlua note miss: ' + nType);
+				// trace('callonlua note miss: ' + nType);
 			}
 
 			updateAccuracy();
