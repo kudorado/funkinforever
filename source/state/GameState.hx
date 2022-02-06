@@ -1930,13 +1930,13 @@ class GameState extends MusicBeatState
 		}
 
 		mcontrols = new Mobilecontrols();
-		mcontrols.cameras = [camHUD];
+		mcontrols.cameras = [camOther];
 
 		if (!botPlayShit)
 			add(mcontrols);
 
 		Controller.init(this, NONE, B);
-		Controller._pad.cameras = [camHUD];
+		Controller._pad.cameras = [camOther];
 
 		trace('1896');
 
