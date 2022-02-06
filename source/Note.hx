@@ -29,7 +29,7 @@ class Note extends FlxSprite
 	[
 		'Hell Note', 'EX Note', 'Hurt Note', 
 		'Eye Note', 'Bullet_Note',
-		'Sword'
+		'Sword', 'Glitch', 'GF Glitch'
 	];
 
 

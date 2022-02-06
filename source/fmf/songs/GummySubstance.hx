@@ -17,19 +17,18 @@ class GummySubstance extends SongPlayer
 	{
 		// autoload itself
 
-		var bo = SongPlayer.luaFolder + "custom_notetypes/BO.lua";
-		var gFGlitch = SongPlayer.luaFolder + "custom_notetypes/GF Glitch.lua";
-		var glitch = SongPlayer.luaFolder + "custom_notetypes/Glitch.lua";
-		var sword = SongPlayer.luaFolder + "custom_notetypes/Sword.lua";
+		// var bo = SongPlayer.luaFolder + "custom_notetypes/BO.lua";
+		// var gFGlitch = SongPlayer.luaFolder + "custom_notetypes/GF Glitch.lua";
+		// var glitch = SongPlayer.luaFolder + "custom_notetypes/Glitch.lua";
+		// var sword = SongPlayer.luaFolder + "custom_notetypes/Sword.lua";
 
-		GameState.createLuas([bo, gFGlitch, glitch, sword]);
+		// GameState.createLuas([bo, gFGlitch, glitch, sword]);
 	}
 
 	override function loadMap()
 	{
-		var place = SongPlayer.luaFolder + "stages/place.lua";
-		GameState.createLua(place);
-		gameState.defaultCamZoom = 0.9;
+		// var place = SongPlayer.luaFolder + "stages/place.lua";
+		// GameState.createLua(place);
 	}
 
 	override function getGFVersion()
@@ -56,6 +55,21 @@ class GummySubstance extends SongPlayer
 		// gf.y = 220;
 		gf.scale.x = 0;
 		gf.scale.y = 0;
+	}
+
+	override function updateCamFollowDad()
+	{
+		super.updateCamFollowDad();
+		gameState.targetCamFollow.x -= 350;
+		gameState.targetCamFollow.y -= 150;
+		gameState.defaultCamZoom = 0.7;
+
+	}
+
+	override function updateCamFollowBF()
+	{
+		super.updateCamFollowBF();
+		gameState.defaultCamZoom = 0.9;
 	}
 
 	override function createBF()

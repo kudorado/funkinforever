@@ -17,18 +17,18 @@ class BrotherlyBond extends SongPlayer
 	{
 		// autoload itself
 
-		var bo = SongPlayer.luaFolder + "custom_notetypes/BO.lua";
-		var gFGlitch = SongPlayer.luaFolder + "custom_notetypes/GF Glitch.lua";
-		var glitch = SongPlayer.luaFolder + "custom_notetypes/Glitch.lua";
-		var sword = SongPlayer.luaFolder + "custom_notetypes/Sword.lua";
+		// var bo = SongPlayer.luaFolder + "custom_notetypes/BO.lua";
+		// var gFGlitch = SongPlayer.luaFolder + "custom_notetypes/GF Glitch.lua";
+		// var glitch = SongPlayer.luaFolder + "custom_notetypes/Glitch.lua";
+		// var sword = SongPlayer.luaFolder + "custom_notetypes/Sword.lua";
 
-		GameState.createLuas([bo, gFGlitch, glitch, sword]);
+		// GameState.createLuas([bo, gFGlitch, glitch, sword]);
 	}
 
 	override function loadMap()
 	{
-		var place = SongPlayer.luaFolder + "stages/place.lua";
-		GameState.createLua(place);
+		// var place = SongPlayer.luaFolder + "stages/place.lua";
+		// GameState.createLua(place);
 		gameState.defaultCamZoom = 0.9;
 	}
 

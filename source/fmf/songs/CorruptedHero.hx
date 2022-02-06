@@ -32,6 +32,20 @@ class CorruptedHero extends SongPlayer
 		// gameState.defaultCamZoom = 0.9;
 	}
 
+	override function updateCamFollowDad()
+	{
+		super.updateCamFollowDad();
+		gameState.defaultCamZoom = 0.8;
+		gameState.targetCamFollow.x += 100;
+
+	}
+
+	override function updateCamFollowBF()
+	{
+		super.updateCamFollowBF();
+		gameState.defaultCamZoom = 0.9;
+	}
+
 	override function createStoryBF()
 	{
 		changePc('bf pibby');
