@@ -11,7 +11,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 
-class Blocked extends SongPlayerPE
+class Bambi extends SongPlayerPE
 {	
 
 	public override function bfCamFollowYMin()
@@ -35,16 +35,12 @@ class Blocked extends SongPlayerPE
 		gf.y = 404;
 	}
 
-	override function updateCamFollowDad()
-	{
-		super.updateCamFollowDad();
-		gameState.targetCamFollow.x -= 150;
-	}
+	
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		gameState.targetCamFollow.x -= 300;
+		gameState.targetCamFollow.x -= 200;
 	}
 	
 

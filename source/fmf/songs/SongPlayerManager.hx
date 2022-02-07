@@ -556,24 +556,14 @@ class SongPlayerManager
 			case 'together-forever':
 				songPlayer = new TogetherForever();
 
-
-			case 'house':
-				songPlayer = new House();
-
-			case 'insanity':
-				songPlayer = new Instanity();
+			case 'house' | 'insanity':
+				songPlayer = new Dave();
 
 			case 'polygonized':
-				songPlayer = new Polygonized();
+				songPlayer = new Dave3D();
 
-			case 'blocked':
-				songPlayer = new Blocked();
-
-			case 'corn-theft':
-				songPlayer = new CornTheft();
-
-			case 'maze':
-				songPlayer = new Maze();
+			case 'blocked' |  'corn-theft' | 'maze':
+				songPlayer = new Bambi();
 
 
 		}

@@ -60,7 +60,7 @@
 	"image": "characters/dave_3d",
 	"position": [
 		140,
-		50
+		200
 	],
 	"healthicon": "dave_3d",
 	"flip_x": false,
