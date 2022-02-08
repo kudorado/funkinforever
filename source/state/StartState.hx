@@ -69,9 +69,11 @@ class StartState extends MusicBeatState
 
 		// DEBUG BULLSHIT
 
+		#if ios
 		AdMob.initIOS("11c519235", "", GravityMode.BOTTOM);
-		#if mobile	
-		// AdMob.initAndroid();
+		#end
+		#if android	
+		AdMob.initAndroid();
 		#end
 
 
