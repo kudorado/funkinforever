@@ -439,7 +439,7 @@ class SelectionState extends MusicBeatState
 
 			if (selectedItem == null || selectedItem.isUnlocked)
 			{
-				trace('selection: ' + selectedItem);
+				// trace('selection: ' + selectedItem);
 				// chamge it to play menu
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				curSelection = 0;

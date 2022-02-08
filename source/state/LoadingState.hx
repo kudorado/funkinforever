@@ -38,7 +38,7 @@ class LoadingState extends MusicBeatState
 
 	static public var didLoadout:Bool;
 
-    
+
     inline static var MIN_TIME = 1.0;
 
     var target:FlxState;
@@ -92,6 +92,7 @@ class LoadingState extends MusicBeatState
             //@notrace('try cache: ' + path);
             Assets.loadSound(path).onComplete(function(_)
             {
+                trace('song load ok: ' + path);
                 callback();
             });
         }
@@ -140,6 +141,7 @@ class LoadingState extends MusicBeatState
             var callback = callbacks.add("library:" + library);
             Assets.loadLibrary(library).onComplete(function(_)
             {
+                trace('library load ok: ' + library);
                 callback();
             });
         }

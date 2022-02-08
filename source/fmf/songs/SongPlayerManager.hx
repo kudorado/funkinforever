@@ -425,6 +425,7 @@ class SongPlayerManager
 				songPlayer = new Whitroll();
 
 			case 'playtime':
+				trace('playtime');
 				songPlayer = new PlayTime();
 
 			case 'promenade':

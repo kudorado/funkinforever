@@ -101,7 +101,6 @@ class Note extends FlxSprite
 				case 'GF Sing':
 					gfNote = true;
 
-
 			}
 
 			if (texture != '')
@@ -110,7 +109,7 @@ class Note extends FlxSprite
 				{
 					if (note == value)
 					{
-						// trace('reload note: ' + texture);
+						trace('reload note: ' + texture);
 						reloadNote(value, texture);
 						break;
 					}

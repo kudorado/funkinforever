@@ -1666,7 +1666,6 @@ class GameState extends MusicBeatState
 
 		for (event in eventPushedMap.keys())
 		{
-			trace('fffff 5');
 
 			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
 			// trace('load custom event: ' + luaToLoad);
@@ -1674,7 +1673,6 @@ class GameState extends MusicBeatState
 			{
 				createLua(luaToLoad);
 			}
-			trace('fffff 7');
 		}
 		#end
 
@@ -1687,7 +1685,6 @@ class GameState extends MusicBeatState
 		}
 
 
-		trace('fffff 888');
 
 		noteTypeMap.clear();
 		noteTypeMap = null;
@@ -1735,7 +1732,6 @@ class GameState extends MusicBeatState
 		healthBarBG.scrollFactor.set();
 		add(healthBarBG);
 
-		trace('fffff 2222');
 
 		if (playAsDad)
 		{
@@ -1856,32 +1852,28 @@ class GameState extends MusicBeatState
 
 		iconP1 = new Icon();
 		iconP2 = new Icon();
-		trace('fffff 44');
 
 		songPlayer.getDadIcon(iconP2);
 		songPlayer.getBFIcon(iconP1);
 
-		trace('fffff 333333');
-
-
-		iconP1.y = healthBar.y - (iconP1.height / 2); // so subtract half babe
+		//iconP1.y = healthBar.y - (//iconP1.height / 2); // so subtract half babe
 		add(iconP1);
 
-		iconP2.y = healthBar.y - (iconP2.height / 2); // subtract half babe
+		//iconP2.y = healthBar.y - (//iconP2.height / 2); // subtract half babe
 		add(iconP2);
 
-		trace('fffff 9999');
+		gtrace('1865');
 
 		// new system disable heatlhbar and icon
 
 		healthBar.visible = false;
 		healthBarBG.visible = false;
 
-		iconP1.visible = false;
-		iconP2.visible = false;
+		//iconP1.visible = false;
+		//iconP2.visible = false;
 
-		// iconP1.y = healthBar.y;
-		// iconP2.y = healthBar.y;
+		// //iconP1.y = healthBar.y;
+		// //iconP2.y = healthBar.y;
 		add(effectStrums);
 
 		effectStrums.cameras = [camHUD];
@@ -1889,8 +1881,8 @@ class GameState extends MusicBeatState
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
 		healthBarBG.cameras = [camHUD];
-		iconP1.cameras = [camHUD];
-		iconP2.cameras = [camHUD];
+		//iconP1.cameras = [camHUD];
+		//iconP2.cameras = [camHUD];
 
 		scoreTxt.cameras = [camHUD];
 		missTxt.cameras = [camHUD];
@@ -1941,7 +1933,6 @@ class GameState extends MusicBeatState
 		Controller.init(this, NONE, B);
 		Controller._pad.cameras = [camOther];
 
-		trace('1896');
 
 		calculateNPS();
 
@@ -1955,8 +1946,6 @@ class GameState extends MusicBeatState
 		AdMob.hideBanner();
 
 		createBlackFadeOut();
-
-		trace('99999');
 
 	}
 
@@ -2053,8 +2042,8 @@ class GameState extends MusicBeatState
 			notes.visible = false;
 			healthBar.visible = false;
 			healthBarBG.visible = false;
-			iconP1.visible = false;
-			iconP2.visible = false;
+			//iconP1.visible = false;
+			//iconP2.visible = false;
 
 			scoreTxt.visible = false;
 			missTxt.visible = false;
@@ -2427,7 +2416,7 @@ class GameState extends MusicBeatState
 		}
 		// some song didn't have events field
 		// will crash your ass
-		// trace('chess 2222');
+		trace('load songData events!');
 		if (songData.events != null)
 		{
 			// trace('chess 33333');
@@ -2448,7 +2437,6 @@ class GameState extends MusicBeatState
 			trace('Empty events: ' + SONG_NAME);
 		// //@notrace(unspawnNotes.length);
 		// playerCounter += 1;
-		trace('chess 55555');
 
 		unspawnNotes.sort(sortByShit);
 		if (eventNotes.length > 1)
@@ -2914,7 +2902,10 @@ class GameState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+		gtrace('2906');
 		callOnLuas('onUpdate', [elapsed]);
+
+		gtrace('2908');
 
 		checkUnlockCamFollow();
 
@@ -2924,7 +2915,7 @@ class GameState extends MusicBeatState
 		boundMax.text = "lockCamFollow: " + lockCamFollow + ", targetPosition: " + targetCamFollow;
 		#end
 		#end
-
+		gtrace('2918');
 		#if !debug
 		perfectMode = false;
 		#end
@@ -2961,6 +2952,9 @@ class GameState extends MusicBeatState
 		{
 			npsShit++;
 		}
+		
+		gtrace('2056');
+
 
 		#if !mobile
 		#if debug
@@ -2996,6 +2990,8 @@ class GameState extends MusicBeatState
 
 		updateTextShit();
 
+		gtrace('2992');
+
 		if (!FlxG.save.data.accuracyDisplay)
 			scoreTxt.text = "Score: " + songScore;
 
@@ -3019,6 +3015,7 @@ class GameState extends MusicBeatState
 		}
 		#end
 		#end
+		gtrace('3012');
 
 		if (FlxG.keys.justPressed.SEVEN)
 		{
@@ -3028,49 +3025,55 @@ class GameState extends MusicBeatState
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 
-		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, 0.50)));
-		iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, 0.50)));
+		//iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, //iconP1.width, 0.50)));
+		//iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, //iconP2.width, 0.50)));
 
-		iconP1.updateHitbox();
-		iconP2.updateHitbox();
+		//iconP1.updateHitbox();
+		//iconP2.updateHitbox();
+		gtrace('3033');
 
 		var iconOffset:Int = 26;
 
-		if (playAsDad)
-		{
-			iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(100 - healthBar.percent, 100, 0, 0, 100) * 0.01) - iconOffset);
-			iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(100 - healthBar.percent, 100, 0, 0, 100) * 0.01)) - (iconP2.width - iconOffset);
+		
+		//todo 
+		//good memories
+		// if (playAsDad)
+		// {
+		// 	//iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(100 - healthBar.percent, 100, 0, 0, 100) * 0.01) - iconOffset);
+		// 	//iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(100 - healthBar.percent, 100, 0, 0, 100) * 0.01)) - (//iconP2.width - iconOffset);
 
-			if (health > 2)
-				health = 2;
+		// 	if (health > 2)
+		// 		health = 2;
 
-			if (healthBar.percent < 20)
-				iconP2.animation.curAnim.curFrame = 1;
-			else
-				iconP2.animation.curAnim.curFrame = 0;
+		// 	if (healthBar.percent < 20)
+		// 		//iconP2.animation.curAnim.curFrame = 1;
+		// 	else
+		// 		//iconP2.animation.curAnim.curFrame = 0;
 
-			if (healthBar.percent > 80)
-				iconP1.animation.curAnim.curFrame = 1;
-			else
-				iconP1.animation.curAnim.curFrame = 0;
-		}
-		else
-		{
-			iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - iconOffset);
-			iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (iconP2.width - iconOffset);
+		// 	if (healthBar.percent > 80)
+		// 		//iconP1.animation.curAnim.curFrame = 1;
+		// 	else
+		// 		//iconP1.animation.curAnim.curFrame = 0;
+		// }
+		// else
+		// {
+		// 	//iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - iconOffset);
+		// 	//iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (//iconP2.width - iconOffset);
 
-			if (health > 2)
-				health = 2;
-			if (healthBar.percent < 20)
-				iconP1.animation.curAnim.curFrame = 1;
-			else
-				iconP1.animation.curAnim.curFrame = 0;
+		// 	if (health > 2)
+		// 		health = 2;
+		// 	if (healthBar.percent < 20)
+		// 		//iconP1.animation.curAnim.curFrame = 1;
+		// 	else
+		// 		//iconP1.animation.curAnim.curFrame = 0;
 
-			if (healthBar.percent > 80)
-				iconP2.animation.curAnim.curFrame = 1;
-			else
-				iconP2.animation.curAnim.curFrame = 0;
-		}
+		// 	if (healthBar.percent > 80)
+		// 		//iconP2.animation.curAnim.curFrame = 1;
+		// 	else
+		// 		//iconP2.animation.curAnim.curFrame = 0;
+		// }
+
+		gtrace('3073');
 
 		#if !mobile
 		#if debug
@@ -3138,6 +3141,7 @@ class GameState extends MusicBeatState
 				unspawnNotes.splice(index, 1);
 			}
 		}
+		gtrace('3132');
 
 		if (generatedMusic)
 		{
@@ -4882,11 +4886,11 @@ class GameState extends MusicBeatState
 			songPlayer.playBeatEvent();
 		}
 
-		iconP1.setGraphicSize(Std.int(iconP1.width + 30));
-		iconP2.setGraphicSize(Std.int(iconP2.width + 30));
+		//iconP1.setGraphicSize(Std.int(//iconP1.width + 30));
+		//iconP2.setGraphicSize(Std.int(//iconP2.width + 30));
 
-		iconP1.updateHitbox();
-		iconP2.updateHitbox();
+		//iconP1.updateHitbox();
+		//iconP2.updateHitbox();
 
 		// if (playAsDad)
 		// {

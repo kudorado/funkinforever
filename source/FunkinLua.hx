@@ -172,7 +172,7 @@ class FunkinLua {
 		set('boyfriendName', GameState.SONG.player1);
 		set('dadName', GameState.SONG.player2);
 		set('gfName', GameState.SONG.player3);
-		set('player3Name', GameState.SONG.player3);
+		set('player3Name', "fuckyou");
 
 		// Some settings, no jokes
 		// set('downscroll', ClientPrefs.downScroll);

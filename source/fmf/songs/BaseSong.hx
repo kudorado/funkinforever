@@ -567,7 +567,6 @@ class BaseSong
 	// set icon bf
 	public function getBFIcon(icon:Icon)
 	{
-	
 		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 		icon.animation.add('bf', [0, 1], 0, false, true);
 		icon.animation.play("bf");
