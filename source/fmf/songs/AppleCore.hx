@@ -45,5 +45,35 @@ class AppleCore extends SongPlayerPE
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
+
+	var direction:Float = 1;
+	override function update(elapsed)
+	{
+		if (gameState.curStep < 895)
+		{
+			if (direction == 1) //move right
+			{
+				//if position > max, then move left
+				if (dad.x >= 900)
+				{
+					direction = -1;
+					gameState.dadGroup.remove(dad);
+					gameState.boyfriendGroup.add(dad);
+				}
+			}
+
+			if (direction == -1)
+			{
+				// if position < min, then move right
+				if (dad.x <= 100)
+				{
+					direction = 1;
+					gameState.boyfriendGroup.remove(dad);
+					gameState.dadGroup.add(dad);
+				}
+			}
+		}
+		super.update(elapsed);
+	}
 	
 }

@@ -125,13 +125,6 @@ function onStepHit()
 	end
 end
 
-function onTweenCompleted(tag)
-	if tag == 'opponentmove' then
-		appendLuaSprite('dad');
-	end
-
-end
-
 function onUpdate(elapsed)
 songPos = getSongPosition()
 local currentBeat = (songPos/1000)
