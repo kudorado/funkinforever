@@ -60,7 +60,7 @@ class Bambi extends SongPlayerPE
 	
 	override function getDadVersion()
 	{
-		return new CharacterPE('Bambi');
+		return new CharacterPE('bambi');
 	}
 
 

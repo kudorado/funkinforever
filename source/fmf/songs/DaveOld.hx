@@ -11,7 +11,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 
-class Splitathon extends Dave
+class DaveOld extends Dave
 {	
 	public override function getDadIcon(icon:Icon)
 	{
@@ -22,7 +22,7 @@ class Splitathon extends Dave
 	
 	override function getDadVersion()
 	{
-		return new CharacterPE('dave_split');
+		return new CharacterPE('dave-old');
 	}
 
 

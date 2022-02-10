@@ -13,10 +13,10 @@
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/bambicorn",
+	"image": "characters/BambiCorn",
 	"position": [
 		160,
-		430
+		850
 	],
 	"healthicon": "bambi",
 	"flip_x": false,

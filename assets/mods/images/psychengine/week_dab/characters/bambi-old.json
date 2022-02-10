@@ -60,7 +60,7 @@
 	"image": "characters/bambi-old",
 	"position": [
 		160,
-		340
+		475
 	],
 	"healthicon": "bambi_old",
 	"flip_x": true,

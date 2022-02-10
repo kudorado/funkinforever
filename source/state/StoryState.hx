@@ -44,8 +44,8 @@ class StoryState extends MusicBeatState
 	[
 		'baby', 'easy',
 		'normal', 'legacy',
-		'hard', 'hell',
-		'shit', 'unfair'
+		'hard', 'hell', 'finale',
+		'shit', 'unfair', 'ex'
 	];
 
 

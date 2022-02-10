@@ -11,7 +11,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 
-class Splitathon extends Dave
+class Splitathon extends Bambi
 {	
 	public override function getDadIcon(icon:Icon)
 	{
@@ -26,4 +26,4 @@ class Splitathon extends Dave
 	}
 
 
-}
+}	

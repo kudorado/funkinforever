@@ -334,6 +334,27 @@ class GameState extends MusicBeatState
 
 			default:
 				var evKey = Std.parseInt(event[1]);
+				switch (event[1])
+				{
+					case 'Change Character':
+						var charType:Int = 0;
+						switch (event[2].toLowerCase())
+						{
+							case 'boyfriend' | 'bf' | '0':
+								charType = 0;
+							case 'player3' | '3':
+								charType = 3;
+							case 'gf' | 'girlfriend' | '2':
+								charType = 2;
+							case 'dad' | 'opponent' | '1':
+								charType = 1;
+							default:
+								charType = Std.parseInt(event[2]);
+								if (Math.isNaN(charType)) charType = 0;
+						}
+						var newCharacter:String = event[3];
+						addCharacterToList(newCharacter, charType);
+				}
 
 				if ((Math.isNaN(evKey) || evKey != -1) && !eventPushedMap.exists(event[1]))
 				{
@@ -548,8 +569,8 @@ class GameState extends MusicBeatState
 					startCharacterLua(newDad.curCharacter);
 
 					// turn on for debug
-					// newDad.visible = true;
-					// newDad.alpha = 1;
+					newDad.visible = true;
+					newDad.alpha = 1;
 				}
 
 			case 2:
@@ -1862,7 +1883,7 @@ class GameState extends MusicBeatState
 		//iconP2.y = healthBar.y - (//iconP2.height / 2); // subtract half babe
 		add(iconP2);
 
-		gtrace('1865');
+		dtrace('1865');
 
 		// new system disable heatlhbar and icon
 
@@ -2902,10 +2923,10 @@ class GameState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		gtrace('2906');
+		dtrace('2906');
 		callOnLuas('onUpdate', [elapsed]);
 
-		gtrace('2908');
+		dtrace('2908');
 
 		checkUnlockCamFollow();
 
@@ -2915,7 +2936,7 @@ class GameState extends MusicBeatState
 		boundMax.text = "lockCamFollow: " + lockCamFollow + ", targetPosition: " + targetCamFollow;
 		#end
 		#end
-		gtrace('2918');
+		dtrace('2918');
 		#if !debug
 		perfectMode = false;
 		#end
@@ -2953,7 +2974,7 @@ class GameState extends MusicBeatState
 			npsShit++;
 		}
 		
-		gtrace('2056');
+		dtrace('2056');
 
 
 		#if !mobile
@@ -2990,7 +3011,7 @@ class GameState extends MusicBeatState
 
 		updateTextShit();
 
-		gtrace('2992');
+		dtrace('2992');
 
 		if (!FlxG.save.data.accuracyDisplay)
 			scoreTxt.text = "Score: " + songScore;
@@ -3015,7 +3036,7 @@ class GameState extends MusicBeatState
 		}
 		#end
 		#end
-		gtrace('3012');
+		dtrace('3012');
 
 		if (FlxG.keys.justPressed.SEVEN)
 		{
@@ -3030,7 +3051,7 @@ class GameState extends MusicBeatState
 
 		//iconP1.updateHitbox();
 		//iconP2.updateHitbox();
-		gtrace('3033');
+		dtrace('3033');
 
 		var iconOffset:Int = 26;
 
@@ -3073,7 +3094,7 @@ class GameState extends MusicBeatState
 		// 		//iconP2.animation.curAnim.curFrame = 0;
 		// }
 
-		gtrace('3073');
+		dtrace('3073');
 
 		#if !mobile
 		#if debug
@@ -3141,7 +3162,7 @@ class GameState extends MusicBeatState
 				unspawnNotes.splice(index, 1);
 			}
 		}
-		gtrace('3132');
+		dtrace('3132');
 
 		if (generatedMusic)
 		{
@@ -3704,9 +3725,11 @@ class GameState extends MusicBeatState
 		// createEmptyBlack();
 	}
 
-	function gtrace(msg:String)
+	function dtrace(msg:String)
 	{
-		trace(msg);
+		#if debug
+		// trace(msg);
+		#end
 	}
 
 	public function nextSong()
