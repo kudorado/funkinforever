@@ -575,7 +575,7 @@ class BaseSong
 	// set icon dad
 	public function getDadIcon(icon:Icon)
 	{
-		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
+		icon.loadGraphic(Paths.image("iconGrid"), true, 150, 150);
 		icon.animation.add('dad', [16, 6], 0, false, false);
 		icon.animation.play("dad");
 	}

@@ -32,7 +32,7 @@ typedef CharacterFile =
 	var image:String;
 	var scale:Float;
 	var sing_duration:Float;
-	var healthicon:String;
+	public var healthicon:String;
 
 	var position:Array<Float>;
 	var camera_position:Array<Float>;

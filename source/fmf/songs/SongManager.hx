@@ -13,7 +13,6 @@ class SongManager
 	static public var songs:Array<SongData> = 
 	[
 //-------------------------TUTORIAL--------------------------
-		
 		new SongData
 		(
 			{
@@ -407,7 +406,17 @@ class SongManager
 				folder: 'week_dab',
 				character: 'dab',
 				songTitle: 'V.S Dave & Bambi!',
-				songList: ['Splitathon', 'Bonus-song', 'Mealie', 'Supernovae', 'Glitch', 'Vs-dave-thanksgiving"']
+				songList: ['Bonus-song', 'Mealie', 'Supernovae', 'Glitch', 'Vs-dave-thanksgiving"']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_dab',
+				character: 'dab_finale',
+				songTitle: 'Dave and Bambi Finale!',
+				songList: ['Poligonized', 'Cheating', 'Unfairness']
 			}
 		),
 

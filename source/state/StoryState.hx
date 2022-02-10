@@ -378,7 +378,7 @@ class StoryState extends MusicBeatState
 	}
 
 
-	public static function loadDataFile(songName:String)
+	public static function loadDataFile(songName:String, forceRestartScene:Bool = true)
 	{
 
 		var diffic = "";
@@ -428,7 +428,10 @@ class StoryState extends MusicBeatState
 				//re-set it
 				GameState.SONG = oldSong;
 				trace('data file not found for song: ' + songLowercase + ", forced reset state!");
-				FlxG.resetState();
+				if (forceRestartScene)
+				{
+					FlxG.resetState();
+				}
 				return;
 			}
 		}

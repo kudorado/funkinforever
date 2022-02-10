@@ -557,13 +557,13 @@ class SongPlayerManager
 			case 'together-forever':
 				songPlayer = new TogetherForever();
 
-			case 'house' | 'insanity' | 'bonus-song':
+			case 'house' | 'insanity':
 				songPlayer = new Dave();
 
 			case 'polygonized':
 				songPlayer = new Dave3D();
 
-			case 'blocked' |  'corn-theft' | 'maze' | 'mealie':
+			case 'blocked' |  'corn-theft' | 'corntheft' | 'maze' | 'mealie':
 				songPlayer = new Bambi();
 				
 			case 'splitathon':
@@ -571,6 +571,16 @@ class SongPlayerManager
 
 			case 'supernovae' |   'glitch' | 'vs-dave-thanksgiving':
 				songPlayer = new BambiOld();
+
+			case 'bonus-song':
+				songPlayer = new DaveOld();
+
+			case 'cheating':
+				songPlayer = new Bambi3D();
+
+			case 'unfairness':
+
+
 
 
 		}

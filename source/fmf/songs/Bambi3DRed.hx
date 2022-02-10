@@ -11,19 +11,24 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 
-class BambiOld extends Dave
-{	
+class Bambi3DRed extends Bambi
+{
+	override function createBF()
+	{
+		super.createBF();
+		bf.x += 250;
+		bf.y += 250;
+	}
+
 	public override function getDadIcon(icon:Icon)
 	{
-		icon.loadGraphic(Paths.image('psychengine/week_dab/images/icons/icon-bambi_old', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('psychengine/week_dab/images/icons/icon-bambi_unfairness', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
-	
+
 	override function getDadVersion()
 	{
-		return new CharacterPE('bambi-old');
+		return new CharacterPE('bambi_3d_red');
 	}
-
-
 }
