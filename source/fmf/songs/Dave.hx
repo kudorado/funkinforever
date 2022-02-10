@@ -34,7 +34,7 @@ class Dave extends SongPlayerPE
 		
 	override function getDadVersion()
 	{
-		return new CharacterPE('dave');
+		return new CharacterPE('Dave');
 	}
 
 	public override function getDadIcon(icon:Icon)

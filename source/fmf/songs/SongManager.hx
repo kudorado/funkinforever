@@ -401,6 +401,17 @@ class SongManager
 			}
 		),
 
+		new SongData
+		(
+			{
+				folder: 'week_dab',
+				character: 'dab',
+				songTitle: 'V.S Dave & Bambi!',
+				songList: ['Splitathon', 'Bonus-song', 'Mealie', 'Supernovae', 'Glitch', 'Vs-dave-thanksgiving"']
+			}
+		),
+
+
 
 	];
 //-----------------------------------------------------------

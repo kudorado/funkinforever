@@ -90,10 +90,10 @@
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/splitathon_dave",
+	"image": "characters/Splitathon_Dave",
 	"position": [
-		130,
-		160
+		208,
+		336
 	],
 	"healthicon": "dave",
 	"flip_x": false,
