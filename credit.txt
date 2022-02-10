@@ -1,9 +1,7 @@
 Discord: https://discord.com/invite/mzSgPEQQat
-
 Credits
 ----------------------------------------------------------
 Original Game
-----------------------------------------------------------
 Friay Night Funkin!
 ninjamuffin99  - Programmer
 PhantomArcade3K and Evilsk8r - Art
@@ -13,14 +11,8 @@ Support the creator here:
 https://ninja-muffin24.itch.io/funkin
 https://www.newgrounds.com/portal/view/770371
 --------------------------------------------------------
-Mods Creators
---------------------------------------------------------
 Everyone Sings 
---------------------------------------------------------
 Blantados
---------------------------------------------------------
-The Date Week
-https://gamebanana.com/mods/307107
 --------------------------------------------------------
 
 Key Authors
@@ -169,5 +161,8 @@ DatVT - SickDev
 NamNP - TurboDev
 Source code (In development):
 https://github.com/kudorado/Funkin/tree/fmf_master
+
+Due limit of 5000 characters in description, you can view full credits here!
+https://drive.google.com/file/d/1w0V09rqU5wb4FokchDQOC-j2OsT8VWS6/view?usp=sharing
 
 #FF #FNFMod #FNF
