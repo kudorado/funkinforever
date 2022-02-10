@@ -27,11 +27,11 @@ class DemonEffect extends MadEffect
 		vfx.setGraphicSize(Std.int(vfx.width * 1.25));
 
 		vfx.cameras = [GameState.instance.camGame];
-		vfx.x =  -75 + (GameState.bf().x + i * 50);
-		vfx.y = GameState.bf().y;
+		vfx.x =  -75 + (GameState.bfFE().x + i * 50);
+		vfx.y = GameState.bfFE().y;
 
-		GameState.instance.remove(GameState.bf());
-		GameState.instance.add(GameState.bf());
+		GameState.instance.remove(GameState.bfFE());
+		GameState.instance.add(GameState.bfFE());
 
 	}
 }

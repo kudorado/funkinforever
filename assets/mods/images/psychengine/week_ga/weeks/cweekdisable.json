@@ -1,0 +1,31 @@
+{
+	"songs": [
+		[
+			"disability",
+			"disability",
+			[
+				255,
+				173,
+				253
+			]
+		]
+	],
+	"hideFreeplay": false,
+	"weekBackground": "Disability",
+	"difficulties": "",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "dont worry about my disability",
+	"weekName": "weekdisable",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "weekapplecore",
+	"startUnlocked": true
+}

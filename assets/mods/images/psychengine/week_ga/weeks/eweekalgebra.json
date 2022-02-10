@@ -1,0 +1,31 @@
+{
+	"songs": [
+		[
+			"algebra",
+			"og_dave",
+			[
+				0,
+				195,
+				253
+			]
+		]
+	],
+	"hideFreeplay": false,
+	"weekBackground": "algebra",
+	"difficulties": "",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "get ready to redo this whole 10 minute marathon",
+	"weekName": "weekalgebra",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "weekwireframe",
+	"startUnlocked": true
+}

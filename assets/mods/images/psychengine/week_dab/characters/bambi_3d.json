@@ -59,8 +59,8 @@
 	"no_antialiasing": false,
 	"image": "characters/bambi_3d",
 	"position": [
-		-130,
-		-130
+		94,
+		175
 	],
 	"healthicon": "bambi_3d",
 	"flip_x": false,

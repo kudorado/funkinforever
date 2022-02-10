@@ -406,7 +406,7 @@ class SongManager
 				folder: 'week_dab',
 				character: 'dab',
 				songTitle: 'V.S Dave & Bambi!',
-				songList: ['Bonus-song', 'Mealie', 'Supernovae', 'Glitch', 'Vs-dave-thanksgiving"']
+				songList: ['Bonus-song', 'Mealie', 'Supernovae', 'Glitch', 'Vs-dave-thanksgiving']
 			}
 		),
 
@@ -416,7 +416,17 @@ class SongManager
 				folder: 'week_dab',
 				character: 'dab_finale',
 				songTitle: 'Dave and Bambi Finale!',
-				songList: ['Poligonized', 'Cheating', 'Unfairness']
+				songList: ['Splitathon', 'Cheating', 'Unfairness']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_ga',
+				character: 'dab_ga',
+				songTitle: 'Golden Apple!',
+				songList: ['Applecore']
 			}
 		),
 

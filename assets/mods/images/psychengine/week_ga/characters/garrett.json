@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-182,
+				-23
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-182,
+				-23
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-181,
+				-24
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "LEFT",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-187,
+				-60
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "DOWN"
+		},
+		{
+			"offsets": [
+				-228,
+				-23
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "RIGHT"
+		},
+		{
+			"offsets": [
+				-185,
+				-23
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "garrett shocked",
+			"loop": true,
+			"name": "SHOCKED"
+		},
+		{
+			"offsets": [
+				-165,
+				-21
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "garrett junker",
+			"loop": true,
+			"name": "STAND"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/garrett_algebra",
+	"position": [
+		-290,
+		-40
+	],
+	"healthicon": "garrett",
+	"flip_x": false,
+	"healthbar_colors": [
+		253,
+		253,
+		63
+	],
+	"camera_position": [
+		20,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1
+}

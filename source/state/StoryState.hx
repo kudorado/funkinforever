@@ -42,8 +42,8 @@ class StoryState extends MusicBeatState
 
 	public static var difficulties:Array<Dynamic> = 
 	[
-		'baby', 'easy',
-		'normal', 'legacy',
+		'baby', 'easy', 
+		'normal', 'legacy', 'og',
 		'hard', 'hell', 'finale',
 		'shit', 'unfair', 'ex'
 	];

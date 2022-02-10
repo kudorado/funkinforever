@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-182,
+				-23
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-182,
+				-23
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "UP",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-178,
+				-46
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "DOWN"
+		},
+		{
+			"offsets": [
+				-244,
+				-15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "LEFT"
+		},
+		{
+			"offsets": [
+				-178,
+				-23
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "RIGHT"
+		},
+		{
+			"offsets": [
+				-202,
+				-23
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "ALT-RIGHT"
+		},
+		{
+			"offsets": [
+				-183,
+				-23
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "ALT-DOWN"
+		},
+		{
+			"offsets": [
+				-185,
+				-23
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "ALT-UP"
+		},
+		{
+			"offsets": [
+				-157,
+				-24
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "ALT-LEFT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bandu_crazy",
+	"position": [
+		-490,
+		-210
+	],
+	"healthicon": "bandu",
+	"flip_x": false,
+	"healthbar_colors": [
+		24,
+		175,
+		11
+	],
+	"camera_position": [
+		220,
+		80
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

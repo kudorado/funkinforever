@@ -1,0 +1,109 @@
+{
+	"song": {
+		"speed": 2.9,
+		"stage": "algebraBg",
+		"player1": "bf-3d",
+		"player2": "algebra dave",
+		"player3": null,
+		"events": [
+			[
+				72727.2727272727,
+				[
+					[
+						"Change Character",
+						"dad",
+						"garrett"
+					]
+				]
+			],
+			[
+				160000,
+				[
+					[
+						"Change Character",
+						"dad",
+						"algebra dave"
+					]
+				]
+			],
+			[
+				196363.636363637,
+				[
+					[
+						"Change Character",
+						"dad",
+						"garrett"
+					]
+				]
+			],
+			[
+				200000,
+				[
+					[
+						"Change Character",
+						"dad",
+						"angry algebra dave"
+					]
+				]
+			],
+			[
+				232727.272727273,
+				[
+					[
+						"Change Character",
+						"dad",
+						"alien hall moniter"
+					]
+				]
+			],
+			[
+				379999.999999997,
+				[
+					[
+						"Change Character",
+						"dad",
+						"diamond man"
+					]
+				]
+			],
+			[
+				480666.666666663,
+				[
+					[
+						"Change Character",
+						"dad",
+						"playrobot"
+					]
+				]
+			],
+			[
+				533333.333333329,
+				[
+					[
+						"Change Character",
+						"dad",
+						"playrobot crazy"
+					]
+				]
+			],
+			[
+				579999.999999997,
+				[
+					[
+						"Change Character",
+						"dad",
+						"angry algebra dave"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 132,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Algebra"
+	}
+}

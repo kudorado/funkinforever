@@ -13,12 +13,6 @@ import MenuCharacter.CharacterSetting;
 
 class Bambi3DRed extends Bambi
 {
-	override function createBF()
-	{
-		super.createBF();
-		bf.x += 250;
-		bf.y += 250;
-	}
 
 	public override function getDadIcon(icon:Icon)
 	{

@@ -59,8 +59,8 @@
 	"no_antialiasing": false,
 	"image": "characters/bambi_unfairness",
 	"position": [
-		-30,
-		30
+		194,
+		500
 	],
 	"healthicon": "bambi_unfairness",
 	"flip_x": false,

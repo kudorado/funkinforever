@@ -1,0 +1,5 @@
+Toggles tom battle sequence
+
+Value 1: setting to true
+
+Value 2: Steps before bam

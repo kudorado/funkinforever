@@ -961,6 +961,22 @@ class FunkinLua {
 		});
 
 
+		Lua_helper.add_callback(lua, "appendLuaSprite", function(tag:String)
+		{
+			if (GameState.instance.modchartSprites.exists(tag))
+			{
+				var shit:ModchartSprite = GameState.instance.modchartSprites.get(tag);
+				GameState.instance.dadGroup.remove(shit);
+				addLuaSprite(tag, true);
+			}
+			else
+			{
+				// trace('oh shit, no tag was found, cant add: ' + tag);
+			}
+		});
+
+			
+
 		Lua_helper.add_callback(lua, "addLuaSpriteLater", function(tag:String)
 		{
 			if (GameState.instance.modchartSprites.exists(tag))

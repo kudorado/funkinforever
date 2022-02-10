@@ -579,8 +579,12 @@ class SongPlayerManager
 				songPlayer = new Bambi3D();
 
 			case 'unfairness':
+				songPlayer = new Bambi3DRed();
 
 
+			//golden apple
+			case 'applecore':
+				songPlayer = new AppleCore();
 
 
 		}
