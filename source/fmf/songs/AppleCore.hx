@@ -16,7 +16,7 @@ class AppleCore extends SongPlayerPE
 
 	override function loadMap()
 	{
-		gameState.defaultCamZoom = 0.5;
+		gameState.defaultCamZoom = 0.4;
 	}
 
 	override function createBF()
@@ -49,21 +49,21 @@ class AppleCore extends SongPlayerPE
 	var direction:Float = 1;
 	override function update(elapsed)
 	{
-		var maxX = 900;
+		var maxX = 915;
 		var minX = 125;
 		var step = 895;
 
 		if (gameState.curStep > step)
 		{
-			step = 2543;
+			step = 2695;
 		}
 
 		if (gameState.curStep < step)
 		{
-			if (direction == 1) //move right
+			if (direction == 1) // move right
 			{
 				// trace('1.x: ' + gameState.dad + ", " + (gameState.dad >= maxX));
-				//if position > max, then move left
+				// if position > max, then move left
 				if (gameState.dad.x >= maxX)
 				{
 					direction = -1;
@@ -74,7 +74,6 @@ class AppleCore extends SongPlayerPE
 
 			if (direction == -1)
 			{
-			
 				// trace('-1.x: ' + gameState.dad + ", " + (gameState.dad <= minX));
 				// if position < min, then move right
 				if (gameState.dad.x <= minX)
@@ -85,6 +84,10 @@ class AppleCore extends SongPlayerPE
 				}
 			}
 		}
+		else
+			gameState.defaultCamZoom = 0.4;
+
+		
 		super.update(elapsed);
 	}
 	
