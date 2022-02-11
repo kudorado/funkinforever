@@ -12,16 +12,32 @@ Kawaisprite - Musician
 Support the creator here:
 https://ninja-muffin24.itch.io/funkin
 https://www.newgrounds.com/portal/view/770371
+
+
 --------------------------------------------------------
+
 Mods Creators
 --------------------------------------------------------
-Everyone Sings 
+Dave and Bambi
+
+MoldyGH - Original Developer
+MissingTextureMan101  - Co-Developer
+rapparep - Main Artist
+TheBuilderXD - Distributor, Tristan Artist
+Cuzsie - Programmer
+AM_Erizur - Programmer, Week Icon Artist & More
+T5mpler - Programmer & Assistor
+Marcello_TIMEnice30 - mr bambi lmao
+-------------------------------------------------------
+
 --------------------------------------------------------
+Everyone Sings 
+
 Blantados
 --------------------------------------------------------
-The Date Week
-https://gamebanana.com/mods/307107
+
 --------------------------------------------------------
+The Date Week
 
 Key Authors
 bbpanzu 
@@ -55,16 +71,25 @@ drummed for the credit song
 AjTheFunky 
 Carol and Whitty UTAUs
 --------------------------------------------------------
+
+--------------------------------------------------------
 Vs Huggy Wuggy
+
 KJElliott - Owner
 --------------------------------------------------------
+
+--------------------------------------------------------
 V.S Hex
+
 YingYang48  -Artist, Composer, Note Charter
 KadeDev  - Programmer
 DjCat
 Background Artist
 --------------------------------------------------------
+
+--------------------------------------------------------
 The Full-Ass Tricky Mod
+
 Banbuds - Director, Artist and Animator
 Rozebud - Musician and Touch-ups
 KadeDev - Programmer
@@ -73,22 +98,34 @@ YingYang48 - Composer
 JADS - Composer
 Moro - Cutscene 3 + 4, Backgrounds
 --------------------------------------------------------
+
+--------------------------------------------------------
 VS Whitty 
+
 Sock.clip - Artist and Song Composer
 Nate Anim8. - Note Charter, Secondary Animator and Play Tester
 KadeDev - Programmer
 bbpanzu - Secondary Programmer
 --------------------------------------------------------
+
+--------------------------------------------------------
 Smoke' Em Out Struggle 
+
 atsuover - Art, Music, Coding
 Rageminer - Voice samples, Coding
 --------------------------------------------------------
+
+--------------------------------------------------------
 Mid-Fight Masses
+
 Dokki.doodlez - Artwork | Animation
 Mike Geno - Music | Charting
 kuroao_anomal - Programming | Charting | Animation
 --------------------------------------------------------
+
+--------------------------------------------------------
 V.S Tabi Ex Boyfriend 
+
 Homskiy - Writer / TABI CREATOR / Author Of lore / Leader of project
 GWebDev - Scripter
 BrightFyre - Second scripter / Updates
@@ -97,11 +134,17 @@ DaDrawingLad - My battle Charts
 Angelattes - Girlfriend VA
 Cougar MacDowall -Tabi VA
 --------------------------------------------------------
+
+--------------------------------------------------------
 V.S QT 
+
 Hazardous24 - Programming, Animation, Music, Charting
 CountNightshade - Art
 --------------------------------------------------------
+
+--------------------------------------------------------
 V.S Starlight Mayhem 
+
 TheMaskedChris - Director / artist
 ash237  - Coding
 Cerbera - Charting
@@ -110,44 +153,71 @@ Miyno_ - Vocals
 Mudstep - Instrumentals
 Operate Manuel - Extra creative help
 --------------------------------------------------------
+
+--------------------------------------------------------
 V.S. AGOTI 
+
 AGOTI - Music
 BrightFyre - Programming
 SugarRatio - Animation + Art
 Kullix - Charting
 --------------------------------------------------------
+
+--------------------------------------------------------
 B-Side Remixes
+
 Rozebud - Music, Charting, and Art
 JADS - Music, Charting
 Cval - Additional Art, Charting
 --------------------------------------------------------
+
+--------------------------------------------------------
 The Blueballs Incident
+
 MaliciousBunny - Artist,Coder,Charter
 EZHALT - Musician,Charter
 --------------------------------------------------------
+
+--------------------------------------------------------
 Recharter
+
 xSlayer2465 - Smoke 'em out Struggle
 Haloelj - Vs Hex
 Coo1voiceB4g - Tricky  Madness
 Lethrial -  Tricky Improbable outset
 MEO - Vs Hex
 --------------------------------------------------------
+
+--------------------------------------------------------
 Kade Engine
+
 Kade Developer 
 --------------------------------------------------------
+
+--------------------------------------------------------
 Mic'd Up Engine 
+
 Verwex
 --------------------------------------------------------
+
+--------------------------------------------------------
 Psych Engine
+
 Shadow Mario - Engine Developer
 RiverOaken - Arts and Animations
 bbpanzu - Assistant Programmer
 --------------------------------------------------------
+
+--------------------------------------------------------
 Playable Characters
+
 IIMarky
 MizanPloz
 --------------------------------------------------------
+
+--------------------------------------------------------
 Custom notes skins
+
 MayorBlacklight
 M_agi
 Falvoli
@@ -157,8 +227,14 @@ Arks
 Skyligal
 jamongusxd
 --------------------------------------------------------
+
+--------------------------------------------------------
 Hitbox, Mobile controls:
+
 Luckydog7
+--------------------------------------------------------
+
+
 --------------------------------------------------------
 Funkin Forever Team
 NanoBit - Manager, Tester
@@ -169,5 +245,7 @@ DatVT - SickDev
 NamNP - TurboDev
 Source code (In development):
 https://github.com/kudorado/Funkin/tree/fmf_master
+
+--------------------------------------------------------
 
 #FF #FNFMod #FNF
