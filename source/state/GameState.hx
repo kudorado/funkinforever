@@ -1603,7 +1603,7 @@ class GameState extends MusicBeatState
 		luaArray = [];
 
 		//oh my goods please destroy shit
-		Assets.cache.clear();
+		// Assets.cache.clear();
 		// FlxG.bitmap.clearCache();
 		// trace('clear cache shit!');
 		super.destroy();

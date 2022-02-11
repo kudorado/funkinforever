@@ -202,8 +202,8 @@
 	"no_antialiasing": false,
 	"image": "characters/bambi_pissyboy",
 	"position": [
-		-900,
-		-270
+		-400,
+		-170
 	],
 	"healthicon": "bothbandu",
 	"flip_x": false,
