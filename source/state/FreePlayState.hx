@@ -84,18 +84,22 @@ class FreePlayState extends MusicBeatState
 			{
 				var daMember = videoArray.pop();
 				remove(daMember);
+				daMember.destroy();
 			}
 
 			for (i in 0...iconArray.length)
 			{
 				var daMember = iconArray.pop();
 				remove(daMember);
+				daMember.destroy();
+
 			}
 
 			for (i in 0...grpSongs.length)
 			{
 				var daMember = grpSongs.members.pop();
 				remove(daMember);
+				daMember.destroy();
 			}
 
 		}

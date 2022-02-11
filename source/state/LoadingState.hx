@@ -131,7 +131,7 @@ class LoadingState extends MusicBeatState
 
     function checkLibrary(library:String)
     {
-        //@notrace(Assets.hasLibrary(library));
+        // trace('check lib: ' + library);
         if (Assets.getLibrary(library) == null)
         {
             @:privateAccess
@@ -201,12 +201,12 @@ class LoadingState extends MusicBeatState
         }
 
         var result:Bool = Assets.cache.removeSound(getSongPath());
-        //@notrace("remove song cached: " + getSongPath() + ", result: " + result);
+        trace("remove song cached: " + getSongPath() + ", result: " + result);
 
         if (GameState.SONG.needsVoices)
         {
             var vocalResult:Bool = Assets.cache.removeSound(getVocalPath());
-            //@notrace("remove vocal cached: " + getVocalPath() + ", result: " + vocalResult);
+            trace("remove vocal cached: " + getVocalPath() + ", result: " + vocalResult);
         }
     }
 

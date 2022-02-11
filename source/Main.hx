@@ -57,6 +57,16 @@ class Main extends Sprite
 		{
 			addEventListener(Event.ADDED_TO_STAGE, init);
 		}
+
+
+		#if debug
+		var performance = new Performance(null,        //any font you want
+											null, // null or any BitmapData (suggested 50x50pixels)
+										  true,  // true if you want to see the APP information
+										  true); // true if you want to see the FPS Graph
+		Lib.current.stage.addChild(performance);
+		#end
+
 	}
 
 	private function init(?E:Event):Void

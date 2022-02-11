@@ -57,7 +57,7 @@ class MenuState extends MusicBeatState
 		}
 
 	
-		persistentUpdate = persistentDraw = true;
+		// persistentUpdate = persistentDraw = true;
 
 		var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('menuBG'));
 		bg.scrollFactor.x = 0;
@@ -158,6 +158,12 @@ class MenuState extends MusicBeatState
 	}
 
 	var selectedSomethin:Bool = false;
+
+	override function destroy()
+	{
+		FlxG.bitmap.clearCache();
+		super.destroy();
+	}
 
 	function createFunnyFx()
 	{

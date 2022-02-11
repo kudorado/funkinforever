@@ -1,5 +1,6 @@
 package state;
 
+
 import ui.*;
 import reactor.*;
 import controls.*;
@@ -1601,10 +1602,10 @@ class GameState extends MusicBeatState
 		}
 		luaArray = [];
 
-		strumLineNotes.destroy();
-		cpuStrums.destroy();
-		playerStrums.destroy();
-
+		//oh my goods please destroy shit
+		Assets.cache.clear();
+		// FlxG.bitmap.clearCache();
+		// trace('clear cache shit!');
 		super.destroy();
 	}
 
@@ -1717,7 +1718,7 @@ class GameState extends MusicBeatState
 		#if LUA_ALLOWED
 		for (notetype in noteTypeMap.keys())
 		{
-			trace('fffff 2');
+			// trace('fffff 2');
 
 			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
 			// trace('try load custom: ' + luaToLoad);
@@ -1726,7 +1727,7 @@ class GameState extends MusicBeatState
 				createLua(luaToLoad);
 			}
 
-			trace('fffff 4');
+			// trace('fffff 4');
 		}
 		// trace('fffff 4');
 
@@ -2004,7 +2005,7 @@ class GameState extends MusicBeatState
 
 		listeningModeCheck();
 
-		createBounds();
+		// createBounds();
 
 		super.create();
 		LoadingState.didLoadout = false;
@@ -2989,10 +2990,10 @@ class GameState extends MusicBeatState
 		checkUnlockCamFollow();
 
 		#if !mobile
-		#if debug
-		boundMin.text = "holdTimer: " + bfFE().holdTimer + ", camFollow: " + camFollow.getPosition() + ", safe frame: " + camFollowSafeFrame;
-		boundMax.text = "lockCamFollow: " + lockCamFollow + ", targetPosition: " + targetCamFollow;
-		#end
+		// #if debug
+		// boundMin.text = "holdTimer: " + bfFE().holdTimer + ", camFollow: " + camFollow.getPosition() + ", safe frame: " + camFollowSafeFrame;
+		// boundMax.text = "lockCamFollow: " + lockCamFollow + ", targetPosition: " + targetCamFollow;
+		// #end
 		#end
 		dtrace('2918');
 		#if !debug
@@ -3745,6 +3746,10 @@ class GameState extends MusicBeatState
 
 					// FlxTransitionableState.skipNextTransIn = true;
 					// FlxTransitionableState.skipNextTransOut = true;
+					
+					//clear fucking song caching
+					LoadingState.clearCachedSong();
+
 					prevCamFollow = camFollow;
 
 					GameState.SONG_NAME = nextSongLowercase;
