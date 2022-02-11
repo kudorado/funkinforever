@@ -346,19 +346,18 @@ class BaseSong
 
 	private function switchDad(song:SongPlayer, createDad:Bool = true, destroyOldDad:Bool = true)
 	{
-		if (destroyOldDad && dad != null)
-			gameState.remove(dad);
-
+		if (dad != null)
+		{
+			gameState.dadGroup.remove(dad);
+		}
 		if (destroyOldDad && dad != null)
 			dad.destroy();
 
 		if (createDad)
 			song.createDad();
 
-
 		dad = song.dad;
-		
-		
+
 		gameState.dadGroup.add(dad);
 		dad.playAnim(gameState.lastNote, true);
 
@@ -368,7 +367,7 @@ class BaseSong
 	{
 		if (bf != null)
 		{
-			gameState.remove(bf);
+			gameState.boyfriendGroup.remove(bf);
 			bf.destroy();
 		}
 

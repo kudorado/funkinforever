@@ -49,12 +49,22 @@ class AppleCore extends SongPlayerPE
 	var direction:Float = 1;
 	override function update(elapsed)
 	{
-		if (gameState.curStep < 895)
+		var maxX = 850;
+		var minX = 50;
+		var step = 895;
+		if (gameState.curStep > step)
+		{
+			step = 2543;
+			maxX = 700;
+			minX = 150;
+		}
+
+		if (gameState.curStep < step)
 		{
 			if (direction == 1) //move right
 			{
 				//if position > max, then move left
-				if (dad.x >= 900)
+				if (dad.x >= maxX)
 				{
 					direction = -1;
 					gameState.dadGroup.remove(dad);
@@ -65,7 +75,7 @@ class AppleCore extends SongPlayerPE
 			if (direction == -1)
 			{
 				// if position < min, then move right
-				if (dad.x <= 100)
+				if (dad.x <= minX)
 				{
 					direction = 1;
 					gameState.boyfriendGroup.remove(dad);

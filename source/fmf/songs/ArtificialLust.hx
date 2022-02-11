@@ -409,8 +409,8 @@ class ArtificialLust extends SongPlayer
 		gameState.remove(simp);
 		gameState.remove(abel);
 		gameState.remove(max);
-		gameState.remove(bf);
-		gameState.remove(gf);
+		gameState.boyfriendGroup.remove(bf);
+		gameState.gfGroup.remove(gf);
 
 		gameState.add(eventSong.bg);
 		gameState.add(eventSong.stage);
@@ -436,8 +436,8 @@ class ArtificialLust extends SongPlayer
 		gameState.remove(eventSong.simp);
 		gameState.remove(eventSong.abel);
 		gameState.remove(eventSong.max);
-		gameState.remove(gf);
-		gameState.remove(bf);
+		gameState.gfGroup.remove(gf);
+		gameState.boyfriendGroup.remove(bf);
 
 		gameState.add(bg);
 		gameState.add(stage);

@@ -2126,6 +2126,19 @@ class GameState extends MusicBeatState
 		generateStaticArrows(0);
 		generateStaticArrows(1);
 
+		for (i in 0...playerStrums.length)
+		{
+			setOnLuas('defaultPlayerStrumX' + i, playerStrums.members[i].x);
+			setOnLuas('defaultPlayerStrumY' + i, playerStrums.members[i].y);
+		}
+		for (i in 0...cpuStrums.length)
+		{
+			setOnLuas('defaultOpponentStrumX' + i, cpuStrums.members[i].x);
+			setOnLuas('defaultOpponentStrumY' + i, cpuStrums.members[i].y);
+			// if(ClientPrefs.middleScroll) opponentStrums.members[i].visible = false;
+		}
+
+
 		songPlayer.startCountdown();
 	}
 
