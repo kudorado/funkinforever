@@ -49,37 +49,39 @@ class AppleCore extends SongPlayerPE
 	var direction:Float = 1;
 	override function update(elapsed)
 	{
-		var maxX = 850;
-		var minX = 50;
+		var maxX = 900;
+		var minX = 125;
 		var step = 895;
+
 		if (gameState.curStep > step)
 		{
 			step = 2543;
-			maxX = 700;
-			minX = 150;
 		}
 
 		if (gameState.curStep < step)
 		{
 			if (direction == 1) //move right
 			{
+				// trace('1.x: ' + gameState.dad + ", " + (gameState.dad >= maxX));
 				//if position > max, then move left
-				if (dad.x >= maxX)
+				if (gameState.dad.x >= maxX)
 				{
 					direction = -1;
-					gameState.dadGroup.remove(dad);
-					gameState.boyfriendGroup.add(dad);
+					gameState.dadGroup.remove(gameState.dad);
+					gameState.boyfriendGroup.add(gameState.dad);
 				}
 			}
 
 			if (direction == -1)
 			{
+			
+				// trace('-1.x: ' + gameState.dad + ", " + (gameState.dad <= minX));
 				// if position < min, then move right
-				if (dad.x <= minX)
+				if (gameState.dad.x <= minX)
 				{
 					direction = 1;
-					gameState.boyfriendGroup.remove(dad);
-					gameState.dadGroup.add(dad);
+					gameState.boyfriendGroup.remove(gameState.dad);
+					gameState.dadGroup.add(gameState.dad);
 				}
 			}
 		}

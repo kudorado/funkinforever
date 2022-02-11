@@ -1733,7 +1733,6 @@ class GameState extends MusicBeatState
 
 		for (event in eventPushedMap.keys())
 		{
-
 			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
 			// trace('load custom event: ' + luaToLoad);
 			if (FileSystem.exists(luaToLoad))

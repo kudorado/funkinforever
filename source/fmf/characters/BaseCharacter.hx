@@ -256,7 +256,7 @@ class BaseCharacter extends FlxSprite
 
 	override function debugName():String
 	{
-		return "boyfriend";
+		return "holyshit-i-m-suffer";
 	}
 
 	// should pa heyable!

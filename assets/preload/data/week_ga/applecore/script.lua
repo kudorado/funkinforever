@@ -84,12 +84,12 @@ end
 function onStepHit()
 	if curStep == 894 then --894 for the curStep (this is a note)
 		addLuaSprite('poop2', false)
-		addLuaSprite('poop', false)
+		-- addLuaSprite('poop', false)
 		addLuaSprite('flash', true)
 
 	else if curStep == 2544 then
 		addLuaSprite('yeah', false)
-		addLuaSprite('yeah2', false)
+		-- addLuaSprite('yeah2', false)
 		addLuaSprite('bambi_pissyboy', true)
 		addLuaSprite('ohdarkness', true)
 		setProperty('health', 2);
