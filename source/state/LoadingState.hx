@@ -272,7 +272,7 @@ class LoadingState extends MusicBeatState
             FlxG.sound.music.stop();
 
         var daImages:Array<String> = ['loading/1', 'loading/2', 'loading/3'];
-        var rand = FlxG.random.int(1, 6);
+        var rand = FlxG.random.int(1, 7);
 
         var fuckshit:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
         fuckshit.screenCenter();
