@@ -582,6 +582,8 @@ class SongPlayerManager
 				songPlayer = new Bambi3DRed();
 
 
+			case 'disruption':
+				
 			//golden apple
 			case 'applecore':
 				songPlayer = new AppleCore();

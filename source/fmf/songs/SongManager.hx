@@ -426,9 +426,36 @@ class SongManager
 				folder: 'week_ga',
 				character: 'dab_ga',
 				songTitle: 'Golden Apple!',
-				songList: ['Applecore']
+				songList: ['Disruption', 'Applecore', 'Disability', 'Wireframe', 'Algebra']
 			}
 		),
+		
+
+		new SongData
+		(
+			{
+				folder: 'week_ga',
+				character: 'dab_ga',
+				songTitle: 'Golden Apple Extras!',
+				songList: 
+				[
+					'Sugar-rush',
+					'Origin',
+					'Metallic',
+					'Strawberry',
+					'Keyboard',
+					'Cycles',
+					'Thunderstorm',
+					'Wheels',
+					'Dave-x-bambi-shipping-cute',
+					'Recovered-project',
+					'Sart-producer',
+					'Old-strawberry',
+					'Ugh'
+				]
+			}
+		),
+
 
 
 
