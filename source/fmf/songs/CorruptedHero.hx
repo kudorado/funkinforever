@@ -61,9 +61,6 @@ class CorruptedHero extends SongPlayer
 	override function createDad()
 	{
 		super.createDad();
-		dad.x = 60;
-		dad.y = 60;
-		
 	}
 
 

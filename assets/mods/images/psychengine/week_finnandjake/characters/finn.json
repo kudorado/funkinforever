@@ -81,8 +81,8 @@
 	"no_antialiasing": false,
 	"image": "characters/finn",
 	"position": [
-		0,
-		0
+		246,
+		302
 	],
 	"healthicon": "finn",
 	"flip_x": false,
@@ -96,5 +96,5 @@
 		60
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 1.64
 }
