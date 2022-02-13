@@ -1684,11 +1684,6 @@ class GameState extends MusicBeatState
 		if (CURRENT_SONG == 'thorns')
 			curStage = 'schoolEvil';
 
-		boyfriendGroup = new FlxSpriteGroup(0, 0);
-		dadGroup = new FlxSpriteGroup(0, 0);
-		gfGroup = new FlxSpriteGroup(0, 0);
-		player3Group = new FlxSpriteGroup(0, 0);
-
 		songPlayer.init();
 
 		// no need create dialogue shit in freeplay, yay

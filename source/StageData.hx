@@ -65,9 +65,9 @@ class StageData {
 		var path:String = Paths.getPreloadPath('stages/' + stage + '.json');
 
 		#if MODS_ALLOWED
-		var modPath:String = Paths.modFolders('stages/' + stage + '.json');
-		if(FileSystem.exists(modPath)) {
-			rawJson = File.getContent(modPath);
+		var luaToLoad:String = Paths.modFolders('stages/' + stage + '.json');
+		if(FileSystem.exists(luaToLoad)) {
+			rawJson = File.getContent(luaToLoad);
 		} else if(FileSystem.exists(path)) {
 			rawJson = File.getContent(path);
 		}
