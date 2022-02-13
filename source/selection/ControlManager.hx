@@ -51,7 +51,11 @@ class ControlManager
 			name: 'custom',
 			cost: 0
 		}),
-		
 
+		new ControlData
+		({
+			name: 'click',
+			cost: 0
+		}),
 	];
 }

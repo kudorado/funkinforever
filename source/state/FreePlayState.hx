@@ -60,8 +60,8 @@ class FreePlayState extends MusicBeatState
 
 	private var bg:FlxSprite;
 
-	var daDiff:String;
-	var daDiffColor:FlxColor;
+	// var daDiff:String;
+	// var daDiffColor:FlxColor;
 	
 	var totalSong:Int;
 	
@@ -333,9 +333,8 @@ class FreePlayState extends MusicBeatState
 			//@notrace(md);
 		 */
 
-		 getDiff();
 		 changeSelection(0);
-		 changeDiff();
+		 changeDiff(diffText, 0, updateScore);
 
 		AdMob.hideBanner();
 
@@ -349,6 +348,17 @@ class FreePlayState extends MusicBeatState
 		// Debugger.create(this, camera);
 
 		super.create();
+	}
+
+	function updateScore()
+	{
+		var songHighscore = SongFilter.filter(songs[curSelected].songName);
+
+		#if !switch
+		intendedScore = Highscore.getScore(songHighscore, StoryState.curDifficulty);
+		#end
+
+		diffText.x = FlxG.width - (diffText.width + 10);
 	}
 
 	function onRewarded(shitReward)
@@ -390,9 +400,9 @@ class FreePlayState extends MusicBeatState
 		}
 
 		if (Controller.LEFT_P)
-			changeDiff(-1);
+			changeDiff(diffText, -1, updateScore);
 		if (Controller.RIGHT_P)
-			changeDiff(1);
+			changeDiff(diffText, 1, updateScore);
 
 		if (Controller.BACK)
 		{
@@ -457,7 +467,8 @@ class FreePlayState extends MusicBeatState
 		// LoadingState.loadAndSwitchState(new SelectionState());
 	}
 
-	function changeDiff(change:Int = 0)
+
+	public static function changeDiff(daText:FlxText, change:Int = 0, callback:Void->Void)
 	{
 		StoryState.curDifficulty += change;
 
@@ -467,15 +478,13 @@ class FreePlayState extends MusicBeatState
 			StoryState.curDifficulty = 0;
 
 		// adjusting the highscore song name to be compatible (changeDiff)
-		var songHighscore = SongFilter.filter(songs[curSelected].songName);
-		
-		#if !switch
-		intendedScore = Highscore.getScore(songHighscore, StoryState.curDifficulty);
-		#end
+	
 
-		getDiff();
-		diffText.text = daDiff;
-		diffText.x = FlxG.width - (diffText.width + 10);
+		var daDiff = getDiff(daText);
+		daText.text = daDiff;
+
+		if (callback != null)
+			callback();
 
 		// diffText.text = (curSongId) +   "." +  songHighscore.toUpperCase() + " " + daDiff;
 
@@ -484,8 +493,10 @@ class FreePlayState extends MusicBeatState
 	}
 
 
-	function getDiff()
+	public static function getDiff(diffText:FlxText):String
 	{
+		var daDiff = '';
+		var daDiffColor:FlxColor = FlxColor.GREEN;
 		switch (StoryState.curDifficulty)
 		{
 			case 0:
@@ -505,6 +516,7 @@ class FreePlayState extends MusicBeatState
 
 		diffText.color = daDiffColor;
 
+		return daDiff;
 	}
 
 	function changeSelection(change:Int = 0)
@@ -573,7 +585,9 @@ class FreePlayState extends MusicBeatState
 		#end
 
 		var curSong = songs[curSelected];
-		diffText.text = daDiff;
+		var diff = getDiff(diffText);
+		
+		diffText.text = diff;
 		diffText.x = FlxG.width - (diffText.width + 10);
 
 		// diffText.text = (curSongId) + "." +  songHighscore.toUpperCase() + " " + daDiff;

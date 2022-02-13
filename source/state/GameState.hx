@@ -2556,7 +2556,9 @@ class GameState extends MusicBeatState
 
 			babyArrow.ID = i;
 
-			var hideDadNote:Bool = !FlxG.save.data.showDadNote || !FlxG.save.data.showDad;
+			var easyControl =  FlxG.save.data.mobileControl == 7;
+			var hideDadNote:Bool = !FlxG.save.data.showDadNote || !FlxG.save.data.showDad || easyControl;
+			
 			var w:Float = FlxG.width; // / Main.fx;
 			var shit:Float = 50;
 			switch (player)
@@ -2572,6 +2574,30 @@ class GameState extends MusicBeatState
 						babyArrow.x -= (babyArrow.width * 2);
 						babyArrow.x += Note.swagWidth * i;
 						babyArrow.x += shit; // * Main.fx;
+
+
+						if (easyControl)
+						{
+							var quater = (FlxG.width  / 4) / 2;
+							var selfSize = quater - (babyArrow.width / 2);
+							
+							switch (i)
+							{
+								case 0:
+									babyArrow.x = 0 + selfSize;
+
+								case 1:
+									babyArrow.x = FlxG.width - (FlxG.width * 0.75) + selfSize;
+
+								case 2:
+									babyArrow.x = FlxG.width - (FlxG.width * 0.5) + selfSize;
+
+								case 3:
+									babyArrow.x = FlxG.width - (FlxG.width * 0.25) + selfSize;
+
+
+							}
+						}
 					}
 					playerStrums.add(babyArrow);
 			}

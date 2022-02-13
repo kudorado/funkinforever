@@ -88,6 +88,8 @@ class Hitbox extends FlxSpriteGroup
         button.screenCenter(Y);
 
         button.alpha = sp;
+        var quater = (FlxG.width  / 4) / 2;
+
         switch (X){
             case 0:
                 button.x = 0;

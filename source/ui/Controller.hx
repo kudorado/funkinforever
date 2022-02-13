@@ -29,15 +29,20 @@ class Controller
 		_pad.alpha = 0;
 
 
-		
+
+		var daAlpha = 0.85;
+
+		if(DPad == NONE && Action == B)
+			daAlpha = 0.1;
+
 		//then enable if its mobile or debugging
 		#if mobile 
-    	_pad.alpha = 0.85;
+    	_pad.alpha =daAlpha;
 		#end
 		
 		#if !mobile
 		#if debug //i dunno could it be using || for multiple condition, cuz i'm stupis	
-		_pad.alpha = 0.85;
+		_pad.alpha = daAlpha;
 		#end
 		#end
 

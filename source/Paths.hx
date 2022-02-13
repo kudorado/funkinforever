@@ -200,6 +200,8 @@ class Paths
 
 	inline static public function image(key:String, ?library:String)
 	{
+		//get jpeg first
+		
 		return getPath('images/$key.png', IMAGE, library);
 	}
 

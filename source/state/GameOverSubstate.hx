@@ -138,7 +138,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
         cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
-        Controller.init(this, UP_DOWN, A);
+        Controller.init(this, FULL, A);
         Controller._pad.cameras = [GameState.instance.camOther];
 
 
@@ -158,6 +158,16 @@ class GameOverSubstate extends MusicBeatSubstate
 
         super.update(elapsed);
 
+		if (Controller.LEFT_P)
+		{
+			// FlxG.sound.play(Paths.sound('scrollMenu'));
+			changeSelection(-1);
+		}
+		if (Controller.RIGHT_P)
+		{
+			// FlxG.sound.play(Paths.sound('scrollMenu'));
+			changeSelection(1);
+		}
 
         if (Controller.UP_P)
         {

@@ -9,7 +9,6 @@ import flixel.system.FlxAssets.FlxShader;
 class GlitchEffect
 {
     public var shader(default,null):GlitchShader = new GlitchShader();
-
     public var waveSpeed(default, set):Float = 0;
 	public var waveFrequency(default, set):Float = 0;
 	public var waveAmplitude(default, set):Float = 0;

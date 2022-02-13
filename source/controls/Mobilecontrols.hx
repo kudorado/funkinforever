@@ -191,7 +191,6 @@ class Mobilecontrols extends FlxSpriteGroup
 		// load control mode num from Config.hx
 		controlmode =  FlxG.save.data.mobileControl; //config.getcontrolmode();
 
-
 		//controlmode
 		switch controlmode
 		{
@@ -215,7 +214,7 @@ class Mobilecontrols extends FlxSpriteGroup
 				_pad = new FlxVirtualPad(SPLIT_FLAT, NONE);
 				this.add(_pad);
 
-			case 5: //hitbox
+			case 5 | 7: //hitbox
 				_hb = new Hitbox();
 				hitboxisenabled = true;
 				add(_hb);
@@ -225,7 +224,6 @@ class Mobilecontrols extends FlxSpriteGroup
 				_pad.alpha = 0.75;
 				this.add(_pad);
 				_pad = config.loadcustom(_pad);
-
 
 			default: // right default
 				_pad = new FlxVirtualPad(RIGHT_FULL, NONE);
@@ -244,9 +242,12 @@ class Mobilecontrols extends FlxSpriteGroup
 		#if mobile
 		showMobileControls();
 		#end
-		// #if debug
-		// showMobileControls();
-		// #end
+
+		#if debug
+		#if !mobile
+		showMobileControls();
+		#end
+		#end
 
     }
 
@@ -262,6 +263,7 @@ class Mobilecontrols extends FlxSpriteGroup
 			_hb.visible = true;
 
 	}
+
 	override public function update(elapsed:Float) {
 		group.update(elapsed);
 

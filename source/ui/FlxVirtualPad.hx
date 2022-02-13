@@ -11,6 +11,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import flash.display.BitmapData;
 import flixel.graphics.FlxGraphic;
 import openfl.utils.ByteArray;
+import flixel.util.FlxColor;
 
 /**
  * A gamepad which contains 4 directional buttons and 4 action buttons.

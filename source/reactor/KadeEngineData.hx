@@ -19,7 +19,7 @@ class KadeEngineData
 
 		if (FlxG.save.data.scrollId == null)
 		{
-			FlxG.save.data.scrollId = 0;
+			FlxG.save.data.scrollId = 1;
 		}
 
         if (FlxG.save.data.showDadNote == null)
@@ -140,7 +140,7 @@ class KadeEngineData
             FlxG.save.data.customStrumLine = 0;
 
         if (FlxG.save.data.mobileControl == null)
-            FlxG.save.data.mobileControl = 0;
+            FlxG.save.data.mobileControl = 7;
 
         Conductor.recalculateTimings();
         PlayerSettings.player1.controls.loadKeyBinds();
