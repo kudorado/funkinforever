@@ -589,6 +589,8 @@ class SongPlayerManager
 				songPlayer = new AppleCore();
 
 
+			case 'high_school_conflict':
+				songPlayer = new HighSchoolConflict();
 		}
 
 		return songPlayer;

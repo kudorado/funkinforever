@@ -1,0 +1,94 @@
+package fmf.songs;
+import reactor.*;
+import ui.*;
+
+import state.*;
+import fmf.vfx.VFX;
+import fmf.skins.*;
+import flixel.util.FlxColor;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import MenuCharacter.CharacterSetting;
+import fmf.characters.*;
+
+class HighSchoolConflict extends SongPlayer
+{
+
+    override function getDadTex()
+	{
+		var tex = Paths.getSparrowAtlas('pc/dokidoki/monika', 'mods');
+		dad.frames = tex;
+	}
+
+
+	override function loadMap()
+	{
+		gameState.defaultCamZoom = 0.8;
+		var bg:FlxSprite = new FlxSprite(-750, -408).loadGraphic(Paths.image('bg/impostor_v4/runaway', 'mods'));
+		bg.antialiasing = true;
+
+		bg.scale.x = 1.1;
+		bg.scale.y = 1.1;
+
+		bg.scrollFactor.set(0.95, 0.95);
+		gameState.add(bg);
+	}
+
+    override function createDadAnimations():Void
+    {
+        var animation = dad.animation;
+        animation.addByPrefix('idle', 'Monika Idle instance 100', 18, false);
+        animation.addByPrefix('singUP', 'Monika UP NOTE instance 100', 24, false);
+        animation.addByPrefix('singRIGHT', 'Monika RIGHT NOTE instance 100', 24, false);
+        animation.addByPrefix('singLEFT', 'Monika LEFT NOTE instance 100', 24, false);
+        animation.addByPrefix('singDOWN', 'Monika DOWN NOTE instance 100', 24, false);
+        dad.animation = animation;
+
+    }
+
+	override function createDadAnimationOffsets():Void
+	{
+			
+		dad.addOffset('idle',0, 0);
+		dad.addOffset('singDOWN', 0, 0);
+		dad.addOffset('singRIGHT', 0, 0);
+		dad.addOffset('singUP', 0, 0);
+		dad.addOffset('singLEFT', 0, 0);
+		dad.dance();
+		dad.scale.x = 1;
+		dad.scale.y = 1;
+		dad.x = -400;
+		dad.y = 175;
+
+	}
+	
+    override function createBF()
+    {
+        super.createBF();
+        bf.y += 50;
+        bf.x += 200;
+    }
+
+	override function createGFAnimationOffsets()
+	{
+		super.createGFAnimationOffsets();
+	}
+
+    override function updateCamFollowBF()
+    {
+        super.updateCamFollowBF();
+        gameState.targetCamFollow.y -= 100;
+    }
+
+    override function updateCamFollowDad()
+    {
+        super.updateCamFollowDad();
+    }
+
+	public override function getDadIcon(icon:Icon)
+	{
+		icon.loadGraphic(Paths.image('health_icon/impostor_v4/icons/icon-black-run', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [0, 1], 0, false, false);
+		icon.animation.play("dad");
+	}
+}

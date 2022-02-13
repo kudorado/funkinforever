@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:d11c0739428797d304fc822efd134f6c:dd2d40ba0e731d0c2489370482c3830e:bc3b21ec1c7b4ca66f23564f32de50c3$ -->
+<TextureAtlas imagePath="monika.png" width="1393" height="497">
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10000" x="1" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10001" x="1" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10002" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10003" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10004" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10005" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10006" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10007" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10008" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10009" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10010" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10011" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10012" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai DOWN NOTE instance 10013" x="1" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10000" x="128" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10001" x="128" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10002" x="128" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10003" x="128" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10004" x="255" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10005" x="255" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10006" x="255" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10007" x="255" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10008" x="382" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10009" x="382" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10010" x="382" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10011" x="382" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10012" x="382" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai Idle instance 10013" x="382" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10000" x="382" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10001" x="382" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10002" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10003" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10004" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10005" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10006" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10007" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10008" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10009" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10010" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10011" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10012" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai LEFT NOTE instance 10013" x="509" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10000" x="509" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10001" x="509" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10002" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10003" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10004" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10005" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10006" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10007" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10008" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10009" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10010" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10011" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10012" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai RIGHT NOTE instance 10013" x="636" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10000" x="636" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10001" x="636" y="167" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10002" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10003" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10004" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10005" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10006" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10007" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10008" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10009" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10010" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10011" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10012" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Angry Senpai UP NOTE instance 10013" x="763" y="1" width="125" height="164"/>
+    <SubTexture name="Monika DOWN NOTE instance 10000" x="1" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10001" x="1" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10002" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10003" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10004" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10005" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10006" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10007" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10008" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10009" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10010" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10011" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10012" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika DOWN NOTE instance 10013" x="128" y="333" width="125" height="163"/>
+    <SubTexture name="Monika Idle instance 10000" x="763" y="332" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10001" x="890" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10002" x="763" y="332" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10003" x="890" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10004" x="763" y="332" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10005" x="763" y="332" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10006" x="890" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10007" x="890" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10008" x="763" y="332" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10009" x="890" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10010" x="763" y="332" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10011" x="1017" y="1" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10012" x="1017" y="1" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10013" x="1016" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10014" x="1143" y="1" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10015" x="1142" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10016" x="1142" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10017" x="1268" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10018" x="1268" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10019" x="889" y="332" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10020" x="1015" y="331" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10021" x="1141" y="331" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10022" x="890" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10023" x="890" y="166" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10024" x="763" y="332" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10025" x="1267" y="331" width="124" height="163"/>
+    <SubTexture name="Monika Idle instance 10026" x="1141" y="331" width="124" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10000" x="255" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10001" x="255" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10002" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10003" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10004" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10005" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10006" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10007" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10008" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10009" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10010" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10011" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10012" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika LEFT NOTE instance 10013" x="382" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10000" x="509" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10001" x="509" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10002" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10003" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10004" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10005" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10006" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10007" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10008" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10009" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10010" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10011" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10012" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika RIGHT NOTE instance 10013" x="636" y="333" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10000" x="763" y="167" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10001" x="763" y="167" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10002" x="890" y="1" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10003" x="890" y="1" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10004" x="890" y="1" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10005" x="890" y="1" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10006" x="890" y="1" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10007" x="890" y="1" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10008" x="890" y="1" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10009" x="890" y="1" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10010" x="890" y="1" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10011" x="890" y="1" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10012" x="890" y="1" width="125" height="163"/>
+    <SubTexture name="Monika UP NOTE instance 10013" x="890" y="1" width="125" height="163"/>
+</TextureAtlas>
