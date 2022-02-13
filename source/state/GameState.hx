@@ -1377,6 +1377,13 @@ class GameState extends MusicBeatState
 		return null;
 	}
 
+	
+	public var boyfriend(get, never):Character;
+	inline function get_boyfriend()
+	{
+		return bf;
+	}
+
 
 	public var gf(get, never):Character;
 	inline function get_gf()
