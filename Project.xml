@@ -116,6 +116,7 @@
 	<assets path="assets/mods"    library="mods"    exclude="*.mp3" unless="web"/>
 
 	
+	
 	<assets path='example_mods' rename='mods' embed='false'/>
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />
 	<!-- <template path='mods' /> -->

@@ -2314,7 +2314,7 @@ class GameState extends MusicBeatState
 
 		var file:String = '';
 
-		#if mobile
+		#if ios
 		file = "assets/assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
 		#else
 		file = "assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
@@ -2392,7 +2392,7 @@ class GameState extends MusicBeatState
 
 		//load shit
 		var script:String = '';
-		#if mobile
+		#if ios
 		script = "assets/assets/data/" + SongPlayer.folder + SONG_NAME + '/script.lua';
 		#else
 		script = "assets/data/" + SongPlayer.folder + SONG_NAME + '/script.lua';

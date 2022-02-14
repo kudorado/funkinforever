@@ -395,7 +395,7 @@ class StoryState extends MusicBeatState
 		var daDirectory = '';
 		var daSong = songName + diffic;
 
-		#if mobile
+		#if ios
 		daDirectory = "assets/assets/data/" + SongPlayer.folder + songLowercase;
 		#else
 		daDirectory = "assets/data/" + SongPlayer.folder + songLowercase;

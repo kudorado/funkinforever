@@ -92,7 +92,7 @@ class Hitbox extends FlxSpriteGroup
      
    
         var daWidth = Std.int(Math.min(button.width, maxWidth));
-        trace('daWidth: ' + daWidth);
+        trace('daWidth: ' + daWidth + 'screen width: ' +  FlxG.width);
 
 
         button.setGraphicSize(daWidth, FlxG.height);

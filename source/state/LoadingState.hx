@@ -67,14 +67,16 @@ class LoadingState extends MusicBeatState
                 checkLoadSong(getVocalPath());
             checkLibrary("shared");
 
-			// trace('2');
-
-            // if (GameState.storyWeek > 0)
-			
-                checkLibrary("mods");
-            // else
-                // checkLibrary("tutorial");
-			// trace('4');
+            //yeah shit
+			if (GameState.playingSong != null)
+			{
+				checkLibrary("mods");
+            }
+			else
+			{
+                trace('no library to load babe');
+            }
+          
 
             var fadeTime = 0.5;
             FlxG.camera.fade(FlxG.camera.bgColor, fadeTime, true);
