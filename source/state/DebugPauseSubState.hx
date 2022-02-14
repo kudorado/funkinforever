@@ -51,11 +51,11 @@ class DebugPauseSubState extends MusicBeatSubstate
 		bg.alpha = 0;
 		bg.scrollFactor.set();
 
-		if (Main.daTabletShit)
-		{
-			bg.scale.x = 1.2;
-			bg.scale.y = 1.2;
-		}
+		// if (Main.daTabletShit)
+		// {
+		// 	bg.scale.x = 1.2;
+		// 	bg.scale.y = 1.2;
+		// }
 
 
 		//add(bg);

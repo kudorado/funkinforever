@@ -17,7 +17,7 @@ import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 
 // copyed from flxvirtualpad
-class Hitbox extends FlxSpriteGroup
+class HitboxSmol extends FlxSpriteGroup
 {
     public var hitbox:FlxSpriteGroup;
     public var hitboxHint:FlxSpriteGroup;
@@ -37,40 +37,40 @@ class Hitbox extends FlxSpriteGroup
     var daRelease:Float = 0.1;
     var daOut:Float = 0.2;
 
-    var smol:Bool;
-
-    public function new(?widghtScreen:Int, ?heightScreen:Int, smol:Bool = false)
+    public function new(?widghtScreen:Int, ?heightScreen:Int)
     {
         super(widghtScreen, heightScreen);
 
         sizex = widghtScreen != null ? Std.int(widghtScreen / 4) : 320;
 
-        //should hitbox smol
-        //smol
-        //Left Down ----space---- Up Right
-        //----------------------------------
-        //not smol
-        //Left Down Up Right 
-
-        this.smol = smol;
         
         //add graphic
         hitbox = new FlxSpriteGroup();
-        // hitboxHint = new FlxSpriteGroup();
+        hitboxHint = new FlxSpriteGroup();
 
         hitbox.scrollFactor.set();
-        // hitboxHint.scrollFactor.set();
+        hitboxHint.scrollFactor.set();
 
-        // hitboxHint.add(add(createhitboxHint(0, "left")));
-        // hitboxHint.add(add(createhitboxHint(1, "down")));
-        // hitboxHint.add(add(createhitboxHint(2, "up")));
-        // hitboxHint.add(add(createhitboxHint(3, "right")));
+
+        hitboxHint.add(add(createhitboxHint(0, "left")));
+
+        hitboxHint.add(add(createhitboxHint(1, "down")));
+
+        hitboxHint.add(add(createhitboxHint(2, "up")));
+
+        hitboxHint.add(add(createhitboxHint(3, "right")));
+
 
         
         hitbox.add(add(left = createhitbox(0, "left")));
+
         hitbox.add(add(down = createhitbox(1, "down")));
+
         hitbox.add(add(up = createhitbox(2, "up")));
+
         hitbox.add(add(right = createhitbox(3, "right")));
+
+
         
 
     }
@@ -82,20 +82,8 @@ class Hitbox extends FlxSpriteGroup
         
         var maxWidth:Float = FlxG.width / 4;
 
-		// if (smol)
-		// {
-        //     //using it ordinary size babeeee    
-        //     daWidth = button.width;
-        // }
-
         button.loadGraphic(FlxGraphic.fromFrame(frames.getByName(framestring)));
-     
-   
-        var daWidth = Std.int(Math.min(button.width, maxWidth));
-        trace('daWidth: ' + daWidth);
-
-
-        button.setGraphicSize(daWidth, FlxG.height);
+        button.setGraphicSize(Std.int(Math.min(button.width, maxWidth)), FlxG.height);
         button.updateHitbox();
         button.screenCenter(Y);
 

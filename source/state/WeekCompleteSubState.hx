@@ -47,7 +47,9 @@ class WeekCompleteSubState extends MusicBeatSubstate
         var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
         bg.alpha = 0;
         bg.scrollFactor.set();
-		
+        bg.screenCenter();
+        bg.scaleToFit();
+
         // if (Main.daTabletShit)
 		// {
 		// 	bg.scale.x = Main.shitZoom;

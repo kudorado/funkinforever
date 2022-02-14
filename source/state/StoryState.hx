@@ -406,6 +406,7 @@ class StoryState extends MusicBeatState
 		var oldSong = GameState.SONG;
 		GameState.SONG = null; // reset cache
 
+		#if LUA_ALLOWED
 		if (!FileSystem.exists(file))
 		{
 			trace('oh shit not found difficult for this file: ' + file);
@@ -440,6 +441,7 @@ class StoryState extends MusicBeatState
 			trace('data file loaded sucessful!: ' + file);
 			GameState.SONG = Song.loadFromJson(daSong, GameState.playingSong.folder + songLowercase);
 		}
+		#end
 	}
 
 	function changeDifficulty(change:Int = 0):Void

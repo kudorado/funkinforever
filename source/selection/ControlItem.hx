@@ -1,4 +1,5 @@
 package selection;
+
 import state.*;
 import ui.*;
 
@@ -86,7 +87,7 @@ class ControlItem extends Item
 			LoadingState.createBlackFadeIn(SelectionState.instance, function()
 			{
 				FlxG.switchState(new CustomControlsState());
-			});
+			}, null, true);
 		}
 	}
 

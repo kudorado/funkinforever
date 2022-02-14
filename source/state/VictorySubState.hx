@@ -52,12 +52,14 @@ class VictorySubState extends MusicBeatSubstate
         var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
         bg.alpha = 0;
         bg.scrollFactor.set();
-
-		if (Main.daTabletShit)
-		{
-			bg.scale.x = Main.shitZoom;
-			bg.scale.y = Main.shitZoom;
-		}
+        bg.screenCenter();
+        bg.scaleToFit();
+        
+		// if (Main.daTabletShit)
+		// {
+		// 	bg.scale.x = Main.shitZoom;
+		// 	bg.scale.y = Main.shitZoom;
+		// }
         add(bg);
 
 
