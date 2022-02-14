@@ -19,20 +19,19 @@ class BfPixel extends Boyfriend
 		frames = tex;
 	}
 
-	// create animation for BF
+	//create animation for BF
 	public override function createAnimations():Void
 	{
-		// animation.addByPrefix('idle', 'SSBF IDLE instance 100', 24, false);
-		// animation.addByPrefix('singUP', 'SSBF UP instance', 24, false);
-		// animation.addByPrefix('singRIGHT', 'SSBF RIGHT instance', 24, false);
-		// animation.addByPrefix('singLEFT', 'SSBF LEFT instance 100', 24, false);
-		// animation.addByPrefix('singDOWN', 'SSBF DOWN instance', 24, false);
+		animation.addByPrefix('idle', 'BF IDLE00', 24, false);
+		animation.addByPrefix('singUP', 'BF UP NOTE00', 24, false);
+		animation.addByPrefix('singRIGHT', 'BF RIGHT NOTE00', 24, false);
+		animation.addByPrefix('singLEFT', 'BF LEFT NOTE00', 24, false);
+		animation.addByPrefix('singDOWN', 'BF DOWN NOTE00', 24, false);
 
-		// animation.addByPrefix('singUPmiss', 'SSBF UPmiss instance', 1, false);
-		// animation.addByPrefix('singRIGHTmiss', 'SSBF RIGHTmiss instance', 1, false);
-		// animation.addByPrefix('singLEFTmiss', 'SSBF LEFTmiss instance', 1, false);
-		// animation.addByPrefix('singDOWNmiss', 'SSBF DOWNmiss instance', 1, false);
-
+		animation.addByPrefix('singUPmiss', 'BF UP MISS00', 1, false);
+		animation.addByPrefix('singRIGHTmiss', 'BF RIGHT MISS00', 1, false);
+		animation.addByPrefix('singLEFTmiss', 'BF LEFT MISS00', 1, false);
+		animation.addByPrefix('singDOWNmiss', 'BF DOWN MISS00', 1, false);
 	}
 
 	// create animation offset for BF
@@ -41,21 +40,21 @@ class BfPixel extends Boyfriend
 	
 		addOffset('idle', 0, 0);
 
-		addOffset('singUP', -2, 4);
-		addOffset('singRIGHT', -2, -6);
-		addOffset('singLEFT', 24, 9);
-		addOffset('singDOWN', 2, -13);
+		addOffset('singUP', 0, 0);
+		addOffset('singRIGHT', 0, 0);
+		addOffset('singLEFT', 0, 0);
+		addOffset('singDOWN', 0, 0);
 		
-		addOffset('singUPmiss', -2, 5);
-		addOffset('singRIGHTmiss', 10, 13);
-		addOffset('singLEFTmiss', 19, -2);
-		addOffset('singDOWNmiss', 17, 17);
+		addOffset('singUPmiss', 0, 0);
+		addOffset('singRIGHTmiss', 0, 0);
+		addOffset('singLEFTmiss', 0, 0);
+		addOffset('singDOWNmiss', 0, 0);
 		
 		playAnim('idle');
 
 
-		this.scale.x = 2;
-		this.scale.y = 2;
+		this.scale.x = 7;
+		this.scale.y = 7;
 
 
 	}

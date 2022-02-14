@@ -94,7 +94,8 @@ class HighSchoolConflict extends SongPlayer
 	override function createStoryBF()
 	{
 		changePc('bf_pixel');
-		bf.x += 350;
+		bf.x += 150;
+		bf.y -= 50;
 	}
 
     override function createBF()
