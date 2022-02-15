@@ -2398,9 +2398,6 @@ class GameState extends MusicBeatState
 				trace('Null event shit: ' + SONG_NAME);
 		}
 
-		#end
-
-
 		//load shit
 		var script:String = '';
 		#if ios
@@ -2414,8 +2411,8 @@ class GameState extends MusicBeatState
 		{
 		#else
 		if (openfl.utils.Assets.exists(file))
-		{		
-		#end
+		{	
+		#end	
 			#if android
 			var file = 'script.lua';
 			var daFolder = "assets/data/" + SongPlayer.folder;
@@ -2425,8 +2422,6 @@ class GameState extends MusicBeatState
 			createLua(script);
 			#end
 		}
-
-		#end
 
 
 
