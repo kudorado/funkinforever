@@ -854,7 +854,7 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, 'loadLuaFile', function(luaFile:String, luaType:String)
 		{
 			#if android
-			createLuaAndroid(SongPlayer.luaFolder, luaFile, luaType);
+			createLuaAndroid(luaFile, SongPlayer.luaFolder, luaType);
 			#else
 			GameState.createLua(SongPlayer.luaFolder + luaType + "/" + luaFile);
 			#end
