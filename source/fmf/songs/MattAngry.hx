@@ -12,7 +12,7 @@ class MattAngry extends Matt
 
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/mattangry/mattangry', "mods");
+		var tex = Paths.getSparrowAtlas('pc/matt//matt/', "mods");
 		dad.frames = tex;
 	}
 

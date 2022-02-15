@@ -14,7 +14,7 @@ class EsGarcelloTired extends Garcello
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/garcellotired/garcello_tired', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/garcello/garcello_tired', 'mods');
 		dad.frames = tex;
 	}
 	

@@ -17,7 +17,7 @@ class GarcelloGhosty extends GarcelloDead
 
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/garcelloghosty/garcello_ghosty', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/garcello/garcello_ghosty', 'mods');
 		dad.frames = tex;
 	}
 

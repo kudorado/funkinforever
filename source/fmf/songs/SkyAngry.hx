@@ -14,7 +14,7 @@ class SkyAngry extends SkyTired
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/skyangry/sky_angry', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/sky/sky_angry', 'mods');
 		dad.frames = tex;
 	}
 

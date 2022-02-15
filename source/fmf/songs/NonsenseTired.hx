@@ -16,7 +16,7 @@ class NonsenseTired extends Nonsense
 	var whiteBG:FlxSprite; 
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/nonsensetired/nonsense_tired', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/nonsense/nonsense_tired', 'mods');
 		dad.frames = tex;
 	}
 

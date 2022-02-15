@@ -12,8 +12,8 @@ class TomSus extends Boyfriend
 	
 	override function getTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/tom/tom_assets', 'mods');
-		var tex2 = Paths.getSparrowAtlas('pc/tom/tom_assets_miss', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/edds/tom_assets', 'mods');
+		var tex2 = Paths.getSparrowAtlas('pc/edds/tom_assets_miss', 'mods');
 
 		for (frame in tex2.frames)
 		{

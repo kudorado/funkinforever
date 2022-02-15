@@ -12,8 +12,8 @@ class TordSus extends Boyfriend
 	
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/tord/tord_assets', "mods");
-		var tex2 = Paths.getSparrowAtlas('pc/tord/tord_assets_miss', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/edds/tord_assets', "mods");
+		var tex2 = Paths.getSparrowAtlas('pc/edds/tord_assets_miss', 'mods');
 
 		for (frame in tex2.frames)
 		{

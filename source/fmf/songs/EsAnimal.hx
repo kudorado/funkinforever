@@ -14,7 +14,7 @@ class EsAnimal extends SongPlayer
 
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/drunkannie/drunkAnnie', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/annie/drunk_annie', 'mods');
 		dad.frames = tex;
 	}
 

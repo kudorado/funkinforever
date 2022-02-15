@@ -18,7 +18,7 @@ class NonsenseAngry extends Nonsense
 
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/nonsenseangry/nonsense_angry', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/nonsense/nonsense_angry', 'mods');
 		dad.frames = tex;
 	}
 

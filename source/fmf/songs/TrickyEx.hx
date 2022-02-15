@@ -16,7 +16,7 @@ class TrickyEx extends TrickyMask
 
     override function getDadTex()
 	{
-		var frames = Paths.getSparrowAtlas('pc/trickyex/extiky', 'mods');
+		var frames = Paths.getSparrowAtlas('pc/tricky//extiky', 'mods');
 		dad.frames = frames;
 	}
 
