@@ -1644,13 +1644,13 @@ class GameState extends MusicBeatState
 		{
 			// trace('fffff 2');
 
-			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
 			// trace('try load custom: ' + luaToLoad);
 			#if android
 			var file = notetype + '.lua';
 			var luaType = 'custom_notetypes';
-			FunkinLua.createLuaAndroid(SongPlayer.luaFolder, file, luaType);
+			FunkinLua.createLuaAndroid(file, SongPlayer.luaFolder, luaType);
 			#else
+			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
 			if (FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
@@ -1669,7 +1669,7 @@ class GameState extends MusicBeatState
 			#if android
 			var file = event + '.lua';
 			var luaType = 'custom_events';
-			FunkinLua.createLuaAndroid(SongPlayer.luaFolder, file, luaType);
+			FunkinLua.createLuaAndroid(file, SongPlayer.luaFolder, luaType);
 			#else
 			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
 			// trace('load custom event: ' + luaToLoad);
@@ -2260,16 +2260,13 @@ class GameState extends MusicBeatState
 		// var modPath = SongPlayer.luaFolder + "data/" + SONG_NAME + '/events.json';
 		// lime.app.Application.current.window.alert(modPath, 'Mod event path');
 		// var daPath = FileSystem.exists(modPath) ? modPath : file;
-
 		// trace('chess ass 00');
-
-
 		// lime.app.Application.current.window.alert(file + ", exist: " + FileSystem.exists(file), 'Event path');
-		#if sys
+		#if !android
 		if (FileSystem.exists(file))
 		{
 		#else
-		if (Assets.exists(file))
+		if (openfl.utils.Assets.exists(file))
 		{
 		#end
 			var jsonEvent = Song.loadFromJson("events", SongPlayer.folder + SONG_NAME);
@@ -2333,12 +2330,17 @@ class GameState extends MusicBeatState
 
 			}
 			else
+			{
+				// lime.app.Application.current.window.alert(SONG_NAME, 'NULL EVENT!');
 				trace('Null event shit: ' + SONG_NAME);
+			}
 
 		}
-		else 
+		else
+		{
+			// lime.app.Application.current.window.alert(SONG_NAME, 'NO EVENT!');
 			trace('No event found for song: ' + SONG_NAME);
-
+		}
 
 		 // Not exactly representative of 'daBeats' lol, 
 		// just how much it has looped
@@ -2420,7 +2422,8 @@ class GameState extends MusicBeatState
 					// if not type wasn't add to list, just add it.
 					if (!noteTypeMap.exists(swagNote.noteType))
 					{
-						// trace('add custom note type!');
+						trace('add custom note type!: ' + swagNote.noteType);
+						// lime.app.Application.current.window.alert(swagNote.noteType, 'ADD NOTE TYPE!');
 						noteTypeMap.set(swagNote.noteType, true);
 					}
 				}

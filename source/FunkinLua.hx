@@ -437,7 +437,7 @@ class FunkinLua {
 					}
 				}));
 			} else {
-						lime.app.Application.current.window.alert("Couldnt find object!", 'doTweenAlpha');
+						// lime.app.Application.current.window.alert("Couldnt find object!", 'doTweenAlpha');
 				// luaTrace('Couldnt find object: ' + vars);
 			}
 		});
@@ -1828,12 +1828,19 @@ class FunkinLua {
 				// lime.app.Application.current.window.alert(daFile, 'Create new lua file!');
 				trace('create new lua file: ' + daFile);
 			}
+			else
+			{
+				// lime.app.Application.current.window.alert(daFile, 'FILE NOT FOUND 01!');
+			}
 
 			//read file from readable dir
 			GameState.createLua(daFile);
 		}
 		else
-			trace('no lua stage found!');
+		{
+			// trace('no lua stage found!: ' + shit);
+			// lime.app.Application.current.window.alert(shit, 'FILE NOT FOUND 02!');
+		}
 		// lime.app.Application.current.window.alert(shit, 'HOLY SHIT!');
 		
 		

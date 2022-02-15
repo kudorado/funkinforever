@@ -125,7 +125,7 @@ class BaseSong
 		#if android
 		var daFile = curStage + '.lua';
 		var daPath = "mods:" + "assets/mods/images/psychengine/" +  SongPlayer.folder;
-		FunkinLua.createLuaAndroid(daFile, daPath, 'stages');
+		FunkinLua.createLuaAndroid(daFile, SongPlayer.luaFolder, 'stages');
 		#else
 
 		if (FileSystem.exists(luaToLoad))

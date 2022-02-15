@@ -31,10 +31,10 @@ class SongPlayer extends BaseSong
 	public static var luaFolder(get, never):String;
 	static inline function get_luaFolder()
 	{
-		#if mobile
+		#if ios
 		return "assets/assets/mods/images/psychengine/" + folder;
 		#elseif android
-		return 'assets/mods/images/psychengine/' + folder;
+		return "mods:assets/mods/images/psychengine/" + folder;
 		#else
 		return "assets/mods/images/psychengine/" + folder;
 		#end
