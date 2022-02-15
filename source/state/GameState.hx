@@ -1720,27 +1720,34 @@ class GameState extends MusicBeatState
 		#if LUA_ALLOWED
 		for (notetype in noteTypeMap.keys())
 		{
-			// trace('fffff 2');
-
+			#if android
+			var file = notetype + '.lua';
+			var luaType = 'custom_notetypes';
+			FunkinLua.createLuaAndroid(file, SongPlayer.luaFolder, luaType);
+			#else
 			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
-			// trace('try load custom: ' + luaToLoad);
 			if (FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
 			}
-
-			// trace('fffff 4');
+			#end
 		}
 		// trace('fffff 4');
 
 		for (event in eventPushedMap.keys())
 		{
+			#if android
+			var file = event + '.lua';
+			var luaType = 'custom_events';
+			FunkinLua.createLuaAndroid(file, SongPlayer.luaFolder, luaType);
+			#else
 			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
 			// trace('load custom event: ' + luaToLoad);
 			if (FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
 			}
+			#end
 		}
 		#end
 
@@ -2320,10 +2327,14 @@ class GameState extends MusicBeatState
 		file = "assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
 		#end
 		
-
-		#if sys
+		#if !android
 		if (FileSystem.exists(file))
 		{
+		#else
+		if (openfl.utils.Assets.exists(file))
+		{
+		#end
+
 			var jsonEvent = Song.loadFromJson("events", SongPlayer.folder + SONG_NAME);
 			var eventsData = jsonEvent.events;
 
@@ -2398,10 +2409,21 @@ class GameState extends MusicBeatState
 		script = "assets/data/" + SongPlayer.folder + SONG_NAME + '/script.lua';
 		#end
 
-		#if sys
-		if (FileSystem.exists(script))
+		#if !android
+		if (FileSystem.exists(file))
 		{
-				createLua(script);
+		#else
+		if (openfl.utils.Assets.exists(file))
+		{		
+		#end
+			#if android
+			var file = 'script.lua';
+			var daFolder = "assets/data/" + SongPlayer.folder;
+			var luaType = SONG_NAME;
+			FunkinLua.createLuaAndroid(file, daFolder, luaType);
+			#else
+			createLua(script);
+			#end
 		}
 
 		#end

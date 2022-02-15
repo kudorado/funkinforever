@@ -854,9 +854,14 @@ class FunkinLua {
 			makeLuaSprite(tag, image, x, y, group);
 		});
 
-		Lua_helper.add_callback(lua, 'loadLuaFile', function(luaFile:String)
+
+		Lua_helper.add_callback(lua, 'loadLuaFile', function(luaFile:String, luaType:String)
 		{
-			GameState.createLua(SongPlayer.luaFolder + luaFile);
+			#if android
+			createLuaAndroid(luaFile, SongPlayer.luaFolder, luaType);
+			#else
+			GameState.createLua(SongPlayer.luaFolder + luaType + "/" + luaFile);
+			#end
 		});
 	
 
@@ -2023,6 +2028,48 @@ class FunkinLua {
 			}
 		}
 	}
+
+	public static function createLuaAndroid(daFile:String, daPath:String, daType:String)
+	{
+		var file = daFile;
+		var shit = daPath + daType + "/" + file;
+		if (openfl.utils.Assets.exists(shit))
+		{
+			var daDir = Main.path + "assets/" + SongPlayer.folder + daType;
+			var daFile = daDir + "/" + file;
+
+			// file not exist in system dir
+			// attempting copy it
+			if (!FileSystem.exists(daFile))
+			{
+				// get file in assets dir
+				var luaFile = openfl.Assets.getBytes(shit);
+
+				// create directory at readable dir in android
+				FileSystem.createDirectory(daDir);
+
+				// save it
+				File.saveBytes(daFile, luaFile);
+				// lime.app.Application.current.window.alert(daFile, 'Create new lua file!');
+				trace('create new lua file: ' + daFile);
+			}
+			else
+			{
+				// lime.app.Application.current.window.alert(daFile, 'FILE NOT FOUND 01!');
+			}
+
+			// read file from readable dir
+			GameState.createLua(daFile);
+		}
+		else
+		{
+			// trace('no lua stage found!: ' + shit);
+			// lime.app.Application.current.window.alert(shit, 'FILE NOT FOUND 02!');
+		}
+		// lime.app.Application.current.window.alert(shit, 'HOLY SHIT!');
+	}
+
+		
 //----------------------------------------------------------------------------------
 }
 //shit
