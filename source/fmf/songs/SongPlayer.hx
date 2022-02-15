@@ -33,6 +33,8 @@ class SongPlayer extends BaseSong
 	{
 		#if mobile
 		return "assets/assets/mods/images/psychengine/" + folder;
+		#elseif android
+		return 'assets/mods/images/psychengine/' + folder;
 		#else
 		return "assets/mods/images/psychengine/" + folder;
 		#end

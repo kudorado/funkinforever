@@ -104,7 +104,6 @@ class Paths
 	}
 
 
-
 	
 	public static function getPath(file:String, type:AssetType, library:Null<String> = null)
 	{
@@ -148,6 +147,11 @@ class Paths
 
 	inline static public function lua(key:String,?library:String)
 	{
+		return Main.path + getPath('data/$key.lua', TEXT, library);
+	}
+	
+	inline static public function luaAsset(key:String, ?library:String)
+	{
 		return getPath('data/$key.lua', TEXT, library);
 	}
 
@@ -170,6 +174,7 @@ class Paths
 	{
 		return getPath('data/$key.json', TEXT, library);
 	}
+
 
 	static public function sound(key:String, ?library:String)
 	{

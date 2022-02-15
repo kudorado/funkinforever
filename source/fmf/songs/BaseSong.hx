@@ -10,7 +10,13 @@ import fmf.vfx.*;
 #if sys
 import Sys;
 import sys.FileSystem;
+import openfl.Assets;
+import sys.io.File;
+
 #end
+
+import lime.utils.Assets;
+
 
 import flixel.FlxBasic;
 import Options.PcOption;
@@ -113,12 +119,23 @@ class BaseSong
 	function loadMapLua()
 	{
 		#if LUA_ALLOWED
-		var luaToLoad:String = Paths.modFolders('stages/' + GameState.SONG.stage + '.lua');
+
+		var curStage = GameState.SONG.stage;
+		var luaToLoad:String = Paths.modFolders('stages/' + curStage + '.lua');
+		#if android
+		var daFile = curStage + '.lua';
+		var daPath = "mods:" + "assets/mods/images/psychengine/" +  SongPlayer.folder;
+		FunkinLua.createLuaAndroid(daFile, daPath, 'stages');
+		#else
+
 		if (FileSystem.exists(luaToLoad))
 		{
 			trace('Load map: ' + luaToLoad);
 			GameState.createLua(luaToLoad);
+			
 		}
+		#end
+
 		#end
 	}
 

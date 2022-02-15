@@ -2,7 +2,7 @@ package;
 import state.*;
 import openfl.display.BlendMode;
 import openfl.text.TextFormat;
-import openfl.display.Application;
+
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxGame;
@@ -12,6 +12,11 @@ import openfl.Lib;
 import openfl.display.FPS;
 import openfl.display.Sprite;
 import openfl.events.Event;
+
+
+import lime.system.System;
+import lime.app.Application;
+
 
 class Main extends Sprite
 {
@@ -32,6 +37,7 @@ class Main extends Sprite
 
 
 
+	public static var path:String = lime.system.System.applicationStorageDirectory;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
@@ -161,4 +167,6 @@ class Main extends Sprite
 	{
 		return fpsCounter.currentFPS;
 	}
+
+
 }

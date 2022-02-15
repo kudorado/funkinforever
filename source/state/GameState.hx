@@ -1646,10 +1646,16 @@ class GameState extends MusicBeatState
 
 			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
 			// trace('try load custom: ' + luaToLoad);
+			#if android
+			var file = notetype + '.lua';
+			var luaType = 'custom_notetypes';
+			FunkinLua.createLuaAndroid(SongPlayer.luaFolder, file, luaType);
+			#else
 			if (FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
 			}
+			#end
 
 			// trace('fffff 4');
 
@@ -1660,12 +1666,20 @@ class GameState extends MusicBeatState
 		{
 			// trace('fffff 5');
 
+			#if android
+			var file = event + '.lua';
+			var luaType = 'custom_events';
+			FunkinLua.createLuaAndroid(SongPlayer.luaFolder, file, luaType);
+			#else
 			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
 			// trace('load custom event: ' + luaToLoad);
 			if(FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
 			}
+			#end
+
+
 			// trace('fffff 7');
 
 		}
@@ -2237,7 +2251,7 @@ class GameState extends MusicBeatState
 
 		var file:String = '';
 	
-		#if mobile
+		#if ios
 			file = "assets/assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
 		#else
 			file = "assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';

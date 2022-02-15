@@ -120,9 +120,9 @@ class WeekCompleteSubState extends MusicBeatSubstate
         cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
         Controller.init(this, UP_DOWN, A_B);
-        Controller._pad.cameras = [GameState.instance.camHUD];
+        Controller._pad.cameras = [GameState.instance.camOther];
 
-		LoadingState.createBlackFadeOut(this, GameState.instance.camHUD);
+		LoadingState.createBlackFadeOut(this, GameState.instance.camOther);
 
     }
 
