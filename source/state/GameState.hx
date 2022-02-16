@@ -570,8 +570,10 @@ class GameState extends MusicBeatState
 					startCharacterLua(newDad.curCharacter);
 
 					// turn on for debug
+					#if debug
 					// newDad.visible = true;
 					// newDad.alpha = 1;
+					#end
 				}
 
 			case 2:
@@ -588,8 +590,10 @@ class GameState extends MusicBeatState
 					startCharacterLua(newGf.curCharacter);
 
 					// turn on for debug
+					#if debug
 					// newGf.visible = true;
 					// newGf.alpha = 1;
+					#end
 				}
 
 			case 3:
@@ -1684,6 +1688,12 @@ class GameState extends MusicBeatState
 		if (CURRENT_SONG == 'thorns')
 			curStage = 'schoolEvil';
 
+
+		this.boyfriendGroup = new FlxSpriteGroup(0, 0);
+		this.dadGroup = new FlxSpriteGroup(0, 0);
+		this.gfGroup = new FlxSpriteGroup(0, 0);
+
+
 		songPlayer.init();
 
 		// no need create dialogue shit in freeplay, yay
@@ -2407,10 +2417,10 @@ class GameState extends MusicBeatState
 		#end
 
 		#if !android
-		if (FileSystem.exists(file))
+		if (FileSystem.exists(script))
 		{
 		#else
-		if (openfl.utils.Assets.exists(file))
+		if (openfl.utils.Assets.exists(script))
 		{	
 		#end	
 			#if android
