@@ -957,6 +957,7 @@ class FunkinLua {
 			}
 			else
 			{
+
 				// trace('oh shit, no tag was found, cant add: ' + tag);
 			}
 
@@ -1905,8 +1906,11 @@ class FunkinLua {
 		{
 			var daTexture = daPath + "images/" + image;
 			leSprite.loadGraphic(Paths.image(daTexture, daLibrary));
-			// lime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
+			lime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
 		}
+		else
+			lime.app.Application.current.window.alert(leSprite.debugName(), 'NULL IMAGE PATH!');
+
 
 		leSprite.antialiasing = true; // true; //true; //ClientPrefs.globalAntialiasing;
 		GameState.instance.modchartSprites.set(tag, leSprite);
@@ -1929,22 +1933,24 @@ class FunkinLua {
 	{
 		var shit:ModchartSprite = GameState.instance.modchartSprites.get(tag);
 		if (!shit.wasAdded)
-	{
+		{
 			if (front || !GameState.songPlayer.mapLoaded)
 			{
 				getInstance().add(shit);
 				trace("Add luaSprite: " + tag);
+				lime.app.Application.current.window.alert(tag, 'Add luaSprite!!!');
 			}
 			else
 			{
 				if (GameState.instance.isDead)
 				{
+					lime.app.Application.current.window.alert("isDead", 'Add luaSprite!!!');
+
 					trace("you die: " + tag);
 					// GameOverSubstate.instance.insert(GameOverSubstate.instance.members.indexOf(GameOverSubstate.instance.bfPE), shit);
 				}
 				else
 				{
-
 					var position = GameState.instance.members.indexOf(GameState.instance.gfGroup);
 
 					if (GameState.instance.members.indexOf(GameState.instance.player3Group) < position)
@@ -1964,6 +1970,7 @@ class FunkinLua {
 					// getInstance().add(shit);
 
 					trace("Insert luaSprite: " + tag);
+					lime.app.Application.current.window.alert("!", 'Insert luaSprite!');
 
 					// lime.app.Application.current.window.alert(shit.debugName(), 'ADD SPRITE!');
 				}
@@ -1971,7 +1978,9 @@ class FunkinLua {
 			shit.wasAdded = true;
 			// trace('added a thing: ' + tag);
 		}
-		// else
+		else
+			lime.app.Application.current.window.alert(tag, 'Shit was added!!!');
+
 			// trace(tag + ' was added, ignore');
 	}
 

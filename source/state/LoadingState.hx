@@ -62,20 +62,16 @@ class LoadingState extends MusicBeatState
             callbacks = new MultiCallback(onLoad);
             var introComplete = callbacks.add("introComplete");
 			// trace('1');
-            checkLoadSong(getSongPath());
-            if (GameState.SONG.needsVoices)
-                checkLoadSong(getVocalPath());
-            checkLibrary("shared");
+			if (GameState.SONG != null)
+			{
+				checkLoadSong(getSongPath());
+				if (GameState.SONG.needsVoices)
+					checkLoadSong(getVocalPath());
+			}
 
-			// trace('2');
-
-            // if (GameState.storyWeek > 0)
-			
-                checkLibrary("mods");
-            // else
-                // checkLibrary("tutorial");
-			// trace('4');
-
+			checkLibrary("shared");
+			checkLibrary("mods");
+          
             var fadeTime = 0.5;
             FlxG.camera.fade(FlxG.camera.bgColor, fadeTime, true);
             new FlxTimer().start(fadeTime + MIN_TIME, function(_) introComplete());
@@ -130,7 +126,7 @@ class LoadingState extends MusicBeatState
 
     function checkLibrary(library:String)
     {
-        //@notrace(Assets.hasLibrary(library));
+        trace("was " + library.toUpperCase()  + " library loaded?: " +  Assets.hasLibrary(library));
         if (Assets.getLibrary(library) == null)
         {
             @:privateAccess
@@ -138,6 +134,7 @@ class LoadingState extends MusicBeatState
                 throw "Missing library: " + library;
 
             var callback = callbacks.add("library:" + library);
+            trace("attempting to load library?:" +  library);
             Assets.loadLibrary(library).onComplete(function(_)
             {
                 callback();
@@ -213,10 +210,14 @@ class LoadingState extends MusicBeatState
         Paths.setCurrentLevel(SongManager.songs[GameState.storyWeek].folder);
         // #if NO_PRELOAD_ALL
         //@notrace('need voices:' + GameState.SONG.needsVoices);
-        var loaded = isSoundLoaded(getSongPath())
-            && (!GameState.SONG.needsVoices || isSoundLoaded(getVocalPath()))
-            && isLibraryLoaded("shared");
-
+        var loaded = false;
+        if (GameState.SONG != null)
+		{
+			var loaded = isSoundLoaded(getSongPath())
+				&& (!GameState.SONG.needsVoices || isSoundLoaded(getVocalPath()))
+				&& isLibraryLoaded("shared");
+		}
+        
         if (!loaded)
             return new LoadingState(target, stopMusic);
         // #end

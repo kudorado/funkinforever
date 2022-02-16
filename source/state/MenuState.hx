@@ -301,11 +301,10 @@ class MenuState extends MusicBeatState
 		switch (daChoice)
 		{
 			case 'story mode':
-				FlxG.switchState(new StoryState());
+				LoadingState.loadAndSwitchState(new StoryState());
 				//@notrace("Story Menu Selected");
 			case 'freeplay':
-				FlxG.switchState(new FreePlayState());
-
+				LoadingState.loadAndSwitchState(new FreePlayState());
 				//@notrace("Freeplay Menu Selected");
 			case 'options':
 				FlxG.switchState(new OptionsMenu());
