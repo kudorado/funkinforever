@@ -591,6 +591,9 @@ class SongPlayerManager
 
 			case 'high_school_conflict':
 				songPlayer = new HighSchoolConflict();
+
+			case 'rain_clouds':
+				songPlayer = new RainClouds();
 		}
 
 		return songPlayer;
