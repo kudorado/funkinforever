@@ -431,13 +431,13 @@ class FunkinLua {
 				trace('Tween:' + tag);
 				GameState.instance.modchartTweens.set(tag, FlxTween.tween(penisExam, {alpha: value}, duration, {ease: getFlxEaseByString(ease),
 					onComplete: function(twn:FlxTween) {
-						// lime.app.Application.current.window.alert(penisExam, 'doTweenAlpha');
+						// //@luanotracelime.app.Application.current.window.alert(penisExam, 'doTweenAlpha');
 						GameState.instance.callOnLuas('onTweenCompleted', [tag]);
 						GameState.instance.modchartTweens.remove(tag);
 					}
 				}));
 			} else {
-						// lime.app.Application.current.window.alert("Couldnt find object!", 'doTweenAlpha');
+						// //@luanotracelime.app.Application.current.window.alert("Couldnt find object!", 'doTweenAlpha');
 				// luaTrace('Couldnt find object: ' + vars);
 			}
 		});
@@ -579,7 +579,7 @@ class FunkinLua {
 			// luaTrace('run timer!');
 
 			cancelTimer(tag);
-			// lime.app.Application.current.window.alert("shit", 'cancer timer!');
+			// //@luanotracelime.app.Application.current.window.alert("shit", 'cancer timer!');
 			GameState.instance.modchartTimers.set(tag, new FlxTimer().start(time, function(tmr:FlxTimer) {
 				if(tmr.finished) {
 					GameState.instance.modchartTimers.remove(tag);
@@ -589,7 +589,7 @@ class FunkinLua {
 				//trace('Timer Completed: ' + tag);
 			}, loops));
 
-			// lime.app.Application.current.window.alert("shit", 'fuck that timer!');
+			// //@luanotracelime.app.Application.current.window.alert("shit", 'fuck that timer!');
 
 		});
 		Lua_helper.add_callback(lua, "cancelTimer", function(tag:String) {
@@ -1826,12 +1826,12 @@ class FunkinLua {
 
 				//save it
 				File.saveBytes(daFile, luaFile);
-				// lime.app.Application.current.window.alert(daFile, 'Create new lua file!');
+				// //@luanotracelime.app.Application.current.window.alert(daFile, 'Create new lua file!');
 				trace('create new lua file: ' + daFile);
 			}
 			else
 			{
-				// lime.app.Application.current.window.alert(daFile, 'FILE NOT FOUND 01!');
+				// //@luanotracelime.app.Application.current.window.alert(daFile, 'FILE NOT FOUND 01!');
 			}
 
 			//read file from readable dir
@@ -1840,9 +1840,9 @@ class FunkinLua {
 		else
 		{
 			// trace('no lua stage found!: ' + shit);
-			// lime.app.Application.current.window.alert(shit, 'FILE NOT FOUND 02!');
+			// //@luanotracelime.app.Application.current.window.alert(shit, 'FILE NOT FOUND 02!');
 		}
-		// lime.app.Application.current.window.alert(shit, 'HOLY SHIT!');
+		// //@luanotracelime.app.Application.current.window.alert(shit, 'HOLY SHIT!');
 		
 		
 		
@@ -1906,10 +1906,10 @@ class FunkinLua {
 		{
 			var daTexture = daPath + "images/" + image;
 			leSprite.loadGraphic(Paths.image(daTexture, daLibrary));
-			lime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
+			//@luanotracelime.app.Application.current.window.alert(leSprite.debugName(), 'IMG PATH!');
 		}
 		else
-			lime.app.Application.current.window.alert(leSprite.debugName(), 'NULL IMAGE PATH!');
+			//@luanotracelime.app.Application.current.window.alert(leSprite.debugName(), 'NULL IMAGE PATH!');
 
 
 		leSprite.antialiasing = true; // true; //true; //ClientPrefs.globalAntialiasing;
@@ -1938,13 +1938,13 @@ class FunkinLua {
 			{
 				getInstance().add(shit);
 				trace("Add luaSprite: " + tag);
-				lime.app.Application.current.window.alert(tag, 'Add luaSprite!!!');
+				//@luanotracelime.app.Application.current.window.alert(tag, 'Add luaSprite!!!');
 			}
 			else
 			{
 				if (GameState.instance.isDead)
 				{
-					lime.app.Application.current.window.alert("isDead", 'Add luaSprite!!!');
+					//@luanotracelime.app.Application.current.window.alert("isDead", 'Add luaSprite!!!');
 
 					trace("you die: " + tag);
 					// GameOverSubstate.instance.insert(GameOverSubstate.instance.members.indexOf(GameOverSubstate.instance.bfPE), shit);
@@ -1970,16 +1970,16 @@ class FunkinLua {
 					// getInstance().add(shit);
 
 					trace("Insert luaSprite: " + tag);
-					lime.app.Application.current.window.alert("!", 'Insert luaSprite!');
+					//@luanotracelime.app.Application.current.window.alert("!", 'Insert luaSprite!');
 
-					// lime.app.Application.current.window.alert(shit.debugName(), 'ADD SPRITE!');
+					// //@luanotracelime.app.Application.current.window.alert(shit.debugName(), 'ADD SPRITE!');
 				}
 			}
 			shit.wasAdded = true;
 			// trace('added a thing: ' + tag);
 		}
 		else
-			lime.app.Application.current.window.alert(tag, 'Shit was added!!!');
+			//@luanotracelime.app.Application.current.window.alert(tag, 'Shit was added!!!');
 
 			// trace(tag + ' was added, ignore');
 	}

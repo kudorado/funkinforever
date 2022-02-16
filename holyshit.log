@@ -1,0 +1,742 @@
+2022-02-16 17:00:36.785 18062-18088/? W/ogle.android.g: Accessing hidden field Ljava/util/Collections$SynchronizedCollection;->mutex:Ljava/lang/Object; (greylist-max-o, reflection, denied)
+2022-02-16 17:00:36.785 18062-18088/? W/ogle.android.g: Accessing hidden method Ljava/util/Collections$SynchronizedSet;-><init>(Ljava/util/Set;Ljava/lang/Object;)V (greylist-max-o, reflection, denied)
+2022-02-16 17:00:36.786 18062-18088/? W/ogle.android.g: Accessing hidden method Ljava/util/Collections$SynchronizedCollection;-><init>(Ljava/util/Collection;Ljava/lang/Object;)V (greylist-max-o, reflection, denied)
+2022-02-16 17:00:36.930 18062-18100/? I/org.webrtc.Logging: CrashStartupListener: Checking conference crashes for 1 account(s).
+2022-02-16 17:00:36.950 18062-18062/? I/TetheringManager: registerTetheringEventCallback:com.google.android.gm
+2022-02-16 17:00:37.151 815-887/? I/soundtrigger: audio_extn_sound_trigger_update_device_status: device 0x2 of type 0 for Event 0, with Raise=0
+2022-02-16 17:00:37.152 1627-2186/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:37.186 1627-2187/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.android.mail.ACTION_NOTIFY_DATASET_CHANGED typ=application/gmail-ls pkg=com.google.android.gm (has extras) }
+2022-02-16 17:00:37.224 12581-12893/? I/MdiSyncModule: Receiving API connection from package 'com.google.android.gm'...
+2022-02-16 17:00:37.234 18062-18119/? W/sce: Toggling Chat components off.
+2022-02-16 17:00:37.236 12581-12893/? I/MdiSyncModule: API connection successful!
+2022-02-16 17:00:37.243 1627-12869/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.internal.mobdog (has extras) }
+2022-02-16 17:00:37.245 1627-12869/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.mobileutilities (has extras) }
+2022-02-16 17:00:37.257 1627-2187/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.internal.mobdog (has extras) }
+2022-02-16 17:00:37.260 1627-12869/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.mobileutilities (has extras) }
+2022-02-16 17:00:37.477 1627-2186/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.internal.mobdog (has extras) }
+2022-02-16 17:00:37.477 1627-2186/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.mobileutilities (has extras) }
+2022-02-16 17:00:37.659 1627-12869/? I/ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.music.festival.battle/.MainActivity bnds=[25,502][159,711]} from uid 10119
+2022-02-16 17:00:37.667 1067-1067/? I/perfetto: ing_service_impl.cc:758 Configured tracing session 706, #sources:1, duration:5000 ms, #buffers:1, total buffer size:4096 KB, total sessions:2, uid:1071 session name: ""
+2022-02-16 17:00:37.668 1066-1066/? I/perfetto: probes_producer.cc:230  Ftrace setup (target_buf=706)
+2022-02-16 17:00:37.676 862-969/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [2, 0]
+2022-02-16 17:00:37.676 862-969/? I/chatty: uid=0(root) perf@2.2-servic identical 4 lines
+2022-02-16 17:00:37.676 862-969/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [2, 0]
+2022-02-16 17:00:37.680 1627-12869/? E/ANDR-PERF-JNI: com_qualcomm_qtiperformance_native_perf_io_prefetch_start
+2022-02-16 17:00:37.682 861-959/? E/ANDR-IOP: io prefetch is disabled
+2022-02-16 17:00:37.684 862-969/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [2, 0]
+2022-02-16 17:00:37.685 862-969/? I/chatty: uid=0(root) perf@2.2-servic identical 10 lines
+2022-02-16 17:00:37.685 862-969/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [2, 0]
+2022-02-16 17:00:37.718 1627-1793/? I/ActivityManager: Start proc 18159:com.music.festival.battle/u0a250 for pre-top-activity {com.music.festival.battle/com.music.festival.battle.MainActivity}
+2022-02-16 17:00:37.729 18159-18159/? I/libc: SetHeapTaggingLevel: tag level set to 0
+2022-02-16 17:00:37.739 18159-18159/? E/festival.battl: Not starting debugger since process cannot load the jdwp agent.
+2022-02-16 17:00:37.787 10173-10173/? I/A: onApplyWindowInsets: systemWindowInsets=Insets{left=0, top=70, right=0, bottom=28}
+2022-02-16 17:00:37.788 10173-10173/? I/A: onApplyWindowInsets: systemWindowInsets=Insets{left=0, top=70, right=0, bottom=28}
+2022-02-16 17:00:37.798 1627-12869/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.googlequicksearchbox.STOP_HOTWORD pkg=com.google.android.googlequicksearchbox }
+2022-02-16 17:00:37.800 10226-10226/? I/GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+2022-02-16 17:00:37.805 18159-18159/? W/festival.battl: JIT profile information will not be recorded: profile file does not exist.
+2022-02-16 17:00:37.806 18159-18159/? I/chatty: uid=10250(com.music.festival.battle) identical 12 lines
+2022-02-16 17:00:37.807 18159-18159/? W/festival.battl: JIT profile information will not be recorded: profile file does not exist.
+2022-02-16 17:00:37.816 18159-18159/? I/Perf: Connecting to perf service.
+2022-02-16 17:00:37.823 18159-18159/? I/LoadedApk: No resource references to update in package com.music.festival.battle.mod_bg
+2022-02-16 17:00:37.824 18159-18159/? I/LoadedApk: No resource references to update in package com.music.festival.battle.core
+2022-02-16 17:00:37.852 18159-18159/? I/TetheringManager: registerTetheringEventCallback:com.music.festival.battle
+2022-02-16 17:00:37.853 20523-20523/? W/adbd: timeout expired while flushing socket, closing
+2022-02-16 17:00:37.872 18159-18187/? W/DynamiteModule: Local module descriptor class for com.google.android.gms.measurement.dynamite not found.
+2022-02-16 17:00:37.873 18159-18184/? I/DynamiteModule: Considering local module com.google.android.gms.ads.dynamite:0 and remote module com.google.android.gms.ads.dynamite:214106404
+2022-02-16 17:00:37.873 18159-18184/? I/DynamiteModule: Selected remote version of com.google.android.gms.ads.dynamite, version >= 214106404
+2022-02-16 17:00:37.880 18159-18187/? I/DynamiteModule: Considering local module com.google.android.gms.measurement.dynamite:0 and remote module com.google.android.gms.measurement.dynamite:59
+2022-02-16 17:00:37.880 18159-18187/? I/DynamiteModule: Selected remote version of com.google.android.gms.measurement.dynamite, version >= 59
+2022-02-16 17:00:37.883 891-2870/? W/DisplayIdentification: Invalid EDID: falling back to serial number due to missing display name.
+2022-02-16 17:00:37.883 891-2870/? W/DisplayIdentification: Invalid EDID: falling back to ASCII text due to missing serial number.
+2022-02-16 17:00:37.894 18159-18159/? E/shit: modules already downloaded, go anyway!
+2022-02-16 17:00:37.897 1066-1066/? I/perfetto: probes_producer.cc:329  Producer stop (id=705)
+2022-02-16 17:00:37.897 1627-6062/? I/ActivityTaskManager: START u0 {cmp=com.music.festival.battle/com.es.core.MainActivity} from uid 10250
+2022-02-16 17:00:37.902 862-969/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [2, 0]
+2022-02-16 17:00:37.902 862-969/? I/chatty: uid=0(root) perf@2.2-servic identical 4 lines
+2022-02-16 17:00:37.902 862-969/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [2, 0]
+2022-02-16 17:00:37.908 18159-18187/? W/festival.battl: ClassLoaderContext classpath size mismatch. expected=2, found=13 (DLC[];PCL[/system/priv-app/HMDCamera/HMDCamera.apk*1190673482:/system/priv-app/HMDCamera/HMDCamera.apk!classes2.dex*2409305884] | DLC[];PCL[/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/base.apk*2793030593:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/base.apk!classes2.dex*3072130752:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_core.apk*2581783759:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_mod_bg.apk*1580079233:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_mod_bg1.apk*2862250535:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_mod_etc.apk*2313844431:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_pc.apk*2093012853:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_pc1.apk*4237298929:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_psychengine.apk*24125364:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_songs.apk*416802021:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_songs1.apk*3985131639:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_songs2.apk*2762400315:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_songs3.apk*733070597])
+2022-02-16 17:00:37.912 18159-18187/? W/festival.battl: Found duplicate classes, falling back to extracting from APK : /data/user_de/0/com.google.android.gms/app_chimera/m/00000027/MeasurementDynamite.apk
+2022-02-16 17:00:37.912 18159-18187/? W/festival.battl: NOTE: This wastes RAM and hurts startup performance.
+2022-02-16 17:00:37.912 18159-18187/? W/festival.battl: Found duplicated class when checking oat files: 'Landroid/support/v4/app/RemoteActionCompatParcelizer;' in /data/user_de/0/com.google.android.gms/app_chimera/m/00000027/MeasurementDynamite.apk and /data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/base.apk
+2022-02-16 17:00:37.912 1067-1067/? I/perfetto: ng_service_impl.cc:1948 Tracing session 705 ended, total sessions:1
+2022-02-16 17:00:37.936 18159-18187/? W/DynamiteModule: Local module descriptor class for com.google.android.gms.measurement.dynamite not found.
+2022-02-16 17:00:37.977 1627-12869/? I/ActivityTaskManager: The Process com.music.festival.battle Already Exists in BG. So sending its PID: 18159
+2022-02-16 17:00:37.977 1627-12869/? W/ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (128138830)
+2022-02-16 17:00:38.004 18159-18193/? I/AdrenoGLES-0: QUALCOMM build                   : 2bd16eb911, I3687d7cf91
+    Build Date                       : 02/10/21
+    OpenGL ES Shader Compiler Version: EV031.32.02.08
+    Local Branch                     : 
+    Remote Branch                    : 
+    Remote Branch                    : 
+    Reconstruct Branch               : 
+2022-02-16 17:00:38.004 18159-18193/? I/AdrenoGLES-0: Build Config                     : S P 10.0.7 AArch64
+2022-02-16 17:00:38.004 18159-18193/? I/AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+2022-02-16 17:00:38.013 18159-18193/? I/AdrenoGLES-0: PFP: 0x016ee195, ME: 0x00000000
+2022-02-16 17:00:38.031 18159-18203/? I/FA-Ads: App measurement initialized, version: 50018
+2022-02-16 17:00:38.031 18159-18203/? I/FA-Ads: To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
+2022-02-16 17:00:38.079 18159-18203/? I/FA-Ads: Tag Manager is not found and thus will not be used
+2022-02-16 17:00:38.086 18159-18159/? W/SDL: Request to get environment variables before JNI is ready
+2022-02-16 17:00:38.149 18159-18159/? I/ironSourceSDK: API: init(appKey:f990ca51)
+2022-02-16 17:00:38.167 18159-18159/? I/WebViewFactory: Loading com.google.android.webview version 98.0.4758.101 (code 475810133)
+2022-02-16 17:00:38.213 18159-18159/? I/cr_WVCFactoryProvider: Loaded version=98.0.4758.101 minSdkVersion=29 isBundle=true multiprocess=true packageId=2
+2022-02-16 17:00:38.226 18159-18159/? I/cr_LibraryLoader: Successfully loaded native library
+2022-02-16 17:00:38.227 18159-18159/? I/cr_CachingUmaRecorder: Flushed 9 samples from 9 histograms.
+2022-02-16 17:00:38.271 18223-18223/? W/ocessService0:: Using default instruction set features for ARM CPU variant (cortex-a9) using conservative defaults
+2022-02-16 17:00:38.273 1627-1793/? I/ActivityManager: Start proc 18223:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0i197 for  {com.music.festival.battle/org.chromium.content.app.SandboxedProcessService0:0}
+2022-02-16 17:00:38.276 18223-18223/? E/ocessService0:: Not starting debugger since process cannot load the jdwp agent.
+2022-02-16 17:00:38.314 18223-18223/? I/cr_WebViewApkApp: Launched version=98.0.4758.101 minSdkVersion=29 isBundle=true processName=com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0
+2022-02-16 17:00:38.317 18223-18223/? I/cr_ChildProcessService: Creating new ChildProcessService pid=18223
+2022-02-16 17:00:38.344 18159-18159/? I/IntegrationHelper: Verifying Integration:
+2022-02-16 17:00:38.344 18159-18159/? I/IntegrationHelper: *** Permissions ***
+2022-02-16 17:00:38.345 18159-18159/? I/IntegrationHelper: android.permission.INTERNET - VERIFIED
+2022-02-16 17:00:38.345 18159-18159/? I/IntegrationHelper: android.permission.ACCESS_NETWORK_STATE - VERIFIED
+2022-02-16 17:00:38.345 18159-18159/? I/IntegrationHelper: --------------- AdColony --------------
+2022-02-16 17:00:38.346 18159-18159/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:38.346 18159-18159/? E/IntegrationHelper: >>>> AdColony - NOT VERIFIED
+2022-02-16 17:00:38.346 18159-18159/? I/IntegrationHelper: --------------- AdMob --------------
+2022-02-16 17:00:38.347 18159-18159/? I/IntegrationHelper: Adapter 4.3.20 - VERIFIED
+2022-02-16 17:00:38.347 18159-18159/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:38.348 18159-18159/? W/validateSDKVersion: Unable to get SDK version
+2022-02-16 17:00:38.348 18159-18159/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:38.350 18159-18159/? I/IntegrationHelper: com.google.android.gms.ads.AdActivity - VERIFIED
+2022-02-16 17:00:38.371 18159-18159/? I/IntegrationHelper: >>>> AdMob - VERIFIED
+2022-02-16 17:00:38.371 18159-18159/? I/IntegrationHelper: --------------- Amazon --------------
+2022-02-16 17:00:38.372 18159-18159/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:38.372 18159-18159/? E/IntegrationHelper: >>>> Amazon - NOT VERIFIED
+2022-02-16 17:00:38.372 18159-18159/? I/IntegrationHelper: --------------- AppLovin --------------
+2022-02-16 17:00:38.372 18159-18159/? I/IntegrationHelper: Adapter 4.3.25 - VERIFIED
+2022-02-16 17:00:38.372 18159-18159/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:38.373 18159-18159/? I/IntegrationHelper: SDK Version - 10.3.0
+2022-02-16 17:00:38.373 18159-18159/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:38.375 18159-18159/? I/IntegrationHelper: com.applovin.adview.AppLovinInterstitialActivity - VERIFIED
+2022-02-16 17:00:38.377 18159-18159/? I/IntegrationHelper: com.applovin.sdk.AppLovinWebViewActivity - VERIFIED
+2022-02-16 17:00:38.378 18159-18159/? I/IntegrationHelper: com.applovin.adview.AppLovinFullscreenActivity - VERIFIED
+2022-02-16 17:00:38.400 18159-18159/? I/IntegrationHelper: >>>> AppLovin - VERIFIED
+2022-02-16 17:00:38.400 18159-18159/? I/IntegrationHelper: --------------- Chartboost --------------
+2022-02-16 17:00:38.400 18159-18159/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:38.400 18159-18159/? E/IntegrationHelper: >>>> Chartboost - NOT VERIFIED
+2022-02-16 17:00:38.400 18159-18159/? I/IntegrationHelper: --------------- Facebook --------------
+2022-02-16 17:00:38.401 18159-18159/? I/IntegrationHelper: Adapter 4.3.27 - VERIFIED
+2022-02-16 17:00:38.401 18159-18159/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:38.401 18159-18159/? I/IntegrationHelper: SDK Version - 6.5.0
+2022-02-16 17:00:38.401 18159-18159/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:38.402 18159-18159/? I/IntegrationHelper: com.facebook.ads.AudienceNetworkActivity - VERIFIED
+2022-02-16 17:00:38.424 18159-18159/? I/IntegrationHelper: >>>> Facebook - VERIFIED
+2022-02-16 17:00:38.424 18159-18159/? I/IntegrationHelper: --------------- Fyber --------------
+2022-02-16 17:00:38.424 18159-18159/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:38.424 18159-18159/? E/IntegrationHelper: >>>> Fyber - NOT VERIFIED
+2022-02-16 17:00:38.424 18159-18159/? I/IntegrationHelper: --------------- HyprMX --------------
+2022-02-16 17:00:38.424 18159-18159/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:38.424 18159-18159/? E/IntegrationHelper: >>>> HyprMX - NOT VERIFIED
+2022-02-16 17:00:38.424 18159-18159/? I/IntegrationHelper: --------------- InMobi --------------
+2022-02-16 17:00:38.425 18159-18159/? I/IntegrationHelper: Adapter 4.3.9 - VERIFIED
+2022-02-16 17:00:38.425 18159-18159/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:38.425 18159-18159/? I/IntegrationHelper: SDK Version - 9.1.6
+2022-02-16 17:00:38.425 18159-18159/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:38.427 18159-18159/? I/IntegrationHelper: com.inmobi.ads.rendering.InMobiAdActivity - VERIFIED
+2022-02-16 17:00:38.427 18159-18159/? I/IntegrationHelper: *** External Libraries ***
+2022-02-16 17:00:38.428 18159-18159/? I/IntegrationHelper: picasso:2.71828 - VERIFIED
+2022-02-16 17:00:38.449 18159-18159/? I/IntegrationHelper: >>>> InMobi - VERIFIED
+2022-02-16 17:00:38.449 18159-18159/? I/IntegrationHelper: --------------- IronSource  --------------
+2022-02-16 17:00:38.450 18159-18159/? I/IntegrationHelper: Adapter 7.1.6 - VERIFIED
+2022-02-16 17:00:38.450 18159-18159/? I/IntegrationHelper: SDK Version - 5.100
+2022-02-16 17:00:38.450 18159-18159/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:38.452 18159-18159/? I/IntegrationHelper: com.ironsource.sdk.controller.ControllerActivity - VERIFIED
+2022-02-16 17:00:38.454 18159-18159/? I/IntegrationHelper: com.ironsource.sdk.controller.InterstitialActivity - VERIFIED
+2022-02-16 17:00:38.455 18159-18159/? I/IntegrationHelper: com.ironsource.sdk.controller.OpenUrlActivity - VERIFIED
+2022-02-16 17:00:38.476 18159-18159/? I/IntegrationHelper: *** Content Providers ***
+2022-02-16 17:00:38.476 18159-18159/? I/IntegrationHelper: >>>> IronSource - VERIFIED
+2022-02-16 17:00:38.476 18159-18159/? I/IntegrationHelper: --------------- Maio --------------
+2022-02-16 17:00:38.476 18159-18159/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:38.476 18159-18159/? E/IntegrationHelper: >>>> Maio - NOT VERIFIED
+2022-02-16 17:00:38.476 18159-18159/? I/IntegrationHelper: --------------- MyTarget --------------
+2022-02-16 17:00:38.477 18159-18159/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:38.477 18159-18159/? E/IntegrationHelper: >>>> MyTarget - NOT VERIFIED
+2022-02-16 17:00:38.477 18159-18159/? I/IntegrationHelper: --------------- Pangle --------------
+2022-02-16 17:00:38.478 18159-18159/? I/IntegrationHelper: Adapter 4.3.2 - VERIFIED
+2022-02-16 17:00:38.478 18159-18159/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:38.478 18159-18159/? I/IntegrationHelper: SDK Version - 3.5.1.1
+2022-02-16 17:00:38.499 18159-18159/? I/IntegrationHelper: >>>> Pangle - VERIFIED
+2022-02-16 17:00:38.499 18159-18159/? I/IntegrationHelper: --------------- Smaato --------------
+2022-02-16 17:00:38.499 18159-18159/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:38.499 18159-18159/? E/IntegrationHelper: >>>> Smaato - NOT VERIFIED
+2022-02-16 17:00:38.499 18159-18159/? I/IntegrationHelper: --------------- Tapjoy --------------
+2022-02-16 17:00:38.499 18159-18159/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:38.499 18159-18159/? E/IntegrationHelper: >>>> Tapjoy - NOT VERIFIED
+2022-02-16 17:00:38.499 18159-18159/? I/IntegrationHelper: --------------- UnityAds --------------
+2022-02-16 17:00:38.500 18159-18159/? I/IntegrationHelper: Adapter 4.3.10 - VERIFIED
+2022-02-16 17:00:38.500 18159-18159/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:38.501 18159-18159/? I/IntegrationHelper: SDK Version - 3.6.0
+2022-02-16 17:00:38.501 18159-18159/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:38.502 18159-18159/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitActivity - VERIFIED
+2022-02-16 17:00:38.504 18159-18159/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitTransparentActivity - VERIFIED
+2022-02-16 17:00:38.505 18159-18159/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity - VERIFIED
+2022-02-16 17:00:38.506 18159-18159/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitSoftwareActivity - VERIFIED
+2022-02-16 17:00:38.526 18159-18159/? I/IntegrationHelper: >>>> UnityAds - VERIFIED
+2022-02-16 17:00:38.526 18159-18159/? I/IntegrationHelper: --------------- Vungle --------------
+2022-02-16 17:00:38.526 18159-18159/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:38.526 18159-18159/? E/IntegrationHelper: >>>> Vungle - NOT VERIFIED
+2022-02-16 17:00:38.527 18159-18264/? W/IntegrationHelper: --------------- Google Play Services --------------
+2022-02-16 17:00:38.527 18159-18264/? I/IntegrationHelper: Google Play Services - VERIFIED
+2022-02-16 17:00:38.532 18159-18159/? I/ironSourceSDK: API: createBanner()
+2022-02-16 17:00:38.533 18159-18159/? I/ironSourceSDK: API: IronSourceBannerLayout setBannerListener
+2022-02-16 17:00:38.533 18159-18159/? I/ironSourceSDK: API: setRewardedVideoListener(RVListener)
+2022-02-16 17:00:38.534 18159-18159/? I/ironSourceSDK: API: setInterstitialListener(ISListener)
+2022-02-16 17:00:38.534 18159-18159/? I/ironSourceSDK: API: loadInterstitial()
+2022-02-16 17:00:38.538 18159-18159/? I/ironSourceSDK: API: onResume()
+2022-02-16 17:00:38.546 18159-18159/? I/Choreographer: Skipped 32 frames!  The application may be doing too much work on its main thread.
+2022-02-16 17:00:38.559 840-840/? I/sensors-hal: batch:242, android.sensor.accelerometer/11, period=20000000, max_latency=0
+2022-02-16 17:00:38.559 840-840/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 20000000 based on min/max delay_ns
+2022-02-16 17:00:38.559 840-840/? I/sensors-hal: batch:251, android.sensor.accelerometer/11, period=20000000, max_latency=0 request completed
+2022-02-16 17:00:38.559 840-840/? I/sensors-hal: activate:209, android.sensor.accelerometer/11 en=1
+2022-02-16 17:00:38.563 840-840/? I/sensors-hal: activate:220, android.sensor.accelerometer/11 en=1 completed
+2022-02-16 17:00:38.564 840-18266/? I/sensors-hal: ssc_conn_resp_cb:663, resp_value = 0
+2022-02-16 17:00:38.580 1627-1790/? I/ActivityTaskManager: Displayed com.music.festival.battle/com.es.core.MainActivity: +914ms
+2022-02-16 17:00:38.581 18159-18269/? I/haxe plugin: Got Load Proc 0x7595d4b830
+2022-02-16 17:00:38.593 1627-6062/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:38.593 1627-6062/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:38.594 18159-18269/? I/libOpenSLES: Emulating old channel mask behavior (ignoring positional mask 0x3, using default mask 0x3 based on channel count of 2)
+2022-02-16 17:00:38.594 1627-12869/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:38.595 1627-12869/? I/chatty: uid=1000(system) Binder:1627_20 identical 1 line
+2022-02-16 17:00:38.596 1627-12869/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:38.596 1627-3308/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:38.597 1627-3342/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:38.597 1627-3342/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:38.598 884-30915/? I/hash_map_utils: key: 'vr_audio_mode_on' value: ''
+2022-02-16 17:00:38.599 18159-18264/? I/IntegrationHelper: GAID is: 6773f3ac-4c34-4549-a8ea-c5d8c5558c7d (use this for test devices)
+2022-02-16 17:00:38.600 884-30915/? I/AudioPolicyManagerCustom: VR mode is 0, switch to primary output if request is for fast|raw
+2022-02-16 17:00:38.601 884-30915/? W/AudioFlinger: createTrack_l(): mismatch between requested flags (00000104) and output flags (00000006)
+2022-02-16 17:00:38.628 815-887/? E/EffectFactoryHAL: Error querying effect descriptor for 08b8b058-0590-11e5-ac71-0025b32654a0: No such file or directory
+2022-02-16 17:00:38.628 884-1178/? W/AudioFlinger: createEffect() error -2 from getEffectDescriptor
+2022-02-16 17:00:38.628 884-1178/? E/AudioEffect: set(): AudioFlinger could not create effect NULL / 08b8b058-0590-11e5-ac71-0025b32654a0, status: -2
+2022-02-16 17:00:38.628 884-1178/? E/AudioPolicyEffects: addOutputSessionEffects(): failed to create Fx  music_helper on session 3161
+2022-02-16 17:00:38.629 884-1178/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-16 17:00:38.629 884-1178/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-16 17:00:38.631 1627-2186/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:38.632 815-2132/? I/msm8974_platform: platform_check_and_set_codec_backend_cfg:becf: afe: bitwidth 16, samplerate 48000 channels 2, backend_idx 0 usecase = 1 device (speaker)
+2022-02-16 17:00:38.632 815-2132/? I/msm8974_platform: platform_check_and_set_codec_backend_cfg: new_snd_devices[0] is 2
+2022-02-16 17:00:38.632 815-2132/? I/msm8974_platform: platform_check_codec_backend_cfg:becf: afe: bitwidth 16, samplerate 48000 channels 2, backend_idx 0 usecase = 1 device (speaker)
+2022-02-16 17:00:38.632 815-2132/? I/msm8974_platform: platform_check_codec_backend_cfg:becf: afe: Codec selected backend: 0 updated bit width: 16 and sample rate: 48000
+2022-02-16 17:00:38.632 815-2132/? I/soundtrigger: audio_extn_sound_trigger_update_device_status: device 0x2 of type 0 for Event 1, with Raise=0
+2022-02-16 17:00:38.635 815-2132/? I/audio_hw_utils: send_app_type_cfg_for_device PLAYBACK app_type 69937, acdb_dev_id 14, sample_rate 48000, snd_device_be_idx 189
+2022-02-16 17:00:38.639 18159-18258/? I/ironSourceSDK: INTERNAL: GeneralPropertiesWorker collectInformation - collecting data for events: {isLimitAdTrackingEnabled=false, appVersion=6.2, tz=Asia/Ho_Chi_Minh, icc=vn, advertisingId=6773f3ac-4c34-4549-a8ea-c5d8c5558c7d, language=vi, battery=98, mcc=0, connectionType=wifi, internalFreeMemory=37198, osVersion=30(11), appKey=f990ca51, firstSession=false, deviceOEM=HMD Global, auid=e13ec128-548a-4471-8f03-12e768a19a8c, mnc=0, deviceOS=Android, bundleId=com.music.festival.battle, sessionId=df9070f7-8a74-43c3-a333-6e83fe338992, externalFreeMemory=37198, advertisingIdType=GAID, jb=false, sdkVersion=7.1.6, deviceModel=Nokia 3.4, gmtMinutesOffset=420}
+2022-02-16 17:00:38.642 18159-18269/? W/libOpenSLES: class OutputMix interface 0 requested but unavailable MPH=43
+2022-02-16 17:00:38.647 18159-18269/? E/libEGL: validate_display:87 error 3008 (EGL_BAD_DISPLAY)
+2022-02-16 17:00:38.662 18159-18203/? W/FA-Ads: Analytics storage consent denied; will not get app instance id
+2022-02-16 17:00:38.666 1627-6062/? W/ImageReader_JNI: Unable to acquire a buffer item, very likely client tried to acquire more than maxImages buffers
+2022-02-16 17:00:38.687 1627-6062/? I/ActivityTaskManager: Config changes=20000480 {1.0 ?mcc?mnc [vi_VN] ldltr sw411dp w851dp h357dp 280dpi nrml long land finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1560, 720) mAppBounds=Rect(70, 0 - 1560, 692) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} s.33059}
+2022-02-16 17:00:38.701 19549-17448/? W/NetworkScheduler: Error inserting flex_time=3055000 job_id=-1 period=6111000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=214815000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1645005638692 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0, error message: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE) [CONTEXT service_id=218 ]
+2022-02-16 17:00:38.702 19549-17448/? W/NetworkScheduler: Error inserting flex_time=3055000 job_id=-1 period=6111000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=214815000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1645005638699 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0, error message: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE) [CONTEXT service_id=218 ]
+2022-02-16 17:00:38.711 1627-6062/? I/WindowManager: Override config changes=20000480 {1.0 ?mcc?mnc [vi_VN] ldltr sw411dp w851dp h357dp 280dpi nrml long land finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1560, 720) mAppBounds=Rect(70, 0 - 1560, 692) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} s.33059} for displayId=0
+2022-02-16 17:00:38.736 10173-12770/? I/NgaVisSearch: onConfigurationChanged
+2022-02-16 17:00:38.740 10173-10173/? I/NgaVisSearch: onConfigurationChanged
+2022-02-16 17:00:38.741 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3316 
+2022-02-16 17:00:38.744 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2181 checkRepeatedly = false, unlocked = true
+2022-02-16 17:00:38.744 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.onStartInput():1989 
+2022-02-16 17:00:38.745 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2181 checkRepeatedly = true, unlocked = true
+2022-02-16 17:00:38.766 20531-20531/? I/DeviceModeUtil: DeviceModeUtil.getDeviceMode():105 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+2022-02-16 17:00:38.767 20531-20531/? W/GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1656 onConfigurationChanged() : NewConfig = {1.0 ?mcc?mnc [vi_VN] ldltr sw411dp w851dp h357dp 280dpi nrml long land finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1560, 720) mAppBounds=Rect(70, 0 - 1560, 692) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} s.33092}
+2022-02-16 17:00:38.767 20531-20531/? I/AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():509 Destroy existing keyboard group manager in dtx
+2022-02-16 17:00:38.767 20531-20531/? I/AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():121 Create keyboard group manager listenable future in dtx
+2022-02-16 17:00:38.767 20531-20531/? I/AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():509 Destroy existing keyboard group manager in dss
+2022-02-16 17:00:38.768 20531-20531/? I/AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():121 Create keyboard group manager listenable future in dss
+2022-02-16 17:00:38.768 20531-20531/? I/AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():509 Destroy existing keyboard group manager in dvb
+2022-02-16 17:00:38.768 20531-20531/? I/AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():121 Create keyboard group manager listenable future in dvb
+2022-02-16 17:00:38.768 20531-20531/? I/NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():110 currentPrimeKeyboardType:SOFT systemPaddingBottom:0
+2022-02-16 17:00:38.770 20531-20531/? I/DeviceModeUtil: DeviceModeUtil.getDeviceMode():105 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+2022-02-16 17:00:38.770 20531-20531/? I/chatty: uid=10167(com.google.android.inputmethod.latin) identical 2 lines
+2022-02-16 17:00:38.770 20531-20531/? I/DeviceModeUtil: DeviceModeUtil.getDeviceMode():105 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+2022-02-16 17:00:38.770 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1406 Apply keyboard theme: theme_stylesheet_googleblue_materiallight_phone_builtin_google_blue_light.binarypb_land
+2022-02-16 17:00:38.774 20531-15585/? I/KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():87 parseKeyboardGroupDef() 2132214015 -> 0_resource_name_obfuscated : WaitTime = 6 ms : RunTime = 0 ms
+2022-02-16 17:00:38.775 20531-15923/? I/KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():87 parseKeyboardGroupDef() 2132214016 -> 0_resource_name_obfuscated : WaitTime = 0 ms : RunTime = 1 ms
+2022-02-16 17:00:38.778 20531-17625/? I/KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():87 parseKeyboardGroupDef() 2132214021 -> 0_resource_name_obfuscated : WaitTime = 6 ms : RunTime = 4 ms
+2022-02-16 17:00:38.782 20531-20531/? I/DeviceModeUtil: DeviceModeUtil.getDeviceMode():105 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+2022-02-16 17:00:38.782 20531-20531/? I/InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():743 Start loading input method entry settings: [Pair{vi qwerty}]
+2022-02-16 17:00:38.784 18159-18269/? I/trace: Predator.hx:30: ratio: 0.375
+2022-02-16 17:00:38.786 20531-20531/? I/KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+2022-02-16 17:00:38.797 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.onStartInput():1989 
+2022-02-16 17:00:38.804 18159-18159/? I/ironSourceSDK: API: onPause()
+2022-02-16 17:00:38.810 840-840/? I/sensors-hal: activate:209, android.sensor.accelerometer/11 en=0
+2022-02-16 17:00:38.810 1627-1773/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=android.intent.action.CONFIGURATION_CHANGED flg=0x70200000 }
+2022-02-16 17:00:38.811 1627-1773/? I/InputManager-JNI: Viewport [0] to add: local:19260717669665153, isActive: true
+2022-02-16 17:00:38.817 1627-2143/? I/InputReader: Reconfiguring input devices, changes=DISPLAY_INFO | 
+2022-02-16 17:00:38.817 1627-2143/? I/InputReader: Device reconfigured: id=4, name='fts_ts', size 720x1560, orientation 1, mode 1, display id 0
+2022-02-16 17:00:38.789 1627-1775/? I/chatty: uid=1000(system) android.anim identical 2 lines
+2022-02-16 17:00:38.824 18159-18261/? I/ironSourceSDK: INTERNAL: ServerURL getCPVProvidersURL - parameters for url: platform=android&applicationKey=f990ca51&applicationUserId=6773f3ac-4c34-4549-a8ea-c5d8c5558c7d&sdkVersion=7.1.6&advId=6773f3ac-4c34-4549-a8ea-c5d8c5558c7d&appVer=6.2&osVer=30&devMake=HMD+Global&devModel=Nokia+3.4&fs=0&connType=wifi&browserUserAgent=Mozilla%2F5.0+%28Linux%3B+Android+11%3B+Nokia+3.4+Build%2FRKQ1.210303.002%3B+wv%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Version%2F4.0+Chrome%2F98.0.4758.101+Mobile+Safari%2F537.36&deviceLang=vi-VN&bundleId=com.music.festival.battle&mcc=0&mnc=0&icc=vn&tz=Asia%2FHo_Chi_Minh&tzOff=-420&auid=e13ec128-548a-4471-8f03-12e768a19a8c
+2022-02-16 17:00:38.829 840-840/? I/sensors-hal: activate:220, android.sensor.accelerometer/11 en=0 completed
+2022-02-16 17:00:38.831 891-941/? I/BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+2022-02-16 17:00:38.833 1627-2135/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.android.server.action.NETWORK_STATS_POLL flg=0x4 (has extras) }
+2022-02-16 17:00:38.838 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2181 checkRepeatedly = true, unlocked = true
+2022-02-16 17:00:38.838 20531-20531/? W/SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+2022-02-16 17:00:38.838 18159-18261/? I/DpmTcmClient: RegisterTcmMonitor from: $Proxy1
+2022-02-16 17:00:38.854 20531-20531/? I/NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():110 currentPrimeKeyboardType:SOFT systemPaddingBottom:0
+2022-02-16 17:00:38.860 20531-20531/? I/AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():522 KeyboardGroupManager destroyed in dtx.
+2022-02-16 17:00:38.861 20531-20531/? I/AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():522 KeyboardGroupManager destroyed in dss.
+2022-02-16 17:00:38.861 20531-20531/? I/AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():522 KeyboardGroupManager destroyed in dvb.
+2022-02-16 17:00:38.869 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.lambda$setDecorViewApplyWindowInsetsListener$10():1125 update screenHeightWithoutNaviBar to: 720
+2022-02-16 17:00:38.872 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.lambda$setDecorViewApplyWindowInsetsListener$10():1131 update max height when insets changes
+2022-02-16 17:00:38.873 1627-2164/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.android.server.action.NETWORK_STATS_UPDATED flg=0x40000000 }
+2022-02-16 17:00:38.884 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.lambda$setDecorViewApplyWindowInsetsListener$10():1125 update screenHeightWithoutNaviBar to: 636
+2022-02-16 17:00:38.884 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.lambda$setDecorViewApplyWindowInsetsListener$10():1131 update max height when insets changes
+2022-02-16 17:00:38.885 20531-20531/? I/DictionarySuperpacksManager: DictionarySuperpacksManager$1.onEnabledInputMethodEntriesChanged():60 onEnabledInputMethodEntriesChanged
+2022-02-16 17:00:38.885 20531-20573/? I/SP: Registering content_cache.2022011106, url: https://www.gstatic.com/android/keyboard/modelpack/contentcache/202201110642/superpacks_manifest.json, constraints: W:*:*:*, flags: bg, requested: 2022011106, current: 2022011106
+2022-02-16 17:00:38.889 20531-20573/? I/SP: Syncing content_cache (2022011106) with slices: [2eb6579f39fa530502901017d4b8c44d], metadata: true
+2022-02-16 17:00:38.893 1627-6062/? I/chatty: uid=1000(system) Binder:1627_13 identical 1 line
+2022-02-16 17:00:38.918 20531-20573/? I/SP: Sync for content_cache succeeded in 31 ms: no changes
+2022-02-16 17:00:38.919 20531-20573/? I/SP: GC for 'content_cache' (10) with ttl of 0 ms took 1 ms (0/1/0)
+2022-02-16 17:00:38.914 1627-1775/? I/chatty: uid=1000(system) android.anim identical 1 line
+2022-02-16 17:00:38.935 1627-11231/? I/chatty: uid=1000(system) Binder:1627_1F identical 1 line
+2022-02-16 17:00:39.003 884-1178/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-16 17:00:39.003 1627-11231/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:39.004 884-1178/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-16 17:00:39.004 884-1178/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-16 17:00:39.439 18159-18294/? I/AdInternalSettings: Test mode device hash: fbde5a98-7483-4492-89b2-63c4fdfa7b09
+2022-02-16 17:00:39.439 18159-18294/? I/AdInternalSettings: When testing your app with Facebook's ad units you must specify the device hashed ID to ensure the delivery of test ads, add the following code before loading an ad: AdSettings.addTestDevice("fbde5a98-7483-4492-89b2-63c4fdfa7b09");
+2022-02-16 17:00:39.454 18159-18259/? E/SQLiteDatabase: Failed to open database '/data/user/0/com.music.festival.battle/databases/supersonic_sdk.db'.
+    android.database.sqlite.SQLiteException: not an error (code 0 SQLITE_OK): Could not register Android SQL functions.
+        at android.database.sqlite.SQLiteConnection.nativeOpen(Native Method)
+        at android.database.sqlite.SQLiteConnection.open(SQLiteConnection.java:224)
+        at android.database.sqlite.SQLiteConnection.open(SQLiteConnection.java:205)
+        at android.database.sqlite.SQLiteConnectionPool.openConnectionLocked(SQLiteConnectionPool.java:505)
+        at android.database.sqlite.SQLiteConnectionPool.open(SQLiteConnectionPool.java:206)
+        at android.database.sqlite.SQLiteConnectionPool.open(SQLiteConnectionPool.java:198)
+        at android.database.sqlite.SQLiteDatabase.openInner(SQLiteDatabase.java:918)
+        at android.database.sqlite.SQLiteDatabase.open(SQLiteDatabase.java:898)
+        at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java:762)
+        at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java:751)
+        at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:373)
+        at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:316)
+        at com.ironsource.eventsmodule.DataBaseEventsStorage.getDataBaseWithRetries(DataBaseEventsStorage.java:192)
+        at com.ironsource.eventsmodule.DataBaseEventsStorage.saveEvents(DataBaseEventsStorage.java:64)
+        at com.ironsource.mediationsdk.events.BaseEventsManager.backupEventsToDb(BaseEventsManager.java:440)
+        at com.ironsource.mediationsdk.events.BaseEventsManager.access$2100(BaseEventsManager.java:40)
+        at com.ironsource.mediationsdk.events.BaseEventsManager$1.run(BaseEventsManager.java:236)
+        at android.os.Handler.handleCallback(Handler.java:938)
+        at android.os.Handler.dispatchMessage(Handler.java:99)
+        at android.os.Looper.loop(Looper.java:223)
+        at android.os.HandlerThread.run(HandlerThread.java:67)
+2022-02-16 17:00:39.459 18159-18269/? I/BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+    
+    --------- beginning of crash
+2022-02-16 17:00:39.460 18159-18302/? A/libc: FORTIFY: pthread_mutex_lock called on a destroyed mutex (0x76062af298)
+2022-02-16 17:00:39.459 18159-18269/? I/chatty: uid=10250(com.music.festival.battle) SDLActivity identical 1 line
+2022-02-16 17:00:39.460 18159-18269/? I/BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+2022-02-16 17:00:39.517 1627-2142/? W/InputDispatcher: channel '9448a5 com.music.festival.battle/com.es.core.MainActivity (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+2022-02-16 17:00:39.517 1627-2142/? E/InputDispatcher: channel '9448a5 com.music.festival.battle/com.es.core.MainActivity (server)' ~ Channel is unrecoverably broken and will be disposed!
+2022-02-16 17:00:39.518 1627-11231/? I/WindowManager: WIN DEATH: Window{cc6c8d4 u0 com.music.festival.battle/com.music.festival.battle.MainActivity}
+2022-02-16 17:00:39.519 1627-11231/? W/InputDispatcher: Attempted to unregister already unregistered input channel 'cc6c8d4 com.music.festival.battle/com.music.festival.battle.MainActivity (server)'
+2022-02-16 17:00:39.520 692-692/? I/Zygote: Process 18159 exited cleanly (0)
+2022-02-16 17:00:39.521 1627-7783/? I/ActivityManager: Process com.music.festival.battle (pid 18159) has died: fg  TOP 
+2022-02-16 17:00:39.523 1627-3307/? I/WindowManager: WIN DEATH: Window{9448a5 u0 com.music.festival.battle/com.es.core.MainActivity}
+2022-02-16 17:00:39.523 1627-3307/? W/InputDispatcher: Attempted to unregister already unregistered input channel '9448a5 com.music.festival.battle/com.es.core.MainActivity (server)'
+2022-02-16 17:00:39.533 18223-18223/? I/cr_ChildProcessService: Destroying ChildProcessService pid=18223
+2022-02-16 17:00:39.535 18223-18223/? I/ocessService0:: System.exit called, status: 0
+2022-02-16 17:00:39.535 18223-18223/? I/AndroidRuntime: VM exiting with result code 0, cleanup skipped.
+2022-02-16 17:00:39.535 1627-7783/? W/ActivityTaskManager: Force removing ActivityRecord{c60e814 u0 com.music.festival.battle/.MainActivity t320}: app died, no saved state
+2022-02-16 17:00:39.540 1627-7783/? I/ActivityManager: Killing 18223:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0a250i197 (adj 0): isolated not needed
+2022-02-16 17:00:39.541 1627-1773/? W/ActivityManager: setHasOverlayUi called on unknown pid: 18159
+2022-02-16 17:00:39.557 22180-22180/? I/Zygote: Process 18223 exited cleanly (0)
+2022-02-16 17:00:39.566 1627-1802/? I/libprocessgroup: Successfully killed process cgroup uid 10250 pid 18159 in 44ms
+2022-02-16 17:00:39.566 18306-18306/? I/libc: SetHeapTaggingLevel: tag level set to 0
+2022-02-16 17:00:39.566 1627-1802/? I/libprocessgroup: Successfully killed process cgroup uid 99197 pid 18223 in 0ms
+2022-02-16 17:00:39.574 18306-18306/? E/festival.battl: Not starting debugger since process cannot load the jdwp agent.
+2022-02-16 17:00:39.614 1627-1808/? E/KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu4/cpufreq/stats/time_in_state: open failed: ENOENT (No such file or directory)
+2022-02-16 17:00:39.614 1627-1808/? E/KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state: open failed: ENOENT (No such file or directory)
+2022-02-16 17:00:39.615 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup48: Permission denied
+2022-02-16 17:00:39.616 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup4: Permission denied
+2022-02-16 17:00:39.612 605-605/? W/Binder:605_2: type=1400 audit(0.0:76256): avc: denied { read } for name="wakeup48" dev="sysfs" ino=55652 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0
+2022-02-16 17:00:39.616 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup38: Permission denied
+2022-02-16 17:00:39.612 605-605/? W/Binder:605_2: type=1400 audit(0.0:76258): avc: denied { read } for name="wakeup38" dev="sysfs" ino=50332 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0
+2022-02-16 17:00:39.617 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup56: Permission denied
+2022-02-16 17:00:39.612 605-605/? W/Binder:605_2: type=1400 audit(0.0:76259): avc: denied { read } for name="wakeup56" dev="sysfs" ino=55952 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0
+2022-02-16 17:00:39.617 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup46: Permission denied
+2022-02-16 17:00:39.612 605-605/? W/Binder:605_2: type=1400 audit(0.0:76260): avc: denied { read } for name="wakeup46" dev="sysfs" ino=55580 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0
+2022-02-16 17:00:39.617 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup2: Permission denied
+2022-02-16 17:00:39.619 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup54: Permission denied
+2022-02-16 17:00:39.619 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup44: Permission denied
+2022-02-16 17:00:39.620 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup52: Permission denied
+2022-02-16 17:00:39.621 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup9: Permission denied
+2022-02-16 17:00:39.622 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup22: Permission denied
+2022-02-16 17:00:39.622 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup50: Permission denied
+2022-02-16 17:00:39.623 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup7: Permission denied
+2022-02-16 17:00:39.624 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup20: Permission denied
+2022-02-16 17:00:39.624 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup49: Permission denied
+2022-02-16 17:00:39.624 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup5: Permission denied
+2022-02-16 17:00:39.625 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup67: Permission denied
+2022-02-16 17:00:39.626 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup19: Permission denied
+2022-02-16 17:00:39.626 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup47: Permission denied
+2022-02-16 17:00:39.627 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup27: Permission denied
+2022-02-16 17:00:39.627 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup55: Permission denied
+2022-02-16 17:00:39.628 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup17: Permission denied
+2022-02-16 17:00:39.628 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup45: Permission denied
+2022-02-16 17:00:39.629 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup53: Permission denied
+2022-02-16 17:00:39.630 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup15: Permission denied
+2022-02-16 17:00:39.630 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup43: Permission denied
+2022-02-16 17:00:39.631 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup23: Permission denied
+2022-02-16 17:00:39.631 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup51: Permission denied
+2022-02-16 17:00:39.631 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup13: Permission denied
+2022-02-16 17:00:39.632 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup21: Permission denied
+2022-02-16 17:00:39.632 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup6: Permission denied
+2022-02-16 17:00:39.632 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup11: Permission denied
+2022-02-16 17:00:39.632 605-612/? E/android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup68: Permission denied
+2022-02-16 17:00:39.634 1627-1793/? W/ActivityManager: Slow operation: 88ms so far, now at startProcess: done updating battery stats
+2022-02-16 17:00:39.634 1627-1793/? W/ActivityManager: Slow operation: 88ms so far, now at startProcess: building log message
+2022-02-16 17:00:39.634 1627-1793/? I/ActivityManager: Start proc 18306:com.music.festival.battle/u0a250 for top-activity {com.music.festival.battle/com.es.core.MainActivity}
+2022-02-16 17:00:39.634 1627-1793/? W/ActivityManager: Slow operation: 88ms so far, now at startProcess: starting to update pids map
+2022-02-16 17:00:39.634 1627-1793/? W/ActivityManager: Slow operation: 88ms so far, now at startProcess: done updating pids map
+2022-02-16 17:00:39.682 18306-18306/? W/festival.battl: JIT profile information will not be recorded: profile file does not exist.
+2022-02-16 17:00:39.683 18306-18306/? I/chatty: uid=10250(com.music.festival.battle) identical 12 lines
+2022-02-16 17:00:39.683 18306-18306/? W/festival.battl: JIT profile information will not be recorded: profile file does not exist.
+2022-02-16 17:00:39.692 18306-18306/? I/Perf: Connecting to perf service.
+2022-02-16 17:00:39.698 18306-18306/? I/LoadedApk: No resource references to update in package com.music.festival.battle.mod_bg
+2022-02-16 17:00:39.699 18306-18306/? I/LoadedApk: No resource references to update in package com.music.festival.battle.core
+2022-02-16 17:00:39.725 18306-18306/? I/TetheringManager: registerTetheringEventCallback:com.music.festival.battle
+2022-02-16 17:00:39.741 18306-18332/? I/DynamiteModule: Considering local module com.google.android.gms.ads.dynamite:0 and remote module com.google.android.gms.ads.dynamite:214106404
+2022-02-16 17:00:39.741 18306-18332/? I/DynamiteModule: Selected remote version of com.google.android.gms.ads.dynamite, version >= 214106404
+2022-02-16 17:00:39.748 891-2870/? W/DisplayIdentification: Invalid EDID: falling back to serial number due to missing display name.
+2022-02-16 17:00:39.748 891-2870/? W/DisplayIdentification: Invalid EDID: falling back to ASCII text due to missing serial number.
+2022-02-16 17:00:39.749 18306-18336/? W/DynamiteModule: Local module descriptor class for com.google.android.gms.measurement.dynamite not found.
+2022-02-16 17:00:39.753 18306-18336/? I/DynamiteModule: Considering local module com.google.android.gms.measurement.dynamite:0 and remote module com.google.android.gms.measurement.dynamite:59
+2022-02-16 17:00:39.753 18306-18336/? I/DynamiteModule: Selected remote version of com.google.android.gms.measurement.dynamite, version >= 59
+2022-02-16 17:00:39.764 18306-18306/? W/SDL: Request to get environment variables before JNI is ready
+2022-02-16 17:00:39.789 18306-18336/? W/festival.battl: ClassLoaderContext classpath size mismatch. expected=2, found=13 (DLC[];PCL[/system/priv-app/HMDCamera/HMDCamera.apk*1190673482:/system/priv-app/HMDCamera/HMDCamera.apk!classes2.dex*2409305884] | DLC[];PCL[/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/base.apk*2793030593:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/base.apk!classes2.dex*3072130752:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_core.apk*2581783759:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_mod_bg.apk*1580079233:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_mod_bg1.apk*2862250535:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_mod_etc.apk*2313844431:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_pc.apk*2093012853:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_pc1.apk*4237298929:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_psychengine.apk*24125364:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_songs.apk*416802021:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_songs1.apk*3985131639:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_songs2.apk*2762400315:/data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/split_songs3.apk*733070597])
+2022-02-16 17:00:39.790 18306-18336/? W/festival.battl: Found duplicate classes, falling back to extracting from APK : /data/user_de/0/com.google.android.gms/app_chimera/m/00000027/MeasurementDynamite.apk
+2022-02-16 17:00:39.790 18306-18336/? W/festival.battl: NOTE: This wastes RAM and hurts startup performance.
+2022-02-16 17:00:39.790 18306-18336/? W/festival.battl: Found duplicated class when checking oat files: 'Landroid/support/v4/app/RemoteActionCompatParcelizer;' in /data/user_de/0/com.google.android.gms/app_chimera/m/00000027/MeasurementDynamite.apk and /data/app/~~v6LEU2YE8YvzgocuDDz1Sg==/com.music.festival.battle-LXnT4N7Wto9KHeyYAKR0Cg==/base.apk
+2022-02-16 17:00:39.809 18306-18336/? W/DynamiteModule: Local module descriptor class for com.google.android.gms.measurement.dynamite not found.
+2022-02-16 17:00:39.816 18306-18306/? I/ironSourceSDK: API: init(appKey:f990ca51)
+2022-02-16 17:00:39.820 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:39.820 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:39.820 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:39.834 18306-18306/? I/WebViewFactory: Loading com.google.android.webview version 98.0.4758.101 (code 475810133)
+2022-02-16 17:00:39.870 18306-18306/? I/cr_WVCFactoryProvider: Loaded version=98.0.4758.101 minSdkVersion=29 isBundle=true multiprocess=true packageId=2
+2022-02-16 17:00:39.882 18306-18306/? I/cr_LibraryLoader: Successfully loaded native library
+2022-02-16 17:00:39.883 18306-18306/? I/cr_CachingUmaRecorder: Flushed 9 samples from 9 histograms.
+2022-02-16 17:00:39.888 18306-18353/? I/FA-Ads: App measurement initialized, version: 50018
+2022-02-16 17:00:39.888 18306-18353/? I/FA-Ads: To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
+2022-02-16 17:00:39.924 1627-1793/? I/ActivityManager: Start proc 18368:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0i198 for  {com.music.festival.battle/org.chromium.content.app.SandboxedProcessService0:0}
+2022-02-16 17:00:39.934 18368-18368/? W/ocessService0:: Using default instruction set features for ARM CPU variant (cortex-a9) using conservative defaults
+2022-02-16 17:00:39.939 18368-18368/? E/ocessService0:: Not starting debugger since process cannot load the jdwp agent.
+2022-02-16 17:00:39.975 18368-18368/? I/cr_WebViewApkApp: Launched version=98.0.4758.101 minSdkVersion=29 isBundle=true processName=com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0
+2022-02-16 17:00:39.978 18368-18368/? I/cr_ChildProcessService: Creating new ChildProcessService pid=18368
+2022-02-16 17:00:39.987 18306-18306/? I/IntegrationHelper: Verifying Integration:
+2022-02-16 17:00:39.987 18306-18306/? I/IntegrationHelper: *** Permissions ***
+2022-02-16 17:00:39.987 18306-18306/? I/IntegrationHelper: android.permission.INTERNET - VERIFIED
+2022-02-16 17:00:39.988 18306-18306/? I/IntegrationHelper: android.permission.ACCESS_NETWORK_STATE - VERIFIED
+2022-02-16 17:00:39.988 18306-18306/? I/IntegrationHelper: --------------- AdColony --------------
+2022-02-16 17:00:39.988 18306-18306/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:39.988 18306-18306/? E/IntegrationHelper: >>>> AdColony - NOT VERIFIED
+2022-02-16 17:00:39.988 18306-18306/? I/IntegrationHelper: --------------- AdMob --------------
+2022-02-16 17:00:39.990 18306-18306/? I/IntegrationHelper: Adapter 4.3.20 - VERIFIED
+2022-02-16 17:00:39.990 18306-18306/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:39.990 18306-18306/? W/validateSDKVersion: Unable to get SDK version
+2022-02-16 17:00:39.990 18306-18306/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:39.992 18306-18306/? I/IntegrationHelper: com.google.android.gms.ads.AdActivity - VERIFIED
+2022-02-16 17:00:40.012 18306-18306/? I/IntegrationHelper: >>>> AdMob - VERIFIED
+2022-02-16 17:00:40.012 18306-18306/? I/IntegrationHelper: --------------- Amazon --------------
+2022-02-16 17:00:40.012 18306-18306/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:40.012 18306-18306/? E/IntegrationHelper: >>>> Amazon - NOT VERIFIED
+2022-02-16 17:00:40.012 18306-18306/? I/IntegrationHelper: --------------- AppLovin --------------
+2022-02-16 17:00:40.013 18306-18306/? I/IntegrationHelper: Adapter 4.3.25 - VERIFIED
+2022-02-16 17:00:40.013 18306-18306/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:40.013 18306-18306/? I/IntegrationHelper: SDK Version - 10.3.0
+2022-02-16 17:00:40.013 18306-18306/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:40.015 18306-18306/? I/IntegrationHelper: com.applovin.adview.AppLovinInterstitialActivity - VERIFIED
+2022-02-16 17:00:40.016 18306-18306/? I/IntegrationHelper: com.applovin.sdk.AppLovinWebViewActivity - VERIFIED
+2022-02-16 17:00:40.018 18306-18306/? I/IntegrationHelper: com.applovin.adview.AppLovinFullscreenActivity - VERIFIED
+2022-02-16 17:00:40.032 815-2132/? W/audio_hw_primary: out_write: underrun(657) frames_by_time(48105) > out->last_fifo_frames_remaining(384)
+2022-02-16 17:00:40.037 18306-18306/? I/IntegrationHelper: >>>> AppLovin - VERIFIED
+2022-02-16 17:00:40.037 18306-18306/? I/IntegrationHelper: --------------- Chartboost --------------
+2022-02-16 17:00:40.038 18306-18306/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:40.038 18306-18306/? E/IntegrationHelper: >>>> Chartboost - NOT VERIFIED
+2022-02-16 17:00:40.038 18306-18306/? I/IntegrationHelper: --------------- Facebook --------------
+2022-02-16 17:00:40.038 18306-18306/? I/IntegrationHelper: Adapter 4.3.27 - VERIFIED
+2022-02-16 17:00:40.038 18306-18306/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:40.039 18306-18306/? I/IntegrationHelper: SDK Version - 6.5.0
+2022-02-16 17:00:40.039 18306-18306/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:40.040 18306-18306/? I/IntegrationHelper: com.facebook.ads.AudienceNetworkActivity - VERIFIED
+2022-02-16 17:00:40.059 18306-18306/? I/IntegrationHelper: >>>> Facebook - VERIFIED
+2022-02-16 17:00:40.059 18306-18306/? I/IntegrationHelper: --------------- Fyber --------------
+2022-02-16 17:00:40.060 18306-18306/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:40.060 18306-18306/? E/IntegrationHelper: >>>> Fyber - NOT VERIFIED
+2022-02-16 17:00:40.060 18306-18306/? I/IntegrationHelper: --------------- HyprMX --------------
+2022-02-16 17:00:40.060 18306-18306/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:40.060 18306-18306/? E/IntegrationHelper: >>>> HyprMX - NOT VERIFIED
+2022-02-16 17:00:40.060 18306-18306/? I/IntegrationHelper: --------------- InMobi --------------
+2022-02-16 17:00:40.060 18306-18306/? I/IntegrationHelper: Adapter 4.3.9 - VERIFIED
+2022-02-16 17:00:40.060 18306-18306/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:40.061 18306-18306/? I/IntegrationHelper: SDK Version - 9.1.6
+2022-02-16 17:00:40.061 18306-18306/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:40.062 18306-18306/? I/IntegrationHelper: com.inmobi.ads.rendering.InMobiAdActivity - VERIFIED
+2022-02-16 17:00:40.062 18306-18306/? I/IntegrationHelper: *** External Libraries ***
+2022-02-16 17:00:40.063 18306-18306/? I/IntegrationHelper: picasso:2.71828 - VERIFIED
+2022-02-16 17:00:40.082 18306-18306/? I/IntegrationHelper: >>>> InMobi - VERIFIED
+2022-02-16 17:00:40.083 18306-18306/? I/IntegrationHelper: --------------- IronSource  --------------
+2022-02-16 17:00:40.083 18306-18306/? I/IntegrationHelper: Adapter 7.1.6 - VERIFIED
+2022-02-16 17:00:40.084 18306-18306/? I/IntegrationHelper: SDK Version - 5.100
+2022-02-16 17:00:40.084 18306-18306/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:40.085 18306-18306/? I/IntegrationHelper: com.ironsource.sdk.controller.ControllerActivity - VERIFIED
+2022-02-16 17:00:40.087 18306-18306/? I/IntegrationHelper: com.ironsource.sdk.controller.InterstitialActivity - VERIFIED
+2022-02-16 17:00:40.088 18306-18306/? I/IntegrationHelper: com.ironsource.sdk.controller.OpenUrlActivity - VERIFIED
+2022-02-16 17:00:40.107 18306-18306/? I/IntegrationHelper: *** Content Providers ***
+2022-02-16 17:00:40.107 18306-18306/? I/IntegrationHelper: >>>> IronSource - VERIFIED
+2022-02-16 17:00:40.107 18306-18306/? I/IntegrationHelper: --------------- Maio --------------
+2022-02-16 17:00:40.108 18306-18306/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:40.108 18306-18306/? E/IntegrationHelper: >>>> Maio - NOT VERIFIED
+2022-02-16 17:00:40.108 18306-18306/? I/IntegrationHelper: --------------- MyTarget --------------
+2022-02-16 17:00:40.108 18306-18306/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:40.108 18306-18306/? E/IntegrationHelper: >>>> MyTarget - NOT VERIFIED
+2022-02-16 17:00:40.108 18306-18306/? I/IntegrationHelper: --------------- Pangle --------------
+2022-02-16 17:00:40.109 18306-18306/? I/IntegrationHelper: Adapter 4.3.2 - VERIFIED
+2022-02-16 17:00:40.109 18306-18306/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:40.109 18306-18306/? I/IntegrationHelper: SDK Version - 3.5.1.1
+2022-02-16 17:00:40.120 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:40.120 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:40.120 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:40.129 18306-18306/? I/IntegrationHelper: >>>> Pangle - VERIFIED
+2022-02-16 17:00:40.129 18306-18306/? I/IntegrationHelper: --------------- Smaato --------------
+2022-02-16 17:00:40.129 18306-18306/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:40.129 18306-18306/? E/IntegrationHelper: >>>> Smaato - NOT VERIFIED
+2022-02-16 17:00:40.129 18306-18306/? I/IntegrationHelper: --------------- Tapjoy --------------
+2022-02-16 17:00:40.129 18306-18306/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:40.129 18306-18306/? E/IntegrationHelper: >>>> Tapjoy - NOT VERIFIED
+2022-02-16 17:00:40.129 18306-18306/? I/IntegrationHelper: --------------- UnityAds --------------
+2022-02-16 17:00:40.130 18306-18306/? I/IntegrationHelper: Adapter 4.3.10 - VERIFIED
+2022-02-16 17:00:40.130 18306-18306/? I/IntegrationHelper: Adapter - VERIFIED
+2022-02-16 17:00:40.131 18306-18306/? I/IntegrationHelper: SDK Version - 3.6.0
+2022-02-16 17:00:40.131 18306-18306/? I/IntegrationHelper: *** Activities ***
+2022-02-16 17:00:40.132 18306-18306/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitActivity - VERIFIED
+2022-02-16 17:00:40.133 18306-18306/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitTransparentActivity - VERIFIED
+2022-02-16 17:00:40.134 18306-18306/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity - VERIFIED
+2022-02-16 17:00:40.136 18306-18306/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitSoftwareActivity - VERIFIED
+2022-02-16 17:00:40.155 18306-18306/? I/IntegrationHelper: >>>> UnityAds - VERIFIED
+2022-02-16 17:00:40.155 18306-18306/? I/IntegrationHelper: --------------- Vungle --------------
+2022-02-16 17:00:40.155 18306-18306/? E/IntegrationHelper: Adapter - MISSING
+2022-02-16 17:00:40.155 18306-18306/? E/IntegrationHelper: >>>> Vungle - NOT VERIFIED
+2022-02-16 17:00:40.156 18306-18408/? W/IntegrationHelper: --------------- Google Play Services --------------
+2022-02-16 17:00:40.156 18306-18408/? I/IntegrationHelper: Google Play Services - VERIFIED
+2022-02-16 17:00:40.160 18306-18306/? I/ironSourceSDK: API: createBanner()
+2022-02-16 17:00:40.161 18306-18306/? I/ironSourceSDK: API: IronSourceBannerLayout setBannerListener
+2022-02-16 17:00:40.162 18306-18306/? I/ironSourceSDK: API: setRewardedVideoListener(RVListener)
+2022-02-16 17:00:40.162 18306-18306/? I/ironSourceSDK: API: setInterstitialListener(ISListener)
+2022-02-16 17:00:40.162 18306-18306/? I/ironSourceSDK: API: loadInterstitial()
+2022-02-16 17:00:40.167 18306-18306/? I/ironSourceSDK: API: onResume()
+2022-02-16 17:00:40.169 18306-18353/? I/FA-Ads: Tag Manager is not found and thus will not be used
+2022-02-16 17:00:40.181 18306-18375/? E/chromium: [ERROR:simple_index_file_posix.cc(36)] opendir /data/user/0/com.music.festival.battle/cache/WebView/Default/HTTP Cache/Code Cache/wasm: No such file or directory (2)
+2022-02-16 17:00:40.181 18306-18374/? E/chromium: [ERROR:simple_index_file_posix.cc(36)] opendir /data/user/0/com.music.festival.battle/cache/WebView/Default/HTTP Cache/Code Cache/js: No such file or directory (2)
+2022-02-16 17:00:40.181 18306-18374/? E/chromium: [ERROR:simple_index_file.cc(575)] Could not reconstruct index from disk
+2022-02-16 17:00:40.181 18306-18375/? E/chromium: [ERROR:simple_index_file.cc(575)] Could not reconstruct index from disk
+2022-02-16 17:00:40.204 18306-18339/? I/AdrenoGLES-0: QUALCOMM build                   : 2bd16eb911, I3687d7cf91
+    Build Date                       : 02/10/21
+    OpenGL ES Shader Compiler Version: EV031.32.02.08
+    Local Branch                     : 
+    Remote Branch                    : 
+    Remote Branch                    : 
+    Reconstruct Branch               : 
+2022-02-16 17:00:40.204 18306-18339/? I/AdrenoGLES-0: Build Config                     : S P 10.0.7 AArch64
+2022-02-16 17:00:40.204 18306-18339/? I/AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+2022-02-16 17:00:40.212 18306-18339/? I/AdrenoGLES-0: PFP: 0x016ee195, ME: 0x00000000
+2022-02-16 17:00:40.218 840-840/? I/sensors-hal: batch:242, android.sensor.accelerometer/11, period=20000000, max_latency=0
+2022-02-16 17:00:40.218 840-840/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 20000000 based on min/max delay_ns
+2022-02-16 17:00:40.218 840-840/? I/sensors-hal: batch:251, android.sensor.accelerometer/11, period=20000000, max_latency=0 request completed
+2022-02-16 17:00:40.219 840-840/? I/sensors-hal: activate:209, android.sensor.accelerometer/11 en=1
+2022-02-16 17:00:40.221 18306-18408/? I/IntegrationHelper: GAID is: 6773f3ac-4c34-4549-a8ea-c5d8c5558c7d (use this for test devices)
+2022-02-16 17:00:40.227 840-840/? I/sensors-hal: activate:220, android.sensor.accelerometer/11 en=1 completed
+2022-02-16 17:00:40.230 840-18413/? I/sensors-hal: ssc_conn_resp_cb:663, resp_value = 0
+2022-02-16 17:00:40.230 18306-18402/? I/ironSourceSDK: INTERNAL: GeneralPropertiesWorker collectInformation - collecting data for events: {isLimitAdTrackingEnabled=false, appVersion=6.2, tz=Asia/Ho_Chi_Minh, icc=vn, advertisingId=6773f3ac-4c34-4549-a8ea-c5d8c5558c7d, language=vi, battery=98, mcc=0, connectionType=wifi, internalFreeMemory=37198, osVersion=30(11), appKey=f990ca51, firstSession=false, deviceOEM=HMD Global, auid=e13ec128-548a-4471-8f03-12e768a19a8c, mnc=0, deviceOS=Android, bundleId=com.music.festival.battle, sessionId=6c5451d8-c58b-4bc7-b16b-8207ead29299, externalFreeMemory=37198, advertisingIdType=GAID, jb=false, sdkVersion=7.1.6, deviceModel=Nokia 3.4, gmtMinutesOffset=420}
+2022-02-16 17:00:40.239 18306-18417/? I/haxe plugin: Got Load Proc 0x7598162830
+2022-02-16 17:00:40.252 815-2132/? W/audio_hw_primary: out_write: underrun(658) frames_by_time(8746) > out->last_fifo_frames_remaining(384)
+2022-02-16 17:00:40.252 18306-18417/? I/libOpenSLES: Emulating old channel mask behavior (ignoring positional mask 0x3, using default mask 0x3 based on channel count of 2)
+2022-02-16 17:00:40.255 884-20650/? I/hash_map_utils: key: 'vr_audio_mode_on' value: ''
+2022-02-16 17:00:40.256 884-20650/? I/AudioPolicyManagerCustom: VR mode is 0, switch to primary output if request is for fast|raw
+2022-02-16 17:00:40.256 884-20650/? W/AudioFlinger: createTrack_l(): mismatch between requested flags (00000104) and output flags (00000006)
+2022-02-16 17:00:40.272 18306-18406/? I/ironSourceSDK: INTERNAL: ServerURL getCPVProvidersURL - parameters for url: platform=android&applicationKey=f990ca51&applicationUserId=6773f3ac-4c34-4549-a8ea-c5d8c5558c7d&sdkVersion=7.1.6&advId=6773f3ac-4c34-4549-a8ea-c5d8c5558c7d&appVer=6.2&osVer=30&devMake=HMD+Global&devModel=Nokia+3.4&fs=0&connType=wifi&browserUserAgent=Mozilla%2F5.0+%28Linux%3B+Android+11%3B+Nokia+3.4+Build%2FRKQ1.210303.002%3B+wv%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Version%2F4.0+Chrome%2F98.0.4758.101+Mobile+Safari%2F537.36&deviceLang=vi-VN&bundleId=com.music.festival.battle&mcc=0&mnc=0&icc=vn&tz=Asia%2FHo_Chi_Minh&tzOff=-420&auid=e13ec128-548a-4471-8f03-12e768a19a8c
+2022-02-16 17:00:40.277 18306-18406/? I/DpmTcmClient: RegisterTcmMonitor from: $Proxy1
+2022-02-16 17:00:40.281 1627-1775/? I/WindowManager: Screen frozen for +1s631ms due to Window{dcbd98f u0 com.music.festival.battle/com.es.core.MainActivity}
+2022-02-16 17:00:40.286 18306-18353/? W/FA-Ads: Analytics storage consent denied; will not get app instance id
+2022-02-16 17:00:40.292 815-886/? E/EffectFactoryHAL: Error querying effect descriptor for 08b8b058-0590-11e5-ac71-0025b32654a0: No such file or directory
+2022-02-16 17:00:40.292 884-1178/? W/AudioFlinger: createEffect() error -2 from getEffectDescriptor
+2022-02-16 17:00:40.292 884-1178/? E/AudioEffect: set(): AudioFlinger could not create effect NULL / 08b8b058-0590-11e5-ac71-0025b32654a0, status: -2
+2022-02-16 17:00:40.292 884-1178/? E/AudioPolicyEffects: addOutputSessionEffects(): failed to create Fx  music_helper on session 3169
+2022-02-16 17:00:40.293 884-1178/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-16 17:00:40.293 884-1178/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-16 17:00:40.297 1627-1775/? W/ImageReader_JNI: Unable to acquire a buffer item, very likely client tried to acquire more than maxImages buffers
+2022-02-16 17:00:40.299 1627-7783/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:40.299 815-2132/? W/audio_hw_primary: out_write: underrun(659) frames_by_time(1041) > out->last_fifo_frames_remaining(384)
+2022-02-16 17:00:40.300 18306-18417/? W/libOpenSLES: class OutputMix interface 0 requested but unavailable MPH=43
+2022-02-16 17:00:40.306 18306-18417/? E/libEGL: validate_display:87 error 3008 (EGL_BAD_DISPLAY)
+2022-02-16 17:00:40.313 19549-12196/? W/NetworkScheduler: Error inserting flex_time=3053000 job_id=-1 period=6108000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=214815000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1645005640312 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0, error message: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE) [CONTEXT service_id=218 ]
+2022-02-16 17:00:40.319 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3316 
+2022-02-16 17:00:40.320 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2181 checkRepeatedly = false, unlocked = true
+2022-02-16 17:00:40.320 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.onStartInput():1989 
+2022-02-16 17:00:40.321 20531-20531/? I/GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2181 checkRepeatedly = true, unlocked = true
+2022-02-16 17:00:40.321 840-840/? I/sensors-hal: activate:209, android.sensor.accelerometer/11 en=0
+2022-02-16 17:00:40.324 840-840/? I/sensors-hal: activate:220, android.sensor.accelerometer/11 en=0 completed
+2022-02-16 17:00:40.340 891-891/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-16 17:00:40.390 891-891/? I/chatty: uid=1000(system) /system/bin/surfaceflinger identical 3 lines
+2022-02-16 17:00:40.407 891-891/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-16 17:00:40.421 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:40.421 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:40.421 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:40.424 891-891/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-16 17:00:40.641 891-891/? I/chatty: uid=1000(system) /system/bin/surfaceflinger identical 38 lines
+2022-02-16 17:00:40.641 891-891/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-16 17:00:40.722 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:40.722 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:40.722 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:40.760 18306-18437/? I/AdInternalSettings: Test mode device hash: fbde5a98-7483-4492-89b2-63c4fdfa7b09
+2022-02-16 17:00:40.760 18306-18437/? I/AdInternalSettings: When testing your app with Facebook's ad units you must specify the device hashed ID to ensure the delivery of test ads, add the following code before loading an ad: AdSettings.addTestDevice("fbde5a98-7483-4492-89b2-63c4fdfa7b09");
+2022-02-16 17:00:41.023 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:41.023 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:41.023 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:41.316 840-840/? I/sensors-hal: batch:242, android.sensor.accelerometer/11, period=20000000, max_latency=0
+2022-02-16 17:00:41.316 840-840/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 20000000 based on min/max delay_ns
+2022-02-16 17:00:41.316 840-840/? I/sensors-hal: batch:251, android.sensor.accelerometer/11, period=20000000, max_latency=0 request completed
+2022-02-16 17:00:41.316 840-840/? I/sensors-hal: activate:209, android.sensor.accelerometer/11 en=1
+2022-02-16 17:00:41.324 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:41.324 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:41.324 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:41.332 840-840/? I/sensors-hal: activate:220, android.sensor.accelerometer/11 en=1 completed
+2022-02-16 17:00:41.333 840-18445/? I/sensors-hal: ssc_conn_resp_cb:663, resp_value = 0
+2022-02-16 17:00:41.334 840-840/? I/sensors-hal: flush:271, android.sensor.accelerometer/11
+2022-02-16 17:00:41.334 840-840/? I/sensors-hal: flush:277, android.sensor.accelerometer/11 completed
+2022-02-16 17:00:41.335 840-18445/? I/sensors-hal: ssc_conn_resp_cb:663, resp_value = 0
+2022-02-16 17:00:41.336 840-840/? I/sensors-hal: batch:242, android.sensor.gyroscope/41, period=200000000, max_latency=0
+2022-02-16 17:00:41.336 840-840/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 200000000 based on min/max delay_ns
+2022-02-16 17:00:41.336 840-840/? I/sensors-hal: batch:251, android.sensor.gyroscope/41, period=200000000, max_latency=0 request completed
+2022-02-16 17:00:41.337 840-840/? I/sensors-hal: activate:209, android.sensor.gyroscope/41 en=1
+2022-02-16 17:00:41.356 840-840/? W/sensors@2.0-ser: type=1400 audit(0.0:76289): avc: denied { read write } for name="diag" dev="tmpfs" ino=12435 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:vendor_diag_device:s0 tclass=chr_file permissive=0
+2022-02-16 17:00:41.358 840-840/? E/Diag_Lib:  Diag_LSM_Init: Failed to open handle to diag driver, error = 13
+2022-02-16 17:00:41.370 840-840/? I/sensors-hal: activate:220, android.sensor.gyroscope/41 en=1 completed
+2022-02-16 17:00:41.371 840-18457/? I/sensors-hal: ssc_conn_resp_cb:663, resp_value = 0
+2022-02-16 17:00:41.374 18306-18417/? I/trace: Predator.hx:30: ratio: 0.776041666666667
+2022-02-16 17:00:41.422 18306-18392/? W/cr_media: Requires BLUETOOTH permission
+2022-02-16 17:00:41.435 840-840/? I/sensors-hal: batch:242, android.sensor.accelerometer/11, period=20000000, max_latency=0
+2022-02-16 17:00:41.436 840-840/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 20000000 based on min/max delay_ns
+2022-02-16 17:00:41.436 840-840/? I/sensors-hal: batch:251, android.sensor.accelerometer/11, period=20000000, max_latency=0 request completed
+2022-02-16 17:00:41.446 18368-18404/? I/cr_LibraryLoader: Successfully loaded native library
+2022-02-16 17:00:41.448 18368-18404/? I/cr_CachingUmaRecorder: Flushed 3 samples from 3 histograms.
+2022-02-16 17:00:41.458 891-940/? I/BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+2022-02-16 17:00:41.461 18368-18404/? W/SystemServiceRegistry: No service published for: uimode
+2022-02-16 17:00:41.522 891-891/? E/SurfaceFlinger: [SurfaceView - com.music.festival.battle/com.es.core.MainActivity#1] rejecting buffer: bufWidth=1490, bufHeight=625, front.active_legacy.{w=1490, h=720}
+2022-02-16 17:00:41.601 1627-2611/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:41.606 1627-2611/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:41.612 1627-7624/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-16 17:00:41.619 840-840/? I/sensors-hal: activate:209, android.sensor.gyroscope/41 en=0
+2022-02-16 17:00:41.623 840-840/? E/Diag_Lib: diag: Diag_LSM_DeInit done for pid: 840
+2022-02-16 17:00:41.624 840-840/? I/sensors-hal: activate:220, android.sensor.gyroscope/41 en=0 completed
+2022-02-16 17:00:41.625 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:41.625 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:41.625 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:41.648 18306-18462/? I/CZL_META(LITE): [18306]    meta(101)
+2022-02-16 17:00:41.648 18306-18462/? I/CZL_META(LITE): [18306]    meta(1020)
+2022-02-16 17:00:41.651 18306-18462/? I/CZL_META(LITE): [18306]    meta(105)
+2022-02-16 17:00:41.651 18306-18462/? I/CZL_META(LITE): [18306]    meta(106)
+2022-02-16 17:00:41.652 18306-18462/? I/CZL_META(LITE): [18306]    meta(107)
+2022-02-16 17:00:41.652 18306-18462/? I/CZL_META(LITE): [18306]    meta(108)
+2022-02-16 17:00:41.653 18306-18462/? I/CZL_META(LITE): [18306]    meta(109)
+2022-02-16 17:00:41.654 18306-18462/? I/CZL_META(LITE): [18306]    meta(110)
+2022-02-16 17:00:41.695 18306-18321/? W/System: A resource failed to call release. 
+2022-02-16 17:00:41.769 18306-18508/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (greylist-max-q,core-platform-api, reflection, denied)
+2022-02-16 17:00:41.769 18306-18508/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (greylist-max-q, reflection, denied)
+2022-02-16 17:00:41.821 18306-18508/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (greylist-max-q,core-platform-api, reflection, denied)
+2022-02-16 17:00:41.821 18306-18508/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->getAlpnSelectedProtocol()[B (greylist-max-q, reflection, denied)
+2022-02-16 17:00:41.927 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:41.927 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:41.927 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:41.941 18306-18524/? W/Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+2022-02-16 17:00:42.228 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:42.228 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:42.228 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:42.434 1627-11231/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.internal.mobdog (has extras) }
+2022-02-16 17:00:42.435 1627-11231/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.mobileutilities (has extras) }
+2022-02-16 17:00:42.437 1627-2611/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.internal.mobdog (has extras) }
+2022-02-16 17:00:42.438 1627-2611/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.mobileutilities (has extras) }
+2022-02-16 17:00:42.509 1627-1773/? I/system_server: Explicit concurrent copying GC freed 266011(11MB) AllocSpace objects, 79(3988KB) LOS objects, 49% free, 25MB/51MB, paused 219us total 202.773ms
+2022-02-16 17:00:42.511 1627-1638/? W/JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.android.server.AlarmManagerService$2
+2022-02-16 17:00:42.511 1627-1638/? I/BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+2022-02-16 17:00:42.529 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:42.529 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:42.529 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:42.542 1627-1639/? W/System: A resource failed to call release. 
+2022-02-16 17:00:42.542 1627-1639/? W/System: A resource failed to call release. 
+2022-02-16 17:00:42.544 1627-1639/? W/System: A resource failed to call close. 
+2022-02-16 17:00:42.549 1627-1639/? W/System: A resource failed to call dispose. 
+2022-02-16 17:00:42.550 1627-1639/? W/System: A resource failed to call release. 
+2022-02-16 17:00:42.556 1627-1639/? I/chatty: uid=1000(system) FinalizerDaemon identical 19 lines
+2022-02-16 17:00:42.556 1627-1639/? W/System: A resource failed to call release. 
+2022-02-16 17:00:42.672 1066-1066/? I/perfetto: probes_producer.cc:329  Producer stop (id=706)
+2022-02-16 17:00:42.673 1066-1066/? I/perfetto: ftrace_procfs.cc:183    disabled ftrace
+2022-02-16 17:00:42.682 1067-1067/? I/perfetto: ng_service_impl.cc:1948 Tracing session 706 ended, total sessions:0
+2022-02-16 17:00:42.714 1141-18149/? I/iorapd: Perfetto TraceBuffer saved to file: /data/misc/iorapd/com.music.festival.battle/62/com.music.festival.battle.MainActivity/raw_traces/1645005642712728162.perfetto_trace.pb
+2022-02-16 17:00:42.788 840-840/? I/sensors-hal: flush:271, android.sensor.accelerometer/11
+2022-02-16 17:00:42.788 840-840/? I/sensors-hal: flush:277, android.sensor.accelerometer/11 completed
+2022-02-16 17:00:42.789 840-18445/? I/sensors-hal: ssc_conn_resp_cb:663, resp_value = 0
+2022-02-16 17:00:42.790 840-840/? I/sensors-hal: batch:242, android.sensor.gyroscope/41, period=200000000, max_latency=0
+2022-02-16 17:00:42.790 840-840/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 200000000 based on min/max delay_ns
+2022-02-16 17:00:42.790 840-840/? I/sensors-hal: batch:251, android.sensor.gyroscope/41, period=200000000, max_latency=0 request completed
+2022-02-16 17:00:42.791 840-840/? I/sensors-hal: activate:209, android.sensor.gyroscope/41 en=1
+2022-02-16 17:00:42.792 840-840/? W/sensors@2.0-ser: type=1400 audit(0.0:76290): avc: denied { read write } for name="diag" dev="tmpfs" ino=12435 scontext=u:r:hal_sensors_default:s0 tcontext=u:object_r:vendor_diag_device:s0 tclass=chr_file permissive=0
+2022-02-16 17:00:42.797 840-840/? E/Diag_Lib:  Diag_LSM_Init: Failed to open handle to diag driver, error = 13
+2022-02-16 17:00:42.811 840-840/? I/sensors-hal: activate:220, android.sensor.gyroscope/41 en=1 completed
+2022-02-16 17:00:42.812 840-18551/? I/sensors-hal: ssc_conn_resp_cb:663, resp_value = 0
+2022-02-16 17:00:42.813 840-840/? I/sensors-hal: batch:242, android.sensor.accelerometer/11, period=20000000, max_latency=0
+2022-02-16 17:00:42.813 840-840/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 20000000 based on min/max delay_ns
+2022-02-16 17:00:42.813 840-840/? I/sensors-hal: batch:251, android.sensor.accelerometer/11, period=20000000, max_latency=0 request completed
+2022-02-16 17:00:42.830 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:42.830 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:42.830 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:43.054 840-840/? I/sensors-hal: activate:209, android.sensor.gyroscope/41 en=0
+2022-02-16 17:00:43.060 840-840/? E/Diag_Lib: diag: Diag_LSM_DeInit done for pid: 840
+2022-02-16 17:00:43.060 840-840/? I/sensors-hal: activate:220, android.sensor.gyroscope/41 en=0 completed
+2022-02-16 17:00:43.131 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:43.131 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:43.132 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:43.432 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:43.433 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:43.433 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:43.702 891-2870/? I/BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+2022-02-16 17:00:43.733 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:43.733 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:43.734 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:43.897 1627-11231/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.internal.mobdog (has extras) }
+2022-02-16 17:00:43.898 1627-11231/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=com.google.android.gms.phenotype.COMMIT pkg=com.google.android.apps.mobileutilities (has extras) }
+2022-02-16 17:00:44.034 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:44.034 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:44.035 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:44.083 18306-18306/? I/chatty: uid=10250(com.music.festival.battle) SDLActivity identical 1 line
+2022-02-16 17:00:44.304 1627-1627/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=android.intent.action.BATTERY_CHANGED flg=0x60000000 (has extras) }
+2022-02-16 17:00:44.335 862-3108/? E/ANDR-PERF-LM: StatsProvider: stats_nl_error_callback() 110: NL SOC receive error: No such process
+2022-02-16 17:00:44.335 862-3108/? E/ANDR-PERF-LM: StatsProvider: sendRecvData() 267: nl_recvmsgs failed return=-12
+2022-02-16 17:00:44.335 862-3108/? E/ANDR-PERF-LM: StatsProvider: getPIDStats() 119: sendRecvData returned error = -4
+2022-02-16 17:00:44.463 862-970/? W/ANDR-PERF-LM: FeatureState: readState() 149: warning: appName is NULL, returning default State
+2022-02-16 17:00:44.463 862-970/? W/ANDR-PERF-LM: FeatureState: readState() 149: warning: appName is NULL, returning default State
+2022-02-16 17:00:44.475 18306-18417/? E/AdMobEx: Shit tried to get Instance without calling INIT first on AdMobEx class!
+2022-02-16 17:00:44.476 18306-18417/? I/trace: flixel/FlxGame.hx:658: Bitmap count: 0
+2022-02-16 17:00:44.674 840-840/? I/sensors-hal: batch:242, android.sensor.game_rotation_vector/151, period=16666000, max_latency=0
+2022-02-16 17:00:44.674 840-840/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 16666000 based on min/max delay_ns
+2022-02-16 17:00:44.674 840-840/? I/sensors-hal: batch:251, android.sensor.game_rotation_vector/151, period=16666000, max_latency=0 request completed
+2022-02-16 17:00:44.676 840-840/? I/sensors-hal: activate:209, android.sensor.game_rotation_vector/151 en=1
+2022-02-16 17:00:44.691 840-840/? I/sensors-hal: activate:220, android.sensor.game_rotation_vector/151 en=1 completed
+2022-02-16 17:00:44.695 840-18567/? I/sensors-hal: ssc_conn_resp_cb:663, resp_value = 0
+2022-02-16 17:00:44.761 840-840/? I/sensors-hal: activate:209, android.sensor.game_rotation_vector/151 en=0
+2022-02-16 17:00:44.766 840-840/? I/sensors-hal: activate:220, android.sensor.game_rotation_vector/151 en=0 completed
+2022-02-16 17:00:44.844 1627-1790/? I/ActivityManager: [HMDenterprise broadcastIntentLocked] intent=Intent { act=android.os.action.POWER_SAVE_TEMP_WHITELIST_CHANGED flg=0x40000000 }
+2022-02-16 17:00:45.048 18306-18306/? I/UnityAds: com.unity3d.services.UnityServices.initialize() (line:131) :: Initializing Unity Services 3.6.0 (3600) with game id 4121938 in production mode
+2022-02-16 17:00:45.054 18306-18306/? I/UnityAds: com.unity3d.services.UnityServices.initialize() (line:146) :: Unity Services environment check OK
+2022-02-16 17:00:45.078 18306-18572/? I/UnityAds: com.unity3d.services.core.configuration.InitializeThread$InitializeStateConfig.execute() (line:289) :: Unity Ads init: load configuration from https://config.unityads.unity3d.com/webview/3.6.0/release/config.json
+2022-02-16 17:00:45.318 18306-18572/? I/UnityAds: com.unity3d.services.core.configuration.InitializeThread$InitializeStateLoadCache.execute() (line:346) :: Unity Ads init: webapp loaded from local cache
+2022-02-16 17:00:46.215 18306-18476/? W/UnityAds: com.unity3d.services.core.connectivity.ConnectivityMonitor.connectionStatusChanged() (line:171) :: Unity Ads was not able to get current network type due to missing permission
+2022-02-16 17:00:46.217 18306-18476/? W/UnityAds: com.unity3d.services.core.connectivity.ConnectivityMonitor.connectionStatusChanged() (line:171) :: Unity Ads was not able to get current network type due to missing permission
+2022-02-16 17:00:46.240 18306-18524/? I/UnityAds: com.unity3d.services.core.api.Sdk.logInfo() (line:84) :: Requesting configuration from https://publisher-config.unityads.unity3d.com/games/4121938/configuration?deviceMake=HMD%20Global&screenDensity=280&screenSize=268435810&idfi=9f0026bf-5f9e-44dd-909f-a0eb80bf7f46&advertisingTrackingId=00000000-0000-0000-0000-000000000000&limitAdTracking=false&connectionType=wifi&screenHeight=692&screenWidth=1490&bundleId=com.music.festival.battle&encrypted=true&rooted=false&platform=android&sdkVersion=3600&osVersion=11&deviceModel=Nokia%203.4&language=vi_VN&test=false&first=false&userLevelFlagDetected=false
+2022-02-16 17:00:46.689 18306-18524/? I/UnityAds: com.unity3d.services.core.api.Sdk.logInfo() (line:84) :: Received configuration for token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBMZXZlbENvcHBhIjpmYWxzZSwiYXR0IjowLCJhdWMiOjIzNiwiYXVpIjoxNDEsImF6cCI6IjlhNGZiMThhLTNhYjEtNGExZC04NzM5LWRjNjAyMWE0Mzc4ZiIsImNhbGN1bGF0ZWRDb3BwYSI6dHJ1ZSwiY29uc2VudCI6ZmFsc2UsImNvbnRleHR1YWxPbmx5IjpmYWxzZSwiY3BpIjoxMDAsImNyZWF0ZWQiOjE2NDQ5Nzc5NTcwMDAsImRsdCI6MCwiZHQiOjAsImV4cCI6MTY0NjIxNTI0NiwiaWFwIjo5NywiaWF0IjoxNjQ1MDA1NjQ2LCJpZyI6Imw0Znh1STVlaldhamRUZEZpYjZYRlNJRWdRYVRabG51SWszdURYUVNwaVRMR3JmSmo1SDJabExCcUoxR2VESzRpSmpkZXc9PSIsImlzcyI6ImFkcy1nYW1lLWNvbmZpZ3VyYXRpb24udW5pdHlhZHMudW5pdHkzZC5jb20iLCJsZWdhbFRlcnJpdG9yeSI6MCwibHR2Ijo1NSwibWl4ZWQiOmZhbHNlLCJwcm8iOjIwNCwicHJveGllZCI6ZmFsc2UsInN1YiI6ImZMUng4aGhkWUIwVzRVbDYwNW42alZyWmxxb3B3TkRHdTFsL0UwQmNCdDVta0IyQ2hPTnRmSjdmOW94c0RQNmt3SjlPVEE9PSIsInhwciI6MjAyfQ.ulE7c6P99Ei6A3XtSUKOQN7ztcDd3GvYkR1dP4ePdnw (A/B group 15)
+2022-02-16 17:00:46.792 18306-18524/? W/UnityAds: com.unity3d.services.core.device.Device.getNetworkType() (line:135) :: Unity Ads was not able to get current network type due to missing permission
+2022-02-16 17:00:46.803 18306-18524/? W/UnityAds: com.unity3d.services.core.device.Device.getNetworkType() (line:135) :: Unity Ads was not able to get current network type due to missing permission
+2022-02-16 17:00:46.824 18306-18524/? I/UnityAds: com.unity3d.services.core.api.Sdk.logInfo() (line:84) :: Requesting ad plan from https://auction.unityads.unity3d.com/v6/games/4121938/requests?idfi=9f0026bf-5f9e-44dd-909f-a0eb80bf7f46&advertisingTrackingId=00000000-0000-0000-0000-000000000000&limitAdTracking=false&deviceModel=Nokia%203.4&platform=android&sdkVersion=3600&stores=google&deviceMake=HMD%20Global&screenSize=268435810&screenDensity=280&apiLevel=30&screenWidth=1490&screenHeight=692&connectionType=wifi&networkType=-1
+2022-02-16 17:00:47.289 18306-18321/? W/System: A resource failed to call end. 
+2022-02-16 17:00:48.774 18306-18524/? I/UnityAds: com.unity3d.services.core.api.Sdk.logInfo() (line:84) :: Webview started using the latest version
+2022-02-16 17:00:48.787 1150-18785/? I/ExtendedUtils: printFileName fd(11) -> /storage/emulated/0/Android/data/com.music.festival.battle/cache/UnityAdsCache/UnityAdsCache-b7822f43dae55076b66608eb4d48b950a651b8a7b8330ba8db7b693122949aad.webm
+2022-02-16 17:00:48.861 1145-28267/? I/MMParserExtractor: Created(0xb4000075103e8bd0)
+2022-02-16 17:00:48.862 1145-28267/? E/MM_OSAL: FileSource::FileSource
+2022-02-16 17:00:48.862 1145-28267/? E/MM_OSAL: FileSource::FileSource m_bEveryThingOK 1
+2022-02-16 17:00:48.869 1145-28267/? E/Utils: did not find width and/or height

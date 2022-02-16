@@ -227,7 +227,7 @@ class GameState extends MusicBeatState
 	{
 		var lua = new FunkinLua(luaFile);
 		instance.luaArray.push(lua);
-		// lime.app.Application.current.window.alert(luaFile, 'Create Lua');
+		// //@luanotracelime.app.Application.current.window.alert(luaFile, 'Create Lua');
 		lua.call('onCreate', []);
 	}
 
@@ -239,7 +239,7 @@ class GameState extends MusicBeatState
 			var lua = new FunkinLua(luaFile);
 			luas.push(lua);
 			instance.luaArray.push(lua);
-			// lime.app.Application.current.window.alert(luaFile, 'Create Lua');
+			// //@luanotracelime.app.Application.current.window.alert(luaFile, 'Create Lua');
 			lua.call('onCreate', []);
 		}
 	}
@@ -2258,10 +2258,10 @@ class GameState extends MusicBeatState
 		#end
 
 		// var modPath = SongPlayer.luaFolder + "data/" + SONG_NAME + '/events.json';
-		// lime.app.Application.current.window.alert(modPath, 'Mod event path');
+		// //@luanotracelime.app.Application.current.window.alert(modPath, 'Mod event path');
 		// var daPath = FileSystem.exists(modPath) ? modPath : file;
 		// trace('chess ass 00');
-		// lime.app.Application.current.window.alert(file + ", exist: " + FileSystem.exists(file), 'Event path');
+		// //@luanotracelime.app.Application.current.window.alert(file + ", exist: " + FileSystem.exists(file), 'Event path');
 		#if !android
 		if (FileSystem.exists(file))
 		{
@@ -2276,7 +2276,7 @@ class GameState extends MusicBeatState
 			//check ass
 			if (jsonEvent != null)
 			{
-				// lime.app.Application.current.window.alert("yeah", 'Loaded Event');
+				// //@luanotracelime.app.Application.current.window.alert("yeah", 'Loaded Event');
 				// trace('chess ass 2');
 
 				// check this or crash your ass
@@ -2288,11 +2288,11 @@ class GameState extends MusicBeatState
 					{
 						// trace('chess ass 4');
 
-						// lime.app.Application.current.window.alert(eventsData[0], 'Loaded Event');
+						// //@luanotracelime.app.Application.current.window.alert(eventsData[0], 'Loaded Event');
 						for (i in 0...event[1].length)
 						{
 							// trace('chess ass 5');
-							// lime.app.Application.current.window.alert(event[1][i][0], 'Loaded Event');
+							// //@luanotracelime.app.Application.current.window.alert(event[1][i][0], 'Loaded Event');
 							var subEvent:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
 							eventNotes.push(subEvent);
 							eventPushed(subEvent);
@@ -2331,14 +2331,14 @@ class GameState extends MusicBeatState
 			}
 			else
 			{
-				// lime.app.Application.current.window.alert(SONG_NAME, 'NULL EVENT!');
+				// //@luanotracelime.app.Application.current.window.alert(SONG_NAME, 'NULL EVENT!');
 				trace('Null event shit: ' + SONG_NAME);
 			}
 
 		}
 		else
 		{
-			// lime.app.Application.current.window.alert(SONG_NAME, 'NO EVENT!');
+			// //@luanotracelime.app.Application.current.window.alert(SONG_NAME, 'NO EVENT!');
 			trace('No event found for song: ' + SONG_NAME);
 		}
 
@@ -2423,7 +2423,7 @@ class GameState extends MusicBeatState
 					if (!noteTypeMap.exists(swagNote.noteType))
 					{
 						trace('add custom note type!: ' + swagNote.noteType);
-						// lime.app.Application.current.window.alert(swagNote.noteType, 'ADD NOTE TYPE!');
+						// //@luanotracelime.app.Application.current.window.alert(swagNote.noteType, 'ADD NOTE TYPE!');
 						noteTypeMap.set(swagNote.noteType, true);
 					}
 				}

@@ -68,7 +68,7 @@ class CharacterPE extends Character
 				var path:String = Paths.getPath(characterPath, TEXT, daLibrary);
 
 				var rawJson = Assets.getText(path);
-				// lime.app.Application.current.window.alert(characterPath, 'Raw Json');
+				// //@luanotracelime.app.Application.current.window.alert(characterPath, 'Raw Json');
 
 				var json:CharacterFile = cast Json.parse(rawJson);
 				var spriteType = "sparrow";
