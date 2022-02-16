@@ -11,7 +11,7 @@ import flixel.FlxG;
 import flixel.math.FlxMath;
 
 @:bitmap("assets/preload/images/preloaderArt.png") class LogoImage extends BitmapData { }
-class Preloader extends FlxBasePreloader
+class Predator extends FlxBasePreloader
 {
     public function new(MinDisplayTime:Float=3, ?AllowedURLs:Array<String>) 
     {
