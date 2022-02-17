@@ -616,6 +616,19 @@ class SongPlayerManager
 
 			case 'edd':
 				songPlayer = new Edd();
+
+			case 'crucify_yuri_mix':
+				songPlayer = new CrucifyYuriMix();
+
+			case 'beathoven_natsuki_mix':
+				songPlayer = new NatsukiMix();
+			
+			case 'its_complicated_sayori_mix':
+				songPlayer = new SayoriMix();
+			
+			case 'glitcher_monika_mix':
+				songPlayer = new MonikaMix();
+			
 		
 		}
 

@@ -36,7 +36,6 @@ class DDLCBoyFriend extends Boyfriend
 	// create animation offset for BF
 	public override function createAnimationOffsets():Void
 	{
-	
 		addOffset('idle', -5, 0);
 
 		addOffset('singUP', -54,27);

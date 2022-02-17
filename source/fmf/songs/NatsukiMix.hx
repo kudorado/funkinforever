@@ -11,12 +11,12 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class Reconciliation extends SongPlayer
+class NatsukiMix extends SongPlayer
 {
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/dokidoki/Doki_MonikaNonPixel_Assets', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/dokidoki/Doki_Nat_Assets', 'mods');
 		dad.frames = tex;
 	}
 
@@ -36,7 +36,7 @@ class Reconciliation extends SongPlayer
 	override function loadMap()
 	{
 		gameState.defaultCamZoom = 0.8;
-		var bg:FlxSprite = new FlxSprite(-338, -322).loadGraphic(Paths.image('bg/dokidoki/sayori/DDLCfarbg', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-338, -322).loadGraphic(Paths.image('bg/dokidoki/festival/FarBack', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1.62;
@@ -46,7 +46,7 @@ class Reconciliation extends SongPlayer
 		gameState.add(bg);
 
 
-        var bg1:FlxSprite = new FlxSprite(-338, -322).loadGraphic(Paths.image('bg/dokidoki/sayori/DDLCbg', 'mods'));
+        var bg1:FlxSprite = new FlxSprite(-338, -322).loadGraphic(Paths.image('bg/dokidoki/festival/MainBG', 'mods'));
 		bg1.antialiasing = true;
 
 		bg1.scale.x = 1.62;
@@ -55,9 +55,22 @@ class Reconciliation extends SongPlayer
 		bg.scrollFactor.set(0.95, 0.95);
 		gameState.add(bg1);
 
+        var bg2:FlxSprite = new FlxSprite(-338, -260).loadGraphic(Paths.image('bg/dokidoki/festival/FestivalBanner', 'mods'));
+		bg2.antialiasing = true;
+
+		bg2.scale.x = 1.62;
+		bg2.scale.y = 1.62;
+
+		bg2.scrollFactor.set(0.95, 0.95);
+		gameState.add(bg2);
+
+        createLight();
+
 		createSayori();
-		createNatsuki();
+		//createNatsuki();
         createYuri();
+        createProtag();
+        createMonika();
 	}
 
 	function createSayori() {
@@ -71,14 +84,34 @@ class Reconciliation extends SongPlayer
 		sayori.scale.x = 0.68;
 		sayori.scale.y = 0.68;
 		
-		sayori.x = -60;
-		sayori.y = 45;
+		sayori.x = -269;
+		sayori.y = 75;
 
 		if (FlxG.save.data.distractions)
 		{
 			gameState.add(sayori);
 		}
 	}
+
+    function createProtag() {
+        var protag = new FlxSprite(0, 0);
+        protag.frames = Paths.getSparrowAtlas('bg/dokidoki/bgdoki/protag', 'mods');
+        
+        protag.animation.addByPrefix('idle', 'Protag-kun', 18, true);
+        protag.animation.play('idle');
+        protag.antialiasing = true;
+
+        protag.scale.x = 0.68;
+        protag.scale.y = 0.68;
+        
+        protag.x = 136;
+        protag.y = -66;
+
+        if (FlxG.save.data.distractions)
+        {
+            gameState.add(protag);
+        }
+    }
 
 	function createYuri() {
 		var yuri = new FlxSprite(0, 0);
@@ -91,8 +124,8 @@ class Reconciliation extends SongPlayer
 		yuri.scale.x = 0.68;
 		yuri.scale.y = 0.68;
 		
-		yuri.x = -322;
-		yuri.y = -19;
+		yuri.x = 843;
+		yuri.y = -18;
 
 		if (FlxG.save.data.distractions)
 		{
@@ -131,8 +164,8 @@ class Reconciliation extends SongPlayer
 		monika.scale.x = 0.68;
 		monika.scale.y = 0.68;
 		
-		monika.x = 892;
-		monika.y = 100;
+		monika.x = 937;
+		monika.y = -30;
 
 		if (FlxG.save.data.distractions)
 		{
@@ -143,40 +176,83 @@ class Reconciliation extends SongPlayer
     override function createCharacters() {
 		super.createCharacters();
 		addTable();
+        createLightBack();
 	}
 
     function addTable(){
-		var table:FlxSprite = new FlxSprite(-338, -322).loadGraphic(Paths.image('bg/dokidoki/sayori/DesksFront', 'mods'));
+		var table:FlxSprite = new FlxSprite(-338, -322).loadGraphic(Paths.image('bg/dokidoki/festival/DesksFestival', 'mods'));
 		table.antialiasing = true;
 		table.scale.y = 1.62;
 		table.scale.x = 1.62;
 		gameState.add(table);
 	}
 
-    override function createDadAnimations():Void
-    {
-        var animation = dad.animation;
-        animation.addByPrefix('idle', 'Monika Returns Idle', 18, false);
-        animation.addByPrefix('singUP', 'Monika Returns Up', 24, false);
-        animation.addByPrefix('singRIGHT', 'Monika Returns Right', 24, false);
-        animation.addByPrefix('singLEFT', 'Monika Returns Left', 24, false);
-        animation.addByPrefix('singDOWN', 'Monika Returns Down', 24, false);
-        dad.animation = animation;
 
-    }
+    function createLight(){
+		var lightback = new FlxSprite(0, 0);
+		lightback.frames = Paths.getSparrowAtlas('bg/dokidoki/festival/lights_back', 'mods');
+		
+		lightback.animation.addByPrefix('idle', 'lights', 24, true);
+		lightback.animation.play('idle');
+		lightback.antialiasing = true;
+
+		lightback.scale.x = 1.6;
+		lightback.scale.y = 1.6;
+		
+		lightback.x = 238;
+		lightback.y = 86;
+
+		if (FlxG.save.data.distractions)
+		{
+			gameState.add(lightback);
+		}
+	}
+
+    function createLightBack(){
+
+        var lights_front = new FlxSprite(0, 0);
+		lights_front.frames = Paths.getSparrowAtlas('bg/dokidoki/festival/lights_front', 'mods');
+		
+		lights_front.animation.addByPrefix('idle', 'Lights', 24, true);
+		lights_front.animation.play('idle');
+		lights_front.antialiasing = true;
+
+		lights_front.scale.x = 3.2;
+		lights_front.scale.y = 3.2;
+		
+		lights_front.x = 390;
+		lights_front.y = 571;
+
+		if (FlxG.save.data.distractions)
+		{
+			gameState.add(lights_front);
+		}
+	}
+
+    override function createDadAnimations():Void
+	{
+		var animation = dad.animation;
+		animation.addByPrefix('idle', 'Nat Idle', 18, false);
+		animation.addByPrefix('singUP', 'Nat Sing Note Up', 24, false);
+		animation.addByPrefix('singRIGHT', 'Nat Sing Note Right', 24, false);
+		animation.addByPrefix('singLEFT', 'Nat Sing Note Left', 24, false);
+		animation.addByPrefix('singDOWN', 'Nat Sing Note DOWN', 24, false);
+		dad.animation = animation;
+
+	}
 
 	override function createDadAnimationOffsets():Void
 	{
 		dad.addOffset('idle',0, 0);
-        dad.addOffset('singUP', -103, 17);
-        dad.addOffset('singRIGHT', -35, -10);
-        dad.addOffset('singLEFT', -22, 42);
-		dad.addOffset('singDOWN', -23, -57);
+		dad.addOffset('singDOWN', 26, -26);
+		dad.addOffset('singRIGHT', -64, 6);
+		dad.addOffset('singUP', 29, 0);
+		dad.addOffset('singLEFT', -32, -32);
 		dad.dance();
 		dad.scale.x = 1;
 		dad.scale.y = 1;
-		dad.x = -9;
-		dad.y = 54;
+		dad.x = -45;
+		dad.y = 186;
 
 	}
 

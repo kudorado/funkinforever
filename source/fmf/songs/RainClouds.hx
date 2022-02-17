@@ -136,7 +136,6 @@ class  RainClouds extends SongPlayer
 		dad.scale.y = 1;
 		dad.x = -42;
 		dad.y = 91;
-
 	}
 
 	override function createStoryBF()
