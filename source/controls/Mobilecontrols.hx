@@ -4,6 +4,8 @@ import flixel.FlxG;
 import flixel.group.FlxSpriteGroup;
 
 import ui.FlxVirtualPad;
+import ui.FlxVirtualPadSimple;
+
 import ui.Hitbox;
 
 import Config;
@@ -15,8 +17,11 @@ class Mobilecontrols extends FlxSpriteGroup
 
 	public var downscroll_isenabled:Bool = false;
 
-    var _pad:FlxVirtualPad;
+    public var _pad:FlxVirtualPad;
+	public var _padSimple:FlxVirtualPadSimple;
+
 	var _subPad:FlxVirtualPad;
+
 
 	var _hb:Hitbox;
 
@@ -27,6 +32,8 @@ class Mobilecontrols extends FlxSpriteGroup
 		{
 			case 2:
 				return _pad.buttonLeft.justPressed || _subPad.buttonLeft.justPressed;
+			case 8:
+				return _padSimple.buttonLeft.justPressed;
 			default:
 				return _pad.buttonLeft.justPressed;
 		}
@@ -38,6 +45,8 @@ class Mobilecontrols extends FlxSpriteGroup
 		{
 			case 2:
 				return _pad.buttonDown.justPressed || _subPad.buttonDown.justPressed;
+			case 8:
+				return _padSimple.buttonDown.justPressed;
 			default:
 				return _pad.buttonDown.justPressed;
 		}
@@ -49,6 +58,8 @@ class Mobilecontrols extends FlxSpriteGroup
 		{
 			case 2:
 				return _pad.buttonUp.justPressed || _subPad.buttonUp.justPressed;
+			case 8:
+				return _padSimple.buttonUp.justPressed;
 			default:
 				return _pad.buttonUp.justPressed;
 		}
@@ -60,6 +71,8 @@ class Mobilecontrols extends FlxSpriteGroup
 		{
 			case 2:
 				return _pad.buttonRight.justPressed || _subPad.buttonRight.justPressed;
+			case 8:
+				return _padSimple.buttonRight.justPressed;
 			default:
 				return _pad.buttonRight.justPressed;
 		}
@@ -71,6 +84,10 @@ class Mobilecontrols extends FlxSpriteGroup
 		{
 			case 2:
 				return _pad.buttonLeft.pressed || _subPad.buttonLeft.pressed;
+
+			case 8:
+				return _padSimple.buttonLeft.pressed;
+
 			default:
 				return _pad.buttonLeft.pressed;
 		}
@@ -82,6 +99,9 @@ class Mobilecontrols extends FlxSpriteGroup
 		{
 			case 2:
 				return _pad.buttonDown.pressed || _subPad.buttonDown.pressed;
+			case 8:
+				return _padSimple.buttonDown.pressed;
+					
 			default:
 				return _pad.buttonDown.pressed;
 		}
@@ -93,6 +113,10 @@ class Mobilecontrols extends FlxSpriteGroup
 		{
 			case 2:
 				return _pad.buttonUp.pressed || _subPad.buttonUp.pressed;
+
+			case 8:
+				return _padSimple.buttonUp.pressed;
+
 			default:
 				return _pad.buttonUp.pressed;
 		}
@@ -104,6 +128,10 @@ class Mobilecontrols extends FlxSpriteGroup
 		{
 			case 2:
 				return _pad.buttonRight.pressed || _subPad.buttonRight.pressed;
+		
+			case 8:
+				return _padSimple.buttonRight.pressed;
+
 			default:
 				return _pad.buttonRight.pressed;
 		}
@@ -117,6 +145,9 @@ class Mobilecontrols extends FlxSpriteGroup
 			{
 				case 2:
 					return _pad.buttonLeft.justReleased || _subPad.buttonLeft.justReleased;
+				case 8:
+					return _padSimple.buttonLeft.justReleased;
+
 				default:
 					return _pad.buttonLeft.justReleased;
 			}
@@ -128,6 +159,8 @@ class Mobilecontrols extends FlxSpriteGroup
 			{
 				case 2:
 					return _pad.buttonDown.justReleased || _subPad.buttonDown.justReleased;
+				case 8:
+					return _padSimple.buttonDown.justReleased;
 				default:
 					return _pad.buttonDown.justReleased;
 			}
@@ -139,6 +172,8 @@ class Mobilecontrols extends FlxSpriteGroup
 			{
 				case 2:
 					return _pad.buttonUp.justReleased || _subPad.buttonUp.justReleased;
+				case 8:
+					return _padSimple.buttonUp.justReleased;
 				default:
 					return _pad.buttonUp.justReleased;
 			}
@@ -150,6 +185,8 @@ class Mobilecontrols extends FlxSpriteGroup
 			{
 				case 2:
 					return _pad.buttonRight.justReleased || _subPad.buttonRight.justReleased;
+				case 8:
+					return _padSimple.buttonRight.justReleased;
 				default:
 					return _pad.buttonRight.justReleased;
 			}
@@ -224,6 +261,10 @@ class Mobilecontrols extends FlxSpriteGroup
 				_pad.alpha = 0.75;
 				this.add(_pad);
 				_pad = config.loadcustom(_pad);
+
+			case 8:
+				_padSimple = new FlxVirtualPadSimple(RIGHT_FULL, NONE);
+				this.add(_padSimple);
 
 			default: // right default
 				_pad = new FlxVirtualPad(RIGHT_FULL, NONE);

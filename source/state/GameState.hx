@@ -1647,6 +1647,7 @@ class GameState extends MusicBeatState
 
 		// pre lowercasing the song name (create)
 		var songLowercase = SongFilter.filter(CURRENT_SONG);
+		es = FlxG.save.data.mobileControl == 8;
 
 		#if !cpp
 		executeModchart = false; // FORCE disable for non cpp targets
@@ -2032,8 +2033,30 @@ class GameState extends MusicBeatState
 
 		createBlackFadeOut();
 
+		if (es)
+		{
+			mcontrolsArray = [
+				mcontrols._padSimple.buttonLeft, mcontrols._padSimple.buttonDown,
+				  mcontrols._padSimple.buttonUp, mcontrols._padSimple.buttonRight
+			];
+
+			remove(mcontrols);
+			remove(strumLineNotes);
+			remove(effectStrums);
+
+			mcontrols.cameras = [camHUD];
+			add(mcontrols);
+			add(strumLineNotes);
+			add(effectStrums);
+
+		}
+		
 	}
 
+	//easier control in my life
+	var es:Bool;
+	var mcontrolsArray:Array<FlxSprite>;
+	
 	function whereAmI()
 	{
 		if ((health <= 0 || instakillOnMiss) && !isOver)
@@ -2584,8 +2607,7 @@ class GameState extends MusicBeatState
 			babyArrow.ID = i;
 
 			var easyControl =  FlxG.save.data.mobileControl == 7;
-			var hideDadNote:Bool = !FlxG.save.data.showDadNote || !FlxG.save.data.showDad || easyControl;
-			
+			var hideDadNote:Bool = es || !FlxG.save.data.showDadNote || !FlxG.save.data.showDad || easyControl;
 			var w:Float = FlxG.width; // / Main.fx;
 			var shit:Float = 50;
 			switch (player)
@@ -2601,7 +2623,6 @@ class GameState extends MusicBeatState
 						babyArrow.x -= (babyArrow.width * 2);
 						babyArrow.x += Note.swagWidth * i;
 						babyArrow.x += shit; // * Main.fx;
-
 
 						if (easyControl)
 						{
@@ -2624,6 +2645,14 @@ class GameState extends MusicBeatState
 
 
 							}
+						}
+
+						if (es)
+						{
+							var shift = 0.275 * w;
+							var quater = i * ((0.6 * w) / 4);
+							var selfSize = quater - (babyArrow.width / 2);
+							babyArrow.x = shift + selfSize;
 						}
 					}
 					playerStrums.add(babyArrow);
@@ -2878,7 +2907,7 @@ class GameState extends MusicBeatState
 	public function restorePad()
 	{
 		Controller.init(this, NONE, B);
-		Controller._pad.cameras = [camHUD];
+		Controller._pad.cameras = [camOther];
 	}
 
 	public function switchState(callback:Void->Void)
@@ -3096,6 +3125,31 @@ class GameState extends MusicBeatState
 		#end
 		#end
 
+
+		if (mcontrols != null && mcontrols._padSimple != null)
+		{
+			if (es)
+			{
+				var i = 0;
+				for (strum in playerStrums)
+				{
+					strum.scale.x = 0.471;
+					strum.scale.y = 0.471;
+
+					if (i < mcontrolsArray.length)
+					{
+						var ci = mcontrolsArray[i];
+						if (ci != null)
+						{
+							ci.x = strum.x - 15;
+							ci.y = strum.y;
+						}
+					}
+					i++;
+				}
+			
+			}
+		}
 		super.update(elapsed);
 
 		gfTimer += elapsed;
@@ -3864,7 +3918,7 @@ class GameState extends MusicBeatState
 		persistentDraw = true;
 		paused = false;
 		Controller.init(this, NONE, B);
-		Controller._pad.cameras = [camHUD];
+		Controller._pad.cameras = [camOther];
 		resumeGame();
 
 		new FlxTimer().start(2, function(tmr:FlxTimer)
@@ -4558,15 +4612,32 @@ class GameState extends MusicBeatState
 			playerStrums.forEach(function(spr:FlxSprite)
 			{
 				if (pressArray[spr.ID] && spr.animation.curAnim.name != 'confirm')
+				{
 					spr.animation.play('pressed');
+					spr.centerOffsets();
+					if (es)
+					{
+						spr.offset.x -= 10;
+						spr.offset.y += 10;
+
+					}
+				}
 				if (!holdArray[spr.ID])
 					spr.animation.play('static');
 
 				if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
 				{
 					spr.centerOffsets();
-					spr.offset.x -= 13;
-					spr.offset.y -= 13;
+					if (!es)
+					{
+						spr.offset.x -= 13;
+						spr.offset.y -= 13;
+					}
+					else
+					{
+						spr.offset.x -= 20;
+						spr.offset.y -= 20;
+					}
 				}
 				else
 					spr.centerOffsets();
