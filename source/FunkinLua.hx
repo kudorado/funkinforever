@@ -173,6 +173,8 @@ class FunkinLua {
 		set('dadName', GameState.SONG.player2);
 		set('gfName', GameState.SONG.player3);
 		set('player3Name', "fuckyou");
+		set('playAsDad', GameState.playAsDad);
+
 
 		// Some settings, no jokes
 		// set('downscroll', ClientPrefs.downScroll);
@@ -830,10 +832,16 @@ class FunkinLua {
 						// GameState.instance.dadPE.playAnim(anim, forced);
 				case 'gf' | 'girlfriend':
 					GameState.instance.playAnimAllGF(anim, forced, specialAnim);
+
+					// var gf = GameState.instance.gf;
+					// gf.playAnim(anim, forced, specialAnim);
 					// if(GameState.instance.gfPE.animOffsets.exists(anim))
 					// 	GameState.instance.gfPE.playAnim(anim, forced);
 				default: 
 					GameState.instance.playAnimAllBF(anim, forced, specialAnim);
+
+					// var bf = GameState.instance.bf;
+					// bf.playAnim(anim, forced, specialAnim);
 
 					// if(GameState.instance.bfPE.animOffsets.exists(anim))
 					// 	GameState.instance.bfPE.playAnim(anim, forced);
