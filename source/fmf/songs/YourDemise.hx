@@ -11,53 +11,53 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class HighSchoolConflict extends SongPlayer
+class YourDemise extends SongPlayer
 {
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/dokidoki/monika', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/dokidoki/Monika_Finale', 'mods');
 		dad.frames = tex;
 	}
 
-	override  function getGFTex() {
-		var text = Paths.getSparrowAtlas('gf_skins/gfPixel/gfPixel', 'mods');
-		gf.frames = text;
-	}
+	// override  function getGFTex() {
+	// 	var text = Paths.getSparrowAtlas('gf_skins/gfPixel/gfPixel', 'mods');
+	// 	gf.frames = text;
+	// }
 
-	override function createGFAnimations()
-	{
-		gf.animation.addByPrefix("idle", 'GF IDLE00', true);
-		gf.playAnim("idle");
-	}
+	// override function createGFAnimations()
+	// {
+	// 	gf.animation.addByPrefix("dance", 'GF IDLE00', true);
+	// 	gf.playAnim("dance");
+	// }
 
 	override function loadMap()
 	{
 		gameState.defaultCamZoom = 0.8;
-		var bg:FlxSprite = new FlxSprite(300, 0).loadGraphic(Paths.image('bg/dokidoki/hightschool/weebSky', 'mods'));
+		var bg:FlxSprite = new FlxSprite(209, -161).loadGraphic(Paths.image('bg/dokidoki/monika/FinaleBG_1', 'mods'));
 		bg.antialiasing = false;
 
-		bg.scale.x = 8;
-		bg.scale.y = 8;
+		bg.scale.x = 2;
+		bg.scale.y = 2;
 
 		bg.scrollFactor.set(0.95, 0.95);
 		gameState.add(bg);
 
 
-		var bg1:FlxSprite = new FlxSprite(300, 0).loadGraphic(Paths.image('bg/dokidoki/hightschool/weebStreet', 'mods'));
+		var bg1:FlxSprite = new FlxSprite(209, -161).loadGraphic(Paths.image('bg/dokidoki/monika/FinaleBG_2', 'mods'));
 		bg1.antialiasing = false;
 
-		bg1.scale.x = 8;
-		bg1.scale.y = 8;
+		bg1.scale.x = 2;
+		bg1.scale.y = 2;
 
 		bg1.scrollFactor.set(0.95, 0.95);
 		gameState.add(bg1);
 
-		var bg2:FlxSprite = new FlxSprite(300, 0).loadGraphic(Paths.image('bg/dokidoki/hightschool/weebSchool', 'mods'));
+		var bg2:FlxSprite = new FlxSprite(-70, -153).loadGraphic(Paths.image('bg/dokidoki/monika/FinaleFG', 'mods'));
 		bg2.antialiasing = false;
 
-		bg2.scale.x = 8;
-		bg2.scale.y = 8;
+		bg2.scale.x = 1.54;
+		bg2.scale.y = 1.54;
 
 		bg2.scrollFactor.set(0.95, 0.95);
 		gameState.add(bg2);
@@ -66,11 +66,11 @@ class HighSchoolConflict extends SongPlayer
     override function createDadAnimations():Void
     {
         var animation = dad.animation;
-        animation.addByPrefix('idle', 'Monika Idle instance 100', 18, false);
-        animation.addByPrefix('singUP', 'Monika UP NOTE instance 100', 24, false);
-        animation.addByPrefix('singRIGHT', 'Monika RIGHT NOTE instance 100', 24, false);
-        animation.addByPrefix('singLEFT', 'Monika LEFT NOTE instance 100', 24, false);
-        animation.addByPrefix('singDOWN', 'Monika DOWN NOTE instance 100', 24, false);
+        animation.addByPrefix('idle', 'MONIKA IDLE00', 18, false);
+        animation.addByPrefix('singUP', 'MONIKA UP NOTE00', 24, false);
+        animation.addByPrefix('singRIGHT', 'MONIKA RIGHT NOTE', 24, false);
+        animation.addByPrefix('singLEFT', 'MONIKA LEFT NOTE00', 24, false);
+        animation.addByPrefix('singDOWN', 'MONIKA DOWN NOTE0', 24, false);
         dad.animation = animation;
 
     }
@@ -78,16 +78,16 @@ class HighSchoolConflict extends SongPlayer
 	override function createDadAnimationOffsets():Void
 	{
 			
-		dad.addOffset('idle',0, 28);
-		dad.addOffset('singRIGHT', 0, 36);
-		dad.addOffset('singDOWN', 0, 29);
-		dad.addOffset('singLEFT', 0, 29);
-		dad.addOffset('singUP', 0, 64);
+		dad.addOffset('idle',0, 0);
+		dad.addOffset('singRIGHT', 0, 0);
+		dad.addOffset('singDOWN', 0, 0);
+		dad.addOffset('singLEFT', 0, 0);
+		dad.addOffset('singUP', 0, 0);
 		dad.dance();
 		dad.scale.x = 6;
 		dad.scale.y = 6;
-		dad.x = 12;
-		dad.y = 175;
+		dad.x = 372;
+		dad.y = 111;
 
 	}
 	
@@ -108,8 +108,7 @@ class HighSchoolConflict extends SongPlayer
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
-		gf.scale.x = 6;
-		gf.scale.y = 6;
+		gf.visible = false;
 	}
 
     override function updateCamFollowBF()
