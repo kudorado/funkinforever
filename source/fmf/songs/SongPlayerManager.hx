@@ -592,9 +592,9 @@ class SongPlayerManager
 			case 'high_school_conflict':
 				songPlayer = new HighSchoolConflict();
 
-			case 'rain_clouds':
+			case 'rain_clouds' | 'my_confession':
 				songPlayer = new RainClouds();
-				
+
 			case 'bara_no_yume':
 				songPlayer = new BaraNoYume();
 

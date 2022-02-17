@@ -737,7 +737,7 @@ class PcManager
 			case 'bf_pixel':
 				return new BfPixel(700, 425);
 				
-			case 'bf_DDLC':
+			case 'bf_ddlc':
 				return new DDLCBoyFriend(700, 425);
 		}
 

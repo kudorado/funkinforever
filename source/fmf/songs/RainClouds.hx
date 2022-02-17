@@ -54,6 +54,49 @@ class  RainClouds extends SongPlayer
 
 		bg.scrollFactor.set(0.95, 0.95);
 		gameState.add(bg1);
+
+		createNatsuki();
+		createYuri();
+	}
+
+	function createNatsuki() {
+		var natsuki = new FlxSprite(0, 0);
+		natsuki.frames = Paths.getSparrowAtlas('bg/dokidoki/bgdoki/natsuki', 'mods');
+		
+		natsuki.animation.addByPrefix('idle', 'Natsu BG00', 18, true);
+		natsuki.animation.play('idle');
+		natsuki.antialiasing = true;
+
+		natsuki.scale.x = 0.68;
+		natsuki.scale.y = 0.68;
+		
+		natsuki.x = 892;
+		natsuki.y = 100;
+
+		if (FlxG.save.data.distractions)
+		{
+			gameState.add(natsuki);
+		}
+	}
+
+	function createYuri() {
+		var yuri = new FlxSprite(0, 0);
+		yuri.frames = Paths.getSparrowAtlas('bg/dokidoki/bgdoki/yuri', 'mods');
+		
+		yuri.animation.addByPrefix('idle', 'Yuri BG00', 18, true);
+		yuri.animation.play('idle');
+		yuri.antialiasing = true;
+
+		yuri.scale.x = 0.68;
+		yuri.scale.y = 0.68;
+		
+		yuri.x = -304;
+		yuri.y = -10;
+
+		if (FlxG.save.data.distractions)
+		{
+			gameState.add(yuri);
+		}
 	}
 
     override function createCharacters() {
@@ -98,7 +141,7 @@ class  RainClouds extends SongPlayer
 
 	override function createStoryBF()
 	{
-		changePc('bf_DDLC');
+		changePc('bf_ddlc');
 		bf.y -= 93;
         bf.x += 39;
 	}

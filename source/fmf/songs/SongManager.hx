@@ -436,7 +436,13 @@ class SongManager
 				folder: 'week_dokidoki',
 				character: 'dokidoki',
 				songTitle: 'Doki Doki Takeover',
-				songList: ['high_school_conflict', 'bara_no_yume', 'your_demise', 'rain_clouds', 'Wireframe', 'Algebra']
+				songList: ['high_school_conflict', 'bara_no_yume', 'your_demise', 
+				'rain_clouds', 'my_confession',
+				'my_sweets', 'baka',
+				'deep_breaths', 'obsession',
+				'reconciliation',
+				'crucify_yuri_mix', 'beathoven_natsuki_mix', 'its_complicated_sayori_mix', 'glitcher_monika_mix',
+				]
 			}
 		),
 
