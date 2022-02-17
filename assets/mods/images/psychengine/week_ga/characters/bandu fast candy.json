@@ -103,8 +103,8 @@
 	"no_antialiasing": false,
 	"image": "characters/bandu_crazy",
 	"position": [
-		-490,
-		-210
+		-134,
+		38
 	],
 	"healthicon": "bandu",
 	"flip_x": false,

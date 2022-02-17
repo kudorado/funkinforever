@@ -594,6 +594,9 @@ class SongPlayerManager
 
 			case 'rain_clouds':
 				songPlayer = new RainClouds();
+
+			case 'sugar-rush' | 'sugar rush':
+				return new SugarRush();
 		}
 
 		return songPlayer;
