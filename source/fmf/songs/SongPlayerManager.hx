@@ -602,6 +602,9 @@ class SongPlayerManager
 				songPlayer = new YourDemise();
 			case 'sugar-rush' | 'sugar rush':
 				return new SugarRush();
+
+			case 'my_sweets' | 'baka':
+				songPlayer = new MySweets();
 		}
 
 		return songPlayer;
