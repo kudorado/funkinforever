@@ -553,8 +553,10 @@ class GameState extends MusicBeatState
 					startCharacterLua(newBoyfriend.curCharacter);
 
 					// turn on for debug
+					#if debug
 					// newBoyfriend.visible = true;
 					// newBoyfriend.alpha = 1;
+					#end
 				}
 
 			case 1:

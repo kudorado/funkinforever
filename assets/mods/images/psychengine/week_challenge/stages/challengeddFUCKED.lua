@@ -22,7 +22,7 @@ function onCreate()
 	makeLuaSprite('vallas', 'vallas', 85, -120);
 	addLuaSprite('vallas', true);
 
-		makeAnimatedLuaSprite('matt', 'matt', 1950, 200);
+		makeAnimatedLuaSprite('matt', 'matt', 1854, 272);
 		setProperty('matt.flipX', false);
 		addAnimationByPrefix('matt', 'enter', 'MattWalking', 14, true);
 		addAnimationByPrefix('matt', 'shit', 'MattReactionTord', 14, false);

@@ -18,13 +18,26 @@ class Edd extends SongPlayer
 	}
 	override function loadMap()
 	{
+		gameState.defaultCamZoom = 0.55;
 	}
 
+	override function createBF()
+	{
+		super.createBF();
+		bf.x += (2168-750);
+	}
 
+	override function createGF()
+	{
+		super.createGF();
+		gf.x = 1632;
+		gf.y = 200;
+	}
+	
 
 	override function getDadVersion()
 	{
-		return new CharacterPE(-116, 469, 'hank');
+		return new CharacterPE('edd');
 	}
 
 
