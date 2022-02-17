@@ -9,10 +9,6 @@ using StringTools;
 
 class Dad extends Character
 {
-    override function debugName():String
-    {
-        return "dad";
-    }
 
 	override function update(elapsed:Float)
 	{

@@ -269,7 +269,13 @@ class GameState extends MusicBeatState
 		while (eventNotes.length > 0)
 		{
 			var early:Float = eventNoteEarlyTrigger(eventNotes[0]);
+			
 			var leStrumTime:Float = eventNotes[0][0];
+
+			#if debug
+			// leStrumTime = eventNotes[0][0] / 5;
+			#end
+
 			if (Conductor.songPosition < leStrumTime - early)
 			{
 				break;
@@ -1146,6 +1152,12 @@ class GameState extends MusicBeatState
 						// player3
 				}
 
+			case "Set cam Zoom":
+				var val1:Float = Std.parseFloat(value1);
+				if (!Math.isNaN(val1))
+					defaultCamZoom = val1;
+
+
 			case 'Change Scroll Speed':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
@@ -1275,6 +1287,7 @@ class GameState extends MusicBeatState
 	public var dadGroup:FlxSpriteGroup;
 	public var gfGroup:FlxSpriteGroup;
 	public var player3Group:FlxSpriteGroup;
+	public var frontGroup:FlxSpriteGroup;
 
 	public var dadPE:CharacterPE;
 	public var gfPE:CharacterPE;
@@ -2073,6 +2086,8 @@ class GameState extends MusicBeatState
 		this.boyfriendGroup = new FlxSpriteGroup(0, 0);
 		this.dadGroup = new FlxSpriteGroup(0, 0);
 		this.gfGroup = new FlxSpriteGroup(0, 0);
+		this.player3Group = new FlxSpriteGroup(0, 0);
+		this.frontGroup = new FlxSpriteGroup(0, 0);
 
 	}
 	

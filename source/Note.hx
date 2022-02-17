@@ -275,14 +275,6 @@ class Note extends FlxSprite
 			texture = '';
 		if (suffix == null)
 			suffix = '';
-		
-		if (mustPress && (!FlxG.save.data.showDadNote || !FlxG.save.data.showDad))
-		{
-			// prevent lag babe
-			this.visible = false;
-			return;
-		}
-
 			
 
 		var skin:String = texture;

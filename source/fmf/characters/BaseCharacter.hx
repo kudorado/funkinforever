@@ -254,11 +254,6 @@ class BaseCharacter extends FlxSprite
 		frames = tex;
 	}
 
-	override function debugName():String
-	{
-		return "holyshit-i-m-suffer";
-	}
-
 	// should pa heyable!
 	private var heyable:Bool;
 

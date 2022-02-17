@@ -202,8 +202,8 @@
 	"no_antialiasing": false,
 	"image": "characters/Bfviendo",
 	"position": [
-		0,
-		350
+		2088,
+		457
 	],
 	"healthicon": "bfedd",
 	"flip_x": true,

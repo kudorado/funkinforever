@@ -1,7 +1,7 @@
 function onCreate()
 	-- background shit
-		makeLuaSprite('bgtord', 'bgtord', 900, -190);
-		scaleObject('bgtord', 1.75, 1.75)
+		makeLuaSprite('bgtord', 'bgtord', 300, -190);
+		scaleObject('bgtord', 3.1, 3.1)
 	addLuaSprite('bgtord', false);	
 
 	makeLuaSprite('cieloFUCKED', 'cieloFUCKED', -600, -950);
@@ -45,13 +45,13 @@ function onEvent(name,value1,value2)
 	if name == 'Play Animation' then 
 
 		if value1 == 'mattw' then
-		addLuaSprite('matt', true);
+		addLuaSpriteFront('matt');
 		objectPlayAnimation('matt', 'enter', true); 
 		doTweenX('mattTweenX', 'matt', 1200, 8, 'linear'); 
 	end	
 
 		if value1 == 'runin' then
-		addLuaSprite('TomRun', false);
+		addLuaSpriteFront('TomRun');
 		objectPlayAnimation('TomRun', 'enter', true); 
 		doTweenX('TomRunTweenX', 'TomRun', 2900, 3, 'linear'); 
 	end	
@@ -60,7 +60,7 @@ function onEvent(name,value1,value2)
 
     end
 			if value1 == 'matts' then
-		addLuaSprite('matt', false);
+			addLuaSpriteFront('matt');
 		objectPlayAnimation('matt', 'shit', true); 
 		doTweenX('mattTweenX', 'matt', 1300, 0.1, 'linear'); 
 		makeAnimatedLuaSprite('TomRun', 'TomRun', 2550, 500);
@@ -73,13 +73,13 @@ function onEvent(name,value1,value2)
 	end	
 
 				if value1 == 'arpon' then 
-		makeAnimatedLuaSprite('ToomArpon', 'ToomArpon', 2550, 500);
+		makeAnimatedLuaSprite('ToomArpon', 'ToomArpon', 2550, 314);
 		setProperty('ToomArpon.flipX', false);
 		addAnimationByPrefix('ToomArpon', 'enter', 'ToomArpon', 8, true);
 			setProperty('ToomArpon.scale.x', getProperty('ToomArpon.scale.x') + 0.56);
 			setProperty('ToomArpon.scale.y', getProperty('ToomArpon.scale.y') + 0.56);
 			setLuaSpriteScrollFactor('ToomArpon', 1, 1);
-				addLuaSprite('ToomArpon', true);
+				addLuaSpriteFront('ToomArpon');
 	end	
 
 			if value1 == 'tordbot' then

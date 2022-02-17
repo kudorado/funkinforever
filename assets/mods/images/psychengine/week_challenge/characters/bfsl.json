@@ -123,8 +123,8 @@
 	"no_antialiasing": false,
 	"image": "characters/BFSlide",
 	"position": [
-		1600,
-		100
+		2088,
+		457
 	],
 	"healthicon": "bfedd",
 	"flip_x": true,

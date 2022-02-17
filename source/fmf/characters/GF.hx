@@ -9,11 +9,6 @@ using StringTools;
 
 class GF extends CharacterES
 {
-	override function debugName():String
-	{
-		return "gf";
-	}
-
 	override function dance():Void
 	{
 		if (animation.curAnim == null ||  !animation.curAnim.name.startsWith('hair'))

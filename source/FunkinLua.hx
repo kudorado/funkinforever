@@ -1001,6 +1001,20 @@ class FunkinLua {
 				// trace('oh shit, no tag was found, cant add: ' + tag);
 			}
 		});
+
+
+		Lua_helper.add_callback(lua, "addLuaSpriteFront", function(tag:String)
+		{
+			if (GameState.instance.modchartSprites.exists(tag))
+			{
+				addLuaSpriteFront(tag);
+			}
+			else
+			{
+				// trace('oh shit, no tag was found, cant add: ' + tag);
+			}
+		});
+		
 	
 
 		Lua_helper.add_callback(lua, "removeLuaSpriteGroup", function(group:String, destroy:Bool = false)
@@ -1912,7 +1926,16 @@ class FunkinLua {
 		GameState.instance.modchartSprites.set(tag, leSprite);
 	}
 	
-	
+	function addLuaSpriteFront(tag:String)
+	{
+		var shit:ModchartSprite = GameState.instance.modchartSprites.get(tag);
+		if (!shit.wasAdded)
+		{
+			GameState.instance.frontGroup.add(shit);
+			trace("Add luaSprite front: " + tag);
+		}
+	}
+
 	function addLuaSprite(tag:String, front:Bool)
 	{
 		var shit:ModchartSprite = GameState.instance.modchartSprites.get(tag);

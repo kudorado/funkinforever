@@ -102,6 +102,7 @@ class BaseSong
 		gameState.boyfriendGroup = new FlxSpriteGroup(gameState.BF_X, gameState.BF_Y);
 		gameState.dadGroup = new FlxSpriteGroup(gameState.DAD_X, gameState.DAD_Y);
 		gameState.gfGroup = new FlxSpriteGroup(gameState.GF_X, gameState.GF_Y);
+
 		#end
 	}
 
@@ -205,6 +206,8 @@ class BaseSong
 		gameState.add(gameState.player3Group);
 		gameState.add(gameState.dadGroup);
 		gameState.add(gameState.boyfriendGroup);
+		gameState.add(gameState.frontGroup);
+
 	}
 
 	// what map should we load

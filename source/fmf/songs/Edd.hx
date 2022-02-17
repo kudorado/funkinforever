@@ -24,7 +24,8 @@ class Edd extends SongPlayer
 	override function createBF()
 	{
 		super.createBF();
-		bf.x += (2168-750);
+		bf.x += (2154-750);
+		bf.y -= 25;
 	}
 
 	override function createGF()
