@@ -436,7 +436,7 @@ class SongManager
 				folder: 'week_dokidoki',
 				character: 'dokidoki',
 				songTitle: 'Doki Doki',
-				songList: ['high_school_conflict', 'rain_clouds', 'Disability', 'Wireframe', 'Algebra']
+				songList: ['high_school_conflict', 'bara_no_yume', 'your_demise', 'rain_clouds', 'Wireframe', 'Algebra']
 			}
 		),
 

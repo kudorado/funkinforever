@@ -594,6 +594,12 @@ class SongPlayerManager
 
 			case 'rain_clouds':
 				songPlayer = new RainClouds();
+
+			case 'bara_no_yume':
+				songPlayer = new BaraNoYume();
+
+			case 'your_demise':
+				songPlayer = new YourDemise();
 		}
 
 		return songPlayer;
