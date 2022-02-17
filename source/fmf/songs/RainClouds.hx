@@ -36,7 +36,7 @@ class  RainClouds extends SongPlayer
 	override function loadMap()
 	{
 		gameState.defaultCamZoom = 0.8;
-		var bg:FlxSprite = new FlxSprite(-338, -238).loadGraphic(Paths.image('bg/dokidoki/sayori/DDLCfarbg', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-338, -322).loadGraphic(Paths.image('bg/dokidoki/sayori/DDLCfarbg', 'mods'));
 		bg.antialiasing = true;
 
 		bg.scale.x = 1.62;
@@ -46,7 +46,7 @@ class  RainClouds extends SongPlayer
 		gameState.add(bg);
 
 
-        var bg1:FlxSprite = new FlxSprite(-338, -238).loadGraphic(Paths.image('bg/dokidoki/sayori/DDLCbg', 'mods'));
+        var bg1:FlxSprite = new FlxSprite(-338, -322).loadGraphic(Paths.image('bg/dokidoki/sayori/DDLCbg', 'mods'));
 		bg1.antialiasing = true;
 
 		bg1.scale.x = 1.62;
@@ -62,7 +62,7 @@ class  RainClouds extends SongPlayer
 	}
 
     function addTable(){
-		var table:FlxSprite = new FlxSprite(-338, -238).loadGraphic(Paths.image('bg/dokidoki/sayori/DesksFront', 'mods'));
+		var table:FlxSprite = new FlxSprite(-338, -322).loadGraphic(Paths.image('bg/dokidoki/sayori/DesksFront', 'mods'));
 		table.antialiasing = true;
 		table.scale.y = 1.62;
 		table.scale.x = 1.62;
@@ -83,15 +83,6 @@ class  RainClouds extends SongPlayer
 
 	override function createDadAnimationOffsets():Void
 	{
-			
-		//danceLeft 0 0
-// danceRight 0 0
-// singUP -31 43
-// singRIGHT -92 -8
-// singLEFT -22 -2
-// singDOWN -54 -44
-// nara -21 1
-
 		dad.addOffset('idle',0, 0);
 		dad.addOffset('singDOWN', -54, -44);
 		dad.addOffset('singRIGHT', -92, -8);
@@ -100,16 +91,23 @@ class  RainClouds extends SongPlayer
 		dad.dance();
 		dad.scale.x = 1;
 		dad.scale.y = 1;
-		dad.x = 38;
+		dad.x = -42;
 		dad.y = 91;
 
+	}
+
+	override function createStoryBF()
+	{
+		changePc('bf_DDLC');
+		bf.y -= 93;
+        bf.x += 39;
 	}
 	
     override function createBF()
     {
         super.createBF();
-        bf.y += (332-425);
-        bf.x += (739-700);
+        bf.y -= 93;
+        bf.x += 39;
     }
 
 	override function createGFAnimationOffsets()
