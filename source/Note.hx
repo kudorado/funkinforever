@@ -178,7 +178,7 @@ class Note extends FlxSprite
 			this.scale.x = GameState.esNoteScale;
 
 			if(!isSustainNote)
-			this.scale.y = GameState.esNoteScale;
+				this.scale.y = GameState.esNoteScale;
 		}
 		
 		colorSwap = new ColorSwap();
@@ -235,8 +235,8 @@ class Note extends FlxSprite
 
 			if (prevNote.isSustainNote)
 			{
-				if(GameState.es)
-					y += 20;
+				// if(GameState.es)
+					// y += 20;
 
 				switch (prevNote.noteData)
 				{

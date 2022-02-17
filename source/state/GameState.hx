@@ -3407,7 +3407,7 @@ class GameState extends MusicBeatState
 							// Remember = minus makes notes go up, plus makes them go down
 						
 							if (daNote.animation.curAnim.name.endsWith('end') && daNote.prevNote != null)
-								daNote.y += daNote.prevNote.height;
+								daNote.y += daNote.prevNote.height + 7;//holy shit
 							else
 								daNote.y += daNote.height / 2;
 
@@ -3455,6 +3455,12 @@ class GameState extends MusicBeatState
 						if (daNote.isSustainNote)
 						{
 							daNote.y -= daNote.height / 2;
+							if (daNote.animation.curAnim.name.endsWith('end') && daNote.prevNote != null)
+								daNote.y -= 7 + daNote.height / 2;//holy shit
+							// else
+							// 	daNote.y -= daNote.height / 2;
+
+
 
 							if (!botPlayShit)
 							{
