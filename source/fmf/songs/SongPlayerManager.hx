@@ -605,6 +605,11 @@ class SongPlayerManager
 
 			case 'my_sweets' | 'baka':
 				songPlayer = new MySweets();
+			
+			case 'deep_breaths':
+				songPlayer = new DeepBreaths(); 
+			case 'obsession':
+				songPlayer = new Obsession();
 		}
 
 		return songPlayer;
