@@ -734,6 +734,9 @@ class PcManager
 			case 'bf pibby':
 				return new BFPibby(700, 425);
 
+			case 'bf_pixel':
+				return new BfPixel(700, 425);
+
 		}
 
 		return new Boyfriend(700, 425); 
