@@ -870,7 +870,7 @@ class GameState extends MusicBeatState
 					// camFollow.setPosition(val1, val2);
 				}
 
-				trace('shit');
+				// trace('shit');
 
 			case 'Alt Idle Animation':
 				var char:CharacterPE = dadPE;
@@ -5178,8 +5178,27 @@ class GameState extends MusicBeatState
 	{
 		if (bfFE() != null && bfFE().visible)
 		{
-			bfFE().playAnim(anim, force);
+			if (bfFE().animation.getByName(anim) == null)
+				return;
+
+			var d = bfFE().animation.getByName(anim);
+			var fps = d.frameRate;
+			var fc = d.frames == null ? -1 : d.frames.length;
+
+			var animDur = fc / fps;
+
+			if (animDur <= 0)
+				return;
+
 			bfFE().specialAnim = specialAnim;
+			if (specialAnim)
+			{
+				bfFE().playAnimForce(anim, animDur);
+			}
+			else
+			{
+				bfFE().playAnim(anim, force);
+			}
 		}
 
 		if (bfPE != null && bfPE.visible)
@@ -5197,8 +5216,28 @@ class GameState extends MusicBeatState
 	{
 		if (dadFE() != null && dadFE().visible)
 		{
-			dadFE().playAnim(anim, force);
+			if (dadFE().animation.getByName(anim) == null)
+				return;
+		
+			var d = dadFE().animation.getByName(anim);
+			var fps = d.frameRate;
+			var fc = d.frames == null ? -1 : d.frames.length;
+			
+			var animDur = fc / fps;
+
+			if (animDur <= 0)
+				return;
+
+
 			dadFE().specialAnim = specialAnim;
+			if (specialAnim)
+			{
+				dadFE().playAnimForce(anim, animDur);
+			}
+			else
+			{
+				dadFE().playAnim(anim, force);
+			}
 		}
 
 		if (dadPE != null && dadPE.visible)
@@ -5218,9 +5257,29 @@ class GameState extends MusicBeatState
 	{
 		if (gfFE() != null && gfFE().visible)
 		{
-			gfFE().playAnim(anim, force);
+			if (gfFE().animation.getByName(anim) == null)
+				return;
+
+			var d = gfFE().animation.getByName(anim);
+			var fps = d.frameRate;
+			var fc = d.frames == null ? -1 : d.frames.length;
+
+			var animDur = fc / fps;
+
+			if (animDur <= 0)
+				return;
+
 			gfFE().specialAnim = specialAnim;
+			if (specialAnim)
+			{
+				gfFE().playAnimForce(anim, animDur);
+			}
+			else
+			{
+				gfFE().playAnim(anim, force);
+			}
 		}
+		
 		if (gfPE != null && gfPE.visible)
 		{
 			gfPE.playAnim(anim, force);
