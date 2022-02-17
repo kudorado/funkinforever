@@ -30,7 +30,10 @@ class Note extends FlxSprite
 		'Hell Note', 'EX Note', 'Hurt Note', 
 		'Eye Note', 'Bullet_Note',
 		'Sword', 'Glitch', 'GF Glitch',
-		'3d'
+		'3d', 'health_drain', 'popup', 'Image Flash',
+		'popup', 'Tord', 'Edd', 'invisible', 'Rocket',
+		'Set_Health', 'Set Cam Zoom'
+
 	];
 
 

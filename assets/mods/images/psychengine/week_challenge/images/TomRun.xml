@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="TomRunningIn.png"><SubTexture name="Tom Running In0000" x="328" y="468" width="351" height="343" frameX="-75" frameY="-90" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0001" x="328" y="468" width="351" height="343" frameX="-75" frameY="-90" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0002" x="679" y="468" width="354" height="296" frameX="0" frameY="-153" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0003" x="679" y="468" width="354" height="296" frameX="0" frameY="-153" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0004" x="0" y="468" width="328" height="367" frameX="-17" frameY="-107" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0005" x="0" y="468" width="328" height="367" frameX="-17" frameY="-107" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0006" x="778" y="0" width="306" height="381" frameX="-37" frameY="-87" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0007" x="778" y="0" width="306" height="381" frameX="-37" frameY="-87" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0008" x="0" y="0" width="250" height="468" frameX="-95" frameY="0" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0009" x="0" y="0" width="250" height="468" frameX="-95" frameY="0" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0010" x="513" y="0" width="265" height="428" frameX="-76" frameY="-39" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0011" x="513" y="0" width="265" height="428" frameX="-76" frameY="-39" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0012" x="250" y="0" width="263" height="429" frameX="-78" frameY="-40" frameWidth="426" frameHeight="474" />
+<SubTexture name="Tom Running In0013" x="250" y="0" width="263" height="429" frameX="-78" frameY="-40" frameWidth="426" frameHeight="474" />
+</TextureAtlas>

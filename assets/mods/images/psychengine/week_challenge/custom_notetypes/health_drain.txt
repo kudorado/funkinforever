@@ -1,0 +1,2 @@
+Value 1 is the draining value, it's going to drain a certain % of your health! Negative Value are untested but they do regen instead of draining
+Value 2 is the draining limit, if you set a value higher then 0, the drain will stop at that exact % (0 and negative value will kill the player when it drain all the way to zero)

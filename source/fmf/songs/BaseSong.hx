@@ -262,7 +262,7 @@ class BaseSong
 	private function getGFTex()
 	{
 		var tex = Paths.getSparrowAtlas('gf/GF_normal');
-		gf.frames = tex;
+		gf.frames = tex;	
 		// tex = null;
 	}
 

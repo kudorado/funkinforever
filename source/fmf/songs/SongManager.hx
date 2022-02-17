@@ -363,10 +363,10 @@ class SongManager
 		new SongData
 		(
 			{
-				folder: 'week_hank',
+				folder: 'week_challenge',
 				character: 'hank',
-				songTitle: 'V.S Hank',
-				songList: ['Accelerant']
+				songTitle: 'Challenge Week',
+				songList: ['Accelerant', 'Edd']
 			}
 		),
 

@@ -613,6 +613,10 @@ class SongPlayerManager
 
 			case 'reconciliation':
 				songPlayer = new Reconciliation();
+
+			case 'edd':
+				songPlayer = new Edd();
+		
 		}
 
 		return songPlayer;
