@@ -1248,6 +1248,9 @@ class GameState extends MusicBeatState
 				if (note.isSustainNote && !note.animation.curAnim.name.endsWith('end'))
 				{
 					note.scale.y *= ratio;
+					// if (es)
+						// note.scale.y *= esNoteScale;
+
 					note.updateHitbox();
 				}
 			}
@@ -1256,6 +1259,8 @@ class GameState extends MusicBeatState
 				if (note.isSustainNote && !note.animation.curAnim.name.endsWith('end'))
 				{
 					note.scale.y *= ratio;
+					// if (es)
+						// note.scale.y *= esNoteScale;
 					note.updateHitbox();
 				}
 			}
@@ -1647,7 +1652,6 @@ class GameState extends MusicBeatState
 
 		// pre lowercasing the song name (create)
 		var songLowercase = SongFilter.filter(CURRENT_SONG);
-		es = FlxG.save.data.mobileControl == 8;
 
 		#if !cpp
 		executeModchart = false; // FORCE disable for non cpp targets
@@ -2054,7 +2058,15 @@ class GameState extends MusicBeatState
 	}
 
 	//easier control in my life
-	var es:Bool;
+	public static var es(get, never):Bool;
+	inline static function get_es():Bool
+	{
+		return FlxG.save.data.mobileControl == 8;
+	}
+	static public var esNoteScale:Float = 0.5;
+	public var esNoteOffsetX:Int = -13;
+	public var esNoteOffsetY:Int = -1;
+
 	var mcontrolsArray:Array<FlxSprite>;
 	
 	function whereAmI()
@@ -2499,6 +2511,7 @@ class GameState extends MusicBeatState
 					oldNote = null;
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
 
+				var sLength = songNotes[2];
 				swagNote.sustainLength = songNotes[2];
 				swagNote.scrollFactor.set(0, 0);
 				swagNote.gfNote = (section.gfSection && (songNotes[1] < 4));
@@ -2506,6 +2519,7 @@ class GameState extends MusicBeatState
 
 				if (!Std.isOfType(songNotes[3], String))
 					swagNote.noteType = noteTypeList[songNotes[3]]; // Backward compatibility + compatibility with Week 7 charts
+			
 				var susLength:Float = swagNote.sustainLength;
 
 				susLength = susLength / Conductor.stepCrochet;
@@ -3133,16 +3147,16 @@ class GameState extends MusicBeatState
 				var i = 0;
 				for (strum in playerStrums)
 				{
-					strum.scale.x = 0.471;
-					strum.scale.y = 0.471;
+					strum.scale.x = esNoteScale;
+					strum.scale.y = esNoteScale;
 
 					if (i < mcontrolsArray.length)
 					{
 						var ci = mcontrolsArray[i];
 						if (ci != null)
 						{
-							ci.x = strum.x - 15;
-							ci.y = strum.y;
+							ci.x = strum.x + esNoteOffsetX;
+							ci.y = strum.y + esNoteOffsetY;
 						}
 					}
 					i++;
@@ -3150,6 +3164,32 @@ class GameState extends MusicBeatState
 			
 			}
 		}
+
+		#if debug
+			if (FlxG.keys.justPressed.Y)
+			{
+				esNoteOffsetX++;
+				trace('ES Offset X: ' + esNoteOffsetX);
+			}
+			if (FlxG.keys.justPressed.T)
+			{
+				esNoteOffsetX--;
+				trace('ES Offset X: ' + esNoteOffsetX);
+			}
+
+			if (FlxG.keys.justPressed.I)
+			{
+				esNoteOffsetY++;
+				trace('ES Offset Y: ' + esNoteOffsetY);
+			}
+			if (FlxG.keys.justPressed.U)
+			{
+				esNoteOffsetY--;
+				trace('ES Offset Y: ' + esNoteOffsetY);
+			}
+
+
+		#end
 		super.update(elapsed);
 
 		gfTimer += elapsed;
@@ -3365,10 +3405,13 @@ class GameState extends MusicBeatState
 						if (daNote.isSustainNote)
 						{
 							// Remember = minus makes notes go up, plus makes them go down
+						
 							if (daNote.animation.curAnim.name.endsWith('end') && daNote.prevNote != null)
 								daNote.y += daNote.prevNote.height;
 							else
 								daNote.y += daNote.height / 2;
+
+								
 
 							// If not in botplay, only clip sustain notes when properly hit, botplay gets to clip it everytime
 							if (!botPlayShit)
@@ -3408,6 +3451,7 @@ class GameState extends MusicBeatState
 							daNote.y = (strumLineNotes.members[Math.floor(Math.abs(daNote.noteData))].y
 								- 0.45 * (Conductor.songPosition - daNote.strumTime) * FlxMath.roundDecimal(FlxG.save.data.scrollSpeed == 1 ? SONG.speed : FlxG.save.data.scrollSpeed,
 									2));
+
 						if (daNote.isSustainNote)
 						{
 							daNote.y -= daNote.height / 2;
@@ -3582,8 +3626,11 @@ class GameState extends MusicBeatState
 				}
 
 				if (daNote.isSustainNote)
+				{
 					daNote.x += daNote.width / 2 + 17;
-
+					if(es)
+						daNote.x += daNote.width * esNoteScale;
+				}
 				// //@notrace(daNote.y);
 				// WIP interpolation shit? Need to fix the pause issue
 				// daNote.y = (strumLine.y - (songTime - daNote.strumTime) * (0.45 * SONG.speed));

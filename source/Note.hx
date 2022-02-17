@@ -157,6 +157,7 @@ class Note extends FlxSprite
 		this.prevNote = prevNote;
 		isSustainNote = sustainNote;
 
+
 		
 		x += 50;
 		// MAKE SURE ITS DEFINITELY OFF SCREEN?
@@ -172,7 +173,14 @@ class Note extends FlxSprite
 
 		//get note skin depending on what song are playing.
 		GameState.songPlayer.getNoteSkin(this);
+		if (GameState.instance != null && GameState.es)
+		{
+			this.scale.x = GameState.esNoteScale;
 
+			if(!isSustainNote)
+			this.scale.y = GameState.esNoteScale;
+		}
+		
 		colorSwap = new ColorSwap();
 
 		switch (noteData)
@@ -204,6 +212,7 @@ class Note extends FlxSprite
 			alpha = 0.6;
 
 			x += width / 2;
+		
 
 			switch (noteData)
 			{
@@ -226,6 +235,9 @@ class Note extends FlxSprite
 
 			if (prevNote.isSustainNote)
 			{
+				if(GameState.es)
+					y += 20;
+
 				switch (prevNote.noteData)
 				{
 					case 0:
