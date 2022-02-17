@@ -610,6 +610,9 @@ class SongPlayerManager
 				songPlayer = new DeepBreaths(); 
 			case 'obsession':
 				songPlayer = new Obsession();
+
+			case 'reconciliation':
+				songPlayer = new Reconciliation();
 		}
 
 		return songPlayer;
