@@ -385,7 +385,7 @@ class SongManager
 			{
 				folder: 'week_dab',
 				character: 'dave',
-				songTitle: 'V.S Dave!',
+				songTitle: 'V.S Dave',
 				songList: ['House', 'Insanity', 'Polygonized']
 			}
 		),
@@ -395,7 +395,7 @@ class SongManager
 			{
 				folder: 'week_dab',
 				character: 'dave',
-				songTitle: 'V.S Bambi!',
+				songTitle: 'V.S Bambi',
 				songList: ['Blocked', 'Corn-Theft', 'Maze']
 			}
 		),
@@ -405,7 +405,7 @@ class SongManager
 			{
 				folder: 'week_dab',
 				character: 'dab',
-				songTitle: 'V.S Dave & Bambi!',
+				songTitle: 'V.S Dave & Bambi',
 				songList: ['Bonus-song', 'Mealie', 'Supernovae', 'Glitch', 'Vs-dave-thanksgiving']
 			}
 		),
@@ -425,7 +425,7 @@ class SongManager
 			{
 				folder: 'week_ga',
 				character: 'dab_ga',
-				songTitle: 'Golden Apple!',
+				songTitle: 'Golden Apple',
 				songList: ['Applecore', 'Sugar-rush']
 			}
 		),
@@ -435,7 +435,7 @@ class SongManager
 			{
 				folder: 'week_dokidoki',
 				character: 'dokidoki',
-				songTitle: 'Doki Doki',
+				songTitle: 'Doki Doki Takeover',
 				songList: ['high_school_conflict', 'bara_no_yume', 'your_demise', 'rain_clouds', 'Wireframe', 'Algebra']
 			}
 		),
