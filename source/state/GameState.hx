@@ -570,8 +570,10 @@ class GameState extends MusicBeatState
 					startCharacterLua(newDad.curCharacter);
 
 					// turn on for debug
+					#if debug
 					// newDad.visible = true;
 					// newDad.alpha = 1;
+					#end
 				}
 
 			case 2:
@@ -588,8 +590,10 @@ class GameState extends MusicBeatState
 					startCharacterLua(newGf.curCharacter);
 
 					// turn on for debug
+					#if debug
 					// newGf.visible = true;
 					// newGf.alpha = 1;
+					#end
 				}
 
 			case 3:
@@ -1684,6 +1688,12 @@ class GameState extends MusicBeatState
 		if (CURRENT_SONG == 'thorns')
 			curStage = 'schoolEvil';
 
+
+		this.boyfriendGroup = new FlxSpriteGroup(0, 0);
+		this.dadGroup = new FlxSpriteGroup(0, 0);
+		this.gfGroup = new FlxSpriteGroup(0, 0);
+
+
 		songPlayer.init();
 
 		// no need create dialogue shit in freeplay, yay
@@ -1720,27 +1730,34 @@ class GameState extends MusicBeatState
 		#if LUA_ALLOWED
 		for (notetype in noteTypeMap.keys())
 		{
-			// trace('fffff 2');
-
+			#if android
+			var file = notetype + '.lua';
+			var luaType = 'custom_notetypes';
+			FunkinLua.createLuaAndroid(file, SongPlayer.luaFolder, luaType);
+			#else
 			var luaToLoad:String = Paths.modFolders('custom_notetypes/' + notetype + '.lua');
-			// trace('try load custom: ' + luaToLoad);
 			if (FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
 			}
-
-			// trace('fffff 4');
+			#end
 		}
 		// trace('fffff 4');
 
 		for (event in eventPushedMap.keys())
 		{
+			#if android
+			var file = event + '.lua';
+			var luaType = 'custom_events';
+			FunkinLua.createLuaAndroid(file, SongPlayer.luaFolder, luaType);
+			#else
 			var luaToLoad:String = Paths.modFolders('custom_events/' + event + '.lua');
 			// trace('load custom event: ' + luaToLoad);
 			if (FileSystem.exists(luaToLoad))
 			{
 				createLua(luaToLoad);
 			}
+			#end
 		}
 		#end
 
@@ -2314,16 +2331,20 @@ class GameState extends MusicBeatState
 
 		var file:String = '';
 
-		#if mobile
+		#if ios
 		file = "assets/assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
 		#else
 		file = "assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
 		#end
 		
-
-		#if sys
+		#if !android
 		if (FileSystem.exists(file))
 		{
+		#else
+		if (openfl.utils.Assets.exists(file))
+		{
+		#end
+
 			var jsonEvent = Song.loadFromJson("events", SongPlayer.folder + SONG_NAME);
 			var eventsData = jsonEvent.events;
 
@@ -2387,24 +2408,30 @@ class GameState extends MusicBeatState
 				trace('Null event shit: ' + SONG_NAME);
 		}
 
-		#end
-
-
 		//load shit
 		var script:String = '';
-		#if mobile
+		#if ios
 		script = "assets/assets/data/" + SongPlayer.folder + SONG_NAME + '/script.lua';
 		#else
 		script = "assets/data/" + SongPlayer.folder + SONG_NAME + '/script.lua';
 		#end
 
-		#if sys
+		#if !android
 		if (FileSystem.exists(script))
 		{
-				createLua(script);
+		#else
+		if (openfl.utils.Assets.exists(script))
+		{	
+		#end	
+			#if android
+			var file = 'script.lua';
+			var daFolder = "assets/data/" + SongPlayer.folder;
+			var luaType = SONG_NAME;
+			FunkinLua.createLuaAndroid(file, daFolder, luaType);
+			#else
+			createLua(script);
+			#end
 		}
-
-		#end
 
 
 

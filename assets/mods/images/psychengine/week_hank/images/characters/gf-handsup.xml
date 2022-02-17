@@ -17,7 +17,7 @@
 <SubTexture name="gf idle0011" x="1494" y="915" width="498" height="452" frameX="0" frameY="-11" frameWidth="501" frameHeight="463" />
 <SubTexture name="gf idle0012" x="0" y="1375" width="501" height="452" frameX="0" frameY="-11" frameWidth="501" frameHeight="463" />
 <SubTexture name="gf idle0013" x="501" y="1375" width="501" height="452" frameX="0" frameY="-11" frameWidth="501" frameHeight="463" />
-<SubTexture name="gf idle0014" x="1002" y="1375" width="498" height="4h52" frameX="0" frameY="-11" frameWidth="501" frameHeight="463" />
+<SubTexture name="gf idle0014" x="1002" y="1375" width="498" height="452" frameX="0" frameY="-11" frameWidth="501" frameHeight="463" />
 <SubTexture name="gf idle0015" x="1500" y="1375" width="498" height="453" frameX="0" frameY="-10" frameWidth="501" frameHeight="463" />
 <SubTexture name="gf idle0016" x="0" y="1828" width="498" height="453" frameX="0" frameY="-10" frameWidth="501" frameHeight="463" />
 <SubTexture name="gf idle0017" x="498" y="1828" width="498" height="453" frameX="0" frameY="-10" frameWidth="501" frameHeight="463" />

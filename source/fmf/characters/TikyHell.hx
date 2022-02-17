@@ -22,7 +22,7 @@ class TikyHell extends TikyMask
 	private var smolFrame:Int = 5;
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/trickyhell/tiky', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/tricky//tiky', 'mods');
 		frames = tex;
 	}
 

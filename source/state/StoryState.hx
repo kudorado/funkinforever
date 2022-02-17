@@ -52,12 +52,12 @@ class StoryState extends MusicBeatState
 	public static var curDifficulty:Int = 1;
 
 	public static var weekUnlocked:Array<Bool> =
-	 [true, true, true, true, true, true, true,
-	 true, true, true, true, true, true, true,
-	 true, true, true, true, true, true, true,
-	 true, true, true, true, true, true, true,
-	 true, true, true, true, true, true, true,
-	 true, true, true, true, true, true, true,
+	 [true, true, true, false, false, false, false,
+	false, false, false, false, false, false, false,
+	false, false, false, false, false, false, false,
+	false, false, false, false, false, false, false,
+	false, true, true, true, true, true, true,
+	false, false, true, true, true, true, true,
 	 true, true, true, true, true, true, true,
 	 true, true, true, true, true, true, true];
 
@@ -395,7 +395,7 @@ class StoryState extends MusicBeatState
 		var daDirectory = '';
 		var daSong = songName + diffic;
 
-		#if mobile
+		#if ios
 		daDirectory = "assets/assets/data/" + SongPlayer.folder + songLowercase;
 		#else
 		daDirectory = "assets/data/" + SongPlayer.folder + songLowercase;

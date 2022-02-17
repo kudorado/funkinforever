@@ -17,7 +17,7 @@ class TrickyMask extends SongPlayer
 
 	public override function getDadTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/trickymask/tikymask', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/tricky/tikymask', 'mods');
 		dad.frames = tex;
 	}
 

@@ -12,7 +12,7 @@ class GSPico extends Boyfriend
 	
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/gspico/pico', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/gspico/pico_gs', 'mods');
 		frames = tex;
 	}
 

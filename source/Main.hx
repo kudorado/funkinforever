@@ -30,8 +30,11 @@ class Main extends Sprite
 	public static var daTabletShit:Bool;
 
 
-
-
+	#if android
+	public static var path:String = lime.system.System.applicationStorageDirectory;
+	#else
+	public static var path:String = '';
+	#end
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
@@ -122,10 +125,12 @@ class Main extends Sprite
 
 			fuckZoom = zoom;
 
+
 			gameWidth = Math.ceil(stageWidth / zoom);
 			gameHeight = Math.ceil(stageHeight / zoom);
 
-			//@notrace('fucking zoom: ' + zoom);
+			trace(gameWidth + ',' + gameHeight);
+			trace('fucking zoom: ' + zoom);
 		}
 
 		#if !debug

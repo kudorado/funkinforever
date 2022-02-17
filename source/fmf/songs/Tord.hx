@@ -15,7 +15,7 @@ class Tord extends SongPlayer
 	
 	override function getDadTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/tord/tord_assets', "mods");
+		var tex = Paths.getSparrowAtlas('pc/edds/tord_assets', "mods");
 		dad.frames = tex;
 	}
 

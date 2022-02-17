@@ -22,7 +22,7 @@
 			"name": "tiky idle",
 			"indices": []
 		},
-		{
+		{	
 			"loop": false,
 			"offsets": [
 				88,

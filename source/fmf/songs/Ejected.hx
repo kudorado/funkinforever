@@ -42,25 +42,25 @@ class Ejected extends SongPlayer
 
 		gameState.defaultCamZoom = 0.7;
 
-		var bg1:FlxSprite = new FlxSprite(-1000, -1600).loadGraphic(Paths.image('bg/sus/ejected1/sky', 'mods'));
+		var bg1:FlxSprite = new FlxSprite(-1000, -1600).loadGraphic(Paths.image('bg/sus/ejected/sky', 'mods'));
 		bg1.antialiasing = true;
 		bg1.scale.y = 1;
 		bg1.scale.x = 1;
 		gameState.add(bg1);
 
-        var fgClouds:FlxSprite = new FlxSprite(-1150, 500).loadGraphic(Paths.image('bg/sus/ejected1/fgClouds', 'mods'));
+        var fgClouds:FlxSprite = new FlxSprite(-1150, 500).loadGraphic(Paths.image('bg/sus/ejected/fgClouds', 'mods'));
 		fgClouds.antialiasing = true;
 		fgClouds.scale.y = 1;
 		fgClouds.scale.x = 1;
 		gameState.add(fgClouds);
 
-        speedLines1 = new FlxSprite(-200, 0).loadGraphic(Paths.image('bg/sus/ejected1/speedLines', 'mods'));
+        speedLines1 = new FlxSprite(-200, 0).loadGraphic(Paths.image('bg/sus/ejected/speedLines', 'mods'));
 		speedLines1.antialiasing = true;
 		speedLines1.scale.y = 2;
 		speedLines1.scale.x = 2;
 		gameState.add(speedLines1);
 
-        speedLines2 = new FlxSprite(-200, 1000).loadGraphic(Paths.image('bg/sus/ejected1/speedLines', 'mods'));
+        speedLines2 = new FlxSprite(-200, 1000).loadGraphic(Paths.image('bg/sus/ejected/speedLines', 'mods'));
 		speedLines2.antialiasing = true;
 		speedLines2.scale.y = 2;
 		speedLines2.scale.x = 2;

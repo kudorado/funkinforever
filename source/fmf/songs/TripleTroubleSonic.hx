@@ -16,7 +16,7 @@ class TripleTroubleSonic extends SongPlayer
 
     override function getDadTex()
     {
-        var tex = Paths.getSparrowAtlas('pc/sonic/Tails', 'mods');
+        var tex = Paths.getSparrowAtlas('pc/tailsexe/Tails', 'mods');
         dad.frames = tex;
     }
 

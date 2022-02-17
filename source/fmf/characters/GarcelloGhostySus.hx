@@ -14,7 +14,7 @@ class GarcelloGhostySus extends Boyfriend
 
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/garcelloghosty/garcello_ghosty', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/garcello/garcello_ghosty', 'mods');
 		frames = tex;
 	}
 

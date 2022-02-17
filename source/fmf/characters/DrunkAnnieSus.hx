@@ -12,8 +12,8 @@ class DrunkAnnieSus extends Boyfriend
 	
 	override function getTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/drunkannie/drunkAnnie', 'mods');
-		var tex2 = Paths.getSparrowAtlas('pc/drunkannie/drunkAnnie_miss', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/annie/drunk_annie', 'mods');
+		var tex2 = Paths.getSparrowAtlas('pc/annie/drunkAnnie_miss', 'mods');
 
 		for (frame in tex2.frames)
 		{

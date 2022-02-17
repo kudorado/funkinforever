@@ -49,16 +49,27 @@ class BaseSong
 	function loadMapLua()
 	{
 		#if LUA_ALLOWED
-		var luaToLoad:String = Paths.modFolders('stages/' + GameState.SONG.stage + '.lua');
+
+		var curStage = GameState.SONG.stage;
+		var luaToLoad:String = Paths.modFolders('stages/' + curStage + '.lua');
+		#if android
+		var daFile = curStage + '.lua';
+		var daPath = "mods:" + "assets/mods/images/psychengine/" +  SongPlayer.folder;
+		FunkinLua.createLuaAndroid(daFile, SongPlayer.luaFolder, 'stages');
+		#else
+
 		if (FileSystem.exists(luaToLoad))
 		{
 			trace('Load map: ' + luaToLoad);
 			GameState.createLua(luaToLoad);
+			
 		}
+		#end
 
 		gameState.boyfriendGroup = new FlxSpriteGroup(0, 0);
 		gameState.dadGroup = new FlxSpriteGroup(0, 0);
 		gameState.gfGroup = new FlxSpriteGroup(0, 0);
+
 		#end
 	}
 

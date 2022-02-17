@@ -426,43 +426,17 @@ class SongManager
 				folder: 'week_ga',
 				character: 'dab_ga',
 				songTitle: 'Golden Apple!',
-				songList: ['Disruption', 'Applecore', 'Disability', 'Wireframe', 'Algebra']
+				songList: ['Applecore', 'Sugar-rush']
 			}
 		),
 		
-
-		new SongData
-		(
-			{
-				folder: 'week_ga',
-				character: 'dab_ga',
-				songTitle: 'Golden Apple Extras!',
-				songList: 
-				[
-					'Sugar-rush',
-					'Origin',
-					'Metallic',
-					'Strawberry',
-					'Keyboard',
-					'Cycles',
-					'Thunderstorm',
-					'Wheels',
-					'Dave-x-bambi-shipping-cute',
-					'Recovered-project',
-					'Sart-producer',
-					'Old-strawberry',
-					'Ugh'
-				]
-			}
-		),
-
 		new SongData
 		(
 			{
 				folder: 'week_dokidoki',
 				character: 'dokidoki',
 				songTitle: 'Doki Doki',
-				songList: ['high_school_conflict', 'Applecore', 'Disability', 'Wireframe', 'Algebra']
+				songList: ['high_school_conflict', 'rain_clouds', 'Disability', 'Wireframe', 'Algebra']
 			}
 		),
 

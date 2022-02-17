@@ -13,7 +13,7 @@ class SkyMad extends SongPlayer
 {
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/skymad/sky_mad_assets', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/sky/sky_mad_assets', 'mods');
 		dad.frames = tex;
 	}
 

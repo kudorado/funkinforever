@@ -29,7 +29,8 @@ class Note extends FlxSprite
 	[
 		'Hell Note', 'EX Note', 'Hurt Note', 
 		'Eye Note', 'Bullet_Note',
-		'Sword', 'Glitch', 'GF Glitch'
+		'Sword', 'Glitch', 'GF Glitch',
+		'3d'
 	];
 
 
@@ -146,6 +147,7 @@ class Note extends FlxSprite
 		if (mustPress && (!FlxG.save.data.showDadNote || !FlxG.save.data.showDad))
 		{
 			// prevent lag babe
+			this.visible = false;
 			return;
 		}
 
@@ -258,6 +260,15 @@ class Note extends FlxSprite
 			texture = '';
 		if (suffix == null)
 			suffix = '';
+		
+		if (mustPress && (!FlxG.save.data.showDadNote || !FlxG.save.data.showDad))
+		{
+			// prevent lag babe
+			this.visible = false;
+			return;
+		}
+
+			
 
 		var skin:String = texture;
 		if (texture.length < 1)

@@ -17,8 +17,8 @@ class TikyMask extends Boyfriend
 
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/trickymask/tikymask', 'mods');
-		var tex2 = Paths.getSparrowAtlas('pc/trickymask/tikymask_miss', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/tricky/tikymask', 'mods');
+		var tex2 = Paths.getSparrowAtlas('pc/tricky/tikymask_miss', 'mods');
 
 		for (frame in tex2.frames)
 		{

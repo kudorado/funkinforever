@@ -12,7 +12,7 @@ class SkyAngrySus extends Boyfriend
 	
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/skyangry/sky_angry', "mods");
+		var tex = Paths.getSparrowAtlas('pc/sky/sky_angry', "mods");
 		frames = tex;
 	}
 

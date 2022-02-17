@@ -12,7 +12,7 @@ class SkyTiredSus extends Boyfriend
 	
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/skytired/sky_tired', "mods");
+		var tex = Paths.getSparrowAtlas('pc/sky/sky_tired', "mods");
 		frames = tex;
 	}
 

@@ -16,7 +16,7 @@ class Chaos extends SongPlayer
 
     override function getDadTex()
     {
-        var tex = Paths.getSparrowAtlas('pc/sonic/fleetway/Fleetway_Super_Sonic', 'mods');
+        var tex = Paths.getSparrowAtlas('pc/sonic/Fleetway_Super_Sonic', 'mods');
         dad.frames = tex;
     }
 
