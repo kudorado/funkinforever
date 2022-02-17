@@ -34,6 +34,7 @@ class AnimationState extends FlxState
 	var flipBF:Bool;
 
 	var debugCharacter:DebugCharacter;
+	public static var isActive:Bool;
 
 	public function new(debugChar:DebugCharacter, flipBF:Bool = false)
 	{
@@ -42,9 +43,18 @@ class AnimationState extends FlxState
 		this.flipBF = flipBF;
 	}
 
+
+	override function destroy()
+	{
+		isActive = false;
+		super.destroy();
+	}
 	override function create()
 	{
+		isActive = true;
 		FlxG.sound.music.stop();
+
+		// GameState.instance.initCharacterGroups();
 
 		var gridBG:FlxSprite = FlxGridOverlay.create(10, 10);
 		gridBG.scrollFactor.set(0.5, 0.5);
@@ -112,6 +122,7 @@ class AnimationState extends FlxState
 		add(camFollow);
 
 		FlxG.camera.follow(camFollow);
+
 
 		super.create();
 	}

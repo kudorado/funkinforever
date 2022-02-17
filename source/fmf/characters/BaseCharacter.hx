@@ -379,7 +379,7 @@ class BaseCharacter extends FlxSprite
 
 		var dadVar:Float = 6.1;
 
-		if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001)
+		if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001 && !debugMode)
 		{
 			dance();
 			holdTimer = 0;

@@ -1694,10 +1694,7 @@ class GameState extends MusicBeatState
 			curStage = 'schoolEvil';
 
 
-		this.boyfriendGroup = new FlxSpriteGroup(0, 0);
-		this.dadGroup = new FlxSpriteGroup(0, 0);
-		this.gfGroup = new FlxSpriteGroup(0, 0);
-
+		initCharacterGroups();
 
 		songPlayer.init();
 
@@ -2068,6 +2065,14 @@ class GameState extends MusicBeatState
 	public var esNoteOffsetY:Int = -1;
 
 	var mcontrolsArray:Array<FlxSprite>;
+
+	public function initCharacterGroups()
+	{
+		this.boyfriendGroup = new FlxSpriteGroup(0, 0);
+		this.dadGroup = new FlxSpriteGroup(0, 0);
+		this.gfGroup = new FlxSpriteGroup(0, 0);
+
+	}
 	
 	function whereAmI()
 	{
@@ -3245,10 +3250,10 @@ class GameState extends MusicBeatState
 		#end
 		dtrace('3012');
 
-		if (FlxG.keys.justPressed.SEVEN)
-		{
-			FlxG.switchState(new ChartingState());
-		}
+		// if (FlxG.keys.justPressed.SEVEN)
+		// {
+		// 	FlxG.switchState(new ChartingState());
+		// }
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);

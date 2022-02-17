@@ -404,7 +404,8 @@ class BaseSong
 	{
 		if (dad != null)
 		{
-			gameState.dadGroup.remove(dad);
+			if (!AnimationState.isActive)
+				gameState.dadGroup.remove(dad);
 		}
 		if (destroyOldDad && dad != null)
 			dad.destroy();
@@ -414,7 +415,9 @@ class BaseSong
 
 		dad = song.dad;
 
-		gameState.dadGroup.add(dad);
+		if (!AnimationState.isActive)
+			gameState.dadGroup.add(dad);
+
 		dad.playAnim(gameState.lastNote, true);
 
 	}
@@ -423,12 +426,18 @@ class BaseSong
 	{
 		if (bf != null)
 		{
-			gameState.boyfriendGroup.remove(bf);
+			if (!AnimationState.isActive)
+				gameState.boyfriendGroup.remove(bf);
+
 			bf.destroy();
 		}
 
 		this.bf = pc;
-		gameState.boyfriendGroup.add(bf);
+
+		if(!AnimationState.isActive)
+			gameState.boyfriendGroup.add(bf);
+		else
+			gameState.add(bf);
 	}
 
 	private function changePc(pcName:String)
