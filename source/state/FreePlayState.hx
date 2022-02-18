@@ -444,7 +444,6 @@ class FreePlayState extends MusicBeatState
 			// #if PRELOAD_ALL
 			// FlxG.sound.music.stop();
 			// #end
-			Controller._pad.visible = false;
 			FlxG.switchState(new MenuState());
 		}
 
@@ -578,7 +577,7 @@ class FreePlayState extends MusicBeatState
 
 		if (callback != null)
 			callback();
-		
+
 	}
 
 

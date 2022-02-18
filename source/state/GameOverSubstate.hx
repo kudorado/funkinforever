@@ -94,7 +94,12 @@ class GameOverSubstate extends MusicBeatSubstate
         add(levelInfo);
 
 		levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
-		FreePlayState.changeDiff(levelDifficulty, 0, function()
+        levelDifficulty.scrollFactor.set();
+        levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
+        levelDifficulty.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+		levelDifficulty.updateHitbox();
+
+        FreePlayState.changeDiff(levelDifficulty, 0, function()
 		{
 			levelDifficulty.x = FlxG.width - (levelDifficulty.width + 10);
 		});
@@ -102,13 +107,8 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (!allowChangeDiff)
 			levelDifficulty.text = '';
 
-        levelDifficulty.scrollFactor.set();
-        levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
-        levelDifficulty.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 
-        levelDifficulty.updateHitbox();
         add(levelDifficulty);
-
         levelDifficulty.alpha = 0;
         levelInfo.alpha = 0;
 
@@ -163,12 +163,20 @@ class GameOverSubstate extends MusicBeatSubstate
         GameState.instance.resyncTweens();
     }
 
+
+    var selected:Bool;
+
     override function update(elapsed:Float)
     {
-        if (pauseMusic.volume < 0.5)
-            pauseMusic.volume += 0.01 * elapsed;
+	
 
         super.update(elapsed);
+
+        if (selected)
+			return;
+
+        if (pauseMusic.volume < 0.5)
+            pauseMusic.volume += 0.01 * elapsed;
 
         if (allowChangeDiff)
 		{
@@ -203,38 +211,52 @@ class GameOverSubstate extends MusicBeatSubstate
 
         if (Controller.ACCEPT)
         {
+            selected = true;
             var daSelected:String = menuItems[curSelected];
 
             switch (daSelected)
             {
                 case "Revive":
-                    // FlxG.sound.play(Paths.sound('confirmMenu'));
                     AdMob.showRewardVideo();
                     #if !mobile
                     onRewarded("shit");
                     #end
 
                 case "Restart Song":
+                    GameState.instance.disableCameras();
+                    Controller._pad.visible = false;
+
 					GameState.instance.gameNa();
                     AdMob.showInterstitial(60);
+                    LoadingState.setStaticTransition();
+
                     // FlxG.sound.play(Paths.music('gameOverEnd'));
 					LoadingState.createBlackFadeIn(this, function()
 					{
+                        LoadingState.setStaticTransition();
+                        GameState.instance.createEmptyBlack();
 						FlxG.resetState();
-					}, GameState.instance.camHUD);
+					}, null);
                 
                 case 'Customization':
+					GameState.instance.disableCameras();
+					Controller._pad.visible = false;
 
                     GameState.instance.gameNa();
                     AdMob.showInterstitial(60);
+                    LoadingState.setStaticTransition();
+
                     // FlxG.sound.play(Paths.music('gameOverEnd'));
 					LoadingState.createBlackFadeIn(this, function()
 					{
+                        GameState.instance.createEmptyBlack();
 						FlxG.switchState(new SelectionState());
-					}, GameState.instance.camHUD);
+					}, null);
                 
 
                 case "Exit to menu":
+                    GameState.instance.disableCameras();
+                    Controller._pad.visible = false;
 
 					GameState.instance.gameNa();
 
@@ -242,12 +264,14 @@ class GameOverSubstate extends MusicBeatSubstate
 					// FlxG.sound.play(Paths.music('gameOverEnd'));
 					LoadingState.createBlackFadeIn(this, function()
 					{
+                        GameState.instance.createEmptyBlack();
+
 						if (GameState.isStoryMode)
 							FlxG.switchState(new StoryState());
 						else
 							FlxG.switchState(new FreePlayState());
 
-					}, GameState.instance.camHUD);
+					}, null);
 
             }
 
@@ -261,6 +285,11 @@ class GameOverSubstate extends MusicBeatSubstate
         }
     }
 
+	function confirmSound()
+	{
+		if (FlxG.sound != null)
+			FlxG.sound.play(Paths.sound('confirmMenu'));
+    }
     override function destroy()
     {
         pauseMusic.destroy();

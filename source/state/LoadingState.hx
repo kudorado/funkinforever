@@ -271,8 +271,20 @@ class LoadingState extends MusicBeatState
                 group.remove(blackScreen);
         });
     }
- 
-    public static var isAlertVisible:Bool;
+	public static function createEmptyBlack(group:FlxGroup)
+	{
+		var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
+		
+        blackScreen.scaleToFit();
+        var shitCam = new FlxCamera();
+		shitCam.bgColor.alpha = 0;
+		FlxG.cameras.add(shitCam);
+
+		blackScreen.cameras = [shitCam];
+		group.add(blackScreen);
+	}
+
+	public static var isAlertVisible:Bool;
     
 	public static function showAlert(group:FlxGroup, message:String, alertCam:FlxCamera = null, callback:Void->Void = null)
 	{
@@ -323,7 +335,7 @@ class LoadingState extends MusicBeatState
                 isAlertVisible = false;
 				group.remove(fuckshit);
 				group.remove(msgText);
-                
+
 				if (callback != null)
 					callback();
 			});

@@ -3728,14 +3728,14 @@ class GameState extends MusicBeatState
 		if (storyDifficulty == 3)
 		{
 			// shit difficulty only
-			if (health > 0.25)
+			if (health > 0.1)
 			{
 				var npsCalculated = Math.min(targetNPS, 100);
 				npsCalculated = Math.max(targetNPS, 500);
 
 				if (daNote.isSustainNote)
 				{
-					var subtract = 0.001;
+					var subtract = 0.002;
 					subtract *= (100 / npsCalculated);
 
 					// if(CURRENT_SONG == 'tutorial' || CURRENT_SONG == 'tutorial-remix')
@@ -3746,7 +3746,7 @@ class GameState extends MusicBeatState
 				else
 				{
 					// health -= 0.04;
-					var subtract = 0.08;
+					var subtract = 0.16;
 					subtract *= (100 / npsCalculated);
 					health -= subtract;
 				}
@@ -4001,7 +4001,7 @@ class GameState extends MusicBeatState
 			FlxG.switchState(new FreePlayState());		// FlxG.sound.play(Paths.music('gameOverEnd'));
 		
 	}
-	private function createEmptyBlack()
+	public function createEmptyBlack()
 	{
 		var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
 		var shitCam = new FlxCamera();
@@ -4330,6 +4330,8 @@ class GameState extends MusicBeatState
 	
 		if (healthRating < 0 && isStoryMode && !storyCompleted)
 			healthRating /= 5;
+
+
 
 		health += healthRating;
 		if (health > 2)

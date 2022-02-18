@@ -49,7 +49,7 @@ class VictorySubState extends MusicBeatSubstate
         GameState.instance.pauseGame();
         allowChangeDiff = !GameState.isStoryMode || (GameState.isStoryMode && GameState.storyCompleted);
 
-        
+
         if (GameState.isStoryMode)
 			menuItems = ['Next Song', 'Exit to menu'];
 
@@ -101,7 +101,11 @@ class VictorySubState extends MusicBeatSubstate
 
         add(levelInfo);
 
-		levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
+        levelDifficulty.scrollFactor.set();
+        levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
+        levelDifficulty.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+        levelDifficulty.updateHitbox();
+        levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
 		FreePlayState.changeDiff(levelDifficulty, 0, function()
 		{
 			levelDifficulty.x = FlxG.width - (levelDifficulty.width + 10);
@@ -110,11 +114,6 @@ class VictorySubState extends MusicBeatSubstate
 		if (!allowChangeDiff)
 			levelDifficulty.text = '';
 
-        levelDifficulty.scrollFactor.set();
-        levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
-        levelDifficulty.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
-
-        levelDifficulty.updateHitbox();
         add(levelDifficulty);
 
         levelDifficulty.alpha = 0;
@@ -201,17 +200,19 @@ class VictorySubState extends MusicBeatSubstate
         if (Controller.ACCEPT)
         {
             var daSelected:String = menuItems[curSelected];
+            GameState.instance.disableCameras();
+            Controller._pad.visible = false;
 
             switch (daSelected)
             {
                 case "Next Song":
 					GameState.instance.gameNa();
                     AdMob.showInterstitial(60);
-
                     LoadingState.createBlackFadeIn(this, function()
 					{
+                        LoadingState.createEmptyBlack(this);
                         LoadingState.loadAndSwitchState(new GameState(), true);
-					}, GameState.instance.camHUD);
+					}, null);
 				          
 
 				case 'Customization':
@@ -220,20 +221,24 @@ class VictorySubState extends MusicBeatSubstate
 
                     LoadingState.createBlackFadeIn(this, function()
 					{
+                        LoadingState.createEmptyBlack(this);
                         FlxG.switchState(new SelectionState());
-					}, GameState.instance.camHUD);
+					}, null);
 
                 case "Exit to menu":
 					GameState.instance.gameNa();
                     AdMob.showInterstitial(60);
+
 					// FlxG.sound.play(Paths.music('gameOverEnd'));
 					LoadingState.createBlackFadeIn(this, function()
 					{
+                        LoadingState.createEmptyBlack(this);
+
 						if (GameState.isStoryMode)
 							FlxG.switchState(new StoryState());
 						else
 							FlxG.switchState(new FreePlayState());
-					}, GameState.instance.camHUD);
+					}, null);
 
             }
 

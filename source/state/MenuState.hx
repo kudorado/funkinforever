@@ -209,86 +209,73 @@ class MenuState extends MusicBeatState
 				changeItem(1);
 			}
 
-			// if (Controller.BACK)
-			// {
-			// 	FlxG.switchState(new TitleState());
-			// }
-
 			if (Controller.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'donate')
+				selectedSomethin = true;
+
+				FlxG.sound.play(Paths.sound('confirmMenu'), 0.5);
+
+				if (optionShit[curSelected] == 'freeplay')
 				{
-					// fancyOpenURL("https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game");
+					// sky ugh
+					magenta.loadGraphic(Paths.image('menuDesat'));
+					magenta.setGraphicSize(Std.int(magenta.width));
+					magenta.screenCenter();
+					magenta.antialiasing = true;
+					magenta.scaleToFit();
+
+					FlxG.sound.play(Paths.sound('sky-ugh'), 2);
 				}
 				else
 				{
-					selectedSomethin = true;
+					// remove(magenta);
+					magenta.loadGraphic(Paths.image('menuDeshit'));
+					// magenta.setGraphicSize(Std.int(magenta.width * 1.1));
+					magenta.screenCenter();
+					magenta.antialiasing = true;
+					magenta.scaleToFit();
+					// add(magenta);
+					FlxG.sound.play(Paths.sound('gf-ugh'), 2);
+				}
 
-					FlxG.sound.play(Paths.sound('confirmMenu'), 0.5);
-					
-					if (optionShit[curSelected] == 'freeplay')
+				if (FlxG.save.data.flashing)
+				{
+					new FlxTimer().start(0.1, function shit(tmr:FlxTimer)
 					{
-						//sky ugh
-						magenta.loadGraphic(Paths.image('menuDesat'));
-						magenta.setGraphicSize(Std.int(magenta.width));
-						magenta.screenCenter();
-						magenta.antialiasing = true;
-						magenta.scaleToFit();
+						magenta.visible = true;
+					}, 1);
+				}
 
-						FlxG.sound.play(Paths.sound('sky-ugh'), 2);
+				menuItems.forEach(function(spr:FlxSprite)
+				{
+					if (curSelected != spr.ID)
+					{
+						FlxTween.tween(spr, {alpha: 0}, 1.3, {
+							ease: FlxEase.quadOut,
+							onComplete: function(twn:FlxTween)
+							{
+								spr.kill();
+							}
+						});
 					}
 					else
 					{
-						// remove(magenta);
-						magenta.loadGraphic(Paths.image('menuDeshit'));
-						// magenta.setGraphicSize(Std.int(magenta.width * 1.1));
-						magenta.screenCenter();
-						magenta.antialiasing = true;
-						magenta.scaleToFit();
-						// add(magenta);
-						FlxG.sound.play(Paths.sound('gf-ugh'), 2);
-					}
-
-
-					if (FlxG.save.data.flashing)
-					{
-						new FlxTimer().start(0.1, function shit(tmr:FlxTimer) 
+						if (FlxG.save.data.flashing)
 						{
-							magenta.visible = true;
-						}, 1);
-					}
-				
-					menuItems.forEach(function(spr:FlxSprite)
-					{
-						if (curSelected != spr.ID)
-						{
-							FlxTween.tween(spr, {alpha: 0}, 1.3, {
-								ease: FlxEase.quadOut,
-								onComplete: function(twn:FlxTween)
-								{
-									spr.kill();
-								}
+							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
+							{
+								goToState();
 							});
 						}
 						else
 						{
-							if (FlxG.save.data.flashing)
+							new FlxTimer().start(1, function(tmr:FlxTimer)
 							{
-								FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
-								{
-									goToState();
-								});
-							}
-							else
-							{
-								new FlxTimer().start(1, function(tmr:FlxTimer)
-								{
-									goToState();
-								});
-							}
+								goToState();
+							});
 						}
-					});
-				}
+					}
+				});
 			}
 		}
 

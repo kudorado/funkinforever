@@ -83,6 +83,11 @@ class PauseSubState extends MusicBeatSubstate
 		add(levelInfo);
 
 		levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
+		levelDifficulty.scrollFactor.set();
+		levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
+		levelDifficulty.updateHitbox();
+		levelDifficulty.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+		
 		FreePlayState.changeDiff(levelDifficulty, 0, function()
 		{
 			levelDifficulty.x = FlxG.width - (levelDifficulty.width + 10);
@@ -93,10 +98,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		startDiff = levelDifficulty.text;
 
-		levelDifficulty.scrollFactor.set();
-		levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
-		levelDifficulty.updateHitbox();
-		levelDifficulty.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+
 
 		add(levelDifficulty);
 
@@ -106,7 +108,7 @@ class PauseSubState extends MusicBeatSubstate
 		levelInfo.x = FlxG.width - (levelInfo.width + 20);
 		levelDifficulty.x = FlxG.width - (levelDifficulty.width + 20);
 
-		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
+		FlxTween.tween(bg, {alpha: 0.85}, 0.4, {ease: FlxEase.quartInOut});
 		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
 		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 

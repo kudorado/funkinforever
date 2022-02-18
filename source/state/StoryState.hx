@@ -378,8 +378,14 @@ class StoryState extends MusicBeatState
 				trace('This story is cleared, play from beginning');
 			}
 			else
+			{
+				//reset diff
+				curDifficulty = 0;
 				GameState.storyCompleted = false;
-			
+
+				trace('Continue story: ' + SongManager.songs[curWeek].songTitle);
+
+			}
 			
 			GameState.playingSong = SongManager.songs[curWeek];
 			
@@ -399,7 +405,6 @@ class StoryState extends MusicBeatState
 
 			GameState.storyWeek = curWeek;
 			GameState.campaignScore = 0;
-			Controller._pad.visible = false;
 
 			LoadingState.createBlackFadeIn(this, function()
 			{
