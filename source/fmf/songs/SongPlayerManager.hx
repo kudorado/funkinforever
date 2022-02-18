@@ -636,7 +636,7 @@ class SongPlayerManager
 				songPlayer = new DualDemise();
 
 			case 'epiphany':
-				songPlayer = new BaraNoYume();
+				songPlayer = new Epiphany();
 
 			case 'erb':
 				songPlayer = new Erb();
