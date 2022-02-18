@@ -53,7 +53,8 @@ class GameOverSubstate extends MusicBeatSubstate
         AdMob.onInterstitialEvent = onRewarded;
 
         GameState.instance.pauseGame();
-
+    
+        allowChangeDiff = !GameState.isStoryMode || (GameState.isStoryMode && GameState.storyCompleted);
 
         pauseMusic = new FlxSound().loadEmbedded(Paths.music('go', 'shared'), true, true);
 		pauseMusic.volume = 0;
@@ -93,8 +94,14 @@ class GameOverSubstate extends MusicBeatSubstate
         add(levelInfo);
 
 		levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
-        levelDifficulty.text = GameState.getDiff().replace(':', '');
-        FreePlayState.getDiff(levelDifficulty);
+		FreePlayState.changeDiff(levelDifficulty, 0, function()
+		{
+			levelDifficulty.x = FlxG.width - (levelDifficulty.width + 10);
+		});
+
+		if (!allowChangeDiff)
+			levelDifficulty.text = '';
+
         levelDifficulty.scrollFactor.set();
         levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
         levelDifficulty.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
@@ -142,7 +149,6 @@ class GameOverSubstate extends MusicBeatSubstate
 		LoadingState.createBlackFadeOut(this, GameState.instance.camOther);
         cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
        
-        allowChangeDiff = !GameState.isStoryMode || (GameState.isStoryMode && GameState.storyCompleted);
       
         Controller.init(this, allowChangeDiff ? FULL : UP_DOWN, A);
         Controller._pad.cameras = [GameState.instance.camOther];

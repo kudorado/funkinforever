@@ -41,12 +41,18 @@ class VictorySubState extends MusicBeatSubstate
 
     public function new(x:Float, y:Float)
     {
-
+   
         AdMob.hideBanner();
 
         super();
 
         GameState.instance.pauseGame();
+        allowChangeDiff = !GameState.isStoryMode || (GameState.isStoryMode && GameState.storyCompleted);
+
+        
+        if (GameState.isStoryMode)
+			menuItems = ['Next Song', 'Exit to menu'];
+
 
         pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast', 'shared'), true, true);
 		pauseMusic.volume = 0;
@@ -96,8 +102,13 @@ class VictorySubState extends MusicBeatSubstate
         add(levelInfo);
 
 		levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
-		var diff = FreePlayState.getDiff(levelDifficulty);
-        levelDifficulty.text = GameState.getDiff().replace(':', '');
+		FreePlayState.changeDiff(levelDifficulty, 0, function()
+		{
+			levelDifficulty.x = FlxG.width - (levelDifficulty.width + 10);
+		});
+
+		if (!allowChangeDiff)
+			levelDifficulty.text = '';
 
         levelDifficulty.scrollFactor.set();
         levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
@@ -137,7 +148,6 @@ class VictorySubState extends MusicBeatSubstate
       
         cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
         
-        allowChangeDiff = !GameState.isStoryMode || (GameState.isStoryMode && GameState.storyCompleted);
 
 		Controller.init(this, allowChangeDiff ? FULL : UP_DOWN, A);
 

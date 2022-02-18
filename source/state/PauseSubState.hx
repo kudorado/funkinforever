@@ -44,6 +44,11 @@ class PauseSubState extends MusicBeatSubstate
 
 		super();
 
+		allowChangeDiff = !GameState.isStoryMode || (GameState.isStoryMode && GameState.storyCompleted);
+
+		if (GameState.isStoryMode)
+			menuItems = ['Resume', 'Restart Song', 'Exit to menu'];
+
 		//recall pause music shit, idunno why
 		GameState.instance.pauseGame();
 
@@ -78,8 +83,13 @@ class PauseSubState extends MusicBeatSubstate
 		add(levelInfo);
 
 		levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
-        levelDifficulty.text = GameState.getDiff().replace(':', '');
-		FreePlayState.getDiff(levelDifficulty);
+		FreePlayState.changeDiff(levelDifficulty, 0, function()
+		{
+			levelDifficulty.x = FlxG.width - (levelDifficulty.width + 10);
+		});
+
+		if(!allowChangeDiff)
+			levelDifficulty.text = '';
 
 		startDiff = levelDifficulty.text;
 
@@ -122,7 +132,6 @@ class PauseSubState extends MusicBeatSubstate
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
-		allowChangeDiff = !GameState.isStoryMode || (GameState.isStoryMode && GameState.storyCompleted);
 
 		Controller.init(this, allowChangeDiff ? FULL : UP_DOWN, A);
         Controller._pad.cameras = [GameState.instance.camOther];
@@ -241,25 +250,31 @@ class PauseSubState extends MusicBeatSubstate
 			switch (daSelected)
 			{
 				case "Resume":
-					if (startDiff == GameState.getDiff())
+					if (startDiff.toLowerCase() == levelDifficulty.text.toLowerCase())
 					{
 						close();
 						GameState.instance.restorePad();
 					}
 					else
 					{
-						GameState.instance.gameNa();
-						close();
-						GameState.instance.restorePad();
-						AdMob.showInterstitial(60);
-
-						GameState.instance.switchState(function()
+						GameState.instance.disableCameras();
+						LoadingState.showAlert(this, "Change difficult to " + levelDifficulty.text.toUpperCase(), null, function()
 						{
-							LoadingState.setStaticTransition();
-							FlxG.resetState();
+							GameState.instance.gameNa();
+							close();
+							GameState.instance.restorePad();
+							AdMob.showInterstitial(60);
+
+							GameState.instance.switchState(function()
+							{
+								LoadingState.setStaticTransition();
+								FlxG.resetState();
+							});
 						});
+				
 					}
 				case "Restart Song":
+					GameState.instance.disableCameras();
 					GameState.instance.gameNa();
 					close();
 					GameState.instance.restorePad();
@@ -272,6 +287,7 @@ class PauseSubState extends MusicBeatSubstate
 					});
 
 				case 'Customization':
+					GameState.instance.disableCameras();
 					GameState.instance.gameNa();
 					close();
 					GameState.instance.restorePad();
@@ -283,6 +299,7 @@ class PauseSubState extends MusicBeatSubstate
 					});
 					
 				case "Exit to menu":
+					GameState.instance.disableCameras();
 					GameState.instance.gameNa();
 					close();
 					GameState.instance.restorePad();

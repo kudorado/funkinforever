@@ -2942,6 +2942,12 @@ class GameState extends MusicBeatState
 		Controller._pad.cameras = [camOther];
 	}
 
+	public  function disableCameras()
+	{
+		camHUD.visible = false;
+		camOther.visible = false;
+	}
+
 	public function switchState(callback:Void->Void)
 	{
 		LoadingState.setDynamicTransition();
@@ -5129,7 +5135,8 @@ class GameState extends MusicBeatState
 
 		if (FlxG.sound.music.time > Conductor.songPosition + 20 || FlxG.sound.music.time < Conductor.songPosition - 20)
 		{
-			resyncVocals();
+			if (!restartGame)
+				resyncVocals();
 		}
 
 		setOnLuas('curStep', curStep);

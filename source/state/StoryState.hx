@@ -399,10 +399,15 @@ class StoryState extends MusicBeatState
 
 			GameState.storyWeek = curWeek;
 			GameState.campaignScore = 0;
-			LoadingState.loadWeekSplash(this, function()
+			Controller._pad.visible = false;
+
+			LoadingState.createBlackFadeIn(this, function()
 			{
-				FlxG.switchState(new SelectionState());
+				LoadingState.didLoadout = true;
+				LoadingState.setStaticTransition();
+				LoadingState.loadAndSwitchState(new GameState());
 			});
+
 			
 		}
 		else

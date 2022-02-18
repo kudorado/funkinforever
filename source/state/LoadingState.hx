@@ -274,7 +274,7 @@ class LoadingState extends MusicBeatState
  
     public static var isAlertVisible:Bool;
     
-	public static function showAlert(group:FlxGroup, message:String, alertCam:FlxCamera)
+	public static function showAlert(group:FlxGroup, message:String, alertCam:FlxCamera = null, callback:Void->Void = null)
 	{
 
 		if (isAlertVisible)
@@ -323,6 +323,9 @@ class LoadingState extends MusicBeatState
                 isAlertVisible = false;
 				group.remove(fuckshit);
 				group.remove(msgText);
+                
+				if (callback != null)
+					callback();
 			});
 		});
 

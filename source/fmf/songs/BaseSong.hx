@@ -253,7 +253,7 @@ class BaseSong
 
 		bf.characterAddedEvent();
 
-		//if (GameState.isStoryMode)
+		if (GameState.isStoryMode)
 		{
 			createStoryBF();
 		}
@@ -498,7 +498,7 @@ class BaseSong
 
 	public function createStoryBF():Void
 	{	
-
+		changePc('bf');
 	}
 
 	public function add(obj:FlxBasic)
