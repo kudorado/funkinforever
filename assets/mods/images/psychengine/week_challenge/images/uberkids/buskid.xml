@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="buskid.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="uberkidbus instance 10000" x="5" y="5" width="417" height="559" frameX="-1" frameY="0" frameWidth="422" frameHeight="559"/>
+	<SubTexture name="uberkidbus instance 10001" x="5" y="5" width="417" height="559" frameX="-1" frameY="0" frameWidth="422" frameHeight="559"/>
+	<SubTexture name="uberkidbus instance 10002" x="427" y="5" width="422" height="559"/>
+	<SubTexture name="uberkidbus instance 10003" x="427" y="5" width="422" height="559"/>
+</TextureAtlas>

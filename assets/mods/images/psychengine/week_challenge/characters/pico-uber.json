@@ -1,0 +1,394 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				106,
+				-10
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Pico NOTE LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				-80
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Pico Down Note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				4,
+				26
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "pico Up note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-48,
+				3
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Pico Note Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				145,
+				105
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "PicoStartUp",
+			"indices": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				145,
+				105
+			],
+			"anim": "startup",
+			"fps": 24,
+			"name": "PicoStartUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle-default",
+			"fps": 24,
+			"name": "Pico Idle Dance",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-32,
+				-13
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "Pico Taunt",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-32,
+				-13
+			],
+			"anim": "hey-loop",
+			"fps": 24,
+			"name": "Pico Taunt",
+			"indices": [
+				8,
+				9,
+				10
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				36,
+				-17
+			],
+			"anim": "idle-hype",
+			"fps": 24,
+			"name": "Pico Idle Dance HYPED",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				399,
+				80
+			],
+			"anim": "ubershoot",
+			"fps": 24,
+			"name": "Pico Shootin",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				448,
+				63
+			],
+			"anim": "busshoot",
+			"fps": 24,
+			"name": "Pico Shootin Bus",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				205,
+				76
+			],
+			"anim": "shootLeft",
+			"fps": 24,
+			"name": "Pico Shootin Left",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"offsets": [
+				8,
+				93
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "shootRight",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"name": "Pico Shootin Right"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				200,
+				-10
+			],
+			"anim": "idle-bd",
+			"fps": 24,
+			"name": "PicoBreakDance",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				330,
+				110
+			],
+			"anim": "idle-bdshoot",
+			"fps": 24,
+			"name": "PicoBreakDanceShootin",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21
+			]
+		},
+		{
+			"offsets": [
+				12,
+				12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "noammo",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				9,
+				9,
+				9,
+				9,
+				9,
+				9,
+				9,
+				9,
+				9,
+				9,
+				9,
+				9
+			],
+			"name": "Pico No Ammo"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				80,
+				-60
+			],
+			"anim": "dodge",
+			"fps": 24,
+			"name": "PicoDodging",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				160,
+				-14
+			],
+			"anim": "punch",
+			"fps": 24,
+			"name": "PicoGonnaPunch",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				160,
+				-14
+			],
+			"anim": "punch-loop",
+			"fps": 24,
+			"name": "PicoGonnaPunch",
+			"indices": [
+				16,
+				16
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/pico-uber",
+	"position": [
+		20,
+		300
+	],
+	"healthicon": "pico",
+	"flip_x": true,
+	"healthbar_colors": [
+		160,
+		235,
+		0
+	],
+	"camera_position": [
+		300,
+		40
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

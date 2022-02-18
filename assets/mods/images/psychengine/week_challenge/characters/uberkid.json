@@ -1,0 +1,209 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "UberKidIdle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle-pissed",
+			"fps": 24,
+			"name": "UberKidIdlePISSED",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				91,
+				-7
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "UberKidsLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				30
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "UberKidUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				-45
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "UberKidRight",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				-56
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "UberKidDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				7
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "UberKidTaunt",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				15
+			],
+			"anim": "reaction",
+			"fps": 24,
+			"name": "UberKidReaction",
+			"indices": []
+		},
+		{
+			"offsets": [
+				746,
+				144
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "shot",
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				18,
+				18,
+				18,
+				18,
+				18,
+				18,
+				18,
+				18,
+				18,
+				18,
+				18,
+				18,
+				18
+			],
+			"name": "UberKidDies"
+		},
+		{
+			"offsets": [
+				105,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "punch",
+			"indices": [],
+			"name": "UberKidGonnaPunch"
+		},
+		{
+			"offsets": [
+				105,
+				-5
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "punch-loop",
+			"indices": [
+				16,
+				16
+			],
+			"name": "UberKidGonnaPunch"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/uberkid",
+	"position": [
+		0,
+		270
+	],
+	"healthicon": "uberkid",
+	"flip_x": false,
+	"healthbar_colors": [
+		40,
+		95,
+		168
+	],
+	"camera_position": [
+		20,
+		80
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

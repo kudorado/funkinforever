@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="cutscene.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ComicPannel0000" x="5" y="5" width="1738" height="1468"/>
+	<SubTexture name="ComicPannel0001" x="1748" y="5" width="1738" height="1465" frameX="0" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0002" x="3491" y="5" width="1738" height="1467" frameX="0" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0003" x="5" y="5" width="1738" height="1468"/>
+	<SubTexture name="ComicPannel0004" x="1748" y="5" width="1738" height="1465" frameX="0" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0005" x="3491" y="5" width="1738" height="1467" frameX="0" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0006" x="5234" y="5" width="1623" height="1467" frameX="-115" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0007" x="5" y="1478" width="1576" height="1468" frameX="-162" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0008" x="1586" y="1478" width="1576" height="1465" frameX="-162" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0009" x="3167" y="1478" width="1574" height="1467" frameX="-164" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0010" x="4746" y="1478" width="1576" height="1468" frameX="-162" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0011" x="6327" y="1478" width="1506" height="1465" frameX="-232" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0012" x="5" y="2951" width="1508" height="1467" frameX="-230" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0013" x="1518" y="2951" width="1508" height="1467" frameX="-230" frameY="0" frameWidth="1738" frameHeight="1468"/>
+	<SubTexture name="ComicPannel0014" x="3031" y="2951" width="1509" height="1468" frameX="-229" frameY="0" frameWidth="1738" frameHeight="1468"/>
+</TextureAtlas>
