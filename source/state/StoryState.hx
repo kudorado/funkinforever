@@ -50,7 +50,7 @@ class StoryState extends MusicBeatState
 	];
 
 
-	public static var curDifficulty:Int = 1;
+	public static var curDifficulty:Int = 0;
 
 	public static var weekUnlocked:Array<Bool> = 
 	[
