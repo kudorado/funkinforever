@@ -65,7 +65,7 @@ class Eeeeaaaooo extends Trueform
 
 	function lightningStrikeShit(curBeat:Int):Void
 	{
-		trace('trigger lighting shit!');
+		// trace('trigger lighting shit!');
 		FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
 		halloweenBG.animation.play('lightning');
 

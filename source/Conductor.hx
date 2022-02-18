@@ -72,6 +72,8 @@ class Conductor
 	{
 		bpm = newBpm;
 
+		trace("Change BPM: " + bpm);
+		
 		crochet = ((60 / bpm) * 1000);
 		stepCrochet = crochet / 4;
 
