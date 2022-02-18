@@ -238,9 +238,6 @@ class Note extends FlxSprite
 
 			if (prevNote.isSustainNote)
 			{
-				// if(GameState.es)
-					// y += 20;
-
 				switch (prevNote.noteData)
 				{
 					case 0:
@@ -308,8 +305,17 @@ class Note extends FlxSprite
 		}
 		if (isSustainNote)
 		{
-			scale.y = lastScaleY;
+			// scale.y = lastScaleY;
 		}
+		
+		if (GameState.instance != null && GameState.es)
+		{
+			this.scale.x = GameState.esNoteScale;
+
+			if (!isSustainNote)
+				this.scale.y = GameState.esNoteScale;
+		}
+
 		updateHitbox();
 
 		if (animName != null)

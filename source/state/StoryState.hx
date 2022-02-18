@@ -43,10 +43,11 @@ class StoryState extends MusicBeatState
 
 	public static var difficulties:Array<Dynamic> = 
 	[
-		'baby', 'easy', 
+		'baby', 'easy', '',
 		'normal', 'legacy', 'og',
 		'hard', 'hell', 'finale',
-		'shit', 'unfair', 'ex'
+		'shit', 'unfair', 'ex',
+		
 	];
 
 
@@ -417,7 +418,7 @@ class StoryState extends MusicBeatState
 		}
 		else
 		{
-			LoadingState.showAlert(this, "Week locked, please unlock previous week first!", alertCam);
+			LoadingState.showAlert(this, "Story locked, please complete previous week first!", alertCam);
 		}
 	}
 
@@ -453,15 +454,20 @@ class StoryState extends MusicBeatState
 		#if LUA_ALLOWED
 		if (!FileSystem.exists(file))
 		{
-			trace('oh shit not found difficult for this file: ' + file);
+			trace('Oh shit not found difficult for this file: ' + file);
 			// so attempting to load other difficult
 			for (diff in StoryState.difficulties)
 			{
-				file = daDirectory + '/' + songLowercase + '-' + diff + '.json';
+				var s = diff;
+
+				if (diff != '')
+					s = "-" + diff;
+
+				file = daDirectory + '/' + songLowercase + s + '.json';
 				if (FileSystem.exists(file))
 				{
-					trace('load alternative difficult: ' + diff);
-					var popipo = songLowercase + '-' + diff;
+					trace('Load alternative difficult: ' + ((s == '') ? "Normal" : s));
+					var popipo = songLowercase + s;
 					GameState.SONG = Song.loadFromJson(popipo, GameState.playingSong.folder + songLowercase);
 					break;
 				}

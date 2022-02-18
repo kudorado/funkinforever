@@ -712,8 +712,6 @@ class GameState extends MusicBeatState
 		switch (eventName)
 		{
 			case 'Hey!':
-				
-
 
 			// var value:Int = 0;
 			// switch (value1.toLowerCase().trim())
@@ -4284,10 +4282,12 @@ class GameState extends MusicBeatState
 		if (missNote)
 			daRating = "fuck";
 
+		var scoreShit:Float = 0;
+
 		switch (daRating)
 		{
 			case 'fuck':
-				score = -500;
+				scoreShit = -500;
 				combo = 0;
 				healthRating = -0.2;
 				ss = false;
@@ -4296,7 +4296,7 @@ class GameState extends MusicBeatState
 					totalNotesHit += 0.25;
 
 			case 'shit':
-				score = -300;
+				scoreShit = -300;
 				healthRating = -0.1;
 				ss = false;
 				shits++;
@@ -4304,7 +4304,7 @@ class GameState extends MusicBeatState
 					totalNotesHit += 0.25;
 			case 'bad':
 				daRating = 'bad';
-				score = 0;
+				scoreShit = 0;
 				healthRating -= 0.06;
 				ss = false;
 				bads++;
@@ -4312,7 +4312,7 @@ class GameState extends MusicBeatState
 					totalNotesHit += 0.50;
 			case 'good':
 				daRating = 'good';
-				score = 200;
+				scoreShit = 200;
 				ss = false;
 				goods++;
 
@@ -4327,13 +4327,48 @@ class GameState extends MusicBeatState
 					totalNotesHit += 1;
 				sicks++;
 		}
+
+		var newbie =  isStoryMode && !storyCompleted;
 	
-		if (healthRating < 0 && isStoryMode && !storyCompleted)
+	
+		//story, newbie code
+		if (healthRating < 0 && newbie)
+		{
 			healthRating /= 5;
+			scoreShit /= 5;
+		}
+
+		//easy, make it more easy
+		if (!newbie && healthRating < 0)
+		{
+			switch (storyDifficulty)
+			{
+				//make it more easy
+				case 0:
+					healthRating /= 2.5;
+					scoreShit /= 2.5;
+
+				// make it a bit easy
+				case 1:
+					healthRating /= 1.5;
+					scoreShit /= 1.5;
+
+				//hard, yeah, here we go
+				case 2:
+					healthRating *= 1.25;
+					scoreShit *= 1.25;
+
+				case 3:
+					//you wanna hard, go fuck it
+					healthRating *= 2;
+					scoreShit *= 2;
+			}
+		}
 
 
-
+		score += scoreShit;
 		health += healthRating;
+
 		if (health > 2)
 			health = 2;
 
