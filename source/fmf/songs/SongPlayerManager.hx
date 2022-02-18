@@ -638,6 +638,10 @@ class SongPlayerManager
 			case 'epiphany':
 				songPlayer = new BaraNoYume();
 
+			case 'erb':
+				songPlayer = new Erb();
+			case 'your_reality':
+				songPlayer = new YourReality();
 		}
 
 		return songPlayer;
