@@ -20,7 +20,7 @@ class WeekCompleteSubState extends MusicBeatSubstate
 {
     var grpMenuShit:FlxTypedGroup<Alphabet>;
 
-    var menuItems:Array<String> = ['Restart Song', 'Customization', 'Exit to menu'];
+	var menuItems:Array<String> = ['Back to menu'];
     var curSelected:Int = 0;
 
     var pauseMusic:FlxSound;
@@ -174,7 +174,7 @@ class WeekCompleteSubState extends MusicBeatSubstate
 					}, GameState.instance.camHUD);
 				          
 
-                case "Exit to menu":
+                case "Back to menu":
 					GameState.instance.gameNa();
                     AdMob.showInterstitial(60);
 

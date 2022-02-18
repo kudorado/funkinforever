@@ -18,7 +18,7 @@ class Edd extends SongPlayer
 	}
 	override function loadMap()
 	{
-		gameState.defaultCamZoom = 0.55;
+		gameState.defaultCamZoom = 0.6;
 	}
 
 	override function createBF()

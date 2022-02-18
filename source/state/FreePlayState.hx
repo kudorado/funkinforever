@@ -5,7 +5,7 @@ import ui.*;
 import reactor.*;
 import selection.*;
 
-
+import flixel.FlxCamera;
 import flixel.graphics.frames.FlxAtlasFrames;
 import extension.admob.AdMob;
 import fmf.songs.*;
@@ -33,6 +33,7 @@ using StringTools;
 class FreePlayState extends MusicBeatState
 {
 
+	var daShit:String = 'ohmygoshfuckingshit';
 	var ohShitFuckyou:Bool;
 
 	var songs:Array<SongMetadata> = [];
@@ -54,8 +55,20 @@ class FreePlayState extends MusicBeatState
 
 	private var iconArray:Array<Icon> = [];
 	private var videoArray:Array<VideoIcon> = [];
+	private var lockArray:Array<LockIcon> = [];
 
+	public static var data(get, set):Map<String, Bool>;
+	static inline function get_data():Map<String, Bool>
+		return FlxG.save.data.songs;
+	static inline function set_data(value:Map<String, Bool>):Map<String, Bool>
+	{
+		// just set, not saving yet
+		FlxG.save.data.songs = value;
+		return value;
+	}
 
+	
+	
 	private var totalWeek:Int;
 
 	private var bg:FlxSprite;
@@ -64,6 +77,8 @@ class FreePlayState extends MusicBeatState
 	// var daDiffColor:FlxColor;
 	
 	var totalSong:Int;
+
+	var alertCam:FlxCamera;
 	
 	function loadWeekBG(curWeek:Int)
 	{
@@ -87,6 +102,13 @@ class FreePlayState extends MusicBeatState
 				daMember.destroy();
 			}
 
+			for (i in 0...lockArray.length)
+			{
+				var daMember = lockArray.pop();
+				remove(daMember);
+				daMember.destroy();
+			}
+	
 			for (i in 0...iconArray.length)
 			{
 				var daMember = iconArray.pop();
@@ -135,13 +157,13 @@ class FreePlayState extends MusicBeatState
 		var nextWeek = curWeek + 1 >= totalWeek ? 0 : curWeek + 1;
 	
 		//(SongManager.songs[prevWeek].songTitle
-		addSong('shit', curWeek, false);
+		addSong(daShit, curWeek, false);
 		for (song in wweekSongs)
 		{
 			addSong(song, curWeek, firstSong);
 			firstSong = false;
 		}
-		addSong('shit', curWeek, false);
+		addSong(daShit, curWeek, false);
 
 		songWeek.text = i.songTitle.toUpperCase();
 		songWeek.x = 10;
@@ -155,7 +177,7 @@ class FreePlayState extends MusicBeatState
 		for (i in 0...songs.length)
 		{
 
-			var shitSong:Bool = songs[i].songName == 'shit';
+			var shitSong:Bool = songs[i].songName == daShit;
 
 			var songText:AlphabetShit = new AlphabetShit(0, (70 * i) + 30, shitSong ? '' : SongFilter.filter(songs[i].songName), true, false, true);
 			songText.isMenuItem = true;
@@ -202,12 +224,17 @@ class FreePlayState extends MusicBeatState
 			var videoIcon:VideoIcon = new VideoIcon();
 			videoIcon.sprTracker = songText;
 
+			var lockIcon:LockIcon = new LockIcon();
+			lockIcon.sprTracker = songText;
+
 			// using a FlxGroup is too much fuss!
 
 			videoArray.push(videoIcon);
+			lockArray.push(lockIcon);
 			iconArray.push(icon);
 			add(icon);
 			add(videoIcon);
+			add(lockIcon);
 
 			loadWeekBG(curWeek);
 			
@@ -347,6 +374,10 @@ class FreePlayState extends MusicBeatState
 
 		// Debugger.create(this, camera);
 
+		alertCam = new FlxCamera();
+		alertCam.bgColor.alpha = 0;
+		FlxG.cameras.add(alertCam);
+
 		super.create();
 	}
 
@@ -363,7 +394,8 @@ class FreePlayState extends MusicBeatState
 
 	function onRewarded(shitReward)
 	{
-		playLevel();
+		unlockSong(songs[curSelected].songName);
+		playSong();
 	}
 	
 	public function addSong(songName:String, weekNum:Int, firstSong:Bool)
@@ -375,6 +407,9 @@ class FreePlayState extends MusicBeatState
 	{
 		super.update(elapsed);
 
+		if (LoadingState.isAlertVisible)
+			return;
+		
 		if (FlxG.sound.music.volume < 0.7)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
@@ -409,42 +444,99 @@ class FreePlayState extends MusicBeatState
 			// #if PRELOAD_ALL
 			// FlxG.sound.music.stop();
 			// #end
-
+			Controller._pad.visible = false;
 			FlxG.switchState(new MenuState());
 		}
 
 		if (accepted && !ohShitFuckyou)
 		{
-			ohShitFuckyou = true;
 			// pre lowercasing the song name (update)
 
-			// if (songs[curSelected].firstSong)
-			// {
-			FlxG.sound.play(Paths.sound('confirmMenu'));
-			AdMob.showInterstitial(60);
-			playLevel();
-			// }
-			// else
-			// {
-			// 	// try show video
+			var prevWeek = curWeek - 1;
 
-			// 	var showVideoSuccess = AdMob.showRewardVideo();
+			var isUnlocked = data.get(songs[curSelected].songName);
+			var daLocked = prevWeek >= 0 && !StoryState.weekUnlocked[prevWeek];
 
-			// 	#if !mobile
-			// 	playLevel();
-			// 	#end
-			// 	// showVideoSuccess = true;
-			// 	// #end
-			// 	// if(showVideoSuccess)
-			// 	// {
-			// 	// 	playLevel();
-			// 	// }
-			// }
+			if (isUnlocked)
+			{
+				FlxG.sound.play(Paths.sound('confirmMenu'));
+				AdMob.showInterstitial(60);
+				playSong();
+			}
+			else if(!daLocked)
+			{
+				// try show video
+
+				var showVideoSuccess = AdMob.showRewardVideo();
+				
+
+				if(!showVideoSuccess)
+					LoadingState.showAlert(this, 'NO ADS AVAILABLE!', alertCam);
+			
+				#if !mobile
+				#if debug
+				onRewarded('shit');
+				#end
+				#end
+				// showVideoSuccess = true;
+				// 	// #end
+				// 	// if(showVideoSuccess)
+				// 	// {
+				// 	// 	playSong();
+				// 	// }
+			}
+			else
+			{
+				trace('week locked dude, try unlock previous week 1st');
+
+				LoadingState.showAlert(this, "Week locked, please unlock previous week first!", alertCam);
+				#if debug
+				#if !mobile
+				// playSong();
+				#end
+				#end
+
+			}
 		}
 	}
 
-	function playLevel()
+	public static function saveSongData()
 	{
+		FlxG.save.data.weekUnlocked = StoryState.weekUnlocked;
+		FlxG.save.flush();
+	}
+
+	public static function unlockSong(songName:String)
+	{
+		var curSong = songName;
+		data.set(curSong, true);
+
+		var daUnlockedAllSong = false;
+		for (i in SongManager.songs[curWeek].songList)
+		{
+			var isUnlocked = data.get(i);
+			if (!isUnlocked)
+			{
+				trace('some songs in week: ' + curWeek + " are not unlocked yet!");
+				return;
+			}
+			daUnlockedAllSong = true;
+		}
+
+		if (daUnlockedAllSong && StoryState.weekUnlocked[curWeek] == false)
+		{
+			StoryState.weekUnlocked[curWeek] = true;
+			trace('Unlocked week: ' + curWeek  + " because all songs are unlocked!");
+			saveSongData();
+		}
+		else
+			FlxG.save.flush();
+
+	}
+	function playSong()
+	{
+		ohShitFuckyou = true;
+
 		var songLowercase = SongFilter.filter(songs[curSelected].songName);
 		var poop:String = Highscore.formatSong(songLowercase, StoryState.curDifficulty);
 
@@ -458,6 +550,7 @@ class FreePlayState extends MusicBeatState
 
 		StoryState.loadDataFile(songLowercase);
 
+		Controller._pad.visible = false;
 
 		LoadingState.loadWeekSplash(this, function()
 		{
@@ -599,26 +692,49 @@ class FreePlayState extends MusicBeatState
 		// FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName, SongManager.songs[curSong.week].folder), 0);
 		// #end
 
+
+		updateSong();
+	
+	}
+
+	function updateSong()
+	{
+
 		var bullShit:Int = 0;
 		var daAlpha:Float = 0.25;
+		
 
+		var prevWeek = curWeek - 1;
+		var daLocked = prevWeek >= 0 && !StoryState.weekUnlocked[prevWeek];
 
 		for (i in 0...iconArray.length)
 		{			
 			//all unlocked, hail kdorado
-			var unlocked:Bool = true; //songs[i].firstSong;
+			//no, fuck you 
+			var arrow =  songs[i].songName == daShit;
+			var daUnlocked = data.get(songs[i].songName);
+			
+			var unlocked:Bool = arrow || daUnlocked; // songs[i].firstSong;
 			iconArray[i].alpha = unlocked ? daAlpha : 0;
-			videoArray[i].alpha = unlocked ? 0 : daAlpha;
+			videoArray[i].alpha = unlocked ? 0 : daLocked ? 0 : daAlpha;
+			lockArray[i].alpha = unlocked ? 0 : daLocked ? daAlpha : 0;
 
 		}
 
-		var unlocked:Bool =  true; // songs[curSelected].firstSong;
+		var daUnlocked = data.get(songs[curSelected].songName);
+		// trace("Song: " + songs[curSelected].songName + " is unlocked: " + daUnlocked);
+		// trace("Week: " + curWeek + " is locked: " + daLocked);
+
+		var unlocked:Bool = daUnlocked;// songs[curSelected].firstSong;
 
 		iconArray[curSelected].alpha = unlocked ? 1 : 0;
-		videoArray[curSelected].alpha = unlocked ? 0 : 1;
+		videoArray[curSelected].alpha = unlocked ? 0 : daLocked ? 0 : 1;
+		lockArray[curSelected].alpha = unlocked ? 0 : daLocked ? 1 : 0;
+
 
 		for (item in grpSongs.members)
 		{
+			
 			item.targetY = bullShit - curSelected;
 			bullShit++;
 
@@ -640,6 +756,7 @@ class FreePlayState extends MusicBeatState
 		}
 	}
 }
+
 
 class SongMetadata
 {

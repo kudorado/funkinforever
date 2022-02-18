@@ -84,6 +84,9 @@ class KadeEngineData
         if (FlxG.save.data.fps == null)
             FlxG.save.data.fps = false;
 
+		if(FlxG.save.data.unlockedAllWeekShit == null)
+			FlxG.save.data.unlockedAllWeekShit = false;
+
         if (FlxG.save.data.changedHit == null)
         {
             FlxG.save.data.changedHitX = -1;
@@ -141,6 +144,8 @@ class KadeEngineData
 
         if (FlxG.save.data.mobileControl == null)
             FlxG.save.data.mobileControl = 8;
+
+		
 
         Conductor.recalculateTimings();
         PlayerSettings.player1.controls.loadKeyBinds();

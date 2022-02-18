@@ -6,6 +6,7 @@ import state.*;
 import selection.*;
 import reactor.*;
 
+import flixel.FlxCamera;
 import ui.FlxVirtualPad.FlxActionMode;
 import ui.FlxVirtualPad.FlxDPadMode;
 import ui.Controller;
@@ -51,20 +52,21 @@ class StoryState extends MusicBeatState
 
 	public static var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> =
-	 [true, true, true, false, false, false, false,
-	false, false, false, false, false, false, false,
-	false, false, false, false, false, false, false,
-	false, false, false, false, false, false, false,
-	false, true, true, true, true, true, true,
-	false, false, true, true, true, true, true,
-	 true, true, true, true, true, true, true,
-	 true, true, true, true, true, true, true];
-
+	public static var weekUnlocked:Array<Bool> = 
+	[
+		true, false, false, false, false, false, false,
+		false, false, false, false, false, false, false,
+		false, false, false, false, false, false, false,
+		false, false, false, false, false, false, false,
+		false, false, false, false, false, false, false,
+		false, false, false, false, false, false, false,
+		false, false, false, false, false, false, false,
+		false, false, false, false, false, false, false
+	];
 
 	var txtWeekTitle:FlxText;
 
-	static var curWeek:Int = 0;
+	public static var curWeek:Int = 0;
 
 	var txtTracklist:FlxText;
 
@@ -80,6 +82,7 @@ class StoryState extends MusicBeatState
 	var baseSong:BaseSong;
 	
 	var yellowBG:FlxSprite;
+	var alertCam:FlxCamera;
 
 	override function create()
 	{
@@ -249,6 +252,11 @@ class StoryState extends MusicBeatState
 		LoadingState.clearCachedSong();
 		
 		changeWeek(0);
+
+		alertCam = new FlxCamera();
+		alertCam.bgColor.alpha = 0;
+		FlxG.cameras.add(alertCam);
+		
 		super.create();
 	}
 
@@ -351,6 +359,24 @@ class StoryState extends MusicBeatState
 			}
 
 			GameState.storyPlaylist = SongManager.songs[curWeek].copySongList;
+			var temp = SongManager.songs[curWeek].copySongList;
+			for (s in GameState.storyPlaylist)
+			{
+				var isUnlocked = FreePlayState.data.get(s);
+				if(isUnlocked){
+					trace('Song ' + s + " already passed, ignore!");
+					temp.remove(s);
+				}
+			}
+			GameState.storyPlaylist = temp;
+
+			//this story already clear, reset
+			if (GameState.storyPlaylist.length == 0)
+			{
+				GameState.storyPlaylist = SongManager.songs[curWeek].copySongList;
+				trace('This story is cleared, play from beginning');
+			}
+			
 			GameState.playingSong = SongManager.songs[curWeek];
 			
 			GameState.isStoryMode = true;
@@ -374,6 +400,10 @@ class StoryState extends MusicBeatState
 				FlxG.switchState(new SelectionState());
 			});
 			
+		}
+		else
+		{
+			LoadingState.showAlert(this, "Week locked, please unlock previous week first!", alertCam);
 		}
 	}
 

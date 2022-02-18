@@ -3,6 +3,11 @@ package state;
 import state.*;
 import selection.*;
 
+import flixel.text.FlxText;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
+
 import flixel.addons.transition.FlxTransitionableState;
 import fmf.songs.SongManager;
 import flixel.FlxCamera;
@@ -267,6 +272,150 @@ class LoadingState extends MusicBeatState
         });
     }
  
+    public static var isAlertVisible:Bool;
+    
+	public static function showAlert(group:FlxGroup, message:String, alertCam:FlxCamera)
+	{
+
+		if (isAlertVisible)
+			return;
+
+        trace('show alert');
+        isAlertVisible = true;
+        var fuckshit:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
+        fuckshit.screenCenter();
+        fuckshit.scaleToFit();
+
+
+		var msgText = new FlxText(0, 10, 0, "", 32);
+		msgText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, RIGHT);
+        msgText.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+		msgText.text = message;
+        msgText.screenCenter();
+
+		if (alertCam == null)
+		{
+			alertCam = new FlxCamera();
+			alertCam.bgColor.alpha = 0;
+			FlxG.cameras.add(alertCam);
+		}
+
+		fuckshit.cameras = [alertCam];
+        msgText.cameras = [alertCam];
+		fuckshit.alpha = 0;
+		msgText.alpha = 0;
+
+
+        group.add(fuckshit);
+        group.add(msgText);
+
+        FlxTween.tween(fuckshit, {alpha: 1}, 0.25, {});
+		FlxTween.tween(msgText, {alpha: 1}, 0.25, {startDelay: 0.25});
+
+
+		new FlxTimer().start(2, function(tmr:FlxTimer)
+		{
+			FlxTween.tween(fuckshit, {alpha: 0}, 0.5, {startDelay: 0.25});
+			FlxTween.tween(msgText, {alpha: 0}, 0.5, {});
+			// shit here
+			new FlxTimer().start(1, function(tmr:FlxTimer)
+			{
+                isAlertVisible = false;
+				group.remove(fuckshit);
+				group.remove(msgText);
+			});
+		});
+
+    }
+
+	public static function showNewWeekUnlocked(group:FlxGroup, complete:Void->Void)
+	{
+		if (isAlertVisible)
+			return;
+
+        trace('show new week unlocked!');
+        
+        var weekUnlocked = GameState.storyWeek + 1;
+        var daWeekData = SongManager.songs[weekUnlocked];
+
+
+		isAlertVisible = true;
+		var fuckshit:FlxSprite = new FlxSprite(0, 0);
+		fuckshit.loadGraphic(Paths.image('freeplay/' + daWeekData.character));
+		fuckshit.screenCenter();
+		fuckshit.scaleToFit();
+
+		var msgText = new FlxText(0, 10, 0, "", 32);
+		msgText.setFormat("VCR OSD Mono", 32, FlxColor.YELLOW, RIGHT);
+		msgText.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+		msgText.text = "CONGRATULATION!!!";
+		msgText.screenCenter();
+        msgText.y -= 50;
+
+		var unlockedText = new FlxText(0, 10, 0, "", 32);
+		unlockedText.setFormat("VCR OSD Mono", 32, FlxColor.GREEN, RIGHT);
+		unlockedText.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+		unlockedText.text = "You unlocked a new week!";
+		unlockedText.screenCenter();
+
+		var newWeekText = new FlxText(0, 10, 0, "", 50);
+		newWeekText.setFormat("VCR OSD Mono", 50, FlxColor.RED, RIGHT);
+		newWeekText.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
+		newWeekText.text = daWeekData.songTitle.toUpperCase();
+		newWeekText.screenCenter();
+		newWeekText.y += 50;
+        
+	
+		var alertCam = new FlxCamera();
+		alertCam.bgColor.alpha = 0;
+		FlxG.cameras.add(alertCam);
+
+		fuckshit.cameras = [alertCam];
+		msgText.cameras = [alertCam];
+        unlockedText.cameras = [alertCam];
+        newWeekText.cameras = [alertCam];
+
+		fuckshit.alpha = 0;
+		msgText.alpha = 0;
+		unlockedText.alpha = 0;
+        newWeekText.scale.x = 0;
+        newWeekText.scale.y = 0;
+
+		group.add(fuckshit);
+		group.add(msgText);
+		group.add(unlockedText);
+        group.add(newWeekText);
+
+
+		FlxTween.tween(fuckshit, {alpha: 1}, 0.25, {});
+		FlxTween.tween(msgText, {alpha: 1}, 0.25, {startDelay: 0.25});
+		FlxTween.tween(unlockedText, {alpha: 1}, 0.25, {startDelay: 0.25});
+		FlxTween.tween(newWeekText, {"scale.x": 1}, 0.5, {ease: FlxEase.elasticInOut, startDelay: 0.4});
+		FlxTween.tween(newWeekText, {"scale.y": 1}, 0.5, {ease: FlxEase.elasticInOut, startDelay: 0.4});
+
+		new FlxTimer().start(4, function(tmr:FlxTimer)
+		{
+			FlxTween.tween(fuckshit, {alpha: 0}, 0.5, {startDelay: 0.25});
+			FlxTween.tween(msgText, {alpha: 0}, 0.5, {});
+            FlxTween.tween(unlockedText, {alpha: 0}, 0.5, {});
+            FlxTween.tween(newWeekText, {alpha: 0}, 0.5, {});
+
+            // shit here
+			new FlxTimer().start(1, function(tmr:FlxTimer)
+			{
+				isAlertVisible = false;
+				group.remove(fuckshit);
+				group.remove(msgText);
+                group.remove(unlockedText);
+				group.remove(newWeekText);
+				if (complete != null)
+				{
+					complete();
+                    StoryState.curWeek = weekUnlocked;
+				}
+			});
+		});
+	}
 
     public static function loadWeekSplash(group:FlxGroup, callback:Void->Void, cam:FlxCamera = null, disposeOnCallback:Bool = false)
     {
@@ -278,7 +427,6 @@ class LoadingState extends MusicBeatState
 
         var fuckshit:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
         fuckshit.screenCenter();
-
 
         var blackScreen:FlxSprite = new FlxSprite(0, 0);
         blackScreen.loadGraphic(Paths.image("loading/" + rand));

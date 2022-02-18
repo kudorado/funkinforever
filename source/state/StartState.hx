@@ -3,6 +3,7 @@ package state;
 import reactor.*;
 import state.*;
 import ui.*;
+import fmf.songs.SongManager;
 
 import extension.admob.AdMob;
 import extension.admob.GravityMode;
@@ -78,7 +79,7 @@ class StartState extends MusicBeatState
 
 		super.create();
 
-		FlxG.save.bind('save', 'data');
+		FlxG.save.bind('save', 'data6');
 
 		KadeEngineData.initSave();
 
@@ -88,7 +89,16 @@ class StartState extends MusicBeatState
 		{
 			// FIX LATER!!!
 			// WEEK UNLOCK PROGRESSION!!
-			// StoryState.weekUnlocked = FlxG.save.data.weekUnlocked;
+			StoryState.weekUnlocked = FlxG.save.data.weekUnlocked;
+
+			var wu = 0;
+			for (u in StoryState.weekUnlocked)
+			{
+				if (u)
+					wu++;
+			}
+
+			trace('Load week progress, total unlocked: ' + wu);
 
 			if (StoryState.weekUnlocked.length < 4)
 				StoryState.weekUnlocked.insert(0, true);
@@ -96,6 +106,34 @@ class StartState extends MusicBeatState
 			// QUICK PATCH OOPS!
 			if (!StoryState.weekUnlocked[0])
 				StoryState.weekUnlocked[0] = true;
+		}
+		else
+		{
+			trace('init week unlocked!');
+			FlxG.save.data.weekUnlocked = StoryState.weekUnlocked;//yeah boiz
+			FlxG.save.flush();
+		}
+
+		if (FlxG.save.data.songs == null)
+		{
+			trace('init song data!');
+			FlxG.save.data.songs = new Map<String, Bool>(); 
+			//init songs data
+			for (i in SongManager.songs)
+			{
+				for (s in i.songList)
+				{	
+					var daTutorial = s.toLowerCase() == 'tutorial';
+					FlxG.save.data.songs.set(s, daTutorial);
+					trace('Save new song to disk: ' + s);
+				}
+			}
+
+			FlxG.save.flush();
+		}
+		else
+		{
+			trace('song datas was loaded!');
 		}
 
 		#if FREEPLAY

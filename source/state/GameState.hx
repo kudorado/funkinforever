@@ -1663,7 +1663,7 @@ class GameState extends MusicBeatState
 
 		CURRENT_SONG = SONG_NAME;
 
-		botPlayShit = FlxG.save.data.botplay;
+		botPlayShit = FlxG.save.data.botplay && isUnlocked();
 
 		// pre lowercasing the song name (create)
 		var songLowercase = SongFilter.filter(CURRENT_SONG);
@@ -2171,7 +2171,7 @@ class GameState extends MusicBeatState
 
 	function listeningModeCheck()
 	{
-		musicListeningShit = FlxG.save.data.musicListening;
+		musicListeningShit = FlxG.save.data.musicListening && isUnlocked();
 		#if debug
 		// musicListeningShit = true;
 		// botPlayShit = true;
@@ -2954,11 +2954,14 @@ class GameState extends MusicBeatState
 			FlxG.sound.music.stop();
 
 		restartGame = true;
-		camOther.visible = true;
+
+		var shitCam = new FlxCamera();
+		shitCam.bgColor.alpha = 0;
+		FlxG.cameras.add(shitCam);
 
 		var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
 
-		blackScreen.cameras = [camOther];
+		blackScreen.cameras = [shitCam];
 		blackScreen.alpha = 0;
 		add(blackScreen);
 
@@ -3882,18 +3885,24 @@ class GameState extends MusicBeatState
 			if (isStoryMode)
 			{
 				campaignScore += Math.round(songScore);
-
 				storyPlaylist.remove(storyPlaylist[0]);
 				if (storyPlaylist.length <= 0)
 				{
-					// FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
+				
 
 					backHome();
 
+					var daUnlocked = StoryState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryState.weekUnlocked.length - 1))];
+			
+					// if this week are not unlocked yet
+					if (!daUnlocked)
+						FreePlayState.unlockSong(RAW_SONG_NAME);
+				
 					StoryState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryState.weekUnlocked.length - 1))] = true;
+
 
 					if (SONG.validScore)
 					{
@@ -3901,8 +3910,23 @@ class GameState extends MusicBeatState
 						Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
 					}
 
-					FlxG.save.data.weekUnlocked = StoryState.weekUnlocked;
-					FlxG.save.flush();
+					FreePlayState.saveSongData();
+					if (!daUnlocked) // if new unlocked week, so here we go
+						LoadingState.showNewWeekUnlocked(this, function()
+						{
+							createBlackFadeIn(function()
+							{
+								backToMenuShit();
+							});
+						});
+					else
+					{
+						createBlackFadeIn(function()
+						{
+							backToMenuShit();
+						});
+					}
+					
 				}
 				else
 				{
@@ -3910,6 +3934,10 @@ class GameState extends MusicBeatState
 					// @notrace('LOADING NEXT SONG');
 					// pre lowercasing the next story song name
 					var nextSongLowercase = SongFilter.filter(storyPlaylist[0]);
+
+
+					//try unlock da song
+					FreePlayState.unlockSong(RAW_SONG_NAME);
 
 					// @notrace(nextSongLowercase + difficulty);
 
@@ -3951,15 +3979,34 @@ class GameState extends MusicBeatState
 			else
 			{
 				backHome();
+				createBlackFadeIn(function()
+				{
+					backToMenuShit();
+				});
 			}
 		}
 	}
 
+	function backToMenuShit()
+	{
+		createEmptyBlack();
+		GameState.instance.gameNa();
+		AdMob.showInterstitial(60);
+
+		if (GameState.isStoryMode)
+			FlxG.switchState(new StoryState());
+		else
+			FlxG.switchState(new FreePlayState());		// FlxG.sound.play(Paths.music('gameOverEnd'));
+		
+	}
 	private function createEmptyBlack()
 	{
 		var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
-
-		blackScreen.cameras = [camHUD];
+		var shitCam = new FlxCamera();
+		shitCam.bgColor.alpha = 0;
+		FlxG.cameras.add(shitCam);
+		
+		blackScreen.cameras = [shitCam];
 		add(blackScreen);
 	}
 
@@ -4021,13 +4068,10 @@ class GameState extends MusicBeatState
 		persistentUpdate = false;
 		persistentDraw = true;
 		paused = true;
+		camHUD.visible = false;
+		camOther.visible = false;
 
 		pauseGame();
-
-		createBlackFadeIn(function()
-		{
-			openSubState(new WeekCompleteSubState());
-		});
 	}
 
 	function moveNext()
@@ -4040,7 +4084,9 @@ class GameState extends MusicBeatState
 		persistentUpdate = false;
 		persistentDraw = true;
 		paused = true;
-
+		camHUD.visible = false;
+		camOther.visible = false;
+		
 		pauseGame();
 
 		createBlackFadeIn(function()
@@ -4064,11 +4110,13 @@ class GameState extends MusicBeatState
 	{
 		zoomInAndFading();
 
-		camHUD.visible = true;
+		var shitCam = new FlxCamera();
+		shitCam.bgColor.alpha = 0;
+		FlxG.cameras.add(shitCam);
 
 		var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
 
-		blackScreen.cameras = [camHUD];
+		blackScreen.cameras = [shitCam];
 		blackScreen.alpha = 0;
 		add(blackScreen);
 
