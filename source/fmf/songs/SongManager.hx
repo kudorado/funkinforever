@@ -442,6 +442,7 @@ class SongManager
 				'deep_breaths', 'obsession',
 				'reconciliation',
 				'crucify_yuri_mix', 'beathoven_natsuki_mix', 'its_complicated_sayori_mix', 'glitcher_monika_mix',
+				'poems_n_thorns', 'dual_demise', 'epiphany'
 				]
 			}
 		),

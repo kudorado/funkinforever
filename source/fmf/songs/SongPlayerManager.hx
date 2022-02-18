@@ -628,8 +628,16 @@ class SongPlayerManager
 			
 			case 'glitcher_monika_mix':
 				songPlayer = new MonikaMix();
+
+			case 'poems_n_thorns':
+				songPlayer = new BaraNoYume();
 			
-		
+			case 'dual_demise':
+				songPlayer = new DualDemise();
+
+			case 'epiphany':
+				songPlayer = new BaraNoYume();
+
 		}
 
 		return songPlayer;
