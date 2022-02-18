@@ -65,43 +65,38 @@ class BaseSong
 			
 		}
 		#end
-
-		gameState.boyfriendGroup = new FlxSpriteGroup(0, 0);
-		gameState.dadGroup = new FlxSpriteGroup(0, 0);
-		gameState.gfGroup = new FlxSpriteGroup(0, 0);
-
 		#end
 	}
 
 	function loadMapDataLua()
 	{
 		#if MOD_ALLOWED
-		var stageData:StageFile = StageData.getStageFile(GameState.SONG.stage);
-		if (stageData == null)
-		{ // Stage couldn't be found, create a dummy stage for preventing a crash
-			stageData = {
-				directory: "",
-				defaultZoom: 0.9,
-				isPixelStage: false,
+		// var stageData:StageFile = StageData.getStageFile(GameState.SONG.stage);
+		// if (stageData == null)
+		// { // Stage couldn't be found, create a dummy stage for preventing a crash
+		// 	stageData = {
+		// 		directory: "",
+		// 		defaultZoom: 0.9,
+		// 		isPixelStage: false,
 
-				boyfriend: [770, 100],
-				girlfriend: [400, 130],
-				opponent: [100, 100]
-			};
-		}
+		// 		boyfriend: [770, 100],
+		// 		girlfriend: [400, 130],
+		// 		opponent: [100, 100]
+		// 	};
+		// }
 
-		GameState.isPixelStage = stageData.isPixelStage;
-		gameState.defaultCamZoom = stageData.defaultZoom;
-		gameState.BF_X = stageData.boyfriend[0];
-		gameState.BF_Y = stageData.boyfriend[1];
-		gameState.GF_X = stageData.girlfriend[0];
-		gameState.GF_Y = stageData.girlfriend[1];
-		gameState.DAD_X = stageData.opponent[0];
-		gameState.DAD_Y = stageData.opponent[1];
+		// GameState.isPixelStage = stageData.isPixelStage;
+		// gameState.defaultCamZoom = stageData.defaultZoom;
+		// gameState.BF_X = stageData.boyfriend[0];
+		// gameState.BF_Y = stageData.boyfriend[1];
+		// gameState.GF_X = stageData.girlfriend[0];
+		// gameState.GF_Y = stageData.girlfriend[1];
+		// gameState.DAD_X = stageData.opponent[0];
+		// gameState.DAD_Y = stageData.opponent[1];
 
-		gameState.boyfriendGroup = new FlxSpriteGroup(gameState.BF_X, gameState.BF_Y);
-		gameState.dadGroup = new FlxSpriteGroup(gameState.DAD_X, gameState.DAD_Y);
-		gameState.gfGroup = new FlxSpriteGroup(gameState.GF_X, gameState.GF_Y);
+		// gameState.boyfriendGroup = new FlxSpriteGroup(gameState.BF_X, gameState.BF_Y);
+		// gameState.dadGroup = new FlxSpriteGroup(gameState.DAD_X, gameState.DAD_Y);
+		// gameState.gfGroup = new FlxSpriteGroup(gameState.GF_X, gameState.GF_Y);
 
 		#end
 	}
