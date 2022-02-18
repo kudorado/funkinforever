@@ -487,7 +487,6 @@ class FreePlayState extends MusicBeatState
 			else
 			{
 				trace('week locked dude, try unlock previous week 1st');
-
 				LoadingState.showAlert(this, "Week locked, please unlock previous week first!", alertCam);
 			
 				#if debug
