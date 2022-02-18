@@ -1860,7 +1860,7 @@ class GameState extends MusicBeatState
 		//------------------------mic c up copy ----------------------------
 
 		daAuto = botPlayShit ? " [A]" : "";
-		songName = new FlxText(35, healthBarBG.y + 26, 0, CURRENT_SONG.toUpperCase() + ": " + getDiff().toUpperCase() + daAuto, 20);
+		songName = new FlxText(35, healthBarBG.y + 26, 0, CURRENT_SONG.toUpperCase()  + getDiff().toUpperCase() + daAuto, 20);
 		if (FlxG.save.data.downscroll)
 			songName.y = healthBarBG.y - 18;
 
@@ -2103,15 +2103,6 @@ class GameState extends MusicBeatState
 
 			pauseGame();
 
-			for (tween in modchartTweens)
-			{
-				tween.active = true;
-			}
-			for (timer in modchartTimers)
-			{
-				timer.active = true;
-			}
-
 			if (true)
 			{
 				// 	var bfX = bfFE() != null && bfFE().visible ? bfFE().x : bfPE.x;
@@ -2162,11 +2153,16 @@ class GameState extends MusicBeatState
 	var perfectMode:Bool = false;
 
 	var luaWiggles:Array<WiggleEffect> = [];
+	public static var storyCompleted:Bool;
 
-	function getDiff():String
+	public static function getDiff():String
 	{
+		if(isStoryMode && !storyCompleted)
+		{
+			return "";
+		}
 		var dif:String = storyDifficulty == 3 ? "Shit" : storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy";
-		return dif;
+		return ":" +  dif;
 	}
 
 	function listeningModeCheck()
@@ -3080,7 +3076,7 @@ class GameState extends MusicBeatState
 		npsTxt.text = getSongTimeLeft();
 		accuracyTxt.text = "Score: " + songScore;
 		missTxt.text = "Misses: " + misses;
-		scoreTxt.text = CURRENT_SONG.toUpperCase() + ": " + getDiff() + daAuto;
+		scoreTxt.text = CURRENT_SONG.toUpperCase()  + getDiff() + daAuto;
 		songName.text = playingSong.songTitle;
 	}
 
@@ -4005,7 +4001,7 @@ class GameState extends MusicBeatState
 		var shitCam = new FlxCamera();
 		shitCam.bgColor.alpha = 0;
 		FlxG.cameras.add(shitCam);
-		
+
 		blackScreen.cameras = [shitCam];
 		add(blackScreen);
 	}
@@ -4325,6 +4321,9 @@ class GameState extends MusicBeatState
 					totalNotesHit += 1;
 				sicks++;
 		}
+	
+		if (healthRating < 0 && isStoryMode && !storyCompleted)
+			healthRating /= 5;
 
 		health += healthRating;
 		if (health > 2)
@@ -4821,10 +4820,15 @@ class GameState extends MusicBeatState
 			songScore -= 500;
 			combo = 0;
 			misses++;
-			health -= 0.1;
+			var daSubtract = 0.1;
+			if(isStoryMode && !storyCompleted)//make it easier
+				daSubtract = 0.02;
+
+
+			health -= daSubtract;
 
 			popUpRating('fuck');
-			popUpHealth('fuck', -0.1);
+			popUpHealth('fuck', -daSubtract);
 
 			// var noteDiff:Float = Math.abs(daNote.strumTime - Conductor.songPosition);
 			// var wife:Float = EtternaFunctions.wife3(noteDiff, FlxG.save.data.etternaMode ? 1 : 1.7);

@@ -19,6 +19,9 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 
+using StringTools;
+
+
 class PauseSubState extends MusicBeatSubstate
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
@@ -30,6 +33,10 @@ class PauseSubState extends MusicBeatSubstate
 	var perSongOffset:FlxText;
 	
 	var offsetChanged:Bool = false;
+
+	var startDiff:String;
+	var levelDifficulty:FlxText;
+	var allowChangeDiff:Bool;
 
 	public function new(x:Float, y:Float)
 	{
@@ -70,8 +77,12 @@ class PauseSubState extends MusicBeatSubstate
 		levelInfo.updateHitbox();
 		add(levelInfo);
 
-		var levelDifficulty:FlxText = new FlxText(20, 15 + 32, 0, "", 32);
-		levelDifficulty.text += CoolUtil.difficultyString();
+		levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
+        levelDifficulty.text = GameState.getDiff().replace(':', '');
+		FreePlayState.getDiff(levelDifficulty);
+
+		startDiff = levelDifficulty.text;
+
 		levelDifficulty.scrollFactor.set();
 		levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
 		levelDifficulty.updateHitbox();
@@ -111,8 +122,11 @@ class PauseSubState extends MusicBeatSubstate
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
-		Controller.init(this, UP_DOWN, A);
+		allowChangeDiff = !GameState.isStoryMode || (GameState.isStoryMode && GameState.storyCompleted);
+
+		Controller.init(this, allowChangeDiff ? FULL : UP_DOWN, A);
         Controller._pad.cameras = [GameState.instance.camOther];
+
 
 
 	}
@@ -128,6 +142,10 @@ class PauseSubState extends MusicBeatSubstate
 		var downP =  Controller._pad != null  && Controller.DOWN_P;
 		var accepted =  Controller._pad != null && Controller.ACCEPT;
 
+
+
+
+
 		if (upP)
 		{
 			changeSelection(-1);
@@ -135,6 +153,29 @@ class PauseSubState extends MusicBeatSubstate
 		}else if (downP)
 		{
 			changeSelection(1);
+		}
+
+		if (allowChangeDiff)
+		{		
+			var leftP =  Controller._pad != null && Controller.LEFT_P;
+			var rightP = Controller._pad != null && Controller.RIGHT_P;
+
+			if (leftP)
+			{
+				// FlxG.sound.play(Paths.sound('scrollMenu'));
+				FreePlayState.changeDiff(levelDifficulty, -1, function()
+				{
+					levelDifficulty.x = FlxG.width - (levelDifficulty.width + 10);
+				});
+			}
+
+			if (rightP)
+			{
+				FreePlayState.changeDiff(levelDifficulty, 1, function()
+				{
+					levelDifficulty.x = FlxG.width - (levelDifficulty.width + 10);
+				});
+			}
 		}
 		
 		// #if cpp
@@ -200,8 +241,24 @@ class PauseSubState extends MusicBeatSubstate
 			switch (daSelected)
 			{
 				case "Resume":
-					close();
-					GameState.instance.restorePad();
+					if (startDiff == GameState.getDiff())
+					{
+						close();
+						GameState.instance.restorePad();
+					}
+					else
+					{
+						GameState.instance.gameNa();
+						close();
+						GameState.instance.restorePad();
+						AdMob.showInterstitial(60);
+
+						GameState.instance.switchState(function()
+						{
+							LoadingState.setStaticTransition();
+							FlxG.resetState();
+						});
+					}
 				case "Restart Song":
 					GameState.instance.gameNa();
 					close();

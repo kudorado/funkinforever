@@ -19,6 +19,9 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 
+using StringTools;
+
+
 class GameOverSubstate extends MusicBeatSubstate
 {
     var grpMenuShit:FlxTypedGroup<Alphabet>;
@@ -28,11 +31,15 @@ class GameOverSubstate extends MusicBeatSubstate
 
     var pauseMusic:FlxSound;
 
+	var levelDifficulty:FlxText;
+
     var mode:String;
 	private var videoArray:Array<VideoIcon> = [];
 
 	public static var instance:GameOverSubstate;
-    //
+
+    var allowChangeDiff:Bool;
+    
 
     public function new(x:Float, y:Float)
     {
@@ -85,8 +92,9 @@ class GameOverSubstate extends MusicBeatSubstate
         levelInfo.updateHitbox();
         add(levelInfo);
 
-        var levelDifficulty:FlxText = new FlxText(20, 15 + 32, 0, "", 32);
-        levelDifficulty.text += CoolUtil.difficultyString();
+		levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
+        levelDifficulty.text = GameState.getDiff().replace(':', '');
+        FreePlayState.getDiff(levelDifficulty);
         levelDifficulty.scrollFactor.set();
         levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
         levelDifficulty.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
@@ -131,11 +139,12 @@ class GameOverSubstate extends MusicBeatSubstate
 
 
 
-		LoadingState.createBlackFadeOut(this, GameState.instance.camHUD);
-
+		LoadingState.createBlackFadeOut(this, GameState.instance.camOther);
         cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
-
-        Controller.init(this, FULL, A);
+       
+        allowChangeDiff = !GameState.isStoryMode || (GameState.isStoryMode && GameState.storyCompleted);
+      
+        Controller.init(this, allowChangeDiff ? FULL : UP_DOWN, A);
         Controller._pad.cameras = [GameState.instance.camOther];
 
 
@@ -155,15 +164,24 @@ class GameOverSubstate extends MusicBeatSubstate
 
         super.update(elapsed);
 
-		if (Controller.LEFT_P)
+        if (allowChangeDiff)
 		{
-			// FlxG.sound.play(Paths.sound('scrollMenu'));
-			changeSelection(-1);
-		}
-		if (Controller.RIGHT_P)
-		{
-			// FlxG.sound.play(Paths.sound('scrollMenu'));
-			changeSelection(1);
+			if (Controller.LEFT_P)
+			{
+				// FlxG.sound.play(Paths.sound('scrollMenu'));
+				FreePlayState.changeDiff(levelDifficulty, -1, function()
+				{
+					levelDifficulty.x = FlxG.width - (levelDifficulty.width + 10);
+				});
+			}
+
+			if (Controller.RIGHT_P)
+			{
+				FreePlayState.changeDiff(levelDifficulty, 1, function()
+				{
+					levelDifficulty.x = FlxG.width - (levelDifficulty.width + 10);
+				});
+			}
 		}
 
         if (Controller.UP_P)

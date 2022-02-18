@@ -282,7 +282,7 @@ class StoryState extends MusicBeatState
 
 		// FlxG.watch.addQuick('font', scoreText.font);
 
-		difficultySelectors.visible = weekUnlocked[curWeek];
+		difficultySelectors.visible = weekUnlocked[curWeek] && isUnlocked();
 
 		grpLocks.forEach(function(lock:FlxSprite)
 		{
@@ -313,9 +313,9 @@ class StoryState extends MusicBeatState
 				else
 					leftArrow.animation.play('idle');
 
-				if (Controller.RIGHT_P)
+				if (Controller.RIGHT_P && isUnlocked())
 					changeDifficulty(1);
-				if (Controller.LEFT_P)
+				if (Controller.LEFT_P && isUnlocked())
 					changeDifficulty(-1);
 			}
 
@@ -373,9 +373,13 @@ class StoryState extends MusicBeatState
 			//this story already clear, reset
 			if (GameState.storyPlaylist.length == 0)
 			{
+				GameState.storyCompleted = true;
 				GameState.storyPlaylist = SongManager.songs[curWeek].copySongList;
 				trace('This story is cleared, play from beginning');
 			}
+			else
+				GameState.storyCompleted = false;
+			
 			
 			GameState.playingSong = SongManager.songs[curWeek];
 			
@@ -503,6 +507,7 @@ class StoryState extends MusicBeatState
 		}
 
 		sprDifficulty.alpha = 0;
+	
 
 		// USING THESE WEIRD VALUES SO THAT IT DOESNT FLOAT UP
 		sprDifficulty.y = leftArrow.y - 15;
@@ -513,7 +518,16 @@ class StoryState extends MusicBeatState
 		#end
 
 		FlxTween.tween(sprDifficulty, {y: leftArrow.y + 15, alpha: 1}, 0.07);
+
 	}
+
+
+	function isUnlocked():Bool
+	{
+		return (curWeek + 1 >= weekUnlocked.length && FlxG.save.data.unlockedAllWeekShit)
+			|| (weekUnlocked[curWeek + 1]);
+	}
+	
 
 	var lerpScore:Int = 0;
 	var intendedScore:Int = 0;

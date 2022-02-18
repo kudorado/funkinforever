@@ -14,7 +14,7 @@ class TrickyHell extends TrickyMask
 
     override function getDadTex()
 	{
-		var frames = Paths.getSparrowAtlas('pc/tricky//tiky', 'mods');
+		var frames = Paths.getSparrowAtlas('pc/tricky/tiky', 'mods');
 		dad.frames = frames;
 	}
 

@@ -578,11 +578,7 @@ class FreePlayState extends MusicBeatState
 
 		if (callback != null)
 			callback();
-
-		// diffText.text = (curSongId) +   "." +  songHighscore.toUpperCase() + " " + daDiff;
-
-		// diffText.text = songHighscore.toUpperCase() + " " + daDiff; 
-		// + "("  + curWeek + "/" + totalWeek + ")";
+		
 	}
 
 
