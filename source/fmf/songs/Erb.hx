@@ -11,7 +11,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class  RainClouds extends SongPlayer
+class Erb extends SongPlayer
 {
 
     override function getDadTex()
@@ -55,8 +55,8 @@ class  RainClouds extends SongPlayer
 		bg.scrollFactor.set(0.95, 0.95);
 		gameState.add(bg1);
 
-		createNatsuki();
-		createYuri();
+		//createNatsuki();
+		//createYuri();
 	}
 
 	function createNatsuki() {

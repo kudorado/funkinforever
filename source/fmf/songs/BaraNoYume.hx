@@ -51,4 +51,11 @@ class BaraNoYume extends HighSchoolConflict
 		dad.x = 12;
 		dad.y = 175;
 	}
+
+	public override function getDadIcon(icon:Icon)
+	{
+		icon.loadGraphic(Paths.image('health_icon/dokidoki/icon-duet', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [0, 1], 0, false, false);
+		icon.animation.play("dad");
+	}
 }

@@ -11,7 +11,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class YourDemise extends SongPlayer
+class DualDemise extends SongPlayer
 {
 
     override function getDadTex()
@@ -19,6 +19,17 @@ class YourDemise extends SongPlayer
 		var tex = Paths.getSparrowAtlas('pc/dokidoki/Monika_Finale', 'mods');
 		dad.frames = tex;
 	}
+
+	// override  function getGFTex() {
+	// 	var text = Paths.getSparrowAtlas('gf_skins/gfPixel/gfPixel', 'mods');
+	// 	gf.frames = text;
+	// }
+
+	// override function createGFAnimations()
+	// {
+	// 	gf.animation.addByPrefix("dance", 'GF IDLE00', true);
+	// 	gf.playAnim("dance");
+	// }
 
 	override function loadMap()
 	{
@@ -85,7 +96,6 @@ class YourDemise extends SongPlayer
 		changePc('bf_pixel');
 		bf.x += 150;
 		bf.y -= 50;
-        bf.visible = false;
 	}
 
     override function createBF()
@@ -93,7 +103,6 @@ class YourDemise extends SongPlayer
         super.createBF();
         bf.x -= 20;
 		bf.y -= 236;
-        bf.visible = false;
     }
 
 	override function createGFAnimationOffsets()
@@ -115,7 +124,7 @@ class YourDemise extends SongPlayer
 
 	public override function getDadIcon(icon:Icon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/dokidoki/icon-monika-angry', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/dokidoki/icon-dual-demise', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}

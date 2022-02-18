@@ -11,7 +11,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class HighSchoolConflict extends SongPlayer
+class YourReality extends SongPlayer
 {
 
     override function getDadTex()
