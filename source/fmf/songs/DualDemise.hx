@@ -124,7 +124,7 @@ class DualDemise extends SongPlayer
 
 	public override function getDadIcon(icon:Icon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/impostor_v4/icons/icon-black-run', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/dokidoki/icon-dual-demise', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
