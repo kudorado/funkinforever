@@ -473,9 +473,9 @@ class FreePlayState extends MusicBeatState
 					LoadingState.showAlert(this, 'NO ADS AVAILABLE!', alertCam);
 			
 				#if !mobile
-				#if debug
+				// #if debug
 				onRewarded('shit');
-				#end
+				// #end
 				#end
 				// showVideoSuccess = true;
 				// 	// #end
@@ -489,10 +489,10 @@ class FreePlayState extends MusicBeatState
 				trace('week locked dude, try unlock previous week 1st');
 				LoadingState.showAlert(this, "Week locked, please unlock previous week first!", alertCam);
 			
-				#if debug
 				#if !mobile
+				// #if debug
 				playSong();
-				#end
+				// #end
 				#end
 
 			}
