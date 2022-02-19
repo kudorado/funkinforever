@@ -46,7 +46,12 @@ class Character extends BaseCharacter
 		if (isLockAnim)
 			return;
 
-		playAnim('idle');
+		if (animation.getByName('idle' + idleSuffix) != null)
+		{
+			playAnim('idle' + idleSuffix);
+		}
+		else
+			playAnim('idle');
 	}
     
 	function defaultPlayAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0)
@@ -56,6 +61,13 @@ class Character extends BaseCharacter
 
 		if (!isVisible)
 			return;
+	
+
+		if (AnimName == 'idle' && animation.getByName('idle' + idleSuffix) != null)
+		{
+			trace('change idle to: idle' + idleSuffix);
+			AnimName = ('idle' + idleSuffix);
+		}
 
 		if (daBF && AnimName.contains("-alt")) // ah shit fuck you
 		{

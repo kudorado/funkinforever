@@ -249,6 +249,12 @@ class CharacterPE extends Character
 		if (isLockAnim)
 			return;
 
+		if (AnimName == 'idle' && animation.getByName('idle' + idleSuffix) != null)
+		{
+			trace('change idle to: idle' + idleSuffix);
+			AnimName = ('idle' + idleSuffix);
+		}
+
 		specialAnim = false;
 		animation.play(AnimName, Force, Reversed, Frame);
 

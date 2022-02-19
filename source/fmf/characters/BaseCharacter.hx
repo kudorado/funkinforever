@@ -320,6 +320,12 @@ class BaseCharacter extends FlxSprite
 			if (!isVisible)
 				return;
 
+			if (AnimName == 'idle' && animation.getByName('idle' + idleSuffix) != null)
+			{
+				trace('change idle to: idle' + idleSuffix);
+				AnimName = ('idle' + idleSuffix);
+			}
+
 			if (daBF && AnimName.contains("-alt")) // ah shit fuck you
 			{
 				var daString:String = AnimName;
@@ -380,10 +386,15 @@ class BaseCharacter extends FlxSprite
 			holdTimer = 0;
 		}
 	}
-	
+
 	public function dance():Void
 	{
-		playAnim('idle');
+		if (animation.getByName('idle' + idleSuffix) != null)
+		{
+			playAnim('idle' + idleSuffix);
+		}
+		else
+			playAnim('idle');
 	}	
 
 }
