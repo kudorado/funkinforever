@@ -190,8 +190,8 @@
 	"no_antialiasing": false,
 	"image": "characters/uberkid",
 	"position": [
-		0,
-		270
+		660,
+		744
 	],
 	"healthicon": "uberkid",
 	"flip_x": false,

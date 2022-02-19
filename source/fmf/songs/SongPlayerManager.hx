@@ -642,6 +642,9 @@ class SongPlayerManager
 				songPlayer = new Erb();
 			case 'your_reality':
 				songPlayer = new YourReality();
+
+			case 'unloaded':
+				songPlayer = new Unloaded();
 		}
 
 		return songPlayer;

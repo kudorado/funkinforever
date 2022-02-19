@@ -190,8 +190,8 @@
 	"no_antialiasing": false,
 	"image": "characters/speaker",
 	"position": [
-		0,
-		0
+		838,
+		356
 	],
 	"healthicon": "face",
 	"flip_x": false,
