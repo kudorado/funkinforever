@@ -18,13 +18,14 @@ class Unloaded extends SongPlayer
 	}
 	override function loadMap()
 	{
+		gameState.defaultCamZoom = 0.8;
 	}
 
-	override function update(elapsed:Float)
-	{
-		super.update(elapsed);
-		gameState.defaultCamZoom = 0.3;
-	}
+	// override function update(elapsed:Float)
+	// {
+	// 	super.update(elapsed);
+	// 	gameState.defaultCamZoom = 0.3;
+	// }
 	
 
 	override function getGFVersion()
@@ -37,6 +38,13 @@ class Unloaded extends SongPlayer
 		return new CharacterPE('pico-uber');
 	}
 
+
+	override function updateCamFollowBF()
+	{
+		super.updateCamFollowBF();
+		gameState.targetCamFollow.x -= 100;
+		gameState.targetCamFollow.y += 200;
+	}
 	
 	override function getDadVersion()
 	{

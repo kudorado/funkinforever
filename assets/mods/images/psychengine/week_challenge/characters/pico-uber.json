@@ -379,7 +379,7 @@
 		766
 	],
 	"healthicon": "pico",
-	"flip_x": true,
+	"flip_x": false,
 	"healthbar_colors": [
 		160,
 		235,

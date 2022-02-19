@@ -15,7 +15,7 @@ function onCreate()
 
     makeAnimatedLuaSprite('boppers','uberkids/frontmeat',370,830)
     addAnimationByPrefix('boppers','meatbop','frontbounce',24,false)
-    addLuaSprite('boppers',true)
+    addLuaSpriteLater('boppers')
     setLuaSpriteScrollFactor('boppers',1.6,0.85)
 
     makeAnimatedLuaSprite('runningdummy','uberkids/runninguberkid',-400,700)
@@ -87,15 +87,16 @@ function onCreate()
     addAnimationByPrefix('darnell','burn','DarnellBurn',24,false)
     addLuaSprite('darnell',true)
 
-    makeAnimatedLuaSprite('picobds','uberkids/picobdshootin',1050,650)
-    addAnimationByPrefix('picobds','shootin','PicoBreakDanceShootin',24,true)
-    addLuaSprite('picobds',false)
+    -- makeAnimatedLuaSprite('picobds','uberkids/picobdshootin',952,600)
+    -- addAnimationByPrefix('picobds','shootin','PicoBreakDanceShootin',24,true)
+    -- addLuaSprite('picobds', true)
+    -- setProperty('picobds.visible', false);
+
 
     makeLuaSprite('body','uberkids/deadbody',-140,540)
     addLuaSprite('body',false)
     doTweenAlpha('bodyhide', 'body', 0.0, 0.01, 'linear')
 
-    setObjectOrder('picobds',1);
     setObjectOrder('sky',1);
     setObjectOrder('bgfront',2);
     setObjectOrder('fireuberkid',3);
@@ -108,7 +109,7 @@ function onCreate()
     setObjectOrder('runningdummy',10);
     setObjectOrder('bus',11);
     setObjectOrder('buskid',12);
-    setObjectOrder('bfGroup',13);
+    setObjectOrder('boyfriendGroup',13);
     setObjectOrder('body',15);
 end
 
@@ -208,12 +209,13 @@ function onEvent(n,v1,v2)
         elseif v1 == 'busshoot' then
             triggerEvent('Screen Shake','0.2, 0.01','0.1, 0.01')
         elseif v1 == 'idle-bd' then
-            objectPlayAnimation('picobds','shootin',true)
+            characterPlayAnim('boyfriend','idle-bd',true, true)
         elseif v1 == 'bds' then
-            setObjectOrder('picobds',14)
-            setObjectOrder('bfGroup',1)
             triggerEvent('Screen Shake','0.2, 0.01','0.1, 0.01')
-            runTimer('bdshide',0.1)
+            characterPlayAnim('boyfriend', 'idle-bdshoot', true, true)
+            -- setProperty('picobds.visible', true)
+            -- setProperty('boyfriendGroup.alpha', 0)
+            -- runTimer('bdshide',0.1)
         end
     end
 end
@@ -255,9 +257,9 @@ function onTimerCompleted(tag,loops,loopsLeft)
         doTweenAlpha('busdadhide', 'dad', 0.0, 0.01, 'circOut')
     elseif tag == 'busdummyrun' then    
         triggerEvent('dummy','dummyrun','')
-    elseif tag == 'bdshide' then    
-        setObjectOrder('picobds',1)
-        setObjectOrder('bfGroup',13)
+    -- elseif tag == 'bdshide' then    
+    --     setProperty('picobds.visible', false)
+    --     setObjectOrder('boyfriendGroup.alpha', 1)
     elseif tag == 'bgrunnerstab' then    
         doTweenX('bgrunnerreset', 'runningbgdummy', -560, 0.01, 'circOut')
         objectPlayAnimation('stabuberkid','stab',true)

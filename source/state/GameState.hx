@@ -785,10 +785,17 @@ class GameState extends MusicBeatState
 			// 	// bgGhouls.visible = true;
 			// }
 
-			case 'Play Animation':
+
+			case 'Play Animation' | 'Alt Idle Animation':
 				// todo
 				// create enum shit
 				var playerShit:Int = 0;
+
+				if(eventName == 'Alt Idle Animation')
+				{
+					var en = eventName;
+					eventName = 'idle' + en;
+				}
 
 				switch (value2.toLowerCase().trim())
 				{
@@ -878,30 +885,30 @@ class GameState extends MusicBeatState
 
 				// trace('shit');
 
-			case 'Alt Idle Animation':
-				var char:CharacterPE = dadPE;
-				switch (value1.toLowerCase())
-				{
-					case 'gf' | 'girlfriend':
-						char = gfPE;
-					case 'boyfriend' | 'bf':
-						char = bfPE;
-					default:
-						var val:Int = Std.parseInt(value1);
-						if (Math.isNaN(val))
-							val = 0;
+			// case 'Alt Idle Animation':
+			// 	var char:CharacterPE = dadPE;
+			// 	switch (value1.toLowerCase())
+			// 	{
+			// 		case 'gf' | 'girlfriend':
+			// 			char = gfPE;
+			// 		case 'boyfriend' | 'bf':
+			// 			char = bfPE;
+			// 		default:
+			// 			var val:Int = Std.parseInt(value1);
+			// 			if (Math.isNaN(val))
+			// 				val = 0;
 
-						switch (val)
-						{
-							case 1: char = bfPE;
-							case 2: char = gfPE;
-						}
-				}
-				if (char != null)
-				{
-					char.idleSuffix = value2;
-					char.recalculateDanceIdle();
-				}
+			// 			switch (val)
+			// 			{
+			// 				case 1: char = bfPE;
+			// 				case 2: char = gfPE;
+			// 			}
+			// 	}
+			// 	if (char != null)
+			// 	{
+			// 		char.idleSuffix = value2;
+			// 		char.recalculateDanceIdle();
+			// 	}
 
 			case 'Screen Shake':
 				var valuesArray:Array<String> = [value1, value2];
@@ -1393,7 +1400,6 @@ class GameState extends MusicBeatState
 
 		if (bfPE != null && bfPE.visible)
 			return bfPE;
-
 
 		trace('no bf found!');
 		return null;
