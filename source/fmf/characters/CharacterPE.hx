@@ -246,6 +246,9 @@ class CharacterPE extends Character
 
 	function pePlayAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0)
 	{
+		if (isLockAnim)
+			return;
+
 		specialAnim = false;
 		animation.play(AnimName, Force, Reversed, Frame);
 

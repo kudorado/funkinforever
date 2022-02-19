@@ -72,7 +72,7 @@ function onCreate()
     addLuaSprite('buskid',false)
     doTweenAlpha('buskidhide', 'buskid', 0.0, 0.01, 'circOut')
 
-    makeAnimatedLuaSprite('finalpunch','uberkids/finalpunch',670,420)
+    makeAnimatedLuaSprite('finalpunch','uberkids/finalpunch',730, 446)
     addAnimationByPrefix('finalpunch','finalpunch','FinalPunch',24,false)
     addLuaSprite('finalpunch',false)
     doTweenAlpha('punchhide', 'finalpunch', 0.0, 0.01, 'circOut')
@@ -197,6 +197,9 @@ function onEvent(n,v1,v2)
             cameraFlash('game','1000000',0.3,false)
             objectPlayAnimation('finalpunch','finalpunch',true)
             cameraSetTarget('finalpunch')
+            setProperty('boyfriend.alpha', 0);
+            setProperty('dad.alpha', 0);
+
         end
     end
     if n == "Play Animation" then 
@@ -209,7 +212,8 @@ function onEvent(n,v1,v2)
         elseif v1 == 'busshoot' then
             triggerEvent('Screen Shake','0.2, 0.01','0.1, 0.01')
         elseif v1 == 'idle-bd' then
-            characterPlayAnim('boyfriend','idle-bd',true, true)
+            -- triggerEvent('Screen Shake','0.2, 0.01','0.1, 0.01')
+            -- characterPlayAnim('boyfriend','idle-bd',true, true)
         elseif v1 == 'bds' then
             triggerEvent('Screen Shake','0.2, 0.01','0.1, 0.01')
             characterPlayAnim('boyfriend', 'idle-bdshoot', true, true)

@@ -210,9 +210,9 @@
 						"bf"
 					],
 					[
-						"Play Animation",
+						"Lock Animation",
 						"bds",
-						""
+						"bf"
 					]
 				]
 			],
@@ -649,6 +649,12 @@
 			[
 				55384.6153846154,
 				[
+					[
+						"Unlock Animation",
+						"",
+						"bf"
+					],
+
 					[
 						"Alt Idle Animation",
 						"bf",

@@ -785,7 +785,99 @@ class GameState extends MusicBeatState
 			// 	// bgGhouls.visible = true;
 			// }
 
+			case 'Lock Animation':
+				var playerShit:Int = 0;
 
+				switch (value2.toLowerCase().trim())
+				{
+					case 'bf' | 'boyfriend':
+						playerShit = 1;
+
+					case 'dad' | 'opponent':
+						playerShit = 0;
+
+					case 'gf' | 'girlfriend':
+						playerShit = 2;
+
+					case 'player3':
+						playerShit = 3;
+
+					default:
+						var val2:Int = Std.parseInt(value2);
+						if (Math.isNaN(val2)) playerShit = 0;
+				}
+
+
+				switch (playerShit)
+				{
+					case 1:
+						if (bf != null)
+						{
+							bf.playAnim(value1, true);
+							bf.isLockAnim = true;
+						}
+
+					case 0:
+						if (dad != null)
+						{
+							dad.playAnim(value1, true);
+							dad.isLockAnim = true;
+						}
+					case 2:
+						if (gf != null)
+						{
+							gf.playAnim(value1, true);
+							gf.isLockAnim = true;
+						}
+
+					case 3:
+						if (player3 != null) 
+						{
+							player3.playAnim(value1, true);
+							player3.isLockAnim = true;
+						}
+					
+				}
+
+			case 'Unlock Animation':
+								var playerShit:Int = 0;
+
+			switch (value2.toLowerCase().trim())
+			{
+				case 'bf' | 'boyfriend':
+					playerShit = 1;
+
+				case 'dad' | 'opponent':
+					playerShit = 0;
+
+				case 'gf' | 'girlfriend':
+					playerShit = 2;
+
+				case 'player3':
+					playerShit = 3;
+
+				default:
+					var val2:Int = Std.parseInt(value2);
+					if (Math.isNaN(val2)) playerShit = 0;
+			}
+
+			switch (playerShit)
+			{
+				case 1:
+					if (bf != null) bf.isLockAnim = false;
+
+				case 0:
+					if (dad != null) dad.isLockAnim = false;
+				
+				case 2:
+					if (gf != null) gf.isLockAnim = false;
+
+				case 3:
+					if (player3 != null) player3.isLockAnim = false;
+				
+			}
+
+			// trace(
 			case 'Play Animation' | 'Alt Idle Animation':
 				// todo
 				// create enum shit

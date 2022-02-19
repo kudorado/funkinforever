@@ -67,7 +67,7 @@ class BaseCharacter extends FlxSprite
 	public var label:String;
 
 	private var danced:Bool = false;
-	private var isLockAnim:Bool;
+	public var isLockAnim:Bool;
 
 	//------------------_PsychEngine_-------------------------------------------------------------------------
 	public var isPlayer:Bool = false;
