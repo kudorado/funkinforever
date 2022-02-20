@@ -1276,7 +1276,7 @@ class GameState extends MusicBeatState
 				}
 		}
 
-		trace('Call event: ' + eventName + value1 + "," + value2);
+			trace('Call event: ' + eventName + value1 + "," + value2);
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
 
@@ -3825,7 +3825,7 @@ class GameState extends MusicBeatState
 
 				if (daNote.isSustainNote)
 				{
-					var subtract = 0.002;
+					var subtract = 0.00275;
 					subtract *= (100 / npsCalculated);
 
 					// if(CURRENT_SONG == 'tutorial' || CURRENT_SONG == 'tutorial-remix')
@@ -3836,7 +3836,7 @@ class GameState extends MusicBeatState
 				else
 				{
 					// health -= 0.04;
-					var subtract = 0.16;
+					var subtract = 0.2;
 					subtract *= (100 / npsCalculated);
 					health -= subtract;
 				}
