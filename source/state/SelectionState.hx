@@ -397,6 +397,8 @@ class SelectionState extends MusicBeatState
 			stopspamming = true;
 			//go babe
 			FlxG.sound.play(Paths.sound('confirmMenu'));
+			Controller._pad.visible = false;
+			
 			new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
 				LoadingState.createBlackFadeIn(this, function()

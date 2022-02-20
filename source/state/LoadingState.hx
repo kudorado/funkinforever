@@ -276,6 +276,7 @@ class LoadingState extends MusicBeatState
 		var blackScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
 		
         blackScreen.scaleToFit();
+        
         var shitCam = new FlxCamera();
 		shitCam.bgColor.alpha = 0;
 		FlxG.cameras.add(shitCam);

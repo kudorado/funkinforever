@@ -96,7 +96,6 @@ function onCreate()
     makeLuaSprite('body','uberkids/deadbody',-140,540)
     addLuaSprite('body',false)
     doTweenAlpha('bodyhide', 'body', 0.0, 0.01, 'linear')
-
     setObjectOrder('sky',1);
     setObjectOrder('bgfront',2);
     setObjectOrder('fireuberkid',3);
