@@ -46,7 +46,7 @@ class StoryState extends MusicBeatState
 		'baby', 'easy', '',
 		'normal', 'legacy', 'og',
 		'hard', 'hell', 'finale',
-		'shit', 'unfair', 'ex',
+		'shit', 'unfair', 'ex', 'fucked'
 		
 	];
 
@@ -431,8 +431,10 @@ class StoryState extends MusicBeatState
 		{
 			case 0:
 				diffic = '-easy';
-			case 2 | 3:
+			case 2:
 				diffic = '-hard';
+			case 3:
+				diffic = '-shit';
 		}
 
 		var songLowercase = songName;
@@ -455,8 +457,22 @@ class StoryState extends MusicBeatState
 		if (!FileSystem.exists(file))
 		{
 			trace('Oh shit not found difficult for this file: ' + file);
+			//reverse array it if hard -> shit
+
+			var ra:Array<String> = [];
+			for(i in StoryState.difficulties)
+			{
+				ra.push(i);
+			}
+
+			if(curDifficulty >= 2)
+			{
+				ra.reverse();
+				trace('Recheck reverse difficult');
+			}
+
 			// so attempting to load other difficult
-			for (diff in StoryState.difficulties)
+			for (diff in ra)
 			{
 				var s = diff;
 

@@ -716,6 +716,7 @@ class FunkinLua {
 				case 'dad': charType = 1;
 				case 'gf' | 'girlfriend': charType = 2;
 			}
+			trace('Lua addChara');
 			GameState.instance.addCharacterToList(name, charType);
 		});
 

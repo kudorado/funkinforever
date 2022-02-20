@@ -251,7 +251,7 @@ class CharacterPE extends Character
 
 		if (AnimName == 'idle' && animation.getByName('idle' + idleSuffix) != null)
 		{
-			trace('change idle to: idle' + idleSuffix);
+			// trace('change idle to: idle' + idleSuffix);
 			AnimName = ('idle' + idleSuffix);
 		}
 

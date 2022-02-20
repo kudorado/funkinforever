@@ -65,7 +65,7 @@ class Character extends BaseCharacter
 
 		if (AnimName == 'idle' && animation.getByName('idle' + idleSuffix) != null)
 		{
-			trace('change idle to: idle' + idleSuffix);
+			// trace('change idle to: idle' + idleSuffix);
 			AnimName = ('idle' + idleSuffix);
 		}
 
