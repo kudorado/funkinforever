@@ -4464,7 +4464,7 @@ class GameState extends MusicBeatState
 		if (health > 2)
 			health = 2;
 
-		popUpHealth(daRating, healthRating);
+		popUpHealth(daRating, Std.int(healthRating));
 
 		if (daRating != 'shit' || daRating != 'bad')
 		{
