@@ -456,6 +456,9 @@ class FreePlayState extends MusicBeatState
 			var isUnlocked = data.get(songs[curSelected].songName);
 			var daLocked = prevWeek >= 0 && !StoryState.weekUnlocked[prevWeek];
 
+			isUnlocked = true;
+			daLocked = false;
+			
 			if (isUnlocked)
 			{
 				FlxG.sound.play(Paths.sound('confirmMenu'));

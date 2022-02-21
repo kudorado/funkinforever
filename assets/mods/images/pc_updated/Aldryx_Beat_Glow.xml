@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:7b76e0f4b2604981660aa15653afc585:458f04c8a40000b8140c1773deff79d7:31969b37c44dd0dd7bc3ea760354d9e0$ -->
+<TextureAtlas imagePath="Aldryx_Beat_Glow.png" width="1002" height="3621">
+    <SubTexture name="Aldryx_Bop0000" x="1" y="1" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0001" x="1" y="1" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0002" x="502" y="1" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0003" x="502" y="1" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0004" x="1" y="1208" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0005" x="1" y="1208" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0006" x="502" y="1208" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0007" x="502" y="1208" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0008" x="1" y="2415" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0009" x="1" y="2415" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0010" x="502" y="2415" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0011" x="502" y="2415" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0012" x="502" y="2415" width="499" height="1205"/>
+    <SubTexture name="Aldryx_Bop0013" x="502" y="2415" width="499" height="1205"/>
+</TextureAtlas>
