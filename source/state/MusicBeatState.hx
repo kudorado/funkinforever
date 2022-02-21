@@ -13,6 +13,10 @@ import flixel.util.FlxTimer;
 
 class MusicBeatState extends FlxUIState
 {
+
+	var timeScale:Int = 0;
+
+	
 	private var lastBeat:Float = 0;
 	private var lastStep:Float = 0;
 
@@ -22,6 +26,8 @@ class MusicBeatState extends FlxUIState
 
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
+
+
 
 	override function create()
 	{

@@ -34,8 +34,33 @@ class Edd extends SongPlayer
 		gf.x = 1632;
 		gf.y = 200;
 	}
-	
 
+
+	override function updateCamFollowDad()
+	{
+		if (gameState.curBeat >= 274)
+		{
+			gameState.targetCamFollow.x = 2000;
+			gameState.targetCamFollow.y = 600;
+		}
+		else
+			super.updateCamFollowDad();
+	}
+
+	override function updateCamFollowBF()
+	{
+		if (gameState.curBeat >= 274)
+		{
+			gameState.targetCamFollow.x = 2000;
+			gameState.targetCamFollow.y = 600;
+		}
+		else
+		{
+			super.updateCamFollowBF();
+		}
+
+	}
+	
 	override function getDadVersion()
 	{
 		return new CharacterPE('edd');

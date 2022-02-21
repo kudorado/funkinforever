@@ -385,24 +385,19 @@ class StoryState extends MusicBeatState
 				GameState.storyCompleted = false;
 
 				trace('Continue story: ' + SongManager.songs[curWeek].songTitle);
-
 			}
 			
 			GameState.playingSong = SongManager.songs[curWeek];
 			
 			GameState.isStoryMode = true;
 			selectedWeek = true;
-
 			GameState.SONG_NAME = SongFilter.filter(GameState.storyPlaylist[0]);
 			GameState.RAW_SONG_NAME = (GameState.storyPlaylist[0]);
 
 			// var daSong = GameState.SONG_NAME + diffic;
 			// var daFolder = GameState.playingSong.folder + StringTools.replace(GameState.storyPlaylist[0], " ", "-").toLowerCase();
-
 	
 			loadDataFile(GameState.SONG_NAME);
-			
-
 
 			GameState.storyWeek = curWeek;
 			GameState.campaignScore = 0;

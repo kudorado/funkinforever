@@ -2065,6 +2065,7 @@ class FunkinLua {
 	{
 		var file = daFile;
 		var shit = daPath + daType + "/" + file;
+		#if MOD_ALLOWED
 		if (openfl.utils.Assets.exists(shit))
 		{
 			var daDir = Main.path + "assets/" + SongPlayer.folder + daType;
@@ -2098,6 +2099,8 @@ class FunkinLua {
 			// trace('no lua stage found!: ' + shit);
 			// lime.app.Application.current.window.alert(shit, 'FILE NOT FOUND 02!');
 		}
+
+		#end
 		// lime.app.Application.current.window.alert(shit, 'HOLY SHIT!');
 	}
 

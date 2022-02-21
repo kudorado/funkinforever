@@ -1243,8 +1243,9 @@ class GameState extends MusicBeatState
 						// player3
 				}
 
-			case "Set cam Zoom":
+			case "Set Cam Zoom" | 'Set cam Zoom':
 				var val1:Float = Std.parseFloat(value1);
+				trace('set cam zomm ono: ' + val1);
 				if (!Math.isNaN(val1))
 					defaultCamZoom = val1;
 
@@ -1276,7 +1277,7 @@ class GameState extends MusicBeatState
 				}
 		}
 
-			trace('Call event: ' + eventName + value1 + "," + value2);
+		trace('Call event: ' + eventName + value1 + "," + value2);
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
 
@@ -2479,7 +2480,8 @@ class GameState extends MusicBeatState
 		#else
 		file = "assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
 		#end
-		
+
+		#if MOD_ALLOWED
 		#if !android
 		if (FileSystem.exists(file))
 		{
@@ -2550,6 +2552,7 @@ class GameState extends MusicBeatState
 			else
 				trace('Null event shit: ' + SONG_NAME);
 		}
+		#end
 
 		//load shit
 		var script:String = '';
@@ -2559,6 +2562,7 @@ class GameState extends MusicBeatState
 		script = "assets/data/" + SongPlayer.folder + SONG_NAME + '/script.lua';
 		#end
 
+		#if MOD_ALLOWED
 		#if !android
 		if (FileSystem.exists(script))
 		{
@@ -2575,6 +2579,7 @@ class GameState extends MusicBeatState
 			createLua(script);
 			#end
 		}
+		#end
 
 
 
@@ -3450,7 +3455,6 @@ class GameState extends MusicBeatState
 		if (camZooming)
 		{
 			camGame.zoom = FlxMath.lerp(camZoomShit, camGame.zoom, 0.95);
-			// camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, 0.95);
 		}
 
 		FlxG.watch.addQuick("beatShit", curBeat);

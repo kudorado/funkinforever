@@ -375,8 +375,8 @@
 	"no_antialiasing": false,
 	"image": "characters/pico-uber",
 	"position": [
-		1288,
-		766
+		1462,
+		820
 	],
 	"healthicon": "pico",
 	"flip_x": false,
@@ -390,5 +390,5 @@
 		40
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 2.262
 }

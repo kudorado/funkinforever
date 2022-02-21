@@ -190,8 +190,8 @@
 	"no_antialiasing": false,
 	"image": "characters/uberkid",
 	"position": [
-		660,
-		744
+		794,
+		760
 	],
 	"healthicon": "uberkid",
 	"flip_x": false,
@@ -205,5 +205,5 @@
 		80
 	],
 	"sing_duration": 6.1,
-	"scale": 1
+	"scale": 1.91
 }

@@ -549,7 +549,7 @@ class FreePlayState extends MusicBeatState
 
 		StoryState.loadDataFile(songLowercase);
 
-		Controller._pad.visible = false;
+		// Controller._pad.visible = false;
 
 		LoadingState.loadWeekSplash(this, function()
 		{
