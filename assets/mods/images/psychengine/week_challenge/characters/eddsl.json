@@ -123,8 +123,8 @@
 	"no_antialiasing": false,
 	"image": "characters/EddEnter",
 	"position": [
-		1307,
-		309
+		1085,
+		526
 	],
 	"healthicon": "bfedd",
 	"flip_x": true,

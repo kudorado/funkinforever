@@ -470,6 +470,11 @@ class BaseSong
 		return new Skin("default");
 	}
 
+	public function getDefaultVfx():Skin
+	{
+		return new VFX("none");
+	}
+
 	// create BF
 	public function createBF():Void
 	{
@@ -644,7 +649,10 @@ class BaseSong
 
 	private function loadSkin()
 	{	
-		skin = SkinManager.loadSkin(this);
+		if(GameState.isStoryMode)
+			skin = getDefaultSkin();
+		else
+			skin = SkinManager.loadSkin(this);
 	}
 
 	private function loadVFX()

@@ -3019,7 +3019,8 @@ class GameState extends MusicBeatState
 
 		FlxG.sound.music.play();
 		#if debug
-		Conductor.songPosition = FlxG.sound.music.time * FlxG.timeScale;
+		//no sync 
+		// Conductor.songPosition = FlxG.sound.music.time * FlxG.timeScale;
 		#else
 		Conductor.songPosition = FlxG.sound.music.time;
 		#end
@@ -3302,29 +3303,27 @@ class GameState extends MusicBeatState
 		}
 
 		#if debug
-			if (FlxG.keys.justPressed.Y)
-			{
-				esNoteOffsetX++;
-				trace('ES Offset X: ' + esNoteOffsetX);
-			}
-			if (FlxG.keys.justPressed.T)
-			{
-				esNoteOffsetX--;
-				trace('ES Offset X: ' + esNoteOffsetX);
-			}
+			// if (FlxG.keys.justPressed.Y)
+			// {
+			// 	esNoteOffsetX++;
+			// 	trace('ES Offset X: ' + esNoteOffsetX);
+			// }
+			// if (FlxG.keys.justPressed.T)
+			// {
+			// 	esNoteOffsetX--;
+			// 	trace('ES Offset X: ' + esNoteOffsetX);
+			// }
 
-			if (FlxG.keys.justPressed.I)
-			{
-				esNoteOffsetY++;
-				trace('ES Offset Y: ' + esNoteOffsetY);
-			}
-			if (FlxG.keys.justPressed.U)
-			{
-				esNoteOffsetY--;
-				trace('ES Offset Y: ' + esNoteOffsetY);
-			}
-
-
+			// if (FlxG.keys.justPressed.I)
+			// {
+			// 	esNoteOffsetY++;
+			// 	trace('ES Offset Y: ' + esNoteOffsetY);
+			// }
+			// if (FlxG.keys.justPressed.U)
+			// {
+			// 	esNoteOffsetY--;
+			// 	trace('ES Offset Y: ' + esNoteOffsetY);
+			// }
 		#end
 		super.update(elapsed);
 
