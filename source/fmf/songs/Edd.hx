@@ -38,10 +38,20 @@ class Edd extends SongPlayer
 
 	override function updateCamFollowDad()
 	{
-		if (gameState.curBeat >= 274)
+		if (gameState.curBeat >= 507 && gameState.curBeat < 510)
+		{
+			super.updateCamFollowDad();
+			gameState.targetCamFollow.y = -350;
+		}
+		else if (gameState.curBeat >= 251)
 		{
 			gameState.targetCamFollow.x = 2000;
 			gameState.targetCamFollow.y = 600;
+		}
+		else if (gameState.curBeat >= 240)
+		{
+			super.updateCamFollowDad();
+			gameState.targetCamFollow.y = -200;
 		}
 		else
 			super.updateCamFollowDad();
@@ -49,10 +59,20 @@ class Edd extends SongPlayer
 
 	override function updateCamFollowBF()
 	{
-		if (gameState.curBeat >= 274)
+		if (gameState.curBeat >= 507 && gameState.curBeat < 510)
+		{
+			super.updateCamFollowBF();
+			gameState.targetCamFollow.y = -350;
+		}
+		else if (gameState.curBeat >= 251)
 		{
 			gameState.targetCamFollow.x = 2000;
 			gameState.targetCamFollow.y = 600;
+		}
+		else if (gameState.curBeat >= 240)
+		{
+			super.updateCamFollowBF();
+			gameState.targetCamFollow.y = -500;
 		}
 		else
 		{

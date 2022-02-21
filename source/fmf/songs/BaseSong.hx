@@ -470,7 +470,7 @@ class BaseSong
 		return new Skin("default");
 	}
 
-	public function getDefaultVfx():Skin
+	public function getDefaultVfx():VFX
 	{
 		return new VFX("none");
 	}
@@ -657,7 +657,10 @@ class BaseSong
 
 	private function loadVFX()
 	{
-		vfx = VfxManager.loadVfx();	
+		if (GameState.isStoryMode)
+			vfx = getDefaultVfx();
+		else
+			vfx  = VfxManager.loadVfx();
 	}
 
 	private function loadScroll()
