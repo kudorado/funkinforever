@@ -1,4 +1,6 @@
 package;
+
+import haxeplus.*;
 import haxe.Timer;
 import openfl.display.FPS;
 import openfl.display.Sprite;
@@ -114,7 +116,7 @@ class Performance extends Sprite
 	    	appText.width = 500;
 			appText.selectable = false;
 			// appText.defaultTextFormat = new TextFormat(font.fontName, 12, 0xededed);
-			// appText.text = Lib.packageName + "\nVERSION " + Lib.version + "\n" + Lib.company;
+			// appText.text = Debugger.timeScale + "";
 			// appText.embedFonts = true;
 			nextX = appText.x+appText.textWidth+padding;
 		}
@@ -166,7 +168,8 @@ class Performance extends Sprite
             {	
             	var fps:Int = times.length;
             	if (showGraph) drawGraph(fps);
-                performanceText.text = "FPS: " + fps + "\nMEM: " + mem + " MB\nMPK: " + memPeak + " MB";	
+				performanceText.text = "FPS: " + fps + " TIMESCALE: " + Debugger.timeScale + 
+				" SongPosition: " + Conductor.songPosition + "\nMEM: " + mem + " MB\nMPK: " + memPeak + " MB";	
             }
         }
         skipped++;

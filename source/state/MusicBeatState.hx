@@ -1,6 +1,7 @@
 package state;
 import state.*;
 
+import haxeplus.*;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import openfl.Lib;
@@ -14,9 +15,6 @@ import flixel.util.FlxTimer;
 class MusicBeatState extends FlxUIState
 {
 
-	var timeScale:Int = 0;
-
-	
 	private var lastBeat:Float = 0;
 	private var lastStep:Float = 0;
 
@@ -51,10 +49,23 @@ class MusicBeatState extends FlxUIState
 	];
 
 	var skippedFrames = 0;
-
 	override function update(elapsed:Float)
 	{
-		//everyStep();
+		// #if debug
+		// for (ts in 0...Std.int(Math.floor(Debugger.timeScale)))
+		// {
+		// 	updateStep(elapsed);
+		// 	super.update(elapsed);
+		// }
+		// #else
+		updateStep(elapsed);
+		super.update(elapsed);
+		// #end
+
+		
+	}
+
+	function updateStep(elapsed:Float){
 		var oldStep:Int = curStep;
 
 		updateCurStep();
@@ -64,20 +75,19 @@ class MusicBeatState extends FlxUIState
 			stepHit();
 
 		if (FlxG.save.data.fpsRain && skippedFrames >= 6)
-			{
-				if (currentColor >= array.length)
-					currentColor = 0;
-				(cast (Lib.current.getChildAt(0), Main)).changeFPSColor(array[currentColor]);
-				currentColor++;
-				skippedFrames = 0;
-			}
-			else
-				skippedFrames++;
+		{
+			if (currentColor >= array.length)
+				currentColor = 0;
+			(cast(Lib.current.getChildAt(0), Main)).changeFPSColor(array[currentColor]);
+			currentColor++;
+			skippedFrames = 0;
+		}
+		else
+			skippedFrames++;
 
-		if ((cast (Lib.current.getChildAt(0), Main)).getFPSCap != FlxG.save.data.fpsCap && FlxG.save.data.fpsCap <= 290)
-			(cast (Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
+		if ((cast(Lib.current.getChildAt(0), Main)).getFPSCap != FlxG.save.data.fpsCap && FlxG.save.data.fpsCap <= 290)
+			(cast(Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
 
-		super.update(elapsed);
 	}
 
 	private function updateBeat():Void
@@ -101,12 +111,11 @@ class MusicBeatState extends FlxUIState
 				lastChange = Conductor.bpmChangeMap[i];
 		}
 
-		curStep = lastChange.stepTime + Math.floor((Conductor.songPosition - lastChange.songTime) / Conductor.stepCrochet);
+		curStep = lastChange.stepTime + Math.floor(((Conductor.songPosition - lastChange.songTime) / Conductor.stepCrochet));
 	}
 
 	public function stepHit():Void
 	{
-
 		if (curStep % 4 == 0)
 			beatHit();
 	}

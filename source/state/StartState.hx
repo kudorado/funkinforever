@@ -271,7 +271,13 @@ class StartState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		if (FlxG.sound.music != null)
+		{
+			#if debug
+			Conductor.songPosition = FlxG.sound.music.time * FlxG.timeScale;
+			#else
 			Conductor.songPosition = FlxG.sound.music.time;
+			#end			
+		}
 
 		if (FlxG.keys.justPressed.F)
 		{

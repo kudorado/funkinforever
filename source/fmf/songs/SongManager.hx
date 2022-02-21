@@ -363,16 +363,6 @@ class SongManager
 		new SongData
 		(
 			{
-				folder: 'week_challenge',
-				character: 'hank',
-				songTitle: 'Challenge Week',
-				songList: ['Accelerant', 'Edd', 'Unloaded']
-			}
-		),
-
-		new SongData
-		(
-			{
 				folder: 'week_finnandjake',
 				character: 'finnandjake',
 				songTitle: 'Finn & Jake',
@@ -443,6 +433,16 @@ class SongManager
 				'reconciliation',
 				'crucify_yuri_mix', 'beathoven_natsuki_mix', 'its_complicated_sayori_mix', 'glitcher_monika_mix',
 				]
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_challenge',
+				character: 'hank',
+				songTitle: 'Challenge Week',
+				songList: ['Accelerant', 'Edd', 'Unloaded']
 			}
 		),
 

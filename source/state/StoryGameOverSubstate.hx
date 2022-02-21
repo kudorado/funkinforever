@@ -150,7 +150,11 @@ class StoryGameOverSubstate extends MusicBeatSubstate
 
 		if (FlxG.sound.music.playing)
 		{
+			#if debug
+			Conductor.songPosition = FlxG.sound.music.time * FlxG.timeScale;
+			#else
 			Conductor.songPosition = FlxG.sound.music.time;
+			#end
 		}
 		GameState.instance.callOnLuas('onUpdatePost', [elapsed]);
 	}

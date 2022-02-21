@@ -88,6 +88,7 @@ class GameState extends MusicBeatState
 	public static var noteTypeList:Array<String> = // Used for backwards compatibility with 0.1 - 0.3.2 charts, though, you should add your hardcoded custom note types here too.
 		['', 'Alt Animation', 'Hey!', 'Hurt Note', 'GF Sing', 'No Animation'];
 
+
 	// Lua and Psych engine friends
 	//-------------------------------------------------
 	var debugNum:Int = 0;
@@ -3017,7 +3018,11 @@ class GameState extends MusicBeatState
 		vocals.pause();
 
 		FlxG.sound.music.play();
+		#if debug
+		Conductor.songPosition = FlxG.sound.music.time * FlxG.timeScale;
+		#else
 		Conductor.songPosition = FlxG.sound.music.time;
+		#end
 		vocals.time = Conductor.songPosition;
 		vocals.play();
 	}
@@ -3088,7 +3093,12 @@ class GameState extends MusicBeatState
 		{
 			if (startedCountdown)
 			{
+				#if debug
+				Conductor.songPosition += FlxG.elapsed * 1000 * FlxG.timeScale;
+				#else
 				Conductor.songPosition += FlxG.elapsed * 1000;
+				#end
+				
 				if (Conductor.songPosition >= 0)
 					startSong();
 			}
@@ -3098,7 +3108,11 @@ class GameState extends MusicBeatState
 			if (itFuckingEnd)
 				return;
 
+			#if debug
+			Conductor.songPosition += FlxG.elapsed * 1000 * FlxG.timeScale;
+			#else
 			Conductor.songPosition += FlxG.elapsed * 1000;
+			#end
 			songPositionBar = Conductor.songPosition;
 
 			if (!paused)
