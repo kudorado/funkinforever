@@ -603,8 +603,11 @@ class SongPlayerManager
 			case 'sugar-rush' | 'sugar rush':
 				return new SugarRush();
 
-			case 'my_sweets' | 'baka':
+			case 'my_sweets':
 				songPlayer = new MySweets();
+
+			case 'baka':
+				songPlayer = new Baka();
 			
 			case 'deep_breaths':
 				songPlayer = new DeepBreaths(); 
