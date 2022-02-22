@@ -73,10 +73,12 @@ class Item extends FlxSpriteGroup
 
 		var unlockedTime:Int = getUnlockedTime();
 		var cost:Int = getItemData().cost;
+		cost =  Std.int(Math.min(cost, 1));
+
 
 		isUnlocked = unlockedTime >= cost;
 
-		unlockAmount = new FlxText(120, 140, unlockedTime + "/" + cost, 36);
+		unlockAmount = new FlxText(120, 140, ""); //unlockedTime + "/" + cost, 36);
 		unlockAmount.setFormat("VCR OSD Mono", 32, CENTER);
 		add(unlockAmount);
 
@@ -105,7 +107,7 @@ class Item extends FlxSpriteGroup
 	{
 		var unlockedTime:Int = getUnlockedTime();
 		var cost:Int = getItemData().cost;
-
+		cost = Std.int(Math.min(cost, 1));
 		isUnlocked = unlockedTime >= cost;
 	}
 
@@ -132,7 +134,7 @@ class Item extends FlxSpriteGroup
 		var unlockedTime:Int = getUnlockedTime();
 		var cost:Int = getItemData().cost;
 
-		unlockAmount = new FlxText(120, 140, unlockedTime + "/" + cost, 36);
+		unlockAmount = new FlxText(120, 140, ""); // ;unlockedTime + "/" + cost, 36);
 		unlockAmount.setFormat("VCR OSD Mono", 32, CENTER);
 		add(unlockAmount);
 
@@ -159,11 +161,9 @@ class Item extends FlxSpriteGroup
 
 	public function updateState()
 	{
-
 		unlockAmount.visible = !isUnlocked;
 		video.visible = !isUnlocked;
 		unlockText.visible = !isUnlocked;
-
 		selectedText.visible = isUnlocked && isSelected();
 	}
 

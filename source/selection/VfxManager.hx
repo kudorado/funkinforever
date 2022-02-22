@@ -130,7 +130,7 @@ class VfxManager
 			case 'nuclear': //shit
 				vfx = new NuclearEffect();
 			case 'demon'://shit
-				vfx = new DemonEffect();
+			vfx = new DemonEffect();
 			case 'fire':
 				vfx = new FireEffect();
 

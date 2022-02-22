@@ -415,8 +415,24 @@ class SelectionState extends MusicBeatState
 		}
 		else
 		{
-			selectedItem = null;
 
+			//todo add gacha state
+			// stopspamming = true;
+			// FlxG.sound.play(Paths.sound('confirmMenu'));
+			// openSubState(new GachaState());
+			// new FlxTimer().start(0.1, function(tmr:FlxTimer)
+			// {
+			// 	LoadingState.createBlackFadeIn(this, function()
+			// 	{
+			// 		LoadingState.didLoadout = true;
+			// 		LoadingState.setStaticTransition();
+			// 		LoadingState.loadAndSwitchState(new GachaState());
+			// 	});
+			// });
+			// return;
+
+
+			selectedItem = null;
 			switch (curSelection)
 			{
 				case 1:
@@ -589,6 +605,7 @@ class SelectionState extends MusicBeatState
 		selectedPc.id = FlxG.save.data.pcId;
 		selectedPc.updateUnlockStatus();
 		selectedPc.createItemReview();
+		updatePc();
 	}
 
 	public function updateSkinReview()
@@ -596,6 +613,9 @@ class SelectionState extends MusicBeatState
 		selectedSkin.id = FlxG.save.data.skinId;
 		selectedSkin.updateUnlockStatus();
 		selectedSkin.createItemReview(0.35);
+
+		updateSkin();
+
 	}
 	
 	public function updateVfxReview()
@@ -603,6 +623,8 @@ class SelectionState extends MusicBeatState
 		selectedVfx.id = FlxG.save.data.vfxId;
 		selectedVfx.updateUnlockStatus();
 		selectedVfx.createItemReview(0.35);
+		updateVfx();
+
 	}
 	
 	private function updateOverview()
@@ -638,7 +660,8 @@ class SelectionState extends MusicBeatState
 		if (curPc > PcManager.pcList.length - 1)
 			curPc = 0;
 
-		FlxG.sound.play(Paths.sound('scrollMenu'));
+		if(change != 0)
+			FlxG.sound.play(Paths.sound('scrollMenu'));
 
 		grpPcs.members[curPc].trySelect();
 
@@ -775,7 +798,7 @@ class SelectionState extends MusicBeatState
 		}
 	}
 
-	private function updateVfx()
+	public function updateVfx()
 	{
 		var bullShit:Int = 0;
 
@@ -797,7 +820,7 @@ class SelectionState extends MusicBeatState
 		}
 	}
 
-	private function updateControl()
+	public function updateControl()
 	{
 		var bullShit:Int = 0;
 
@@ -819,7 +842,7 @@ class SelectionState extends MusicBeatState
 		}
 	}
 
-	private function updateScroll()
+	public function updateScroll()
 	{
 		var bullShit:Int = 0;
 
@@ -841,7 +864,7 @@ class SelectionState extends MusicBeatState
 		}
 	}
 
-	private function updatePlayMode()
+	public function updatePlayMode()
 	{
 		var bullShit:Int = 0;
 

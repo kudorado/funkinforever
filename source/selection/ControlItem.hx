@@ -100,6 +100,7 @@ class ControlItem extends Item
 		SelectionState.instance.grpControls.members[curControl].updateState();
 
 		refresh();
+
 	}
 
 

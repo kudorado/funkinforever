@@ -65,11 +65,8 @@ class SkinItem extends Item
 			var curSkin = FlxG.save.data.skinId;
 			FlxG.save.data.skinId = id;
 			FlxG.save.flush();
-
 			SelectionState.instance.grpSkins.members[curSkin].updateState();
-
 			refresh();
-
 			SelectionState.instance.updateSkinReview();
 		}
 	}

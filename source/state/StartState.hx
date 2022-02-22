@@ -79,7 +79,7 @@ class StartState extends MusicBeatState
 
 		super.create();
 
-		FlxG.save.bind('save', 'data6');
+		FlxG.save.bind('save', 'data');
 
 		KadeEngineData.initSave();
 

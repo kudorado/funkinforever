@@ -57,6 +57,7 @@ class PlayModeItem extends Item
 			refresh();
 
 			PlayModeManager.loadPlayMode();
+			SelectionState.instance.updatePlayMode();
 		}
 	}
 }
