@@ -113,7 +113,7 @@ class Note extends FlxSprite
 				{
 					if (note == value)
 					{
-						trace('reload note: ' + texture);
+						trace('reload note: ' + note  +" with texture: " + texture);
 						reloadNote(value, texture);
 						break;
 					}
@@ -171,6 +171,7 @@ class Note extends FlxSprite
 			this.strumTime = 0;
 
 		this.noteData = noteData;
+
 
 		var daStage:String = GameState.curStage;
 
@@ -260,6 +261,12 @@ class Note extends FlxSprite
 
 			}
 		}
+
+		// if (noteType == 'Rocket')
+		// {
+		// 	this.x -= 100;
+		// }
+
 	}
 
 //--------------------------- Psych engine shit ------------------------------------

@@ -18,7 +18,7 @@ class Edd extends SongPlayer
 	}
 	override function loadMap()
 	{
-		gameState.defaultCamZoom = 0.6;
+		gameState.defaultCamZoom = 0.66;
 	}
 
 	override function createBF()
@@ -43,7 +43,7 @@ class Edd extends SongPlayer
 			super.updateCamFollowDad();
 			gameState.targetCamFollow.y = -350;
 		}
-		else if (gameState.curBeat >= 254)
+		else if (gameState.curBeat >= 252)
 		{
 			gameState.targetCamFollow.x = 2000;
 			gameState.targetCamFollow.y = 600;
@@ -64,7 +64,7 @@ class Edd extends SongPlayer
 			super.updateCamFollowBF();
 			gameState.targetCamFollow.y = -350;
 		}
-		else if (gameState.curBeat >= 254)
+		else if (gameState.curBeat >= 252)
 		{
 			gameState.targetCamFollow.x = 2000;
 			gameState.targetCamFollow.y = 600;
