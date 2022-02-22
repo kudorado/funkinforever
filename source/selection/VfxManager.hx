@@ -77,6 +77,13 @@ class VfxManager
 			cost: 5
 		}),
 		
+				
+		new VfxData
+		({
+			name: 'blackhole',
+			cost: 5
+		}),
+		
 	
 	
 		
@@ -117,6 +124,9 @@ class VfxManager
 
 			case 'cyber':
 				vfx = new CyberEffect();
+
+			case 'blackhole':
+				vfx = new BlackHoleEffect();
 
 		}
 

@@ -3819,6 +3819,7 @@ class GameState extends MusicBeatState
 			if (spr.animation.finished)
 			{
 				#if debug
+				spr.animation.play('hit');
 				//no set alpha le zero
 				#else
 				spr.alpha = 0;
