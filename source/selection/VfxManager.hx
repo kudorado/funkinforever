@@ -70,6 +70,12 @@ class VfxManager
 			name: 'thunder',
 			cost: 5
 		}),
+
+		new VfxData
+		({
+			name: 'bloodhit',
+			cost: 5
+		}),
 		
 		new VfxData
 		({
@@ -81,6 +87,12 @@ class VfxManager
 		new VfxData
 		({
 			name: 'blackhole',
+			cost: 5
+		}),
+
+
+		new VfxData({
+			name: 'katon',
 			cost: 5
 		}),
 		
@@ -122,12 +134,17 @@ class VfxManager
 			case 'fire':
 				vfx = new FireEffect();
 
+			case 'bloodhit':
+				vfx = new BloodHitEffect();
+
 			case 'cyber':
 				vfx = new CyberEffect();
 
 			case 'blackhole':
 				vfx = new BlackHoleEffect();
 
+			case 'katon':
+				vfx = new KatonEffect();
 		}
 
 		return vfx;

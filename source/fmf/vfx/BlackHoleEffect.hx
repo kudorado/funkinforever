@@ -24,22 +24,11 @@ class BlackHoleEffect extends MadEffect
 		vfx.ID = i; 
 		vfx.animation.add('hit', getArray(getFrames()), 24, false);
 		vfx.antialiasing = true;
-		vfx.setGraphicSize(Std.int(vfx.width * 0.65));
+		vfx.setGraphicSize(Std.int(vfx.width * 0.75));
 
-		switch (i)
-		{
-			case 0: //left
-				vfx.angle = -90;
-			
-			
-			case 1://down
-				vfx.angle = 180;
+		vfx.x -= 200;
+		vfx.y -= 180;
 
-			case 2://up
-
-			case 3://right
-				vfx.angle = 90;
-
-		}
+		
 	}
 }

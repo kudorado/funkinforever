@@ -3458,7 +3458,7 @@ class GameState extends MusicBeatState
 			FlxG.switchState(new AnimationState(BF, true));
 		}
 
-		if (FlxG.keys.justPressed.SIX)
+		if (FlxG.keys.justPressed.SEVEN)
 		{
 			FlxG.switchState(new AnimationState(GF, true));
 		}
@@ -3845,6 +3845,8 @@ class GameState extends MusicBeatState
 			{
 				Debugger.instance.Debug(effectStrums.members[3]);
 			}
+
+	
 		#end
 
 		if (!inCutscene)
@@ -5253,10 +5255,15 @@ class GameState extends MusicBeatState
 
 			effectStrums.forEach(function(spr:FlxSprite)
 			{
-				if (Math.abs(note.noteData) == spr.ID && spr.animation.finished)
+				if (note != null)
 				{
-					spr.alpha = 1;
-					spr.animation.play('hit', true);
+					var daRating = note.rating;
+
+					if (daRating == 'sick' && Math.abs(note.noteData) == spr.ID && spr.animation.finished)
+					{
+						spr.alpha = 1;
+						spr.animation.play('hit', true);
+					}
 				}
 			});
 
