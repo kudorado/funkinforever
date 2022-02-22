@@ -73,9 +73,12 @@ class VfxManager
 		
 		new VfxData
 		({
-			name: 'bloodhit',
+			name: 'cyber',
 			cost: 5
 		}),
+		
+	
+	
 		
 	];
 
@@ -111,8 +114,10 @@ class VfxManager
 				vfx = new DemonEffect();
 			case 'fire':
 				vfx = new FireEffect();
-			case 'bloodhit':
-				vfx = new BloodHitEffect();
+
+			case 'cyber':
+				vfx = new CyberEffect();
+
 		}
 
 		return vfx;
