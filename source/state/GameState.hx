@@ -1,5 +1,8 @@
 package state;
 
+#if debug
+import haxeplus.Debugger;
+#end
 
 import ui.*;
 import reactor.*;
@@ -3815,9 +3818,33 @@ class GameState extends MusicBeatState
 		{
 			if (spr.animation.finished)
 			{
+				#if debug
+				//no set alpha le zero
+				#else
 				spr.alpha = 0;
+				#end
 			}
 		});
+
+		#if debug	
+			if (FlxG.keys.justPressed.TWO)
+			{
+				Debugger.instance.Debug(effectStrums.members[0]);
+			}
+
+			if (FlxG.keys.justPressed.THREE)
+			{
+				Debugger.instance.Debug(effectStrums.members[1]);
+			}
+			if (FlxG.keys.justPressed.FOUR)
+			{
+				Debugger.instance.Debug(effectStrums.members[2]);
+			}
+			if (FlxG.keys.justPressed.FIVE)
+			{
+				Debugger.instance.Debug(effectStrums.members[3]);
+			}
+		#end
 
 		if (!inCutscene)
 			keyShit();

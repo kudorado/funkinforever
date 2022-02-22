@@ -22,7 +22,7 @@ class BloodHitEffect extends MadEffect
 		vfx.loadGraphic(Paths.image(getEffectPath()  + '/bloodhit', 'mods'), true, 512, 512);
 
 		vfx.ID = i; 
-		vfx.animation.add('hit', getArray(getFrames()), 90, false);
+		vfx.animation.add('hit', getArray(getFrames()), 24, false);
 
 		vfx.x -= 75;
 		vfx.y -= 125;
