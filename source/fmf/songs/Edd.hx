@@ -43,7 +43,7 @@ class Edd extends SongPlayer
 			super.updateCamFollowDad();
 			gameState.targetCamFollow.y = -350;
 		}
-		else if (gameState.curBeat >= 251)
+		else if (gameState.curBeat >= 254)
 		{
 			gameState.targetCamFollow.x = 2000;
 			gameState.targetCamFollow.y = 600;
@@ -64,7 +64,7 @@ class Edd extends SongPlayer
 			super.updateCamFollowBF();
 			gameState.targetCamFollow.y = -350;
 		}
-		else if (gameState.curBeat >= 251)
+		else if (gameState.curBeat >= 254)
 		{
 			gameState.targetCamFollow.x = 2000;
 			gameState.targetCamFollow.y = 600;
