@@ -105,7 +105,7 @@ class SkinManager
 
 		}
 
-		return skin;
+		return new Skin('default');
 	}
 
 }

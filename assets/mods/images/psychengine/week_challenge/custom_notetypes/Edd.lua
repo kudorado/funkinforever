@@ -18,7 +18,6 @@ end
 
 function goodNoteHit(id, noteData, noteType, isSustainNote)
 	if noteType == 'Edd' then
-
 		local animToPlay = '';
 		if noteData == 0 then
 			animToPlay = 'singLEFT';

@@ -109,7 +109,7 @@
 	"image": "characters/Tord",
 	"position": [
 		1346,
-		-138
+		150
 	],
 	"healthicon": "Tord",
 	"flip_x": false,
@@ -123,5 +123,5 @@
 		-450
 	],
 	"sing_duration": 6.1,
-	"scale": 1.5
+	"scale": 1.228
 }
