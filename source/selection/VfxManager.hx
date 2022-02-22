@@ -95,10 +95,122 @@ class VfxManager
 			name: 'katon',
 			cost: 5
 		}),
-		
-	
-	
-		
+
+		new VfxData({
+			name: 'afterrain',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'constella',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'deathflower',
+			cost: 5
+		}),
+
+		//duplicate dust name
+		new VfxData({
+			name: 'shuriken_dust',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'fakethunder',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'fluid',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'fruit',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'futon',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'gun',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'highway',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'ice',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'icebreak',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'infected',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'lstrike',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'lstrike1',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'luckyday',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'meteortrike',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'natural',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'raigetki',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'redstar',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'toxic',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'underwater',
+			cost: 5
+		}),
+
+		new VfxData({
+			name: 'void',
+			cost: 5
+		}),
 	];
 
 
@@ -145,6 +257,66 @@ class VfxManager
 
 			case 'katon':
 				vfx = new KatonEffect();
+
+			case 'afterrain':
+				vfx = new AfterRainEffect();
+
+			case 'constella':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+
+			case 'deathflower':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+			case 'shuriken_dust':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
+
+			case '':
+				//TODO implement new class
+				vfx = new AfterRainEffect();//to remove
 		}
 
 		return vfx;
