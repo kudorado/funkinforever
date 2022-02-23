@@ -262,61 +262,69 @@ class VfxManager
 				vfx = new AfterRainEffect();
 
 			case 'constella':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+				vfx = new ConstellaEffect();
 
 			case 'deathflower':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+				vfx = new DeathFlowerEffect();
+
 			case 'shuriken_dust':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+				vfx = new ShurikenDustEffect();
 
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+			case 'fakethunder':
+				vfx = new FakethunderEffect();
 
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+			case 'fluid':
+				vfx = new FluidEffect();
 
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+			case 'fruit':
+				vfx = new FruitEffect();
 
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+			case 'futon':
+				vfx = new FutonEffect();
+			case 'gun':
+				vfx = new GunEffect();
 
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+			case 'highway':
+				vfx = new HighwayEffect();
 
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+			case 'ice':
+				vfx = new IceEffect();
 
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+			case 'icebreak':
+				vfx = new IcebreakEffect();
 
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+			case 'infected':
+				vfx = new InfectedEffect();
 
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+			case 'lstrike':
+				vfx = new LstrikeEffect();
 
-			case '':
-				//TODO implement new class
-				vfx = new AfterRainEffect();//to remove
+			case 'lstrike1':
+				vfx = new Lstrike1Effect();
+
+			case 'luckyday':
+				vfx = new LuckyDayEffect();
+
+			case 'meteortrike':
+				vfx = new MeteortrikeEffect();
+
+			case 'natural':
+				vfx = new NaturalEffect();
+
+			case 'raigetki':
+				vfx = new RaigetkiEffect();
+
+			case 'redstar':
+				vfx = new RedstarEffect();
+			case 'toxic':
+				vfx = new ToxicEffect();
+
+			case 'underwater':
+				vfx = new UnderWaterEffect();
+
+			case 'void':
+				vfx = new VoidEffect();
+
 		}
 
 		return vfx;

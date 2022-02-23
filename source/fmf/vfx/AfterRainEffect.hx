@@ -13,7 +13,7 @@ class AfterRainEffect extends MadEffect
 
 	override function getFrames():Int
 	{
-		return 63;
+		return 60;
 	}
 
 	public override function getVFX(i:Int, vfx:FlxSprite)
@@ -27,9 +27,5 @@ class AfterRainEffect extends MadEffect
 		vfx.x -= 200;
 		vfx.y -= 180;
 		vfx.setGraphicSize(Std.int(vfx.width * 0.5));
-	
-
-	
-	
 	}
 }

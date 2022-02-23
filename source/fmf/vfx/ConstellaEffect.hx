@@ -3,23 +3,31 @@ package fmf.vfx;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.FlxSprite;
 
-class ConstellaEffect extends VFX
+class ConstellaEffect extends MadEffect
 {
 
 	override function getEffectPath():String
 	{
-		return  'note_effects/bloodhit';
-	}
-
-	override function getFrames():Int
-	{
-		return 63;
+		return  'note_effects/shuriken';
 	}
 
 	public override function getVFX(i:Int, vfx:FlxSprite)
 	{
-		
-		vfx.loadGraphic(Paths.image(getEffectPath()  + '/bloodhit', 'mods'), true, 512, 512);
+		switch (i)
+		{
+			case 0:
+				vfx.loadGraphic(Paths.image(getEffectPath() + '/constella_l', 'mods'), true, 512, 512);
+
+			case 1:
+				vfx.loadGraphic(Paths.image(getEffectPath()  + '/constella_d', 'mods'), true, 512, 512);
+
+			case 2:
+				vfx.loadGraphic(Paths.image(getEffectPath()  + '/constella_u', 'mods'), true, 512, 512);
+
+			case 3:
+				vfx.loadGraphic(Paths.image(getEffectPath()  + '/constella_r', 'mods'), true, 512, 512);
+
+		}
 
 		vfx.ID = i; 
 		vfx.animation.add('hit', getArray(getFrames()), 24, false);
@@ -27,9 +35,5 @@ class ConstellaEffect extends VFX
 		vfx.x -= 200;
 		vfx.y -= 180;
 		vfx.setGraphicSize(Std.int(vfx.width * 0.5));
-	
-
-	
-	
 	}
 }
