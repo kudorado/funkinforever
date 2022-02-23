@@ -27,7 +27,7 @@ class GunEffect extends ConstellaEffect
 		vfx.animation.add('hit', getArray(getFrames()), 24, false);
 		vfx.antialiasing = true;
 		vfx.x -= 200;
-		vfx.y -= 180;
-		vfx.setGraphicSize(Std.int(vfx.width * 0.5));
+		vfx.y -= 200;
+		vfx.setGraphicSize(Std.int(vfx.width * 0.6));
 	}
 }

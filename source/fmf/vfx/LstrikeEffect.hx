@@ -17,7 +17,7 @@ class LstrikeEffect extends ConstellaEffect
 
 			case 2:
 				vfx.loadGraphic(Paths.image(getEffectPath()  + '/lstrike_u', 'mods'), true, 256, 256);
-
+				vfx.x -= 10;
 			case 3:
 				vfx.loadGraphic(Paths.image(getEffectPath()  + '/lstrike_r', 'mods'), true, 256, 256);
 
@@ -26,8 +26,8 @@ class LstrikeEffect extends ConstellaEffect
 		vfx.ID = i; 
 		vfx.animation.add('hit', getArray(getFrames()), 24, false);
 		vfx.antialiasing = true;
-		vfx.x -= 200;
-		vfx.y -= 180;
-		vfx.setGraphicSize(Std.int(vfx.width * 0.65));
+		vfx.x -= 70;
+		vfx.y -= 70;
+		vfx.setGraphicSize(Std.int(vfx.width * 0.6));
 	}
 }
