@@ -14,7 +14,7 @@ class TikyBen extends TikyHell
 {
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/tricky//tikyben', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/tricky/tikyben', 'mods');
 		frames = tex;
 	}
 

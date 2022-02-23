@@ -15,7 +15,7 @@ class TikyEx extends TikyMask
 {
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/tricky//extiky', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/tricky/extiky', 'mods');
 		frames = tex;
 	}
 

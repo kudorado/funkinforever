@@ -5278,7 +5278,7 @@ class GameState extends MusicBeatState
 
 			effectStrums.forEach(function(spr:FlxSprite)
 			{
-				if (note != null)
+				if (note != null && !note.isSustainNote)
 				{
 					var daRating = note.rating;
 
