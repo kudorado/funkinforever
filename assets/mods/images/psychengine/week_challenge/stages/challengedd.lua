@@ -2,7 +2,6 @@ function onCreate()
 	-- background shit
 
 
-
 	makeLuaSprite('cielo', 'cielo', -600, -300);
 	addLuaSprite('cielo', false);	
 
@@ -10,7 +9,6 @@ function onCreate()
 	addLuaSprite('patio', false);
 
 	makeLuaSprite('vallas', 'vallas', 85, -120);
-	addLuaSprite('vallas', true);
 
 						makeAnimatedLuaSprite('matt', 'matt', 1950, 200);
 		setProperty('matt.flipX', false);
@@ -43,29 +41,31 @@ addLuaSprite('john',false)
 	makeLuaSprite('carro', 'carro', -835, 800);
 	addLuaSprite('carro', true);	
 
-	makeAnimatedLuaSprite('character', 'characters/gfedd', 1680, 100); -- change 'character' to the name of your character, change 'dad' to the name of the .png and .xml file
+	addLuaSpriteLater('vallas');
+	
+	-- makeAnimatedLuaSprite('character', 'characters/Eduardo', 1680, 100); -- change 'character' to the name of your character, change 'dad' to the name of the .png and .xml file
 
-	addAnimationByPrefix('character', 'idle', 'GF Dancing Beat', 24, true); -- change 'character' to the name of your character, don't change 'idle', change 'Dad idle dance' to the idle animation in your xml file
-	addAnimationByPrefix('character', 'singLEFT', 'Dad Sing Note LEFT', 24, false); -- repeat this for each one ^^^
-	addAnimationByPrefix('character', 'singDOWN', 'Dad Sing Note DOWN', 24, false);
-	addAnimationByPrefix('character', 'singUP', 'Dad Sing Note UP', 24, false);
-	addAnimationByPrefix('character', 'singRIGHT', 'Dad Sing Note RIGHT', 24, false);
+	-- addAnimationByPrefix('character', 'idle', 'GF Dancing Beat', 24, true); -- change 'character' to the name of your character, don't change 'idle', change 'Dad idle dance' to the idle animation in your xml file
+	-- addAnimationByPrefix('character', 'singLEFT', 'Dad Sing Note LEFT', 24, false); -- repeat this for each one ^^^
+	-- addAnimationByPrefix('character', 'singDOWN', 'Dad Sing Note DOWN', 24, false);
+	-- addAnimationByPrefix('character', 'singUP', 'Dad Sing Note UP', 24, false);
+	-- addAnimationByPrefix('character', 'singRIGHT', 'Dad Sing Note RIGHT', 24, false);
 
-	objectPlayAnimation('character', 'idle'); -- change 'character'
-	addLuaSprite('character', false); -- change 'character' to the name of your character and put the 'false' to true if you want the character to be in front of the original characters
+	-- objectPlayAnimation('character', 'idle'); -- change 'character'
+	-- addLuaSprite('character', false); -- change 'character' to the name of your character and put the 'false' to true if you want the character to be in front of the original characters
 end 
 
-local singAnims = {"singLEFT", "singDOWN", "singUP", "singRIGHT"}
-function opponentNoteHit(id, direction, noteType, isSustainNote)
-	if noteType == 'character' then
-		objectPlayAnimation('character', singAnims[direction + 1], false)
-	end
-end 
+-- local singAnims = {"singLEFT", "singDOWN", "singUP", "singRIGHT"}
+-- function opponentNoteHit(id, direction, noteType, isSustainNote)
+-- 	if noteType == 'character' then
+-- 		objectPlayAnimation('character', singAnims[direction + 1], false)
+-- 	end
+-- end 
 
 function onBeatHit()	-- triggered 4 times per section
-	if curBeat % 2 == 0 then
-		objectPlayAnimation('character', 'idle');
-	end
+	-- if curBeat % 2 == 0 then
+	-- 	objectPlayAnimation('character', 'idle');
+	-- end
 end 
 
 function onCountdownTick(counter)
@@ -74,9 +74,9 @@ function onCountdownTick(counter)
 	-- counter = 2 -> "One"
 	-- counter = 3 -> "Go!"
 	-- counter = 4 -> Nothing happens lol, tho it is triggered at the same time as onSongStart i think
-	if counter % 2 == 0 then
-		objectPlayAnimation('character', 'idle');
-	end
+	-- if counter % 2 == 0 then
+	-- 	objectPlayAnimation('character', 'idle');
+	-- end
 
 
 end

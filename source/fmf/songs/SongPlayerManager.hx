@@ -648,6 +648,9 @@ class SongPlayerManager
 
 			case 'unloaded':
 				songPlayer = new Unloaded();
+
+			case 'wellwellwell':
+				songPlayer = new WellWellWell();
 		}
 
 		return songPlayer;

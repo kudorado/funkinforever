@@ -62,7 +62,7 @@
 				22
 			],
 			"fps": 24,
-			"anim": "EduardoWell",
+			"anim": "ricardowell",
 			"indices": [],
 			"name": "EduardoWell"
 		},
@@ -118,8 +118,8 @@
 	"no_antialiasing": false,
 	"image": "characters/Eduardo",
 	"position": [
-		230,
-		-70
+		150,
+		70
 	],
 	"healthicon": "Eduardo",
 	"flip_x": false,

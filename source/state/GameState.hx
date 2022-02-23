@@ -908,6 +908,10 @@ class GameState extends MusicBeatState
 
 				switch (playerShit)
 				{
+					case -1:
+						{
+							songPlayer.playAnimation(value1);
+						}
 					case 1:
 						if (bfPE != null)
 						{
@@ -2631,6 +2635,7 @@ class GameState extends MusicBeatState
 				var sLength = songNotes[2];
 				swagNote.sustainLength = songNotes[2];
 				swagNote.scrollFactor.set(0, 0);
+				swagNote.gfSection = section.gfSection;
 				swagNote.gfNote = (section.gfSection && (songNotes[1] < 4));
 				swagNote.noteType = songNotes[3];
 
@@ -2649,6 +2654,7 @@ class GameState extends MusicBeatState
 					sustainNote.scrollFactor.set();
 					unspawnNotes.push(sustainNote);
 					sustainNote.mustPress = gottaHitNote;
+					sustainNote.gfSection = section.gfSection;
 					sustainNote.gfNote = (section.gfSection && (songNotes[1] < 4));
 					sustainNote.noteType = swagNote.noteType;
 					if (sustainNote.mustPress)
@@ -3713,10 +3719,17 @@ class GameState extends MusicBeatState
 
 					// songPlayer.noteEvent(daNote);
 					// trigger when dad hit a note
-					if (playAsDad)
-						songPlayer.bfNoteEvent(daNote);
+					if (daNote != null && (daNote.gfSection || daNote.gfNote))
+					{
+						songPlayer.gfNoteEvent(daNote);
+					}
 					else
-						songPlayer.dadNoteEvent(daNote);
+					{
+						if (playAsDad)
+							songPlayer.bfNoteEvent(daNote);
+						else
+							songPlayer.dadNoteEvent(daNote);
+					}
 
 					if (playAsDad)
 						bfFE().holdTimer = 0;
@@ -3963,25 +3976,35 @@ class GameState extends MusicBeatState
 				}
 			}
 
-			if (!SONG.notes[note].mustHitSection && camFollow.x != dadFE().getMidpoint().x + 150)
+
+			if (SONG.notes[note].gfSection)
 			{
-				if (turn == -1) // repeat
-					camFollowSafeFrame = 0;
-
-				setCamFollowDad();
-
-				songPlayer.updateCamFollowDad();
-				turn = -1;
+				songPlayer.updateCamFollowGF();
+				//do nothing
+				// trace('gf singing, ignore camera shit!');
 			}
-
-			if (SONG.notes[note].mustHitSection && camFollow.x != bfFE().getMidpoint().x - 100 && !lockCamFollow)
+			else
 			{
-				if (turn == 1) // repeat
-					camFollowSafeFrame = 0;
+				if (!SONG.notes[note].gfSection && camFollow.x != dadFE().getMidpoint().x + 150)
+				{
+					if (turn == -1) // repeat
+						camFollowSafeFrame = 0;
 
-				setCamFollowBF();
-				turn = 1;
-				songPlayer.updateCamFollowBF();
+					setCamFollowDad();
+
+					songPlayer.updateCamFollowDad();
+					turn = -1;
+				}
+
+				if (SONG.notes[note].mustHitSection && camFollow.x != bfFE().getMidpoint().x - 100 && !lockCamFollow)
+				{
+					if (turn == 1) // repeat
+						camFollowSafeFrame = 0;
+
+					setCamFollowBF();
+					turn = 1;
+					songPlayer.updateCamFollowBF();
+				}
 			}
 		}
 	}
@@ -5279,6 +5302,7 @@ class GameState extends MusicBeatState
 					}
 					else
 						songPlayer.bfNoteEvent(note);
+					
 				}
 				if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
 				{

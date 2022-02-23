@@ -73,6 +73,13 @@ class SongPlayer extends BaseSong
     // event trigger when dad hit a note
     public function dadNoteEvent(noteData:Note):Void{bf.noteEventDad(noteData); }
 
+	// event trigger when dad hit a note
+	public function gfNoteEvent(noteData:Note):Void
+	{
+        //todo
+		// bf.noteEventGF(noteData);
+	}
+
     //public function missNoteEvent(noteData:Note):Void{bf.noteEventDad(noteData); }
 
     //public function noteEvent(noteData:Note):Void{bf.noteEventDad(noteData); }
@@ -82,6 +89,11 @@ class SongPlayer extends BaseSong
 
     // update camera follow bf depending on song
     public function updateCamFollowBF():Void{} 
+
+    public function updateCamFollowGF():Void{} 
+    public function playAnimation(animName:String):Void{} 
+
+
 
 //------------------------------------------------------------------------------------------------------
 

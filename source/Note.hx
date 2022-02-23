@@ -104,6 +104,7 @@ class Note extends FlxSprite
 
 				case 'GF Sing':
 					gfNote = true;
+					gfSection = true;
 
 			}
 
@@ -136,6 +137,7 @@ class Note extends FlxSprite
 	public var ignoreNote:Bool = false;
 	public var noAnimation:Bool = false;
 	public var gfNote:Bool = false;
+	public var gfSection:Bool = false;
 
 	public var noteSplashHue:Float = 0;
 	public var noteSplashSat:Float = 0;
