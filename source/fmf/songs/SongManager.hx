@@ -443,7 +443,7 @@ class SongManager
 				folder: 'week_challenge',
 				character: 'hank',
 				songTitle: 'Challenge Week',
-				songList: ['Accelerant', 'Edd', 'Unloaded']
+				songList: ['Accelerant', 'WellWellWell', 'Edd', 'Unloaded']
 			}
 		),
 
