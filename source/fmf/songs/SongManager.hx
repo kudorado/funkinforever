@@ -419,7 +419,18 @@ class SongManager
 				songList: ['Applecore', 'Sugar-rush']
 			}
 		),
-		
+	
+		new SongData
+		(
+			{
+				folder: 'week_challenge',
+				character: 'hank',
+				songTitle: 'Challenge Week',
+				songList: ['Accelerant', 'WellWellWell', 'Edd', 'Unloaded']
+			}
+		),
+
+			
 		new SongData
 		(
 			{
@@ -438,16 +449,7 @@ class SongManager
 			}
 		),
 
-		new SongData
-		(
-			{
-				folder: 'week_challenge',
-				character: 'hank',
-				songTitle: 'Challenge Week',
-				songList: ['Accelerant', 'WellWellWell', 'Edd', 'Unloaded']
-			}
-		),
-
+		
 
 	];
 //-----------------------------------------------------------

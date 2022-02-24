@@ -32,6 +32,12 @@ class PlayModeManager
 			name: 'music listening',
 			cost: 5
 		}),
+
+		new PlayModeData
+		({
+			name: 'practicle',
+			cost: 5
+		}),
 		
 	];
 
@@ -59,6 +65,12 @@ class PlayModeManager
 			case 3:
 				FlxG.save.data.botplay = true;
 				FlxG.save.data.musicListening = true;
+				GameState.playAsDad = false;
+
+			case 4:
+				FlxG.save.data.musicListening = false;
+				FlxG.save.data.botplay = false;
+				FlxG.save.data.handsome = false;
 				GameState.playAsDad = false;
 
 		}

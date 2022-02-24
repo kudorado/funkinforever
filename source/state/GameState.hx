@@ -1463,6 +1463,8 @@ class GameState extends MusicBeatState
 
 	public static var noteBools:Array<Bool> = [false, false, false, false];
 
+
+	var pracicleMode:Bool = false;
 	var halloweenLevel:Bool = false;
 	var songLength:Float = 0;
 	var kadeEngineWatermark:FlxText;
@@ -1763,6 +1765,7 @@ class GameState extends MusicBeatState
 		CURRENT_SONG = SONG_NAME;
 
 		botPlayShit = FlxG.save.data.botplay && isUnlocked();
+		practicleMode = FlxG.save.data.handsome;
 
 		// pre lowercasing the song name (create)
 		var songLowercase = SongFilter.filter(CURRENT_SONG);
@@ -2139,7 +2142,8 @@ class GameState extends MusicBeatState
 
 		listeningModeCheck();
 
-		// createBounds();
+
+		
 
 		super.create();
 		LoadingState.didLoadout = false;
@@ -2194,6 +2198,12 @@ class GameState extends MusicBeatState
 	{
 		if ((health <= 0 || instakillOnMiss) && !isOver)
 		{
+			if (practicleMode)
+			{	
+				health += FlxG.random.float(0.1, 2);
+				return;
+			}
+
 			isOver = true;
 			bfFE().stunned = true;
 			persistentUpdate = false;
@@ -2246,7 +2256,8 @@ class GameState extends MusicBeatState
 	var mcontrols:Mobilecontrols;
 	var botPlayShit:Bool;
 	var musicListeningShit:Bool;
-
+	var practicleMode:Bool;
+	
 	public var startTimer:FlxTimer;
 
 	var perfectMode:Bool = false;

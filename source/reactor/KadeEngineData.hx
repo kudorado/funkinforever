@@ -22,6 +22,11 @@ class KadeEngineData
 			FlxG.save.data.scrollId = 1;
 		}
 
+		if (FlxG.save.data.handsome == null)
+		{
+			FlxG.save.data.handsome = false;
+		}
+
         if (FlxG.save.data.showDadNote == null)
         {
             FlxG.save.data.showDadNote = false;
