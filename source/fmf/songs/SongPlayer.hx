@@ -91,6 +91,8 @@ class SongPlayer extends BaseSong
     public function updateCamFollowBF():Void{} 
 
     public function updateCamFollowGF():Void{} 
+
+    
     public function playAnimation(animName:String):Void{} 
 
 

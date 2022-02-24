@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:1d006088bc749484dca8e3211233c4fb:b23d10f394f637cf0da7a7c4e057aca8:0c03acd8a9b49dd8736356adbc24a1af$ -->
+<TextureAtlas imagePath="Tord.png" width="4084" height="3793">
+    <SubTexture name="Tord Down0000" x="1" y="1" width="719" height="504"/>
+    <SubTexture name="Tord Down0001" x="722" y="1" width="719" height="504"/>
+    <SubTexture name="Tord Down0002" x="1443" y="1" width="719" height="504"/>
+    <SubTexture name="Tord Down0003" x="1443" y="1" width="719" height="504"/>
+    <SubTexture name="Tord Down0004" x="2164" y="1" width="719" height="504"/>
+    <SubTexture name="Tord Down0005" x="2164" y="1" width="719" height="504"/>
+    <SubTexture name="Tord Down0006" x="2164" y="1" width="719" height="504"/>
+    <SubTexture name="Tord Ha0000" x="3564" y="1" rotated="true" width="519" height="677"/>
+    <SubTexture name="Tord Ha0001" x="3380" y="1700" width="677" height="519"/>
+    <SubTexture name="Tord Ha0002" x="1" y="2039" width="677" height="519"/>
+    <SubTexture name="Tord Ha0003" x="680" y="2039" width="677" height="519"/>
+    <SubTexture name="Tord Ha0004" x="1359" y="2043" width="677" height="519"/>
+    <SubTexture name="Tord Ha0005" x="1359" y="2043" width="677" height="519"/>
+    <SubTexture name="Tord Ha0006" x="2038" y="2043" width="677" height="519"/>
+    <SubTexture name="Tord Ha0007" x="2038" y="2043" width="677" heighx t="519"/>
+    <SubTexture name="Tord Ha0008" x="3338" y="2221" width="677" height="519"/>
+    <SubTexture name="Tord Ha0009" x="3338" y="2221" width="677" height="519"/>
+    <SubTexture name="Tord Ha0010" x="1" y="2560" width="677" height="519"/>
+    <SubTexture name="Tord Ha0011" x="1" y="2560" width="677" height="519"/>
+    <SubTexture name="Tord Ha0012" x="1" y="2560" width="677" height="519"/>
+    <SubTexture name="Tord Ha0013" x="1" y="2560" width="677" height="519"/>
+    <SubTexture name="Tord Idle0000" x="2038" y="507" width="677" height="508"/>
+    <SubTexture name="Tord Idle0001" x="2717" y="507" width="677" height="508"/>
+    <SubTexture name="Tord Idle0002" x="3396" y="680" width="677" height="508"/>
+    <SubTexture name="Tord Idle0003" x="1" y="1013" width="677" height="508"/>
+    <SubTexture name="Tord Idle0004" x="680" y="1013" width="677" height="508"/>
+    <SubTexture name="Tord Idle0005" x="1359" y="1013" width="677" height="508"/>
+    <SubTexture name="Tord Idle0006" x="2038" y="1017" width="677" height="508"/>
+    <SubTexture name="Tord Idle0007" x="2717" y="1017" width="677" height="508"/>
+    <SubTexture name="Tord Idle0008" x="3396" y="1190" width="677" height="508"/>
+    <SubTexture name="Tord Idle0009" x="3396" y="1190" width="677" height="508"/>
+    <SubTexture name="Tord Idle0010" x="3396" y="1190" width="677" height="508"/>
+    <SubTexture name="Tord Idle0011" x="3396" y="1190" width="677" height="508"/>
+    <SubTexture name="Tord Idle0012" x="3396" y="1190" width="677" height="508"/>
+    <SubTexture name="Tord Idle0013" x="3396" y="1190" width="677" height="508"/>
+    <SubTexture name="Tord Left0000" x="1" y="1523" width="706" height="514"/>
+    <SubTexture name="Tord Left0001" x="709" y="1523" width="706" height="514"/>
+    <SubTexture name="Tord Left0002" x="1417" y="1527" width="706" height="514"/>
+    <SubTexture name="Tord Left0003" x="1417" y="1527" width="706" height="514"/>
+    <SubTexture name="Tord Left0004" x="2125" y="1527" width="706" height="514"/>
+    <SubTexture name="Tord Left0005" x="2125" y="1527" width="706" height="514"/>
+    <SubTexture name="Tord OhNo0000" x="680" y="2564" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0001" x="1416" y="2564" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0002" x="1416" y="2564" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0003" x="3320" y="2742" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0004" x="3320" y="2742" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0005" x="1" y="3090" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0006" x="737" y="3090" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0007" x="737" y="3090" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0008" x="1473" y="3185" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0009" x="1473" y="3185" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0010" x="2209" y="3242" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0011" x="2209" y="3242" width="734" height="524"/>
+    <SubTexture name="Tord OhNo0012" x="2945" y="3268" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0000" x="680" y="2564" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0001" x="1416" y="2564" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0002" x="1416" y="2564" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0003" x="3320" y="2742" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0004" x="3320" y="2742" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0005" x="1" y="3090" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0006" x="737" y="3090" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0007" x="737" y="3090" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0008" x="1473" y="3185" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0009" x="1473" y="3185" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0010" x="2209" y="3242" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0011" x="2209" y="3242" width="734" height="524"/>
+    <SubTexture name="Tord OhNoah0012" x="2945" y="3268" width="734" height="524"/>
+    <SubTexture name="Tord Right0000" x="2885" y="1" width="677" height="504"/>
+    <SubTexture name="Tord Right0001" x="1" y="507" width="677" height="504"/>
+    <SubTexture name="Tord Right0002" x="680" y="507" width="677" height="504"/>
+    <SubTexture name="Tord Right0003" x="680" y="507" width="677" height="504"/>
+    <SubTexture name="Tord Right0004" x="1359" y="507" width="677" height="504"/>
+    <SubTexture name="Tord Right0005" x="1359" y="507" width="677" height="504"/>
+    <SubTexture name="Tord Right0006" x="1359" y="507" width="677" height="504"/>
+    <SubTexture name="Tord Right0007" x="1359" y="507" width="677" height="504"/>
+    <SubTexture name="Tord Up0000" x="2833" y="1527" rotated="true" width="545" height="619"/>
+    <SubTexture name="Tord Up0001" x="2717" y="2148" width="619" height="545"/>
+    <SubTexture name="Tord Up0002" x="2152" y="2564" rotated="true" width="545" height="619"/>
+    <SubTexture name="Tord Up0003" x="2152" y="2564" rotated="true" width="545" height="619"/>
+    <SubTexture name="Tord Up0004" x="2699" y="2695" width="619" height="545"/>
+    <SubTexture name="Tord Up0005" x="2699" y="2695" width="619" height="545"/>
+    <SubTexture name="Tord Up0006" x="2699" y="2695" width="619" height="545"/>
+    <SubTexture name="Tord Up0007" x="2699" y="2695" width="619" height="545"/>
+</TextureAtlas>

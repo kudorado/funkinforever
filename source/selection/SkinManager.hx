@@ -62,6 +62,131 @@ class SkinManager
 			name: 'agoti',
 			cost: 5
 		}),
+	
+		
+
+
+		new SkinData
+		({
+			name: 'aberration',
+			cost: 3
+		}),
+
+		new SkinData
+		({
+			name: 'circle-classic',
+			cost: 5
+		}),
+		new SkinData
+		({
+			name: 'circleglow',
+			cost: 3
+		}),
+
+		new SkinData
+		({
+			name: 'dark',
+			cost: 5
+		}),
+		new SkinData
+		({
+			name: 'ae_freezing',
+			cost: 3
+		}),
+
+		new SkinData
+		({
+			name: 'ae_glow_splash',
+			cost: 5
+		}),
+		new SkinData
+		({
+			name: 'ae_hellbeats',
+			cost: 3
+		}),
+
+		new SkinData
+		({
+			name: 'ae_low_contrast',
+			cost: 5
+		}),
+		new SkinData
+		({
+			name: 'rectangle',
+			cost: 3
+		}),
+
+		new SkinData
+		({
+			name: 'ae_shadow',
+			cost: 5
+		}),
+		new SkinData
+		({
+			name: 'shinning',
+			cost: 3
+		}),
+
+		new SkinData
+		({
+			name: 'ae_shinning_metal',
+			cost: 5
+		}),
+		new SkinData
+		({
+			name: 'sm',
+			cost: 3
+		}),
+
+		new SkinData
+		({
+			name: 'soft_bright',
+			cost: 5
+		}),
+	
+		
+		new SkinData
+		({
+			name: 'ae_shinning_metal',
+			cost: 5
+		}),
+		new SkinData
+		({
+			name: 'sm',
+			cost: 3
+		}),
+
+		new SkinData
+		({
+			name: 'soft_bright',
+			cost: 5
+		}),
+		
+
+		new SkinData
+		({
+			name: 'synthwave',
+			cost: 5
+		}),
+		new SkinData
+		({
+			name: 'ae_transparent',
+			cost: 3
+		}),
+
+		new SkinData
+		({
+			name: 'ae_triangle',
+			cost: 5
+		}),
+		
+		new SkinData
+		({
+			name: 'variant',
+			cost: 5
+		})
+		
+
 		
 	];
 
@@ -103,6 +228,65 @@ class SkinManager
 			case "ddr":
 				skin = new DDRSkin('ddr');
 
+			case 'aberration':
+				skin = new AberrationSkin('aberration');
+
+			case 'circle-classic':
+				skin = new CircleClassicSkin('circle-classic');
+
+			case 'circleglow':
+				skin = new CircleGlowSkin('circleglow');
+
+			case 'dark':
+				skin = new DarkSkin('dark');
+
+			case 'ae_freezing':
+				skin = new AEFreezingSkin('ae_freezing');
+
+			case 'ae_glow_splash':
+				skin = new AEGlowSplashSkin('ae_glow_splash');
+
+			case 'ae_hellbeats':
+				skin = new AEHellBeatsSkin('ae_hellbeats');
+
+			case 'ae_low_contrast':
+				skin = new AELowContrastSkin('ae_low_contrast');
+
+			case 'rectangle':
+				skin = new RectangleSkin('rectangle');
+
+			case 'ae_shadow':
+				skin = new AEShadowSkin('ae_shadow');
+
+			case 'shinning':
+				skin = new ShinningSkin('shinning');
+
+			case 'ae_shinning_metal':
+				skin = new AEShinningMetalSkin('ae_shinning_metal');
+
+			case 'sm':
+				skin = new SMSkin('sm');
+
+			case 'soft_bright':
+				skin = new SoftBrightSkin('soft_bright');
+
+			case 'synthwave':
+				skin = new SynthwaveSkin('synthwave');
+
+			case 'ae_transparent':
+				skin = new AETransparentSkin('ae_transparent');
+
+			case 'ae_triangle':
+				skin = new AETriangleSkin('ae_triangle');
+
+			case 'variant':
+				skin = new VariantSkin('variant');
+				
+
+					
+		
+				
+		
 		}
 
 		return new Skin('default');
