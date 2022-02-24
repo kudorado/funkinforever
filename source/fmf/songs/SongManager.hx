@@ -423,10 +423,11 @@ class SongManager
 		new SongData
 		(
 			{
+				
 				folder: 'week_dokidoki',
 				character: 'dokidoki',
 				songTitle: 'Doki Doki Takeover',
-				songList: ['high_school_conflict', 'bara_no_yume', 'your_demise', 
+				songList: ['high_school_conflict', 'bara_no_yume', 'your_demise', //todo add note skin pixel
 				'rain_clouds', 'my_confession',
 				'my_sweets', 'baka',
 				'deep_breaths', 'obsession',
