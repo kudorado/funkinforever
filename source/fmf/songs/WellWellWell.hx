@@ -16,6 +16,9 @@ class WellWellWell extends SongPlayer
 	var lookAtSussyMemeGuy:Bool;
 	var eduardo:CharacterPE;
 
+	public override function gfSection():Bool
+		return true;
+
 	override function loadLua()
 	{
 

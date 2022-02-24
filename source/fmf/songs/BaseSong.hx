@@ -40,6 +40,10 @@ import Song.SwagSong;
 class BaseSong
 {
 
+	//i'm fk stupid but idk
+	public function gfSection():Bool
+		return false;
+
 	//------------------------Brilliant lua code-----------------------------------
 
 	function loadLua()

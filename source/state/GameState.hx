@@ -3991,15 +3991,16 @@ class GameState extends MusicBeatState
 			}
 
 
-			if (SONG.notes[note].gfSection)
+			if (SONG.notes[note].gfSection && songPlayer.gfSection())
 			{
 				songPlayer.updateCamFollowGF();
+				trace('omg gf section');
 				//do nothing
 				// trace('gf singing, ignore camera shit!');
 			}
 			else
 			{
-				if (!SONG.notes[note].gfSection && camFollow.x != dadFE().getMidpoint().x + 150)
+				if (!SONG.notes[note].mustHitSection && camFollow.x != dadFE().getMidpoint().x + 150)
 				{
 					if (turn == -1) // repeat
 						camFollowSafeFrame = 0;
