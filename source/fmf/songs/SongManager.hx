@@ -384,7 +384,7 @@ class SongManager
 		(
 			{
 				folder: 'week_dab',
-				character: 'dave',
+				character: 'bambi',
 				songTitle: 'V.S Bambi',
 				songList: ['Blocked', 'Corn-Theft', 'Maze']
 			}

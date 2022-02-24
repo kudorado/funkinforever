@@ -63,6 +63,11 @@ class HighSchoolConflict extends SongPlayer
 		gameState.add(bg2);
 	}
 
+	override function getDefaultSkin()
+	{
+		return new PixelSkin('pixel');
+	}
+
     override function createDadAnimations():Void
     {
         var animation = dad.animation;

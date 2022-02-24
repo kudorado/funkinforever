@@ -322,6 +322,9 @@ class SkinManager
 			case 'whitty':
 				skin = new WhittySkin('whitty');
 
+			case 'pixel':
+				skin = new PixelSkin('pixel');
+		
 		}
 
 		return skin;
