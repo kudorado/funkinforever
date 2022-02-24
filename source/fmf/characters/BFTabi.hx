@@ -36,23 +36,23 @@ class BFTabi extends Boyfriend
 	// create animation offset for BF
 	public override function createAnimationOffsets():Void
 	{
-		addOffset('idle', -0, 0);
+		addOffset('idle', -6, -6);
 
-		addOffset('singUP', -0,0);
-		addOffset('singRIGHT', -0,-0);
-		addOffset('singLEFT', -0, -6);
-		addOffset('singDOWN', -0, -0);
+		addOffset('singUP', -53, 22);
+		addOffset('singRIGHT', -46,-5);
+		addOffset('singLEFT', 6, -5);
+		addOffset('singDOWN', -10, -57);
 		
-		addOffset('singUPmiss', -20,55);
-		addOffset('singRIGHTmiss', -20,55);
-		addOffset('singLEFTmiss', 20,35);
-		addOffset('singDOWNmiss', 20,35);
+		addOffset('singUPmiss', -10, -25);
+		addOffset('singRIGHTmiss', -40, 15);
+		addOffset('singLEFTmiss', 4, 17);
+		addOffset('singDOWNmiss', -10,-25);
 		
 		playAnim('idle');
 
 
-		this.scale.x = 1;
-		this.scale.y = 1;
+		this.scale.x = 2;
+		this.scale.y = 2;
 
 
 	}

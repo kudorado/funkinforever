@@ -1961,7 +1961,7 @@ class GameState extends MusicBeatState
 
 		//------------------------mic c up copy ----------------------------
 
-		daAuto = botPlayShit ? " [A]" : "";
+		daAuto = botPlayShit ? " [A]" : practicleMode ?  "[P]" : "";
 		songName = new FlxText(35, healthBarBG.y + 26, 0, CURRENT_SONG.toUpperCase()  + getDiff().toUpperCase() + daAuto, 20);
 		if (FlxG.save.data.downscroll)
 			songName.y = healthBarBG.y - 18;
@@ -2257,7 +2257,7 @@ class GameState extends MusicBeatState
 	var botPlayShit:Bool;
 	var musicListeningShit:Bool;
 	var practicleMode:Bool;
-	
+
 	public var startTimer:FlxTimer;
 
 	var perfectMode:Bool = false;
@@ -2500,7 +2500,6 @@ class GameState extends MusicBeatState
 		file = "assets/data/" + SongPlayer.folder + SONG_NAME + '/events.json';
 		#end
 
-		#if MOD_ALLOWED
 		#if !android
 		if (FileSystem.exists(file))
 		{
@@ -2571,7 +2570,6 @@ class GameState extends MusicBeatState
 			else
 				trace('Null event shit: ' + SONG_NAME);
 		}
-		#end
 
 		//load shit
 		var script:String = '';

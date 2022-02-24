@@ -741,7 +741,7 @@ class PcManager
 				return new DDLCBoyFriend(700, 425);
 
 			case 'bf tabi':
-				return new BFTabi(700, 425);
+				return new BFTabi(812, 577);
 
 			case 'bf tabimad':
 				return new BFTabiMad(700, 425);

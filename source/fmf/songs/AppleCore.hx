@@ -23,16 +23,20 @@ class AppleCore extends SongPlayerPE
 	{
 		super.createBF();
 	}
-	override function createStoryBF()
-	{
-		
-	}
-	
+
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
 		gameState.targetCamFollow.x -= 200;
 	}
+
+
+	override function updateCamFollowDad()
+	{
+		gameState.setCamFollowBF();
+		gameState.targetCamFollow.x -= 200;
+	}
+
 		
 	override function getDadVersion()
 	{
