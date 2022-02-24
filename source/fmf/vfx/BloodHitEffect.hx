@@ -26,7 +26,7 @@ class BloodHitEffect extends MadEffect
 		vfx.antialiasing = true;
 		vfx.x -= 200;
 		vfx.y -= 180;
-		vfx.setGraphicSize(Std.int(vfx.width * 0.5));
+		vfx.setGraphicSize(Std.int(vfx.width * 0.65));
 	
 
 	

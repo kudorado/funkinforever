@@ -4,7 +4,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 
 
-class GlowSplash extends Skin
+class AEGlowSplashSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{

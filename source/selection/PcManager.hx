@@ -739,6 +739,13 @@ class PcManager
 				
 			case 'bf_ddlc':
 				return new DDLCBoyFriend(700, 425);
+
+			case 'bf tabi':
+				return new BFTabi(700, 425);
+
+			case 'bf tabimad':
+				return new BFTabiMad(700, 425);
+
 		}
 
 		return new Boyfriend(700, 425); 

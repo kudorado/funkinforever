@@ -4,7 +4,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 
 
-class SNSkin extends Skin
+class SMSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{

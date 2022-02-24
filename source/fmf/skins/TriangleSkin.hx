@@ -4,10 +4,10 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 
 
-class VariantSkin extends Skin
+class TriangleSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{
-		return Paths.getSparrowAtlas('note_skins/notes_itzdarkart/variant', 'mods');
+		return Paths.getSparrowAtlas('note_skins/notes_itzdarkart/triangle', 'mods');
 	}
 }

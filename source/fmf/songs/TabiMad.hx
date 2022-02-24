@@ -36,6 +36,12 @@ class TabiMad extends Tabi
 		gameState.add(sumsticks);
 	}
 
+	override function createStoryBF()
+	{
+		changePc('bf tabimad');
+	}
+
+
 	override function getDefaultSkin():Skin
 	{
 		return new TabiSkin();

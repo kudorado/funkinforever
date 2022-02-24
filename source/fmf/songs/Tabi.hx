@@ -57,6 +57,11 @@ class Tabi extends SongPlayer
         #end
     }
 
+	override function createStoryBF()
+	{
+         changePc('bf tabi');
+    }
+
     override function getDadVersion()
     {
         return new Dad(100, 100);
