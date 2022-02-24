@@ -101,11 +101,11 @@ class VictorySubState extends MusicBeatSubstate
 
         add(levelInfo);
 
+        levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
         levelDifficulty.scrollFactor.set();
         levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
         levelDifficulty.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
         levelDifficulty.updateHitbox();
-        levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
 		FreePlayState.changeDiff(levelDifficulty, 0, function()
 		{
 			levelDifficulty.x = FlxG.width - (levelDifficulty.width + 10);

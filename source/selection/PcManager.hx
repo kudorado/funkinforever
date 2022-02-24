@@ -744,7 +744,7 @@ class PcManager
 				return new BFTabi(812, 577);
 
 			case 'bf tabimad':
-				return new BFTabiMad(700, 425);
+				return new BFTabiMad(594, 563);
 
 		}
 

@@ -18,6 +18,26 @@ class BFTabiMad extends BFTabi
 		frames = tex;
 	}
 
+	// create animation offset for BF
+	public override function createAnimationOffsets():Void
+	{
+		addOffset('idle', -6, -6);
+
+		addOffset('singUP', -53, 22);
+		addOffset('singRIGHT', -46, -5);
+		addOffset('singLEFT', 6, -5);
+		addOffset('singDOWN', -10, -57);
+
+		addOffset('singUPmiss', -40, -5);
+		addOffset('singRIGHTmiss', -40, 15);
+		addOffset('singLEFTmiss', 4, 17);
+		addOffset('singDOWNmiss', -10, -25);
+
+		playAnim('idle');
+
+		this.scale.x = 2;
+		this.scale.y = 2;
+	}
 	
 	
 }

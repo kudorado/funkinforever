@@ -4267,7 +4267,7 @@ class GameState extends MusicBeatState
 
 		createBlackFadeIn(function()
 		{
-			openSubState(new VictorySubState(bfFE().getScreenPosition().x, bfFE().getScreenPosition().y));
+			openSubState(new VictorySubState(0, 0));
 		});
 	}
 
