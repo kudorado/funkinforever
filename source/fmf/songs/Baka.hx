@@ -14,6 +14,12 @@ import flixel.util.FlxTimer;
 
 class  Baka extends SongPlayer
 {
+
+    override function getDefaultSkin():Skin
+    {
+        return new DokiSkin();
+    }
+
     var bakaOverlay:FlxSprite;
     override function getDadTex()
 	{

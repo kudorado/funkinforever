@@ -14,6 +14,11 @@ import fmf.characters.*;
 class DeepBreaths extends SongPlayer
 {
 
+	override function getDefaultSkin():Skin
+	{
+		return new DokiSkin();
+	}
+	
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/dokidoki/Doki_Yuri_Assets', 'mods');

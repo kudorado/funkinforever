@@ -14,6 +14,11 @@ import fmf.characters.*;
 class  RainClouds extends SongPlayer
 {
 
+	override function getDefaultSkin():Skin
+	{
+		return new DokiSkin();
+	}
+
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/dokidoki/sayori/Doki_Sayo_Assets', 'mods');

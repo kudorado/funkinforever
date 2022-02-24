@@ -293,4 +293,9 @@ class SayoriMix extends SongPlayer
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
+
+	override function getDefaultSkin():Skin
+	{
+		return new DokiSkin();
+	}
 }
