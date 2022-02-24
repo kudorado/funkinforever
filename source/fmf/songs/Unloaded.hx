@@ -21,23 +21,23 @@ class Unloaded extends SongPlayer
 		gameState.defaultCamZoom = 0.8;
 	}
 
-	// override function update(elapsed:Float)
-	// {
-	// 	super.update(elapsed);
-	// 	gameState.defaultCamZoom = 0.3;
-	// }
-	
-
 	override function getGFVersion()
 	{
 		return new CharacterPE('speaker');
 	}
 
-	override function getVersion()
-	{
-		return new CharacterPE('pico-uber');
+	override function createStoryBF()
+	{ 
+		var newPc = new CharacterPE('pico-uber');
+		changeCharacter(newPc);
 	}
 
+	override function createBF()
+	{
+		super.createBF();
+		bf.x += 1220 - 700;
+		bf.y += 715 - 425;
+	}
 
 	override function updateCamFollowBF()
 	{

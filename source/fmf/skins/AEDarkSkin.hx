@@ -4,10 +4,10 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 
 
-class BobSkin extends Skin
+class AEDarkSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{
-		return Paths.getSparrowAtlas('note_skins/notes_itzdarkart/bob', 'mods');
+		return Paths.getSparrowAtlas('note_skins/notes_aetherlynx/dark', 'mods');
 	}
 }

@@ -445,6 +445,22 @@ class BaseSong
 		switchBF(pc);
 	}
 
+	private function changeCharacter(character:Character)
+	{
+		// switch (type.toLowerCase())
+		// {
+		// 	case 'dad':
+		// 		var pc = character;
+		// 		switchDad(character);
+
+		// 	case 'bf' | 'boyfriend':
+		// 		var pc = character;
+				switchBF(character);
+
+		// }
+	
+	}
+
 	private function changeDad(fronSong:String)
 	{
 		switchDad(SongPlayerManager.getCurrentSong(fronSong));

@@ -36,6 +36,10 @@ class RunTime extends SongPlayer
 
 	}
 
+	override function createStoryBF()
+	{
+		//do nothing.
+	}
 		
 	override function createGF()
 	{

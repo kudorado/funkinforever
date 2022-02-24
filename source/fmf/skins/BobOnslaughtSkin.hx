@@ -4,7 +4,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 
 
-class HellfireSkin extends Skin
+class BobOnslaughtSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{

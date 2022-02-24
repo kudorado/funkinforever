@@ -85,7 +85,7 @@ class SkinManager
 
 		new SkinData
 		({
-			name: 'dark',
+			name: 'ae_dark',
 			cost: 5
 		}),
 		new SkinData
@@ -237,8 +237,8 @@ class SkinManager
 			case 'circleglow':
 				skin = new CircleGlowSkin('circleglow');
 
-			case 'dark':
-				skin = new DarkSkin('dark');
+			case 'ae_dark':
+				skin = new DarkSkin('ae_dark');
 
 			case 'ae_freezing':
 				skin = new AEFreezingSkin('ae_freezing');
@@ -281,15 +281,50 @@ class SkinManager
 
 			case 'variant':
 				skin = new VariantSkin('variant');
-				
 
-					
-		
+			case 'blood':
+				skin = new BloodSkin('blood');
 				
-		
+			case 'bob':
+				skin = new BobSkin('bob');
+
+			case 'bobonslaught':
+				skin = new BobOnslaughtSkin('bobonslaught');
+
+			case 'chasm':
+				skin = new ChasmSkin('chasm');
+
+			case 'circle_classic':
+				skin = new CircleClassicSkin('circle_classic');
+
+			case 'circle':
+				skin = new CircleSkin('circle');
+
+			case 'garcello':
+				skin = new GarcelloSkin('garcello');
+
+			case 'grunt':
+				skin = new GruntSkin('grunt');
+				
+				
+			case 'hellfire':
+				skin = new HellfireSkin('hellfire');
+												
+			case 'matt':
+				skin = new MattSkin('matt');
+
+			case 'ron':
+				skin = new RonSkin('ron');
+
+			case 'whitty_crazy':
+				skin = new WhittyCrazySkin('whitty_crazy');
+
+			case 'whitty':
+				skin = new WhittySkin('whitty');
+
 		}
 
-		return new Skin('default');
+		return skin;
 	}
 
 }
