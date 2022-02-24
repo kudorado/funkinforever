@@ -20,6 +20,11 @@ class YourDemise extends SongPlayer
 		dad.frames = tex;
 	}
 
+	override function getDefaultSkin()
+	{
+		return new PixelSkin('pixel');
+	}
+
 	override function loadMap()
 	{
 		gameState.defaultCamZoom = 0.8;
@@ -85,7 +90,7 @@ class YourDemise extends SongPlayer
 		changePc('bf_pixel');
 		bf.x += 150;
 		bf.y -= 50;
-        bf.visible = false;
+        //bf.visible = false;
 	}
 
     override function createBF()
@@ -93,7 +98,7 @@ class YourDemise extends SongPlayer
         super.createBF();
         bf.x -= 20;
 		bf.y -= 236;
-        bf.visible = false;
+        //bf.visible = false;
     }
 
 	override function createGFAnimationOffsets()

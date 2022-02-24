@@ -14,6 +14,11 @@ import fmf.characters.*;
 class YourReality extends SongPlayer
 {
 
+	override function getDefaultSkin()
+	{
+		return new PixelSkin('pixel');
+	}
+	
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/dokidoki/monika', 'mods');

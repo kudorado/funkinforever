@@ -20,6 +20,11 @@ class DualDemise extends SongPlayer
 		dad.frames = tex;
 	}
 
+	override function getDefaultSkin()
+	{
+		return new PixelSkin('pixel');
+	}
+
 	// override  function getGFTex() {
 	// 	var text = Paths.getSparrowAtlas('gf_skins/gfPixel/gfPixel', 'mods');
 	// 	gf.frames = text;
