@@ -97,6 +97,7 @@ class IIMarky extends Boyfriend
 		whiteBG.scrollFactor.set(0.9, 0.9);
 		whiteBG.alpha = 0;
 		whiteBG.screenCenter(X);
+		whiteBG.cameras = [gameState.camOther];
 
 		gameState.remove(this);
 		gameState.add(whiteBG);

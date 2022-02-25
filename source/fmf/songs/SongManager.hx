@@ -23,39 +23,16 @@ class SongManager
 			}
 		),
 
-//-------------------------DADDY DEAREST---------------------
-		new SongData
+		new SongData	
 		(
 			{
-				folder: 'week_es',
-				character: 'es',
-				songTitle: 'Everyone Sings',
-				songList: ['ES-Nerves', "ES-Manifest", "ES-Animal"]
+				folder: 'week_annie',
+				character: 'annie',
+				songTitle: 'V.S Annie',
+				songList: ['Good-enough', 'Lover', 'Tug-of-war', 'Animal']
 			}
 		),
 
-
-		new SongData
-		(
-			{
-				folder: 'week_nonsense',
-				character: 'nonsense',
-				songTitle: 'V.S Nonsense',
-				songList: ['Common-sense', 'Highlights', 'Context', "Nonsensical"]
-			}
-		),
-
-
-		new SongData
-		(
-			{
-				folder: 'week_tabi',
-				character: 'tabi',
-				songTitle: 'V.S Ex',
-				songList: ['My-battle', 'Last-chance', 'Genocide']
-			}
-		),
-		
 		new SongData
 		(
 			{
@@ -63,6 +40,109 @@ class SongManager
 				character: 'garcello',
 				songTitle: 'SMOKE EM\' OUT STRUGGLE',
 				songList: ['Headache', 'Nerves', 'Release', 'Fading']
+			}
+		),
+
+
+		new SongData
+		(
+			{
+				folder: 'week_kapi',
+				character: 'kapi',
+				songTitle: 'Showdown Arcane',
+				songList: ['Wocky', 'Beathoven', 'Hairball', 'Nyaw', 'Flatzone']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_agoti',
+				character: 'agoti',
+				songTitle: 'V.S Agoti',
+				songList: ['Screenplay', 'Parasite', 'AGOTI', 'Guns', 'Godrays']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_entity_origins',
+				character: 'daidem',
+				songTitle: 'Entity Origins',
+				songList: ['Experimental-Phase', 'Perfection']
+			}
+		),
+		
+
+		new SongData	
+		(
+			{
+				folder: 'week_sky',
+				character: 'sky',
+				songTitle: 'V.S Sky',
+				songList: ['Wife-forever', 'Sky', 'Manifest']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_miku',
+				character: 'miku',
+				songTitle: 'V.S Miku',
+				songList: ['Popipo', "Aishite", 'Siu', "Disappearance", 'Chug']
+			}
+		),
+
+		new SongData	
+		(
+			{
+				folder: 'week_date',
+				character: 'the_date',
+				songTitle: 'The Date',
+				songList: ['Whitroll', 'Perfume', 'Heartbass']
+			}
+		),
+
+		new SongData	
+		(
+			{
+				folder: 'week_starlingmayhem',
+				character: 'starlingmayhem',
+				songTitle: 'V.S Starling Mayhem',
+				songList: ['Inverted-ascension', 'Echoes', 'Artificial-lust']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_hex',
+				character: 'hex',
+				songTitle: 'V.S Hex',
+				songList: ['Dunk', 'Ram', 'Hello-world', 'Glitcher', 'Encore']
+			}
+		),
+
+
+		new SongData	
+		(
+			{
+				folder: 'week_huggywuggy',
+				character: 'huggy',
+				songTitle: 'V.S Huggy Wuggy',
+				songList: ['Playtime', 'Runtime']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_mfm',
+				character: 'mfm',
+				songTitle: 'Mid-Fight Masses',
+				songList: ['Parish', 'Worship', "Zavodila", 'Gospel', 'Casanova']
 			}
 		),
 
@@ -79,91 +159,10 @@ class SongManager
 		new SongData
 		(
 			{
-				folder: 'week_agoti',
-				character: 'agoti',
-				songTitle: 'V.S Agoti',
-				songList: ['Screenplay', 'Parasite', 'AGOTI', 'Guns', 'Godrays']
-			}
-		),
-		
-		new SongData
-		(
-			{
-				folder: 'week_tricky',
-				character: 'tricky',
-				songTitle: 'V.S Clown',
-				songList: ['Improbable-outset', 'Madness', 'Hellclown', 'Expurgation', 'Reality-bender']
-			}
-		),
-		
-		new SongData
-		(
-			{
-				folder: 'week_trueform',
-				character: 'trueform',
-				songTitle: 'T.R.U.E.F.A.C.E',
-				songList: ['Eeeaaaooo', 'Target-practice[trueface]', 'Foolhardy[trueface]', 'Manifest[trueface]', 'Incident[trueface]', 'Run[trueface]']
-			}
-		),
-
-		new SongData
-		(
-			{
-				folder: 'week_kapi',
-				character: 'kapi',
-				songTitle: 'Showdown Arcane',
-				songList: ['Wocky', 'Beathoven', 'Hairball', 'Nyaw', 'Flatzone']
-			}
-		),
-
-		new SongData
-		(
-			{
-				folder: 'week_matt',
-				character: 'matt',
-				songTitle: 'V.S Matt',
-				songList: ['Light-it-up', 'Ruckus', 'Target-practice']
-			}
-		),
-
-		new SongData
-		(
-			{
-				folder: 'week_miku',
-				character: 'miku',
-				songTitle: 'V.S Miku',
-				songList: ['Popipo', "Aishite", 'Siu', "Disappearance", 'Chug']
-			}
-		),
-
-
-		new SongData
-		(
-			{
 				folder: 'week_bob',
 				character: 'bob',
 				songTitle: 'V.S Bob',
 				songList: ['Sunshine', 'Withered', 'Run', "Ron", "Trouble", "Onslaught", "Little-man"]
-			}
-		),
-
-		new SongData
-		(
-			{
-				folder: 'week_hex',
-				character: 'hex',
-				songTitle: 'V.S Hex',
-				songList: ['Dunk', 'Ram', 'Hello-world', 'Glitcher', 'Encore']
-			}
-		),
-
-		new SongData
-		(
-			{
-				folder: 'week_mfm',
-				character: 'mfm',
-				songTitle: 'Mid-Fight Masses',
-				songList: ['Parish', 'Worship', "Zavodila", 'Gospel', 'Casanova']
 			}
 		),
 
@@ -187,79 +186,6 @@ class SongManager
 			}
 		),
 
-	
-		new SongData
-		(
-			{
-				folder: 'week_bab',
-				character: 'bab',
-				songTitle: 'Bop & Bosip',
-				songList: ['Jump-in', 'Swing', 'Ronald-McDonald-Slide', 'Jump-out']
-			}
-		),
-
-
-		new SongData
-		(
-			{
-				folder: 'week_entity_origins',
-				character: 'daidem',
-				songTitle: 'Entity Origins',
-				songList: ['Experimental-Phase', 'Perfection']
-			}
-		),
-
-		new SongData	
-		(
-			{
-				folder: 'week_sky',
-				character: 'sky',
-				songTitle: 'V.S Sky',
-				songList: ['Wife-forever', 'Sky', 'Manifest']
-			}
-		),
-
-		new SongData	
-		(
-			{
-				folder: 'week_qt',
-				character: 'qt',
-				songTitle: 'V.S QT',
-				songList: ['Carefree', 'Careless', 'Censory-overload', 'Termination', 'Cessation']
-			}
-		),
-
-		new SongData	
-		(
-			{
-				folder: 'week_date',
-				character: 'the_date',
-				songTitle: 'The Date',
-				songList: ['Whitroll', 'Perfume', 'Heartbass']
-			}
-		),
-
-		new SongData	
-		(
-			{
-				folder: 'week_zardy',
-				character: 'zardy',
-				songTitle: 'V.S Zardy',
-				songList: ['Foolhardy', 'Bushwhack']
-			}
-		),
-
-
-		new SongData	
-		(
-			{
-				folder: 'week_sonic',
-				character: 'sonic',
-				songTitle: 'V.S Sonic.exe',
-				songList: ['Too-Slow', 'You-Cant-Run', 'triple-trouble[sonic]', 'Cycles', 'Endless', 'sunshine[sonic]', 'Chaos', 'Faker', 'black-sun', 'milk', 'too-fest']
-			}
-		),
-
 		new SongData	
 		(
 			{
@@ -270,25 +196,6 @@ class SongManager
 			}
 		),
 
-		new SongData	
-		(
-			{
-				folder: 'week_annie',
-				character: 'annie',
-				songTitle: 'V.S Annie',
-				songList: ['Good-enough', 'Lover', 'Tug-of-war', 'Animal']
-			}
-		),
-
-		new SongData	
-		(
-			{
-				folder: 'week_starlingmayhem',
-				character: 'starlingmayhem',
-				songTitle: 'V.S Starling Mayhem',
-				songList: ['Inverted-ascension', 'Echoes', 'Artificial-lust']
-			}
-		),
 
 		new SongData	
 		(
@@ -310,15 +217,6 @@ class SongManager
 			}
 		),
 
-		new SongData	
-		(
-			{
-				folder: 'week_huggywuggy',
-				character: 'huggy',
-				songTitle: 'V.S Huggy Wuggy',
-				songList: ['Playtime', 'Runtime']
-			}
-		),
 
 		new SongData	
 		(
@@ -327,6 +225,26 @@ class SongManager
 				character: 'blueballsincident',
 				songTitle: 'V.S Blueballs Incident',
 				songList: ['Sadness', 'Rage', 'Incident[bi]', 'Redemption']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_nonsense',
+				character: 'nonsense',
+				songTitle: 'V.S Nonsense',
+				songList: ['Common-sense', 'Highlights', 'Context', "Nonsensical"]
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_bab',
+				character: 'bab',
+				songTitle: 'Bop & Bosip',
+				songList: ['Jump-in', 'Swing', 'Ronald-McDonald-Slide', 'Jump-out']
 			}
 		),
 
@@ -340,13 +258,85 @@ class SongManager
 			}
 		),
 
+		new SongData
+		(
+			{
+				folder: 'week_es',
+				character: 'es',
+				songTitle: 'Everyone Sings',
+				songList: ['ES-Nerves', "ES-Manifest", "ES-Animal"]
+			}
+		),
+
+
+		new SongData
+		(
+			{
+				folder: 'week_matt',
+				character: 'matt',
+				songTitle: 'V.S Matt',
+				songList: ['Light-it-up', 'Ruckus', 'Target-practice']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_tabi',
+				character: 'tabi',
+				songTitle: 'V.S Ex',
+				songList: ['My-battle', 'Last-chance', 'Genocide']
+			}
+		),
+
+		new SongData
+		(
+			{
+				folder: 'week_tricky',
+				character: 'tricky',
+				songTitle: 'V.S Clown',
+				songList: ['Improbable-outset', 'Madness', 'Hellclown', 'Expurgation', 'Reality-bender']
+			}
+		),
+		
+		new SongData
+		(
+			{
+				folder: 'week_trueform',
+				character: 'trueform',
+				songTitle: 'T.R.U.E.F.A.C.E',
+				songList: ['Eeeaaaooo', 'Target-practice[trueface]', 'Foolhardy[trueface]', 'Manifest[trueface]', 'Incident[trueface]', 'Run[trueface]']
+			}
+		),
+
 		new SongData	
 		(
 			{
-				folder: 'week_entity',
-				character: 'entity',
-				songTitle: 'V.S Entity',
-				songList: ['Shotgun-shell', 'Parasite[ENTITY]', 'Godrays[ENTITY]', 'Promenade']
+				folder: 'week_qt',
+				character: 'qt',
+				songTitle: 'V.S QT',
+				songList: ['Carefree', 'Careless', 'Censory-overload', 'Termination', 'Cessation']
+			}
+		),
+
+		new SongData	
+		(
+			{
+				folder: 'week_zardy',
+				character: 'zardy',
+				songTitle: 'V.S Zardy',
+				songList: ['Foolhardy', 'Bushwhack']
+			}
+		),
+
+
+		new SongData	
+		(
+			{
+				folder: 'week_sonic',
+				character: 'sonic',
+				songTitle: 'V.S Sonic.exe',
+				songList: ['Too-Slow', 'You-Cant-Run', 'triple-trouble[sonic]', 'Cycles', 'Endless', 'sunshine[sonic]', 'Chaos', 'Faker', 'black-sun', 'milk', 'too-fest']
 			}
 		),
 
@@ -448,8 +438,6 @@ class SongManager
 				]
 			}
 		),
-
-
 
 	];
 //-----------------------------------------------------------

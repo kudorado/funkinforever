@@ -789,6 +789,8 @@ class PcManager
 			case 'bfgf rgb':
 				return new BFGFRGB(1399, 319);
 	
+			case 'bf ssj':
+				return new BFSSJ(700 + 2100, 425);
 
 		}
 
