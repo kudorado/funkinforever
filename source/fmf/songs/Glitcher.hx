@@ -17,6 +17,11 @@ class Glitcher extends SongPlayer
 		dad.frames = tex;
 	}
 
+	override function createStoryBF()
+	{
+		changePc('bf glitcher');
+	}
+
 	override function loadMap()
 	{
 		gameState.defaultCamZoom = 0.85;

@@ -17,6 +17,12 @@ class Ram extends SongPlayer
 		dad.frames = tex;
 	}
 
+	override function createStoryBF()
+	{
+		changePc('bf ram');
+	}
+		
+
 	override function loadMap()
 	{
 		gameState.defaultCamZoom = 1;

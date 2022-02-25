@@ -10,7 +10,6 @@ import fmf.characters.*;
 class Matt extends SongPlayer
 {
 
-
 	override function loadMap()
 	{
 		gameState.defaultCamZoom = 0.8;
@@ -55,6 +54,11 @@ class Matt extends SongPlayer
 		dad.addOffset("singDOWN", -59, -25);
 		
 		dad.dance();
+	}
+
+	override function createStoryBF()
+	{
+		changePc('bf matt');
 	}
 
 	override function createCharacters()

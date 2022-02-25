@@ -85,11 +85,12 @@ class Kapi extends SongPlayer
 		gf.addOffset('danceLeft', 0, -9);
 		gf.addOffset('danceRight', 0, -9);
 
-		gf.scale.x = 0.65; 
-		gf.scale.y = 0.65;
+		gf.scale.x = 0.763;
+		gf.scale.y = 0.763;
 
-		gf.y -= 50;	
 		gf.x += 75;	
+		gf.y = 150;
+
 
 	}
 
@@ -104,8 +105,8 @@ class Kapi extends SongPlayer
 		dad.x += 125;
 		dad.y += 185;
 
-		dad.scale.x = 0.65;
-		dad.scale.y = 0.65;
+		dad.scale.x = 0.92;
+		dad.scale.y = 0.92;
 
 		dad.scrollFactor.set(0.95, 0.95);
 
@@ -116,8 +117,8 @@ class Kapi extends SongPlayer
 
 		// bf.x += 100;
 
-		bf.scale.x *= 0.75;
-		bf.scale.y *= 0.75;
+		bf.x += 810 - 700;
+		bf.y += 363 - 425;
 
 		super.createBFAnimationOffsets();
 

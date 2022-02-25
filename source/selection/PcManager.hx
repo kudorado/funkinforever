@@ -749,6 +749,22 @@ class PcManager
 			case 'bf glow':
 				return new BFGlow(914, 989);
 
+			case 'bf simp':
+				return new BFSimp(700 + 879, 425 + 364);
+
+			case 'bf matt':
+				return new BFBoxing(700, 425);
+
+			case 'bf ram':
+				return new BFRam(1000, 425 - 180);
+
+			case 'bf night':
+				return new BFNight(1000, 425 - 180);
+		
+			case 'bf glitcher':
+				return new BFGlitcher(1000, 425 - 180);
+
+
 		}
 
 		return new Boyfriend(700, 425); 

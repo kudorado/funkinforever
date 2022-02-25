@@ -53,6 +53,11 @@ class Promenade extends SongPlayer
 		dad.animation = animation;
 	}
 
+	override function createStoryBF()
+	{
+		changePc('bf simp');
+	}
+
 	override function createDadAnimationOffsets():Void
 	{
 			
