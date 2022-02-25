@@ -26,14 +26,12 @@ class Monster extends SongPlayer
 	{
 		var animation = dad.animation;
 
-		animation.addByPrefix('idle', 'monster idle0', 24, false);
-		animation.addByPrefix('danceLeft', 'monster idle0', 24, false);
-		animation.addByPrefix('danceRight', 'monster idle0', 24, false);
+		animation.addByPrefix('idle', 'Monster idle00', 24, false);
 
-		animation.addByPrefix('singUP', 'monster up note0', 24, false);
-		animation.addByPrefix('singDOWN', 'monster down0', 24, false);
-		animation.addByPrefix('singLEFT', 'Monster left note0', 24, false);
-		animation.addByPrefix('singRIGHT', 'Monster Right note0', 24, false);
+		animation.addByPrefix('singUP', 'Monster up note00', 24, false);
+		animation.addByPrefix('singDOWN', 'Monster down00', 24, false);
+		animation.addByPrefix('singLEFT', 'Monster left note00', 24, false);
+		animation.addByPrefix('singRIGHT', 'Monster Right note00', 24, false);
 	
 		animation.addByPrefix('singUPmiss', 'Monster up note MISS0', 1, false);
 		animation.addByPrefix('singDOWNmiss', 'Monster down MISS0', 1, false);
