@@ -746,6 +746,9 @@ class PcManager
 			case 'bf tabimad':
 				return new BFTabiMad(486, 449);
 
+			case 'bf glow':
+				return new BFGlow(914, 989);
+
 		}
 
 		return new Boyfriend(700, 425); 

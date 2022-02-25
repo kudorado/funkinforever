@@ -181,12 +181,21 @@ class BaseSong
 		mapLoaded = true;
 		loadMapGroup();
 		createCharacters();
+		createStoryCharacters();
 		initVariables();
 		
 
 		//add later sprites
 		GameState.instance.callOnLuas('addLuaSpriteGroup', [FunkinLua.addLater, true]);
 	}
+
+	function createStoryCharacters()
+	{
+		// if (GameState.isStoryMode)
+		{
+			createStoryBF();
+		}
+	} 
 
 	function initVariables()
 	{
@@ -252,10 +261,6 @@ class BaseSong
 
 		bf.characterAddedEvent();
 
-		// if (GameState.isStoryMode)
-		{
-			createStoryBF();
-		}
 	}
 
 	//---------------------------------------------------------------------------------------------------------

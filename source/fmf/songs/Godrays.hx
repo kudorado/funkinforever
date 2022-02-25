@@ -20,6 +20,10 @@ class Godrays extends SongPlayer
 		dad.frames = tex;
 	}
 
+	override function createStoryBF()
+	{
+		changePc('bf glow');
+	}
 
 	override function loadMap()
 	{

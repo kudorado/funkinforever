@@ -51,6 +51,11 @@ class Solazar extends SongPlayer
 		return new AgotiSkin();
 	}
 
+	override function createStoryBF()
+	{
+		changePc('bf glow');
+	}
+
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
