@@ -14,7 +14,7 @@ class Nonsense extends SongPlayer
 
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/nonsense/nonsense', 'mods');
+		var tex = Paths.getSparrowAtlas('pc_updated/nonsense/nonsense', 'mods');
 		dad.frames = tex;
 	}
 

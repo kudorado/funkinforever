@@ -12,7 +12,7 @@ class NonsenseTiredSus extends NonsenseSus
 	
 	override function getTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/nonsense/nonsense_tired', 'mods');
+		var tex = Paths.getSparrowAtlas('pc_updated/nonsense_tired', 'mods');
 		frames = tex;
 	}
 

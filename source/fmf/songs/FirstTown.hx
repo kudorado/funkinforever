@@ -13,7 +13,7 @@ class FirstTown extends SongPlayer
 {
     override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/camellia/camellia', 'mods');
+		var tex = Paths.getSparrowAtlas('pc_updated/camellia', 'mods');
 		dad.frames = tex;
 	}
 

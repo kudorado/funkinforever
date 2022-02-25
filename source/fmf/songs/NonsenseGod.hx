@@ -15,7 +15,7 @@ class NonsenseGod extends Nonsense
 {
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/nonsense/nonsense_god', 'mods');
+		var tex = Paths.getSparrowAtlas('pc_updated/nonsense_god', 'mods');
 		dad.frames = tex;
 	}
 
