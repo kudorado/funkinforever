@@ -43,7 +43,7 @@ class BFTabi extends Boyfriend
 		addOffset('singLEFT', 6, -5);
 		addOffset('singDOWN', -10, -57);
 		
-		addOffset('singUPmiss', -10, -25);
+		addOffset('singUPmiss', -40, 15);
 		addOffset('singRIGHTmiss', -40, 15);
 		addOffset('singLEFTmiss', 4, 17);
 		addOffset('singDOWNmiss', -10,-25);

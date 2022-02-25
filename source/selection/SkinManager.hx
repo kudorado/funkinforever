@@ -75,6 +75,12 @@ class SkinManager
 			name: 'circle_classic',
 			cost: 5
 		}),
+
+		new SkinData
+		({
+			name: 'circle',
+			cost: 5
+		}),
 	
 		new SkinData
 		({

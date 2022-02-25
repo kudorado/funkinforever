@@ -14,7 +14,7 @@ class BFTabiMad extends BFTabi
 
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/bf/tabi/BF_post_exp', 'mods');
+		var tex = Paths.getSparrowAtlas('pc_updated/BF_post_exp', 'mods');
 		frames = tex;
 	}
 
@@ -24,16 +24,17 @@ class BFTabiMad extends BFTabi
 		addOffset('idle', -6, -6);
 
 		addOffset('singUP', -53, 22);
-		addOffset('singRIGHT', -46, -5);
+		addOffset('singRIGHT', -46,-5);
 		addOffset('singLEFT', 6, -5);
 		addOffset('singDOWN', -10, -57);
-
-		addOffset('singUPmiss', -40, -5);
+		
+		addOffset('singUPmiss', -40, 15);
 		addOffset('singRIGHTmiss', -40, 15);
 		addOffset('singLEFTmiss', 4, 17);
-		addOffset('singDOWNmiss', -10, -25);
-
+		addOffset('singDOWNmiss', -10,-25);
+		
 		playAnim('idle');
+
 
 		this.scale.x = 1;
 		this.scale.y = 1;
