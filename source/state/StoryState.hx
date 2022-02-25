@@ -251,14 +251,16 @@ class StoryState extends MusicBeatState
 
 
 		LoadingState.clearCachedSong();
+
+		LoadingState.isAlertVisible = false;
 		
 		changeWeek(0);
-
+		
+		super.create();
 		alertCam = new FlxCamera();
 		alertCam.bgColor.alpha = 0;
 		FlxG.cameras.add(alertCam);
-		
-		super.create();
+
 	}
 
 	function loadWeekBG(curWeek:Int)

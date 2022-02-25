@@ -1765,7 +1765,9 @@ class GameState extends MusicBeatState
 		CURRENT_SONG = SONG_NAME;
 
 		botPlayShit = FlxG.save.data.botplay && isUnlocked();
-		practicleMode = FlxG.save.data.handsome;
+		practicleMode = FlxG.save.data.handsome && isUnlocked();
+		playAsDad =  playAsDad && isUnlocked();
+
 
 		// pre lowercasing the song name (create)
 		var songLowercase = SongFilter.filter(CURRENT_SONG);
@@ -2146,6 +2148,8 @@ class GameState extends MusicBeatState
 		
 
 		super.create();
+
+		LoadingState.isAlertVisible = false;
 		LoadingState.didLoadout = false;
 		LoadingState.hasCachedSong = true;
 		AdMob.hideBanner();

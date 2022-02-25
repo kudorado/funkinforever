@@ -114,7 +114,7 @@ class SelectionState extends MusicBeatState
 		{
 			//cut some options yah
 			trace('story mode detected');
-			options = ['Play', 'Controls', 'Scrolls', "Play Mode"];
+			options = ['Play', 'Controls', 'Scrolls'];
 		}
 
 		AdMob.hideBanner();
@@ -325,8 +325,9 @@ class SelectionState extends MusicBeatState
 		Controller.init(this, FULL, A_B);
 
         AdMob.onInterstitialEvent = onRewarded;
-
+		
 		super.create();
+		LoadingState.isAlertVisible = false;
 	}
 
 	function loadWeekBG(curSelection:Int)
@@ -524,7 +525,7 @@ class SelectionState extends MusicBeatState
 
 	private function isScroll():Bool
 	{
-		return options[curSelection].toLowerCase() == 'play mode';
+		return options[curSelection].toLowerCase() == 'scrolls';
 	}
 
 	private function isPlayMode():Bool

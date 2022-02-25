@@ -147,6 +147,8 @@ class MenuState extends MusicBeatState
 		Controller.init(this, UP_DOWN, A);
 		super.create();
 
+		LoadingState.isAlertVisible = false;
+
 		// Debugger.create(this, camera);
 
 		AdMob.showBanner();

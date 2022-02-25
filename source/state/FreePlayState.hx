@@ -374,11 +374,12 @@ class FreePlayState extends MusicBeatState
 
 		// Debugger.create(this, camera);
 
+
+		LoadingState.isAlertVisible = false;
+		super.create();
 		alertCam = new FlxCamera();
 		alertCam.bgColor.alpha = 0;
 		FlxG.cameras.add(alertCam);
-
-		super.create();
 	}
 
 	function updateScore()
@@ -477,7 +478,8 @@ class FreePlayState extends MusicBeatState
 			
 				#if !mobile
 				// #if debug
-				onRewarded('shit');
+				playSong();
+				// onRewarded('shit');
 				// #end
 				#end
 				// showVideoSuccess = true;
