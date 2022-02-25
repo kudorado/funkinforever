@@ -17,11 +17,21 @@ class Reactor extends SongPlayer
     var white_sus:FlxSprite;
     var blue_sus:FlxSprite;
     
-
+	override function getGFTex()
+	{
+		var tex = Paths.getSparrowAtlas('pc_updated/gfR', 'mods');
+		gf.frames = tex;
+	}
+	
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/sus/impostorR', 'mods');
 		dad.frames = tex;
+	}
+
+	override function createStoryBF()
+	{
+		changePc('bf r');
 	}
 
 	override function loadMap()
@@ -196,7 +206,6 @@ class Reactor extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		
 		bf.x += 150;
         bf.y += 50;
 	}

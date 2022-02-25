@@ -1,5 +1,6 @@
 package selection;
 
+import fmf.songs.BaseSong;
 import flixel.FlxSubState;
 import flixel.FlxG;
 import fmf.songs.BaseSong;
@@ -771,11 +772,23 @@ class PcManager
 				return new BFTikyBen(815, 510);
 
 			case 'bf ghost':
-				return new BFGhost(700, 425);
+				return new BFGhost(796, 473);
 
 			case 'bf origin':
 				return new BFOrigin(547, 526);
 
+			case 'bf r':
+				return new BFR(850, 475);
+
+			case 'bf fly':
+				return new BFFly(850, 425 + 350);
+
+			case 'bfgf':
+				return new BFGF(700 + 913, 425 - 112);
+		
+			case 'bfgf rgb':
+				return new BFGFRGB(700 + 913, 425 - 112);
+	
 
 		}
 

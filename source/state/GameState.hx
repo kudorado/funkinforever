@@ -5041,18 +5041,55 @@ class GameState extends MusicBeatState
 				});
 			}
 
-			songScore -= 500;
 			combo = 0;
 			misses++;
-			var daSubtract = 0.1;
-			if(isStoryMode && !storyCompleted)//make it easier
-				daSubtract = 0.02;
+
+			var scoreShit:Float = -500;
+			var healthRating:Float = -0.1;
 
 
-			health -= daSubtract;
+			var newbie = isStoryMode && !storyCompleted;
+
+			// story, newbie code
+			if (healthRating < 0 && newbie)
+			{
+				healthRating /= 5;
+				scoreShit /= 5;
+			}
+
+			// easy, make it more easy
+			if (!newbie && healthRating < 0)
+			{
+				switch (storyDifficulty)
+				{
+					// make it more easy
+					case 0:
+						healthRating /= 2.5;
+						scoreShit /= 2.5;
+
+					// make it a bit easy
+					case 1:
+						healthRating /= 1.5;
+						scoreShit /= 1.5;
+
+					// hard, yeah, here we go
+					case 2:
+						healthRating *= 1.25;
+						scoreShit *= 1.25;
+
+					case 3:
+						// you wanna hard, go fuck it
+						healthRating *= 2;
+						scoreShit *= 2;
+				}
+			}
+
+			
+			songScore += Std.int(scoreShit);
+			health += healthRating;
 
 			popUpRating('fuck');
-			popUpHealth('fuck', -daSubtract);
+			popUpHealth('fuck', healthRating);
 
 			// var noteDiff:Float = Math.abs(daNote.strumTime - Conductor.songPosition);
 			// var wife:Float = EtternaFunctions.wife3(noteDiff, FlxG.save.data.etternaMode ? 1 : 1.7);

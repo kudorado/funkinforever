@@ -39,6 +39,12 @@ class ArtificialLust extends SongPlayer
 	var blackShit:FlxSprite;
 
 
+	override function getGFTex()
+	{
+		var tex = Paths.getSparrowAtlas('pc/starlingmayhem/NoGF', 'mods');
+		gf.frames = tex;
+	}
+
     override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/starlingmayhem/duet_assets', 'mods');
@@ -305,6 +311,8 @@ class ArtificialLust extends SongPlayer
 		super.createGFAnimationOffsets();
 		gf.y = 43;
         gf.x = 972;
+
+		gf.visible = false;
 	}
 
 	override function updateCamFollowBF()
@@ -392,17 +400,27 @@ class ArtificialLust extends SongPlayer
 	{
 		switchDad(eventSong, false);
 		switchAbelAndMaxRGB();
+		changePc('bfgf rgb');
+
 	}
+
+	
 		
 	function eventExit()
 	{
 		switchDad(new ArtificialLust(), true, false);
 		switchAbelAndMax();
+
+		changePc('bfgf');
+
 	}
+
 
 	function switchAbelAndMaxRGB()
 	{
+
 		lightEvent.visible = true;
+
 		gameState.remove(bg);
 		gameState.remove(stage);
 		gameState.remove(headlight);

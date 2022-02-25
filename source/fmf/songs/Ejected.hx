@@ -32,6 +32,11 @@ class Ejected extends SongPlayer
 		dad.frames = tex;
 	}
 
+	override function createStoryBF()
+	{
+		changePc('bf fly');
+	}
+
     override  function getGFTex() {
 		var text = Paths.getSparrowAtlas('gf_skins/parachute/gf_parachute', 'mods');
 		gf.frames = text;

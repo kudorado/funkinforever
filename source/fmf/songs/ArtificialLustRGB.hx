@@ -13,6 +13,11 @@ import fmf.characters.*;
 
 class ArtificialLustRGB extends ArtificialLust	
 {
+	override function getGFTex()
+	{
+		var tex = Paths.getSparrowAtlas('pc/starlingmayhem/NoGFRGB', 'mods');
+		gf.frames = tex;
+	}
 
 	override function createBG()
 	{
@@ -71,6 +76,11 @@ class ArtificialLustRGB extends ArtificialLust
 		createSimp();
 		createAbel();
 		createMax();
+	}
+
+	override function getVersion()
+	{
+		return new BFGFRGB(700 + 913, 425 - 112);
 	}
 
 	override function createMax()

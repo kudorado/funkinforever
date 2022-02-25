@@ -9,11 +9,11 @@ import flixel.util.FlxTimer;
 
 using StringTools;
 
-class BFGhost extends BFTabi
+class BFGFRGB extends BFTabi
 {
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc_updated/bfghost', 'mods');
+		var tex = Paths.getSparrowAtlas('pc_updated/BFGFRGB', 'mods');
 		frames = tex;
 	}
 }
