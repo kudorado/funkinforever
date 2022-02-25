@@ -25,7 +25,7 @@ class Ram extends SongPlayer
 
 	override function loadMap()
 	{
-		gameState.defaultCamZoom = 1;
+		gameState.defaultCamZoom = 0.85;
 
 		var bg:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/hex/sunset/stageback', 'mods'));
 		bg.antialiasing = true;
@@ -63,15 +63,15 @@ class Ram extends SongPlayer
 		dad.scale.x = 1;
 		dad.scale.y = 1;
 
-		dad.x -= 300;
-		dad.y -= 400;
+		dad.x = 160;
+		dad.y = 114;
 	}
 
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.y -= 180;
-		bf.x += 300;
+		bf.x += 760 - 700;
+		bf.y += 425 - 274;
 	}
 
 	override function createGFAnimationOffsets()

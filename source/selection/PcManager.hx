@@ -752,17 +752,17 @@ class PcManager
 			case 'bf simp':
 				return new BFSimp(700 + 879, 425 + 364);
 
-			case 'bf matt':
-				return new BFBoxing(700, 425);
+			case 'bf boxing':
+				return new BFBoxing(848, 401);
 
 			case 'bf ram':
-				return new BFRam(1000, 425 - 180);
+				return new BFRam(760, 274);
 
 			case 'bf night':
-				return new BFNight(1000, 425 - 180);
+				return new BFNight(760, 274);
 		
 			case 'bf glitcher':
-				return new BFGlitcher(1000, 425 - 180);
+				return new BFGlitcher(760, 274);
 
 
 		}

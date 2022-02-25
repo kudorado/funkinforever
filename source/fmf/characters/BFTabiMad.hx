@@ -17,28 +17,5 @@ class BFTabiMad extends BFTabi
 		var tex = Paths.getSparrowAtlas('pc_updated/BF_post_exp', 'mods');
 		frames = tex;
 	}
-
-	// create animation offset for BF
-	public override function createAnimationOffsets():Void
-	{
-		addOffset('idle', -6, -6);
-
-		addOffset('singUP', -53, 22);
-		addOffset('singRIGHT', -46,-5);
-		addOffset('singLEFT', 6, -5);
-		addOffset('singDOWN', -10, -57);
-		
-		addOffset('singUPmiss', -40, 15);
-		addOffset('singRIGHTmiss', -40, 15);
-		addOffset('singLEFTmiss', 4, 17);
-		addOffset('singDOWNmiss', -10,-25);
-		
-		playAnim('idle');
-
-
-		this.scale.x = 1;
-		this.scale.y = 1;
-	}
-	
 	
 }

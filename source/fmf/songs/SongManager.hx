@@ -112,7 +112,7 @@ class SongManager
 				folder: 'week_kapi',
 				character: 'kapi',
 				songTitle: 'Showdown Arcane',
-				songList: ['Wocky', 'Beathoven', 'Nyaw', 'Flatzone']
+				songList: ['Wocky', 'Beathoven', 'Hairball', 'Nyaw', 'Flatzone']
 			}
 		),
 
@@ -449,7 +449,7 @@ class SongManager
 			}
 		),
 
-		
+
 
 	];
 //-----------------------------------------------------------

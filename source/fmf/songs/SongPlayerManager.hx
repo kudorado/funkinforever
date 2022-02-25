@@ -130,7 +130,7 @@ class SongPlayerManager
 			case 'reality-bender':
 				songPlayer = new TrickyBen();
 
-			case 'wocky' | 'beathoven':
+			case 'wocky' | 'beathoven' | 'hairball':
 				songPlayer = new Kapi();
 
 			case 'nyaw':
@@ -580,6 +580,7 @@ class SongPlayerManager
 
 			case 'unfairness':
 				songPlayer = new Bambi3DRed();
+
 
 
 			case 'disruption':

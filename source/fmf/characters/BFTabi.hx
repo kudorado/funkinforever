@@ -27,10 +27,10 @@ class BFTabi extends Boyfriend
 		animation.addByPrefix('singLEFT', 'BF NOTE LEFT00', 24, false);
 		animation.addByPrefix('singDOWN', 'BF NOTE DOWN00', 24, false);
 
-		animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS0', 1, false);
-		animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS00', 1, false);
-		animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS00', 1, false);
-		animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS0', 1, false);
+		animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS0', 24, false);
+		animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS00', 24, false);
+		animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS00', 24, false);
+		animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS0', 24, false);
 	}
 
 	// create animation offset for BF

@@ -9,7 +9,7 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import fmf.characters.*;
 
-class HexHelloWorld extends SongPlayer
+class HexHelloWorld extends Ram
 {
 	override function getDadTex()
 	{
@@ -19,7 +19,7 @@ class HexHelloWorld extends SongPlayer
 
 	override function loadMap()
 	{
-		gameState.defaultCamZoom = 1;
+		gameState.defaultCamZoom = 0.85;
 
 		var bg:FlxSprite = new FlxSprite(-400, -400).loadGraphic(Paths.image('bg/hex/night/stageback', 'mods'));
 		bg.antialiasing = true;
@@ -39,36 +39,11 @@ class HexHelloWorld extends SongPlayer
 		dad.animation = animation;
 	}
 
-	override function createDadAnimationOffsets():Void
-	{
-		dad.addOffset('idle', -7, -42);
-		dad.addOffset("singUP", -15, -6);
-		dad.addOffset("singRIGHT", -6, -31);
-		dad.addOffset("singLEFT", -16, -43);
-		dad.addOffset("singDOWN", -14, -68);
-		dad.dance();
-
-		dad.scale.x = 1;
-		dad.scale.y = 1;
-
-		dad.x -= 300;
-		dad.y -= 400;
-	}
-
     override function updateCamFollowDad()
 	{
 		gameState.targetCamFollow.y = dad.getGraphicMidpoint().y - 50;
 	}
     
-    
-
-	override function createBFAnimationOffsets()
-	{
-		super.createBFAnimationOffsets();
-		bf.y -= 180;
-		bf.x += 300;
-	}
-
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();

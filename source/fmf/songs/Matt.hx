@@ -26,6 +26,13 @@ class Matt extends SongPlayer
 		dad.frames = tex;
 	}
 
+	override function createBF()
+	{
+		super.createBF();
+		bf.x += 848 - 700;
+		bf.y += 425 - 400;
+		
+	}
 	override function getGFTex()
 	{
 		var tex = Paths.getSparrowAtlas("gf_skins/matt/GF_MII_assets", "mods");
@@ -58,17 +65,18 @@ class Matt extends SongPlayer
 
 	override function createStoryBF()
 	{
-		changePc('bf matt');
+		changePc('bf boxing');
 	}
 
 	override function createCharacters()
 	{
 		super.createCharacters();
 
-		dad.x -= 250;
-		dad.y += 150;
-
+		dad.x = 258;
+		dad.y = 352;
+		
 		gf.y -= 200;
+
 	}
 
 	public override function getDadIcon(icon:Icon)

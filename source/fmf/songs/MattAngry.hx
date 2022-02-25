@@ -1,4 +1,4 @@
-	package fmf.songs;
+package fmf.songs;
 import reactor.*;
 import ui.*;
 
@@ -12,7 +12,7 @@ class MattAngry extends Matt
 
 	override function getDadTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc/matt//matt/', "mods");
+		var tex = Paths.getSparrowAtlas('pc/matt/mattangry', "mods");
 		dad.frames = tex;
 	}
 

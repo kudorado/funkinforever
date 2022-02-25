@@ -103,7 +103,7 @@ class Kapi extends SongPlayer
 		dad.dance();
 
 		dad.x += 125;
-		dad.y += 185;
+		dad.y = 252;
 
 		dad.scale.x = 0.92;
 		dad.scale.y = 0.92;
@@ -114,14 +114,10 @@ class Kapi extends SongPlayer
 
 	override function createBFAnimationOffsets()
 	{
-
-		// bf.x += 100;
+		super.createBFAnimationOffsets();
 
 		bf.x += 810 - 700;
 		bf.y += 363 - 425;
-
-		super.createBFAnimationOffsets();
-
 	}
 
 	public override function getDadIcon(icon:Icon)
