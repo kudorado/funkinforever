@@ -134,10 +134,10 @@ class Ejected extends SongPlayer
 		dad.addOffset("singDOWN", 0, -0);
 		dad.dance();
 
-		dad.scale.x = 2;
-		dad.scale.y = 2;
-		dad.x -= 500;
-		dad.y += 425;
+		dad.scale.x = 2.735;
+		dad.scale.y = 2.735;
+		dad.x = 168;
+		dad.y = 625;
 	}
 
 	override function createGFAnimationOffsets()

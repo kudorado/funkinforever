@@ -302,8 +302,8 @@ class ArtificialLust extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.x += 913;
-		bf.y -= 112;
+		bf.x += 1399 - 700;
+		bf.y += 319 - 425;
 	}
 
 	override function createGFAnimationOffsets()

@@ -784,10 +784,10 @@ class PcManager
 				return new BFFly(850, 425 + 350);
 
 			case 'bfgf':
-				return new BFGF(700 + 913, 425 - 112);
+				return new BFGF(1399, 319);
 		
 			case 'bfgf rgb':
-				return new BFGFRGB(700 + 913, 425 - 112);
+				return new BFGFRGB(1399, 319);
 	
 
 		}

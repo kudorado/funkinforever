@@ -5033,7 +5033,7 @@ class GameState extends MusicBeatState
 				whereAmI();
 			}
 
-			if (combo > 5 && gfFE().animOffsets.exists('sad'))
+			if (combo > 5 && gfFE() != null && gfFE().visible && gfFE().animOffsets.exists('sad'))
 			{
 				gfFE().playAnimForce('sad', 0.5, function()
 				{
@@ -5094,8 +5094,8 @@ class GameState extends MusicBeatState
 			// var noteDiff:Float = Math.abs(daNote.strumTime - Conductor.songPosition);
 			// var wife:Float = EtternaFunctions.wife3(noteDiff, FlxG.save.data.etternaMode ? 1 : 1.7);
 
-			if (FlxG.save.data.accuracyMod == 1)
-				totalNotesHit -= 1;
+			// if (FlxG.save.data.accuracyMod == 1)
+			// 	totalNotesHit -= 1;
 
 			if (!isMidSongEvent)
 				FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
