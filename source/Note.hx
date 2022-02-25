@@ -114,7 +114,7 @@ class Note extends FlxSprite
 				{
 					if (note == value)
 					{
-						trace('reload note: ' + note  +" with texture: " + texture);
+						// trace('reload note: ' + note  +" with texture: " + texture);
 						reloadNote(value, texture);
 						break;
 					}

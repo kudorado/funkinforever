@@ -712,7 +712,7 @@ class GameState extends MusicBeatState
 
 	public function triggerEventNote(eventName:String, value1:String, value2:String)
 	{
-		trace('trigger event: ' + eventName);
+		// trace('trigger event: ' + eventName);
 		switch (eventName)
 		{
 			case 'Hey!':

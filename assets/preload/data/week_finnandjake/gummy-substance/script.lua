@@ -9,8 +9,8 @@ end
 
 function onUpdate()
     if alphaisfucked == true then
-        setProperty('dad.alpha', 0);
-        setProperty('iconP2.alpha', 0);
+        -- setProperty('dad.alpha', 0);
+        -- setProperty('iconP2.alpha', 0);
     end
 end
 

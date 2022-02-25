@@ -40,6 +40,12 @@ class CorruptedHero extends SongPlayer
 
 	}
 
+	override function updateCamFollowDad()
+	{
+		super.updateCamFollowDad();
+		gameState.defaultCamZoom = 0.8;
+	}
+
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();

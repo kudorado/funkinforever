@@ -44,8 +44,6 @@ class GummySubstance extends SongPlayer
 	override function createDad()
 	{
 		super.createDad();
-		dad.x = 60;
-		dad.y = 60;
 	}
 
 	override function createGF()
@@ -59,10 +57,10 @@ class GummySubstance extends SongPlayer
 
 	override function updateCamFollowDad()
 	{
-		super.updateCamFollowDad();
-		gameState.targetCamFollow.x -= 350;
-		gameState.targetCamFollow.y -= 150;
-		gameState.defaultCamZoom = 0.7;
+		gameState.setCamFollowBF();
+		gameState.targetCamFollow.x -= 200;
+		// gameState.targetCamFollow.y -= 150;
+		gameState.defaultCamZoom = 0.85;
 
 	}
 

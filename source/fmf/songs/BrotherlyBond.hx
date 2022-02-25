@@ -45,15 +45,25 @@ class BrotherlyBond extends SongPlayer
 	override function createDad()
 	{
 		super.createDad();
-		dad.x = 60;
-		dad.y = 200;
+	}
+
+	override function updateCamFollowDad()
+	{
+		super.updateCamFollowDad();
+		gameState.defaultCamZoom = 0.8;
+	}
+
+	override function updateCamFollowBF()
+	{
+		super.updateCamFollowBF();
+		gameState.defaultCamZoom = 0.9;
 	}
 
 	override function createGF()
 	{
 		super.createGF();
-		gf.x = 150;
-		gf.y = 0;
+		gf.x = 444;
+		gf.y = 246;
 	}
 
 	override function createBF()
