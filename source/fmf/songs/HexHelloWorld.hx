@@ -11,6 +11,19 @@ import fmf.characters.*;
 
 class HexHelloWorld extends Ram
 {
+
+	override function getGFTex()
+	{
+		var tex = Paths.getSparrowAtlas('pc_updated/nightgf', 'mods');
+		gf.frames = tex;
+	}
+
+
+	override function createStoryBF()
+	{
+		changePc('bf night');
+	}
+		
 	override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/hex/night/DADDY_DEAREST', 'mods');
@@ -47,7 +60,8 @@ class HexHelloWorld extends Ram
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
-		gf.y -= 200;
+		gf.x = 356;
+		gf.y = -46;
 	}
 
 	public override function getDadIcon(icon:Icon)

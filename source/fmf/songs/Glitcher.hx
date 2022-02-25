@@ -17,6 +17,13 @@ class Glitcher extends SongPlayer
 		dad.frames = tex;
 	}
 
+	override function getGFTex()
+	{
+		var tex = Paths.getSparrowAtlas('pc_updated/glitchergf', 'mods');
+		gf.frames = tex;
+	}
+
+
 	override function createStoryBF()
 	{
 		changePc('bf glitcher');
@@ -52,17 +59,17 @@ class Glitcher extends SongPlayer
 	override function createDadAnimationOffsets():Void
 	{
 		dad.addOffset('idle', -7, -42);
-		dad.addOffset("singUP", -15, 45);
-		dad.addOffset("singRIGHT", -6, -54);
-		dad.addOffset("singLEFT", -16, 10);
-		dad.addOffset("singDOWN", -14, -86);
+		dad.addOffset("singUP", 86, -98);
+		dad.addOffset("singRIGHT", 144, -66);
+		dad.addOffset("singLEFT", 115, 68);
+		dad.addOffset("singDOWN", 174, 20);
 		dad.dance();
 
 		dad.scale.x = 1;
 		dad.scale.y = 1;
 
-		dad.x -= 300;
-		dad.y -= 300;
+		dad.x = -25;
+		dad.y = 16;
 	}
 
 	override function createBFAnimationOffsets()
@@ -75,7 +82,8 @@ class Glitcher extends SongPlayer
 	override function createGFAnimationOffsets()
 	{
 		super.createGFAnimationOffsets();
-		gf.y -= 200;
+		gf.x = 334;
+		gf.y = 22;
 	}
 
 	public override function getDadIcon(icon:Icon)

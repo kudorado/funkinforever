@@ -759,10 +759,22 @@ class PcManager
 				return new BFRam(760, 274);
 
 			case 'bf night':
-				return new BFNight(760, 274);
+				return new	 BFNight(760, 274);
 		
 			case 'bf glitcher':
 				return new BFGlitcher(760, 274);
+
+			case 'bf tiky':
+				return new BFTiky(800, 475);
+
+			case 'bf tikyben':
+				return new BFTikyBen(815, 510);
+
+			case 'bf ghost':
+				return new BFGhost(700, 425);
+
+			case 'bf origin':
+				return new BFOrigin(547, 526);
 
 
 		}

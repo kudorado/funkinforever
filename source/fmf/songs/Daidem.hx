@@ -18,6 +18,11 @@ class Daidem extends SongPlayer
 		dad.frames = tex;
 	}
 
+	override function createStoryBF()
+	{
+		changePc('bf origin');
+	}
+
 	override function loadMap()
 	{
 		gameState.defaultCamZoom = 0.7;
@@ -25,11 +30,7 @@ class Daidem extends SongPlayer
 		var bg = new FlxSprite(-400, -200).loadGraphic(Paths.image('bg/entity_origins/Stage_LayerTop', 'mods'));
 		bg.antialiasing = true;
 
-		bg.scale.x = 1.4;
-		bg.scale.y = 1.4;
-
 		bg.scrollFactor.set(0.99, 0.99);
-
 		gameState.add(bg);
 
 	}
@@ -89,8 +90,8 @@ class Daidem extends SongPlayer
 	override function createBF()
 	{
 		super.createBF();
-		bf.x -= 25;
-		bf.y += 125;
+		bf.x += 700 - 547;
+		bf.y += 526 - 425;
 	}
 	override function createGF()
 	{

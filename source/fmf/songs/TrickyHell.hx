@@ -12,6 +12,11 @@ import fmf.characters.*;
 class TrickyHell extends TrickyMask
 {
 
+	override function getGFTex()
+	{
+		var tex = Paths.getSparrowAtlas('pc_updated/gf_phase_3', 'mods');
+		gf.frames = tex;
+	}
     override function getDadTex()
 	{
 		var frames = Paths.getSparrowAtlas('pc/tricky/tiky', 'mods');
@@ -68,11 +73,14 @@ class TrickyHell extends TrickyMask
 		dad.scale.x = 4;
 		dad.scale.y = 4;
 
-		dad.x -= 500;
-		dad.y += 650;
 
-		dad.x += 150;
-		dad.y -= 800;
+		dad.x = -272;
+		dad.y = 100;
+	}
+
+	override function createStoryBF()
+	{
+		changePc('bf tiky');
 	}
 
 	override function createBFAnimationOffsets()

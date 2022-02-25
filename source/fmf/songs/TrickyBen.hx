@@ -18,6 +18,17 @@ class TrickyBen extends TrickyHell
 		dad.frames = frames;
 	}
 
+	override function createStoryBF()
+	{
+		changePc('bf tikyben');
+	}
+
+	override function getGFTex()
+	{
+		var tex = Paths.getSparrowAtlas('pc_updated/gf_phase_5', 'mods');
+		gf.frames = tex;
+	}
+
 	override function loadMap()
 	{
 		gameState.defaultCamZoom = 0.25;
@@ -46,6 +57,13 @@ class TrickyBen extends TrickyHell
 
 	}
 
+	override function createBF()
+	{
+		super.createBF();
+		bf.x += 815 - 700;
+		bf.y += 510 - 425;
+	}
+
 	override function createDadAnimations():Void
 	{
 		var animation = dad.animation;
@@ -67,11 +85,12 @@ class TrickyBen extends TrickyHell
 
 		dad.dance();
 
-		dad.scale.x = 4;
-		dad.scale.y = 4;
+		dad.scale.x = 2.13;
+		dad.scale.y = 2.13;
 
-		dad.y -= 150;
-		dad.x -= 1000;
+		dad.x = -530;
+		dad.y -= 188;
+
 
 	}
 

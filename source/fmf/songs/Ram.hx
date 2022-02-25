@@ -11,6 +11,13 @@ import fmf.characters.*;
 
 class Ram extends SongPlayer
 {
+
+	override function getGFTex()
+	{
+		var tex = Paths.getSparrowAtlas('pc_updated/sunsetgf', 'mods');
+		gf.frames = tex;
+	}
+
 	override function getDadTex()
 	{
 		var tex = Paths.getSparrowAtlas('pc/hex/sunset/DADDY_DEAREST', 'mods');
@@ -64,7 +71,7 @@ class Ram extends SongPlayer
 		dad.scale.y = 1;
 
 		dad.x = 160;
-		dad.y = 114;
+		dad.y = -134;
 	}
 
 	override function createBFAnimationOffsets()
