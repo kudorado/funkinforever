@@ -8,6 +8,6 @@ class ShadowSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{
-		return Paths.getSparrowAtlas('note_skins/notes_itzdarkart/shadow', 'mods');
+		return Paths.getSparrowAtlas('note_skins/notes_aetherlynx/shadow', 'mods');
 	}
 }

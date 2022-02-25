@@ -8,6 +8,6 @@ class VariantSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{
-		return Paths.getSparrowAtlas('note_skins/notes_itzdarkart/variant', 'mods');
+		return Paths.getSparrowAtlas('note_skins/notes_aetherlynx/variant', 'mods');
 	}
 }

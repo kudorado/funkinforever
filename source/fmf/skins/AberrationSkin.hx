@@ -8,6 +8,6 @@ class AberrationSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{
-		return Paths.getSparrowAtlas('note_skins/notes_itzdarkart/aberration', 'mods');
+		return Paths.getSparrowAtlas('note_skins/notes_aetherlynx/aberration', 'mods');
 	}
 }

@@ -8,6 +8,6 @@ class DarkSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{
-		return Paths.getSparrowAtlas('note_skins/notes_itzdarkart/dark', 'mods');
+		return Paths.getSparrowAtlas('note_skins/notes_aetherlynx/dark', 'mods');
 	}
 }

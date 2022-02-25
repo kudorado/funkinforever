@@ -549,10 +549,8 @@ class FreePlayState extends MusicBeatState
 		GameState.RAW_SONG_NAME = songs[curSelected].songName;
 		GameState.isStoryMode = false;
 		GameState.storyWeek = songs[curSelected].week;
-
 		StoryState.loadDataFile(songLowercase);
-
-		// Controller._pad.visible = false;
+		Controller._pad.visible = false;
 
 		LoadingState.loadWeekSplash(this, function()
 		{

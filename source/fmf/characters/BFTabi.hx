@@ -14,7 +14,7 @@ class BFTabi extends Boyfriend
 
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/bf/tabi/BOYFRIEND_TABI', 'mods');
+		var tex = Paths.getSparrowAtlas('pc_updated/BOYFRIEND_TABI', 'mods');
 		frames = tex;
 	}
 
@@ -51,9 +51,8 @@ class BFTabi extends Boyfriend
 		playAnim('idle');
 
 
-		this.scale.x = 2;
-		this.scale.y = 2;
-
+		this.scale.x = 1;
+		this.scale.y = 1;
 
 	}
 	

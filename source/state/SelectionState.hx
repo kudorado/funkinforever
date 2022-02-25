@@ -39,7 +39,6 @@ class SelectionState extends MusicBeatState
 {
 	static public var instance:SelectionState;
 
-
 	var selectedItem:Item;
 
 	var storeLabel:FlxText;
@@ -81,7 +80,6 @@ class SelectionState extends MusicBeatState
 	var selectedPlayMode:PlayModeItem;
 
 
-
 	public static var playModeData(get, never):Array<Int>;
 	static inline function get_playModeData():Array<Int>
 	{
@@ -111,6 +109,13 @@ class SelectionState extends MusicBeatState
 	{
 
 		instance = this;
+
+		if (GameState.isStoryMode)
+		{
+			//cut some options yah
+			trace('story mode detected');
+			options = ['Play', 'Controls', 'Scrolls', "Play Mode"];
+		}
 
 		AdMob.hideBanner();
 
@@ -433,24 +438,24 @@ class SelectionState extends MusicBeatState
 
 
 			selectedItem = null;
-			switch (curSelection)
+			switch (options[curSelection].toLowerCase())
 			{
-				case 1:
+				case 'characters':
 					selectedItem = grpPcs.members[curPc];
 				
-				case 2:
+				case 'notes':
 					selectedItem = grpSkins.members[curSkin];
 
-				case 3:
+				case 'effects':
 					selectedItem = grpVfxs.members[curVfx];
 
-				case 4:
+				case 'controls':
 					selectedItem = grpControls.members[curControl];
 
-				case 5:
+				case 'scrolls':
 					selectedItem = grpScrolls.members[curScroll];
 						
-				case 6:
+				case 'play mode':
 					selectedItem = grpPlayModes.members[curPlayMode];
 
 			}
@@ -494,37 +499,37 @@ class SelectionState extends MusicBeatState
 
 	private function isOverview():Bool
 	{
-		return curSelection == 0;
+		return options[curSelection].toLowerCase() == 'play';
 	}
 
 	private function isPc():Bool
 	{
-		return curSelection == 1;
+		return options[curSelection].toLowerCase() == 'characters';
 	}
 
 	private function isSkin():Bool
 	{
-		return curSelection == 2;
+		return options[curSelection].toLowerCase() == 'notes';
 	}
 
 	private function isVfx():Bool
 	{
-		return curSelection == 3;
+		return options[curSelection].toLowerCase() == 'effects';
 	}
 
 	private function isControl():Bool
 	{
-		return curSelection == 4;
+		return options[curSelection].toLowerCase() == 'controls';
 	}
 
 	private function isScroll():Bool
 	{
-		return curSelection == 5;
+		return options[curSelection].toLowerCase() == 'play mode';
 	}
 
 	private function isPlayMode():Bool
 	{
-		return curSelection == 6;
+		return options[curSelection].toLowerCase() == 'play mode';
 	}
 	
 		
@@ -573,27 +578,27 @@ class SelectionState extends MusicBeatState
 
 	function changeItem(change:Int = 0):Void
 	{
-		switch (curSelection)
+		switch (options[curSelection].toLowerCase())
 		{
-			case 0:
+			case 'play':
 				updateOverview();
 			
-			case 1:
+			case 'characters':
 				changePc(change);
 			
-			case 2:
+			case 'notes':
 				changeSkin(change);
 			
-			case 3:
+			case 'effects':
 				changeVfx(change);
 
-			case 4:
+			case 'controls':
 				changeControl(change);
 			
-			case 5:
+			case 'scrolls':
 				changeScroll(change);
 
-			case 6:
+			case 'play mode':
 				changePlayMode(change);
 		}
 

@@ -63,8 +63,6 @@ class SkinManager
 			cost: 5
 		}),
 	
-		
-
 
 		new SkinData
 		({
@@ -74,94 +72,49 @@ class SkinManager
 
 		new SkinData
 		({
-			name: 'circle-classic',
-			cost: 5
-		}),
-		new SkinData
-		({
-			name: 'circleglow',
-			cost: 3
-		}),
-
-		new SkinData
-		({
-			name: 'ae_dark',
-			cost: 5
-		}),
-		new SkinData
-		({
-			name: 'ae_freezing',
-			cost: 3
-		}),
-
-		new SkinData
-		({
-			name: 'ae_glow_splash',
-			cost: 5
-		}),
-		new SkinData
-		({
-			name: 'ae_hellbeats',
-			cost: 3
-		}),
-
-		new SkinData
-		({
-			name: 'ae_low_contrast',
-			cost: 5
-		}),
-		new SkinData
-		({
-			name: 'rectangle',
-			cost: 3
-		}),
-
-		new SkinData
-		({
-			name: 'ae_shadow',
-			cost: 5
-		}),
-		new SkinData
-		({
-			name: 'shinning',
-			cost: 3
-		}),
-
-		new SkinData
-		({
-			name: 'ae_shinning_metal',
-			cost: 5
-		}),
-		new SkinData
-		({
-			name: 'sm',
-			cost: 3
-		}),
-
-		new SkinData
-		({
-			name: 'soft_bright',
+			name: 'circle_classic',
 			cost: 5
 		}),
 	
-		
 		new SkinData
 		({
-			name: 'ae_shinning_metal',
+			name: 'dark',
 			cost: 5
 		}),
 		new SkinData
 		({
-			name: 'sm',
+			name: 'freezing',
 			cost: 3
 		}),
 
 		new SkinData
 		({
-			name: 'soft_bright',
+			name: 'glow_splash',
 			cost: 5
 		}),
-		
+		new SkinData
+		({
+			name: 'hellbeats',
+			cost: 3
+		}),
+
+		new SkinData
+		({
+			name: 'low_contrast',
+			cost: 5
+		}),
+
+		new SkinData
+		({
+			name: 'shadow',
+			cost: 5
+		}),
+
+		new SkinData
+		({
+			name: 'shinning_metal',
+			cost: 5
+		}),
 
 		new SkinData
 		({
@@ -170,13 +123,13 @@ class SkinManager
 		}),
 		new SkinData
 		({
-			name: 'ae_transparent',
+			name: 'transparent',
 			cost: 3
 		}),
 
 		new SkinData
 		({
-			name: 'ae_triangle',
+			name: 'triangle',
 			cost: 5
 		}),
 		
@@ -184,8 +137,114 @@ class SkinManager
 		({
 			name: 'variant',
 			cost: 5
-		})
+		}),
+
+		new SkinData
+		({
+			name: 'blood',
+			cost: 5
+		}),
+		new SkinData
+		({
+			name: 'bob',
+			cost: 3
+		}),
+
+		new SkinData
+		({
+			name: 'bobonslaught',
+			cost: 5
+		}),
 		
+		new SkinData
+		({
+			name: 'chasm',
+			cost: 5
+		}),
+		
+		new SkinData
+		({
+			name: 'garcello',
+			cost: 5
+		}),
+		
+		new SkinData
+		({
+			name: 'grunt',
+			cost: 5
+		}),
+		
+		new SkinData
+		({
+			name: 'hellfire',
+			cost: 5
+		}),
+		
+		new SkinData({
+			name: 'matt',
+			cost: 5
+		}),
+
+		new SkinData({
+			name: 'ron',
+			cost: 5
+		}),
+
+		new SkinData({
+			name: 'whitty',
+			cost: 5
+		}),
+		
+		new SkinData
+		({
+			name: 'whitty_crazy',
+			cost: 5
+		}),
+		
+		new SkinData
+		({
+			name: 'ng',
+			cost: 5
+		}),
+
+		new SkinData
+		({
+			name: 'sadness',
+			cost: 5
+		}),
+			
+		new SkinData
+		({
+			name: 'little smol',
+			cost: 5
+		}),
+		
+		new SkinData
+		({
+			name: 'tiky angry',
+			cost: 5
+		}),
+
+		new SkinData
+		({
+			name: 'tiky hell',
+			cost: 5
+		}),
+
+		new SkinData
+		({
+			name: 'tiky ex',
+			cost: 5
+		}),
+
+	
+		new SkinData
+		({
+			name: 'sussy',
+			cost: 5
+		})
+	
+
 
 		
 	];
@@ -231,38 +290,38 @@ class SkinManager
 			case 'aberration':
 				skin = new AberrationSkin('aberration');
 
-			case 'circle-classic':
-				skin = new CircleClassicSkin('circle-classic');
+			case 'circle_classic':
+				skin = new CircleClassicSkin('circle_classic');
 
-			case 'circleglow':
-				skin = new CircleGlowSkin('circleglow');
+			case 'circle':
+				skin = new CircleSkin('circleglow');
 
-			case 'ae_dark':
-				skin = new DarkSkin('ae_dark');
+			case 'dark':
+				skin = new DarkSkin('dark');
 
-			case 'ae_freezing':
-				skin = new AEFreezingSkin('ae_freezing');
+			case 'freezing':
+				skin = new AEFreezingSkin('freezing');
 
-			case 'ae_glow_splash':
-				skin = new AEGlowSplashSkin('ae_glow_splash');
+			case 'glow_splash':
+				skin = new AEGlowSplashSkin('glow_splash');
 
-			case 'ae_hellbeats':
-				skin = new AEHellBeatsSkin('ae_hellbeats');
+			case 'hellbeats':
+				skin = new AEHellBeatsSkin('hellbeats');
 
-			case 'ae_low_contrast':
-				skin = new AELowContrastSkin('ae_low_contrast');
+			case 'low_contrast':
+				skin = new AELowContrastSkin('low_contrast');
 
 			case 'rectangle':
 				skin = new RectangleSkin('rectangle');
 
-			case 'ae_shadow':
-				skin = new AEShadowSkin('ae_shadow');
+			case 'shadow':
+				skin = new AEShadowSkin('shadow');
 
 			case 'shinning':
 				skin = new ShinningSkin('shinning');
 
-			case 'ae_shinning_metal':
-				skin = new AEShinningMetalSkin('ae_shinning_metal');
+			case 'shinning_metal':
+				skin = new AEShinningMetalSkin('shinning_metal');
 
 			case 'sm':
 				skin = new SMSkin('sm');
@@ -271,13 +330,13 @@ class SkinManager
 				skin = new SoftBrightSkin('soft_bright');
 
 			case 'synthwave':
-				skin = new SynthwaveSkin('synthwave');
+				skin = new AESynthwaveSkin('synthwave');
 
-			case 'ae_transparent':
-				skin = new AETransparentSkin('ae_transparent');
+			case 'transparent':
+				skin = new AETransparentSkin('transparent');
 
-			case 'ae_triangle':
-				skin = new AETriangleSkin('ae_triangle');
+			case 'triangle':
+				skin = new AETriangleSkin('triangle');
 
 			case 'variant':
 				skin = new VariantSkin('variant');
@@ -294,10 +353,7 @@ class SkinManager
 			case 'chasm':
 				skin = new ChasmSkin('chasm');
 
-			case 'circle_classic':
-				skin = new CircleClassicSkin('circle_classic');
-
-			case 'circle':
+			case 'circle_glow':
 				skin = new CircleSkin('circle');
 
 			case 'garcello':
@@ -324,6 +380,29 @@ class SkinManager
 
 			case 'pixel':
 				skin = new PixelSkin('pixel');
+
+			case 'ng':
+				skin = new NGSkin('ng');
+
+			case 'sadness':
+				skin = new SadnessSkin();
+
+			case 'little smol':
+				skin = new LittleSmolSkin();
+
+			case 'tiky angry':
+				skin = new TikyAngrySkin();
+
+			case 'tiky hell':
+				skin = new TikyBigSkin();
+
+			case 'tiky ex':
+				skin = new TikyBlackSkin();
+
+			case 'sussy':
+				skin = new SussySkin();
+
+
 		
 		}
 

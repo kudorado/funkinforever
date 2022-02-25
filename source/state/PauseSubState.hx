@@ -46,8 +46,8 @@ class PauseSubState extends MusicBeatSubstate
 
 		allowChangeDiff = !GameState.isStoryMode || (GameState.isStoryMode && GameState.storyCompleted);
 
-		if (GameState.isStoryMode)
-			menuItems = ['Resume', 'Restart Song', 'Exit to menu'];
+		// if (GameState.isStoryMode)
+			// menuItems = ['Resume', 'Restart Song', 'Exit to menu'];
 
 		//recall pause music shit, idunno why
 		GameState.instance.pauseGame();

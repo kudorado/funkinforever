@@ -8,6 +8,6 @@ class HellBeatsSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{
-		return Paths.getSparrowAtlas('note_skins/notes_itzdarkart/hellbeats', 'mods');
+		return Paths.getSparrowAtlas('note_skins/notes_aetherlynx/hellbeats', 'mods');
 	}
 }

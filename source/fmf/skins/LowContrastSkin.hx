@@ -8,6 +8,6 @@ class LowContrastSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{
-		return Paths.getSparrowAtlas('note_skins/notes_itzdarkart/low_contrast', 'mods');
+		return Paths.getSparrowAtlas('note_skins/notes_aetherlynx/low_contrast', 'mods');
 	}
 }

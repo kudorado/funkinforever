@@ -212,7 +212,15 @@ class Paths
 
 	inline static public function getSparrowAtlas(key:String, ?library:String)
 	{
-		return FlxAtlasFrames.fromSparrow(image(key, library), file('images/$key.xml', library));
+
+		var daFile = file('images/$key.xml', library);
+		//hard code shit
+		if (key.contains('notes_itzdarkart'))
+		{	
+			daFile = file('images/note_skins/notes_itzdarkart/holyshit.xml', library);
+		}
+
+		return FlxAtlasFrames.fromSparrow(image(key, library), daFile);
 	}
 
 	inline static public function getPackerAtlas(key:String, ?library:String)

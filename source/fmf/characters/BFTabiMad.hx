@@ -35,8 +35,8 @@ class BFTabiMad extends BFTabi
 
 		playAnim('idle');
 
-		this.scale.x = 2;
-		this.scale.y = 2;
+		this.scale.x = 1;
+		this.scale.y = 1;
 	}
 	
 	

@@ -8,6 +8,6 @@ class FreezingSkin extends Skin
 {
 	override function getSkinTex():FlxAtlasFrames
 	{
-		return Paths.getSparrowAtlas('note_skins/notes_itzdarkart/freezing', 'mods');
+		return Paths.getSparrowAtlas('note_skins/notes_aetherlynx/freezing', 'mods');
 	}
 }
