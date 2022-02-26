@@ -305,12 +305,12 @@ class Mobilecontrols extends FlxSpriteGroup
 
 	}
 
-	override public function update(elapsed:Float) {
+	override public function update(elapsed:Float)
+	{
 		group.update(elapsed);
 
-		if (moves)
-			updateMotion(elapsed);
-
+		// if (moves)
+			// updateMotion(elapsed);
 
 		UP = controls.UP;
 		RIGHT = controls.RIGHT;

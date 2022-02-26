@@ -153,7 +153,6 @@ class VictorySubState extends MusicBeatSubstate
         var shitCam = new FlxCamera();
 		shitCam.bgColor.alpha = 0;
 		FlxG.cameras.add(shitCam);
-
         Controller._pad.cameras = [shitCam];
 
     }

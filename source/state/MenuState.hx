@@ -2,7 +2,7 @@ package state;
 import reactor.*;
 import ui.*;
 
-
+import flixel.FlxCamera;
 import extension.admob.AdMob;
 import ui.Controller;
 import flixel.FlxG;
@@ -141,22 +141,22 @@ class MenuState extends MusicBeatState
 		// 	Controller.setKeyboardScheme(KeyboardScheme.Solo, true);
 		// else
 
-		controls.setKeyboardScheme(KeyboardScheme.Duo(true), true);
+		// controls.setKeyboardScheme(KeyboardScheme.Duo(true), true);
+
 		changeItem();
 
-		Controller.init(this, UP_DOWN, A);
 		super.create();
-
 		LoadingState.isAlertVisible = false;
-
 		// Debugger.create(this, camera);
 
 		AdMob.showBanner();
-
-
 		#if mobile
 		FlxG.mouse.visible = false;
 		#end
+
+		Controller.init(this, UP_DOWN, A, true);
+
+
 	}
 
 	var selectedSomethin:Bool = false;

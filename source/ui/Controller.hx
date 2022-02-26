@@ -4,14 +4,15 @@ import flixel.FlxG;
 import flixel.group.FlxGroup;
 import ui.FlxVirtualPad;
 import Controls.KeyboardScheme;
+import flixel.FlxCamera;
 
 class Controller
 {
 	static var controls:Controls;
     public static var _pad:FlxVirtualPad;
+	public static var camera:FlxCamera;
 
-
-	public static function init(group:FlxGroup, ?DPad:FlxDPadMode, ?Action:FlxActionMode)
+	public static function init(group:FlxGroup, ?DPad:FlxDPadMode, ?Action:FlxActionMode, createNewCamera:Bool = false)
 	{
         if(controls == null) //create controls one time only!
 			controls = PlayerSettings.player1.controls;
@@ -23,7 +24,9 @@ class Controller
             _pad = null;
 
         }
+
 		_pad = new FlxVirtualPad(DPad, Action);
+
 
 		//disable mobile control first
 		_pad.alpha = 0;
@@ -45,9 +48,14 @@ class Controller
 		_pad.alpha = daAlpha;
 		#end
 		#end
-
-
 		group.add(_pad);
+		if (createNewCamera)
+		{
+			camera = new FlxCamera();
+			camera.bgColor.alpha = 0;
+			FlxG.cameras.add(camera);
+			_pad.cameras = [camera];
+		}
     }
 
 	public function destroy()

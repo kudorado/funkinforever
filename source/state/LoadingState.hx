@@ -306,9 +306,10 @@ class LoadingState extends MusicBeatState
 		msgText.text = message;
         msgText.screenCenter();
 
+	
 		if (alertCam == null)
 		{
-			alertCam = new FlxCamera();
+			var alertCam = new FlxCamera();
 			alertCam.bgColor.alpha = 0;
 			FlxG.cameras.add(alertCam);
 		}
@@ -326,7 +327,7 @@ class LoadingState extends MusicBeatState
 		FlxTween.tween(msgText, {alpha: 1}, 0.25, {startDelay: 0.25});
 
 
-		new FlxTimer().start(2, function(tmr:FlxTimer)
+		new FlxTimer().start(2.5, function(tmr:FlxTimer)
 		{
 			FlxTween.tween(fuckshit, {alpha: 0}, 0.5, {startDelay: 0.25});
 			FlxTween.tween(msgText, {alpha: 0}, 0.5, {});

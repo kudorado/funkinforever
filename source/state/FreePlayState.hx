@@ -78,7 +78,9 @@ class FreePlayState extends MusicBeatState
 	
 	var totalSong:Int;
 
-	var alertCam:FlxCamera;
+	var alertCam(get, never):FlxCamera;
+	inline function get_alertCam():FlxCamera
+		return Controller.camera;
 	
 	function loadWeekBG(curWeek:Int)
 	{
@@ -365,7 +367,6 @@ class FreePlayState extends MusicBeatState
 
 		AdMob.hideBanner();
 
-		Controller.init(this, FULL, A_B);
 		LoadingState.createBlackFadeOut(this);
 
 		AdMob.onInterstitialEvent = onRewarded;
@@ -377,9 +378,10 @@ class FreePlayState extends MusicBeatState
 
 		LoadingState.isAlertVisible = false;
 		super.create();
-		alertCam = new FlxCamera();
-		alertCam.bgColor.alpha = 0;
-		FlxG.cameras.add(alertCam);
+
+		Controller.init(this, FULL, A_B, true);
+	
+
 	}
 
 	function updateScore()
@@ -457,8 +459,9 @@ class FreePlayState extends MusicBeatState
 			var isUnlocked = data.get(songs[curSelected].songName);
 			var daLocked = prevWeek >= 0 && !StoryState.weekUnlocked[prevWeek];
 
-			isUnlocked = true;
-			daLocked = false;
+			//ohh my gosh
+			// isUnlocked = true;
+			// daLocked = false;
 			
 			if (isUnlocked)
 			{
@@ -492,11 +495,11 @@ class FreePlayState extends MusicBeatState
 			else
 			{
 				trace('week locked dude, try unlock previous week 1st');
-				LoadingState.showAlert(this, "Week locked, please unlock previous week first!", alertCam);
+				LoadingState.showAlert(this, "Week locked, unlock previous week first!", alertCam);
 			
 				#if !mobile
 				// #if debug
-				playSong();
+				// playSong();
 				// #end
 				#end
 

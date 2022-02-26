@@ -321,13 +321,12 @@ class SelectionState extends MusicBeatState
 		changeSelection(0);
 		changeItem(0);
 
-		
-		Controller.init(this, FULL, A_B);
-
         AdMob.onInterstitialEvent = onRewarded;
-		
-		super.create();
 		LoadingState.isAlertVisible = false;
+		super.create();
+		Controller.init(this, FULL, A_B, true);
+
+
 	}
 
 	function loadWeekBG(curSelection:Int)

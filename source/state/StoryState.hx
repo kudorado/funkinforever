@@ -83,8 +83,11 @@ class StoryState extends MusicBeatState
 	var baseSong:BaseSong;
 	
 	var yellowBG:FlxSprite;
-	var alertCam:FlxCamera;
 
+	var alertCam(get, never):FlxCamera;
+	inline function get_alertCam():FlxCamera
+		return Controller.camera;
+	
 	override function create()
 	{
 
@@ -247,7 +250,6 @@ class StoryState extends MusicBeatState
 
 		//@notrace("Line 165");
 
-		Controller.init(this, FULL, A_B);
 
 
 		LoadingState.clearCachedSong();
@@ -257,9 +259,9 @@ class StoryState extends MusicBeatState
 		changeWeek(0);
 		
 		super.create();
-		alertCam = new FlxCamera();
-		alertCam.bgColor.alpha = 0;
-		FlxG.cameras.add(alertCam);
+
+		
+		Controller.init(this, FULL, A_B, true);
 
 	}
 
@@ -275,6 +277,10 @@ class StoryState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+		super.update(elapsed);
+		if (LoadingState.isAlertVisible)
+			return;
+
 		// scoreText.setFormat('VCR OSD Mono', 32);
 		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, 0.5));
 
@@ -335,7 +341,6 @@ class StoryState extends MusicBeatState
 			FlxG.switchState(new MenuState());
 		}
 
-		super.update(elapsed);
 	}
 
 	var movedBack:Bool = false;
