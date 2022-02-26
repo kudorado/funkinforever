@@ -14,7 +14,7 @@ class BFTabi extends Boyfriend
 
 	public override function getTex():Void
 	{
-		var tex = Paths.getSparrowAtlas('pc/bf/tabi/BOYFRIEND_TABI', 'mods');
+		var tex = Paths.getSparrowAtlas('pc/bf/BOYFRIEND_TABI', 'mods');
 		frames = tex;
 	}
 

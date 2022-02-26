@@ -130,7 +130,7 @@ class Item extends FlxSpriteGroup
 		video.setGraphicSize(Std.int(video.width * 0.35));
 		video.antialiasing = true;
 		add(video);
-
+		
 		var unlockedTime:Int = getUnlockedTime();
 		var cost:Int = getItemData().cost;
 

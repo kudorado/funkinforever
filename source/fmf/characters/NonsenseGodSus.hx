@@ -12,7 +12,7 @@ class NonsenseGodSus extends Boyfriend
 	
 	override function getTex()
 	{
-		var tex = Paths.getSparrowAtlas('pc_updated/nonsense_god', 'mods');
+		var tex = Paths.getSparrowAtlas('pc_updated/nonsense/nonsense_god', 'mods');
 		frames = tex;
 	}
 

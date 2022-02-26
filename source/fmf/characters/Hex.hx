@@ -22,7 +22,6 @@ class Hex extends Boyfriend
 
 		frames = tex;
 	}
-	
 
 	// create animation for BF
 	public override function createAnimations():Void
