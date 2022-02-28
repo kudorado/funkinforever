@@ -4,11 +4,12 @@ import state.*;
 import ui.*;
 import reactor.*;
 import selection.*;
+import fmf.songs.*;
 
+import flixel.group.FlxGroup;
 import flixel.FlxCamera;
 import flixel.graphics.frames.FlxAtlasFrames;
 import extension.admob.AdMob;
-import fmf.songs.*;
 import ui.FlxVirtualPad.FlxActionMode;
 import ui.FlxVirtualPad.FlxDPadMode;
 import ui.Controller;
@@ -51,6 +52,7 @@ class FreePlayState extends MusicBeatState
 	var intendedScore:Int = 0;
 
 	private var grpSongs:FlxTypedGroup<AlphabetShit>;
+
 	private var curPlaying:Bool = false;
 
 	private var iconArray:Array<Icon> = [];
@@ -67,7 +69,8 @@ class FreePlayState extends MusicBeatState
 		return value;
 	}
 
-	
+
+	var camGame:FlxCamera;
 	
 	private var totalWeek:Int;
 
@@ -151,6 +154,8 @@ class FreePlayState extends MusicBeatState
 	{
 		removeOldWeek();
 
+		remove(this);
+
 		var i = SongManager.songs[curWeek];
 		var wweekSongs:Array<String> = i.songList;
 		var firstSong:Bool = true;
@@ -197,7 +202,6 @@ class FreePlayState extends MusicBeatState
 			{
 				// icon.loadGraphic(Paths.image('note_effects/fire'  + '/shit', 'mods'), true, 256, 256);
 				icon.animation.add('hit', getArray(63), 90, true);
-				
 				icon.frames = getSkinTex();
 
 				if (i != 0)
@@ -237,8 +241,14 @@ class FreePlayState extends MusicBeatState
 			add(icon);
 			add(videoIcon);
 			add(lockIcon);
-
 			loadWeekBG(curWeek);
+
+			// videoArray.cameras = [camGame];
+			// lockArray.cameras = [camGame];
+			// iconArray.cameras = [camGame];
+			grpSongs.cameras = [camGame];
+
+
 			
 		}
 
@@ -265,6 +275,7 @@ class FreePlayState extends MusicBeatState
 		// }
 
 		add(bg);
+
 
 	
 		var pX:Float = 16;
@@ -308,6 +319,11 @@ class FreePlayState extends MusicBeatState
 
 		selector.size = 40;
 		selector.text = ">";
+
+		bg.cameras = [camGame];
+		scoreBG.cameras = [camGame];
+		diffText.cameras = [camGame];
+		selector.cameras = [camGame];
 	}
 
 
@@ -321,6 +337,10 @@ class FreePlayState extends MusicBeatState
 			var s = i.songList.length;
 			totalSong += s;
 		}
+
+		camGame = new FlxCamera();
+		FlxG.cameras.reset(camGame);
+		FlxCamera.defaultCameras = [camGame];
 
 		loadBG();
 		
@@ -344,7 +364,6 @@ class FreePlayState extends MusicBeatState
 		// add(selector);
 
 		var swag:Alphabet = new Alphabet(1, 0, "swag");
-
 		// JUST DOIN THIS SHIT FOR TESTING!!!
 		/* 
 			var md:String = Markdown.markdownToHtml(Assets.getText('CHANGELOG.md'));
@@ -362,8 +381,9 @@ class FreePlayState extends MusicBeatState
 			//@notrace(md);
 		 */
 
-		 changeSelection(0);
-		 changeDiff(diffText, 0, updateScore);
+
+		changeSelection(0);
+		changeDiff(diffText, 0, updateScore);
 
 		AdMob.hideBanner();
 
@@ -374,12 +394,11 @@ class FreePlayState extends MusicBeatState
 		LoadingState.clearCachedSong();
 
 		// Debugger.create(this, camera);
-
-
 		LoadingState.isAlertVisible = false;
 		super.create();
 
 		Controller.init(this, FULL, A_B, true);
+
 	
 
 	}
@@ -480,10 +499,10 @@ class FreePlayState extends MusicBeatState
 					LoadingState.showAlert(this, 'NO ADS AVAILABLE!', alertCam);
 			
 				#if !mobile
-				// #if debug
-				playSong();
-				// onRewarded('shit');
-				// #end
+				#if debug
+				// playSong();
+				onRewarded('shit');
+				#end
 				#end
 				// showVideoSuccess = true;
 				// 	// #end
@@ -498,9 +517,9 @@ class FreePlayState extends MusicBeatState
 				LoadingState.showAlert(this, "Week locked, unlock previous week first!", alertCam);
 			
 				#if !mobile
-				// #if debug
-				// playSong();
-				// #end
+				#if debug
+				playSong();
+				#end
 				#end
 
 			}

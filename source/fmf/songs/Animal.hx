@@ -31,6 +31,8 @@ class Animal extends SongPlayer
         var bg1:FlxSprite = new FlxSprite(0, 542).loadGraphic(Paths.image('bg/annie/christmas/evilSnow', 'mods'));
 		bg1.antialiasing = true;
 		gameState.add(bg1);
+
+		gameState.defaultCamZoom = 0.925;
 	}
 
 	override function createDadAnimations():Void
@@ -54,8 +56,8 @@ class Animal extends SongPlayer
 		dad.addOffset("singLEFT", -41, 0);
 		dad.addOffset("singDOWN", -37, -90);
 
-		dad.x = 50;
-		dad.y = 195;
+		dad.x = 262;
+		dad.y = 35;
 		
 		dad.playAnim('idle');
 	
@@ -64,8 +66,8 @@ class Animal extends SongPlayer
 	override function createBFAnimationOffsets()
 	{
 		super.createBFAnimationOffsets();
-		bf.x += 412;
-		bf.y -= 117;
+		bf.x += 864 - 700;
+		bf.y += 333 - 425;
 	}
 
 	override function createGFAnimationOffsets()

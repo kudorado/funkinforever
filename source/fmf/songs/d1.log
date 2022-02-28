@@ -1,0 +1,1375 @@
+2022-02-27 20:42:41.741 17414-17761/? D/ConnectivityService: Adding iface wlan0 to network 114
+2022-02-27 20:42:41.755 17414-17761/? D/ConnectivityService: Setting DNS servers for network 114 to [/8.8.4.4, /203.162.4.191, /8.8.8.8]
+2022-02-27 20:42:41.756 17414-17761/? E/DnsManager: file path: /backup_hosts
+2022-02-27 20:42:41.756 17414-17761/? E/DnsManager: file does not exist
+2022-02-27 20:42:41.756 17414-17761/? D/DnsManager: sendDnsConfigurationForNetwork(114, [8.8.4.4, 203.162.4.191, 8.8.8.8], [Home], 1800, 25, 8, 64, 0, 0, , [])
+2022-02-27 20:42:41.771 17414-17761/? D/ConnectivityService: updateLinkProperties isCellular=false length=0
+2022-02-27 20:42:41.771 17414-17761/? D/ConnectivityService: oppo_sla:update the LinkProperties
+2022-02-27 20:42:41.772 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 202, CMD_LINK_PROPERTIES_CHANGED
+2022-02-27 20:42:41.772 17414-17761/? D/ConnectivityService: NetReassign [13 : null �? 114, 84 : null �? 114, 7 : null �? 114, 24 : null �? 114, 17 : null �? 114, 988 : null �? 114, 972 : null �? 114, 1014 : null �? 114, 15 : null �? 114, 225 : null �? 114, 12 : null �? 114, 1022 : null �? 114, 233 : null �? 114, 39 : null �? 114, 18 : null �? 114, 1017 : null �? 114, 1025 : null �? 114, 368 : null �? 114, 33 : null �? 114, 1012 : null �? 114, 990 : null �? 114, 1026 : null �? 114, 70 : null �? 114, 1 : null �? 114, 226 : null �? 114, 960 : null �? 114, 1023 : null �? 114]
+2022-02-27 20:42:41.772 17414-17714/? D/WifiClientModeImpl: Received signal strength thresholds: []
+2022-02-27 20:42:41.773 17414-17714/? E/WifiVendorHal: stopRssiMonitoring(l.2111) failed {.code = ERROR_NOT_AVAILABLE, .description = }
+2022-02-27 20:42:41.774 17121-17194/? E/NetlinkEvent: NetlinkEvent::FindParam(): Parameter 'INTERFACE' not found
+2022-02-27 20:42:41.774 17121-17194/? E/NetlinkEvent: NetlinkEvent::FindParam(): Parameter 'STATE' not found
+2022-02-27 20:42:41.774 17121-17194/? E/NetlinkEvent: NetlinkEvent::FindParam(): Parameter 'TIME_NS' not found
+2022-02-27 20:42:41.774 17121-17194/? E/NetlinkEvent: NetlinkEvent::FindParam(): Parameter 'UID' not found
+2022-02-27 20:42:41.780 17414-17761/? D/ConnectivityService: Switching to new default network: NetworkAgentInfo{ ni{[type: WIFI[], state: CONNECTED/CONNECTED, reason: (unspecified), extra: , failover: false, available: true, roaming: false]}  network{114}  nethandle{493031968781}  lp{{InterfaceName: wlan0 LinkAddresses: [ 192.168.1.5/24 ] DnsAddresses: [ /8.8.4.4,/203.162.4.191,/8.8.8.8 ] Domains: Home MTU: 0 ServerAddress: /192.168.1.1 TcpBufferSizes: 524288,1048576,4525824,524288,1048576,4525824 Routes: [ fe80::/64 -> :: wlan0 mtu 0,192.168.1.0/24 -> 0.0.0.0 wlan0 mtu 0,0.0.0.0/0 -> 192.168.1.1 wlan0 mtu 0 ]}}  nc{[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED LinkUpBandwidth>=49000Kbps LinkDnBandwidth>=49000Kbps SignalStrength: -41 OwnerUid: 1000 SSID: "L3-29.02" RequestorUid: -1 RequestorPackageName: null]}  Score{79}  everValidated{false}  lastValidated{false}  created{true} lingering{false} explicitlySelected{true} acceptUnvalidated{false} everCaptivePortalDetected{false} lastCaptivePortalDetected{false} partialConnectivity{false} acceptPartialConnectivity{false} clat{mBaseIface: null, mIface: null, mState: IDLE} }
+2022-02-27 20:42:41.781 17414-17737/? D/OplusSlaManager: notifyDefaultNetwork -> 0, result=true
+2022-02-27 20:42:41.800 17951-18572/? D/WifiStatusTracker: handleBroadcast: shouldUpdateLabel: true
+2022-02-27 20:42:41.811 17414-18059/? D/NetworkTimeUpdateService: New default network 114; checking time.
+2022-02-27 20:42:41.811 17414-18059/? D/OplusNewNetworkTimeUpdateServiceFeature: isNeedSkipPollNetworkTime
+2022-02-27 20:42:41.813 17414-17502/? W/KernelWakelockReader: readKernelWakelockStats old read cost 10
+2022-02-27 20:42:41.815 18080-18260/? D/UpstreamNetworkMonitor: New default Internet network: 114
+2022-02-27 20:42:41.816 18121-21750/? D/QCNEJ/DefaultNetworkInfoRelay: Default network available: 114
+2022-02-27 20:42:41.818 17414-17745/? D/OplusWifiNetworkFactory2: releaseNetworkFor mGenericConnectionReqCount = 0
+2022-02-27 20:42:41.819 17414-17780/? D/StatusReceiver: LocalNetworkCallback.onAvailable114
+2022-02-27 20:42:41.819 17414-17780/? D/LMServiceThreadHandler: onWifiStatusChange:onAvailable
+2022-02-27 20:42:41.819 17414-17647/? D/LMServiceThreadHandler: wifi CONNECTED.
+2022-02-27 20:42:41.819 17414-18059/? V/AlarmManager: set(PendingIntent{d20a04f: PendingIntentRecord{3d683dc android broadcastIntent}}) : type=3 when=238282156whenElapsed238282156maxWhen =303082156 win=64800000 interval=0 flags=0x8 pkg = android
+2022-02-27 20:42:41.819 17414-17647/? D/LMServiceThreadHandler: SCREEN_ON wifi power save remainTimeout: -31044845
+2022-02-27 20:42:41.822 32644-569/? W/network_AndroidNetworkMonitor: wifi onAvailable 114
+2022-02-27 20:42:41.824 18121-21750/? D/QCNEJ/NativeHalConnector: -> SND notifyDefaultNetworkChanged(1)
+2022-02-27 20:42:41.827 32665-557/? W/network_AndroidNetworkMonitor: wifi onAvailable 114
+2022-02-27 20:42:41.827 17414-17761/? D/ConnectivityService: Sending CONNECTED broadcast for type 1 [114 WIFI] isDefaultNetwork=true
+2022-02-27 20:42:41.827 31316-31339/? E/WeatherS_OppoUtils: startAutoGetLocalCity bg location permission:false
+2022-02-27 20:42:41.827 31316-31339/? D/WeatherS_PoolManager:  thread: Thread[pool-1-thread-8,5,main]
+2022-02-27 20:42:41.829 31316-31339/? E/WeatherS_OppoUtils: startAutoGetLocalCity has no locate city
+2022-02-27 20:42:41.830 18121-21750/? D/QCNEJ/WlanStaInfoRelay: network available: 114
+2022-02-27 20:42:41.834 18121-21750/? D/QCNEJ/NativeHalConnector: -> SND notifyWifiAvailable(v4Connected = truev6Connected = , false, isAndroidValidated = false)
+2022-02-27 20:42:41.837 7649-7649/? V/ironSourceSDK: INTERNAL: Network Availability Changed To: true
+2022-02-27 20:42:41.838 18121-21750/? D/QCNEJ/NativeHalConnector: -> SND notifyWifiAvailable(v4Connected = truev6Connected = , false, isAndroidValidated = false)
+2022-02-27 20:42:41.840 17414-17761/? D/OppoGatewayConflictResolver: Restore gw conflict resolver to netid:114
+2022-02-27 20:42:41.840 17414-17761/? D/OppoConnectivityService: Send OppoArpConstants.CMD_LINK_PROPERTIES_CHANGED
+2022-02-27 20:42:41.840 17414-17761/? D/OppoConnectivityService: wlan0 will use the old GatewayConflict StateMachine or not a proper interface
+2022-02-27 20:42:41.843 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 202, CMD_LINK_PROPERTIES_CHANGED
+2022-02-27 20:42:41.843 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 202, CMD_LINK_PROPERTIES_CHANGED
+2022-02-27 20:42:41.845 17414-18043/? D/OplusNlpProxy: receive broadcast intent, action: android.net.conn.CONNECTIVITY_CHANGE
+2022-02-27 20:42:41.846 17414-17780/? W/OplusNetworkStackService: setOplusNetworkStackConfig:0,0,0,0,0,0,0,0,0,0
+2022-02-27 20:42:41.846 17414-17414/? D/OppoBaseAlarmManagerService: mAlarmUpdateCallbacks.netStateChanged, stateChanged:true
+2022-02-27 20:42:41.847 17414-17414/? D/OplusSlaManager: Received broadcast:android.net.conn.CONNECTIVITY_CHANGE
+2022-02-27 20:42:41.846 17874-17936/? D/OppoCertificateVerifier: MSG_TRIGGER_REMOTE_VERIFICATION param.resetTryCount: true
+2022-02-27 20:42:41.848 17414-17414/? W/OplusDataLimitService: onReceive CONNECTIVITY_ACTION! flushAllLimitRules.mConnChangeCount = 28
+2022-02-27 20:42:41.848 17874-17937/? D/OppoCertificateVerifier: getServerTimeStamp mBootTime ->-1
+2022-02-27 20:42:41.848 17874-17937/? D/OppoCertificateVerifier: getServerTimeStampFromServer call is null
+2022-02-27 20:42:41.848 17874-17937/? D/OppoCertificateVerifier: getServerTimeStamp serverTime ->0
+2022-02-27 20:42:41.849 17414-17414/? D/OppoTrafficMonitor: onReceive android.net.conn.CONNECTIVITY_CHANGE
+2022-02-27 20:42:41.849 17414-17414/? D/OppoTrafficMonitor: isWifiConnected=true
+2022-02-27 20:42:41.849 17414-17414/? D/OppoTrafficMonitor: isMobileConnected=false
+2022-02-27 20:42:41.849 17414-17414/? D/OppoTrafficMonitor: getTotalTrafficRxTxBytes [4149574503,114027761]
+2022-02-27 20:42:41.849 17414-17414/? D/OppoTrafficMonitor: getTotalMobileTrafficRxTxBytes [0,0]
+2022-02-27 20:42:41.849 17414-17414/? D/OppoTrafficMonitor: mCurrentNetwork=1
+2022-02-27 20:42:41.849 17414-17414/? D/OppoPowerMonitor: Receive broadcast android.net.conn.CONNECTIVITY_CHANGE
+2022-02-27 20:42:41.849 17414-17480/? D/OppoTrafficMonitor: updateTrafficStats  netType=1 mMonitoring=true
+2022-02-27 20:42:41.850 17414-17414/? D/NetworkDiagnostics: mCurrentNetWorkType=1 mLastNetWorkType=-1 mScreenOff=true
+2022-02-27 20:42:41.850 17414-17414/? D/NetworkDiagnostics: notifyNetWorkConnected
+2022-02-27 20:42:41.851 17414-17414/? D/OppoBaseAlarmManagerService: netStateChangedLocked, onDeliverPendingNonWakeupAlarms:false
+2022-02-27 20:42:41.853 18273-18687/? I/ModemAciService: ND changed:0
+2022-02-27 20:42:41.855 30353-30428/? D/BaseJobBuilder: set process for client: com.haokan.pictorial
+2022-02-27 20:42:41.857 17414-8134/? I/DpmTcmClient: RegisterTcmMonitor from: $Proxy1
+2022-02-27 20:42:41.858 19666-21212/? E/OplusFeatureCache: invalid oplus feature oplus.software.carrier.ust_unify_device
+2022-02-27 20:42:41.858 19666-21212/? E/OplusFeatureCache: invalid oplus feature  oplus.software.carrier.ust_usku_device
+2022-02-27 20:42:41.862 18609-18609/? D/CustomLogManagerService: onReceive android.net.conn.CONNECTIVITY_CHANGE
+2022-02-27 20:42:41.863 26384-26465/? I/DeviceStatusMonitor: DeviceStatusMonitor.handleBroadcast():123 onReceive() : Action = android.net.conn.CONNECTIVITY_CHANGE
+2022-02-27 20:42:41.864 21790-21790/? D/CustomScanStrategy: dont startWatchWIFITraffic
+2022-02-27 20:42:41.866 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Reply ARP sender MAC: a0:**:**:**:8d:a8 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:41.866 17414-20930/? D/OplusIpConflictDetector: sendGatewayMacAddress ifaceName=wlan0 gatewayMac=a0:**:**:**:8d:a8 gatewayIp=192.168.1.***
+2022-02-27 20:42:41.871 17414-18178/? V/AlarmManager: set(null) : type=3 when=151892157whenElapsed151892157maxWhen =151892157 win=0 interval=0 flags=0x0 pkg = android
+2022-02-27 20:42:41.873 30568-30568/? I/SetupWizard: [axp] Checking Android ID
+2022-02-27 20:42:41.874 30568-30568/? I/SetupWizard: [axp] Last checkin fingerprint=realme/RMX3491T2/RED8C1L1:11/RKQ1.211019.001/1641490025076:user/release-keys
+2022-02-27 20:42:41.874 30568-30568/? I/SetupWizard: [axp] User unlocked, initiate a checkin task java.util.concurrent.CompletableFuture@d48ba02[Not completed, 1 dependents]
+2022-02-27 20:42:41.875 30568-30568/? I/SetupWizard: [axp] Skip it. Due to checkin already done
+2022-02-27 20:42:41.875 3933-3933/? I/Finsky: [2] kff.T(7): Installer: found apps to install. isMultiUserMode=false, apps=[]
+2022-02-27 20:42:41.875 30568-30568/? I/SetupWizard: [axp] Checkin complete
+2022-02-27 20:42:41.878 31646-22735/? W/OplusExSystemServiceHelper: checkOplusExSystemService intent getComponent is null
+2022-02-27 20:42:41.879 17414-20930/? D/OplusIpConflictDetector: Send CMD_EVENT_CONFLICT
+2022-02-27 20:42:41.879 26384-26465/? I/DeviceStatusMonitor: DeviceStatusMonitor.notifyIfNetworkChanged():180 notifyIfNetworkChanged: newState = NON_METERED, airplaneModeOn = false, notifyAnyway = false
+2022-02-27 20:42:41.879 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 204, CMD_EVENT_CONFLICT
+2022-02-27 20:42:41.881 26384-26384/? I/NetworkInfoNotification: NetworkInfoNotification$Listener.onReceive():93 onNetworkAvailable: networkState = NON_METERED, isAirplaneModeOn = false
+2022-02-27 20:42:41.883 19125-21704/? I/NearbyDiscovery: FastPairHandler: Received action android.net.conn.CONNECTIVITY_CHANGE [CONTEXT service_id=49 ]
+2022-02-27 20:42:41.883 21790-22343/? I/BtGatt.ScanManager: msg.what = 6
+2022-02-27 20:42:41.887 26384-8152/? I/NetworkInfoNotification: NetworkInfoNotification$Listener.onReceive():93 onNetworkAvailable: networkState = NON_METERED, isAirplaneModeOn = false
+2022-02-27 20:42:41.888 17414-20302/? V/AlarmManager: set(PendingIntent{d82a03e: PendingIntentRecord{631e83f com.heytap.mcs startService}}) : type=2 when=1645969646885whenElapsed1645969646885maxWhen =1645969656885 win=10000 interval=0 flags=0x8 pkg = com.heytap.mcs
+2022-02-27 20:42:41.888 26384-8153/? I/NetworkInfoNotification: NetworkInfoNotification$Listener.onReceive():93 onNetworkAvailable: networkState = NON_METERED, isAirplaneModeOn = false
+2022-02-27 20:42:41.895 7649-7743/? V/ironSourceSDK: API: IronSourceObject setIronSourceUserId - userId = e8e241e5-fa67-4343-8889-45e6342e7653, isFromPublisher = false
+2022-02-27 20:42:41.902 17414-17480/? D/OppoTrafficMonitor: getEntireNetWorkConnedAveCurrent: 1.0 / 2089477
+2022-02-27 20:42:41.903 17414-17480/? D/OppoTrafficMonitor: getEntireNetWorkDisconnedAveCurrent: 0.0 / 356246
+2022-02-27 20:42:41.903 32644-8157/? W/UserAppManager: has init
+2022-02-27 20:42:41.903 32644-8157/? W/UserAppManager:  user apps: 60
+2022-02-27 20:42:41.904 31646-29565/? W/OplusExSystemServiceHelper: checkOplusExSystemService intent getComponent is null
+2022-02-27 20:42:41.906 31646-13123/? I/PinnedContentDownloader: Finished downloading pinned content.
+2022-02-27 20:42:41.908 19125-5529/? W/NetworkScheduler: Error inserting flex_time=3337000 job_id=-1 period=6675000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=220257000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1645969361904 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0, error message: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE) [CONTEXT service_id=218 ]
+2022-02-27 20:42:41.911 32644-8160/? W/SyncManager: sync start
+2022-02-27 20:42:41.912 32644-8160/? W/SyncManager: allow: true
+2022-02-27 20:42:41.915 21790-22343/? I/BtGatt.ScanManager: msg.what = 6
+2022-02-27 20:42:41.920 7649-7743/? I/ironSourceSDK: INTERNAL: ServerURL getCPVProvidersURL - parameters for url: platform=android&applicationKey=f990ca51&applicationUserId=e8e241e5-fa67-4343-8889-45e6342e7653&sdkVersion=7.1.6&advId=e8e241e5-fa67-4343-8889-45e6342e7653&appVer=9.8&osVer=30&devMake=realme&devModel=RMX3491&fs=0&connType=wifi&browserUserAgent=Mozilla%2F5.0+%28Linux%3B+Android+11%3B+RMX3491+Build%2FRKQ1.211019.001%3B+wv%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Version%2F4.0+Chrome%2F98.0.4758.101+Mobile+Safari%2F537.36&deviceLang=vi-VN&bundleId=com.music.festival.battle&mcc=0&mnc=0&icc=vn&tz=Asia%2FHo_Chi_Minh&tzOff=-420&auid=ff25df94-1035-49a5-927c-d353f9b519f0
+2022-02-27 20:42:41.921 7649-7743/? I/DpmTcmClient: RegisterTcmMonitor from: $Proxy1
+2022-02-27 20:42:41.924 32644-8160/? W/SyncManager: sync baseUserApps: 60 request syncId: 81
+2022-02-27 20:42:41.924 32644-8160/? W/SyncManager: sync deleteApps: 0 request syncId: 81
+2022-02-27 20:42:41.934 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 203, CMD_ARP_PROBE
+2022-02-27 20:42:41.934 17414-20930/? D/OppoGatewayConflictResolver: update mHwAddr for wlan0 before send Arp probe
+2022-02-27 20:42:41.950 17414-20930/? D/OppoGatewayConflictResolver: Local Source ads:192.168.1.***
+2022-02-27 20:42:41.950 17414-20930/? D/OppoGatewayConflictResolver: send arp probe normal
+2022-02-27 20:42:41.969 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:41.973 19125-32730/? I/NetworkManagementSocketTagger: tagSocketFd(-1, 536871943, -1) failed with errno-9
+2022-02-27 20:42:41.973 18080-8136/? D/NetworkMonitor/114: PROBE_DNS connectivitycheck.gstatic.com 117ms OK 142.250.66.67
+2022-02-27 20:42:41.976 18080-8136/? I/DpmTcmClient: RegisterTcmMonitor from: $Proxy1
+2022-02-27 20:42:41.978 18080-8135/? D/NetworkMonitor/114: PROBE_DNS www.google.com 122ms OK 142.250.66.36
+2022-02-27 20:42:41.992 28766-28779/? W/om.heytap.clou: Reducing the number of considered missed Gc histogram windows from 302 to 100
+2022-02-27 20:42:42.013 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Reply ARP sender MAC: a0:**:**:**:8d:a8 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:42.014 19666-19692/? W/com.heytap.mcs: Reducing the number of considered missed Gc histogram windows from 174 to 100
+2022-02-27 20:42:42.015 17414-20930/? D/OplusIpConflictDetector: sendGatewayMacAddress ifaceName=wlan0 gatewayMac=a0:**:**:**:8d:a8 gatewayIp=192.168.1.***
+2022-02-27 20:42:42.016 17414-20930/? D/OplusIpConflictDetector: Send CMD_EVENT_CONFLICT
+2022-02-27 20:42:42.016 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 204, CMD_EVENT_CONFLICT
+2022-02-27 20:42:42.017 17414-17780/? W/OplusNetworkStackService: owedcard hasSpecialBehaviorInCellular = false ,on Available WIFI.
+2022-02-27 20:42:42.017 17414-17780/? W/OplusNetworkStackService: Network onAvailable114
+2022-02-27 20:42:42.034 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Request ARP sender MAC: 7e:**:**:**:82:13 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:42.034 17414-20930/? D/OplusIpConflictDetector: arp from self , ignore it
+2022-02-27 20:42:42.062 17414-20283/? W/OplusNetworkStackService: needQuickCheck mCurForegroundUid=99193, latencyMs=135
+2022-02-27 20:42:42.062 17414-8177/? I/DpmTcmClient: RegisterTcmMonitor from: $Proxy1
+2022-02-27 20:42:42.115 18080-8136/? D/NetworkMonitor/114: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 time=138ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Date=[Sun, 27 Feb 2022 13:42:42 GMT], X-Android-Received-Millis=[1645969362114], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1645969362054]}
+2022-02-27 20:42:42.225 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 203, CMD_ARP_PROBE
+2022-02-27 20:42:42.226 17414-20930/? D/OppoGatewayConflictResolver: update mHwAddr for wlan0 before send Arp probe
+2022-02-27 20:42:42.261 912-912/? D/ORMS_HAL: OrmsHalService write file /proc/sys/kernel/input_boost_enabled - 1.
+2022-02-27 20:42:42.263 17414-20930/? D/OppoGatewayConflictResolver: Local Source ads:192.168.1.***
+2022-02-27 20:42:42.263 17414-20930/? D/OppoGatewayConflictResolver: send arp probe normal
+2022-02-27 20:42:42.060 17414-17829/? I/chatty: uid=1000(system) DnsEventHandleT identical 7 lines
+2022-02-27 20:42:42.067 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:42.264 7649-7649/? D/ViewRootImpl: enqueueInputEventMotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=462.0, y[0]=880.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67469234, downTime=67469234, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:42.264 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=462.0, y[0]=880.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67469234, downTime=67469234, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:42.266 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=462.0, y[0]=880.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67469234, downTime=67469234, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:42.271 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:42.271 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:42.271 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:42.271 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:42.285 17414-17822/? W/OplusNetworkStackService: notifyScoreChange! type = 3,score=89
+2022-02-27 20:42:42.285 17414-17822/? E/OplusNetworkStackManager: callback len = 2
+2022-02-27 20:42:42.285 17414-17822/? D/WN_S: onNetworkQualityChange score= 89 , better= true
+2022-02-27 20:42:42.286 18320-18926/? E/OplusNetworkStackManager: callback len = 1
+2022-02-27 20:42:42.287 17414-17414/? W/OplusNetworkStackService: MSG_SHOW_TOAST:TotalScore=89,-DnsScore=135,TcpScore=90
+2022-02-27 20:42:42.288 817-817/? W/adbd: timeout expired while flushing socket, closing
+2022-02-27 20:42:42.290 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Reply ARP sender MAC: a0:**:**:**:8d:a8 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:42.291 17414-20930/? D/OplusIpConflictDetector: sendGatewayMacAddress ifaceName=wlan0 gatewayMac=a0:**:**:**:8d:a8 gatewayIp=192.168.1.***
+2022-02-27 20:42:42.294 17414-20930/? D/OplusIpConflictDetector: Send CMD_EVENT_CONFLICT
+2022-02-27 20:42:42.295 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 204, CMD_EVENT_CONFLICT
+2022-02-27 20:42:42.313 17414-18770/? V/AlarmManager: set(PendingIntent{cb92f87: PendingIntentRecord{2f655d4 com.google.android.gms/com.google.android.gms.gcm broadcastIntent}}) : type=2 when=153612650whenElapsed153612650maxWhen =153612650 win=0 interval=0 flags=0x8 pkg = com.google.android.gms
+2022-02-27 20:42:42.316 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=462.0, y[0]=880.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67469293, downTime=67469234, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:42.316 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=462.0, y[0]=880.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67469293, downTime=67469234, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:42.340 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Request ARP sender MAC: 7e:**:**:**:82:13 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:42.340 17414-20930/? D/OplusIpConflictDetector: arp from self , ignore it
+2022-02-27 20:42:42.402 17414-17543/? W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1705 com.oplus.util.OplusStatisticsImpl.startService:216 com.oplus.util.OplusStatisticsImpl.sendDataToDCS:192 com.oplus.util.OplusStatisticsImpl.onCommonSync:84 com.oplus.util.OplusStatisticsImpl$1.run:124 
+2022-02-27 20:42:42.403 18080-8135/? D/NetworkMonitor/114: PROBE_HTTPS https://www.google.com/generate_204 time=422ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Alt-Svc=[h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"], Connection=[close], Content-Length=[0], Date=[Sun, 27 Feb 2022 13:42:42 GMT], X-Android-Received-Millis=[1645969362400], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1645969362123]}
+2022-02-27 20:42:42.405 18080-8133/? D/NetworkMonitor/114: isCaptivePortal: isSuccessful()=true isPortal()=false RedirectUrl=null isPartialConnectivity()=false Time=554ms
+2022-02-27 20:42:42.408 18364-18455/? W/[0]DCS-MobileHelper: getContryCode slotid=0,type=1,code=null,result=
+2022-02-27 20:42:42.408 17414-17761/? D/ConnectivityService: EVENT_PROVISIONING_NOTIFICATION netId = 114 visible = false
+2022-02-27 20:42:42.408 18364-18455/? W/[0]DCS-MobileHelper: getContryCode slotid=1,type=1,code=null,result=
+2022-02-27 20:42:42.410 17414-18770/? D/ConnectivityService: notifyNetworkTestedWithExtras result : 1
+2022-02-27 20:42:42.410 17414-17761/? D/OppoAutoConCaptivePortalControl/114: triggerCaptiveResultBack testResult = 1
+2022-02-27 20:42:42.411 17414-17761/? D/OppoAutoConCaptivePortalControl/114: captive_portal map : {key_redirect_url=N/A, key_ssid="L10ccf1837d, key_is_exp=true, key_validate_result=VALID, key_probe_result=1, key_bssid=a0:**:**:**:8d:a9, key_network_type=PRIMARY_WIFI, key_old_probe_result=-1}
+2022-02-27 20:42:42.411 17414-17761/? D/ConnectivityService: [114 WIFI] validation passed
+2022-02-27 20:42:42.411 17414-17761/? D/ConnectivityService: wifi valid
+2022-02-27 20:42:42.412 17414-17543/? W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1705 com.oplus.util.OplusStatisticsImpl.startService:216 com.oplus.util.OplusStatisticsImpl.sendDataToDCS:192 com.oplus.util.OplusStatisticsImpl.onCommonSync:84 com.oplus.util.OplusStatisticsImpl$1.run:124 
+2022-02-27 20:42:42.412 17414-17761/? D/OplusWifiTransactionHelper: setNetworkCaptiveState:  pid=17414, uid=1000
+2022-02-27 20:42:42.416 18364-18455/? W/[0]DCS-MobileHelper: getContryCode slotid=0,type=1,code=null,result=
+2022-02-27 20:42:42.417 18364-18455/? W/[0]DCS-MobileHelper: getContryCode slotid=1,type=1,code=null,result=
+2022-02-27 20:42:42.428 17414-17761/? W/WifiConfigStore: No data stored for writing to file: /data/misc/apexdata/com.android.wifi/WifiConfigStoreSoftAp.xml
+2022-02-27 20:42:42.431 17414-17761/? W/WifiConfigStore: No data stored for writing to file: /data/misc_ce/0/apexdata/com.android.wifi/WifiConfigStoreNetworkSuggestions.xml
+2022-02-27 20:42:42.432 17414-17761/? D/WifiConfigStore: Writing to stores completed in 10 ms.
+2022-02-27 20:42:42.444 18121-21750/? D/QCNEJ/WlanStaInfoRelay: AndroidValidate from false to true
+2022-02-27 20:42:42.448 18121-21750/? D/QCNEJ/WlanStaInfoRelay: retrieveCountryCode:Location obtained from Telephony: vn
+2022-02-27 20:42:42.464 17414-17761/? D/OppoConnectivityService: wifi valid
+2022-02-27 20:42:42.474 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 203, CMD_ARP_PROBE
+2022-02-27 20:42:42.474 17414-20930/? D/OppoGatewayConflictResolver: update mHwAddr for wlan0 before send Arp probe
+2022-02-27 20:42:42.477 17414-17457/? I/GnssNetworkConnectivityHandler: updateNetworkState, state=CLOSED, connected=true, network=114, capabilities=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED LinkUpBandwidth>=49000Kbps LinkDnBandwidth>=49000Kbps SignalStrength: -41 OwnerUid: 1000 AdministratorUids: [] SSID: "L3-29.02" RequestorUid: -1 RequestorPackageName: null], apn: , availableNetworkCount: 1
+2022-02-27 20:42:42.481 1596-1636/? W/LocSvc_xtra2: updateXtraServers:400] XTRA server: https://path1.xtracloud.net/xtra3grcej.bin https://path2.xtracloud.net/xtra3grcej.bin https://path3.xtracloud.net/xtra3grcej.bin
+2022-02-27 20:42:42.481 17414-20283/? D/WifiMemoryStoreImpl: Set cluster G72b90087dc4cb15 for W49e5210a62bd0e93: SUCCESS
+2022-02-27 20:42:42.484 17414-17714/? V/AlarmManager: set(null) : type=2 when=151892821whenElapsed151892821maxWhen =151900321 win=7500 interval=0 flags=0x8 pkg = android
+2022-02-27 20:42:42.487 17414-17714/? I/WifiClientModeImpl: Default Gateway MAC address of a0:65:18:a4:8d:a9 from routes is : a0:65:18:a4:8d:a8
+2022-02-27 20:42:42.492 17414-20930/? D/OppoGatewayConflictResolver: Local Source ads:192.168.1.***
+2022-02-27 20:42:42.492 17414-20930/? D/OppoGatewayConflictResolver: send arp probe normal
+2022-02-27 20:42:42.496 17414-17714/? W/WifiConfigStore: No data stored for writing to file: /data/misc/apexdata/com.android.wifi/WifiConfigStoreSoftAp.xml
+2022-02-27 20:42:42.499 17414-17714/? W/WifiConfigStore: No data stored for writing to file: /data/misc_ce/0/apexdata/com.android.wifi/WifiConfigStoreNetworkSuggestions.xml
+2022-02-27 20:42:42.499 17414-17714/? D/WifiConfigStore: Writing to stores completed in 6 ms.
+2022-02-27 20:42:42.504 17414-17714/? D/WifiClientModeImpl: sws score= 79,mNetworkAgent =com.android.server.wifi.ClientModeImpl$WifiNetworkAgent@b2c7895
+2022-02-27 20:42:42.504 17414-17714/? D/WN_S: sendconnectstate
+2022-02-27 20:42:42.505 17414-17714/? E/WifiClientModeImpl: Error! unhandled message{ when=0 what=131493 target=com.android.wifi.x.com.android.internal.util.StateMachine$SmHandler }
+2022-02-27 20:42:42.508 17414-17761/? D/ConnectivityService: NetReassign [no changes]
+2022-02-27 20:42:42.522 7649-7649/? D/ViewRootImpl: enqueueInputEventMotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=386.0, y[0]=442.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67469499, downTime=67469499, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:42.522 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=386.0, y[0]=442.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67469499, downTime=67469499, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:42.522 912-912/? D/ORMS_HAL: OrmsHalService write file /proc/sys/kernel/input_boost_enabled - 1.
+2022-02-27 20:42:42.523 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=386.0, y[0]=442.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67469499, downTime=67469499, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:42.527 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:42.527 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:42.527 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:42.527 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:42.552 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Reply ARP sender MAC: a0:**:**:**:8d:a8 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:42.553 17414-20930/? D/OplusIpConflictDetector: sendGatewayMacAddress ifaceName=wlan0 gatewayMac=a0:**:**:**:8d:a8 gatewayIp=192.168.1.***
+2022-02-27 20:42:42.554 17414-20930/? D/OplusIpConflictDetector: Send CMD_EVENT_CONFLICT
+2022-02-27 20:42:42.555 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 204, CMD_EVENT_CONFLICT
+2022-02-27 20:42:42.577 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=386.0, y[0]=442.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67469554, downTime=67469499, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:42.577 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=386.0, y[0]=442.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67469554, downTime=67469499, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:42.585 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:42.589 17414-18770/? V/AlarmManager: set(PendingIntent{f7d0ce4: PendingIntentRecord{2f655d4 com.google.android.gms/com.google.android.gms.gcm broadcastIntent}}) : type=2 when=153612926whenElapsed153612926maxWhen =153612926 win=0 interval=0 flags=0x8 pkg = com.google.android.gms
+2022-02-27 20:42:42.592 19125-5529/? E/WakeLock: GCM_CONN_ALARM release without a matched acquire!
+2022-02-27 20:42:42.600 17414-18770/? V/AlarmManager: set(PendingIntent{e84254d: PendingIntentRecord{2f655d4 com.google.android.gms/com.google.android.gms.gcm broadcastIntent}}) : type=2 when=153612937whenElapsed153612937maxWhen =153612937 win=0 interval=0 flags=0x8 pkg = com.google.android.gms
+2022-02-27 20:42:42.614 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 203, CMD_ARP_PROBE
+2022-02-27 20:42:42.614 17414-20930/? D/OppoGatewayConflictResolver: update mHwAddr for wlan0 before send Arp probe
+2022-02-27 20:42:42.628 17414-20930/? D/OppoGatewayConflictResolver: Local Source ads:192.168.1.***
+2022-02-27 20:42:42.628 17414-20930/? D/OppoGatewayConflictResolver: send arp probe normal
+2022-02-27 20:42:42.632 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Reply ARP sender MAC: a0:**:**:**:8d:a8 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:42.633 17414-20930/? D/OplusIpConflictDetector: sendGatewayMacAddress ifaceName=wlan0 gatewayMac=a0:**:**:**:8d:a8 gatewayIp=192.168.1.***
+2022-02-27 20:42:42.634 17414-20930/? D/OplusIpConflictDetector: Send CMD_EVENT_CONFLICT
+2022-02-27 20:42:42.635 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 204, CMD_EVENT_CONFLICT
+2022-02-27 20:42:42.647 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Request ARP sender MAC: 7e:**:**:**:82:13 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:42.647 17414-20930/? D/OplusIpConflictDetector: arp from self , ignore it
+2022-02-27 20:42:42.670 7649-7743/? V/ironSourceSDK: INTERNAL: IronSourceObject connectAndGetServerResponse - encrypt
+2022-02-27 20:42:42.685 7649-7743/? V/ironSourceSDK: NATIVE: setLoggerDebugLevel(loggerName:console ,debugLevel:3)
+2022-02-27 20:42:42.698 18121-21750/? D/QCNEJ/WlanStaInfoRelay: Received action: android.net.wifi.LINK_CONFIGURATION_CHANGED
+2022-02-27 20:42:42.698 17414-17761/? D/ConnectivityService: Setting DNS servers for network 114 to [/8.8.4.4, /203.162.4.191, /8.8.8.8]
+2022-02-27 20:42:42.698 18121-21750/? E/QCNEJ/WlanStaInfoRelay: update link properties given null lp
+2022-02-27 20:42:42.698 17414-17761/? E/DnsManager: file path: /backup_hosts
+2022-02-27 20:42:42.699 17414-17761/? E/DnsManager: file does not exist
+2022-02-27 20:42:42.700 17414-17761/? D/DnsManager: sendDnsConfigurationForNetwork(114, [8.8.4.4, 203.162.4.191, 8.8.8.8], [Home], 1800, 25, 8, 64, 0, 0, , [])
+2022-02-27 20:42:42.723 7649-8187/? I/DpmTcmClient: RegisterTcmMonitor from: $Proxy1
+2022-02-27 20:42:42.728 7649-7743/? D/sdk5Events: logEvent failed eventsTracker doesn't exist
+2022-02-27 20:42:42.730 7649-7660/? I/festival.battl: Compiler allocated 4193KB to compile void com.ironsource.mediationsdk.utils.ServerResponseWrapper.parseConfigurations()
+2022-02-27 20:42:42.739 7649-7743/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:42.744 7649-7743/? I/chatty: uid=10336(com.music.festival.battle) IronSourceIniti identical 3 lines
+2022-02-27 20:42:42.746 7649-7743/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:42.748 31646-18959/? W/OplusExSystemServiceHelper: checkOplusExSystemService intent getComponent is null
+2022-02-27 20:42:42.751 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 203, CMD_ARP_PROBE
+2022-02-27 20:42:42.751 17414-20930/? D/OppoGatewayConflictResolver: update mHwAddr for wlan0 before send Arp probe
+2022-02-27 20:42:42.758 17414-17761/? D/ConnectivityService: updateLinkProperties isCellular=false length=0
+2022-02-27 20:42:42.758 17414-17761/? D/ConnectivityService: oppo_sla:update the LinkProperties
+2022-02-27 20:42:42.760 17121-17121/? E/Netd: Error adding route ::/0 -> fe80::a265:18ff:fea4:8da8 wlan0 to table 1032: File exists
+2022-02-27 20:42:42.760 17414-17761/? D/ConnectivityService: Setting DNS servers for network 114 to [/8.8.4.4, /203.162.4.191, /8.8.8.8]
+2022-02-27 20:42:42.760 17414-17761/? E/DnsManager: file path: /backup_hosts
+2022-02-27 20:42:42.761 17414-17761/? E/DnsManager: file does not exist
+2022-02-27 20:42:42.761 17414-17761/? D/DnsManager: sendDnsConfigurationForNetwork(114, [8.8.4.4, 203.162.4.191, 8.8.8.8], [Home], 1800, 25, 8, 64, 0, 0, , [])
+2022-02-27 20:42:42.762 18121-21750/? D/QCNEJ/NativeHalConnector: -> SND notifyWifiAvailable(v4Connected = truev6Connected = , false, isAndroidValidated = true)
+2022-02-27 20:42:42.763 21790-22343/? I/BtGatt.ScanManager: msg.what = 6
+2022-02-27 20:42:42.764 18080-8099/? D/ApfFilter: (wlan0): Adding RA fe80::a265:18ff:fea4:8da8 -> ff02::1 1800s 2001:ee0:d783:a1a0::/64 1200s/1200s RIO 1200s 2001:ee0:d783:a1a0::/64 
+2022-02-27 20:42:42.765 18121-21750/? D/QCNEJ/WlanStaInfoRelay: Received action: android.net.wifi.LINK_CONFIGURATION_CHANGED
+2022-02-27 20:42:42.765 18121-21750/? E/QCNEJ/WlanStaInfoRelay: update link properties given null lp
+2022-02-27 20:42:42.767 17414-20930/? D/OppoGatewayConflictResolver: Local Source ads:192.168.1.***
+2022-02-27 20:42:42.767 17414-20930/? D/OppoGatewayConflictResolver: send arp probe normal
+2022-02-27 20:42:42.767 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 202, CMD_LINK_PROPERTIES_CHANGED
+2022-02-27 20:42:42.781 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Reply ARP sender MAC: a0:**:**:**:8d:a8 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:42.781 17414-20930/? D/OplusIpConflictDetector: sendGatewayMacAddress ifaceName=wlan0 gatewayMac=a0:**:**:**:8d:a8 gatewayIp=192.168.1.***
+2022-02-27 20:42:42.782 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:42.782 21790-22343/? I/BtGatt.ScanManager: msg.what = 6
+2022-02-27 20:42:42.784 17414-20930/? D/OplusIpConflictDetector: Send CMD_EVENT_CONFLICT
+2022-02-27 20:42:42.785 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 204, CMD_EVENT_CONFLICT
+2022-02-27 20:42:42.786 7649-7743/? D/AudioManager: getStreamVolume packageName=com.music.festival.battle, index=4, streamType=3
+2022-02-27 20:42:42.788 7649-7649/? D/sdk5Events: logEvent failed eventsTracker doesn't exist
+2022-02-27 20:42:42.792 31646-22737/? W/OplusExSystemServiceHelper: checkOplusExSystemService intent getComponent is null
+2022-02-27 20:42:42.797 21790-22343/? I/BtGatt.ScanManager: msg.what = 6
+2022-02-27 20:42:42.797 18121-21750/? D/QCNEJ/WlanStaInfoRelay: Received action: android.net.wifi.LINK_CONFIGURATION_CHANGED
+2022-02-27 20:42:42.797 18121-21750/? E/QCNEJ/WlanStaInfoRelay: update link properties given null lp
+2022-02-27 20:42:42.815 17414-17761/? D/ConnectivityService: updateLinkProperties isCellular=false length=0
+2022-02-27 20:42:42.815 17414-17761/? D/ConnectivityService: oppo_sla:update the LinkProperties
+2022-02-27 20:42:42.815 17414-18405/? D/ConnectivityService: requestNetwork for uid/pid:10336/7649 NetworkRequest [ TRACK_DEFAULT id=1036, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ]
+2022-02-27 20:42:42.817 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 202, CMD_LINK_PROPERTIES_CHANGED
+2022-02-27 20:42:42.817 18121-21750/? D/QCNEJ/NativeHalConnector: -> SND notifyWifiAvailable(v4Connected = truev6Connected = , false, isAndroidValidated = true)
+2022-02-27 20:42:42.817 17121-17121/? E/Netd: Error adding route 2001:ee0:d783:a1a0::/64 -> (null) wlan0 to table 1032: File exists
+2022-02-27 20:42:42.818 17121-17121/? E/Netd: Error adding route 2001:ee0:d783:a1a0::/64 -> fe80::a265:18ff:fea4:8da8 wlan0 to table 1032: File exists
+2022-02-27 20:42:42.818 17414-17761/? D/ConnectivityService: Setting DNS servers for network 114 to [/8.8.4.4, /203.162.4.191, /8.8.8.8]
+2022-02-27 20:42:42.818 17414-17761/? E/DnsManager: file path: /backup_hosts
+2022-02-27 20:42:42.818 17414-17761/? E/DnsManager: file does not exist
+2022-02-27 20:42:42.819 17414-17761/? D/DnsManager: sendDnsConfigurationForNetwork(114, [8.8.4.4, 203.162.4.191, 8.8.8.8], [Home], 1800, 25, 8, 64, 0, 0, , [])
+2022-02-27 20:42:42.819 7649-8208/? I/AdInternalSettings: Test mode device hash: efe0ae10-c526-4409-8b66-399e2b3bb4e3
+2022-02-27 20:42:42.819 7649-8208/? I/AdInternalSettings: When testing your app with Facebook's ad units you must specify the device hashed ID to ensure the delivery of test ads, add the following code before loading an ad: AdSettings.addTestDevice("efe0ae10-c526-4409-8b66-399e2b3bb4e3");
+2022-02-27 20:42:42.819 817-817/? W/adbd: timeout expired while flushing socket, closing
+2022-02-27 20:42:42.847 18121-21750/? D/QCNEJ/NativeHalConnector: -> SND notifyWifiAvailable(v4Connected = truev6Connected = , false, isAndroidValidated = true)
+2022-02-27 20:42:42.847 7649-7649/? D/sdk5Events: logEvent failed eventsTracker doesn't exist
+2022-02-27 20:42:42.847 17414-17761/? D/ConnectivityService: updateLinkProperties isCellular=false length=0
+2022-02-27 20:42:42.847 17414-17761/? D/ConnectivityService: oppo_sla:update the LinkProperties
+2022-02-27 20:42:42.848 17414-17761/? D/ConnectivityService: NetReassign [1036 : null �? 114]
+2022-02-27 20:42:42.848 7649-7649/? D/sdk5Events: logEvent failed eventsTracker doesn't exist
+2022-02-27 20:42:42.848 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 202, CMD_LINK_PROPERTIES_CHANGED
+2022-02-27 20:42:42.848 17414-17714/? D/WifiNetworkFactory: got request NetworkRequest [ TRACK_DEFAULT id=1036, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ] with score 79 and providerId 5
+2022-02-27 20:42:42.848 17414-17745/? D/OplusWifiNetworkFactory2: got request NetworkRequest [ TRACK_DEFAULT id=1036, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ] with score 79 and providerId 5
+2022-02-27 20:42:42.848 17414-17714/? D/UntrustedWifiNetworkFactory: got request NetworkRequest [ TRACK_DEFAULT id=1036, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ] with score 79 and providerId 5
+2022-02-27 20:42:42.849 17414-17836/? D/Ethernet: got request NetworkRequest [ TRACK_DEFAULT id=1036, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ] with score 79 and providerId 5
+2022-02-27 20:42:42.849 17414-17761/? D/ConnectivityService: NetReassign [no changes]
+2022-02-27 20:42:42.849 18320-18320/? D/PhoneSwitcherNetworkRequstListener: got request NetworkRequest [ TRACK_DEFAULT id=1036, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ] with score 79 and providerId 5
+2022-02-27 20:42:42.851 7649-8218/? I/DpmTcmClient: RegisterTcmMonitor from: $Proxy1
+2022-02-27 20:42:42.852 1414-1414/? E/cr_BTSPrefs: No data found for task id: 57
+2022-02-27 20:42:42.852 1414-1414/? E/cr_BkgrdTaskScheduler: Task cannot be canceled because no data was found instorage or data was invalid
+2022-02-27 20:42:42.853 1414-1414/? E/cr_BTSPrefs: No data found for task id: 56
+2022-02-27 20:42:42.853 1414-1414/? E/cr_BkgrdTaskScheduler: Task cannot be canceled because no data was found instorage or data was invalid
+2022-02-27 20:42:42.853 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Request ARP sender MAC: 7e:**:**:**:82:13 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:42.853 17414-20930/? D/OplusIpConflictDetector: arp from self , ignore it
+2022-02-27 20:42:42.862 7649-8222/? E/libEGL: Invalid file path for libcolorx-loader.so
+2022-02-27 20:42:42.850 17414-17761/? D/ConnectivityService: NetReassign [no changes]
+2022-02-27 20:42:42.866 17414-20302/? I/ColorInternalServiceFactoryImpl: getColorCommonListManagerr
+2022-02-27 20:42:42.870 7649-8222/? I/chatty: uid=10336(com.music.festival.battle) Chrome_InProcGp identical 2 lines
+2022-02-27 20:42:42.870 7649-8222/? E/libEGL: Invalid file path for libcolorx-loader.so
+2022-02-27 20:42:42.871 7649-7728/? W/cr_media: Requires BLUETOOTH permission
+2022-02-27 20:42:42.881 7705-7744/? I/cr_LibraryLoader: Successfully loaded native library
+2022-02-27 20:42:42.883 21790-22343/? I/BtGatt.ScanManager: msg.what = 6
+2022-02-27 20:42:42.883 7649-8222/? E/libEGL: Invalid file path for libcolorx-loader.so
+2022-02-27 20:42:42.883 7649-8222/? E/libEGL: Invalid file path for libcolorx-loader.so
+2022-02-27 20:42:42.884 7705-7744/? I/cr_CachingUmaRecorder: Flushed 3 samples from 3 histograms.
+2022-02-27 20:42:42.896 7705-7744/? W/SystemServiceRegistry: No service published for: uimode
+2022-02-27 20:42:42.897 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:42.901 7649-8222/? E/libEGL: Invalid file path for libcolorx-loader.so
+2022-02-27 20:42:42.904 7649-8222/? I/chatty: uid=10336(com.music.festival.battle) Chrome_InProcGp identical 3 lines
+2022-02-27 20:42:42.904 7649-8222/? E/libEGL: Invalid file path for libcolorx-loader.so
+2022-02-27 20:42:42.941 31646-31752/? W/OplusExSystemServiceHelper: checkOplusExSystemService intent getComponent is null
+2022-02-27 20:42:42.943 21790-22343/? I/BtGatt.ScanManager: msg.what = 6
+2022-02-27 20:42:42.955 21790-22343/? I/BtGatt.ScanManager: msg.what = 6
+2022-02-27 20:42:42.966 7649-8201/? I/CZL_META(LITE): [7649]    meta(101)
+2022-02-27 20:42:42.966 7649-8201/? I/CZL_META(LITE): [7649]    meta(1020)
+2022-02-27 20:42:42.966 7649-8201/? I/CZL_META(LITE): [7649]    meta(105)
+2022-02-27 20:42:42.966 7649-8201/? I/CZL_META(LITE): [7649]    meta(106)
+2022-02-27 20:42:42.966 7649-8201/? I/CZL_META(LITE): [7649]    meta(107)
+2022-02-27 20:42:42.966 7649-8201/? I/CZL_META(LITE): [7649]    meta(108)
+2022-02-27 20:42:42.967 7649-8201/? I/CZL_META(LITE): [7649]    meta(109)
+2022-02-27 20:42:42.967 7649-8201/? I/CZL_META(LITE): [7649]    meta(110)
+2022-02-27 20:42:42.972 17414-20302/? D/ConnectivityService: requestNetwork for uid/pid:10336/7649 NetworkRequest [ TRACK_DEFAULT id=1039, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ]
+2022-02-27 20:42:42.973 17414-17761/? D/ConnectivityService: NetReassign [1039 : null �? 114]
+2022-02-27 20:42:42.973 17414-17714/? D/WifiNetworkFactory: got request NetworkRequest [ TRACK_DEFAULT id=1039, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ] with score 79 and providerId 5
+2022-02-27 20:42:42.973 17414-17745/? D/OplusWifiNetworkFactory2: got request NetworkRequest [ TRACK_DEFAULT id=1039, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ] with score 79 and providerId 5
+2022-02-27 20:42:42.973 17414-17714/? D/UntrustedWifiNetworkFactory: got request NetworkRequest [ TRACK_DEFAULT id=1039, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ] with score 79 and providerId 5
+2022-02-27 20:42:42.974 17414-17836/? D/Ethernet: got request NetworkRequest [ TRACK_DEFAULT id=1039, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ] with score 79 and providerId 5
+2022-02-27 20:42:42.975 18320-18320/? D/PhoneSwitcherNetworkRequstListener: got request NetworkRequest [ TRACK_DEFAULT id=1039, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10336 AdministratorUids: [] RequestorUid: 10336 RequestorPackageName: com.music.festival.battle] ] with score 79 and providerId 5
+2022-02-27 20:42:42.981 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 203, CMD_ARP_PROBE
+2022-02-27 20:42:42.982 17414-20930/? D/OppoGatewayConflictResolver: update mHwAddr for wlan0 before send Arp probe
+2022-02-27 20:42:42.986 17414-20930/? D/OppoGatewayConflictResolver: Local Source ads:192.168.1.***
+2022-02-27 20:42:42.986 17414-20930/? D/OppoGatewayConflictResolver: send arp probe normal
+2022-02-27 20:42:42.994 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Reply ARP sender MAC: a0:**:**:**:8d:a8 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:42.995 17414-20930/? D/OplusIpConflictDetector: sendGatewayMacAddress ifaceName=wlan0 gatewayMac=a0:**:**:**:8d:a8 gatewayIp=192.168.1.***
+2022-02-27 20:42:42.995 17414-20930/? D/OplusIpConflictDetector: Send CMD_EVENT_CONFLICT
+2022-02-27 20:42:42.996 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 204, CMD_EVENT_CONFLICT
+2022-02-27 20:42:43.049 21790-22343/? I/BtGatt.ScanManager: msg.what = 6
+2022-02-27 20:42:43.056 17414-20930/? D/OplusIpConflictDetector: IP address conflict detected:ARP Request ARP sender MAC: 7e:**:**:**:82:13 host MAC: 7e:**:**:**:82:13 ARP sender IP: 192.168.1.*** ARP target IP: 192.168.1.*** host target IP: 192.168.1.***
+2022-02-27 20:42:43.056 17414-20930/? D/OplusIpConflictDetector: arp from self , ignore it
+2022-02-27 20:42:43.058 7649-7736/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:43.061 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:43.080 7649-8268/? D/sdk5Events: logEvent failed eventsTracker doesn't exist
+2022-02-27 20:42:43.126 7649-8230/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (greylist-max-q,test-api, reflection, denied)
+2022-02-27 20:42:43.127 7649-8230/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (greylist-max-q, reflection, denied)
+2022-02-27 20:42:43.169 7649-8230/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (greylist-max-q,test-api, reflection, denied)
+2022-02-27 20:42:43.169 7649-8230/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->getAlpnSelectedProtocol()[B (greylist-max-q, reflection, denied)
+2022-02-27 20:42:43.223 17414-20930/? D/OppoGatewayConflictResolver: GatewayConflictDetectingState handeMessage : 203, CMD_ARP_PROBE
+2022-02-27 20:42:43.223 17414-20930/? D/OppoGatewayConflictResolver: update mHwAddr for wlan0 before send Arp probe
+2022-02-27 20:42:43.226 17414-20930/? D/OppoGatewayConflictResolver: Local Source ads:192.168.1.***
+2022-02-27 20:42:43.226 17414-20930/? D/OppoGatewayConflictResolver: send arp probe normal
+2022-02-27 20:42:43.226 17414-20930/? D/OppoGatewayConflictResolver: no Gateway Conflict with size: 1
+2022-02-27 20:42:43.227 17414-20930/? D/OppoGatewayConflictResolver: Entering state NoGatewayConflictState
+2022-02-27 20:42:43.245 7649-8212/? V/SensorManager: RegisterListener bma4xy Accelerometer Non-wakeup type:1 delay:200000us by com.facebook.ads.redexgen.X.8t
+2022-02-27 20:42:43.245 7649-8212/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:43.245 17414-18505/? D/SensorService: createSensorEventConnection, mCurrentOperatingMode = 0, requestedMode = 0
+2022-02-27 20:42:43.246 17414-18505/? W/SensorService: SensorEventConnection sensor handle=11, package = com.facebook.ads.redexgen.X.8v enable
+2022-02-27 20:42:43.246 17414-18505/? E/SensorService: Required app com.facebook.ads.redexgen.X.8v, uid 10336, pid 7649
+2022-02-27 20:42:43.246 17414-18505/? D/SensorService: Calling batch handle==11 flags=0rate=200000000 timeout== 0
+2022-02-27 20:42:43.246 17414-18505/? D/SensorService: SensorDevice::batch: ident=0xb4000073145f1380, handle=0x0000000b, flags=0, period_ns=200000000 timeout=0
+2022-02-27 20:42:43.246 17414-18505/? D/SensorService: 	>>> curr_period=20000000 min_period=20000000 curr_timeout=0 min_timeout=0
+2022-02-27 20:42:43.246 17414-18505/? D/SensorService: 	>>> actuating h/w flush 11
+2022-02-27 20:42:43.246 17124-17124/? I/sensors-hal: flush:296, android.sensor.accelerometer/11
+2022-02-27 20:42:43.247 17124-17124/? I/sensors-hal: flush:302, android.sensor.accelerometer/11 completed
+2022-02-27 20:42:43.247 17414-18505/? D/SensorService: recordConnection in enable
+2022-02-27 20:42:43.247 17414-18505/? D/SensorService: Calling activate on 11
+2022-02-27 20:42:43.247 17414-18505/? D/SensorService: SensorDevice::activate: ident=0xb4000073145f1380, handle=0x0000000b, enabled=1, count=2
+2022-02-27 20:42:43.247 17414-18505/? D/SensorService: enable index=1
+2022-02-27 20:42:43.247 17414-18505/? D/SensorService: info.numActiveClients() = 2, info.isActive = 1
+2022-02-27 20:42:43.247 17414-18505/? D/SensorService: activateHardware = 0
+2022-02-27 20:42:43.247 17124-7766/? I/sensors-hal: ssc_conn_resp_cb:673, resp_value = 0
+2022-02-27 20:42:43.247 7649-8212/? V/SensorManager: RegisterListener oem-pseudo-gyro  Non-wakeup type:4 delay:200000us by com.facebook.ads.redexgen.X.8u
+2022-02-27 20:42:43.247 7649-8212/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:43.248 17414-18505/? D/SensorService: createSensorEventConnection, mCurrentOperatingMode = 0, requestedMode = 0
+2022-02-27 20:42:43.248 17414-18505/? W/SensorService: SensorEventConnection sensor handle=41, package = com.facebook.ads.redexgen.X.8v enable
+2022-02-27 20:42:43.248 17414-18505/? E/SensorService: Required app com.facebook.ads.redexgen.X.8v, uid 10336, pid 7649
+2022-02-27 20:42:43.248 17414-18505/? D/SensorService: Calling batch handle==41 flags=0rate=200000000 timeout== 0
+2022-02-27 20:42:43.248 17414-18505/? D/SensorService: SensorDevice::batch: ident=0xb4000073145f14c0, handle=0x00000029, flags=0, period_ns=200000000 timeout=0
+2022-02-27 20:42:43.248 17414-18505/? D/SensorService: 	>>> curr_period=9223372036854775807 min_period=200000000 curr_timeout=0 min_timeout=0
+2022-02-27 20:42:43.248 17414-18505/? D/SensorService: 	>>> actuating h/w BATCH 0x00000029 200000000 0
+2022-02-27 20:42:43.248 17124-17124/? I/sensors-hal: batch:254, android.sensor.gyroscope/41, period=200000000, max_latency=0
+2022-02-27 20:42:43.248 17124-17124/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 200000000 based on min/max delay_ns
+2022-02-27 20:42:43.248 17124-17124/? I/sensors-hal: batch:276, android.sensor.gyroscope/41, period=200000000, max_latency=0 request completed
+2022-02-27 20:42:43.249 17414-18505/? D/SensorService: recordConnection in enable
+2022-02-27 20:42:43.249 17414-18505/? D/SensorService: Calling activate on 41
+2022-02-27 20:42:43.249 17414-18505/? D/SensorService: SensorDevice::activate: ident=0xb4000073145f14c0, handle=0x00000029, enabled=1, count=1
+2022-02-27 20:42:43.249 17414-18505/? D/SensorService: enable index=0
+2022-02-27 20:42:43.249 17414-18505/? D/SensorService: info.numActiveClients() = 1, info.isActive = 0
+2022-02-27 20:42:43.249 17414-18505/? D/SensorService: activateHardware = 1
+2022-02-27 20:42:43.249 17414-18505/? D/SensorService: 	>>> actuating h/w activate handle=41 enabled=1
+2022-02-27 20:42:43.249 17124-17124/? I/sensors-hal: activate:213, android.sensor.gyroscope/41 en=1
+2022-02-27 20:42:43.252 2429-2433/? E/Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+2022-02-27 20:42:43.254 2429-2433/? I/chatty: uid=1001(radio) /vendor/bin/ims_rtp_daemon identical 1 line
+2022-02-27 20:42:43.256 2429-2433/? E/Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+2022-02-27 20:42:43.258 17124-17124/? I/sensors-hal: activate:232, android.sensor.gyroscope/41 en=1 completed
+2022-02-27 20:42:43.258 17414-17644/? D/SensorService: flush complete event sensor==11 
+2022-02-27 20:42:43.259 17414-17644/? I/chatty: uid=1000(system) SensorService identical 3 lines
+2022-02-27 20:42:43.259 17414-17644/? D/SensorService: flush complete event sensor==11 
+2022-02-27 20:42:43.259 17414-17644/? D/SensorService: First flush event for sensor==11 
+2022-02-27 20:42:43.259 17414-17644/? D/SensorService: flush complete event sensor==11 
+2022-02-27 20:42:43.259 17414-17644/? D/SensorService: flush complete event sensor==11 
+2022-02-27 20:42:43.260 2429-2433/? E/Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+2022-02-27 20:42:43.264 17124-8276/? I/sensors-hal: ssc_conn_resp_cb:673, resp_value = 0
+2022-02-27 20:42:43.319 7649-7649/? V/SensorManager: unRegisterListener by com.facebook.ads.redexgen.X.8t
+2022-02-27 20:42:43.319 17414-18505/? W/SensorService: SensorEventConnection sensor handle=11, package = com.facebook.ads.redexgen.X.8v disable
+2022-02-27 20:42:43.319 17414-18505/? D/SensorService: recordConnection in disable
+2022-02-27 20:42:43.319 17414-18505/? D/SensorService: SensorDevice::activate: ident=0xb4000073145f1380, handle=0x0000000b, enabled=0, count=2
+2022-02-27 20:42:43.319 17414-18505/? D/SensorService: disable index=1
+2022-02-27 20:42:43.319 17414-18505/? D/SensorService: 	>>> actuating h/w batch 0x0000000b 20000000 0
+2022-02-27 20:42:43.319 17124-17124/? I/sensors-hal: batch:254, android.sensor.accelerometer/11, period=20000000, max_latency=0
+2022-02-27 20:42:43.320 17124-17124/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 20000000 based on min/max delay_ns
+2022-02-27 20:42:43.320 17124-17124/? I/sensors-hal: batch:276, android.sensor.accelerometer/11, period=20000000, max_latency=0 request completed
+2022-02-27 20:42:43.320 17414-18505/? D/SensorService: activateHardware = 0
+2022-02-27 20:42:43.320 7649-7649/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:43.320 17414-18505/? D/SensorService: ~SensorEventConnection(0xb4000073145f1380)
+2022-02-27 20:42:43.320 17414-18505/? D/SensorService: 5 active sensors
+2022-02-27 20:42:43.320 17414-18505/? D/SensorService: removing connection 0xb4000073145f1380 for sensor[0].handle=0x0000000b
+2022-02-27 20:42:43.320 17414-18505/? D/SensorService: removing connection 0xb4000073145f1380 for sensor[1].handle=0x00000029
+2022-02-27 20:42:43.320 17414-18505/? D/SensorService: removing connection 0xb4000073145f1380 for sensor[2].handle=0x00000033
+2022-02-27 20:42:43.320 17414-18505/? D/SensorService: removing connection 0xb4000073145f1380 for sensor[3].handle=0x000000bf
+2022-02-27 20:42:43.321 17414-18505/? D/SensorService: removing connection 0xb4000073145f1380 for sensor[4].handle=0x00000110
+2022-02-27 20:42:43.093 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:43.386 7649-7649/? D/ViewRootImpl: enqueueInputEventMotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=507.0, y[0]=525.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470362, downTime=67470362, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.386 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=507.0, y[0]=525.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470362, downTime=67470362, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.386 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=507.0, y[0]=525.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470362, downTime=67470362, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.388 912-912/? D/ORMS_HAL: OrmsHalService write file /proc/sys/kernel/input_boost_enabled - 1.
+2022-02-27 20:42:43.400 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:43.400 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:43.400 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:43.400 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:43.400 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:43.428 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=507.0, y[0]=525.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470405, downTime=67470362, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.428 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=507.0, y[0]=525.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470405, downTime=67470362, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.447 7649-8268/? W/Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+2022-02-27 20:42:43.460 7649-7649/? V/SensorManager: unRegisterListener by com.facebook.ads.redexgen.X.8u
+2022-02-27 20:42:43.460 17414-18505/? W/SensorService: SensorEventConnection sensor handle=41, package = com.facebook.ads.redexgen.X.8v disable
+2022-02-27 20:42:43.460 17414-18505/? D/SensorService: recordConnection in disable
+2022-02-27 20:42:43.460 17414-18505/? D/SensorService: SensorDevice::activate: ident=0xb4000073145f14c0, handle=0x00000029, enabled=0, count=1
+2022-02-27 20:42:43.460 17414-18505/? D/SensorService: disable index=0
+2022-02-27 20:42:43.460 17414-18505/? D/SensorService: activateHardware = 1
+2022-02-27 20:42:43.460 17414-18505/? D/SensorService: 	>>> actuating h/w activate handle=41 enabled=0
+2022-02-27 20:42:43.461 17124-17124/? I/sensors-hal: activate:213, android.sensor.gyroscope/41 en=0
+2022-02-27 20:42:43.462 17124-17124/? I/sensors-hal: activate:232, android.sensor.gyroscope/41 en=0 completed
+2022-02-27 20:42:43.462 17414-18505/? D/SensorService: reset the mRecentEvent handle = 41
+2022-02-27 20:42:43.462 17414-18505/? D/SensorService: disable reset the lastEvent handle = 41 in disable
+2022-02-27 20:42:43.462 7649-7649/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:43.463 2429-2433/? E/Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+2022-02-27 20:42:43.466 31646-22735/? W/OplusExSystemServiceHelper: checkOplusExSystemService intent getComponent is null
+2022-02-27 20:42:43.466 17414-18505/? D/SensorService: ~SensorEventConnection(0xb4000073145f14c0)
+2022-02-27 20:42:43.466 17414-18505/? D/SensorService: 4 active sensors
+2022-02-27 20:42:43.466 17414-18505/? D/SensorService: removing connection 0xb4000073145f14c0 for sensor[0].handle=0x0000000b
+2022-02-27 20:42:43.466 17414-18505/? D/SensorService: removing connection 0xb4000073145f14c0 for sensor[1].handle=0x00000033
+2022-02-27 20:42:43.466 17414-18505/? D/SensorService: removing connection 0xb4000073145f14c0 for sensor[2].handle=0x000000bf
+2022-02-27 20:42:43.466 17414-18505/? D/SensorService: removing connection 0xb4000073145f14c0 for sensor[3].handle=0x00000110
+2022-02-27 20:42:43.480 7649-8268/? D/AudioManager: getStreamVolume packageName=com.music.festival.battle, index=4, streamType=3
+2022-02-27 20:42:43.496 7649-8268/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:43.505 7649-8268/? I/chatty: uid=10336(com.music.festival.battle) JavaBridge identical 3 lines
+2022-02-27 20:42:43.507 7649-8268/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:43.560 17414-17714/? E/WifiClientModeImpl: Checking internet access, SSID="L10ccf1837d BSSID=a0:**:**:**:8d:a9 checkSequence=21
+2022-02-27 20:42:43.567 17414-17755/? I/DpmTcmClient: RegisterTcmMonitor from: $Proxy1
+2022-02-27 20:42:43.606 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:43.673 7649-7649/? D/ViewRootImpl: enqueueInputEventMotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=388.0, y[0]=904.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470650, downTime=67470650, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.673 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=388.0, y[0]=904.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470650, downTime=67470650, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.673 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=388.0, y[0]=904.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470650, downTime=67470650, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.674 912-912/? D/ORMS_HAL: OrmsHalService write file /proc/sys/kernel/input_boost_enabled - 1.
+2022-02-27 20:42:43.677 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:43.677 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:43.677 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:43.677 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:43.756 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=388.0, y[0]=904.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470733, downTime=67470650, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.756 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=388.0, y[0]=904.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470733, downTime=67470650, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.860 17414-18770/? D/LocationManagerService: request b932479 network Request[POWER_LOW network interval=0 fastestInterval=0] from com.coloros.deepthinker(1000 foreground [whitelisted])
+2022-02-27 20:42:43.860 17414-18770/? D/OplusGnssWhiteListProxy: on get OplusGnssWhiteListProxy!
+2022-02-27 20:42:43.861 17414-18770/? D/OplusNlpProxy: OplusNlpProxy setRequest! NLP is: gms
+2022-02-27 20:42:43.862 17414-18770/? D/OplusGnssWhiteListProxy: on get OplusGnssWhiteListProxy!
+2022-02-27 20:42:43.877 17414-17761/? D/ConnectivityService: Setting DNS servers for network 114 to [/8.8.4.4, /203.162.4.191, /8.8.8.8]
+2022-02-27 20:42:43.877 17414-17761/? E/DnsManager: file path: /backup_hosts
+2022-02-27 20:42:43.877 17414-17761/? E/DnsManager: file does not exist
+2022-02-27 20:42:43.878 17414-17761/? D/DnsManager: sendDnsConfigurationForNetwork(114, [8.8.4.4, 203.162.4.191, 8.8.8.8], [Home], 1800, 25, 8, 64, 0, 0, , [])
+2022-02-27 20:42:43.878 18121-21750/? D/QCNEJ/WlanStaInfoRelay: Received action: android.net.wifi.LINK_CONFIGURATION_CHANGED
+2022-02-27 20:42:43.878 18121-21750/? E/QCNEJ/WlanStaInfoRelay: update link properties given null lp
+2022-02-27 20:42:43.913 17414-18505/? V/AlarmManager: set(PendingIntent{3188f35: PendingIntentRecord{a719118 com.google.android.gms/com.google.android.gms.location_base broadcastIntent}}) : type=2 when=151889239whenElapsed151889251maxWhen =151889251 win=0 interval=0 flags=0x0 pkg = com.google.android.gms
+2022-02-27 20:42:43.922 18121-21750/? D/QCNEJ/NativeHalConnector: -> SND notifyWifiAvailable(v4Connected = truev6Connected = , true, isAndroidValidated = true)
+2022-02-27 20:42:43.928 7649-7649/? D/ViewRootImpl: enqueueInputEventMotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=435.0, y[0]=542.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470905, downTime=67470905, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.928 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=435.0, y[0]=542.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470905, downTime=67470905, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.928 912-912/? D/ORMS_HAL: OrmsHalService write file /proc/sys/kernel/input_boost_enabled - 1.
+2022-02-27 20:42:43.929 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=435.0, y[0]=542.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470905, downTime=67470905, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:43.933 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:43.933 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:43.933 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:43.933 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:43.934 17414-17761/? D/ConnectivityService: updateLinkProperties isCellular=false length=0
+2022-02-27 20:42:43.934 17414-17761/? D/ConnectivityService: oppo_sla:update the LinkProperties
+2022-02-27 20:42:43.937 17414-17760/? D/WifiNative: Scan trigered from WifiNative
+2022-02-27 20:42:43.940 17414-17760/? V/AlarmManager: set(null) : type=2 when=151914277whenElapsed151914277maxWhen =151936777 win=22500 interval=0 flags=0x8 pkg = android
+2022-02-27 20:42:43.941 17414-17760/? V/AlarmManager: set(null) : type=2 when=151899278whenElapsed151899278maxWhen =151910528 win=11250 interval=0 flags=0x8 pkg = android
+2022-02-27 20:42:44.003 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=435.0, y[0]=542.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470978, downTime=67470905, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:44.003 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=435.0, y[0]=542.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67470978, downTime=67470905, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:44.090 17414-17479/? D/BatteryLed: getLightInColorState, oppoLightMgr empty!
+2022-02-27 20:42:44.095 912-912/? D/ORMS_HAL: OrmsHalService write file /proc/sys/kernel/input_boost_enabled - 1.
+2022-02-27 20:42:44.096 7649-7649/? D/ViewRootImpl: enqueueInputEventMotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=435.0, y[0]=581.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67471072, downTime=67471072, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:44.096 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=435.0, y[0]=581.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67471072, downTime=67471072, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:44.096 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=435.0, y[0]=581.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67471072, downTime=67471072, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:44.102 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:44.102 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:44.102 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:44.102 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:44.108 18244-18244/? D/DeviceStatisticsService: chargerType=0 batteryLevel=100 totalBatteryCapacity=5000000
+2022-02-27 20:42:44.161 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=435.0, y[0]=581.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67471139, downTime=67471072, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:44.162 17414-18043/? V/OplusNlpProxy: handleMessage what - 110
+2022-02-27 20:42:44.162 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=435.0, y[0]=581.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67471139, downTime=67471072, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:44.169 17414-17732/? D/OplusWifiController2: *****shutdown oppo wifi sta2 !, the mIsOppoSta2Enabled = false
+2022-02-27 20:42:44.170 17414-17732/? D/OplusWifiController2: can't disable oppo wifi sta2 !, because wlan1 has been disabled.
+2022-02-27 20:42:44.446 18187-18187/? I/QImsService: OplusWifiApmStateMgr : onReceive,wifiSignal: -57
+2022-02-27 20:42:44.449 18121-21750/? D/QCNEJ/WlanStaInfoRelay: Received action: android.net.wifi.RSSI_CHANGED
+2022-02-27 20:42:44.453 17951-18572/? D/WifiStatusTracker: handleBroadcast: shouldUpdateLabel: true
+2022-02-27 20:42:44.519 17414-17761/? D/ConnectivityService: Setting DNS servers for network 114 to [/8.8.4.4, /203.162.4.191, /8.8.8.8]
+2022-02-27 20:42:44.519 17414-17761/? E/DnsManager: file path: /backup_hosts
+2022-02-27 20:42:44.520 18121-21750/? D/QCNEJ/WlanStaInfoRelay: Received action: android.net.wifi.LINK_CONFIGURATION_CHANGED
+2022-02-27 20:42:44.520 18121-21750/? E/QCNEJ/WlanStaInfoRelay: update link properties given null lp
+2022-02-27 20:42:44.520 17414-17761/? E/DnsManager: file does not exist
+2022-02-27 20:42:44.520 17414-17761/? D/DnsManager: sendDnsConfigurationForNetwork(114, [8.8.4.4, 203.162.4.191, 8.8.8.8], [Home], 1800, 25, 8, 64, 0, 0, , [])
+2022-02-27 20:42:44.555 18121-21750/? D/QCNEJ/NativeHalConnector: -> SND notifyWifiAvailable(v4Connected = truev6Connected = , true, isAndroidValidated = true)
+2022-02-27 20:42:44.575 17414-17761/? D/ConnectivityService: updateLinkProperties isCellular=false length=0
+2022-02-27 20:42:44.575 17414-17761/? D/ConnectivityService: oppo_sla:update the LinkProperties
+2022-02-27 20:42:44.826 7649-8187/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:44.831 7649-8187/? I/chatty: uid=10336(com.music.festival.battle) AsyncTask #1 identical 3 lines
+2022-02-27 20:42:44.833 7649-8187/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:44.840 7649-8187/? D/AudioManager: getStreamVolume packageName=com.music.festival.battle, index=4, streamType=3
+2022-02-27 20:42:44.844 7649-8187/? V/SensorManager: RegisterListener bma4xy Accelerometer Non-wakeup type:1 delay:200000us by com.facebook.ads.redexgen.X.8t
+2022-02-27 20:42:44.844 7649-8187/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:44.844 17414-18505/? D/SensorService: createSensorEventConnection, mCurrentOperatingMode = 0, requestedMode = 0
+2022-02-27 20:42:44.844 17414-18505/? W/SensorService: SensorEventConnection sensor handle=11, package = com.facebook.ads.redexgen.X.8v enable
+2022-02-27 20:42:44.844 17414-18505/? E/SensorService: Required app com.facebook.ads.redexgen.X.8v, uid 10336, pid 7649
+2022-02-27 20:42:44.844 17414-18505/? D/SensorService: Calling batch handle==11 flags=0rate=200000000 timeout== 0
+2022-02-27 20:42:44.844 17414-18505/? D/SensorService: SensorDevice::batch: ident=0xb4000072a75b8f00, handle=0x0000000b, flags=0, period_ns=200000000 timeout=0
+2022-02-27 20:42:44.845 17414-18505/? D/SensorService: 	>>> curr_period=20000000 min_period=20000000 curr_timeout=0 min_timeout=0
+2022-02-27 20:42:44.845 17414-18505/? D/SensorService: 	>>> actuating h/w flush 11
+2022-02-27 20:42:44.845 17124-17124/? I/sensors-hal: flush:296, android.sensor.accelerometer/11
+2022-02-27 20:42:44.845 17124-17124/? I/sensors-hal: flush:302, android.sensor.accelerometer/11 completed
+2022-02-27 20:42:44.845 17414-18505/? D/SensorService: recordConnection in enable
+2022-02-27 20:42:44.845 17414-18505/? D/SensorService: Calling activate on 11
+2022-02-27 20:42:44.845 17414-18505/? D/SensorService: SensorDevice::activate: ident=0xb4000072a75b8f00, handle=0x0000000b, enabled=1, count=2
+2022-02-27 20:42:44.845 17414-18505/? D/SensorService: enable index=1
+2022-02-27 20:42:44.845 17414-18505/? D/SensorService: info.numActiveClients() = 2, info.isActive = 1
+2022-02-27 20:42:44.845 17414-18505/? D/SensorService: activateHardware = 0
+2022-02-27 20:42:44.846 17124-7766/? I/sensors-hal: ssc_conn_resp_cb:673, resp_value = 0
+2022-02-27 20:42:44.846 7649-8187/? V/SensorManager: RegisterListener oem-pseudo-gyro  Non-wakeup type:4 delay:200000us by com.facebook.ads.redexgen.X.8u
+2022-02-27 20:42:44.846 7649-8187/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:44.846 17414-18505/? D/SensorService: createSensorEventConnection, mCurrentOperatingMode = 0, requestedMode = 0
+2022-02-27 20:42:44.846 17414-18505/? W/SensorService: SensorEventConnection sensor handle=41, package = com.facebook.ads.redexgen.X.8v enable
+2022-02-27 20:42:44.846 17414-18505/? E/SensorService: Required app com.facebook.ads.redexgen.X.8v, uid 10336, pid 7649
+2022-02-27 20:42:44.846 17414-18505/? D/SensorService: Calling batch handle==41 flags=0rate=200000000 timeout== 0
+2022-02-27 20:42:44.846 17414-18505/? D/SensorService: SensorDevice::batch: ident=0xb4000072a75b92c0, handle=0x00000029, flags=0, period_ns=200000000 timeout=0
+2022-02-27 20:42:44.846 17414-18505/? D/SensorService: 	>>> curr_period=9223372036854775807 min_period=200000000 curr_timeout=0 min_timeout=0
+2022-02-27 20:42:44.846 17414-18505/? D/SensorService: 	>>> actuating h/w BATCH 0x00000029 200000000 0
+2022-02-27 20:42:44.846 17124-17124/? I/sensors-hal: batch:254, android.sensor.gyroscope/41, period=200000000, max_latency=0
+2022-02-27 20:42:44.846 17124-17124/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 200000000 based on min/max delay_ns
+2022-02-27 20:42:44.846 17124-17124/? I/sensors-hal: batch:276, android.sensor.gyroscope/41, period=200000000, max_latency=0 request completed
+2022-02-27 20:42:44.847 17414-18505/? D/SensorService: recordConnection in enable
+2022-02-27 20:42:44.847 17414-18505/? D/SensorService: Calling activate on 41
+2022-02-27 20:42:44.847 17414-18505/? D/SensorService: SensorDevice::activate: ident=0xb4000072a75b92c0, handle=0x00000029, enabled=1, count=1
+2022-02-27 20:42:44.847 17414-18505/? D/SensorService: enable index=0
+2022-02-27 20:42:44.847 17414-18505/? D/SensorService: info.numActiveClients() = 1, info.isActive = 0
+2022-02-27 20:42:44.847 17414-18505/? D/SensorService: activateHardware = 1
+2022-02-27 20:42:44.847 17414-18505/? D/SensorService: 	>>> actuating h/w activate handle=41 enabled=1
+2022-02-27 20:42:44.847 17124-17124/? I/sensors-hal: activate:213, android.sensor.gyroscope/41 en=1
+2022-02-27 20:42:44.848 2429-2433/? E/Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+2022-02-27 20:42:44.850 2429-2433/? I/chatty: uid=1001(radio) /vendor/bin/ims_rtp_daemon identical 1 line
+2022-02-27 20:42:44.852 2429-2433/? E/Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+2022-02-27 20:42:44.853 17124-17124/? I/sensors-hal: activate:232, android.sensor.gyroscope/41 en=1 completed
+2022-02-27 20:42:44.854 17414-17644/? D/SensorService: flush complete event sensor==11 
+2022-02-27 20:42:44.854 17414-17644/? I/chatty: uid=1000(system) SensorService identical 3 lines
+2022-02-27 20:42:44.854 17414-17644/? D/SensorService: flush complete event sensor==11 
+2022-02-27 20:42:44.854 17414-17644/? D/SensorService: First flush event for sensor==11 
+2022-02-27 20:42:44.854 17414-17644/? D/SensorService: flush complete event sensor==11 
+2022-02-27 20:42:44.854 17414-17644/? D/SensorService: flush complete event sensor==11 
+2022-02-27 20:42:44.854 2429-2433/? E/Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+2022-02-27 20:42:44.855 17124-8316/? I/sensors-hal: ssc_conn_resp_cb:673, resp_value = 0
+2022-02-27 20:42:44.869 31646-29565/? W/OplusExSystemServiceHelper: checkOplusExSystemService intent getComponent is null
+2022-02-27 20:42:44.897 7649-8187/? D/AudioManager: getStreamVolume packageName=com.music.festival.battle, index=4, streamType=3
+2022-02-27 20:42:44.917 7649-7649/? V/SensorManager: unRegisterListener by com.facebook.ads.redexgen.X.8t
+2022-02-27 20:42:44.917 17414-20304/? W/SensorService: SensorEventConnection sensor handle=11, package = com.facebook.ads.redexgen.X.8v disable
+2022-02-27 20:42:44.917 17414-20304/? D/SensorService: recordConnection in disable
+2022-02-27 20:42:44.917 17414-20304/? D/SensorService: SensorDevice::activate: ident=0xb4000072a75b8f00, handle=0x0000000b, enabled=0, count=2
+2022-02-27 20:42:44.917 17414-20304/? D/SensorService: disable index=1
+2022-02-27 20:42:44.917 17414-20304/? D/SensorService: 	>>> actuating h/w batch 0x0000000b 20000000 0
+2022-02-27 20:42:44.917 17124-17124/? I/sensors-hal: batch:254, android.sensor.accelerometer/11, period=20000000, max_latency=0
+2022-02-27 20:42:44.918 17124-17124/? I/sensors-hal: set_config:63, sample_period_ns is adjusted to 20000000 based on min/max delay_ns
+2022-02-27 20:42:44.918 17124-17124/? I/sensors-hal: batch:276, android.sensor.accelerometer/11, period=20000000, max_latency=0 request completed
+2022-02-27 20:42:44.918 17414-20304/? D/SensorService: activateHardware = 0
+2022-02-27 20:42:44.918 7649-7649/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:44.924 17414-18405/? D/SensorService: ~SensorEventConnection(0xb4000072a75b8f00)
+2022-02-27 20:42:44.924 17414-18405/? D/SensorService: 5 active sensors
+2022-02-27 20:42:44.924 17414-18405/? D/SensorService: removing connection 0xb4000072a75b8f00 for sensor[0].handle=0x0000000b
+2022-02-27 20:42:44.924 17414-18405/? D/SensorService: removing connection 0xb4000072a75b8f00 for sensor[1].handle=0x00000029
+2022-02-27 20:42:44.924 17414-18405/? D/SensorService: removing connection 0xb4000072a75b8f00 for sensor[2].handle=0x00000033
+2022-02-27 20:42:44.924 17414-18405/? D/SensorService: removing connection 0xb4000072a75b8f00 for sensor[3].handle=0x000000bf
+2022-02-27 20:42:44.924 17414-18405/? D/SensorService: removing connection 0xb4000072a75b8f00 for sensor[4].handle=0x00000110
+2022-02-27 20:42:44.939 7649-8187/? E/OplusCustomizeRestrictionManager: sInstance is null, start a new sInstance
+2022-02-27 20:42:44.961 31646-18959/? W/OplusExSystemServiceHelper: checkOplusExSystemService intent getComponent is null
+2022-02-27 20:42:44.978 7649-8325/? I/DpmTcmClient: RegisterTcmMonitor from: $Proxy1
+2022-02-27 20:42:45.025 19625-8324/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:45.027 19625-8324/? I/chatty: uid=10220(com.coloros.gamespace) IntentService[C identical 1 line
+2022-02-27 20:42:45.029 19625-8324/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:45.029 17414-17432/? I/system_server: Background young concurrent copying GC freed 391165(20MB) AllocSpace objects, 112(3024KB) LOS objects, 34% free, 42MB/65MB, paused 510us total 113.398ms
+2022-02-27 20:42:45.031 19625-8324/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:45.035 19625-8324/? I/chatty: uid=10220(com.coloros.gamespace) IntentService[C identical 3 lines
+2022-02-27 20:42:45.038 19625-8324/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:45.040 17414-17433/? W/JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.android.server.AlarmManagerService$2
+2022-02-27 20:42:45.040 17414-17433/? I/BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+2022-02-27 20:42:45.040 19625-8324/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:45.040 17414-17433/? W/JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.android.server.AlarmManagerService$2
+2022-02-27 20:42:45.040 17414-17433/? I/BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+2022-02-27 20:42:45.042 19625-8324/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:45.043 19625-8324/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:45.050 17414-17434/? W/System: A resource failed to call release. 
+2022-02-27 20:42:45.050 17414-17434/? I/chatty: uid=1000(system) FinalizerDaemon identical 3 lines
+2022-02-27 20:42:45.050 17414-17434/? W/System: A resource failed to call release. 
+2022-02-27 20:42:45.055 7649-7649/? V/SensorManager: unRegisterListener by com.facebook.ads.redexgen.X.8u
+2022-02-27 20:42:45.055 17414-17443/? W/SensorService: SensorEventConnection sensor handle=41, package = com.facebook.ads.redexgen.X.8v disable
+2022-02-27 20:42:45.055 17414-17443/? D/SensorService: recordConnection in disable
+2022-02-27 20:42:45.055 17414-17443/? D/SensorService: SensorDevice::activate: ident=0xb4000072a75b92c0, handle=0x00000029, enabled=0, count=1
+2022-02-27 20:42:45.055 17414-17443/? D/SensorService: disable index=0
+2022-02-27 20:42:45.055 17414-17443/? D/SensorService: activateHardware = 1
+2022-02-27 20:42:45.055 17414-17443/? D/SensorService: 	>>> actuating h/w activate handle=41 enabled=0
+2022-02-27 20:42:45.055 17124-17124/? I/sensors-hal: activate:213, android.sensor.gyroscope/41 en=0
+2022-02-27 20:42:45.055 17124-17124/? I/sensors-hal: activate:232, android.sensor.gyroscope/41 en=0 completed
+2022-02-27 20:42:45.056 17414-17443/? D/SensorService: reset the mRecentEvent handle = 41
+2022-02-27 20:42:45.056 17414-17443/? D/SensorService: disable reset the lastEvent handle = 41 in disable
+2022-02-27 20:42:45.056 7649-7649/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:45.056 17414-17443/? D/SensorService: ~SensorEventConnection(0xb4000072a75b92c0)
+2022-02-27 20:42:45.056 17414-17443/? D/SensorService: 4 active sensors
+2022-02-27 20:42:45.056 17414-17443/? D/SensorService: removing connection 0xb4000072a75b92c0 for sensor[0].handle=0x0000000b
+2022-02-27 20:42:45.056 17414-17443/? D/SensorService: removing connection 0xb4000072a75b92c0 for sensor[1].handle=0x00000033
+2022-02-27 20:42:45.056 17414-17443/? D/SensorService: removing connection 0xb4000072a75b92c0 for sensor[2].handle=0x000000bf
+2022-02-27 20:42:45.056 17414-17443/? D/SensorService: removing connection 0xb4000072a75b92c0 for sensor[3].handle=0x00000110
+2022-02-27 20:42:45.056 2429-2433/? E/Diag_Lib: [IMS_AP]"ims-rtp-daemon ims_rtp_qmi_handler_thread_func waiting on select thread>"
+2022-02-27 20:42:45.057 1081-1081/? D/OppoExLayer: ~Layer() sequence=26091, name=Surface(name=d80fee NavigationBar0)/@0x1f034d6 - animation-leash#1@0xb40000715cf0e000
+2022-02-27 20:42:45.057 1081-1081/? D/OppoExLayer: ~Layer() sequence=26075, name=Surface(name=d099261 StatusBar)/@0x58c020a - animation-leash#1@0xb40000715cfc5000
+2022-02-27 20:42:45.057 1081-1081/? D/OppoExLayer: ~Layer() sequence=26076, name=Surface(name=d80fee NavigationBar0)/@0x1f034d6 - animation-leash#1@0xb400007166a34000
+2022-02-27 20:42:45.057 1081-1081/? D/OppoExLayer: ~Layer() sequence=26090, name=Surface(name=d099261 StatusBar)/@0x58c020a - animation-leash#1@0xb400007166cad000
+2022-02-27 20:42:45.102 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:45.338 1450-1612/? I/QC-NETMGR-LIB: NetmgrNetdClientSetForwardingBetweenInterfaces(): Looking for Netd service
+2022-02-27 20:42:45.339 1450-1612/? I/QC-NETMGR-LIB: NetmgrNetdClientSetForwardingBetweenInterfaces(): starting command
+2022-02-27 20:42:45.339 1450-1612/? I/QC-NETMGR-LIB: setForwardingBetweenInterfaces() r_rmnet_data0 wlan0: Attempting setForwardingBetweenInterfaces
+2022-02-27 20:42:45.340 1450-1612/? I/QC-NETMGR-LIB: NetmgrNetdClientSetForwardingBetweenInterfaces(): completed command
+2022-02-27 20:42:45.730 19625-19904/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:45.753 19625-19904/? I/chatty: uid=10220(com.coloros.gamespace) pool-3-thread-1 identical 10 lines
+2022-02-27 20:42:45.781 19625-19904/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:45.989 7649-8371/? D/AudioManager: getStreamVolume packageName=com.music.festival.battle, index=4, streamType=3
+2022-02-27 20:42:46.558 7649-8268/? D/AudioManager: getStreamVolume packageName=com.music.festival.battle, index=4, streamType=3
+2022-02-27 20:42:46.561 7649-8268/? I/chatty: uid=10336(com.music.festival.battle) JavaBridge identical 1 line
+2022-02-27 20:42:46.592 7649-8268/? D/AudioManager: getStreamVolume packageName=com.music.festival.battle, index=4, streamType=3
+2022-02-27 20:42:46.669 19796-20078/? E/libc: Access denied finding property "vendor.oplus.media.vpp.osie_sr.on"
+2022-02-27 20:42:46.852 1414-1414/? E/cr_BTSPrefs: No data found for task id: 53
+2022-02-27 20:42:46.853 1414-1414/? E/cr_BkgrdTaskScheduler: Task cannot be canceled because no data was found instorage or data was invalid
+2022-02-27 20:42:46.910 7649-7729/? W/AudioCapabilities: Unsupported mime audio/ffmpeg
+2022-02-27 20:42:46.911 7649-7729/? W/VideoCapabilities: Unsupported mime image/vnd.android.heic
+2022-02-27 20:42:46.911 7649-7729/? W/VideoCapabilities: Unsupported mime video/ffmpeg
+2022-02-27 20:42:46.922 7649-7728/? I/AAudio: AAudioStreamBuilder_openStream() called ----------------------------------------
+2022-02-27 20:42:46.922 7649-7728/? I/AudioStreamBuilder: rate   =  24000, channels  = 1, format   = 5, sharing = SH, dir = OUTPUT
+2022-02-27 20:42:46.922 7649-7728/? I/AudioStreamBuilder: device =      0, sessionId = -1, perfMode = 11, callback: ON with frames = 512
+2022-02-27 20:42:46.922 7649-7728/? I/AudioStreamBuilder: usage  =      1, contentType = 0, inputPreset = 0, allowedCapturePolicy = 0
+2022-02-27 20:42:46.922 7649-7728/? I/AudioStreamBuilder: privacy sensitive = false
+2022-02-27 20:42:46.922 7649-7728/? D/AudioStreamBuilder: build() MMAP not used because AAUDIO_PERFORMANCE_MODE_LOW_LATENCY not requested.
+2022-02-27 20:42:46.922 7649-7728/? D/festival.battl: PlayerBase::PlayerBase()
+2022-02-27 20:42:46.923 7649-7728/? D/AudioStreamTrack: open(), request notificationFrames = 512, frameCount = 0
+2022-02-27 20:42:46.923 7649-7728/? D/AudioTrack: set() streamType -1, sampleRate 24000, format 0x5, channelMask 0x1, frameCount 0, flags #8, notificationFrames 512, sessionId 0, transferType 1, uid -1, pid -1 cbf 1
+2022-02-27 20:42:46.923 7649-7728/? D/AudioTrack: gATLogLevel = 0
+2022-02-27 20:42:46.923 7649-7728/? D/AudioTrack: set(): Building AudioTrack with attributes: usage=1 content=2 flags=0x0 tags=[]
+2022-02-27 20:42:46.924 17114-17114/? D/audio_hw_primary: adev_get_parameters:vr_audio_mode_on
+2022-02-27 20:42:46.924 17114-17114/? D/audio_hw_primary: adev_get_parameters: exit: returns - vr_audio_mode_on=false
+2022-02-27 20:42:46.924 17118-30660/? I/hash_map_utils: key: 'vr_audio_mode_on' value: ''
+2022-02-27 20:42:46.926 17118-30660/? I/AudioPolicyManagerCustom: VR mode is 0, switch to primary output if request is for fast|raw
+2022-02-27 20:42:46.926 17114-17114/? E/EffectFactoryHAL: Error querying effect descriptor for 9d4921da-8225-4f29-aefa-39537a04bcaa: No such file or directory
+2022-02-27 20:42:46.927 17118-17178/? V/GameAudioEffects: outputSelected a new track request output with porId(217), session(2001), uid(10336) stream(3) flags(0x8)
+2022-02-27 20:42:46.927 17118-17179/? V/OplusAudioLowLatency: outputSelected a new track request output with device(0x2),  porId(217), session(2001), uid(10336) stream(3) flags(0x8)
+2022-02-27 20:42:46.927 17118-30660/? D/AudioFlinger: createTrack_l output 21  latencyMs 109 mNormalFrameCount 1920 mSampleRate 48000
+2022-02-27 20:42:46.927 17118-30660/? D/AudioFlinger: createTrack_l output 21 minFrameCount 1928 frameCount 0
+2022-02-27 20:42:46.927 17118-30660/? D/AudioFlinger: createTrack_l output 21 final frameCount 1928 for track session 2001 , mFrameCount 1920, mNormalFrameCount 1920
+2022-02-27 20:42:46.930 17118-30660/? D/AF::TrackHandle: OpPlayAudio: track:245 usage:1 not muted
+2022-02-27 20:42:46.931 7649-7727/? I/cr_MediaCodecBridge: create MediaCodec video decoder, mime video/avc
+2022-02-27 20:42:46.932 7649-7727/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:46.933 7649-7728/? D/AudioTrack: createTrack state 0 output.outputId=21
+2022-02-27 20:42:46.933 7649-7727/? D/ACodec: ACodec() ro.oplus.audio.effect.type = dirac ro.oplus.audio.dolby.type = none
+2022-02-27 20:42:46.933 7649-7727/? I/ACodec: new ACodec()
+2022-02-27 20:42:46.933 7649-7727/? D/ACodec: Now uninitialized
+2022-02-27 20:42:46.933 7649-7727/? D/OplusACodec: OplusACodec [131]: 
+2022-02-27 20:42:46.933 7649-7727/? D/OplusACodec: getBufferChannel: New
+2022-02-27 20:42:46.934 17118-17178/? E/GameAudioEffects: outputSelected call  getListValueByPid(fast-audio-effects) but return null, callingPid(7649))
+2022-02-27 20:42:46.934 17118-17179/? V/OplusAudioLowLatency: outputSelected: new track created with portId(217) by callingpid(7649), Is it in a2dp-low-latency whitelist?  Answer(0)
+2022-02-27 20:42:46.935 7649-7728/? D/AudioTrack: setVolume left 1.000 right 1.000 , callingPid 7649
+2022-02-27 20:42:46.935 7649-7728/? D/AAudioStream: setState(s#1) from 0 to 2
+2022-02-27 20:42:46.936 7649-8397/? I/OMXClient: IOmx service obtained
+2022-02-27 20:42:46.936 7649-8397/? I/festival.battl: OPPOLoadFrame::CreateSpace -- create new namespace oppoex
+2022-02-27 20:42:46.937 7649-7728/? I/AAudio: AAudioStreamBuilder_openStream() returns 0 = AAUDIO_OK for s#1 ----------------
+2022-02-27 20:42:46.937 7649-8397/? I/festival.battl: OPPOLoadFrame::CreateSpace -- executable_path = /system/bin/app_process64
+2022-02-27 20:42:46.937 7649-8397/? I/festival.battl: OPPOLoadFrame::GetCurrentSection -- ld_config_file_path = /linkerconfig/ld.config.txt
+2022-02-27 20:42:46.937 7649-8397/? I/festival.battl: OPPOLoadFrame::CreateSpace -- section = system
+2022-02-27 20:42:46.937 7649-8397/? I/festival.battl: OPPOLoadFrame::ReadLink --  read /system/etc/public.libraries.txt success!
+2022-02-27 20:42:46.937 7649-8397/? I/festival.battl: OPPOLoadFrame::ReadLink --  read /apex/com.android.vndk.v30/etc/llndk.libraries.30.txt success!
+2022-02-27 20:42:46.937 7649-8397/? I/festival.battl: OPPOLoadFrame::ReadLink --  read /system_ext/oppoex/public.libraries-oppoex.txt success!
+2022-02-27 20:42:46.938 7649-8397/? I/festival.battl: OPPOLoadFrame::ReadLink --  read /apex/com.android.vndk.v30/etc/vndksp.libraries.30.txt success!
+2022-02-27 20:42:46.938 7649-8397/? I/festival.battl: OPPOLoadFrame::ReadLink --  read /vendor/etc/public.libraries.txt success!
+2022-02-27 20:42:46.938 7649-8397/? I/festival.battl: OPPOLoadFrame::CreateSpace -- paths = /my_company/lib64/oppoex:/my_carrier/lib64/oppoex:/my_region/lib64/oppoex:/my_product/lib64/oppoex:/system_ext/lib64/oppoex:/system/lib64/oppoex
+2022-02-27 20:42:46.938 7649-7728/? D/AAudio: AAudioStream_requestStart(s#1) called --------------
+2022-02-27 20:42:46.938 7649-7728/? D/AAudioStream: setState(s#1) from 2 to 3
+2022-02-27 20:42:46.938 7649-7728/? D/AudioTrack: start(217): prior state:STATE_STOPPED output 21 stream 3 session 2001
+2022-02-27 20:42:46.938 7649-8397/? I/festival.battl: OPPOLoadFrame::CreateSpace -- link default : libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativewindow.so:libneuralnetworks.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libRS.so:libandroid_net.so:libbinder_ndk.so:libc.so:libcgrouprc.so:libclang_rt.asan-aarch64-android.so:libclang_rt.asan-arm-android.so:libdl.so:libft2.so:liblog.so:libm.so:libmediandk.so:libnativewindow.so:libneuralnetworks.so:libselinux.so:libsync.so:libvndksupport.so:libvulkan.so:libbinder.so
+2022-02-27 20:42:46.939 7649-8397/? I/festival.battl: OPPOLoadFrame::CreateSpace -- link sphal : libqti-perfd-client.so:libadsprpc.so:libcdsprpc.so:libsdsprpc.so:libfastcvopt.so:liblistensoundmodel2.so:libOpenCL.so:libAlgoProcess.so:libancbase_rt_bokeh.so:libAncHumBokeh.so:libstblur_api.so:libstdc++.so:libAncHumVideoBase.so:libmidasserviceintf.so:libarcsoft_scbokeh_video.so
+2022-02-27 20:42:46.939 7649-8397/? I/festival.battl: OPPOLoadFrame::CreateSpace -- link vndk : android.hardware.common-V1-ndk_platform.so:android.hardware.graphics.common-V1-ndk_platform.so:android.hardware.graphics.common@1.0.so:android.hardware.graphics.common@1.1.so:android.hardware.graphics.common@1.2.so:android.hardware.graphics.mapper@2.0.so:android.hardware.graphics.mapper@2.1.so:android.hardware.graphics.mapper@3.0.so:android.hardware.graphics.mapper@4.0.so:android.hardware.renderscript@1.0.so:android.hidl.memory.token@1.0.so:android.hidl.memory@1.0-impl.so:android.hidl.memory@1.0.so:android.hidl.safe_union@1.0.so:libRSCpuRef.so:libRSDriver.so:libRS_internal.so:libbacktrace.so:libbase.so:libbcinfo.so:libblas.so:libc++.so:libcompiler_rt.so:libcutils.so:libgralloctypes.so:libhardware.so:libhidlbase.so:libhidlmemory.so:libion.so:libjsoncpp.so:liblzma.so:libprocessgroup.so:libunwindstack.so:libutils.so:libutilscallstack.so:libz.so
+2022-02-27 20:42:46.940 7649-8397/? D/OplusDualHeadPhoneEx: GetOplusDualHeadPhoneEx exp != NULL return handle.
+2022-02-27 20:42:46.940 17118-30660/? D/AudioFlinger: Set HQV-effect off, for the whitelist
+2022-02-27 20:42:46.940 17118-17177/? D/APM_AudioPolicyManager: startOutput portId 217
+2022-02-27 20:42:46.940 17118-17177/? D/APM_AudioPolicyManager: startOutput() output 21, stream 3, session 2001
+2022-02-27 20:42:46.940 17118-17177/? V/GameAudioEffects: outputStarted  portId(217)
+2022-02-27 20:42:46.940 17414-18405/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-27 20:42:46.940 17118-17179/? V/OplusAudioLowLatency: outputStarted  portId(217)
+2022-02-27 20:42:46.941 17118-17177/? D/GameAudioEffects: hasAliveFastEffectTracks  return (0)
+2022-02-27 20:42:46.941 17118-17177/? D/APM_AudioPolicyManager: setOutputDevice() output 21 device {type:0x2,@:} force 0 delayMs 0
+2022-02-27 20:42:46.941 17118-17177/? D/APM_AudioPolicyManager: setOutputDevices() prevDevice {type:0x2,@:}
+2022-02-27 20:42:46.941 17118-17177/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-27 20:42:46.941 17118-17177/? D/APM_AudioPolicyManager: setOutputDevices:filteredDevices isempty 0,getEncodedFormat 0x0,getName = deep_buffer
+2022-02-27 20:42:46.941 17414-18405/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-27 20:42:46.941 17118-17177/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-27 20:42:46.942 17118-17177/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-27 20:42:46.943 17414-18405/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-27 20:42:46.944 1358-1358/? D/OppoAudioState: updateAudioState eventId:1
+2022-02-27 20:42:46.944 1397-19351/? I/OMXMaster: makeComponentInstance(OMX.qcom.video.decoder.avc) in android.hardwar process
+2022-02-27 20:42:46.944 17414-18405/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-27 20:42:46.945 7649-7728/? D/festival.battl: PlayerBase::start() from IPlayer
+2022-02-27 20:42:46.945 7649-7762/? D/AudioStreamLegacy: onAudioDeviceUpdate(deviceId = 3)
+2022-02-27 20:42:46.945 7649-7728/? D/AAudio: AAudioStream_requestStart(s#1) returned 0 ---------
+2022-02-27 20:42:46.945 17114-32155/? E/se.dirac.effect: first processing
+2022-02-27 20:42:46.946 17114-32149/? D/audio_hw_primary: start_output_stream: enter: stream(0xef4c8000)usecase(0: deep-buffer-playback) devices(0x2) is_haptic_usecase(0)
+2022-02-27 20:42:46.946 17414-18405/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-27 20:42:46.947 17114-32149/? D/audio_hw_primary: select_devices for use case (deep-buffer-playback)
+2022-02-27 20:42:46.947 17114-32149/? D/msm8974_platform: platform_get_output_snd_device: enter: output devices(0x2), mode=0
+2022-02-27 20:42:46.947 17114-32149/? D/msm8974_platform: platform_get_output_snd_device: exit: snd_device(speaker)
+2022-02-27 20:42:46.947 17114-32149/? I/msm8974_platform: platform_check_and_set_codec_backend_cfg:becf: afe: bitwidth 16, samplerate 48000 channels 2, backend_idx 0 usecase = 0 device (speaker)
+2022-02-27 20:42:46.947 17114-32149/? I/msm8974_platform: platform_check_and_set_codec_backend_cfg: new_snd_devices[0] is 2
+2022-02-27 20:42:46.947 17114-32149/? I/msm8974_platform: platform_check_codec_backend_cfg:becf: afe: bitwidth 16, samplerate 48000 channels 2, backend_idx 0 usecase = 0 device (speaker)
+2022-02-27 20:42:46.947 17114-32149/? D/msm8974_platform: platform_check_codec_backend_cfg:napb: (0) - (low-latency-playback)id (1) sr 48000 bw (16) ch (2) device speaker
+2022-02-27 20:42:46.947 17414-18405/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-27 20:42:46.948 17414-18405/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-27 20:42:46.949 17114-32149/? D/msm8974_platform: platform_check_codec_backend_cfg:becf: updated afe: bitwidth 16, samplerate 48000 channels 2,backend_idx 0 usecase = 0 device (speaker)
+2022-02-27 20:42:46.949 17114-32149/? I/msm8974_platform: platform_check_codec_backend_cfg:becf: afe: Codec selected backend: 0 updated bit width: 16 and sample rate: 48000
+2022-02-27 20:42:46.949 17114-32149/? D/audio_hw_primary: check_usecases_codec_backend:becf: force routing 0
+2022-02-27 20:42:46.949 17114-32149/? D/audio_hw_primary: check_usecases_codec_backend:becf: (87) check_usecases curr device: speaker, usecase device:speaker backends match 1
+2022-02-27 20:42:46.949 17114-32149/? D/audio_hw_primary: check_usecases_codec_backend:becf: (87) check_usecases curr device: speaker, usecase device: backends match 0
+2022-02-27 20:42:46.949 17114-32149/? D/audio_hw_primary: check_usecases_codec_backend:becf: check_usecases num.of Usecases to switch 0
+2022-02-27 20:42:46.949 17114-32149/? D/hardware_info: hw_info_append_hw_type : device_name = speaker
+2022-02-27 20:42:46.949 17114-32149/? D/audio_hw_primary: enable_snd_device: snd_device(2: speaker), snd_dev_ref_cnt 2
+2022-02-27 20:42:46.949 17114-32149/? D/audio_hw_primary: enable_snd_device: snd_device(2: speaker) is already active
+2022-02-27 20:42:46.949 17114-32149/? D/soundtrigger: audio_extn_sound_trigger_update_stream_status: uc_info->id 0 of type 0 for Event 3, with Raise=1
+2022-02-27 20:42:46.949 17114-32149/? I/sound_trigger_platform: platform_stdev_check_and_update_concurrency: Received PLAYBACK_STREAM event, event type 3, usecase type 0
+2022-02-27 20:42:46.949 17114-32149/? D/sound_trigger_platform: platform_stdev_get_capture_device: Device = 0x80000004
+2022-02-27 20:42:46.949 17114-32149/? D/sound_trigger_platform: platform_stdev_get_capture_device: Available device = 0x80000004
+2022-02-27 20:42:46.949 17114-32149/? D/sound_trigger_platform: platform_stdev_check_and_update_concurrency: dedicated path 1, reset backend 1, tx 0, rx 1, concurrency session allowed
+2022-02-27 20:42:46.949 17114-32149/? D/audio_hw_utils: audio_extn_utils_send_app_type_cfg: usecase->out_snd_device speaker
+2022-02-27 20:42:46.950 17114-32149/? I/audio_hw_utils: send_app_type_cfg_for_device PLAYBACK app_type 69936, acdb_dev_id 15, sample_rate 48000, snd_device_be_idx 187
+2022-02-27 20:42:46.950 17114-32149/? D/ACDB-LOADER: ACDB -> send_audio_cal, acdb_id = 15, path = 0, app id = 0x11130, sample rate = 48000, use_case = 0,buffer_idx_w_path =0, afe_sample_rate = 48000, cal_mode = 1, offset_index = 0
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> send_asm_topology
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TOPOLOGY_ID
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> send_adm_topology
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TOPOLOGY_ID
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> send_audtable
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_INSTANCE_COMMON_TABLE_SIZE
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_INSTANCE_COMMON_TABLE
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_CAL cal_type[11] acdb_id[15] app_type[69936]
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> send_audvoltable
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_INSTANCE_GAIN_DEP_STEP_TABLE_SIZE
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_INSTANCE_GAIN_DEP_STEP_TABLE, vol index 0
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> AUDIO_SET_VOL_CAL cal type = 12
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_INSTANCE_STREAM_TABLE_SIZE
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> send_audstrmtable
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_INSTANCE_STREAM_TABLE
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> audstrm_cal->cal_type.cal_data.cal_size = 536
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> send_afe_topology
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_TOPOLOGY_ID
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> GET_AFE_TOPOLOGY_ID for adcd_id 15, Topology Id 1000e800
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> send_afe_cal
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_INSTANCE_COMMON_TABLE_SIZE
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_INSTANCE_COMMON_TABLE
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> AUDIO_SET_AFE_CAL cal_type[16] acdb_id[15]
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> send_hw_delay : acdb_id = 15 path = 0
+2022-02-27 20:42:46.951 17114-32149/? D/ACDB-LOADER: ACDB -> ACDB_AVSYNC_INFO: ACDB_CMD_GET_DEVICE_PROPERTY
+2022-02-27 20:42:46.951 17114-32149/? D/audio_hw_primary: enable_audio_route: apply mixer and update path: deep-buffer-playback
+2022-02-27 20:42:46.951 17114-32149/? D/audio_route: Apply path: deep-buffer-playback
+2022-02-27 20:42:46.952 17114-32149/? D/audio_hw_primary: select_devices: acdb_id_out: 15
+2022-02-27 20:42:46.952 17114-32149/? D/audio_hw_primary: select_devices: done
+2022-02-27 20:42:46.952 17114-32149/? D/msm8974_platform: platform_set_channel_map mixer_ctl_name:Playback Channel Map0
+2022-02-27 20:42:46.952 17114-32149/? D/msm8974_platform: platform_set_channel_map: set mapping(1 2 0 0 0 0 0 0) for channel:2
+2022-02-27 20:42:46.953 17114-32149/? E/msm8974_platform: platform_set_channel_map: Could not set ctl, error:-1 ch_count:2
+2022-02-27 20:42:46.957 12747-12782/? D/AudioManager: getStreamVolume packageName=com.google.android.googlequicksearchbox, index=4, streamType=3
+2022-02-27 20:42:46.958 1397-19351/? E/android.hardware.media.omx@1.0-service: Service not available yet
+2022-02-27 20:42:46.959 1397-19351/? D/PlatformConfig: getInstance: Enter
+2022-02-27 20:42:46.959 1397-19351/? D/PlatformConfig: getConfigStoreBool: vpp/enable not found(4294967295)
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInstance: Enter
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInt32 Config name: vidc_dec_log_in value: 0
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInstance: Enter
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInt32 Config name: vidc_dec_log_out value: 0
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInstance: Enter
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInt32: Returning default
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInstance: Enter
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInt32: Returning default
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInstance: Enter
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInt32: Returning default
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInstance: Enter
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInt32: Returning default
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInstance: Enter
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInt32 Config name: vidc_disable_hdr value: 3
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInstance: Enter
+2022-02-27 20:42:46.961 1397-19351/? D/PlatformConfig: getInt32: Returning default
+2022-02-27 20:42:46.961 1397-19351/? I/OMX-VDEC-1080P: component_init: OMX.qcom.video.decoder.avc : fd=7
+2022-02-27 20:42:46.968 19159-19159/? D/OppoDiracService: mrDiracEffectBroadcastReceiver action = android.Multimedia.AudioEffect.AudioTrack_BROADCAST
+2022-02-27 20:42:46.968 19159-19159/? D/OppoDiracService: +new tast
+2022-02-27 20:42:46.968 19159-19159/? D/OppoDiracService: -new tast
+2022-02-27 20:42:46.973 1397-19351/? D/PlatformConfig: getInstance: Enter
+2022-02-27 20:42:46.973 1397-19351/? D/PlatformConfig: getInt32: Returning default
+2022-02-27 20:42:46.973 1397-19351/? D/PlatformConfig: getInstance: Enter
+2022-02-27 20:42:46.973 1397-19351/? D/PlatformConfig: getInt32: Returning default
+2022-02-27 20:42:46.974 1397-19351/? I/OMX-VDEC-1080P: omx_vdec::component_init() success : fd=7
+2022-02-27 20:42:46.974 7649-8397/? I/ACodec: Successfully allocate component [OMX.qcom.video.decoder.avc]
+2022-02-27 20:42:46.974 7649-8397/? D/ACodec: AllocateComponent OMX.qcom.video.decoder.avc success
+2022-02-27 20:42:46.974 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] Now Loaded
+2022-02-27 20:42:46.977 17114-32149/? D/audio_hw_primary: start_output_stream: exit
+2022-02-27 20:42:46.977 17114-32149/? D/oplus_pa_boost_vol_aw: output_set_pa_voltage, 157, adev->adev_extends.stream_out_count = 2
+2022-02-27 20:42:46.977 17114-32149/? D/oplus_pa_boost_vol_aw: set_pa_voltage, 122, voltage = 0
+2022-02-27 20:42:46.978 17114-32149/? D/oplus_pa_boost_vol_aw: set_pa_voltage, 150, voltage = 0, adev->adev_extends.pre_boost_index = 0
+2022-02-27 20:42:46.980 7649-8394/? D/AAudioStream: setState(s#1) from 3 to 4
+2022-02-27 20:42:46.981 7649-8396/? I/MediaCodec: MediaCodec will operate in async mode
+2022-02-27 20:42:46.983 7649-8396/? D/SurfaceUtils: connecting to surface 0x728d198010, reason connectToSurface
+2022-02-27 20:42:46.983 7649-8396/? I/MediaCodec: [OMX.qcom.video.decoder.avc] setting surface generation to 7832577
+2022-02-27 20:42:46.983 7649-8396/? D/SurfaceUtils: disconnecting from surface 0x728d198010, reason connectToSurface(reconnect)
+2022-02-27 20:42:46.983 7649-8396/? D/SurfaceUtils: connecting to surface 0x728d198010, reason connectToSurface(reconnect)
+2022-02-27 20:42:46.984 7649-8397/? D/festival.battl: OplusTpCompLogExProxy::getOplusTpCompLogEx -- exp != NULL
+2022-02-27 20:42:46.985 7649-8397/? D/OplusACodec: [configureCodec:L902] OplusFeedbackInfo  mFeedbackID:491964250112
+2022-02-27 20:42:46.985 7649-8397/? D/IAtlas: IAtlas::init CallingPid 7649
+2022-02-27 20:42:46.985 7649-8397/? D/IAtlas: IAtlas::init this 0x7324639d80
+2022-02-27 20:42:46.986 1358-1421/? D/AtlasService: clientsCount 2
+2022-02-27 20:42:46.986 1358-1421/? D/AtlasService: notify 1025 to client
+2022-02-27 20:42:46.986 1358-1421/? D/AtlasService: notify 1025 to client
+2022-02-27 20:42:46.986 1397-19351/? E/OMX-VDEC-1080P: Extension: OMX.google.android.index.storeANWBufferInMetadata not implemented
+2022-02-27 20:42:46.986 1397-19351/? E/OMX-VDEC-1080P: Extension: OMX.google.android.index.configureVideoTunnelMode not implemented
+2022-02-27 20:42:46.986 1397-19351/? E/OMX-VDEC-1080P: Extension: OMX.google.android.index.useAndroidNativeBuffer is supported
+2022-02-27 20:42:46.986 1397-19351/? E/OMX-VDEC-1080P: get_parameter: unknown param 7f000046
+2022-02-27 20:42:46.986 1397-19351/? E/OMXNodeInstance: getParameter(0xf016c584:qcom.decoder.avc, ??(0x7f000046)) ERROR: UnsupportedIndex(0x8000101a)
+2022-02-27 20:42:46.987 7649-8397/? I/ACodec: configureCodec() mime = video/avc
+2022-02-27 20:42:46.987 7649-8397/? D/OplusUtils: ACodec getComponentRole [92]: mime:video/avc
+2022-02-27 20:42:46.987 1397-19351/? E/OMX-VDEC-1080P: set_parameter: Error: 0x80001019, setting param 0x7f00005d
+2022-02-27 20:42:46.987 1397-19351/? E/OMXNodeInstance: setParameter(0xf016c584:qcom.decoder.avc, OMX.google.android.index.allocateNativeHandle(0x7f00005d): Output:1 en=0) ERROR: UnsupportedSetting(0x80001019)
+2022-02-27 20:42:46.987 1397-19351/? E/OMX-VDEC-1080P: Extension: OMX.google.android.index.storeANWBufferInMetadata not implemented
+2022-02-27 20:42:46.987 1397-19351/? E/OMX-VDEC-1080P: get_parameter: unknown param 6f600011
+2022-02-27 20:42:46.987 1397-19351/? E/OMXNodeInstance: getParameter(0xf016c584:qcom.decoder.avc, ??(0x6f600011)) ERROR: UnsupportedIndex(0x8000101a)
+2022-02-27 20:42:46.987 7649-8397/? I/ExtendedACodec: setupVideoDecoder()
+2022-02-27 20:42:46.987 7649-8397/? E/OplusACodec: [GetVideoCodingTypeFromMime:L709] mime:video/avc
+2022-02-27 20:42:46.989 7649-8397/? I/ExtendedACodec: Decoder will be in frame by frame mode
+2022-02-27 20:42:46.990 1397-19351/? E/OMX-VDEC-1080P: Setparameter: unknown param 2130706434
+2022-02-27 20:42:46.990 1397-19351/? E/OMX-VDEC-1080P: set_parameter: Error: 0x8000101a, setting param 0x7f000002
+2022-02-27 20:42:46.990 1397-19351/? E/OMXNodeInstance: setParameter(0xf016c584:qcom.decoder.avc, ??(0x7f000002)) ERROR: UnsupportedIndex(0x8000101a)
+2022-02-27 20:42:46.990 7649-8397/? W/ExtendedACodec: Failed to set frame packing format on component
+2022-02-27 20:42:46.990 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] input format is AMessage(what = 0x00000000) = {
+      int32_t adaptive-playback = 1
+      int32_t roi-on = 0
+      string mime = "video/avc"
+      int32_t width = 854
+      int32_t height = 480
+    }
+2022-02-27 20:42:46.992 1397-19351/? E/OMXNodeInstance: getConfig(0xf016c584:qcom.decoder.avc, ??(0x7f000062)) ERROR: UnsupportedSetting(0x80001019)
+2022-02-27 20:42:46.993 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] output format is AMessage(what = 0x00000000) = {
+      int32_t color-range = 2
+      int32_t color-standard = 1
+      int32_t color-transfer = 3
+      int32_t roi-on = 0
+      string mime = "video/raw"
+      int32_t stride = 1024
+      int32_t slice-height = 512
+      int32_t color-format = 2141391876
+      Rect crop(0, 0, 853, 479)
+      int32_t android._dataspace = 260
+      Buffer hdr-static-info = {
+        00000000:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  ................
+        00000010:  00 00 00 00 00 00 00 00  00                       .........
+      }
+      int32_t width = 854
+      int32_t height = 480
+    }
+2022-02-27 20:42:46.995 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] Now Loaded->Idle
+2022-02-27 20:42:46.995 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] Allocating 8 buffers of size 6266880 (from 6266880 using PresetByteBuffer) on input port
+2022-02-27 20:42:47.005 1397-19351/? E/OMX-VDEC-1080P: Extension: OMX.google.android.index.AndroidNativeBufferConsumerUsage not implemented
+2022-02-27 20:42:47.006 7649-8397/? D/SurfaceUtils: set up nativeWindow 0x728d198010 for 854x480, color 0x7fa30c04, rotation 0, usage 0x20002900
+2022-02-27 20:42:47.010 17120-25757/? W/ResourceManagerService: Ignoring request to add new resource entry with value <= 0
+2022-02-27 20:42:47.010 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] Now Idle->Executing
+2022-02-27 20:42:47.011 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] Now Executing
+2022-02-27 20:42:47.021 19159-19357/? D/OppoDiracService: handleMessage, msg what = 21
+2022-02-27 20:42:47.021 19159-31437/? D/DiracDetectSceneService: Task.run, effectenable = true
+2022-02-27 20:42:47.022 19159-31437/? D/DiracDetectSceneService: checkAndSetDirac : activeAudioPids = :7649
+2022-02-27 20:42:47.022 19159-31437/? D/DiracDetectSceneService: +activePidList = [7649]
+2022-02-27 20:42:47.023 1397-19351/? E/OMXNodeInstance: getConfig(0xf016c584:qcom.decoder.avc, ??(0x7f000062)) ERROR: UnsupportedSetting(0x80001019)
+2022-02-27 20:42:47.023 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] output format is AMessage(what = 0x00000000) = {
+      int32_t color-range = 2
+      int32_t color-standard = 1
+      int32_t color-transfer = 3
+      int32_t roi-on = 0
+      string mime = "video/raw"
+      int32_t stride = 1024
+      int32_t slice-height = 512
+      int32_t color-format = 2141391876
+      Rect crop(0, 0, 863, 479)
+      int32_t android._dataspace = 260
+      Buffer hdr-static-info = {
+        00000000:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  ................
+        00000010:  00 00 00 00 00 00 00 00  00                       .........
+      }
+      int32_t width = 864
+      int32_t height = 480
+    }
+2022-02-27 20:42:47.028 1397-19351/? E/OMX-VDEC-1080P: Extension: OMX.google.android.index.AndroidNativeBufferConsumerUsage not implemented
+2022-02-27 20:42:47.028 7649-8397/? D/SurfaceUtils: set up nativeWindow 0x728d198010 for 864x480, color 0x7fa30c04, rotation 0, usage 0x20002900
+2022-02-27 20:42:47.037 19625-8403/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.038 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] Now Executing
+2022-02-27 20:42:47.040 19159-31437/? D/DiracDetectSceneService: +activeAudioAppList = [com.music.festival.battle]
+2022-02-27 20:42:47.040 19159-31437/? D/DiracDetectSceneService: isInMusicAppList appName:com.music.festival.battle
+2022-02-27 20:42:47.040 19159-31437/? D/DiracDetectSceneService: isInVideoAppList appName:com.music.festival.battle
+2022-02-27 20:42:47.040 19159-31437/? D/DiracDetectSceneService: isInGameAppList appName:com.music.festival.battle
+2022-02-27 20:42:47.040 19159-31437/? D/DiracDetectSceneService: isInVideo2AppList appName:com.music.festival.battle
+2022-02-27 20:42:47.040 19625-8403/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.040 19159-31437/? D/OppoDiracService: commonDiracToast str = this app not in list, Service Close Dirac
+2022-02-27 20:42:47.040 19159-31437/? D/DiracDetectSceneService: this case is not in app list
+2022-02-27 20:42:47.040 19159-31437/? D/OppoDiracService: setDiracEffectInternal ++++ enable = false mode = NONE mSceneModeForUI:AUTO
+2022-02-27 20:42:47.040 19159-31437/? D/OppoDiracService: isHeadsetOn mWiredHeadsetOn:false mA2dpConnected:false
+2022-02-27 20:42:47.040 19159-31437/? D/OppoDiracService: ignore this time setDiracEnalbe, enable = false mode = NONE mSceneModeForUI = AUTO
+2022-02-27 20:42:47.043 19625-8403/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.049 19625-8403/? I/chatty: uid=10220(com.coloros.gamespace) IntentService[C identical 3 lines
+2022-02-27 20:42:47.052 19625-8403/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.052 1397-19351/? E/OMXNodeInstance: getConfig(0xf016c584:qcom.decoder.avc, ??(0x7f000062)) ERROR: UnsupportedSetting(0x80001019)
+2022-02-27 20:42:47.053 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] output format is AMessage(what = 0x00000000) = {
+      int32_t color-range = 2
+      int32_t color-standard = 1
+      int32_t color-transfer = 3
+      int32_t roi-on = 0
+      string mime = "video/raw"
+      int32_t stride = 1024
+      int32_t slice-height = 512
+      int32_t color-format = 2141391876
+      Rect crop(0, 0, 853, 479)
+      int32_t android._dataspace = 260
+      Buffer hdr-static-info = {
+        00000000:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  ................
+        00000010:  00 00 00 00 00 00 00 00  00                       .........
+      }
+      int32_t width = 864
+      int32_t height = 480
+    }
+2022-02-27 20:42:47.054 19625-8403/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.058 1397-19351/? E/OMX-VDEC-1080P: Extension: OMX.QTI.index.config.video.getdsmode not implemented
+2022-02-27 20:42:47.058 7649-8222/? D/NdkImageReader: acquireImageLocked: Overriding buffer format YUV_420_888 to 0x7fa30c04.
+2022-02-27 20:42:47.061 19625-8403/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.063 19625-8403/? I/chatty: uid=10220(com.coloros.gamespace) IntentService[C identical 1 line
+2022-02-27 20:42:47.064 19625-8403/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.075 17118-17392/? D/AudioFlinger: mixer(0xb400007828e79200) throttle end: throttle time(45)
+2022-02-27 20:42:47.448 17414-18405/? D/WifiNl80211Manager: Scan result ready event
+2022-02-27 20:42:47.466 17414-17760/? D/WificondScannerImpl: Filtering out 2 scan results.
+2022-02-27 20:42:47.466 17414-17760/? D/WificondScannerImpl: Filtering out 2 scan results.
+2022-02-27 20:42:47.480 17414-17714/? D/OplusPlatformManagerExt:  OplusPlatformManagerExt getInstance: com.oplus.server.wifi.OplusPlatformManagerImplExt@19f0983
+2022-02-27 20:42:47.482 17414-17714/? I/chatty: uid=1000(system) WifiHandlerThre identical 7 lines
+2022-02-27 20:42:47.482 17414-17714/? D/OplusPlatformManagerExt:  OplusPlatformManagerExt getInstance: com.oplus.server.wifi.OplusPlatformManagerImplExt@19f0983
+2022-02-27 20:42:47.486 17414-17714/? D/OplusClientModeImpl2: handleScanResultEvent2
+2022-02-27 20:42:47.504 17414-17714/? D/OplusAutoConnectManager: find scanConfKey "L176b5a3854in wlan assistant NetworkRecords
+2022-02-27 20:42:47.506 17414-17714/? D/OplusAutoConnectManager: find scanConfKey "L176b5a3854in wlan assistant NetworkRecords
+2022-02-27 20:42:47.509 19625-20128/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.511 19625-20128/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.512 7649-8371/? D/AudioManager: getStreamVolume packageName=com.music.festival.battle, index=4, streamType=3
+2022-02-27 20:42:47.513 19625-20128/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.181 17414-17829/? I/chatty: uid=1000(system) DnsEventHandleT identical 12 lines
+2022-02-27 20:42:47.187 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:47.538 17414-17443/? V/AlarmManager: set(PendingIntent{86bac89: PendingIntentRecord{a719118 com.google.android.gms/com.google.android.gms.location_base broadcastIntent}}) : type=2 when=151904239whenElapsed151904239maxWhen =151906739 win=2500 interval=0 flags=0x0 pkg = com.google.android.gms
+2022-02-27 20:42:47.528 19625-20128/? I/chatty: uid=10220(com.coloros.gamespace) pool-3-thread-3 identical 7 lines
+2022-02-27 20:42:47.529 19625-20128/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.542 17414-20302/? D/OplusNlpProxy: OplusNlpProxy onlocation changed!! location:Location[network 10,79****,106,72**** hAcc=22 et=+1d18h11m24s301ms alt=25.100000381469727 vAcc=1 sAcc=??? bAcc=??? {adiu=null}]
+2022-02-27 20:42:47.542 17414-20302/? D/LocationManagerService: incoming location from: network
+2022-02-27 20:42:47.542 17414-20302/? D/LocationManagerService: incoming location from: network
+2022-02-27 20:42:47.542 17414-20302/? D/OplusGnssWhiteListProxy: on get OplusGnssWhiteListProxy!
+2022-02-27 20:42:47.545 17414-20302/? I/chatty: uid=1000(system) Binder:17414_1D identical 4 lines
+2022-02-27 20:42:47.545 17414-20302/? D/OplusGnssWhiteListProxy: on get OplusGnssWhiteListProxy!
+2022-02-27 20:42:47.547 17414-20304/? I/LocationManagerService: remove b932479
+2022-02-27 20:42:47.547 17414-20304/? D/OplusNlpProxy: OplusNlpProxy setRequest! NLP is: gms
+2022-02-27 20:42:47.567 17414-20302/? V/AlarmManager: set(PendingIntent{71d41ee: PendingIntentRecord{a719118 com.google.android.gms/com.google.android.gms.location_base broadcastIntent}}) : type=2 when=151904239whenElapsed151904239maxWhen =151904239 win=0 interval=0 flags=0x0 pkg = com.google.android.gms
+2022-02-27 20:42:47.568 19625-20128/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:47.932 7649-7649/? D/ViewRootImpl: enqueueInputEventMotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=396.0, y[0]=296.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67474909, downTime=67474909, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:47.933 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=396.0, y[0]=296.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67474909, downTime=67474909, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:47.933 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=396.0, y[0]=296.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67474909, downTime=67474909, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:47.933 912-912/? D/ORMS_HAL: OrmsHalService write file /proc/sys/kernel/input_boost_enabled - 1.
+2022-02-27 20:42:47.939 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:47.939 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:47.939 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:47.939 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:47.977 912-912/? D/ORMS_HAL: OrmsHalService write file /proc/sys/kernel/slide_boost_enabled - 1.
+2022-02-27 20:42:47.982 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:47.982 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:47.982 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:47.982 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:47.991 7649-7649/? D/ViewRootImpl[GameStateActivity]: processMotionEvent MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=281.0, y[0]=411.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67474968, downTime=67474909, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:47.991 7649-7649/? D/ViewRootImpl[GameStateActivity]: dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=281.0, y[0]=411.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=67474968, downTime=67474909, deviceId=3, source=0x1002, displayId=0 }
+2022-02-27 20:42:47.992 912-912/? D/ORMS_HAL: OrmsHalService write file /proc/sys/kernel/slide_boost_enabled - 0.
+2022-02-27 20:42:47.993 912-912/? D/ORMS_HAL: OrmsHalService write file /proc/sys/kernel/slide_boost_enabled - 1.
+2022-02-27 20:42:48.000 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:48.000 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:48.000 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:48.000 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:48.011 7649-8397/? I/OplusFeedbackInfo: 0x73144f7c00 OMX.qcom.video.decoder.avc 864x480 inputFps=20 outputFps=15 renderFps=1
+2022-02-27 20:42:48.011 7649-8397/? D/OplusFeedbackInfo: [notifyFpsToSF:L421] fixFps=-1 currentFps=1 isRelease=0
+2022-02-27 20:42:48.011 1081-1164/? D/DispPerfService: Codec Notify OVFR fixFPS = -1, calFPS = 1, codecOn = 1
+2022-02-27 20:42:48.355 7794-7860/? I/GH.ConnLoggerV2: Session 39ea544c-865c-4292-88d2-12c93c4aaa9d expired
+2022-02-27 20:42:48.359 17414-18405/? D/OplusGnssWhiteListProxy: on get OplusGnssWhiteListProxy!
+2022-02-27 20:42:48.373 7794-7844/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:48.701 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:48.720 17414-17782/? D/JobScheduler.Temperature: get temperature=36.788
+2022-02-27 20:42:48.386 7794-7844/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:42:48.918 912-912/? D/ORMS_HAL: OrmsHalService write file /proc/sys/kernel/slide_boost_enabled - 0.
+2022-02-27 20:42:48.923 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:48.923 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:48.923 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:48.923 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:49.012 7649-8397/? I/OplusFeedbackInfo: 0x73144f7c00 OMX.qcom.video.decoder.avc 864x480 inputFps=0 outputFps=0 renderFps=0
+2022-02-27 20:42:49.015 1328-1344/? D/bspCriticalLog: power_monitor cpu-0-0-usr: open fail -1
+2022-02-27 20:42:49.015 1328-1342/? D/bspCriticalLog: thermal_monitor ddr-usr: open fail -1
+2022-02-27 20:42:49.015 1328-1342/? D/bspCriticalLog: thermal_monitor gpuss-0-usr: open fail -1
+2022-02-27 20:42:49.015 1328-1342/? D/bspCriticalLog: thermal_monitor cpu-0-0-usr: open fail -1
+2022-02-27 20:42:49.060 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:49.210 17414-17479/? D/BatteryLed: getLightInColorState, oppoLightMgr empty!
+2022-02-27 20:42:49.225 18244-18244/? D/DeviceStatisticsService: chargerType=0 batteryLevel=100 totalBatteryCapacity=5000000
+2022-02-27 20:42:49.228 19666-8156/? E/MCS2.0_CIPHER_ALGO: checkSign 1  
+2022-02-27 20:42:49.229 19666-8156/? D/MCS2.0_CIPHER_ALGO: riv native_AES_encrypt flag 0
+2022-02-27 20:42:49.232 19666-8156/? D/MCS2.0_CIPHER_ALGO: riv native_AES_encrypt flag 0
+2022-02-27 20:42:49.285 17124-22177/? E/sensors-hal: ssc_conn_event_cb:649, event[0] msg_id=1025, ts=2916402702160 sensor_type = device_orient  Wakeup
+2022-02-27 20:42:49.285 17124-22177/? E/sensors-hal: handle_sns_client_event:56, ro.build.flavor defined by oplus
+2022-02-27 20:42:49.285 17124-22177/? E/sensors-hal: handle_sns_client_event:114, device_orient_event:oplus ts=151889622158002, type=3, count=717
+2022-02-27 20:42:49.289 17414-17458/? V/WindowOrientationListener: onSensorChanged mDesiredRotation = 3 newRotation = 3
+2022-02-27 20:42:49.291 17414-17458/? I/InputDispatcher: setInputDispatchMode: enabled=1, frozen=1
+2022-02-27 20:42:49.310 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:49.310 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:49.310 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:49.310 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:49.313 1081-1081/? D/DispPerfService: sched_setaffinity: ret(-1) error(Invalid argument)
+2022-02-27 20:42:49.322 1081-1164/? D/DispPerfService: onframeavailable pid=17414, slot=0, seq=26096, name=system_server:RotationLayer#0
+2022-02-27 20:42:49.327 1081-1081/? E/OppoExLayer: using cid as pid, cid=17414, name=BackColorSurface#0
+2022-02-27 20:42:49.328 1081-1081/? D/OppoExSurfaceFlinger: re-input flinger 1
+2022-02-27 20:42:49.328 1081-1081/? D/DispPerfService: AIRefreshRate enable input motion 0x1
+2022-02-27 20:42:49.328 17951-17951/? D/Divider: Position in OnDisplayChangingListener is 1202
+2022-02-27 20:42:49.331 17414-17461/? V/WindowManager: Orientation start waiting for draw, mDrawState=DRAW_PENDING in Window{1f2d695 u0 AssistOverlayBottom}, surfaceController Surface(name=AssistOverlayBottom)/@0x32ba055
+2022-02-27 20:42:49.331 17414-17461/? V/WindowManager: Orientation start waiting for draw, mDrawState=DRAW_PENDING in Window{d80fee u0 NavigationBar}, surfaceController Surface(name=NavigationBar0)/@0xcc96137
+2022-02-27 20:42:49.331 17414-17461/? V/WindowManager: Orientation start waiting for draw, mDrawState=DRAW_PENDING in Window{d099261 u0 StatusBar}, surfaceController Surface(name=StatusBar)/@0xbb46570
+2022-02-27 20:42:49.331 17414-17461/? V/WindowManager: Orientation start waiting for draw, mDrawState=DRAW_PENDING in Window{88dad7 u0 com.music.festival.battle/com.es.gamestate.GameStateActivity}, surfaceController Surface(name=com.music.festival.battle/com.es.gamestate.GameStateActivity)/@0xf5f08a9
+2022-02-27 20:42:49.337 17414-8433/? D/ColorAccidentallyManager: accidentPrevention >>> updateTouchPanelInfo: 0,2,0
+2022-02-27 20:42:49.337 17414-8433/? D/ColorAccidentallyManager: accidentPrevention >>> writeNarrowFile: /proc/touchpanel/oplus_tp_limit_whitelist, 0
+2022-02-27 20:42:49.337 17414-8433/? D/ColorAccidentallyManager: accidentPrevention >>> writeNarrowFile: /proc/touchpanel/oplus_tp_direction, 2
+2022-02-27 20:42:49.337 17414-8433/? D/ColorAccidentallyManager: accidentPrevention >>> writeNarrowFile: /proc/touchpanel/oplus_tp_limit_enable, 0
+2022-02-27 20:42:49.340 17414-17460/? I/ActivityTaskManager: Config changes=20000000 {1.0 ?mcc?mnc [vi_VN] ldltr sw360dp w723dp h323dp 480dpi nrml long land finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2412, 1080) mAppBounds=Rect(132, 0 - 2302, 1080) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.17607mThemeChanged= 0, mThemeChangedFlags= 0, mFlipFont= 0, mAccessibleChanged= -1, mUxIconConfig= 3468923383113580577, mMaterialColor= 0, mUserId= 0, mFontUserId= 0, mFontVariationSettings= 226, mIconPackName= , mDarkModeBackgroundMaxL= 0.0, mDarkModeDialogBgMaxL= 27.0, mDarkModeForegroundMinL= 100.0, mOplusConfigType= 1}
+2022-02-27 20:42:49.345 1081-1081/? D/OppoExSurfaceFlinger: re-input flinger 1
+2022-02-27 20:42:49.345 1081-1081/? D/DispPerfService: AIRefreshRate enable input motion 0x1
+2022-02-27 20:42:49.359 1081-1081/? D/OppoExLayer: ~Layer() sequence=26093, name=Surface(name=d80fee NavigationBar0)/@0x1f034d6 - animation-leash#0@0xb40000715cfae000
+2022-02-27 20:42:49.363 17414-17460/? I/WindowManager: Override config changes=20000000 {1.0 ?mcc?mnc [vi_VN] ldltr sw360dp w723dp h323dp 480dpi nrml long land finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2412, 1080) mAppBounds=Rect(132, 0 - 2302, 1080) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.17607mThemeChanged= 0, mThemeChangedFlags= 0, mFlipFont= 0, mAccessibleChanged= -1, mUxIconConfig= 3468923383113580577, mMaterialColor= 0, mUserId= 0, mFontUserId= 0, mFontVariationSettings= 226, mIconPackName= , mDarkModeBackgroundMaxL= 0.0, mDarkModeDialogBgMaxL= 27.0, mDarkModeForegroundMinL= 100.0, mOplusConfigType= 1} for displayId=0
+2022-02-27 20:42:49.365 17951-18744/? D/ColorEventInterceptManager: start updateInvalidRegion, regionKey: gesture, region_size: 0, disposable: false, isDelete: false, bundle == null: true
+2022-02-27 20:42:49.365 17414-20338/? E/InputManager: Uncorrect parameters, updateInvalidRegion failed
+2022-02-27 20:42:49.365 17414-17460/? I/ColorMiniZoomWindowManagerService: onDisplayChanged: Rotation changer from 1  to 3
+2022-02-27 20:42:49.369 17414-17460/? V/WindowManager: Orientation start waiting for draw, mDrawState=DRAW_PENDING in Window{1f2d695 u0 AssistOverlayBottom}, surfaceController Surface(name=AssistOverlayBottom)/@0x32ba055
+2022-02-27 20:42:49.369 17414-17460/? V/WindowManager: Orientation start waiting for draw, mDrawState=DRAW_PENDING in Window{d80fee u0 NavigationBar}, surfaceController Surface(name=NavigationBar0)/@0xcc96137
+2022-02-27 20:42:49.369 17414-17460/? V/WindowManager: Orientation start waiting for draw, mDrawState=DRAW_PENDING in Window{d099261 u0 StatusBar}, surfaceController Surface(name=StatusBar)/@0xbb46570
+2022-02-27 20:42:49.370 17414-17460/? V/WindowManager: Orientation start waiting for draw, mDrawState=DRAW_PENDING in Window{88dad7 u0 com.music.festival.battle/com.es.gamestate.GameStateActivity}, surfaceController Surface(name=com.music.festival.battle/com.es.gamestate.GameStateActivity)/@0xf5f08a9
+2022-02-27 20:42:49.372 7705-7705/? E/OplusCommonManager: remote is null: activity_task
+2022-02-27 20:42:49.372 7705-7705/? D/OplusCommonManager: Retry remote is null: true
+2022-02-27 20:42:49.373 17414-17460/? D/DisplayManagerService: Delivering display event: displayId=0, event=2
+2022-02-27 20:42:49.374 17414-17517/? D/OppoPowerManagerHelper: onDisplayChanged:0
+2022-02-27 20:42:49.374 17414-17414/? I/OppoWallpaperManagerServiceHelper: onDisplayChanged. displayId = 0
+2022-02-27 20:42:49.378 1081-1081/? D/OppoExSurfaceFlinger: re-input flinger 1
+2022-02-27 20:42:49.378 1081-1081/? D/DispPerfService: AIRefreshRate enable input motion 0x1
+2022-02-27 20:42:49.379 21790-22343/? I/BtGatt.ScanManager: msg.what = 8
+2022-02-27 20:42:49.383 21790-22343/? I/BtGatt.ScanManager: msg.what = 5
+2022-02-27 20:42:49.389 17414-17460/? I/InputManager-JNI: Viewport [0] to add: local:19260619745193857, isActive: true
+2022-02-27 20:42:49.393 17414-17689/? I/InputReader: Reconfiguring input devices, changes=DISPLAY_INFO | 
+2022-02-27 20:42:49.394 17414-17689/? I/InputReader: Device reconfigured: id=3, name='touchpanel', size 1080x2412, orientation 3, mode 1, display id 0
+2022-02-27 20:42:49.395 1081-1081/? E/OppoExLayer: using cid as pid, cid=17414, name=Letterbox - right#0
+2022-02-27 20:42:49.395 1081-1081/? D/OppoExSurfaceFlinger: re-input flinger 1
+2022-02-27 20:42:49.395 1081-1081/? D/DispPerfService: AIRefreshRate enable input motion 0x1
+2022-02-27 20:42:49.397 17414-17461/? I/InputDispatcher: setInputDispatchMode: enabled=1, frozen=0
+2022-02-27 20:42:49.398 17414-17461/? I/WindowManager: Screen frozen for +107ms due to Window{88dad7 u0 com.music.festival.battle/com.es.gamestate.GameStateActivity}
+2022-02-27 20:42:49.411 17414-18405/? E/Region: Region::unflatten() failed, invalid region
+2022-02-27 20:42:49.411 17414-18405/? I/chatty: uid=1000(system) Binder:17414_B identical 2 lines
+2022-02-27 20:42:49.411 17414-18405/? E/Region: Region::unflatten() failed, invalid region
+2022-02-27 20:42:49.424 18790-18790/? I/WeatherS_WeatherServiceVersionUtils: serviceVersionCode8002022
+2022-02-27 20:42:49.425 17414-17460/? D/PowerManagerService: setScreenBrightnessOverrideFromWindowManagerInternal brightness=NaN mScreenBrightnessOverrideFromWindowManager=NaN
+2022-02-27 20:42:49.424 18790-18790/? I/chatty: uid=10205(com.coloros.alarmclock) identical 1 line
+2022-02-27 20:42:49.424 18790-18790/? I/WeatherS_WeatherServiceVersionUtils: serviceVersionCode8002022
+2022-02-27 20:42:49.426 18790-18790/? W/ClockTag ClockWidget.ClockWidgetManager: updateWeatherInfo -- weatherEntity is null!
+2022-02-27 20:42:49.427 17414-18405/? E/Region: Region::unflatten() failed, invalid region
+2022-02-27 20:42:49.425 17414-17460/? I/chatty: uid=1000(system) android.display identical 2 lines
+2022-02-27 20:42:49.425 17414-17460/? D/PowerManagerService: setScreenBrightnessOverrideFromWindowManagerInternal brightness=NaN mScreenBrightnessOverrideFromWindowManager=NaN
+2022-02-27 20:42:49.432 17951-17951/? D/Divider: The orientation of new config is 2
+2022-02-27 20:42:49.433 17414-17460/? D/PowerManagerService: setScreenBrightnessOverrideFromWindowManagerInternal brightness=NaN mScreenBrightnessOverrideFromWindowManager=NaN
+2022-02-27 20:42:49.427 17414-18405/? I/chatty: uid=1000(system) Binder:17414_B identical 2 lines
+2022-02-27 20:42:49.427 17414-18405/? E/Region: Region::unflatten() failed, invalid region
+2022-02-27 20:42:49.444 17414-18770/? E/Region: Region::unflatten() failed, invalid region
+2022-02-27 20:42:49.444 17414-18770/? I/chatty: uid=1000(system) Binder:17414_12 identical 2 lines
+2022-02-27 20:42:49.444 17414-18770/? E/Region: Region::unflatten() failed, invalid region
+2022-02-27 20:42:49.446 1081-1081/? D/OppoExSurfaceFlinger: re-input flinger 1
+2022-02-27 20:42:49.446 1081-1081/? D/DispPerfService: AIRefreshRate enable input motion 0x1
+2022-02-27 20:42:49.450 1081-1081/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-27 20:42:49.450 1081-1081/? I/chatty: uid=1000(system) /system/bin/surfaceflinger identical 1 line
+2022-02-27 20:42:49.450 1081-1081/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-27 20:42:49.460 17414-18405/? E/Region: Region::unflatten() failed, invalid region
+2022-02-27 20:42:49.460 17414-18405/? I/chatty: uid=1000(system) Binder:17414_B identical 2 lines
+2022-02-27 20:42:49.460 17414-18405/? E/Region: Region::unflatten() failed, invalid region
+2022-02-27 20:42:49.461 1081-1081/? D/OppoExSurfaceFlinger: re-input flinger 1
+2022-02-27 20:42:49.461 1081-1081/? D/DispPerfService: AIRefreshRate enable input motion 0x1
+2022-02-27 20:42:49.463 1081-1081/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-27 20:42:49.463 1081-1081/? I/chatty: uid=1000(system) /system/bin/surfaceflinger identical 1 line
+2022-02-27 20:42:49.463 1081-1081/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-27 20:42:49.477 17414-18405/? E/Region: Region::unflatten() failed, invalid region
+2022-02-27 20:42:49.477 17414-18405/? I/chatty: uid=1000(system) Binder:17414_B identical 2 lines
+2022-02-27 20:42:49.477 17414-18405/? E/Region: Region::unflatten() failed, invalid region
+2022-02-27 20:42:49.479 1081-1081/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-27 20:42:49.512 1081-1081/? I/chatty: uid=1000(system) /system/bin/surfaceflinger identical 7 lines
+2022-02-27 20:42:49.512 1081-1081/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-27 20:42:49.528 1081-1081/? D/OppoExSurfaceFlinger: re-input flinger 1
+2022-02-27 20:42:49.528 1081-1081/? D/DispPerfService: AIRefreshRate enable input motion 0x1
+2022-02-27 20:42:49.529 1081-1081/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-27 20:42:49.728 1081-1081/? I/chatty: uid=1000(system) /system/bin/surfaceflinger identical 37 lines
+2022-02-27 20:42:49.728 1081-1081/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-27 20:42:49.745 1081-1081/? D/OppoExSurfaceFlinger: re-input flinger 1
+2022-02-27 20:42:49.745 1081-1081/? D/DispPerfService: AIRefreshRate enable input motion 0x1
+2022-02-27 20:42:49.746 1081-1081/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-27 20:42:49.762 1081-1081/? I/chatty: uid=1000(system) /system/bin/surfaceflinger identical 4 lines
+2022-02-27 20:42:49.762 1081-1081/? W/HwcComposer: command 0x4080000 generated error 4
+2022-02-27 20:42:49.778 1081-1081/? D/OppoExSurfaceFlinger: re-input flinger 1
+2022-02-27 20:42:49.778 1081-1081/? D/DispPerfService: AIRefreshRate enable input motion 0x1
+2022-02-27 20:42:49.823 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:49.823 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:49.823 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:49.823 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:49.826 1081-1081/? D/OppoExLayer: ~Layer() sequence=26097, name=EnterBlackFrameLayer#0@0xb400007143704000
+2022-02-27 20:42:49.826 1081-1081/? D/OppoExLayer: ~Layer() sequence=26101, name=Surface(name=RotationLayer)/@0x3c71eb0 - animation-leash#0@0xb40000715cf0e000
+2022-02-27 20:42:49.827 1081-1081/? D/OppoExLayer: ~Layer() sequence=26100, name=Surface(name=mWindowContainers)/@0xb6d068a - animation-leash#0@0xb40000715cf6a000
+2022-02-27 20:42:49.830 1081-1081/? D/OppoExLayer: ~Layer() sequence=26095, name=BackColorSurface#0@0xb40000716c24a000
+2022-02-27 20:42:49.830 1081-1081/? D/OppoExLayer: ~Layer() sequence=26096, name=RotationLayer#0@0xb4000071452b7000
+2022-02-27 20:42:49.830 1081-1081/? D/OppoExSurfaceFlinger: re-input flinger 1
+2022-02-27 20:42:49.830 1081-1081/? D/DispPerfService: AIRefreshRate enable input motion 0x1
+2022-02-27 20:42:49.942 17414-20283/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-27 20:42:49.942 17414-20283/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-27 20:42:50.012 7649-8397/? I/OplusFeedbackInfo: 0x73144f7c00 OMX.qcom.video.decoder.avc 864x480 inputFps=0 outputFps=0 renderFps=0
+2022-02-27 20:42:50.306 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:50.307 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:50.307 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:50.307 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:50.824 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:50.824 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 8]
+2022-02-27 20:42:50.824 1029-1117/? E/ANDR-PERF-OPTSHANDLER: Perflock resource /sys/class/devfreq/soc:qcom,cpu4-cpu-llcc-lat/mem_latency/ratio_ceil not supported
+2022-02-27 20:42:50.824 1029-1117/? E/ANDR-PERF-RESOURCEQS: Failed to apply optimization [13, 9]
+2022-02-27 20:42:51.013 7649-8397/? I/OplusFeedbackInfo: 0x73144f7c00 OMX.qcom.video.decoder.avc 864x480 inputFps=0 outputFps=0 renderFps=0
+2022-02-27 20:42:51.013 7649-8397/? D/OplusFeedbackInfo: [notifyFpsToSF:L421] fixFps=0 currentFps=0 isRelease=0
+2022-02-27 20:42:51.013 1081-4879/? D/DispPerfService: Codec Notify OVFR fixFPS = 0, calFPS = 0, codecOn = 1
+2022-02-27 20:42:51.668 19796-20080/? E/libc: Access denied finding property "vendor.oplus.media.vpp.osie_sr.on"
+2022-02-27 20:42:51.670 17414-17460/? I/system_server: Explicit concurrent copying GC freed 173857(10MB) AllocSpace objects, 24(604KB) LOS objects, 38% free, 39MB/63MB, paused 336us total 262.537ms
+2022-02-27 20:42:51.672 17414-17433/? W/JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.android.server.AlarmManagerService$2
+2022-02-27 20:42:51.672 17414-17433/? I/BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+2022-02-27 20:42:51.680 17414-17434/? W/System: A resource failed to call release. 
+2022-02-27 20:42:49.461 17414-17460/? I/chatty: uid=1000(system) android.display identical 3 lines
+2022-02-27 20:42:49.813 17414-17460/? D/PowerManagerService: setScreenBrightnessOverrideFromWindowManagerInternal brightness=NaN mScreenBrightnessOverrideFromWindowManager=NaN
+2022-02-27 20:42:51.687 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:51.827 17414-17414/? V/AlarmManager: set(null) : type=3 when=152598772whenElapsed152598772maxWhen =153128727 win=529955 interval=0 flags=0x0 pkg = android
+2022-02-27 20:42:51.680 17414-17434/? I/chatty: uid=1000(system) FinalizerDaemon identical 1 line
+2022-02-27 20:42:51.680 17414-17434/? W/System: A resource failed to call release. 
+2022-02-27 20:42:52.014 7649-8397/? I/OplusFeedbackInfo: 0x73144f7c00 OMX.qcom.video.decoder.avc 864x480 inputFps=0 outputFps=0 renderFps=0
+2022-02-27 20:42:52.014 1358-1421/? D/AtlasService: clientsCount 2
+2022-02-27 20:42:52.014 1358-1421/? D/AtlasService: notify 1029 to client
+2022-02-27 20:42:52.334 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:52.014 1358-1421/? D/AtlasService: notify 1029 to client
+2022-02-27 20:42:52.549 17414-18043/? V/OplusNlpProxy: handleMessage what - 109
+2022-02-27 20:42:52.919 7649-8232/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (greylist-max-q,test-api, reflection, denied)
+2022-02-27 20:42:52.919 7649-8232/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (greylist-max-q, reflection, denied)
+2022-02-27 20:42:52.921 7649-8231/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (greylist-max-q,test-api, reflection, denied)
+2022-02-27 20:42:52.921 7649-8231/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (greylist-max-q, reflection, denied)
+2022-02-27 20:42:52.971 7649-8231/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (greylist-max-q,test-api, reflection, denied)
+2022-02-27 20:42:52.971 7649-8232/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (greylist-max-q,test-api, reflection, denied)
+2022-02-27 20:42:52.971 7649-8231/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->getAlpnSelectedProtocol()[B (greylist-max-q, reflection, denied)
+2022-02-27 20:42:52.971 7649-8232/? W/festival.battl: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->getAlpnSelectedProtocol()[B (greylist-max-q, reflection, denied)
+2022-02-27 20:42:53.014 7649-8397/? I/OplusFeedbackInfo: 0x73144f7c00 OMX.qcom.video.decoder.avc 864x480 inputFps=0 outputFps=0 renderFps=0
+2022-02-27 20:42:53.014 7649-8397/? I/OplusFeedbackInfo: send video stutter message MM_FB_EventID#11002#ClientPid#7649#Component#OMX.qcom.video.decoder.avc#VideoInputFps#0#VideoOutputFps#0#VideoRenderFps#0#VideoHeight#480#VideoWidth#864#IsMediaPlayer#0#LogLevel#3#FpsArray#20/0/0/0/0/0
+2022-02-27 20:42:53.015 1358-1421/? D/AtlasService: clientsCount 2
+2022-02-27 20:42:53.015 1358-1421/? D/AtlasService: notify 1026 to client
+2022-02-27 20:42:52.883 17414-17829/? I/chatty: uid=1000(system) DnsEventHandleT identical 1 line
+2022-02-27 20:42:52.883 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:53.032 17414-17463/? V/OppoBaseWatchdog: @WatchDog_ error e: java.io.FileNotFoundException: /d/wakeup_sources: open failed: ENOENT (No such file or directory)
+2022-02-27 20:42:53.062 19046-31777/? W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1705 android.content.ContextWrapper.startService:730 com.oplus.util.OplusStatisticsImpl.startService:216 com.oplus.util.OplusStatisticsImpl.sendDataToDCS:192 com.oplus.util.OplusStatisticsImpl.onCommonSync:84 
+2022-02-27 20:42:53.015 1358-1421/? D/AtlasService: notify 1026 to client
+2022-02-27 20:42:53.068 18364-18455/? W/[0]DCS-MobileHelper: getContryCode slotid=0,type=1,code=null,result=
+2022-02-27 20:42:53.068 18364-18455/? W/[0]DCS-MobileHelper: getContryCode slotid=1,type=1,code=null,result=
+2022-02-27 20:42:54.016 7649-8397/? I/OplusFeedbackInfo: 0x73144f7c00 OMX.qcom.video.decoder.avc 864x480 inputFps=0 outputFps=0 renderFps=0
+2022-02-27 20:42:55.106 17414-17479/? D/BatteryLed: getLightInColorState, oppoLightMgr empty!
+2022-02-27 20:42:55.016 7649-8397/? I/OplusFeedbackInfo: 0x73144f7c00 OMX.qcom.video.decoder.avc 864x480 inputFps=0 outputFps=0 renderFps=0
+2022-02-27 20:42:55.117 18244-18244/? D/DeviceStatisticsService: chargerType=0 batteryLevel=100 totalBatteryCapacity=5000000
+2022-02-27 20:42:55.221 17951-17965/? W/System: A resource failed to call release. 
+2022-02-27 20:42:55.229 1081-1081/? D/OppoExLayer: ~Layer() sequence=25989, name=Surface(name=2d41f85 InputMethod)/@0x3fd060b - animation-leash#0@0xb4000071660be000
+2022-02-27 20:42:55.238 17951-17965/? W/System: A resource failed to call release. 
+2022-02-27 20:42:55.246 1081-1081/? D/OppoExLayer: ~Layer() sequence=25794, name=Surface(name=2d41f85 InputMethod)/@0x3fd060b - animation-leash#0@0xb40000716c26a000
+2022-02-27 20:42:56.017 7649-8397/? I/OplusFeedbackInfo: 0x73144f7c00 OMX.qcom.video.decoder.avc 864x480 inputFps=0 outputFps=0 renderFps=0
+2022-02-27 20:42:56.668 19796-20080/? E/libc: Access denied finding property "vendor.oplus.media.vpp.osie_sr.on"
+2022-02-27 20:42:56.927 7649-7728/? D/AAudio: AAudioStream_requestStop(s#1) called
+2022-02-27 20:42:56.927 7649-7728/? D/AAudioStream: setState(s#1) from 4 to 9
+2022-02-27 20:42:56.927 7649-7728/? D/AudioTrack: stop(217): prior state:STATE_ACTIVE output 21 stream 3 session 2001
+2022-02-27 20:42:56.927 7649-7728/? D/AudioTrack: stop(217): called with 241984 frames delivered
+2022-02-27 20:42:56.928 7649-7728/? D/festival.battl: PlayerBase::stop() from IPlayer
+2022-02-27 20:42:56.935 12747-12781/? D/AudioManager: getStreamVolume packageName=com.google.android.googlequicksearchbox, index=4, streamType=3
+2022-02-27 20:42:56.936 7649-7728/? D/AAudioStream: setState(s#1) from 9 to 10
+2022-02-27 20:42:57.017 7649-8397/? I/OplusFeedbackInfo: 0x73144f7c00 OMX.qcom.video.decoder.avc 864x480 inputFps=0 outputFps=0 renderFps=0
+2022-02-27 20:42:57.018 1358-1421/? D/AtlasService: clientsCount 2
+2022-02-27 20:42:57.018 1358-1421/? D/AtlasService: notify 1025 to client
+2022-02-27 20:42:57.018 1358-1421/? D/AtlasService: notify 1025 to client
+2022-02-27 20:42:57.051 17414-8457/? I/DpmTcmClient: RegisterTcmMonitor from: $Proxy1
+2022-02-27 20:42:57.064 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:42:57.157 17118-17392/? D/AudioFlinger: dcclog abandonSchedBoost  pid(7649) mAudioFlinger->mActiveTrackPids.size(1)
+2022-02-27 20:42:57.158 17118-17177/? D/APM_AudioPolicyManager: stopOutput portId 217
+2022-02-27 20:42:57.158 17118-17177/? D/APM_AudioPolicyManager: stopOutput() output 21, stream 3, session 2001
+2022-02-27 20:42:57.158 1358-1358/? D/OppoAudioState: updateAudioState eventId:2
+2022-02-27 20:42:57.158 17118-17177/? D/APM_AudioPolicyManager: setOutputDevice() output 21 device AUDIO_DEVICE_NONE force 0 delayMs 218
+2022-02-27 20:42:57.158 17118-17177/? D/APM_AudioPolicyManager: setOutputDevices() prevDevice {type:0x2,@:}
+2022-02-27 20:42:57.160 17118-17177/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-27 20:42:57.160 17118-17177/? D/APM_AudioPolicyManager: setOutputDevice() output 13 device {type:0x2,@:} force 0 delayMs 0
+2022-02-27 20:42:57.160 17118-17177/? D/APM_AudioPolicyManager: setOutputDevices() prevDevice {type:0x2,@:}
+2022-02-27 20:42:57.160 17414-20338/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-27 20:42:57.162 17118-17177/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-27 20:42:57.163 17118-17179/? D/OplusAudioLowLatency: outputStopped  portId(217)
+2022-02-27 20:42:57.164 17118-17178/? D/GameAudioEffects: outputStopped  portId(217)
+2022-02-27 20:42:57.164 17118-17177/? D/APM_AudioPolicyManager: setOutputDevices:filteredDevices isempty 0,getEncodedFormat 0x0,getName = primary output
+2022-02-27 20:42:57.166 17118-17177/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-27 20:42:57.166 17118-17177/? W/APM::AudioPolicyEngine: getDevicesForStrategy() unknown strategy: -1
+2022-02-27 20:42:57.166 17118-17177/? D/GameAudioEffects: hasAliveFastEffectTracks  return (0)
+2022-02-27 20:42:57.186 19046-22022/? D/AudioManager: getStreamVolume packageName=com.oppo.atlas, index=4, streamType=3
+2022-02-27 20:42:57.190 19159-19159/? D/OppoDiracService: mrDiracEffectBroadcastReceiver action = android.Multimedia.AudioEffect.AudioTrack_BROADCAST
+2022-02-27 20:42:57.190 19159-19159/? D/OppoDiracService: +new tast
+2022-02-27 20:42:57.190 19159-19159/? D/OppoDiracService: -new tast
+2022-02-27 20:42:57.241 19159-19357/? D/OppoDiracService: handleMessage, msg what = 21
+2022-02-27 20:42:57.241 19159-31567/? D/DiracDetectSceneService: Task.run, effectenable = true
+2022-02-27 20:42:57.242 19159-31567/? D/DiracDetectSceneService: checkAndSetDirac : activeAudioPids = :7649
+2022-02-27 20:42:57.243 19159-31567/? D/DiracDetectSceneService: +activePidList = [7649]
+2022-02-27 20:42:57.248 19159-31567/? D/DiracDetectSceneService: +activeAudioAppList = [com.music.festival.battle]
+2022-02-27 20:42:57.248 19159-31567/? D/DiracDetectSceneService: isInMusicAppList appName:com.music.festival.battle
+2022-02-27 20:42:57.248 19159-31567/? D/DiracDetectSceneService: isInVideoAppList appName:com.music.festival.battle
+2022-02-27 20:42:57.248 19159-31567/? D/DiracDetectSceneService: isInGameAppList appName:com.music.festival.battle
+2022-02-27 20:42:57.248 19159-31567/? D/DiracDetectSceneService: isInVideo2AppList appName:com.music.festival.battle
+2022-02-27 20:42:57.248 19159-31567/? D/OppoDiracService: commonDiracToast str = this app not in list, Service Close Dirac
+2022-02-27 20:42:57.248 19159-31567/? D/DiracDetectSceneService: this case is not in app list
+2022-02-27 20:42:57.248 19159-31567/? D/OppoDiracService: setDiracEffectInternal ++++ enable = false mode = NONE mSceneModeForUI:AUTO
+2022-02-27 20:42:57.248 19159-31567/? D/OppoDiracService: isHeadsetOn mWiredHeadsetOn:false mA2dpConnected:false
+2022-02-27 20:42:57.248 19159-31567/? D/OppoDiracService: ignore this time setDiracEnalbe, enable = false mode = NONE mSceneModeForUI = AUTO
+2022-02-27 20:42:58.018 7649-8397/? I/OplusFeedbackInfo: [sendFPSInfo:L359] input/output/render 0fps over 10s, reduce print fps log
+2022-02-27 20:42:58.730 17414-17782/? D/JobScheduler.Temperature: get temperature=36.749
+2022-02-27 20:42:59.997 17114-17129/? D/audio_hw_primary: out_standby: enter: stream (0xef4c8000) usecase(0: deep-buffer-playback)
+2022-02-27 20:43:00.004 17414-17673/? V/AlarmManager: set(null) : type=3 when=151960337whenElapsed151960337maxWhen =151960337 win=0 interval=0 flags=0x1 pkg = android
+2022-02-27 20:43:00.008 18790-18790/? I/WeatherS_WeatherServiceVersionUtils: serviceVersionCode8002022
+2022-02-27 20:43:00.008 18790-18790/? I/chatty: uid=10205(com.coloros.alarmclock) identical 1 line
+2022-02-27 20:43:00.008 18790-18790/? I/WeatherS_WeatherServiceVersionUtils: serviceVersionCode8002022
+2022-02-27 20:43:00.011 18790-18790/? W/ClockTag ClockWidget.ClockWidgetManager: updateWeatherInfo -- weatherEntity is null!
+2022-02-27 20:43:00.053 17414-18405/? E/OplusCustomizeRestrictionManagerService: isBiometricDisabled start
+2022-02-27 20:43:00.056 17414-20283/? E/OplusCustomizeRestrictionManagerService: isBiometricDisabled start
+2022-02-27 20:43:00.140 17114-17129/? D/audio_hw_primary: stop_output_stream: enter: usecase(0: deep-buffer-playback)
+2022-02-27 20:43:00.140 17114-17129/? D/audio_hw_primary: disable_audio_route: reset and update mixer path: deep-buffer-playback
+2022-02-27 20:43:00.141 17114-17129/? D/soundtrigger: audio_extn_sound_trigger_update_stream_status: uc_info->id 0 of type 0 for Event 2, with Raise=1
+2022-02-27 20:43:00.141 17114-17129/? I/sound_trigger_platform: platform_stdev_check_and_update_concurrency: Received PLAYBACK_STREAM event, event type 2, usecase type 0
+2022-02-27 20:43:00.141 17114-17129/? D/sound_trigger_platform: platform_stdev_get_capture_device: Device = 0x80000004
+2022-02-27 20:43:00.141 17114-17129/? D/sound_trigger_platform: platform_stdev_get_capture_device: Available device = 0x80000004
+2022-02-27 20:43:00.141 17114-17129/? D/sound_trigger_platform: platform_stdev_check_and_update_concurrency: dedicated path 1, reset backend 1, tx 0, rx 0, concurrency session allowed
+2022-02-27 20:43:00.141 17114-17129/? D/hardware_info: hw_info_append_hw_type : device_name = speaker
+2022-02-27 20:43:00.142 17114-17129/? D/audio_hw_primary: disable_snd_device: snd_device(2: speaker), snd_dev_ref_cnt 1
+2022-02-27 20:43:00.142 17114-17129/? D/oplus_pa_boost_vol_aw: output_set_pa_voltage, 157, adev->adev_extends.stream_out_count = 1
+2022-02-27 20:43:00.142 17114-17129/? D/oplus_pa_boost_vol_aw: set_pa_voltage, 122, voltage = 0
+2022-02-27 20:43:00.143 17114-17129/? D/oplus_pa_boost_vol_aw: set_pa_voltage, 150, voltage = 0, adev->adev_extends.pre_boost_index = 0
+2022-02-27 20:43:00.143 17114-17129/? D/audio_hw_primary: stop_output_stream: exit: status(0)
+2022-02-27 20:43:00.143 17114-17129/? D/audio_hw_primary: out_standby: exit
+2022-02-27 20:43:00.145 17414-18405/? I/system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+2022-02-27 20:43:00.223 17414-17479/? D/BatteryLed: getLightInColorState, oppoLightMgr empty!
+2022-02-27 20:43:00.243 18244-18244/? D/DeviceStatisticsService: chargerType=0 batteryLevel=100 totalBatteryCapacity=5000000
+2022-02-27 20:43:01.668 19796-20075/? E/libc: Access denied finding property "vendor.oplus.media.vpp.osie_sr.on"
+2022-02-27 20:43:01.937 7649-7728/? D/AAudio: AAudioStream_close(s#1) called ---------------
+2022-02-27 20:43:01.937 7649-7728/? D/AAudioStream: setState(s#1) from 10 to 11
+2022-02-27 20:43:01.937 7649-7728/? D/AudioTrack: ~AudioTrack, releasing mStatus =0 session id 2001 from 7649 on behalf of 7649
+2022-02-27 20:43:01.938 7649-7728/? D/AudioTrack: stop(217): prior state:STATE_STOPPED output 21 stream 3 session 2001
+2022-02-27 20:43:01.939 7649-7728/? D/AAudioStream: setState(s#1) from 11 to 12
+2022-02-27 20:43:01.939 7649-7728/? D/AAudioStream: ~AudioStream(s#1) mPlayerBase strongCount = 2
+2022-02-27 20:43:01.939 7649-7728/? D/AAudio: AAudioStream_close(s#1) returned 0 ---------
+2022-02-27 20:43:01.939 17118-17179/? D/OplusAudioLowLatency: outputReleased  portId(217)
+2022-02-27 20:43:01.940 17118-17178/? D/GameAudioEffects: outputReleased portId(217)
+2022-02-27 20:43:01.944 12747-12787/? D/AudioManager: getStreamVolume packageName=com.google.android.googlequicksearchbox, index=4, streamType=3
+2022-02-27 20:43:02.074 7649-7727/? W/cr_MediaCodecBridge: Releasing: OMX.qcom.video.decoder.avc
+2022-02-27 20:43:02.074 7649-8396/? D/SurfaceUtils: connecting to surface 0x732c163010, reason connectToSurface
+2022-02-27 20:43:02.074 7649-8396/? I/MediaCodec: [OMX.qcom.video.decoder.avc] setting surface generation to 7832578
+2022-02-27 20:43:02.074 7649-8396/? D/SurfaceUtils: disconnecting from surface 0x732c163010, reason connectToSurface(reconnect)
+2022-02-27 20:43:02.074 7649-8396/? D/SurfaceUtils: connecting to surface 0x732c163010, reason connectToSurface(reconnect)
+2022-02-27 20:43:02.075 1397-19351/? E/OMX-VDEC-1080P: Extension: OMX.google.android.index.AndroidNativeBufferConsumerUsage not implemented
+2022-02-27 20:43:02.075 7649-8397/? D/SurfaceUtils: set up nativeWindow 0x732c163010 for 864x480, color 0x7fa30c04, rotation 0, usage 0x20002900
+2022-02-27 20:43:02.075 7649-8396/? D/SurfaceUtils: disconnecting from surface 0x728d198010, reason disconnectFromSurface
+2022-02-27 20:43:02.075 7649-8396/? E/Surface: freeAllBuffers: 17 buffers were freed while being dequeued!
+2022-02-27 20:43:02.075 7649-8396/? I/OplusFeedbackInfo: [sendFeedbackInfo:L292]  send:MM_FB_EventID#21001#ClientPid#7649#ReportLevel#0#isHDRVideo#false#timeUsage#16#videoComponent#OMX.qcom.video.decoder.avc#videoHeight#480#videoMime#video/avc#videoWidth#854
+2022-02-27 20:43:02.076 1358-1421/? D/AtlasService: clientsCount 2
+2022-02-27 20:43:02.076 1358-1421/? D/AtlasService: notify 256 to client
+2022-02-27 20:43:02.076 1358-1421/? D/AtlasService: notify 256 to client
+2022-02-27 20:43:02.076 7649-7727/? W/cr_MediaCodecBridge: Codec released
+2022-02-27 20:43:02.077 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] Now Executing->Idle
+2022-02-27 20:43:02.084 19046-31777/? W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1705 android.content.ContextWrapper.startService:730 com.oplus.util.OplusStatisticsImpl.startService:216 com.oplus.util.OplusStatisticsImpl.sendDataToDCS:192 com.oplus.util.OplusStatisticsImpl.onCommonSync:84 
+2022-02-27 20:43:02.090 18364-18455/? W/[0]DCS-MobileHelper: getContryCode slotid=0,type=1,code=null,result=
+2022-02-27 20:43:02.090 18364-18455/? W/[0]DCS-MobileHelper: getContryCode slotid=1,type=1,code=null,result=
+2022-02-27 20:43:02.091 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] Now Idle->Loaded
+2022-02-27 20:43:02.092 7649-8397/? D/ACodec: [OMX.qcom.video.decoder.avc] Now Loaded
+2022-02-27 20:43:02.092 1397-4499/? I/OMX-VDEC-1080P: omx_vdec::component_deinit() complete
+2022-02-27 20:43:02.096 1397-4499/? I/OMX-VDEC-1080P: Exit OMX vdec Destructor: fd=7
+2022-02-27 20:43:02.098 7649-8397/? D/ACodec: Now uninitialized
+2022-02-27 20:43:02.098 7649-8396/? D/SurfaceUtils: disconnecting from surface 0x732c163010, reason disconnectFromSurface
+2022-02-27 20:43:02.100 7649-8396/? D/OplusACodec: ~OplusACodec [145]: 
+2022-02-27 20:43:02.100 7649-8396/? I/ACodec: ~ACodec()
+2022-02-27 20:43:02.100 7649-8396/? D/OplusFeedbackInfo: [notifyFpsToSF:L421] fixFps=0 currentFps=0 isRelease=1
+2022-02-27 20:43:02.100 1081-4879/? D/DispPerfService: Codec Notify OVFR fixFPS = 0, calFPS = 0, codecOn = 0
+2022-02-27 20:43:03.927 17414-18405/? V/AlarmManager: set(PendingIntent{a66a6d5: PendingIntentRecord{a719118 com.google.android.gms/com.google.android.gms.location_base broadcastIntent}}) : type=2 when=151909254whenElapsed151909257maxWhen =151909257 win=0 interval=0 flags=0x0 pkg = com.google.android.gms
+2022-02-27 20:43:03.937 17414-17760/? D/WifiNative: Scan trigered from WifiNative
+2022-02-27 20:43:03.942 17414-17760/? V/AlarmManager: set(null) : type=2 when=151934279whenElapsed151934279maxWhen =151956779 win=22500 interval=0 flags=0x8 pkg = android
+2022-02-27 20:43:03.942 17414-17760/? V/AlarmManager: set(null) : type=2 when=151919279whenElapsed151919279maxWhen =151930529 win=11250 interval=0 flags=0x8 pkg = android
+2022-02-27 20:43:05.558 1414-1502/? E/Parcel: Reading a NULL string not supported here.
+2022-02-27 20:43:06.097 17414-17479/? D/BatteryLed: getLightInColorState, oppoLightMgr empty!
+2022-02-27 20:43:06.109 18244-18244/? D/DeviceStatisticsService: chargerType=0 batteryLevel=100 totalBatteryCapacity=5000000
+2022-02-27 20:43:06.179 17414-18137/? I/ColorHansManager: stateRToFFreeze--imporant case: pkgName: com.music.festival.battle, reason: audiofocus
+2022-02-27 20:43:06.668 19796-20080/? E/libc: Access denied finding property "vendor.oplus.media.vpp.osie_sr.on"
+2022-02-27 20:43:06.972 17414-20338/? D/WifiNl80211Manager: Scan result ready event
+2022-02-27 20:43:06.987 17414-17714/? D/OplusPlatformManagerExt:  OplusPlatformManagerExt getInstance: com.oplus.server.wifi.OplusPlatformManagerImplExt@19f0983
+2022-02-27 20:43:06.989 17414-17714/? I/chatty: uid=1000(system) WifiHandlerThre identical 8 lines
+2022-02-27 20:43:06.989 17414-17714/? D/OplusPlatformManagerExt:  OplusPlatformManagerExt getInstance: com.oplus.server.wifi.OplusPlatformManagerImplExt@19f0983
+2022-02-27 20:43:06.989 17414-17760/? D/WificondScannerImpl: Filtering out 3 scan results.
+2022-02-27 20:43:06.989 17414-17760/? D/WificondScannerImpl: Filtering out 3 scan results.
+2022-02-27 20:43:07.014 17414-17714/? D/OplusClientModeImpl2: handleScanResultEvent2
+2022-02-27 20:43:07.025 17414-27383/? V/AlarmManager: set(PendingIntent{5e293af: PendingIntentRecord{a719118 com.google.android.gms/com.google.android.gms.location_base broadcastIntent}}) : type=2 when=9223372036854775807whenElapsed9223372036854775807maxWhen =9223372036854775807 win=0 interval=0 flags=0x0 pkg = com.google.android.gms
+2022-02-27 20:43:07.036 17414-17714/? D/OplusAutoConnectManager: find scanConfKey "L176b5a3854in wlan assistant NetworkRecords
+2022-02-27 20:43:07.157 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:43:08.736 17414-17782/? D/JobScheduler.Temperature: get temperature=36.658
+2022-02-27 20:43:07.037 17414-17714/? D/OplusAutoConnectManager: find scanConfKey "L176b5a3854in wlan assistant NetworkRecords
+2022-02-27 20:43:09.016 1328-1344/? D/bspCriticalLog: power_monitor cpu-0-0-usr: open fail -1
+2022-02-27 20:43:09.016 1328-1342/? D/bspCriticalLog: thermal_monitor ddr-usr: open fail -1
+2022-02-27 20:43:09.016 1328-1342/? D/bspCriticalLog: thermal_monitor gpuss-0-usr: open fail -1
+2022-02-27 20:43:09.016 1328-1342/? D/bspCriticalLog: thermal_monitor cpu-0-0-usr: open fail -1
+2022-02-27 20:43:11.221 17414-17479/? D/BatteryLed: getLightInColorState, oppoLightMgr empty!
+2022-02-27 20:43:11.234 18244-18244/? D/DeviceStatisticsService: chargerType=0 batteryLevel=100 totalBatteryCapacity=5000000
+2022-02-27 20:43:11.344 17414-17777/? V/AlarmManager: set(null) : type=3 when=151941681whenElapsed151941681maxWhen =151964181 win=22500 interval=0 flags=0x8 pkg = android
+2022-02-27 20:43:11.668 19796-20078/? E/libc: Access denied finding property "vendor.oplus.media.vpp.osie_sr.on"
+2022-02-27 20:43:13.085 17414-17829/? D/OplusCustomizeNetworkManagerService-hcwu: refreshDnsResult: not started restriction
+2022-02-27 20:43:16.668 19796-20080/? E/libc: Access denied finding property "vendor.oplus.media.vpp.osie_sr.on"
+2022-02-27 20:43:17.104 17414-17479/? D/BatteryLed: getLightInColorState, oppoLightMgr empty!
+2022-02-27 20:43:17.114 18244-18244/? D/DeviceStatisticsService: chargerType=0 batteryLevel=100 totalBatteryCapacity=5000000
+2022-02-27 20:43:18.746 17414-17782/? D/JobScheduler.Temperature: get temperature=36.573
+2022-02-27 20:43:19.310 31646-2628/? V/NativeCrypto: SSL shutdown failed: ssl=0xb4000072a94c32c8: I/O error during system call, Software caused connection abort
+2022-02-27 20:43:21.668 19796-20078/? E/libc: Access denied finding property "vendor.oplus.media.vpp.osie_sr.on"
+2022-02-27 20:43:23.033 17414-17463/? V/OppoBaseWatchdog: @WatchDog_ error e: java.io.FileNotFoundException: /d/wakeup_sources: open failed: ENOENT (No such file or directory)
+2022-02-27 20:43:26.668 19796-20080/? E/libc: Access denied finding property "vendor.oplus.media.vpp.osie_sr.on"
+2022-02-27 20:43:28.750 17414-17782/? D/JobScheduler.Temperature: get temperature=36.472
+2022-02-27 20:43:29.016 1328-1342/? D/bspCriticalLog: thermal_monitor ddr-usr: open fail -1
+2022-02-27 20:43:29.016 1328-1344/? D/bspCriticalLog: power_monitor cpu-0-0-usr: open fail -1
+2022-02-27 20:43:29.016 1328-1342/? D/bspCriticalLog: thermal_monitor gpuss-0-usr: open fail -1
+2022-02-27 20:43:29.016 1328-1342/? D/bspCriticalLog: thermal_monitor cpu-0-0-usr: open fail -1
+2022-02-27 20:43:29.462 19572-20817/? I/Athena: MemoryGuardAction: 24375s since the last releasing, try to force trigger
+2022-02-27 20:43:29.464 19572-20817/? I/Athena: MemoryGuardAction: triggerMemory:1600MB, availMemory:2374MB
+2022-02-27 20:43:31.668 19796-20080/? E/libc: Access denied finding property "vendor.oplus.media.vpp.osie_sr.on"

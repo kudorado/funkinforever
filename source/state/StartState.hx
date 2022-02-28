@@ -70,9 +70,10 @@ class StartState extends MusicBeatState
 
 		// DEBUG BULLSHIT
 
+		#if ios
 		AdMob.initIOS("11c519235", "", GravityMode.BOTTOM);
-		#if mobile	
-		// AdMob.initAndroid();
+		#elseif android	
+		AdMob.initAndroid();
 		#end
 
 
@@ -80,9 +81,7 @@ class StartState extends MusicBeatState
 		super.create();
 
 		FlxG.save.bind('save', 'datashit');
-
 		KadeEngineData.initSave();
-
 		Highscore.load();
 
 		if (FlxG.save.data.weekUnlocked != null)

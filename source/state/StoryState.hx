@@ -6,6 +6,7 @@ import state.*;
 import selection.*;
 import reactor.*;
 
+import flixel.group.FlxGroup;
 import flixel.FlxCamera;
 import ui.FlxVirtualPad.FlxActionMode;
 import ui.FlxVirtualPad.FlxDPadMode;
@@ -424,9 +425,93 @@ class StoryState extends MusicBeatState
 		}
 	}
 
+	public static function loadDataFileAndroid(songName:String, forceRestartScene:Bool = true)
+	{
+		
+		var diffic = "";
+		switch (curDifficulty)
+		{
+			case 0:
+				diffic = '-easy';
+			case 2:
+				diffic = '-hard';
+			case 3:
+				diffic = '-shit';
+		}
+
+		var songLowercase = songName;
+		var file = '';
+		var daDirectory = '';
+		var daSong = songName + diffic;
+
+		daDirectory = "assets/data/" + SongPlayer.folder + songLowercase;
+		file = daDirectory + '/' + daSong + '.json';
+
+		var oldSong = GameState.SONG;
+		GameState.SONG = null; // reset cache
+
+		if (!openfl.utils.Assets.exists(file))
+		{
+			trace('Oh shit not found difficult for this file: ' + file);
+			//reverse array it if hard -> shit
+
+			var ra:Array<String> = [];
+			for(i in StoryState.difficulties)
+			{
+				ra.push(i);
+			}
+
+			if(curDifficulty >= 2)
+			{
+				ra.reverse();
+				trace('Recheck reverse difficult');
+			}
+
+			// so attempting to load other difficult
+			for (diff in ra)
+			{
+				var s = diff;
+
+				if (diff != '')
+					s = "-" + diff;
+
+				file = daDirectory + '/' + songLowercase + s + '.json';
+				if (openfl.utils.Assets.exists(file))
+				{
+					trace('Load alternative difficult: ' + ((s == '') ? "Normal" : s));
+					var popipo = songLowercase + s;
+					GameState.SONG = Song.loadFromJson(popipo, GameState.playingSong.folder + songLowercase);
+					break;
+				}
+			}
+
+			// oh shit load freeplay again
+			if (GameState.SONG == null)
+			{
+				//re-set it
+				GameState.SONG = oldSong;
+				trace('data file not found for song: ' + songLowercase + ", forced reset state!");
+				if (forceRestartScene)
+				{
+					FlxG.resetState();
+				}
+				return;
+			}
+		}
+		else
+		{
+			trace('data file loaded sucessful!: ' + file);
+			GameState.SONG = Song.loadFromJson(daSong, GameState.playingSong.folder + songLowercase);
+		}
+	}
 
 	public static function loadDataFile(songName:String, forceRestartScene:Bool = true)
 	{
+		#if android
+		loadDataFileAndroid(songName, forceRestartScene);
+		//holy shit android suck.	
+		return;
+		#end
 
 		var diffic = "";
 		switch (curDifficulty)
