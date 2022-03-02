@@ -54,7 +54,7 @@ class GarcelloDead extends Garcello
 
 	private function createDeadBody()
 	{
-	var garcelloDead:FlxSprite = new FlxSprite(-150, 525).loadGraphic(Paths.image('bg/sgarcello/gardead', 'mods'));
+		var garcelloDead:FlxSprite = new FlxSprite(-150, 525).loadGraphic(Paths.image('bg/garcello/gardead', 'mods'));
 		garcelloDead.setGraphicSize(Std.int(garcelloDead.width));
 		garcelloDead.updateHitbox();
 		garcelloDead.antialiasing = true;

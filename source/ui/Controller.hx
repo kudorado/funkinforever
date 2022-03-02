@@ -36,7 +36,7 @@ class Controller
 		var daAlpha = 0.85;
 
 		if(DPad == NONE && Action == B)
-			daAlpha = 0.1;
+			daAlpha = 0.2;
 
 		//then enable if its mobile or debugging
 		#if mobile 
