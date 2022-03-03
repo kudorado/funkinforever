@@ -166,7 +166,7 @@ class CustomControlsState extends MusicBeatState
 
 		//trace('oh shjt 177');
 
-		#if mobile
+		#if android
 		var androidback:Bool = FlxG.android.justReleased.BACK;
 		#else
 		var androidback:Bool = false;
