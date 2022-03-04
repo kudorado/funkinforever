@@ -86,6 +86,13 @@ class SongFilter
 				replace: 'Sunshine'
 			}
 		),
+
+		new SongFilterData(
+			{
+				key : 'tutorial[hd]',
+				replace: 'Tutorial'
+			}
+		),
 	];
 
 }

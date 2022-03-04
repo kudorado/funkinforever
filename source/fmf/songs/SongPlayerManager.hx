@@ -652,6 +652,9 @@ class SongPlayerManager
 
 			case 'wellwellwell':
 				songPlayer = new WellWellWell();
+
+			case 'tutorial[hd]':
+				songPlayer = new TutorialHD();
 		}
 
 		return songPlayer;
