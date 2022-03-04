@@ -60,7 +60,7 @@
 	
 
 	<define name="SHOW_CACHED" if="mac" />
-
+	<define name = "LANDCAPE"/>
 	<!-- <define name="PRELOAD_ALL" /> -->
 	<define name="PRELOAD_ALL" unless="kudoWatchingPorn" />
 	<!-- <define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/> -->
