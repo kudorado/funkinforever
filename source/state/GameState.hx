@@ -2799,10 +2799,12 @@ class GameState extends MusicBeatState
 
 						if (es)
 						{
+							#if Portrait
 							var shift = 0.275 * w;
 							var quater = i * ((0.6 * w) / 4);
 							var selfSize = quater - (babyArrow.width / 2);
 							babyArrow.x = shift + selfSize;
+							#end
 						}
 					}
 					playerStrums.add(babyArrow);
@@ -3238,10 +3240,10 @@ class GameState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		dtrace('2906');
+		// dtrace('2906');
 		callOnLuas('onUpdate', [elapsed]);
 
-		dtrace('2908');
+		// dtrace('2908');
 
 		checkUnlockCamFollow();
 
@@ -3978,7 +3980,8 @@ class GameState extends MusicBeatState
 
 	function updateCamFollow()
 	{
-		var note = Std.int(curStep / 16);
+		var note = Math.floor(Std.int(curStep / 16));
+		if(SONG.notes[note] == null) return;
 		// always soon than one note
 
 		if (generatedMusic && SONG.notes[note] != null)
@@ -4004,7 +4007,7 @@ class GameState extends MusicBeatState
 			}
 			else
 			{
-				if (!SONG.notes[note].mustHitSection && camFollow.x != dadFE().getMidpoint().x + 150)
+				if (!SONG.notes[note].mustHitSection)
 				{
 					if (turn == -1) // repeat
 						camFollowSafeFrame = 0;
@@ -4015,7 +4018,7 @@ class GameState extends MusicBeatState
 					turn = -1;
 				}
 
-				if (SONG.notes[note].mustHitSection && camFollow.x != bfFE().getMidpoint().x - 100 && !lockCamFollow)
+				if (SONG.notes[note].mustHitSection)
 				{
 					if (turn == 1) // repeat
 						camFollowSafeFrame = 0;

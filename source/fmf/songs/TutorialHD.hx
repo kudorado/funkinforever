@@ -10,9 +10,13 @@ import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 
 class TutorialHD extends SongPlayerHD
 {
+	var cameraTwn:FlxTween;
+
 	override function loadLua()
 	{
 	}
@@ -59,16 +63,19 @@ class TutorialHD extends SongPlayerHD
 		super.createDad();
 	}
 
+
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		gameState.defaultCamZoom = 1;
+		gameState.targetCamFollow.x -= 100;
+		gameState.defaultCamZoom = 1.5;
 	}
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		gameState.defaultCamZoom = 1;
+		gameState.targetCamFollow.x += 100;
+		gameState.defaultCamZoom = 1.25;
 	}
 
 	override function createGF()

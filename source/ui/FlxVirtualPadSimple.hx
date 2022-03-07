@@ -187,6 +187,12 @@ class FlxVirtualPadSimple extends FlxSpriteGroup
 		button.solid = false;
 		button.immovable = true;
 		button.scrollFactor.set();
+
+		#if Portrait
+		button.scale.x = 1.5;
+		button.scale.y = 1.5;
+		#end
+
 		// button.updateHitbox();
 
 		// #if FLX_DEBUG

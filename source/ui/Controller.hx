@@ -31,8 +31,6 @@ class Controller
 		//disable mobile control first
 		_pad.alpha = 0;
 
-
-
 		var daAlpha = 0.85;
 
 		if(DPad == NONE && Action == B)
@@ -40,12 +38,12 @@ class Controller
 
 		//then enable if its mobile or debugging
 		#if mobile 
-    	_pad.alpha =daAlpha;
+		_pad.alpha = daAlpha;
 		#end
 		
 		#if !mobile
 		#if debug //i dunno could it be using || for multiple condition, cuz i'm stupis	
-		_pad.alpha = daAlpha;
+		// _pad.alpha = daAlpha;
 		#end
 		#end
 		group.add(_pad);
