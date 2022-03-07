@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sarvente_sheet.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="SarventeDown0000" x="0" y="0" width="921" height="945"/>
+	<SubTexture name="SarventeDown0001" x="921" y="0" width="921" height="945"/>
+	<SubTexture name="SarventeDown0002" x="1842" y="0" width="921" height="945"/>
+	<SubTexture name="SarventeDown0003" x="2763" y="0" width="921" height="945"/>
+	<SubTexture name="SarventeDown0004" x="3684" y="0" width="921" height="945"/>
+	<SubTexture name="SarventeIdle0000" x="4605" y="0" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0001" x="5524" y="0" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0002" x="6443" y="0" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0003" x="0" y="945" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0004" x="919" y="945" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0005" x="1838" y="945" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0006" x="2757" y="945" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0007" x="3676" y="945" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0008" x="4595" y="945" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0009" x="5514" y="945" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0010" x="6433" y="945" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0011" x="0" y="1889" width="919" height="944"/>
+	<SubTexture name="SarventeIdle0012" x="919" y="1889" width="919" height="944"/>
+	<SubTexture name="SarventeLeft0000" x="1838" y="1889" width="895" height="923"/>
+	<SubTexture name="SarventeLeft0001" x="2733" y="1889" width="895" height="923"/>
+	<SubTexture name="SarventeLeft0002" x="3628" y="1889" width="895" height="923"/>
+	<SubTexture name="SarventeLeft0003" x="4523" y="1889" width="895" height="923"/>
+	<SubTexture name="SarventeRight0000" x="6313" y="1889" width="920" height="945"/>
+	<SubTexture name="SarventeRight0001" x="7233" y="1889" width="920" height="945"/>
+	<SubTexture name="SarventeRight0002" x="0" y="2834" width="920" height="945"/>
+	<SubTexture name="SarventeRight0003" x="920" y="2834" width="920" height="945"/>
+	<SubTexture name="SarventeRight0004" x="1840" y="2834" width="920" height="945"/>
+	<SubTexture name="SarventeUp0000" x="2760" y="2834" width="927" height="950"/>
+	<SubTexture name="SarventeUp0001" x="3687" y="2834" width="927" height="950"/>
+	<SubTexture name="SarventeUp0002" x="4614" y="2834" width="927" height="950"/>
+	<SubTexture name="SarventeUp0003" x="5541" y="2834" width="927" height="950"/>
+	<SubTexture name="SarventeUp0004" x="6468" y="2834" width="927" height="950"/>
+</TextureAtlas>
