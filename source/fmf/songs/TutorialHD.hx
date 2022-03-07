@@ -20,7 +20,7 @@ class TutorialHD extends SongPlayerHD
 	override function loadMap()
 	{	
         gameState.defaultCamZoom = 1;
-		var bg:FlxSprite = new FlxSprite(-800, -300).loadGraphic(Paths.image('bg/week_hd/stageback', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-1058, -586).loadGraphic(Paths.image('bg/week_hd/stageback', 'mods'));
 		bg.antialiasing = true;
 		//bg.scrollFactor.set(0.9, 0.9);
 		//bg.active = false;
@@ -34,14 +34,14 @@ class TutorialHD extends SongPlayerHD
 		//stageFront.active = false;
 		gameState.add(stageFront);
 
-		var stageCurtains:FlxSprite = new FlxSprite(-800, -300).loadGraphic(Paths.image('bg/week_hd/stagecurtains', 'mods'));
-		//stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
-		stageCurtains.updateHitbox();
-		stageCurtains.antialiasing = true;
-		//stageCurtains.scrollFactor.set(1.3, 1.3);
-		//stageCurtains.active = false;
+		// var stageCurtains:FlxSprite = new FlxSprite(-800, -300).loadGraphic(Paths.image('bg/week_hd/stagecurtains', 'mods'));
+		// //stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+		// stageCurtains.updateHitbox();
+		// stageCurtains.antialiasing = true;
+		// //stageCurtains.scrollFactor.set(1.3, 1.3);
+		// //stageCurtains.active = false;
 
-		gameState.add(stageCurtains);
+		// gameState.add(stageCurtains);
 	}
 
 	// override function getGFVersion()

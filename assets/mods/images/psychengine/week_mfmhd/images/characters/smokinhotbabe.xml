@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="smokinhotbabe.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="LuciferSarvDown0000" x="0" y="0" width="1424" height="1205"/>
+	<SubTexture name="LuciferSarvDown0001" x="1424" y="0" width="1424" height="1205"/>
+	<SubTexture name="LuciferSarvDown0002" x="2848" y="0" width="1424" height="1205"/>
+	<SubTexture name="LuciferSarvDown0003" x="4272" y="0" width="1424" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0000" x="5696" y="0" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0001" x="0" y="1205" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0002" x="1423" y="1205" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0003" x="2846" y="1205" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0004" x="4269" y="1205" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0005" x="5692" y="1205" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0006" x="0" y="2410" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0007" x="1423" y="2410" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0008" x="2846" y="2410" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0009" x="4269" y="2410" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0010" x="5692" y="2410" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0011" x="0" y="3615" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0012" x="1423" y="3615" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvIdle0013" x="2846" y="3615" width="1423" height="1205"/>
+	<SubTexture name="LuciferSarvLeft0000" x="4269" y="3615" width="1424" height="1205"/>
+	<SubTexture name="LuciferSarvLeft0001" x="5693" y="3615" width="1424" height="1205"/>
+	<SubTexture name="LuciferSarvLeft0002" x="0" y="4820" width="1424" height="1205"/>
+	<SubTexture name="LuciferSarvLeft0003" x="1424" y="4820" width="1424" height="1205"/>
+	<SubTexture name="LuciferSarvRight0000" x="2848" y="4820" width="1423" height="1204"/>
+	<SubTexture name="LuciferSarvRight0001" x="4271" y="4820" width="1423" height="1204"/>
+	<SubTexture name="LuciferSarvRight0002" x="5694" y="4820" width="1423" height="1204"/>
+	<SubTexture name="LuciferSarvRight0003" x="0" y="6025" width="1423" height="1204"/>
+	<SubTexture name="LuciferSarvRight0004" x="1423" y="6025" width="1423" height="1204"/>
+	<SubTexture name="LuciferSarvUp0000" x="2846" y="6025" width="1431" height="1225"/>
+	<SubTexture name="LuciferSarvUp0001" x="4277" y="6025" width="1431" height="1225"/>
+	<SubTexture name="LuciferSarvUp0002" x="5708" y="6025" width="1431" height="1225"/>
+</TextureAtlas>
