@@ -31,7 +31,10 @@ class ParishHD extends SongPlayerHD
 			trail = new FlxTrail(dad, null, 4, 24, 0.3, 0.1);
 			trail.color = FlxColor.WHITE;
 
-			gameState.add(trail);
+			gameState.dadGroup.remove(dad);
+			gameState.dadGroup.add(trail);
+			gameState.dadGroup.add(dad);
+
 			trail.visible = false;
 		}
 	}
@@ -41,7 +44,7 @@ class ParishHD extends SongPlayerHD
 		super.updateCamFollowDad();
 		gameState.targetCamFollow.x -= 275;
 		gameState.targetCamFollow.y -= 300;
-		gameState.defaultCamZoom = 0.95;
+		gameState.defaultCamZoom = 0.925;
 
 
 	}
@@ -51,6 +54,7 @@ class ParishHD extends SongPlayerHD
 		super.updateCamFollowDad();
 		gameState.targetCamFollow.x += 75;
 		gameState.targetCamFollow.y -= 150;
+		gameState.defaultCamZoom = 1;
 	}
 
 	override function getGFVersion()
