@@ -20,17 +20,14 @@ import Song.SwagSong;
 // base class execute song data
 class SongPlayerHD extends SongPlayer
 {
-    // public override function getDefaultPc():Character
-    // {
-    //     var newPc = new CharacterPE('bf');
-    //     newPc.flipX = false;
-    //     changeCharacter(newPc);
-    // }
+    private override function getVersion():Character
+    {	
+        return new CharacterPE('bf');
+    }
 
     override function createStoryBF()
     { 
         var newPc = new CharacterPE('bf');
-        newPc.flipX = false;
         newPc.x += 450;
         changeCharacter(newPc);
         
