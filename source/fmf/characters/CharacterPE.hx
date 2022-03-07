@@ -67,6 +67,7 @@ class CharacterPE extends Character
 
 				var path:String = Paths.getPath(characterPath, TEXT, daLibrary);
 
+				trace('char path: ' + path);
 				var rawJson = Assets.getText(path);
 				// lime.app.Application.current.window.alert(characterPath, 'Raw Json');
 

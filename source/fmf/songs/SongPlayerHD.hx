@@ -28,8 +28,6 @@ class SongPlayerHD extends SongPlayer
     override function createStoryBF()
     { 
         var newPc = new CharacterPE('bf');
-        newPc.x += 450;
         changeCharacter(newPc);
-        
     }
 }

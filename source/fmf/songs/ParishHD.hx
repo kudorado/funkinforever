@@ -15,15 +15,7 @@ class ParishHD extends SongPlayerHD
 	var trail:FlxTrail;
 	override function loadMap()
 	{
-		
-		gameState.defaultCamZoom = 0.75;
-
-		var bg:FlxSprite = new FlxSprite(-200, -700).loadGraphic(Paths.image('bg/sacredmass/church1/base', 'mods'));
-		bg.antialiasing = true;
-		bg.scale.y = 1.3;
-		bg.scale.x = 1.3;
-		gameState.add(bg);
-
+		gameState.defaultCamZoom = 1;
 	}
 
 	override function createCharacters()
@@ -44,6 +36,23 @@ class ParishHD extends SongPlayerHD
 		}
 	}
 
+	override function updateCamFollowDad()
+	{
+		super.updateCamFollowDad();
+		gameState.targetCamFollow.x -= 275;
+		gameState.targetCamFollow.y -= 300;
+		gameState.defaultCamZoom = 0.95;
+
+
+	}
+
+	override function updateCamFollowBF()
+	{
+		super.updateCamFollowDad();
+		gameState.targetCamFollow.x += 75;
+		gameState.targetCamFollow.y -= 150;
+	}
+
 	override function getGFVersion()
 	{
 		return new CharacterPE('gf-hd');
@@ -55,6 +64,7 @@ class ParishHD extends SongPlayerHD
 
 	override function dadNoteEvent(noteData:Note)
 	{
+		super.dadNoteEvent(noteData);
 		if (FlxG.save.data.distractions)
 		{
 			if (FlxG.save.data.distractions)
@@ -66,6 +76,8 @@ class ParishHD extends SongPlayerHD
 
 	override function bfNoteEvent(noteData:Note)
 	{
+		super.bfNoteEvent(noteData);
+
 		if (FlxG.save.data.distractions)
 			trail.visible = false;
 	}
