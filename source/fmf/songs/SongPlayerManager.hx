@@ -655,6 +655,10 @@ class SongPlayerManager
 
 			case 'tutorial[hd]':
 				songPlayer = new TutorialHD();
+
+			case 'parish-remix[hd]':
+				songPlayer = new ParishHD();
+
 		}
 
 		return songPlayer;

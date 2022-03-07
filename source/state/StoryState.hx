@@ -350,7 +350,12 @@ class StoryState extends MusicBeatState
 
 	function selectWeek()
 	{
-		if (weekUnlocked[curWeek])
+		var daUnlocked = weekUnlocked[curWeek];
+
+		#if debug
+			daUnlocked = true;
+		#end
+		if (daUnlocked)
 		{
 			if (stopspamming)
 				return;

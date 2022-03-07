@@ -85,6 +85,15 @@ class SongManager
 			}
 		),
 
+		new SongData
+		(
+			{
+				folder: 'week_mfmhd',
+				character: 'week_mfmhd',
+				songTitle: 'Mid-Fight Masses HD',
+				songList: ['parish-remix[hd]', 'worship[hd]', 'zavodila-remix[hd]', 'gospel[hd]']
+			}
+		),
 		
 
 //-------------------------TUTORIAL--------------------------
@@ -427,15 +436,15 @@ class SongManager
 		// 	}
 		// ),
 
-		new SongData
-		(
-			{
-				folder: 'week_finnandjake',
-				character: 'finnandjake',
-				songTitle: 'Finn & Jake',
-				songList: ['Corrupted-hero', 'Brotherly-bond', 'Gummy-substance', 'Together-forever']
-			}
-		),
+		// new SongData
+		// (
+		// 	{
+		// 		folder: 'week_finnandjake',
+		// 		character: 'finnandjake',
+		// 		songTitle: 'Finn & Jake',
+		// 		songList: ['Corrupted-hero', 'Brotherly-bond', 'Gummy-substance', 'Together-forever']
+		// 	}
+		// ),
 
 		// new SongData
 		// (

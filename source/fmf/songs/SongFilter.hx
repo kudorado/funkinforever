@@ -89,8 +89,8 @@ class SongFilter
 
 		new SongFilterData(
 			{
-				key : 'tutorial[hd]',
-				replace: 'Tutorial'
+				key : '[hd]',
+				replace: ''
 			}
 		),
 	];
