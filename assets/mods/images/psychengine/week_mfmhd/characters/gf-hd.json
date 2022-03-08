@@ -92,6 +92,20 @@
 				12
 			]
 		},
+
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"anim": "dance",
+			"fps": 24,
+			"name": "GF Dancing Beat0",
+			"indices": [
+			]
+		},
+
 		{
 			"offsets": [
 				0,
