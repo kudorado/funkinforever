@@ -665,11 +665,9 @@ class SongPlayerManager
 			case 'zavodila-remix[hd]':
 				songPlayer = new ZavodilaHD();
 
-<<<<<<< HEAD
 			case 'gospel-remix[hd]':
 				songPlayer = new GospelHD();
 
-=======
 			case 'bopeebo[hd]':
 				songPlayer = new BopeeboHD();
 
@@ -678,7 +676,6 @@ class SongPlayerManager
 
 			case 'dad-battle[hd]':
 				songPlayer = new DadBattleHD();
->>>>>>> 08cb35b443f8d0241c0b76527c0c170114822e4e
 
 			case 'spookeez[hd]':
 				songPlayer = new Spookeez();
