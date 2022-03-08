@@ -1,7 +1,7 @@
 function onCreate()
 	-- background shit
-	makeAnimatedLuaSprite('churchohgod', 'stages/churchohgod', -600, -600);
-	setLuaSpriteScrollFactor('churchohgod', 1, 1);
+	makeAnimatedLuaSprite('churchohgod', 'stages/churchohgod', -686, -576);
+	setLuaSpriteScrollFactor('churchohgod', 0.95, 0.95);
 	
 	addLuaSprite('churchohgod', false);
 	scaleLuaSprite('churchohgod',1.5,1.5);
@@ -22,4 +22,4 @@ function onMoveCamera(focus)
         setProperty('camFollow.y', getProperty('camFollow.y') -300);
         setProperty('camFollow.x', getProperty('camFollow.x') -400);
     end
-end
+end 

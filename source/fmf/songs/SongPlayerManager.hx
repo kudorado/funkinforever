@@ -665,6 +665,9 @@ class SongPlayerManager
 			case 'zavodila-remix[hd]':
 				songPlayer = new ZavodilaHD();
 
+			case 'gospel-remix[hd]':
+				songPlayer = new GospelHD();
+
 
 		}
 

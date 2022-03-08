@@ -36,7 +36,7 @@ class ZavodilaHD extends SongPlayerHD
 
 	override function updateCamFollowBF()
 	{
-		super.updateCamFollowDad();
+		super.updateCamFollowBF();
 		gameState.targetCamFollow.x += 75;
 		gameState.targetCamFollow.y -= 150;
 		gameState.defaultCamZoom = 1;

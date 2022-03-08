@@ -91,7 +91,7 @@ class SongManager
 				folder: 'week_mfmhd',
 				character: 'week_mfmhd',
 				songTitle: 'Mid-Fight Masses HD',
-				songList: ['parish-remix[hd]', 'worship[hd]', 'zavodila-remix[hd]', 'gospel[hd]']
+				songList: ['parish-remix[hd]', 'worship[hd]', 'zavodila-remix[hd]', 'gospel-remix[hd]']
 			}
 		),
 		

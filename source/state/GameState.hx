@@ -2609,6 +2609,7 @@ class GameState extends MusicBeatState
 		// just how much it has looped
 		var daBeats:Int = 0;
 		// trace('chess 111');
+
 		for (section in noteData)
 		{
 			var coolSection:Int = Std.int(section.lengthInSteps / 4);
@@ -2716,7 +2717,8 @@ class GameState extends MusicBeatState
 		}
 		else
 			trace('Empty events: ' + SONG_NAME);
-		// //@notrace(unspawnNotes.length);
+
+			trace(unspawnNotes.length);
 		// playerCounter += 1;
 
 		unspawnNotes.sort(sortByShit);
