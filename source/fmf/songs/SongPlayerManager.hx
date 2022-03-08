@@ -665,6 +665,14 @@ class SongPlayerManager
 			case 'zavodila-remix[hd]':
 				songPlayer = new ZavodilaHD();
 
+			case 'bopeebo[hd]':
+				songPlayer = new BopeeboHD();
+
+			case 'fresh[hd]':
+				songPlayer = new BopeeboHD();
+
+			case 'dad-battle[hd]':
+				songPlayer = new BopeeboHD();
 
 		}
 
