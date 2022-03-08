@@ -49,7 +49,7 @@ class SongManager
 				folder: 'week_hd',
 				character: 'week3[hd]',
 				songTitle: 'Week3',
-				songList: ['Pico', 'Philly-Nice', 'Blammed']
+				songList: ['pico[hd]', 'philly-nice[hd]', 'blammed[hd]']
 			}
 		),
 
