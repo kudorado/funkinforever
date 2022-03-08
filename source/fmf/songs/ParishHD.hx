@@ -43,7 +43,7 @@ class ParishHD extends SongPlayerHD
 	{
 		super.updateCamFollowDad();
 		gameState.targetCamFollow.x -= 275;
-		gameState.targetCamFollow.y -= 300;
+		// gameState.targetCamFollow.y += 300;
 		gameState.defaultCamZoom = 0.925;
 
 

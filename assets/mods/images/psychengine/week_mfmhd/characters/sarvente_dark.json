@@ -17,7 +17,7 @@
 				190
 			],
 			"indices": [],
-			"fps": 24,
+			"fps": 6,
 			"anim": "idle",
 			"loop": false,
 			"name": "SarvDarkIdle"
@@ -59,9 +59,10 @@
 	"no_antialiasing": false,
 	"image": "characters/sarvente_dark",
 	"position": [
-		0,
-		0
+		482,
+		426
 	],
+	
 	"healthicon": "sarvente",
 	"flip_x": false,
 	"healthbar_colors": [
@@ -74,5 +75,5 @@
 		0
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1.2
 }

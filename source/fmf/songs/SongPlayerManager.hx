@@ -659,6 +659,13 @@ class SongPlayerManager
 			case 'parish-remix[hd]':
 				songPlayer = new ParishHD();
 
+			case 'worship[hd]':
+				songPlayer = new WorshipHD();
+
+			case 'zavodila-remix[hd]':
+				songPlayer = new ZavodilaHD();
+
+
 		}
 
 		return songPlayer;
