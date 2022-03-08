@@ -669,10 +669,10 @@ class SongPlayerManager
 				songPlayer = new BopeeboHD();
 
 			case 'fresh[hd]':
-				songPlayer = new BopeeboHD();
+				songPlayer = new FreshHD();
 
 			case 'dad-battle[hd]':
-				songPlayer = new BopeeboHD();
+				songPlayer = new DadBattleHD();
 
 		}
 
