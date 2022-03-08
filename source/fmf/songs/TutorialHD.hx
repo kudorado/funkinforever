@@ -24,13 +24,13 @@ class TutorialHD extends SongPlayerHD
 	override function loadMap()
 	{	
         gameState.defaultCamZoom = 1;
-		var bg:FlxSprite = new FlxSprite(-1058, -586).loadGraphic(Paths.image('bg/week_hd/stageback', 'mods'));
+		var bg:FlxSprite = new FlxSprite(-400, -657).loadGraphic(Paths.image('bg/week_hd/stageback', 'mods'));
 		bg.antialiasing = true;
 		//bg.scrollFactor.set(0.9, 0.9);
 		//bg.active = false;
 		gameState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(-800, 570).loadGraphic(Paths.image('bg/week_hd/stagefront', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(-400, 569).loadGraphic(Paths.image('bg/week_hd/stagefront', 'mods'));
 		//stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 		//stageFront.updateHitbox();
 		stageFront.antialiasing = true;
@@ -68,14 +68,14 @@ class TutorialHD extends SongPlayerHD
 	{
 		super.updateCamFollowDad();
 		gameState.targetCamFollow.x -= 100;
-		//gameState.defaultCamZoom = 1.5;
+		gameState.defaultCamZoom = 1.2;
 	}
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
 		gameState.targetCamFollow.x += 100;
-		//gameState.defaultCamZoom = 1.25;
+		gameState.defaultCamZoom = 1.1;
 	}
 
 	override function createGF()
@@ -87,8 +87,6 @@ class TutorialHD extends SongPlayerHD
 	override function createBF()
 	{
 		super.createBF();
-		//bf.x += 450;
-		// bf.y -= 80;
 	}
 
 	public override function getDadIcon(icon:Icon)

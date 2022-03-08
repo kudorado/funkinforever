@@ -3,8 +3,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				12,
-				-74
+				4,
+				-87
 			],
 			"fps": 24,
 			"anim": "singDOWN",
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				10,
-				-31
+				0,
+				-34
 			],
 			"indices": [],
 			"fps": 24,
@@ -35,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				-4,
-				17
+				0,
+				-5
 			],
 			"indices": [],
 			"fps": 24,
@@ -46,8 +46,8 @@
 		},
 		{
 			"offsets": [
-				14,
-				-12
+				32,
+				-28
 			],
 			"indices": [],
 			"fps": 24,
@@ -59,8 +59,8 @@
 	"no_antialiasing": false,
 	"image": "characters/DADDY_DEAREST",
 	"position": [
-		20,
-		-210
+		196,
+		-243
 	],
 	"healthicon": "dad",
 	"flip_x": false,
