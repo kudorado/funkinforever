@@ -55,7 +55,7 @@ class TutorialHD extends SongPlayerHD
 
 	override function getDadVersion()
 	{
-		return new CharacterPE('gf');
+		return new CharacterPE('gf_tutorial');
 	}
 
 	override function createDad()
@@ -68,14 +68,14 @@ class TutorialHD extends SongPlayerHD
 	{
 		super.updateCamFollowDad();
 		gameState.targetCamFollow.x -= 100;
-		gameState.defaultCamZoom = 1.5;
+		//gameState.defaultCamZoom = 1.5;
 	}
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
 		gameState.targetCamFollow.x += 100;
-		gameState.defaultCamZoom = 1.25;
+		//gameState.defaultCamZoom = 1.25;
 	}
 
 	override function createGF()
@@ -87,7 +87,7 @@ class TutorialHD extends SongPlayerHD
 	override function createBF()
 	{
 		super.createBF();
-		bf.x += 450;
+		//bf.x += 450;
 		// bf.y -= 80;
 	}
 
