@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="billboards.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="billboards0000" x="10" y="10" width="1115" height="1287"/>
+	<SubTexture name="billboards0001" x="1135" y="10" width="1115" height="1287"/>
+	<SubTexture name="billboards0002" x="2260" y="10" width="1115" height="1287"/>
+	<SubTexture name="billboards0003" x="10" y="1307" width="1115" height="1287"/>
+	<SubTexture name="billboards0004" x="1135" y="1307" width="1115" height="1287"/>
+	<SubTexture name="billboards0005" x="2260" y="1307" width="1115" height="1287"/>
+	<SubTexture name="billboards0006" x="10" y="2604" width="1115" height="1287"/>
+</TextureAtlas>

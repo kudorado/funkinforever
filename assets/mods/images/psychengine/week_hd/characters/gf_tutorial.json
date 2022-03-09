@@ -12,20 +12,8 @@
 			"indices": [],
 			"name": "GF Dancing Beat00"
 		},
-
 		{
-			"loop": true,
-			"offsets": [
-				0,
-				0
-			],
-			"fps": 24,
-			"anim": "cheer",
-			"indices": [],
-			"name": "GF Cheer"
-		},
-		{
-			"loop": true,
+			"loop": false,
 			"offsets": [
 				0,
 				6
@@ -36,7 +24,7 @@
 			"name": "GF left note00"
 		},
 		{
-			"loop": true,
+			"loop": false,
 			"offsets": [
 				0,
 				10
@@ -47,7 +35,7 @@
 			"name": "GF Down Note00"
 		},
 		{
-			"loop": true,
+			"loop": false,
 			"offsets": [
 				0,
 				16
@@ -58,7 +46,7 @@
 			"name": "GF Up Note00"
 		},
 		{
-			"loop": true,
+			"loop": false,
 			"offsets": [
 				0,
 				3
@@ -77,9 +65,8 @@
 			],
 			"fps": 24,
 			"anim": "danceLeft",
-			"indices": [
-			],
-			"name": "GF Dancing Beat"
+			"indices": [],
+			"name": "GF Dancing Beat00"
 		},
 		{
 			"loop": false,
@@ -89,9 +76,9 @@
 			],
 			"fps": 24,
 			"anim": "danceRight",
-			"indices": [
-			],
-			"name": "GF Dancing Beat"
+			"indices": [],
+			"name": "GF Dancing Beat00"
+
 		}
 		
 	],

@@ -665,9 +665,11 @@ class SongPlayerManager
 			case 'zavodila-remix[hd]':
 				songPlayer = new ZavodilaHD();
 				
+
 			case 'gospel-remix[hd]':
 				songPlayer = new GospelHD();
 
+			//week 1
 			case 'bopeebo[hd]':
 				songPlayer = new BopeeboHD();
 
@@ -677,6 +679,26 @@ class SongPlayerManager
 			case 'dad-battle[hd]':
 				songPlayer = new DadBattleHD();
 
+			//week 2
+			case 'spookeez[hd]':
+				songPlayer = new Spookeez();
+
+			case 'south[hd]':
+				songPlayer = new Spookeez();
+
+			case 'monster[hd]':
+				songPlayer = new MonsterHD();
+
+			//week 3
+
+			case 'pico[hd]':
+				songPlayer = new PicoHD();
+
+			case 'philly-nice[hd]':
+				songPlayer = new PhillyNiceHD();
+
+			case 'blammed[hd]':
+				songPlayer = new BlammedHD();
 		}
 
 		return songPlayer;

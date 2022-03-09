@@ -1,12 +1,12 @@
 function onCreate()
 	-- background shit
-	makeAnimatedLuaSprite('churchohgod', 'stages/churchohgod', -686, -576);
+	makeAnimatedLuaSprite('churchohgod', 'stages/churchohgod_1', -545, -466);
 	setLuaSpriteScrollFactor('churchohgod', 0.95, 0.95);
 	
 	addLuaSprite('churchohgod', false);
-	scaleLuaSprite('churchohgod',1.5,1.5);
+	scaleLuaSprite('churchohgod',2.1,2.1);
 
-	luaSpriteAddAnimationByPrefix('churchohgod','portal','churchdeath',24,true);
+	luaSpriteAddAnimationByPrefix('churchohgod','portal','Churchdeath00',24,true);
 
 	luaSpritePlayAnimation('portal','churchohgod','true');
 
