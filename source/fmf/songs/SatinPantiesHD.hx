@@ -32,13 +32,13 @@ class SatinPantiesHD extends SongPlayerHD
 
 	override function loadMap()
 	{	
-        var skyBG:FlxSprite = new FlxSprite(-120, -50).loadGraphic(Paths.image('limo/limoSunset', 'week4'));
+        var skyBG:FlxSprite = new FlxSprite(-120, -50).loadGraphic(Paths.image('bg/week_hd/week4/limo/limoSunset', 'mods'));
 		skyBG.scrollFactor.set(0.1, 0.1);
 		gameState.add(skyBG);
 
 		var bgLimo:FlxSprite = new FlxSprite(-200, 480);
-		bgLimo.frames = Paths.getSparrowAtlas('limo/bgLimo', 'week4');
-		bgLimo.animation.addByPrefix('drive', "background limo pink", 24);
+		bgLimo.frames = Paths.getSparrowAtlas('bg/week_hd/week4/limo/bgLimo', 'mods');
+		bgLimo.animation.addByPrefix('drive', "BG limo instance", 24);
 		bgLimo.animation.play('drive');
 		bgLimo.scrollFactor.set(0.4, 0.4);
 		gameState.add(bgLimo);
@@ -55,7 +55,7 @@ class SatinPantiesHD extends SongPlayerHD
 			}
 		}
 
-		var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('limo/limoOverlay', 'week4'));
+		var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('bg/week_hd/week4/limo/limoOverlay', 'mods'));
 		overlayShit.alpha = 0.5;
 		gameState.add(overlayShit);
 
@@ -65,7 +65,7 @@ class SatinPantiesHD extends SongPlayerHD
 
 		// overlayShit.blend = shaderBullshit;
 
-		var limoTex = Paths.getSparrowAtlas('limo/limoDrive', 'week4');
+		var limoTex = Paths.getSparrowAtlas('bg/week_hd/week4/limo/limoDrive', 'week4');
 
 		limo = new FlxSprite(-120, 550);
 		limo.frames = limoTex;
@@ -73,7 +73,7 @@ class SatinPantiesHD extends SongPlayerHD
 		limo.animation.play('drive');
 		limo.antialiasing = true;
 
-		fastCar = new FlxSprite(-300, 160).loadGraphic(Paths.image('limo/fastCarLol', 'week4'));
+		fastCar = new FlxSprite(-300, 160).loadGraphic(Paths.image('bg/week_hd/week4/limo/fastCarLol', 'mods'));
 
 		if (FlxG.save.data.distractions)
 		{
