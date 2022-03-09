@@ -17,33 +17,54 @@ class MonsterHD extends SongPlayerHD
 {
 	var cameraTwn:FlxTween;
 
+	var bg: FlxSprite;
+	
 	override function loadLua()
 	{
 	}
 
 	override function loadMap()
 	{	
-        gameState.defaultCamZoom = 0.4;
 		gameState.defaultCamZoom = 1;
-		var bg:FlxSprite = new FlxSprite(-400, -657).loadGraphic(Paths.image('bg/week_hd/stageback', 'mods'));
-		bg.antialiasing = true;
-		gameState.add(bg);
 
-		var stageFront:FlxSprite = new FlxSprite(-400, 569).loadGraphic(Paths.image('bg/week_hd/stagefront', 'mods'));
+		bg = new FlxSprite(0, 0);
+		bg.frames = Paths.getSparrowAtlas('bg/week_hd/week2/halloween_bg', 'mods');
+		
+		bg.animation.addByPrefix('lightning', 'Halloweem bg lightning strike00', 18, false);
+		bg.animation.addByPrefix('idle', 'Halloweem bg0000', 18, false);
+		bg.animation.play('idle');
+		bg.antialiasing = true;
+
+		bg.scale.x = 3.6;
+		bg.scale.y = 3.6;
+		
+		bg.x = 236;
+		bg.y = 143;
+
+		if (FlxG.save.data.distractions)
+		{
+			gameState.add(bg);
+		}
+	}
+
+	function createOverlay()
+	{
+		var stageFront:FlxSprite = new FlxSprite(-400, 569).loadGraphic(Paths.image('bg/week_hd/week2/overlay', 'mods'));
 		stageFront.antialiasing = true;
+		stageFront.scale.x = 3;
+		stageFront.scale.y = 3;
 		gameState.add(stageFront);
+	}
+
+	override function createCharacters() {
+		super.createCharacters();
+		createOverlay();
 	}
 
 	override function getDadVersion()
 	{
 		return new CharacterPE('monster');
 	}
-
-	override function createDad()
-	{
-		super.createDad();
-	}
-
 
 	override function updateCamFollowDad()
 	{
@@ -64,11 +85,6 @@ class MonsterHD extends SongPlayerHD
 	{
 		super.createGF();
         gf.visible = false;
-	}
-
-	override function createBF()
-	{
-		super.createBF();
 	}
 
 	public override function getDadIcon(icon:Icon)
