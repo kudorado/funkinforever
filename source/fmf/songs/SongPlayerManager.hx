@@ -698,6 +698,16 @@ class SongPlayerManager
 
 			case 'blammed[hd]':
 				songPlayer = new BlammedHD();
+
+			//week 4
+			case 'satin-panties[hd]' | 'satinpanties[hd]':
+				songPlayer = new SatinPantiesHD();
+
+			case 'high[hd]':
+				songPlayer = new PhillyNiceHD();
+
+			case 'milf[hd]':
+				songPlayer = new BlammedHD();
 		}
 
 		return songPlayer;
