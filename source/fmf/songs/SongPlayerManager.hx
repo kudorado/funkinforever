@@ -676,7 +676,7 @@ class SongPlayerManager
 			case 'fresh[hd]':
 				songPlayer = new FreshHD();
 
-			case 'dad-battle[hd]':
+			case 'dad-battle[hd]' | 'dadbattle[hd]':
 				songPlayer = new DadBattleHD();
 
 			//week 2
@@ -690,7 +690,6 @@ class SongPlayerManager
 				songPlayer = new MonsterHD();
 
 			//week 3
-
 			case 'pico[hd]':
 				songPlayer = new PicoHD();
 

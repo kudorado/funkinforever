@@ -210,10 +210,7 @@ class StartState extends MusicBeatState
 		titleText.y = 100;
 
 		#if Portrait
-		titleText.x -= 150;
-		titleText.scale.x -= 0.25;
-		titleText.scale.y -= 0.25;
-
+		titleText.x -= 250;
 		#end
 		add(titleText);
 

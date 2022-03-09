@@ -717,46 +717,54 @@ class GameState extends MusicBeatState
 		{
 			case 'Hey!':
 
-			// var value:Int = 0;
-			// switch (value1.toLowerCase().trim())
-			// {
-			// 	case 'bf' | 'boyfriend' | '0':
-			// 		value = 0;
+			trace('hey!');
 
-			// 	case 'gf' | 'girlfriend' | '1':
-			// 		value = 1;
+			var value:Int = 0;
+			switch (value1.toLowerCase().trim())
+			{
+				case 'bf' | 'boyfriend' | '0':
+					value = 0;
 
-			// 	case 'dad' | '2':
-			// 		value = 2;
+				case 'gf' | 'girlfriend' | '1':
+					value = 1;
 
-			// 	case 'player3' | '3':
-			// 		value = 3;
-			// }
+				case 'dad' | '2':
+					value = 2;
 
-			// var time:Float = Std.parseFloat(value2);
-			// if(Math.isNaN(time) || time <= 0) time = 0.6;
+				case 'player3' | '3':
+					value = 3;
+			}
 
-			// if(value != 0) {
-			// 	if(dadPE.curCharacter.startsWith('gf')) { //Tutorial GF is actually Dad! The GF is an imposter!! ding ding ding ding ding ding ding, dindinding, end my suffering
-			// 		dadPE.playAnim('cheer', true);
-			// 		dadPE.specialAnim = true;
-			// 		dadPE.heyTimer = time;
-			// 	} else {
-			// 		gfPE.playAnim('cheer', true);
-			// 		gfPE.specialAnim = true;
-			// 		gfPE.heyTimer = time;
-			// 	}
+			var time:Float = Std.parseFloat(value2);
+			if(Math.isNaN(time) || time <= 0) time = 0.6;
 
-			// 	if(curStage == 'mall') {
-			// 		// bottomBoppers.animation.play('hey', true);
-			// 		// heyTimer = time;
-			// 	}
-			// }
-			// if(value != 1) {
-			// 	bfPE.playAnim('hey', true);
-			// 	bfPE.specialAnim = true;
-			// 	bfPE.heyTimer = time;
-			// }
+			if (value != 0)
+			{
+				if (dad.curCharacter.startsWith('gf'))
+				{ // Tutorial GF is actually Dad! The GF is an imposter!! ding ding ding ding ding ding ding, dindinding, end my suffering
+					dad.playAnim('cheer', true);
+					dad.specialAnim = true;
+					dad.heyTimer = time;
+				}
+				else
+				{
+					gf.playAnim('cheer', true);
+					gf.specialAnim = true;
+					gf.heyTimer = time;
+				}
+
+				if (curStage == 'mall')
+				{
+					// bottomBoppers.animation.play('hey', true);
+					// heyTimer = time;
+				}
+			}
+			if (value != 1)
+			{
+				bf.playAnim('hey', true);
+				bf.specialAnim = true;
+				bf.heyTimer = time;
+			}
 
 			case 'Set GF Speed':
 				var value:Int = Std.parseInt(value1);

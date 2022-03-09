@@ -29,7 +29,7 @@ class SongManager
 				folder: 'week_hd',
 				character: 'week1[hd]',
 				songTitle: 'Week1',
-				songList: ['bopeebo[hd]', 'fresh[hd]', 'dad-battle[hd]']
+				songList: ['bopeebo[hd]', 'fresh[hd]', 'dadbattle[hd]']
 			}
 		),
 

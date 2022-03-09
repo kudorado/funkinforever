@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import fmf.songs.BopeeboHD;
 import reactor.*;
 import ui.*;
 import fmf.characters.*;
@@ -13,9 +14,8 @@ import MenuCharacter.CharacterSetting;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 
-class FreshHD extends SongPlayerHD
+class FreshHD extends BopeeboHD
 {
-	var cameraTwn:FlxTween;
 
 	override function loadLua()
 	{
@@ -23,8 +23,7 @@ class FreshHD extends SongPlayerHD
 
 	override function loadMap()
 	{	
-        gameState.defaultCamZoom = 0.4;
-		gameState.defaultCamZoom = 1;
+		gameState.defaultCamZoom = 0.9;
 		var bg:FlxSprite = new FlxSprite(-400, -657).loadGraphic(Paths.image('bg/week_hd/stageback', 'mods'));
 		bg.antialiasing = true;
 		gameState.add(bg);
@@ -33,6 +32,8 @@ class FreshHD extends SongPlayerHD
 		stageFront.antialiasing = true;
 		gameState.add(stageFront);
 	}
+
+	
 
 	override function getDadVersion()
 	{
@@ -44,21 +45,6 @@ class FreshHD extends SongPlayerHD
 		super.createDad();
 	}
 
-
-	override function updateCamFollowDad()
-	{
-		super.updateCamFollowDad();
-		gameState.targetCamFollow.x -= 100;
-		gameState.defaultCamZoom = 1;
-
-	}
-
-	override function updateCamFollowBF()
-	{
-		super.updateCamFollowBF();
-		gameState.targetCamFollow.x += 100;
-		gameState.defaultCamZoom = 1;
-	}
 
 	override function createGF()
 	{

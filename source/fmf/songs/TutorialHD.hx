@@ -68,14 +68,15 @@ class TutorialHD extends SongPlayerHD
 	{
 		super.updateCamFollowDad();
 		gameState.targetCamFollow.x -= 100;
-		gameState.defaultCamZoom = 1.2;
+		gameState.defaultCamZoom = 1.35;
 	}
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
 		gameState.targetCamFollow.x += 100;
-		gameState.defaultCamZoom = 1.1;
+		gameState.targetCamFollow.y -= 200;
+		gameState.defaultCamZoom = 1;
 	}
 
 	override function createGF()

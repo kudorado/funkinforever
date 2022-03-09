@@ -23,8 +23,7 @@ class BopeeboHD extends SongPlayerHD
 
 	override function loadMap()
 	{	
-        gameState.defaultCamZoom = 0.4;
-		gameState.defaultCamZoom = 1;
+		gameState.defaultCamZoom = 0.9;
 		var bg:FlxSprite = new FlxSprite(-400, -657).loadGraphic(Paths.image('bg/week_hd/stageback', 'mods'));
 		bg.antialiasing = true;
 		gameState.add(bg);
@@ -47,19 +46,21 @@ class BopeeboHD extends SongPlayerHD
 
 	override function updateCamFollowDad()
 	{
-		super.updateCamFollowDad();
-		gameState.targetCamFollow.x -= 100;
-		gameState.defaultCamZoom = 1;
+		gameState.defaultCamZoom = 0.9;
+		gameState.targetCamFollow.x += 75;
 
 	}
+	
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		gameState.targetCamFollow.x += 100;
-		gameState.defaultCamZoom = 1;
+		gameState.targetCamFollow.x -= 125;
+		gameState.targetCamFollow.y -= 350;
+		gameState.defaultCamZoom = 0.9;
 	}
-
+	
+		
 	override function createGF()
 	{
 		super.createGF();
@@ -69,6 +70,7 @@ class BopeeboHD extends SongPlayerHD
 	{
 		super.createBF();
 	}
+		
 
 	public override function getDadIcon(icon:Icon)
 	{
