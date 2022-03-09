@@ -20,10 +20,20 @@ import Song.SwagSong;
 // base class execute song data
 class SongPlayerHD extends SongPlayer
 {
-    private override function getVersion():Character
-    {	
-        return new CharacterPE('bf');
-    }
+	private override function getVersion():Character
+	{
+		return new CharacterPE('bf');
+	}
+
+	override function getGFVersion()
+	{
+		return new CharacterPE('gf-hd');
+	}
+
+	override function loadMap()
+	{
+		gameState.defaultCamZoom = 1;
+	}
 
     override function createStoryBF()
     { 

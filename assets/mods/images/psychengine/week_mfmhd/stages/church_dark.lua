@@ -1,6 +1,6 @@
 function onCreate()
 	-- background shit
-	makeLuaSprite('church_dark', 'stages/church_dark', -600, -600);
+	makeLuaSprite('church_dark', 'stages/church_dark', -646, -598);
 	setLuaSpriteScrollFactor('church_dark', 1, 1);
 	
 	addLuaSprite('church_dark', false);

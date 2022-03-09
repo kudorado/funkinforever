@@ -2,7 +2,7 @@
 	"animations": [
 
 		{
-			"loop": false,
+			"loop": true,
 			"offsets": [
 				0,
 				0
@@ -16,7 +16,7 @@
 			"loop": false,
 			"offsets": [
 				0,
-				-3
+				6
 			],
 			"fps": 24,
 			"anim": "singLEFT",
@@ -27,7 +27,7 @@
 			"loop": false,
 			"offsets": [
 				0,
-				-5
+				10
 			],
 			"fps": 24,
 			"anim": "singDOWN",
@@ -38,7 +38,7 @@
 			"loop": false,
 			"offsets": [
 				0,
-				-8
+				16
 			],
 			"fps": 24,
 			"anim": "singUP",
@@ -49,7 +49,7 @@
 			"loop": false,
 			"offsets": [
 				0,
-				-1.5
+				3
 			],
 			"fps": 12,
 			"anim": "singRIGHT",
@@ -78,13 +78,15 @@
 			"anim": "danceRight",
 			"indices": [],
 			"name": "GF Dancing Beat00"
+
 		}
+		
 	],
 	"no_antialiasing": false,
 	"image": "characters/GF_assets_tutorial",
 	"position": [
-		0,
-		0
+		544,
+		168
 	],
 	"healthicon": "gf",
 	"flip_x": false,

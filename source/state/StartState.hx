@@ -80,7 +80,7 @@ class StartState extends MusicBeatState
 
 		super.create();
 
-		FlxG.save.bind('save', 'dashit');
+		FlxG.save.bind('save', 'holy');
 		KadeEngineData.initSave();
 		Highscore.load();
 

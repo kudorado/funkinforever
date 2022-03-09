@@ -29,7 +29,7 @@ class SongManager
 				folder: 'week_hd',
 				character: 'week1[hd]',
 				songTitle: 'Week1',
-				songList: ['Bopeebo', 'Fresh', 'Dad-Battle']
+				songList: ['bopeebo[hd]', 'fresh[hd]', 'dad-battle[hd]']
 			}
 		),
 
@@ -39,7 +39,7 @@ class SongManager
 				folder: 'week_hd',
 				character: 'week2[hd]',
 				songTitle: 'Week2',
-				songList: ['Spookeez', 'South', 'Monster']
+				songList: ['spookeez[hd]', 'south[hd]', 'monster[hd]']
 			}
 		),
 
@@ -49,7 +49,7 @@ class SongManager
 				folder: 'week_hd',
 				character: 'week3[hd]',
 				songTitle: 'Week3',
-				songList: ['Pico', 'Philly-Nice', 'Blammed']
+				songList: ['pico[hd]', 'philly-nice[hd]', 'blammed[hd]']
 			}
 		),
 
@@ -91,7 +91,7 @@ class SongManager
 				folder: 'week_mfmhd',
 				character: 'week_mfmhd',
 				songTitle: 'Mid-Fight Masses HD',
-				songList: ['parish-remix[hd]', 'worship[hd]', 'zavodila-remix[hd]', 'gospel[hd]']
+				songList: ['parish-remix[hd]', 'worship[hd]', 'zavodila-remix[hd]', 'gospel-remix[hd]']
 			}
 		),
 		
