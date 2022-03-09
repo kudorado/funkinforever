@@ -12,36 +12,73 @@ import flixel.FlxSprite;
 import MenuCharacter.CharacterSetting;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import openfl.filters.ShaderFilter;
+import flixel.group.FlxGroup.FlxTypedGroup;
 
 class SatinPantiesHD extends SongPlayerHD
 {
 	var cameraTwn:FlxTween;
-	var bg: FlxSprite;
+	
+
+    var limo:FlxSprite;
+	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
+	var fastCar:FlxSprite;
+	var fastCarCanDrive:Bool = true;
+
 	override function loadLua()
 	{
 	}
 
 	override function loadMap()
 	{	
-        gameState.defaultCamZoom = 1;
+        var skyBG:FlxSprite = new FlxSprite(-120, -50).loadGraphic(Paths.image('limo/limoSunset', 'week4'));
+		skyBG.scrollFactor.set(0.1, 0.1);
+		gameState.add(skyBG);
 
-		bg = new FlxSprite(0, 0);
-		bg.frames = Paths.getSparrowAtlas('bg/week_hd/week2/halloween_bg', 'mods');
-		
-		bg.animation.addByPrefix('lightning', 'Halloweem bg lightning strike00', 18, false);
-		bg.animation.addByPrefix('idle', 'Halloweem bg0000', 18, false);
-		bg.animation.play('idle');
-		bg.antialiasing = true;
+		var bgLimo:FlxSprite = new FlxSprite(-200, 480);
+		bgLimo.frames = Paths.getSparrowAtlas('limo/bgLimo', 'week4');
+		bgLimo.animation.addByPrefix('drive', "background limo pink", 24);
+		bgLimo.animation.play('drive');
+		bgLimo.scrollFactor.set(0.4, 0.4);
+		gameState.add(bgLimo);
+		if (FlxG.save.data.distractions)
+		{
+			grpLimoDancers = new FlxTypedGroup<BackgroundDancer>();
+			gameState.add(grpLimoDancers);
 
-		bg.scale.x = 3.6;
-		bg.scale.y = 3.6;
-		
-		bg.x = 236;
-		bg.y = 143;
+			for (i in 0...5)
+			{
+				var dancer:BackgroundDancer = new BackgroundDancer((370 * i) + 130, bgLimo.y - 400);
+				dancer.scrollFactor.set(0.4, 0.4);
+				grpLimoDancers.add(dancer);
+			}
+		}
+
+		var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('limo/limoOverlay', 'week4'));
+		overlayShit.alpha = 0.5;
+		gameState.add(overlayShit);
+
+		// var shaderBullshit = new BlendModeEffect(new OverlayShader(), FlxColor.RED);
+
+		// FlxG.camera.setFilters([new ShaderFilter(cast shaderBullshit.shader)]);
+
+		// overlayShit.blend = shaderBullshit;
+
+		var limoTex = Paths.getSparrowAtlas('limo/limoDrive', 'week4');
+
+		limo = new FlxSprite(-120, 550);
+		limo.frames = limoTex;
+		limo.animation.addByPrefix('drive', "Limo stage", 24);
+		limo.animation.play('drive');
+		limo.antialiasing = true;
+
+		fastCar = new FlxSprite(-300, 160).loadGraphic(Paths.image('limo/fastCarLol', 'week4'));
 
 		if (FlxG.save.data.distractions)
 		{
-			gameState.add(bg);
+			resetFastCar();
+			gameState.add(fastCar);
 		}
 	}
 
@@ -120,4 +157,49 @@ class SatinPantiesHD extends SongPlayerHD
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
+
+
+
+
+    //
+    function resetFastCar():Void
+    {
+        if (FlxG.save.data.distractions)
+        {
+            fastCar.x = -12600;
+            fastCar.y = FlxG.random.int(140, 250);
+            fastCar.velocity.x = 0;
+            fastCarCanDrive = true;
+        }
+    }
+
+    function fastCarDrive()
+    {
+        if (FlxG.save.data.distractions)
+        {
+            FlxG.sound.play(Paths.soundRandom('carPass', 0, 1), 0.7);
+
+            fastCar.velocity.x = (FlxG.random.int(170, 220) / FlxG.elapsed) * 3;
+            fastCarCanDrive = false;
+            new FlxTimer().start(2, function(tmr:FlxTimer)
+            {
+                resetFastCar();
+            });
+        }
+    }
+
+    override function midSongEventUpdate(curBeat:Int):Void
+    {
+        if (FlxG.save.data.distractions)
+        {
+            grpLimoDancers.forEach(function(dancer:BackgroundDancer)
+            {
+                dancer.dance();
+            });
+
+            if (FlxG.random.bool(10) && fastCarCanDrive)
+                fastCarDrive();
+        }
+    }
+    
 }
