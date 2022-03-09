@@ -207,9 +207,14 @@ class StartState extends MusicBeatState
 		titleText.screenCenter(X);
 		titleText.setGraphicSize(Std.int(titleText.width * 0.7));
 		titleText.x =  100;
-
 		titleText.y = 100;
 
+		#if Portrait
+		titleText.x -= 150;
+		titleText.scale.x -= 0.25;
+		titleText.scale.y -= 0.25;
+
+		#end
 		add(titleText);
 
 		credGroup = new FlxGroup();

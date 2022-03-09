@@ -4033,7 +4033,7 @@ class GameState extends MusicBeatState
 		}
 	}
 
-	function clamp(raw:Float, min:Float, max:Float)
+	public function clamp(raw:Float, min:Float, max:Float)
 	{
 		if (raw < min)
 			raw = min;
