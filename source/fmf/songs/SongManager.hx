@@ -60,7 +60,7 @@ class SongManager
 				folder: 'week_hd',
 				character: 'week4[hd]',
 				songTitle: 'Week4',
-				songList: ['satin-panties', 'high', 'milf']
+				songList: ['satin-panties[hd]', 'high[hd]', 'milf[hd]']
 			}
 		),
 
@@ -70,7 +70,7 @@ class SongManager
 				folder: 'week_hd',
 				character: 'week5[hd]',
 				songTitle: 'Week5',
-				songList: ['cocoa', 'eggnog', 'winter-horrorland']
+				songList: ['cocoa[hd]', 'eggnog[hd]', 'winter-horrorland[hd]']
 			}
 		),
 
@@ -81,7 +81,7 @@ class SongManager
 				folder: 'week_hd',
 				character: 'week6[hd]',
 				songTitle: 'Week6',
-				songList: ['roses', 'senpai', 'thorns']
+				songList: ['roses[hd]', 'senpai[hd]', 'thorns[hd]']
 			}
 		),
 
