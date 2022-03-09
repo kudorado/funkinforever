@@ -23,7 +23,7 @@ class FreshHD extends BopeeboHD
 
 	override function loadMap()
 	{	
-		gameState.defaultCamZoom = 0.9;
+		gameState.defaultCamZoom = 1;
 		var bg:FlxSprite = new FlxSprite(-400, -657).loadGraphic(Paths.image('bg/week_hd/stageback', 'mods'));
 		bg.antialiasing = true;
 		gameState.add(bg);
@@ -33,28 +33,48 @@ class FreshHD extends BopeeboHD
 		gameState.add(stageFront);
 	}
 
-	
+	function createCrowd()
+	{
+		var crowd = new FlxSprite(0, 0);
+		crowd.frames = Paths.getSparrowAtlas('bg/week_hd/week1/CROWD_FRESH', 'mods');
+		
+		crowd.animation.addByPrefix('idle', 'crowd00', 18, true);
+		crowd.animation.play('idle');
+		crowd.antialiasing = true;
+
+		crowd.scale.x = 1.5;
+		crowd.scale.y = 1.5;
+		
+		crowd.x = 236;
+		crowd.y = 600;
+
+		if (FlxG.save.data.distractions)
+		{
+			gameState.add(crowd);
+		}
+	}
+
+	override function createCharacters() {
+		super.createCharacters();
+		createCrowd();
+	}
 
 	override function getDadVersion()
 	{
 		return new CharacterPE('dad');
 	}
 
-	override function createDad()
-	{
-		super.createDad();
-	}
+	// override function updateCamFollowDad()
+	// {
+	// 	super.updateCamFollowDad();
+	// 	gameState.defaultCamZoom = 0.4;
+	// }
 
-
-	override function createGF()
-	{
-		super.createGF();
-	}
-
-	override function createBF()
-	{
-		super.createBF();
-	}
+	// override function updateCamFollowBF()
+	// {
+	// 	super.updateCamFollowBF();
+	// 	gameState.defaultCamZoom = 0.4;
+	// }
 
 	public override function getDadIcon(icon:Icon)
 	{

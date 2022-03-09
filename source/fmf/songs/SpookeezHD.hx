@@ -13,7 +13,7 @@ import MenuCharacter.CharacterSetting;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 
-class Spookeez extends SongPlayerHD
+class SpookeezHD extends SongPlayerHD
 {
 	var cameraTwn:FlxTween;
 

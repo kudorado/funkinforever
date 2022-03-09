@@ -681,10 +681,10 @@ class SongPlayerManager
 
 			//week 2
 			case 'spookeez[hd]':
-				songPlayer = new Spookeez();
+				songPlayer = new SpookeezHD();
 
 			case 'south[hd]':
-				songPlayer = new Spookeez();
+				songPlayer = new SpookeezHD();
 
 			case 'monster[hd]':
 				songPlayer = new MonsterHD();
