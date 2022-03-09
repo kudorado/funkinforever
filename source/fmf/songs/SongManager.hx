@@ -81,7 +81,7 @@ class SongManager
 				folder: 'week_hd',
 				character: 'week6[hd]',
 				songTitle: 'Week6',
-				songList: ['Pico', 'Philly-Nice', 'winter-horrorland']
+				songList: ['roses', 'senpai', 'thorns']
 			}
 		),
 
