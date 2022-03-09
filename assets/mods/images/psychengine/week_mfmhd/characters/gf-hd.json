@@ -173,6 +173,7 @@
 	],
 	"no_antialiasing": false,
 	"image": "characters/GF_assets_HD",
+	"sharedSongFolder": "week_hd",
 	"position": [
 		590,
 		220

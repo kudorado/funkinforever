@@ -210,7 +210,7 @@ class StartState extends MusicBeatState
 		titleText.y = 100;
 
 		#if Portrait
-		titleText.x -= 250;
+		titleText.x -= 200;
 		#end
 		add(titleText);
 
