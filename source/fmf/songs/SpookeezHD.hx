@@ -45,6 +45,19 @@ class SpookeezHD extends SongPlayerHD
 		}
 	}
 
+	override function midSongEventUpdate(curBeat:Int):Void
+	{
+		updateBG(curBeat);
+	}
+
+	function updateBG(curBeat:Int)
+	{
+		if (curBeat % 32 == 0)
+		{
+			bg.animation.play('lightning');
+		}
+	}
+
 	function createOverlay()
 	{
 		var stageFront:FlxSprite = new FlxSprite(-400, 569).loadGraphic(Paths.image('bg/week_hd/week2/overlay', 'mods'));
@@ -83,16 +96,6 @@ class SpookeezHD extends SongPlayerHD
 		super.updateCamFollowBF();
 		gameState.targetCamFollow.x += 100;
 		gameState.defaultCamZoom = 1;
-	}
-
-	override function createGF()
-	{
-		super.createGF();
-	}
-
-	override function createBF()
-	{
-		super.createBF();
 	}
 
 	public override function getDadIcon(icon:Icon)
