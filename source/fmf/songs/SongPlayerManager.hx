@@ -717,7 +717,7 @@ class SongPlayerManager
 				songPlayer = new ParentEggnogHD();
 
 			case 'winter-horrorland[hd]' | 'winterhorrorland[hd]':
-				songPlayer = new ParentHD();
+				songPlayer = new WinterHorrorlandHD();
 		}
 
 		return songPlayer;
