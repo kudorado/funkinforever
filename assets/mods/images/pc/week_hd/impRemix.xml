@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:475c574c180a2c30779a352033084367:b5f3707555a9e8ba3007c7d37d11a42e:1ed7de575fce2e27a4998e238490453f$ -->
+<TextureAtlas imagePath="impRemix.png" width="2048" height="2048">
+    <SubTexture name="Imp0000" x="1" y="1" width="657" height="921"/>
+    <SubTexture name="Imp0001" x="1" y="1" width="657" height="921"/>
+    <SubTexture name="Imp0002" x="1" y="924" width="657" height="921"/>
+    <SubTexture name="Imp0003" x="1" y="924" width="657" height="921"/>
+    <SubTexture name="Imp0004" x="660" y="1" width="657" height="921"/>
+    <SubTexture name="Imp0005" x="660" y="1" width="657" height="921"/>
+    <SubTexture name="Imp0006" x="1319" y="1" width="657" height="921"/>
+    <SubTexture name="Imp0007" x="1319" y="1" width="657" height="921"/>
+    <SubTexture name="Imp0008" x="660" y="924" width="657" height="921"/>
+    <SubTexture name="Imp0009" x="660" y="924" width="657" height="921"/>
+    <SubTexture name="Imp0010" x="660" y="924" width="657" height="921"/>
+    <SubTexture name="Imp0011" x="660" y="924" width="657" height="921"/>
+    <SubTexture name="Imp0012" x="660" y="924" width="657" height="921"/>
+    <SubTexture name="Imp0013" x="660" y="924" width="657" height="921"/>
+</TextureAtlas>

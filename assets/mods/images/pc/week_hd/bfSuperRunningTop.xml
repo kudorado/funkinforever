@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:9d86bb1a9c754dbf687353d0cea5fb7b:873cb30dfbe78d67add57b246503dd22:d53883beecb82637f1dc538b2705488b$ -->
+<TextureAtlas imagePath="bfSuperRunningTop.png" width="2048" height="2048">
+    <SubTexture name="BF TOP INVISIBLE0000" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0001" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0002" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0003" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0004" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0005" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0006" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0007" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0008" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0009" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0010" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0011" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0012" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0013" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0014" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0015" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP INVISIBLE0016" x="1" y="1993" width="23" height="22"/>
+    <SubTexture name="BF TOP NOTE DOWN0000" x="1367" y="1243" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE DOWN0001" x="1367" y="1598" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE DOWN0002" x="1706" y="907" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE DOWN0003" x="1706" y="1262" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE DOWN0004" x="1706" y="907" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE DOWN0005" x="1706" y="1262" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE DOWN0006" x="1706" y="907" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE DOWN0007" x="1706" y="1262" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE DOWN0008" x="1706" y="907" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE DOWN0009" x="1706" y="1262" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE DOWN0010" x="1706" y="907" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE DOWN0011" x="1706" y="1262" width="337" height="353"/>
+    <SubTexture name="BF TOP NOTE LEFT0000" x="1" y="907" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE LEFT0001" x="1" y="1269" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE LEFT0002" x="1" y="1631" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE LEFT0003" x="341" y="907" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE LEFT0004" x="1" y="1631" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE LEFT0005" x="341" y="907" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE LEFT0006" x="1" y="1631" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE LEFT0007" x="341" y="907" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE LEFT0008" x="1" y="1631" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE LEFT0009" x="341" y="907" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE LEFT0010" x="1" y="1631" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE LEFT0011" x="341" y="907" width="338" height="360"/>
+    <SubTexture name="BF TOP NOTE RIGHT0000" x="681" y="907" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE RIGHT0001" x="1005" y="1243" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE RIGHT0002" x="1043" y="907" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE RIGHT0003" x="1005" y="1579" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE RIGHT0004" x="1043" y="907" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE RIGHT0005" x="1005" y="1579" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE RIGHT0006" x="1043" y="907" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE RIGHT0007" x="1005" y="1579" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE RIGHT0008" x="1043" y="907" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE RIGHT0009" x="1005" y="1579" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE RIGHT0010" x="1043" y="907" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE RIGHT0011" x="1005" y="1579" width="360" height="334"/>
+    <SubTexture name="BF TOP NOTE UP0000" x="341" y="1269" width="330" height="368"/>
+    <SubTexture name="BF TOP NOTE UP0001" x="341" y="1639" width="330" height="368"/>
+    <SubTexture name="BF TOP NOTE UP0002" x="673" y="1269" width="330" height="368"/>
+    <SubTexture name="BF TOP NOTE UP0003" x="673" y="1639" width="330" height="368"/>
+    <SubTexture name="BF TOP NOTE UP0004" x="673" y="1269" width="330" height="368"/>
+    <SubTexture name="BF TOP NOTE UP0005" x="673" y="1639" width="330" height="368"/>
+    <SubTexture name="BF TOP NOTE UP0006" x="673" y="1269" width="330" height="368"/>
+    <SubTexture name="BF TOP NOTE UP0007" x="673" y="1639" width="330" height="368"/>
+    <SubTexture name="BF TOP NOTE UP0008" x="673" y="1269" width="330" height="368"/>
+    <SubTexture name="BF TOP NOTE UP0009" x="673" y="1639" width="330" height="368"/>
+    <SubTexture name="BF TOP NOTE UP0010" x="673" y="1269" width="330" height="368"/>
+    <SubTexture name="BF TOP NOTE UP0011" x="673" y="1639" width="330" height="368"/>
+    <SubTexture name="BF TOP0000" x="1" y="1" width="508" height="300"/>
+    <SubTexture name="BF TOP0001" x="511" y="1" width="508" height="300"/>
+    <SubTexture name="BF TOP0002" x="1021" y="1" width="508" height="300"/>
+    <SubTexture name="BF TOP0003" x="1531" y="1" width="508" height="300"/>
+    <SubTexture name="BF TOP0004" x="1" y="303" width="508" height="300"/>
+    <SubTexture name="BF TOP0005" x="511" y="303" width="508" height="300"/>
+    <SubTexture name="BF TOP0006" x="1021" y="303" width="508" height="300"/>
+    <SubTexture name="BF TOP0007" x="1531" y="303" width="508" height="300"/>
+    <SubTexture name="BF TOP0008" x="1" y="605" width="508" height="300"/>
+    <SubTexture name="BF TOP0009" x="511" y="605" width="508" height="300"/>
+    <SubTexture name="BF TOP0010" x="1021" y="605" width="508" height="300"/>
+    <SubTexture name="BF TOP0011" x="1531" y="605" width="508" height="300"/>
+</TextureAtlas>

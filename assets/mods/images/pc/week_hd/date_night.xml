@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:affc13e1302b63dbb8febfd35141cd41:10118c90539b171502c66e7b0c5fce66:3417ef1cf831cb0307efc9aa92d6183d$ -->
+<TextureAtlas imagePath="date_night.png" width="4096" height="4096">
+    <SubTexture name="MarblePawns instance 10000" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10001" x="1503" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10002" x="1" y="1003" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10003" x="1" y="2005" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10004" x="1" y="3007" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10005" x="1503" y="1003" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10006" x="1503" y="2005" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10007" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10008" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10009" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10010" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10011" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10012" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10013" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10014" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10015" x="1503" y="2005" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10016" x="1503" y="1003" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10017" x="1" y="3007" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10018" x="1" y="2005" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10019" x="1" y="1003" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10020" x="1503" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10021" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10022" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10023" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10024" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10025" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10026" x="1" y="1" width="1500" height="1000"/>
+    <SubTexture name="MarblePawns instance 10027" x="1" y="1" width="1500" height="1000"/>
+</TextureAtlas>
