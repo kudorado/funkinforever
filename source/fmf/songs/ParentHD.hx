@@ -1,14 +1,19 @@
 package fmf.songs;
+
 import reactor.*;
 import ui.*;
-
-import state.*;
 import fmf.characters.*;
+import state.*;
+import fmf.vfx.VFX;
+import fmf.skins.*;
+import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.FlxSprite;
-import Song.SwagSong;
+import MenuCharacter.CharacterSetting;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 
-class ParentHD extends SongPlayer
+class ParentHD extends SongPlayerHD
 {
 	var upperBoppers:FlxSprite;
 	var bottomBoppers:FlxSprite;
@@ -19,7 +24,7 @@ class ParentHD extends SongPlayer
 	{
 		gameState.defaultCamZoom = 0.80;
 
-		var bg:FlxSprite = new FlxSprite(-1000, -500).loadGraphic(Paths.image('christmas/bgWalls', 'week5'));
+		var bg:FlxSprite = new FlxSprite(-1000, -500).loadGraphic(Paths.image('bg/week_hd/week5/chrismas/bgWalls', 'mods'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.2, 0.2);
 		bg.active = false;
@@ -28,7 +33,7 @@ class ParentHD extends SongPlayer
 		gameState.add(bg);
 
 		upperBoppers = new FlxSprite(-240, -90);
-		upperBoppers.frames = Paths.getSparrowAtlas('christmas/upperBop', 'week5');
+		upperBoppers.frames = Paths.getSparrowAtlas('bg/week_hd/week5/chrismas/upperBop', 'mods');
 		upperBoppers.animation.addByPrefix('bop', "Upper Crowd Bob", 24, false);
 		upperBoppers.antialiasing = true;
 		upperBoppers.scrollFactor.set(0.33, 0.33);
@@ -39,7 +44,7 @@ class ParentHD extends SongPlayer
 			gameState.add(upperBoppers);
 		}
 
-		var bgEscalator:FlxSprite = new FlxSprite(-1100, -600).loadGraphic(Paths.image('christmas/bgEscalator', 'week5'));
+		var bgEscalator:FlxSprite = new FlxSprite(-1100, -600).loadGraphic(Paths.image('bg/week_hd/week5/chrismas/bgEscalator', 'mods'));
 		bgEscalator.antialiasing = true;
 		bgEscalator.scrollFactor.set(0.3, 0.3);
 		bgEscalator.active = false;
@@ -47,13 +52,13 @@ class ParentHD extends SongPlayer
 		bgEscalator.updateHitbox();
 		gameState.add(bgEscalator);
 
-		var tree:FlxSprite = new FlxSprite(370, -250).loadGraphic(Paths.image('christmas/christmasTree', 'week5'));
+		var tree:FlxSprite = new FlxSprite(370, -250).loadGraphic(Paths.image('bg/week_hd/week5/chrismas/christmasTree', 'mods'));
 		tree.antialiasing = true;
 		tree.scrollFactor.set(0.40, 0.40);
 		gameState.add(tree);
 
 		bottomBoppers = new FlxSprite(-300, 140);
-		bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bottomBop', 'week5');
+		bottomBoppers.frames = Paths.getSparrowAtlas('bg/week_hd/week5/chrismas/bottomBop', 'mods');
 		bottomBoppers.animation.addByPrefix('bop', 'Bottom Level Boppers', 24, false);
 		bottomBoppers.antialiasing = true;
 		bottomBoppers.scrollFactor.set(0.9, 0.9);
@@ -64,14 +69,14 @@ class ParentHD extends SongPlayer
 			gameState.add(bottomBoppers);
 		}
 
-		var fgSnow:FlxSprite = new FlxSprite(-600, 700).loadGraphic(Paths.image('christmas/fgSnow', 'week5'));
+		var fgSnow:FlxSprite = new FlxSprite(-600, 700).loadGraphic(Paths.image('bg/week_hd/week5/chrismas/fgSnow', 'mods'));
 		fgSnow.active = false;
 		fgSnow.antialiasing = true;
 		fgSnow.scale.x = 1.25;
 		gameState.add(fgSnow);
 
 		santa = new FlxSprite(1300, 150);
-		santa.frames = Paths.getSparrowAtlas('christmas/santa', 'week5');
+		santa.frames = Paths.getSparrowAtlas('bg/week_hd/week5/chrismas/santa', 'mods');
 		santa.animation.addByPrefix('idle', 'santa idle in fear', 24, false);
 		santa.antialiasing = true;
 		santa.flipX = true;
@@ -87,80 +92,24 @@ class ParentHD extends SongPlayer
 		}
 	}
 
-	override function getGFTex()
+	override function getDadVersion()
 	{
-		var tex = Paths.getSparrowAtlas('gf/gfChristmas');
-		gf.frames = tex;
+		return new CharacterPE('parent');
+	}
+	private override function getVersion():Character
+	{
+		return new CharacterPE('bf-christmas');
 	}
 
-	// override function getBFTex()
-	// {
-	// 	var tex = Paths.getSparrowAtlas('characters/bfChristmas');
-	// 	bf.frames = tex;
-	// }
-
-	override function getDadTex()
+	override function getGFVersion()
 	{
-		var frames = Paths.getSparrowAtlas('characters/mom_dad_christmas_assets');
-		dad.frames = frames;
+		return new CharacterPE('gf-christmas');
 	}
 
-	override function createDadAnimations():Void
-	{
-		var animation = dad.animation;
-
-		animation.addByPrefix('idle', 'Parent Christmas Idle', 24, false);
-		animation.addByPrefix('singUP', 'Parent Up Note Dad', 24, false);
-		animation.addByPrefix('singDOWN', 'Parent Down Note Dad', 24, false);
-		animation.addByPrefix('singLEFT', 'Parent Left Note Dad', 24, false);
-		animation.addByPrefix('singRIGHT', 'Parent Right Note Dad', 24, false);
-
-		animation.addByPrefix('singUP-alt', 'Parent Up Note Mom', 24, false);
-		animation.addByPrefix('singDOWN-alt', 'Parent Down Note Mom', 24, false);
-		animation.addByPrefix('singLEFT-alt', 'Parent Left Note Mom', 24, false);
-		animation.addByPrefix('singRIGHT-alt', 'Parent Right Note Mom', 24, false);
-
-		dad.animation = animation;
-	}
-
-	override function createDadAnimationOffsets():Void
-	{
-		dad.addOffset('idle');
-		dad.addOffset("singUP", -47, 24);
-		dad.addOffset("singRIGHT", -1, -23);
-		dad.addOffset("singLEFT", -30, 16);
-		dad.addOffset("singDOWN", -31, -29);
-		dad.addOffset("singUP-alt", -47, 24);
-		dad.addOffset("singRIGHT-alt", -1, -24);
-		dad.addOffset("singLEFT-alt", -30, 15);
-		dad.addOffset("singDOWN-alt", -30, -27);
-
-		dad.playAnim('idle');
-	}
-
-	override function createCharacters()
-	{
-		super.createCharacters();
-
-		dad.scale.x = 2;
-		dad.scale.y = 2;
-
-		dad.x -= 600;
-		dad.y += 50;
-
-		gf.scale.x = 2;
-		gf.scale.y = 2;
-
-		gf.y += 100;
-		gf.x += 50;
-
-		bf.x += 150;
-		bf.y += 50;
-	}
-
-	override function updateCamFollowBF()
-	{
-		gameState.targetCamFollow.y = bf.getMidpoint().y - 200;
+	override function createStoryBF()
+	{ 
+		var newPc = new CharacterPE('bf-christmas');
+		changeCharacter(newPc);
 	}
 
 	override function midSongEventUpdate(curBeat:Int):Void

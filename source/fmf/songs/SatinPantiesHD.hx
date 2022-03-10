@@ -82,18 +82,13 @@ class SatinPantiesHD extends SongPlayerHD
 		}
 	}
 
-	override function midSongEventUpdate(curBeat:Int):Void
-	{
-		//updateBG(curBeat);
-	}
-
-	function updateBG(curBeat:Int)
-	{
-		if (curBeat % 32 == 0)
-		{
-			bg.animation.play('lightning');
-		}
-	}
+	// function updateBG(curBeat:Int)
+	// {
+	// 	if (curBeat % 32 == 0)
+	// 	{
+	// 		bg.animation.play('lightning');
+	// 	}
+	// }
 
 	function createOverlay()
 	{

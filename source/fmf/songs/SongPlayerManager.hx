@@ -708,6 +708,16 @@ class SongPlayerManager
 
 			case 'milf[hd]':
 				songPlayer = new BlammedHD();
+
+			//week 5
+			case 'cocoa[hd]':
+				songPlayer = new ParentHD();
+
+			case 'eggnog[hd]':
+				songPlayer = new ParentHD();
+
+			case 'winter-horrorland[hd]' | 'winterhorrorland[hd]':
+				songPlayer = new ParentHD();
 		}
 
 		return songPlayer;
