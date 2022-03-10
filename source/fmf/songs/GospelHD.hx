@@ -32,9 +32,11 @@ class GospelHD extends SongPlayerHD
 		super.updateCamFollowDad();
 		gameState.targetCamFollow.x -= 275;
 		gameState.targetCamFollow.y -= 300;
-
 		gameState.targetCamFollow.x -= 325;
 		gameState.targetCamFollow.y -= 100;
+
+		gameState.targetCamFollow.y = gameState.clamp(gameState.targetCamFollow.y, 65, 500);
+		
 		gameState.defaultCamZoom = 0.95;
 	}
 
@@ -45,6 +47,9 @@ class GospelHD extends SongPlayerHD
 		gameState.targetCamFollow.y -= 150;
 		gameState.defaultCamZoom = 1;
 		gameState.targetCamFollow.x -= 100;
+
+		gameState.targetCamFollow.y = gameState.clamp(gameState.targetCamFollow.y, 65, 500);
+
 	}
 
 		
@@ -54,7 +59,7 @@ class GospelHD extends SongPlayerHD
 
 		if (sillyHotBabe && dad != null)
 		{
-			dad.y += 1.9 *  Math.sin(200) * direction;
+			dad.y += 2 *  Math.sin(200) * direction;
 			counter += elapsed;
 			if (counter >= 2.5)
 			{

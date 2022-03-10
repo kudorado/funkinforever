@@ -355,6 +355,7 @@ class StoryState extends MusicBeatState
 		#if debug
 			daUnlocked = true;
 		#end
+		
 		if (daUnlocked)
 		{
 			if (stopspamming)

@@ -31,6 +31,8 @@ typedef CharacterFile =
 	var animations:Array<AnimArray>;
 	var image:String;
 	var scale:Float;
+	var sharedSongFolder:String;
+	
 	var sing_duration:Float;
 	public var healthicon:String;
 

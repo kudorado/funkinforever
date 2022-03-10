@@ -664,6 +664,7 @@ class SongPlayerManager
 
 			case 'zavodila-remix[hd]':
 				songPlayer = new ZavodilaHD();
+				
 
 			case 'gospel-remix[hd]':
 				songPlayer = new GospelHD();
@@ -675,21 +676,20 @@ class SongPlayerManager
 			case 'fresh[hd]':
 				songPlayer = new FreshHD();
 
-			case 'dad-battle[hd]':
+			case 'dad-battle[hd]' | 'dadbattle[hd]':
 				songPlayer = new DadBattleHD();
 
 			//week 2
 			case 'spookeez[hd]':
-				songPlayer = new Spookeez();
+				songPlayer = new SpookeezHD();
 
 			case 'south[hd]':
-				songPlayer = new Spookeez();
+				songPlayer = new SpookeezHD();
 
 			case 'monster[hd]':
 				songPlayer = new MonsterHD();
 
 			//week 3
-
 			case 'pico[hd]':
 				songPlayer = new PicoHD();
 
@@ -697,6 +697,16 @@ class SongPlayerManager
 				songPlayer = new PhillyNiceHD();
 
 			case 'blammed[hd]':
+				songPlayer = new BlammedHD();
+
+			//week 4
+			case 'satin-panties[hd]' | 'satinpanties[hd]':
+				songPlayer = new SatinPantiesHD();
+
+			case 'high[hd]':
+				songPlayer = new PhillyNiceHD();
+
+			case 'milf[hd]':
 				songPlayer = new BlammedHD();
 		}
 

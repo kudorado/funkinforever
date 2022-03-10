@@ -92,29 +92,7 @@
 				12
 			]
 		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"loop": false,
-			"anim": "danceLeft",
-			"fps": 24,
-			"name": "GF Dancing Beat0",
-			"indices": [
-			]
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"loop": false,
-			"anim": "danceRight",
-			"fps": 24,
-			"name": "GF Dancing Beat0",
-			"indices": []
-		},
+		
 		{
 			"offsets": [
 				0,

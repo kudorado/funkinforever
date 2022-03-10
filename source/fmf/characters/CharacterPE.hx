@@ -61,6 +61,9 @@ class CharacterPE extends Character
 
 				var songFolder = GameState.playingSong.folder;
 				var imgDirectory = "psychengine/" + songFolder;
+
+
+
 				var dataDirectory = "images/psychengine/" + songFolder;
 
 				var characterPath:String = dataDirectory + "characters/" + curCharacter + '.json';
@@ -77,7 +80,16 @@ class CharacterPE extends Character
 				// packer
 				// texture
 
+				var sharedSongFolder = json.sharedSongFolder;
+
 				var daTexture = "images/" + json.image;
+				
+				if (sharedSongFolder != null && sharedSongFolder != "")
+				{
+					imgDirectory = "psychengine/" + sharedSongFolder + "/";
+				}
+
+				// trace('get character at path: ' + imgDirectory + daTexture);
 
 				switch (spriteType)
 				{
@@ -107,6 +119,8 @@ class CharacterPE extends Character
 				healthIcon = json.healthicon;
 				singDuration = json.sing_duration;
 				flipX = !!json.flip_x;
+
+
 
 
 				

@@ -92,62 +92,6 @@
 				12
 			]
 		},
-
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"loop": true,
-			"anim": "dance",
-			"fps": 24,
-			"name": "GF Dancing Beat0",
-			"indices": [
-			]
-		},
-
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"loop": false,
-			"anim": "danceLeft",
-			"fps": 24,
-			"name": "GF Dancing Beat0",
-			"indices": [
-			]
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"loop": false,
-			"anim": "danceRight",
-			"fps": 24,
-			"name": "GF Dancing Beat0",
-			"indices": []
-		},
-		{
-			"offsets": [
-				0,
-				11
-			],
-			"loop": true,
-			"anim": "hairBlow",
-			"fps": 24,
-			"name": "GF Dancing Beat Hair blowing0",
-			"indices": [
-				0,
-				1,
-				2,
-				3,
-				4,
-				5,
-				6
-			]
-		},
 		{
 			"offsets": [
 				0,
@@ -173,6 +117,7 @@
 	],
 	"no_antialiasing": false,
 	"image": "characters/GF_assets_HD",
+	"sharedSongFolder": "week_hd",
 	"position": [
 		590,
 		220

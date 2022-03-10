@@ -1,5 +1,6 @@
 package fmf.songs;
 
+import fmf.songs.BopeeboHD;
 import reactor.*;
 import ui.*;
 import fmf.characters.*;
@@ -13,9 +14,8 @@ import MenuCharacter.CharacterSetting;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 
-class FreshHD extends SongPlayerHD
+class FreshHD extends BopeeboHD
 {
-	var cameraTwn:FlxTween;
 
 	override function loadLua()
 	{
@@ -23,7 +23,6 @@ class FreshHD extends SongPlayerHD
 
 	override function loadMap()
 	{	
-        gameState.defaultCamZoom = 0.4;
 		gameState.defaultCamZoom = 1;
 		var bg:FlxSprite = new FlxSprite(-400, -657).loadGraphic(Paths.image('bg/week_hd/stageback', 'mods'));
 		bg.antialiasing = true;
@@ -34,41 +33,48 @@ class FreshHD extends SongPlayerHD
 		gameState.add(stageFront);
 	}
 
+	function createCrowd()
+	{
+		var crowd = new FlxSprite(0, 0);
+		crowd.frames = Paths.getSparrowAtlas('bg/week_hd/week1/CROWD_FRESH', 'mods');
+		
+		crowd.animation.addByPrefix('idle', 'crowd00', 18, true);
+		crowd.animation.play('idle');
+		crowd.antialiasing = true;
+
+		crowd.scale.x = 1.5;
+		crowd.scale.y = 1.5;
+		
+		crowd.x = 236;
+		crowd.y = 600;
+
+		if (FlxG.save.data.distractions)
+		{
+			gameState.add(crowd);
+		}
+	}
+
+	override function createCharacters() {
+		super.createCharacters();
+		createCrowd();
+	}
+
 	override function getDadVersion()
 	{
 		return new CharacterPE('dad');
 	}
 
-	override function createDad()
-	{
-		super.createDad();
-	}
+	// override function updateCamFollowDad()
+	// {
+	// 	super.updateCamFollowDad();
+	// 	gameState.defaultCamZoom = 0.4;
+	// }
 
-
-	override function updateCamFollowDad()
-	{
-		super.updateCamFollowDad();
-		gameState.targetCamFollow.x -= 100;
-		gameState.defaultCamZoom = 1;
-
-	}
-
-	override function updateCamFollowBF()
-	{
-		super.updateCamFollowBF();
-		gameState.targetCamFollow.x += 100;
-		gameState.defaultCamZoom = 1;
-	}
-
-	override function createGF()
-	{
-		super.createGF();
-	}
-
-	override function createBF()
-	{
-		super.createBF();
-	}
+	// override function updateCamFollowBF()
+	// {
+	// 	super.updateCamFollowBF();
+	// 	gameState.defaultCamZoom = 0.4;
+	// }
 
 	public override function getDadIcon(icon:Icon)
 	{

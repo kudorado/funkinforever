@@ -14,7 +14,7 @@
 		{
 			"offsets": [
 				-20,
-				94
+				142
 			],
 			"loop": false,
 			"anim": "singUP",
@@ -25,7 +25,7 @@
 		{
 			"offsets": [
 				-30,
-				20
+				10
 			],
 			"loop": false,
 			"anim": "singLEFT",
@@ -36,7 +36,7 @@
 		{
 			"offsets": [
 				-51,
-				30
+				-2
 			],
 			"loop": false,
 			"anim": "singRIGHT",
@@ -73,7 +73,7 @@
 		{
 			"offsets": [
 				-30,
-				20
+				10
 			],
 			"indices": [
 				17,
@@ -88,7 +88,7 @@
 		{
 			"offsets": [
 				0,
-				0
+				142
 			],
 			"indices": [
 				21,
@@ -103,7 +103,7 @@
 		{
 			"offsets": [
 				-51,
-				30
+				-2
 			],
 			"indices": [
 				12,

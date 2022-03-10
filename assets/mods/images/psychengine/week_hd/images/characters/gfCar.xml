@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:9633e270b7ca394f99d35b99c2c2ac04:936a236ff512532f125e45cf4cc78009:eb665390f140a2b5e8a1be9d539be2fe$ -->
+<TextureAtlas imagePath="gfCar.png" width="3243" height="3963">
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0000" x="2" y="2" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0001" x="2" y="568" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0002" x="2" y="1134" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0003" x="2" y="1700" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0004" x="2" y="2266" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0005" x="2" y="2832" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0006" x="2" y="3398" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0007" x="661" y="2" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0008" x="661" y="568" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0009" x="661" y="1134" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0010" x="661" y="1700" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0011" x="661" y="1700" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0012" x="661" y="2266" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0013" x="661" y="2832" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0014" x="661" y="3398" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0015" x="1320" y="2" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0016" x="1320" y="568" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0017" x="1320" y="1134" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0018" x="1320" y="1700" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0019" x="1320" y="2266" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0020" x="1320" y="2832" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0021" x="1320" y="3398" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0022" x="1979" y="2" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0023" x="1979" y="2" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0024" x="1979" y="568" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0025" x="1979" y="1134" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0026" x="1979" y="1700" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0027" x="1979" y="2266" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0028" x="1979" y="2832" width="656" height="563"/>
+    <SubTexture name="GF Dancing Beat Hair blowing CAR0029" x="1979" y="2832" width="656" height="563"/>
+    <SubTexture name="GF Duck0000" x="1979" y="3398" width="603" height="474"/>
+    <SubTexture name="GF Duck0001" x="1979" y="3398" width="603" height="474"/>
+    <SubTexture name="GF Duck0002" x="2585" y="3398" width="603" height="474"/>
+    <SubTexture name="GF Duck0003" x="2638" y="2" width="603" height="474"/>
+    <SubTexture name="GF Duck0004" x="2638" y="479" width="603" height="474"/>
+    <SubTexture name="GF Duck0005" x="2638" y="479" width="603" height="474"/>
+    <SubTexture name="GF Duck0006" x="2585" y="3398" width="603" height="474"/>
+    <SubTexture name="GF Duck0007" x="2638" y="2" width="603" height="474"/>
+    <SubTexture name="GF Duck0008" x="2638" y="479" width="603" height="474"/>
+    <SubTexture name="GF Duck0009" x="2638" y="479" width="603" height="474"/>
+</TextureAtlas>
