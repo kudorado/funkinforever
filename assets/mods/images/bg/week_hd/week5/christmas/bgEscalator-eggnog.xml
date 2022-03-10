@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="bgEscalator2.png">
-	<!-- Created with Adobe Animate version 21.0.0.35450 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="esc00000" x="10" y="10" width="2973" height="1380"/>
-	<SubTexture name="esc10001" x="2993" y="10" width="2973" height="1380"/>
-	<SubTexture name="esc20002" x="10" y="1400" width="2973" height="1380"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:6bd33180373a14d44fc6f06365be4dd2:5332b393d67ad1057ab7b06e2c42a03c:9cb734582e3e7da00bc25794e4279bda$ -->
+<TextureAtlas imagePath="bgEscalator-eggnog.png" width="2791" height="3892">
+    <SubTexture name="Esc00000" x="2" y="2" width="2787" height="1294"/>
+    <SubTexture name="Esc10001" x="2" y="1299" width="2787" height="1294"/>
+    <SubTexture name="Esc20002" x="2" y="2596" width="2787" height="1294"/>
 </TextureAtlas>

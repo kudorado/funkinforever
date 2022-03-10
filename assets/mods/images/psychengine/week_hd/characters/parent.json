@@ -59,7 +59,7 @@
 			"loop": false,
 			"offsets": [
 				-34,
-				0
+				-14
 			],
 			"fps": 24,
 			"anim": "singDOWN-alt",
@@ -103,8 +103,8 @@
 	"no_antialiasing": false,
 	"image": "characters/s",
 	"position": [
-		196,
-		-243
+		-585,
+		94
 	],
 	"healthicon": "dad",
 	"flip_x": false,

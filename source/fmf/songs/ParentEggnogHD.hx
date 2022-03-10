@@ -13,7 +13,7 @@ import MenuCharacter.CharacterSetting;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 
-class ParentHD extends SongPlayerHD
+class ParentEggnogHD extends SongPlayerHD
 {
 	var upperBoppers:FlxSprite;
 	var bottomBoppers:FlxSprite;
@@ -34,7 +34,7 @@ class ParentHD extends SongPlayerHD
 		gameState.add(bg);
 
 		upperBoppers = new FlxSprite(-984, -465);
-		upperBoppers.frames = Paths.getSparrowAtlas('bg/week_hd/week5/christmas/upperBop', 'mods');
+		upperBoppers.frames = Paths.getSparrowAtlas('bg/week_hd/week5/christmas/upperBop-eggnog', 'mods');
 		upperBoppers.animation.addByPrefix('bop', "Upper Crowd Bob", 24, false);
 		upperBoppers.antialiasing = true;
 		upperBoppers.scrollFactor.set(0.33, 0.33);
@@ -46,7 +46,7 @@ class ParentHD extends SongPlayerHD
 		}
 
 		var bgEscalator:FlxSprite = new FlxSprite(-1045, -404);
-        bgEscalator.frames = Paths.getSparrowAtlas('bg/week_hd/week5/christmas/bgEscalator', 'mods');
+        bgEscalator.frames = Paths.getSparrowAtlas('bg/week_hd/week5/christmas/bgEscalator-eggnog', 'mods');
         bgEscalator.animation.addByPrefix('idle', 'Esc', 24, false);
 		bgEscalator.antialiasing = true;
 		bgEscalator.scrollFactor.set(0.3, 0.3);
