@@ -300,7 +300,7 @@ class PicoHD extends SongPlayerHD
 
 	public override function getDadIcon(icon:Icon)
 	{
-		icon.loadGraphic(Paths.image('health_icon/finnandjake/icon-jake', 'mods'), true, 150, 150);
+		icon.loadGraphic(Paths.image('health_icon/week_hd/icons/icon-pico', 'mods'), true, 150, 150);
 		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}

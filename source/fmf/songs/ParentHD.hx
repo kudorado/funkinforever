@@ -168,8 +168,8 @@ class ParentHD extends SongPlayerHD
 
 	public override function getDadIcon(icon:Icon)
 	{
-		icon.loadGraphic(Paths.image('iconGrid'), true, 150, 150);
-		icon.animation.add('dad', [17, 18], 0, false, false);
+		icon.loadGraphic(Paths.image('health_icon/week_hd/icons/icon-parents', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [0, 1], 0, false, false);
 		icon.animation.play("dad");
 	}
 
