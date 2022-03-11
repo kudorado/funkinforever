@@ -718,6 +718,8 @@ class SongPlayerManager
 
 			case 'winter-horrorland[hd]' | 'winterhorrorland[hd]':
 				songPlayer = new WinterHorrorlandHD();
+			case 'breaking-point[hd]' | 'breakingpoint[hd]':
+				songPlayer = new BreakingPointHD();
 		}
 
 		return songPlayer;

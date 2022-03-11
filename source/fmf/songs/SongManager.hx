@@ -74,6 +74,15 @@ class SongManager
 			}
 		),
 
+		new SongData
+		(
+			{
+				folder: 'week_hd',
+				character: 'week6[hd]',
+				songTitle: 'WeekDate',
+				songList: ['senpai[hd]','roses[hd]','thorns[hd]']
+			}
+		),
 
 		new SongData
 		(
@@ -81,7 +90,7 @@ class SongManager
 				folder: 'week_hd',
 				character: 'week6[hd]',
 				songTitle: 'Week6',
-				songList: ['senpai[hd]','roses[hd]','thorns[hd]']
+				songList: ['breaking-point[hd]']
 			}
 		),
 
