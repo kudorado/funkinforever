@@ -86,7 +86,7 @@ class SatinPantiesHD extends SongPlayerHD
 		limo.animation.addByPrefix('drive', "Limo stage", 24, true);
 		limo.animation.play('drive');
 		limo.antialiasing = true;
-        gameState.add(limo);
+        gameState.player3Group.add(limo);
     }
 
     override function createCharacters()
