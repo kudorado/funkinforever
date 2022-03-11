@@ -704,10 +704,10 @@ class SongPlayerManager
 				songPlayer = new SatinPantiesHD();
 
 			case 'high[hd]':
-				songPlayer = new PhillyNiceHD();
+				songPlayer = new SatinPantiesHD();
 
 			case 'milf[hd]':
-				songPlayer = new BlammedHD();
+				songPlayer = new SatinPantiesHD();
 
 			//week 5
 			case 'cocoa[hd]':

@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				12,
-				-38
+				-26,
+				-39
 			],
 			"loop": false,
 			"fps": 24,
@@ -35,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				-29,
-				12
+				-68,
+				-6
 			],
 			"loop": false,
 			"fps": 24,
@@ -46,8 +46,8 @@
 		},
 		{
 			"offsets": [
-				-38,
-				-42
+				-60,
+				-40
 			],
 			"loop": false,
 			"fps": 24,
@@ -57,8 +57,8 @@
 		},
 		{
 			"offsets": [
-				12,
-				24
+				-47,
+				-52
 			],
 			"loop": false,
 			"fps": 24,
@@ -68,8 +68,8 @@
 		},
 		{
 			"offsets": [
-				-11,
-				-19
+				-75,
+				-120
 			],
 			"loop": false,
 			"fps": 24,
@@ -79,8 +79,8 @@
 		},
 		{
 			"offsets": [
-				-29,
-				27
+				-69,
+				-6
 			],
 			"loop": false,
 			"fps": 24,
@@ -90,8 +90,8 @@
 		},
 		{
 			"offsets": [
-				-30,
-				21
+				-85,
+				-63
 			],
 			"loop": false,
 			"fps": 24,
@@ -103,8 +103,8 @@
 	"no_antialiasing": false,
 	"image": "characters/bfCar_MILF",
 	"position": [
-		0,
-		350
+		825,
+		136
 	],
 	"healthicon": "bf",
 	"flip_x": false,

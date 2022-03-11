@@ -32,48 +32,46 @@ class SatinPantiesHD extends SongPlayerHD
 
 	override function loadMap()
 	{	
-        var skyBG:FlxSprite = new FlxSprite(-120, -50).loadGraphic(Paths.image('bg/week_hd/week4/limo/limoSunset', 'mods'));
+        gameState.defaultCamZoom = 0.8;
+        var skyBG:FlxSprite = new FlxSprite(-528, -200).loadGraphic(Paths.image('bg/week_hd/week4/limo/limoSunset', 'mods'));
 		skyBG.scrollFactor.set(0.1, 0.1);
+        skyBG.scale.x = 1.3;
+        skyBG.scale.y = 1.3;
 		gameState.add(skyBG);
+
+		var street = new FlxSprite(-1642, 809);
+		street.frames = Paths.getSparrowAtlas('bg/week_hd/week4/limo/street', 'mods');
+		street.animation.addByPrefix('idle', "street00", 24, true);
+		street.animation.play('idle');
+		street.antialiasing = true;
+        street.scale.x = 1.5;
+        street.scale.y = 1.5;
+        gameState.add(street);
 
 		var bgLimo:FlxSprite = new FlxSprite(-200, 480);
 		bgLimo.frames = Paths.getSparrowAtlas('bg/week_hd/week4/limo/bgLimo', 'mods');
-		bgLimo.animation.addByPrefix('drive', "BG limo instance", 24);
+		bgLimo.animation.addByPrefix('drive', "BG limo instance", 24, true);
 		bgLimo.animation.play('drive');
-		bgLimo.scrollFactor.set(0.4, 0.4);
 		gameState.add(bgLimo);
-		if (FlxG.save.data.distractions)
-		{
-			grpLimoDancers = new FlxTypedGroup<BackgroundDancer>();
-			gameState.add(grpLimoDancers);
 
-			for (i in 0...5)
-			{
-				var dancer:BackgroundDancer = new BackgroundDancer((370 * i) + 130, bgLimo.y - 400);
-				dancer.scrollFactor.set(0.4, 0.4);
-				grpLimoDancers.add(dancer);
-			}
-		}
+		// if (FlxG.save.data.distractions)
+		// {
+		// 	grpLimoDancers = new FlxTypedGroup<BackgroundDancer>();
+		// 	gameState.add(grpLimoDancers);
 
-		var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('bg/week_hd/week4/limo/limoOverlay', 'mods'));
-		overlayShit.alpha = 0.5;
-		gameState.add(overlayShit);
+		// 	for (i in 0...5)
+		// 	{
+		// 		var dancer:BackgroundDancer = new BackgroundDancer((370 * i) + 130, bgLimo.y - 400);
+		// 		dancer.scrollFactor.set(0.4, 0.4);
+		// 		grpLimoDancers.add(dancer);
+		// 	}
+		// }
 
-		// var shaderBullshit = new BlendModeEffect(new OverlayShader(), FlxColor.RED);
+		// var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('bg/week_hd/week4/limo/limoOverlay', 'mods'));
+		// overlayShit.alpha = 0.5;
+		// gameState.add(overlayShit);
 
-		// FlxG.camera.setFilters([new ShaderFilter(cast shaderBullshit.shader)]);
-
-		// overlayShit.blend = shaderBullshit;
-
-		var limoTex = Paths.getSparrowAtlas('bg/week_hd/week4/limo/limoDrive', 'week4');
-
-		limo = new FlxSprite(-120, 550);
-		limo.frames = limoTex;
-		limo.animation.addByPrefix('drive', "Limo stage", 24);
-		limo.animation.play('drive');
-		limo.antialiasing = true;
-
-		fastCar = new FlxSprite(-300, 160).loadGraphic(Paths.image('bg/week_hd/week4/limo/fastCarLol', 'mods'));
+		fastCar = new FlxSprite(-1300, 160).loadGraphic(Paths.image('bg/week_hd/week4/limo/fastCarLol', 'mods'));
 
 		if (FlxG.save.data.distractions)
 		{
@@ -82,27 +80,31 @@ class SatinPantiesHD extends SongPlayerHD
 		}
 	}
 
-	// function updateBG(curBeat:Int)
-	// {
-	// 	if (curBeat % 32 == 0)
-	// 	{
-	// 		bg.animation.play('lightning');
-	// 	}
-	// }
+    function createLimoDriver(){
+        limo = new FlxSprite(-390, 550);
+		limo.frames = Paths.getSparrowAtlas('bg/week_hd/week4/limo/limoDrive', 'mods');
+		limo.animation.addByPrefix('drive', "Limo stage", 24, true);
+		limo.animation.play('drive');
+		limo.antialiasing = true;
+        gameState.add(limo);
+    }
 
-	function createOverlay()
-	{
-		var stageFront:FlxSprite = new FlxSprite(-400, 569).loadGraphic(Paths.image('bg/week_hd/week2/overlay', 'mods'));
-		stageFront.antialiasing = true;
-		stageFront.scale.x = 3;
-		stageFront.scale.y = 3;
-		gameState.add(stageFront);
-	}
+    override function createCharacters()
+    {
+        
+        createGF();
+		createBF();
+		createDad();
 
-	override function createCharacters() {
-		super.createCharacters();
-		//createOverlay();
-	}
+		gf.scrollFactor.set(0.95, 0.95);
+
+		gameState.gfGroup.add(gf);
+        createLimoDriver();
+		gameState.dadGroup.add(dad);
+		gameState.boyfriendGroup.add(bf);
+
+		bf.characterAddedEvent();
+    }
 
     private override function getVersion():Character
     {
@@ -135,15 +137,15 @@ class SatinPantiesHD extends SongPlayerHD
 	{
 		super.updateCamFollowDad();
 		gameState.targetCamFollow.x -= 100;
-		gameState.defaultCamZoom = 1;
+		//gameState.defaultCamZoom = 1;
 
 	}
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		gameState.targetCamFollow.x += 100;
-		gameState.defaultCamZoom = 1;
+		//gameState.defaultCamZoom = 1;
+        gameState.targetCamFollow.x -= 120;
 	}
 
 	public override function getDadIcon(icon:Icon)
@@ -187,10 +189,10 @@ class SatinPantiesHD extends SongPlayerHD
     {
         if (FlxG.save.data.distractions)
         {
-            grpLimoDancers.forEach(function(dancer:BackgroundDancer)
-            {
-                dancer.dance();
-            });
+            // grpLimoDancers.forEach(function(dancer:BackgroundDancer)
+            // {
+            //     dancer.dance();
+            // });
 
             if (FlxG.random.bool(10) && fastCarCanDrive)
                 fastCarDrive();

@@ -71,6 +71,6 @@
     <SubTexture name="Mom Up Pose0013" x="427" y="662" width="422" height="735"/>
     <SubTexture name="Mom Up Pose0014" x="427" y="1400" width="422" height="735"/>
     <SubTexture name="Mom Up Pose0015" x="427" y="2138" width="422" height="735"/>
-    <SubTexture name="Mom Up Pose0016" x="852" y="1322" width="422" height="735"/>
-    <SubTexture name="Mom Up Pose0017" x="852" y="1322" width="422" height="735"/>
+    <!-- <SubTexture name="Mom Up Pose0016" x="852" y="1322" width="422" height="735"/>
+    <SubTexture name="Mom Up Pose0017" x="852" y="1322" width="422" height="735"/> -->
 </TextureAtlas>
