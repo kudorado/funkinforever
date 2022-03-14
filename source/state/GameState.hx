@@ -1834,10 +1834,18 @@ class GameState extends MusicBeatState
 		Conductor.songPosition = -5000;
 
 		strumLine = new FlxSprite(0, 20).makeGraphic(FlxG.width, 10);
+		#if Portrait
+		strumLine.y += 100;
+		#end
 		strumLine.scrollFactor.set();
 
-		if (FlxG.save.data.downscroll)
+		if (FlxG.save.data.downscroll){
 			strumLine.y = FlxG.height - 165;
+			#if Portrait
+			strumLine.y -= 100;
+			#end	
+
+		}
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		add(strumLineNotes);

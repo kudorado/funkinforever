@@ -37,7 +37,7 @@ class ScrollManager
 	public static function loadScroll()
 	{
 		FlxG.save.data.downscroll = FlxG.save.data.scrollId != 0 &&  FlxG.save.data.scrollId != 2;
-		FlxG.save.data.showDadNote =  FlxG.save.data.scrollId > 1;
+		FlxG.save.data.showDadNote =  false; // FlxG.save.data.scrollId > 1;
 	}
 
 }

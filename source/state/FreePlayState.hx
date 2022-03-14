@@ -578,13 +578,7 @@ class FreePlayState extends MusicBeatState
 
 		LoadingState.loadWeekSplash(this, function()
 		{
-			
-		
-			LoadingState.didLoadout = true;
-			LoadingState.setStaticTransition();
-			LoadingState.loadAndSwitchState(new GameState());
-			// FlxG.switchState(new GameState());
-			// FlxG.switchState(new SelectionState());
+			FlxG.switchState(new SelectionState());
 		});
 
 		// LoadingState.loadAndSwitchState(new SelectionState());
