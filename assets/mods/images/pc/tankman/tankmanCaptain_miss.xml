@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:3e5fa23f190b0e2afc516f692c5f3183:eef2f6288f15630f3ee186815c323636:48a2ba7fd671e943847d71fdd1bdf79d$ -->
-<TextureAtlas imagePath="tankmanCaptain_miss.png" width="979" height="1605">
-    <SubTexture name="Tankman DOWN note instance 1 MISS10000" x="1" y="1151" width="565" height="453"/>
-    <SubTexture name="Tankman Note Left instance 1 MISS10000" x="1" y="624" width="502" height="525"/>
-    <SubTexture name="Tankman Right Note instance 1 MISS10000" x="1" y="1" width="483" height="557"/>
-    <SubTexture name="Tankman UP note instance 1 MISS10000" x="486" y="1" width="492" height="621"/>
-</TextureAtlas>

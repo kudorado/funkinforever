@@ -191,7 +191,7 @@ class BaseSong
 
 	function createStoryCharacters()
 	{
-		if (GameState.isStoryMode)
+		// if (GameState.isStoryMode)
 		{
 			createStoryBF();
 		}

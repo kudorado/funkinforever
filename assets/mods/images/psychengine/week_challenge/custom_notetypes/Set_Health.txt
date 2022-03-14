@@ -1,3 +1,0 @@
-Set health amount
-
-Value 1: Amount of health

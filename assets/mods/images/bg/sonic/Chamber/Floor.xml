@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:a9d48612b815050009fae34caa49731a:864fa3300c477ea64664a69fcb811b4c:5a1fad95ca54a7f023fb44b203c07070$ -->
-<TextureAtlas imagePath="Floor.png" width="4096" height="512">
-    <SubTexture name="Floor blue0000" x="1" y="1" width="2840" height="206"/>
-    <SubTexture name="Floor yellow0000" x="1" y="209" width="2840" height="206"/>
-</TextureAtlas>
