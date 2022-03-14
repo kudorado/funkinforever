@@ -298,7 +298,6 @@ class LoadingState extends MusicBeatState
         var fuckshit:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
         fuckshit.screenCenter();
         fuckshit.scaleToFit();
-        fuckshit.x -= 10;
 
 		var msgText = new FlxText(0, 10, 0, "", 32);
 		msgText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, RIGHT);

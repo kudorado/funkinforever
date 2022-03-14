@@ -37,6 +37,7 @@ class PicoHD extends SongPlayerHD
 
 	override function loadLua()
 	{
+		GameState.curStage = 'philly';
 	}
 
 	function trainStart():Void
@@ -147,6 +148,9 @@ class PicoHD extends SongPlayerHD
 		var street:FlxSprite = new FlxSprite(0, streetBehind.y).loadGraphic(Paths.image('bg/week_hd/week3/philly/street', 'mods'));
 		street.scale.x = 1;
 		gameState.add(street);
+
+		gameState.defaultCamZoom = 1.1;
+
 	}
 
 	override function getDadVersion()
@@ -164,7 +168,7 @@ class PicoHD extends SongPlayerHD
 		super.updateCamFollowDad();
 		gameState.targetCamFollow.x -= 100;
 		gameState.defaultCamZoom = 1;
-		gameState.targetCamFollow.y -= 80;
+		gameState.targetCamFollow.y -= 100;
 
 	}
 
@@ -173,7 +177,7 @@ class PicoHD extends SongPlayerHD
 		super.updateCamFollowBF();
 		gameState.targetCamFollow.x += 100;
 		gameState.defaultCamZoom = 1;
-		gameState.targetCamFollow.y -= 80;
+		gameState.targetCamFollow.y -= 150;
 	}
 
 	override function midSongEventUpdate(curBeat:Int):Void
@@ -290,12 +294,19 @@ class PicoHD extends SongPlayerHD
 
 	override function createBF(){
 		super.createBF();
-		bf.y += 80;
 	}
 
 	override function createDad(){
 		super.createDad();
-		dad.y += 80;
+		dad.x = 345;
+		dad.y = 342;
+
+	}
+	override function createStoryBF()
+	{
+		super.createStoryBF();
+		bf.y = 407;
+	
 	}
 
 	public override function getDadIcon(icon:Icon)

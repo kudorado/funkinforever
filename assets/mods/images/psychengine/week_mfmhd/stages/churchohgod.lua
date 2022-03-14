@@ -1,6 +1,6 @@
 function onCreate()
 	-- background shit
-	makeAnimatedLuaSprite('churchohgod', 'stages/churchohgod_1', -545, -536);
+	makeAnimatedLuaSprite('churchohgod', 'stages/churchohgod_1', -739, -654);
 	setLuaSpriteScrollFactor('churchohgod', 1, 1);
 	
 	addLuaSprite('churchohgod', false);

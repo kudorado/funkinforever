@@ -1842,7 +1842,7 @@ class GameState extends MusicBeatState
 		if (FlxG.save.data.downscroll){
 			strumLine.y = FlxG.height - 165;
 			#if Portrait
-			strumLine.y -= 100;
+			strumLine.y	 -= 100;
 			#end	
 
 		}

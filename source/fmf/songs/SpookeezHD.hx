@@ -89,13 +89,19 @@ class SpookeezHD extends SongPlayerHD
 		gameState.targetCamFollow.x -= 100;
 		gameState.defaultCamZoom = 1;
 
+		gameState.targetCamFollow.y -= 100;
+
+		
+
 	}
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
 		gameState.targetCamFollow.x += 100;
-		gameState.defaultCamZoom = 1;
+		gameState.defaultCamZoom = 1.35;
+		gameState.targetCamFollow.y -= 200;
+
 	}
 
 	public override function getDadIcon(icon:Icon)

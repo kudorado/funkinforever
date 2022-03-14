@@ -24,13 +24,6 @@ class SongFilter
 
 	static var songFilterDatas:Array<SongFilterData>  =
 	[
-		new SongFilterData	
-		(
-			{
-				key: ' ',
-				replace: '-'
-			}
-		),
 
 		new SongFilterData	
 		(
@@ -54,14 +47,6 @@ class SongFilter
 			{
 				key: '[trueface]',
 				replace: ''
-			}
-		),
-
-		new SongFilterData	
-		(
-			{
-				key: 'philly-nice',
-				replace: 'philly'
 			}
 		),
 
