@@ -10,7 +10,11 @@ import flash.Lib;
 import flixel.FlxG;
 import flixel.math.FlxMath;
 
+#if Portrait
+@:bitmap("assets/preload/images/ppreloaderArt.png") class LogoImage extends BitmapData { }
+#else
 @:bitmap("assets/preload/images/preloaderArt.png") class LogoImage extends BitmapData { }
+#end
 class Predator extends FlxBasePreloader
 {
     public function new(MinDisplayTime:Float=3, ?AllowedURLs:Array<String>) 
