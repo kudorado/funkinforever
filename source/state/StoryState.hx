@@ -222,6 +222,26 @@ class StoryState extends MusicBeatState
 		rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
+		
+
+	
+		#if Portrait
+		leftArrow.scale.x = 0.5;
+		leftArrow.scale.y = 0.5;
+
+		rightArrow.scale.x = 0.5;
+		rightArrow.scale.y = 0.5;
+
+
+		sprDifficulty.scale.x = 0.5;
+		sprDifficulty.scale.y = 0.5;
+		sprDifficulty.updateHitbox();
+
+		sprDifficulty.x -= 50;
+		rightArrow.x = sprDifficulty.x + 100;
+		#end
+
+		// trace(sprDifficulty.x);
 
 		// //@notrace("Line 150");
 		// var bgShit:FlxSprite = new FlxSprite().loadGraphic(Paths.image('weeks/bg0'));	
@@ -613,22 +633,42 @@ class StoryState extends MusicBeatState
 			curDifficulty = 0;
 
 		sprDifficulty.offset.x = 0;
+		sprDifficulty.offset.y = 0;
 
 		switch (curDifficulty)
 		{
 			case 0:
 				sprDifficulty.animation.play('easy');
 				sprDifficulty.offset.x = 20;
+				// #if Portrait
+				// sprDifficulty.offset.x = 786 - 751;
+				// sprDifficulty.offset.y = 491 - 472;
+				// #end
+			
 			case 1:
 				sprDifficulty.animation.play('normal');
 				sprDifficulty.offset.x = 70;
+
+				#if Portrait
+				sprDifficulty.offset.x -= 20;
+				// sprDifficulty.offset.x = 786 - 775;
+				// sprDifficulty.offset.y = 491 - 491;
+				#end				
 			case 2:
 				sprDifficulty.animation.play('hard');
 				sprDifficulty.offset.x = 20;
 
+				#if Portrait
+				sprDifficulty.offset.x += 10;
+				#end
+
 			case 3:
 				sprDifficulty.animation.play('alt');
 				sprDifficulty.offset.x = 60;
+
+				#if Portrait
+				sprDifficulty.offset.x -= 15;
+				#end
 		}
 
 		sprDifficulty.alpha = 0;

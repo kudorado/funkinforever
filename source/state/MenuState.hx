@@ -59,7 +59,13 @@ class MenuState extends MusicBeatState
 	
 		// persistentUpdate = persistentDraw = true;
 
-		var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('menuBG'));
+		var daBG = "menuBG";
+		#if Portrait
+		daBG = 'pmenuBG';
+		#end
+
+
+		var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image(daBG));
 		bg.scrollFactor.x = 0;
 		bg.scrollFactor.y = 0;
 		bg.updateHitbox();
@@ -79,7 +85,13 @@ class MenuState extends MusicBeatState
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 
-		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
+		var daDBG = 'menuDesat';
+		#if Portrait
+		daDBG = 'pmenuDesat';
+		#end
+		magenta = new FlxSprite(-80).loadGraphic(Paths.image(daDBG));
+
+
 		magenta.scrollFactor.x = 0;
 		magenta.scrollFactor.y = 0;
 		// magenta.setGraphicSize(Std.int(magenta.width * 1.1));
@@ -226,24 +238,38 @@ class MenuState extends MusicBeatState
 				if (optionShit[curSelected] == 'freeplay')
 				{
 					// sky ugh
-					magenta.loadGraphic(Paths.image('menuDesat'));
+					var daDBG = 'menuDesat';
+					#if Portrait
+					daDBG = 'pmenuDesat';
+					#end
+					
+					magenta.loadGraphic(Paths.image(daDBG));
 					magenta.setGraphicSize(Std.int(magenta.width));
 					magenta.screenCenter();
 					magenta.antialiasing = true;
 					magenta.scaleToFit();
-
+					#if !Portrait
 					FlxG.sound.play(Paths.sound('sky-ugh'), 2);
+					#end
 				}
 				else
 				{
+					var daDBG = 'menuDeshit';
+					#if Portrait
+					daDBG = 'pmenuDeshit';
+					#end
+					
+
 					// remove(magenta);
-					magenta.loadGraphic(Paths.image('menuDeshit'));
+					magenta.loadGraphic(Paths.image(daDBG));
 					// magenta.setGraphicSize(Std.int(magenta.width * 1.1));
 					magenta.screenCenter();
 					magenta.antialiasing = true;
 					magenta.scaleToFit();
 					// add(magenta);
+					#if !Portrait
 					FlxG.sound.play(Paths.sound('gf-ugh'), 2);
+					#end
 				}
 
 				if (FlxG.save.data.flashing)

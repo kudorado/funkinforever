@@ -434,7 +434,7 @@ class LoadingState extends MusicBeatState
 	}
 
     public static function loadWeekSplash(group:FlxGroup, callback:Void->Void, cam:FlxCamera = null, disposeOnCallback:Bool = false)
-{
+    {
         if (FlxG.sound.music != null)
             FlxG.sound.music.stop();
 

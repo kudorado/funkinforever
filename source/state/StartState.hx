@@ -181,7 +181,13 @@ class StartState extends MusicBeatState
 		add(bg);
 
 
-		var daSplash:FlxSprite = new FlxSprite().loadGraphic(Paths.image('splash'));
+		var splash = 'splash';
+
+		#if Portrait
+		splash = 'psplash';
+		#end
+
+		var daSplash:FlxSprite = new FlxSprite().loadGraphic(Paths.image(splash));
 
 		daSplash.screenCenter();
 		daSplash.scaleToFit();
@@ -213,7 +219,18 @@ class StartState extends MusicBeatState
 		titleText.x -= 350;
 		titleText.scale.x = 0.5;
 		titleText.scale.y = 0.5;
+		if (Main.daTabletShit)
+		{
+			titleText.x += 100;
+		}
+
+		titleText.screenCenter(Y);
+		titleText.y -= 90;
 		#end
+
+
+		
+	
 
 		add(titleText);
 
