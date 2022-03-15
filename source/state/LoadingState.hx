@@ -298,7 +298,7 @@ class LoadingState extends MusicBeatState
         var fuckshit:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 3), Std.int(FlxG.height * 3), FlxColor.BLACK);
         fuckshit.screenCenter();
         fuckshit.scaleToFit();
-
+    
 		var msgText = new FlxText(0, 10, 0, "", 32);
 		msgText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, RIGHT);
         msgText.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
@@ -434,7 +434,7 @@ class LoadingState extends MusicBeatState
 	}
 
     public static function loadWeekSplash(group:FlxGroup, callback:Void->Void, cam:FlxCamera = null, disposeOnCallback:Bool = false)
-    {
+{
         if (FlxG.sound.music != null)
             FlxG.sound.music.stop();
 
@@ -444,7 +444,11 @@ class LoadingState extends MusicBeatState
         fuckshit.screenCenter();
 
         var daImage = "loading/" + rand;
-        trace("load daimage: " + daImage);
+
+		#if Portrait
+		rand = FlxG.random.int(1, 2);
+		daImage  = "loading/p" + rand;
+        #end
 
         var blackScreen:FlxSprite = new FlxSprite(0, 0);
         blackScreen.loadGraphic(Paths.image(daImage));
@@ -453,11 +457,17 @@ class LoadingState extends MusicBeatState
         blackScreen.scaleToFit();
         
         var loading:FlxSprite = new FlxSprite(0, 0);
-        loading.loadGraphic(Paths.image("loading/loading"));
-        loading.setGraphicSize(Std.int(FlxG.width), Std.int(FlxG.height));
+        var lPath = "loading/loading";
+        #if Portrait
+    	    lPath = "loading/ploading";
+        #end
+
+        loading.loadGraphic(Paths.image(lPath));
         loading.screenCenter();
         loading.antialiasing = true;
         loading.alpha = 0;
+        loading.scaleToFit();
+
 
         if (cam == null)
         {
@@ -556,10 +566,16 @@ class LoadingState extends MusicBeatState
         blackScreen.screenCenter();
 
         var loading:FlxSprite = new FlxSprite(0, 0);
-        loading.loadGraphic(Paths.image("loading/loading"));
-        loading.setGraphicSize(Std.int(FlxG.width), Std.int(FlxG.height));
+
+        var lPath = "loading/loading";
+        #if Portrait
+    	    lPath = "loading/ploading";
+        #end
+
+        loading.loadGraphic(Paths.image(lPath));
         loading.screenCenter();
         loading.antialiasing = true;
+        loading.scaleToFit();
 
         if (cam == null)
         {

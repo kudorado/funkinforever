@@ -12,6 +12,7 @@ class Icon extends FlxSprite
 	var offsetX:Float;
 
 	public var scrollable:Bool;
+	public var centerX:Bool;
 
 	public function changeIcon(char:String) {
 		//todo
@@ -64,8 +65,17 @@ class Icon extends FlxSprite
 		super.update(elapsed);
 
 		if (sprTracker != null)
+		{
+			#if Portrait
 			setPosition(sprTracker.x + sprTracker.width + 10 + offsetX, sprTracker.y - 30);
-		
+			if(centerX)
+				screenCenter(X);
+			#else
+			setPosition(sprTracker.x + sprTracker.width + 10 + offsetX, sprTracker.y - 30);
+			#end
+
+		}
+
 		if (scrollable)
 		{
 			// if (y < AlphabetShit.daVisible)

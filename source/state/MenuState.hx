@@ -118,6 +118,12 @@ class MenuState extends MusicBeatState
 			menuItem.antialiasing = true;
 			menuItem.y = 60 + (i * 160);
 
+			#if Portrait
+			menuItem.scale.x = 0.75;
+			menuItem.scale.y = 0.75;
+			#end
+
+
 			if (firstStart)
 			{
 				finishedFunnyMove = true;
@@ -138,10 +144,10 @@ class MenuState extends MusicBeatState
 
 
 		// if (FlxG.save.data.dfjk)
-		// 	Controller.setKeyboardScheme(KeyboardScheme.Solo, true);
+			// Controller.setKeyboardScheme(KeyboardScheme.Solo, true);
 		// else
 
-		// controls.setKeyboardScheme(KeyboardScheme.Duo(true), true);
+		controls.setKeyboardScheme(KeyboardScheme.Duo(true), true);
 
 		changeItem();
 

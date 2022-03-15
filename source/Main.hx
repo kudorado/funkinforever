@@ -53,6 +53,17 @@ class Main extends Sprite
 		Lib.current.addChild(new Main());
 	}
 
+	public function clamp(raw:Float, min:Float, max:Float)
+	{
+		if (raw < min)
+			raw = min;
+		if (raw > max)
+			raw = max;
+
+		return raw;
+	}
+
+
 	public function new()
 	{
 		super();
@@ -87,22 +98,61 @@ class Main extends Sprite
 		setupGame();
 	}
 
+	var stageWidth:Int;
+	var stageHeight:Int;
+
 	private function setupGame():Void
 	{
-		var stageWidth:Int = Lib.current.stage.stageWidth;
-		var stageHeight:Int = Lib.current.stage.stageHeight;
+		stageWidth = Lib.current.stage.stageWidth;
+		stageHeight = Lib.current.stage.stageHeight;
 
 		//debug resolution
 		// 
-		var stageWidth:Int = 2048;
-		var stageHeight:Int = 2732;
-		trace(stageWidth + ',' + stageHeight);
+		stageWidth = 720;
+		stageHeight = 1280;
 		
+		trace('stage-w-h: ' + stageWidth + "," + stageHeight);
+
+		#if Portrait
+		portraitAspect();
+		#else
+		landscapeAspect();
+		#end
+
+		#if !debug
+		initialState = StartState;
+		#end
+
+		game = new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen);
+
+		addChild(game);
+
+		#if !mobile
+		fpsCounter = new FPS(10, 3, 0xFFFFFF);
+		addChild(fpsCounter);
+		toggleFPS(FlxG.save.data.fps);
+
+		#end
+	}
+
+	var game:FlxGame;
+
+	var fpsCounter:FPS;
+
+	public function toggleFPS(fpsEnabled:Bool):Void {
+		fpsCounter.visible = fpsEnabled;
+	}
+
+	function landscapeAspect()
+	{
+		trace('Calculate landscape aspect...');
+
 		var kudoradoHandsome:Bool = true;
 		var daFactor:Float = (stageWidth / (stageHeight * 1.0));
+		trace('daFactor: ' + daFactor);
 
 		if (kudoradoHandsome == true)
-		{
+		{			
 			if (daFactor > 1.6) // wide phone
 			{
 				if (daFactor > 2)
@@ -128,40 +178,63 @@ class Main extends Sprite
 				trace('oh my gosh, tablet shit!');
 			}
 
-
 			fuckZoom = zoom;
-
 
 			gameWidth = Math.ceil(stageWidth / zoom);
 			gameHeight = Math.ceil(stageHeight / zoom);
 
-			trace(gameWidth + ',' + gameHeight);
+			trace("game-w-h: " + gameWidth + ',' + gameHeight);
 			trace('fucking zoom: ' + zoom);
 		}
-
-		#if !debug
-		initialState = StartState;
-		#end
-
-		game = new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen);
-
-		addChild(game);
-
-		#if !mobile
-		fpsCounter = new FPS(10, 3, 0xFFFFFF);
-		addChild(fpsCounter);
-		toggleFPS(FlxG.save.data.fps);
-
-		#end
 	}
 
-	var game:FlxGame;
 
-	var fpsCounter:FPS;
+	function portraitAspect()
+	{
+		trace('Calculate portrait aspect...');
 
-	public function toggleFPS(fpsEnabled:Bool):Void {
-		fpsCounter.visible = fpsEnabled;
+		var kudoradoHandsome:Bool = true;
+		var daFactor:Float = (stageWidth / (stageHeight * 1.0));
+
+		trace('daFactor: ' + daFactor);
+
+
+		if (kudoradoHandsome == true)
+		{
+			if (daFactor <= 0.6) // wide phone
+			{
+				if (daFactor < 0.48)
+				{
+					#if ios
+					// oh shit rabbit ears, or super long phone
+					stageHeight -= (209 * 2);
+					#end
+				}
+
+				fx = stageWidth / gameWidth;
+				fy = stageHeight / gameHeight;
+				zoom = Math.min(fx, fy);
+			}
+			else // tablet
+			{
+				fx = stageWidth / gameWidth;
+				fy = stageHeight / gameHeight;
+
+				zoom = Math.max(fx, fy);
+				daTabletShit = true;
+				trace('oh my gosh, tablet shit!');
+			}
+
+			fuckZoom = zoom;
+
+			gameWidth = Math.ceil(stageWidth / zoom);
+			gameHeight = Math.ceil(stageHeight / zoom);
+
+			trace('fucking zoom: ' + zoom);
+			trace("game-w-h: " + gameWidth + ',' + gameHeight);
+		}
 	}
+	
 
 	public function changeFPSColor(color:FlxColor)
 	{

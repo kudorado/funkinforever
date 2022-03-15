@@ -27,9 +27,12 @@ class AlphabetShit extends Alphabet
 		{
 			visible = true;
 		});
+		x = 0;
 	}
 
-		
+
+	var daShit:Float = 0;
+
 	override function update(elapsed:Float)
 	{
 		if (isMenuItem)
@@ -39,11 +42,17 @@ class AlphabetShit extends Alphabet
 			screenCenter(X);
 		}
 
+
 		super.update(elapsed);
+		#if Portrait
+		// x = 25;
+		#end
 
 		if(y < daVisible)
 			visible = false;
 		else 
 			visible = true;
+
+
 	}
 }

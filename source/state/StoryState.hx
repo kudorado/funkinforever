@@ -420,7 +420,7 @@ class StoryState extends MusicBeatState
 			{
 				LoadingState.didLoadout = true;
 				LoadingState.setStaticTransition();
-				LoadingState.loadAndSwitchState(new GameState());
+				LoadingState.loadAndSwitchState(new SelectionState());
 			});
 
 			

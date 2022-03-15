@@ -210,8 +210,11 @@ class StartState extends MusicBeatState
 		titleText.y = 100;
 
 		#if Portrait
-		titleText.x -= 200;
+		titleText.x -= 350;
+		titleText.scale.x = 0.5;
+		titleText.scale.y = 0.5;
 		#end
+
 		add(titleText);
 
 		credGroup = new FlxGroup();

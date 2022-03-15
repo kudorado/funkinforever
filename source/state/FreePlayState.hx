@@ -7,6 +7,7 @@ import selection.*;
 import fmf.songs.*;
 
 import flixel.group.FlxGroup;
+import flixel.FlxObject;
 import flixel.FlxCamera;
 import flixel.graphics.frames.FlxAtlasFrames;
 import extension.admob.AdMob;
@@ -186,12 +187,22 @@ class FreePlayState extends MusicBeatState
 
 			var shitSong:Bool = songs[i].songName == daShit;
 
-			var songText:AlphabetShit = new AlphabetShit(0, (70 * i) + 30, shitSong ? '' : SongFilter.filter(songs[i].songName), true, false, true);
+			var shit = SongFilter.filter(songs[i].songName);
+			if (shit.length >= 6)
+			{
+				shit = shit.substring(0, 6);
+			}
+
+			trace(shit);
+
+			var songText:AlphabetShit = new AlphabetShit(0, (70 * i) + 30, shitSong ? '' : shit, true, false, true);
+		
+		
+		
 			songText.isMenuItem = true;
 			songText.targetY = i;
+			songText.setGraphicSize(Std.int(songText.width / 3));
 			grpSongs.add(songText);
-
-
 			var baseSong:BaseSong = SongPlayerManager.getCurrentSong(songs[i].songName);
 			var icon:Icon = new Icon();
 			icon.scrollable = true;
@@ -203,6 +214,7 @@ class FreePlayState extends MusicBeatState
 				// icon.loadGraphic(Paths.image('note_effects/fire'  + '/shit', 'mods'), true, 256, 256);
 				icon.animation.add('hit', getArray(63), 90, true);
 				icon.frames = getSkinTex();
+				icon.centerX = true;
 
 				if (i != 0)
 				{
@@ -217,7 +229,6 @@ class FreePlayState extends MusicBeatState
 				
 				icon.scale.x = 0.35;
 				icon.scale.y = 0.35;
-
 				icon.setOffsetX(-50);
 
 				//flip arrow
@@ -397,10 +408,8 @@ class FreePlayState extends MusicBeatState
 		LoadingState.isAlertVisible = false;
 		super.create();
 
+
 		Controller.init(this, FULL, A_B, true);
-
-	
-
 	}
 
 	function updateScore()
@@ -428,6 +437,7 @@ class FreePlayState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
+
 
 		if (LoadingState.isAlertVisible)
 			return;
@@ -763,12 +773,12 @@ class FreePlayState extends MusicBeatState
 
 			item.scale.x = 0.75;
 			item.scale.y = 0.75;
+
 			// item.setBorderStyle(OUTLINE, FlxColor.WHITE, 3, 1);
 
 			if (item.targetY == 0)
 			{
 				// item.setBorderStyle(OUTLINE, FlxColor.GREEN, 3, 1);
-
 				item.alpha = 1;
 				item.scale.x = 1.1;
 				item.scale.y = 1.1;

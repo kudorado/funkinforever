@@ -183,7 +183,15 @@ class Item extends FlxSpriteGroup
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
+
+
+		#if Portrait
+			var daX = 250;
+			x = FlxMath.lerp(x, (targetX * 250) + Std.int(daX), 0.17 * (60 / FlxG.save.data.fpsCap));
+		#else
 		x = FlxMath.lerp(x, (targetX * 250) + Std.int(480), 0.17 * (60 / FlxG.save.data.fpsCap));
+		#end
+
 
 		if (isFlashing)
 			flashingInt += 1;

@@ -690,17 +690,17 @@ class BaseSong
 
 	private function loadSkin()
 	{	
-		if(GameState.isStoryMode)
-			skin = getDefaultSkin();
-		else
+		// if(GameState.isStoryMode)
+		// 	skin = getDefaultSkin();
+		// else
 			skin = SkinManager.loadSkin(this);
 	}
 
 	private function loadVFX()
 	{
-		if (GameState.isStoryMode)
-			vfx = getDefaultVfx();
-		else
+		// if (GameState.isStoryMode)
+		// 	vfx = getDefaultVfx();
+		// else
 			vfx  = VfxManager.loadVfx();
 	}
 

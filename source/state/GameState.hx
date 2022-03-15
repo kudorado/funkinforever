@@ -228,26 +228,26 @@ class GameState extends MusicBeatState
 				});
 			}
 
-			// if(curStage == 'philly') {
-			// 	phillyCityLights.forEach(function(spr:BGSprite) {
-			// 		spr.visible = false;
-			// 	});
-			// 	phillyCityLightsEvent.forEach(function(spr:BGSprite) {
-			// 		spr.visible = false;
-			// 	});
+			if(curStage == 'philly') {
+				phillyCityLights.forEach(function(spr:BGSprite) {
+					spr.visible = false;
+				});
+				phillyCityLightsEvent.forEach(function(spr:BGSprite) {
+					spr.visible = false;
+				});
 
-			// 	var memb:FlxSprite = phillyCityLightsEvent.members[curLightEvent - 1];
-			// 	if(memb != null) {
-			// 		memb.visible = true;
-			// 		memb.alpha = 1;
-			// 		if(phillyCityLightsEventTween != null)
-			// 			phillyCityLightsEventTween.cancel();
+				var memb:FlxSprite = phillyCityLightsEvent.members[curLightEvent - 1];
+				if(memb != null) {
+					memb.visible = true;
+					memb.alpha = 1;
+					if(phillyCityLightsEventTween != null)
+						phillyCityLightsEventTween.cancel();
 
-			// 		phillyCityLightsEventTween = FlxTween.tween(memb, {alpha: 0}, 1, {onComplete: function(twn:FlxTween) {
-			// 			phillyCityLightsEventTween = null;
-			// 		}, ease: FlxEase.quadInOut});
-			// 	}
-			// }
+					phillyCityLightsEventTween = FlxTween.tween(memb, {alpha: 0}, 1, {onComplete: function(twn:FlxTween) {
+						phillyCityLightsEventTween = null;
+					}, ease: FlxEase.quadInOut});
+				}
+			}
 
 			var chars:Array<Character> = [dadPE, gfPE, bfPE, player3, bfFE(), dadFE(), gfFE()];
 			for (i in 0...chars.length)
