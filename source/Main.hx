@@ -108,8 +108,8 @@ class Main extends Sprite
 
 		//debug resolution
 		// 
-		stageWidth = 720;
-		stageHeight = 1280;
+		// stageWidth = 720;
+		// stageHeight = 1280;
 		
 		trace('stage-w-h: ' + stageWidth + "," + stageHeight);
 

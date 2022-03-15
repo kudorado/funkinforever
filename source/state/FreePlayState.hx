@@ -188,16 +188,12 @@ class FreePlayState extends MusicBeatState
 			var shitSong:Bool = songs[i].songName == daShit;
 
 			var shit = SongFilter.filter(songs[i].songName);
-			if (shit.length >= 6)
+			if (shit.length >= 8)
 			{
-				shit = shit.substring(0, 6);
+				shit = shit.substring(0, 8);
 			}
 
-			trace(shit);
-
 			var songText:AlphabetShit = new AlphabetShit(0, (70 * i) + 30, shitSong ? '' : shit, true, false, true);
-		
-		
 		
 			songText.isMenuItem = true;
 			songText.targetY = i;

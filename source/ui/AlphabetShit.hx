@@ -45,6 +45,8 @@ class AlphabetShit extends Alphabet
 
 		super.update(elapsed);
 		#if Portrait
+		screenCenter(X);
+		x -= 65;
 		// x = 25;
 		#end
 

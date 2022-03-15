@@ -68,8 +68,11 @@ class Icon extends FlxSprite
 		{
 			#if Portrait
 			setPosition(sprTracker.x + sprTracker.width + 10 + offsetX, sprTracker.y - 30);
-			if(centerX)
+			if (centerX)
+			{
 				screenCenter(X);
+				x -= 25;
+			}
 			#else
 			setPosition(sprTracker.x + sprTracker.width + 10 + offsetX, sprTracker.y - 30);
 			#end
