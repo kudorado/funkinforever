@@ -220,7 +220,7 @@ class Main extends Sprite
 				fx = stageWidth / gameWidth;
 				fy = stageHeight / gameHeight;
 
-				zoom = Math.max(fx, fy);
+				zoom = Math.min(fx, fy);
 				daTabletShit = true;
 				trace('oh my gosh, tablet shit!');
 			}
