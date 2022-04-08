@@ -30,7 +30,7 @@ class SongPlayerManager
 
 	public static function getCurrentSong(songName:String):SongPlayer
 	{
-		var songPlayer:SongPlayer = new Tutorial('gf');
+		var songPlayer:SongPlayer = new TutorialHD();
 
 		switch (songName.toLowerCase())
 		{

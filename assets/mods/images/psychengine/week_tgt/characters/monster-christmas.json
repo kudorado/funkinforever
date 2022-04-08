@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Monster idle00"
+		},
+		{
+			"offsets": [
+				-41,
+				36
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Monster up note00"
+		},
+		{
+			"offsets": [
+				-42,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Monster left note00"
+		},
+		{
+			"offsets": [
+				-26,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Monster Right note00"
+		},
+		{
+			"offsets": [
+				-98,
+				-73
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Monster down00"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/monsterChristmas",
+	"position": [
+		-400,
+		-18
+	],
+	"healthicon": "monster",
+	"flip_x": false,
+	"healthbar_colors": [
+		243,
+		255,
+		110
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

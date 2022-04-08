@@ -16,6 +16,16 @@ class SongManager
 		new SongData
 		(
 			{
+				folder: 'week_tgt',
+				character: 'gf',
+				songTitle: 'Tails Get Trolled',
+				songList: ['talentless-fox']
+			}
+		),
+
+		new SongData
+		(
+			{
 				folder: 'week_hd',
 				character: 'gf',
 				songTitle: 'How to Funk',
