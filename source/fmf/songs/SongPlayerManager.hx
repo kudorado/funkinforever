@@ -720,6 +720,9 @@ class SongPlayerManager
 				songPlayer = new WinterHorrorlandHD();
 			case 'breaking-point[hd]' | 'breakingpoint[hd]':
 				songPlayer = new BreakingPointHD();
+
+			case 'talentless-fox':
+				songPlayer = new TalentlessFox();
 		}
 
 		return songPlayer;
