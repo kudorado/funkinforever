@@ -72,10 +72,27 @@ class TalentlessFox extends SongPlayer
 		createOverlay();
 	}
 
-	override function getDadVersion()
-	{
-		return new CharacterPE('tails');
-	}
+    private override function getVersion():Character
+    {
+        return new CharacterPE('bf');
+    }
+
+    override function getGFVersion()
+    {
+        return new CharacterPE('gf');
+    }
+
+    override function createStoryBF()
+    { 
+        var newPc = new CharacterPE('bf');
+        changeCharacter(newPc);
+    }
+
+
+    override function getDadVersion()
+    {
+        return new CharacterPE('tails');
+    }
 
 	override function createDad()
 	{
