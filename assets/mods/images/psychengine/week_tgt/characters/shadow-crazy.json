@@ -1,0 +1,91 @@
+{
+	"charOffset": [
+		-15,
+		80
+	],
+	"camOffset": [
+		-65,
+		-40
+	],
+	"scale": 0.8,
+	"singDur": 6.1,
+	"spritesheet": "shadow crazy",
+	"anims": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"prefix": "idle crazy",
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				81,
+				-25
+			],
+			"fps": 24,
+			"prefix": "up crazy",
+			"name": "singUP",
+			"looped": false
+		},
+		{
+			"offsets": [
+				19,
+				-25
+			],
+			"fps": 24,
+			"prefix": "left crazy",
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"offsets": [
+				-14,
+				-43
+			],
+			"fps": 24,
+			"prefix": "right crazy",
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"offsets": [
+				-25,
+				-266
+			],
+			"fps": 24,
+			"prefix": "down crazy",
+			"name": "singDOWN",
+			"looped": false
+		},
+		{
+			"offsets": [
+				4,
+				59
+			],
+			"fps": 24,
+			"prefix": "shoot crazy",
+			"name": "shoot",
+			"looped": false
+		},
+		{
+			"offsets": [
+				40,
+				0
+			],
+			"fps": 24,
+			"prefix": "die",
+			"looped": false,
+			"name": "die"
+		}
+	],
+	"flipX": false,
+	"antialiasing": true,
+	"iconName": "shadow-crazy",
+	"beatDancer": false,
+	"healthColor": "0xFF411923",
+	"format": "andromeda"
+}

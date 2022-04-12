@@ -1,10 +1,8 @@
 {
 	"charOffset": [
 		0,
-		300
+		35
 	],
-	"singDur": 4,
-	"spritesheet": "BOYFRIEND",
 	"anims": [
 		{
 			"offsets": [
@@ -18,8 +16,8 @@
 		},
 		{
 			"offsets": [
-				1,
-				27
+				-87,
+				40
 			],
 			"fps": 24,
 			"prefix": "BF NOTE UP0",
@@ -28,28 +26,28 @@
 		},
 		{
 			"offsets": [
-				-48,
-				-6
+				5,
+				-9
 			],
 			"fps": 24,
 			"prefix": "BF NOTE LEFT0",
-			"name": "singRIGHT",
-			"looped": false
-		},
-		{
-			"offsets": [
-				32,
-				-7
-			],
-			"fps": 24,
-			"prefix": "BF NOTE RIGHT0",
 			"name": "singLEFT",
 			"looped": false
 		},
 		{
 			"offsets": [
+				-50,
+				-4
+			],
+			"fps": 24,
+			"prefix": "BF NOTE RIGHT0",
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"offsets": [
 				-20,
-				-50
+				-44
 			],
 			"fps": 24,
 			"prefix": "BF NOTE DOWN0",
@@ -58,8 +56,8 @@
 		},
 		{
 			"offsets": [
-				1,
-				27
+				-19,
+				91
 			],
 			"fps": 24,
 			"prefix": "BF NOTE UP MISS",
@@ -68,33 +66,33 @@
 		},
 		{
 			"offsets": [
-				40,
-				21
+				-42,
+				39
 			],
 			"fps": 24,
 			"prefix": "BF NOTE RIGHT MISS",
+			"name": "singRIGHTmiss",
+			"looped": false
+		},
+		{
+			"offsets": [
+				-6,
+				47
+			],
+			"fps": 24,
+			"prefix": "BF NOTE LEFT MISS",
 			"name": "singLEFTmiss",
 			"looped": false
 		},
 		{
 			"offsets": [
-				-38,
-				24
-			],
-			"fps": 24,
-			"prefix": "BF NOTE LEFT MISS",
-			"name": "singRIGTmiss",
-			"looped": false
-		},
-		{
-			"offsets": [
-				-21,
-				-19
+				-8,
+				-22
 			],
 			"fps": 24,
 			"prefix": "BF NOTE DOWN MISS",
 			"name": "singDOWNmiss",
-			"looped": false
+			"looped": true
 		},
 		{
 			"offsets": [
@@ -108,8 +106,8 @@
 		},
 		{
 			"offsets": [
-				-3,
-				11
+				20,
+				5
 			],
 			"fps": 24,
 			"prefix": "BF dies",
@@ -118,8 +116,8 @@
 		},
 		{
 			"offsets": [
-				-3,
-				5
+				20,
+				-1
 			],
 			"fps": 24,
 			"prefix": "BF Dead Loop",
@@ -128,8 +126,8 @@
 		},
 		{
 			"offsets": [
-				-3,
-				69
+				20,
+				63
 			],
 			"fps": 24,
 			"prefix": "BF Dead confirm",
@@ -153,14 +151,20 @@
 			],
 			"fps": 24,
 			"prefix": "BF HEY",
-			"looped": false,
-			"name": "singUP-alt"
+			"name": "singUP-alt",
+			"looped": false
 		}
 	],
-	"flipX": true,
+	"spritesheet": "BOYFRIEND",
+	"singDur": 4,
+	"camOffset": [
+		0,
+		0
+	],
+	"flipX": false,
 	"antialiasing": true,
 	"iconName": "bf",
 	"beatDancer": false,
-	"healthColor": "0xFF31B0D1",
-	"format": "andromeda"
+	"format": "andromeda",
+	"healthColor": "0xFF31B0D1"
 }

@@ -4,7 +4,7 @@
 		0
 	],
 	"singDur": 4,
-	"spritesheet": "GFworst",
+	"spritesheet": "minusGF_ass_sets",
 	"anims": [
 		{
 			"offsets": [
@@ -188,7 +188,7 @@
 	],
 	"flipX": false,
 	"antialiasing": true,
-	"iconName": "gfworst",
+	"iconName": "gfbest",
 	"beatDancer": true,
 	"format": "andromeda",
 	"healthColor": "0xFFA5004D"

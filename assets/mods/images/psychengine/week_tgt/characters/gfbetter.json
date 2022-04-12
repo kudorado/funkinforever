@@ -4,7 +4,7 @@
 		0
 	],
 	"singDur": 4,
-	"spritesheet": "GFworst",
+	"spritesheet": "gfbetter",
 	"anims": [
 		{
 			"offsets": [
@@ -12,7 +12,7 @@
 				-9
 			],
 			"fps": 24,
-			"prefix": "GF Dancing Beat",
+			"prefix": "GF Dancing Beat instance 1",
 			"looped": false,
 			"name": "danceLeft",
 			"indices": [
@@ -40,7 +40,7 @@
 				-9
 			],
 			"fps": 24,
-			"prefix": "GF Dancing Beat",
+			"prefix": "GF Dancing Beat instance 1",
 			"looped": false,
 			"name": "danceRight",
 			"indices": [
@@ -188,7 +188,7 @@
 	],
 	"flipX": false,
 	"antialiasing": true,
-	"iconName": "gfworst",
+	"iconName": "gfbetter",
 	"beatDancer": true,
 	"format": "andromeda",
 	"healthColor": "0xFFA5004D"

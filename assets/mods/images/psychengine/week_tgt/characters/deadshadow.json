@@ -1,0 +1,57 @@
+{
+	"charOffset": [
+		0,
+		300
+	],
+	"anims": [
+		{
+			"offsets": [
+				509,
+				293
+			],
+			"fps": 24,
+			"prefix": "shadow dies",
+			"looped": false,
+			"name": "firstDeath"
+		},
+		{
+			"offsets": [
+				-2,
+				5
+			],
+			"fps": 24,
+			"prefix": "dead loop",
+			"looped": true,
+			"name": "deathLoop"
+		},
+		{
+			"offsets": [
+				-2,
+				13
+			],
+			"fps": 24,
+			"prefix": "dead confirm",
+			"looped": false,
+			"name": "deathConfirm"
+		},
+		{
+			"prefix": "shadow dies",
+			"offsets": [
+				509,
+				293
+			],
+			"fps": 24,
+			"name": "idle",
+			"looped": false
+		}
+	],
+	"scale": 1.5,
+	"singDur": 4,
+	"spritesheet": "shadow_fucking_dies",
+	"flipX": false,
+	"antialiasing": true,
+	"iconName": "bf",
+	"beatDancer": false,
+	"healthColor": "0xFF31B0D1",
+	"format": "andromeda"
+}

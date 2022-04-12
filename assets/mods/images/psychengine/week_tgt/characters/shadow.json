@@ -1,0 +1,81 @@
+{
+	"charOffset": [
+		0,
+		100
+	],
+	"camOffset": [
+		75,
+		100
+	],
+	"scale": 0.8,
+	"singDur": 6.1,
+	"spritesheet": "shadow",
+	"anims": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"prefix": "idle",
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"prefix": "up",
+			"offsets": [
+				49,
+				-23
+			],
+			"fps": 24,
+			"name": "singUP",
+			"looped": false
+		},
+		{
+			"prefix": "left",
+			"offsets": [
+				4,
+				-39
+			],
+			"fps": 24,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"prefix": "right",
+			"offsets": [
+				-27,
+				-56
+			],
+			"fps": 24,
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"prefix": "down",
+			"offsets": [
+				-23,
+				-262
+			],
+			"fps": 24,
+			"name": "singDOWN",
+			"looped": false
+		},
+		{
+			"offsets": [
+				9,
+				78
+			],
+			"fps": 24,
+			"prefix": "shoot",
+			"name": "shoot",
+			"looped": false
+		}
+	],
+	"flipX": false,
+	"antialiasing": true,
+	"iconName": "shadow",
+	"beatDancer": false,
+	"healthColor": "0xFF232341",
+	"format": "andromeda"
+}

@@ -1,0 +1,71 @@
+{
+	"charOffset": [
+		0,
+		0
+	],
+	"singDur": 6.1,
+	"spritesheet": "dripsonic_forced",
+	"anims": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"prefix": "idle",
+			"name": "idle",
+			"looped": false
+		},
+		{
+			"offsets": [
+				-42,
+				50
+			],
+			"fps": 24,
+			"prefix": "up",
+			"looped": false,
+			"name": "singUP"
+		},
+		{
+			"offsets": [
+				2,
+				13
+			],
+			"fps": 24,
+			"prefix": "left",
+			"looped": false,
+			"name": "singLEFT"
+		},
+		{
+			"prefix": "right",
+			"offsets": [
+				-69,
+				-3
+			],
+			"fps": 24,
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"prefix": "down",
+			"offsets": [
+				-50,
+				-15
+			],
+			"fps": 24,
+			"name": "singDOWN",
+			"looped": false
+		}
+	],
+	"scale": 0.7,
+	"camOffset": [
+		150,
+		50
+	],
+	"flipX": false,
+	"iconName": "dripsonic-forced",
+	"antialiasing": true,
+	"beatDancer": false,
+	"format": "andromeda",
+	"healthColor": "0xFFFECB00"
+}

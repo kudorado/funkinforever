@@ -3,8 +3,12 @@
 		0,
 		300
 	],
+	"camOffset": [
+		-100,
+		-200
+	],
 	"singDur": 4,
-	"spritesheet": "BOYFRIEND",
+	"spritesheet": "BOYFRIEND3",
 	"anims": [
 		{
 			"offsets": [
@@ -18,8 +22,8 @@
 		},
 		{
 			"offsets": [
-				1,
-				27
+				-13,
+				42
 			],
 			"fps": 24,
 			"prefix": "BF NOTE UP0",
@@ -28,8 +32,8 @@
 		},
 		{
 			"offsets": [
-				-48,
-				-6
+				-17,
+				-7
 			],
 			"fps": 24,
 			"prefix": "BF NOTE LEFT0",
@@ -38,7 +42,7 @@
 		},
 		{
 			"offsets": [
-				32,
+				35,
 				-7
 			],
 			"fps": 24,
@@ -48,8 +52,8 @@
 		},
 		{
 			"offsets": [
-				-20,
-				-50
+				-15,
+				-43
 			],
 			"fps": 24,
 			"prefix": "BF NOTE DOWN0",
@@ -58,8 +62,8 @@
 		},
 		{
 			"offsets": [
-				1,
-				27
+				-6,
+				24
 			],
 			"fps": 24,
 			"prefix": "BF NOTE UP MISS",
@@ -68,8 +72,8 @@
 		},
 		{
 			"offsets": [
-				40,
-				21
+				32,
+				0
 			],
 			"fps": 24,
 			"prefix": "BF NOTE RIGHT MISS",
@@ -78,8 +82,8 @@
 		},
 		{
 			"offsets": [
-				-38,
-				24
+				-17,
+				-5
 			],
 			"fps": 24,
 			"prefix": "BF NOTE LEFT MISS",
@@ -88,18 +92,18 @@
 		},
 		{
 			"offsets": [
-				-21,
-				-19
+				-24,
+				-30
 			],
 			"fps": 24,
 			"prefix": "BF NOTE DOWN MISS",
-			"name": "singDOWNmiss",
-			"looped": false
+			"looped": false,
+			"name": "singDOWNmiss"
 		},
 		{
 			"offsets": [
-				-3,
-				4
+				10,
+				5
 			],
 			"fps": 24,
 			"prefix": "BF HEY",
@@ -108,8 +112,8 @@
 		},
 		{
 			"offsets": [
-				-3,
-				11
+				2,
+				-3
 			],
 			"fps": 24,
 			"prefix": "BF dies",
@@ -148,18 +152,18 @@
 		},
 		{
 			"offsets": [
-				-3,
+				10,
 				4
 			],
 			"fps": 24,
 			"prefix": "BF HEY",
-			"looped": false,
-			"name": "singUP-alt"
+			"name": "singUP-alt",
+			"looped": false
 		}
 	],
 	"flipX": true,
 	"antialiasing": true,
-	"iconName": "bf",
+	"iconName": "bf-ch3",
 	"beatDancer": false,
 	"healthColor": "0xFF31B0D1",
 	"format": "andromeda"
