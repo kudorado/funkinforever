@@ -19,7 +19,7 @@ class SongManager
 				folder: 'week_tgt',
 				character: 'gf',
 				songTitle: 'Tails Get Trolled',
-				songList: ['talentless-fox']
+				songList: ['talentless-fox', 'no-villains','die-batsards','high-shovel','taste-for-blood','tsuraran-fox', 'no-heroes','no-bitches-matasaki','no-bitches-penkaru','groovy-fox']
 			}
 		),
 
