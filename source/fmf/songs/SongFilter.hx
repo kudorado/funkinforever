@@ -78,6 +78,13 @@ class SongFilter
 				replace: ''
 			}
 		),
+
+		new SongFilterData(
+			{
+				key : '[fatman]',
+				replace: ''
+			}
+		),
 	];
 
 }

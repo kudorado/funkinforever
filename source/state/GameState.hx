@@ -468,8 +468,8 @@ class GameState extends MusicBeatState
 			char.scrollFactor.set(0.95, 0.95);
 		}
 
-		char.x += char.positionArray[0];
-		char.y += char.positionArray[1];
+		char.x = char.positionArray[0];
+		char.y = char.positionArray[1];
 	}
 
 	public function KillNotes()
@@ -4972,6 +4972,13 @@ class GameState extends MusicBeatState
 					// && (bfFE().animation.curAnim != null && bfFE().animation.curAnim.finished))
 					playAnimAllBF('idle');
 			}
+
+			// if (bfPE.holdTimer > Conductor.stepCrochet * 4 * 0.001 && (!holdArray.contains(true) || botPlayShit))
+			// {
+			// 	if (bfPE.animation.curAnim.name.endsWith('miss'))
+			// 		// && (bfFE().animation.curAnim != null && bfFE().animation.curAnim.finished))
+			// 		playAnimAllBF('idle');
+			// }
 		}
 
 		if (!botPlayShit)
@@ -5539,10 +5546,14 @@ class GameState extends MusicBeatState
 
 	public function playAnimAllBF(anim:String, force:Bool = false, specialAnim:Bool = false)
 	{
+		// trace("Play BF: " + anim);
 		if (bfFE() != null && bfFE().visible)
 		{
 			if (bfFE().animation.getByName(anim) == null)
 				return;
+
+			// trace('call idle Funkin engine');
+
 
 			var d = bfFE().animation.getByName(anim);
 			var fps = d.frameRate;
@@ -5566,6 +5577,7 @@ class GameState extends MusicBeatState
 
 		if (bfPE != null && bfPE.visible)
 		{
+			// trace('call idle PE');
 			bfPE.playAnim(anim, force);
 			bfPE.specialAnim = specialAnim;
 		}
@@ -5620,6 +5632,7 @@ class GameState extends MusicBeatState
 	{
 		if (gfFE() != null && gfFE().visible)
 		{
+			trace('play anim all GF: '  + anim);
 			if (gfFE().animation.getByName(anim) == null)
 				return;
 
@@ -5630,15 +5643,20 @@ class GameState extends MusicBeatState
 			var animDur = fc / fps;
 
 			if (animDur <= 0)
+			{
+				trace('fatal error, anim duration eql zero');
 				return;
+			}
 
 			gfFE().specialAnim = specialAnim;
 			if (specialAnim)
 			{
+				trace('gfPE play special anim');
 				gfFE().playAnimForce(anim, animDur);
 			}
 			else
 			{
+				trace('gfPE play anim');
 				gfFE().playAnim(anim, force);
 			}
 		}

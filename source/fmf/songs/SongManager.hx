@@ -13,6 +13,18 @@ class SongManager
 	static public var songs:Array<SongData> = 
 	[
 
+
+		new SongData
+		(
+			{
+				folder: 'week_updyke',
+				character: 'updyke',
+				songTitle: 'V.S Updyke',
+				songList: ['Remorse[fatman]']
+			}
+		),
+
+
 		new SongData
 		(
 			{

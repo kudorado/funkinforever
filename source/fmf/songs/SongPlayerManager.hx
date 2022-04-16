@@ -723,6 +723,9 @@ class SongPlayerManager
 
 			case 'talentless-fox':
 				songPlayer = new TalentlessFox();
+
+			case 'remorse[fatman]':
+				songPlayer = new RemorsePE();
 		}
 
 		return songPlayer;

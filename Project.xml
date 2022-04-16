@@ -33,13 +33,13 @@
 	<!-- ____________________________ Window Settings ___________________________ -->
 
 	<!--These window settings apply to all targets-->
-	<window width="720" height="1280" fps="" background="#000000" hardware="true" vsync="false" />
+	<window width="1280" height="720" fps="" background="#000000" hardware="true" vsync="false" />
 
 	<!--HTML5-specific-->
 	<window if="html5" resizable="true" />
 
 	<!--Mobile-specific-->
-	<window if="mobile" orientation="portrait" fullscreen="true" width="0" height="0" resizable="false"/>
+	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0" resizable="false"/>
 
 	<!--Switch-specific-->
 	<window if="switch" orientation="landscape" fullscreen="true" width="0" height="0" resizable="true" />
@@ -57,7 +57,7 @@
 	
 
 	<define name="SHOW_CACHED" if="mac" />
-	<define name = "Portrait" unless="Landscape" />
+	<!-- <define name = "Portrait" unless="Landscape" /> -->
 	<!-- <define name="PRELOAD_ALL" /> -->
 	<define name="PRELOAD_ALL" unless="kudoWatchingPorn" />
 	<!-- <define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/> -->

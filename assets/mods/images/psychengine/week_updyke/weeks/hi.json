@@ -1,0 +1,32 @@
+{
+	"storyName": "big swag funny",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "cock",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "week1000000",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"bf",
+		"bf",
+		"bf"
+	],
+	"songs": [
+		[
+			"remorse",
+			"updonk",
+			[
+				255,
+				253,
+				255
+			]
+		]
+	],
+	"hideStoryMode": true,
+	"weekName": "hahahahahahahaha",
+	"hiddenUntilUnlocked": false
+}
