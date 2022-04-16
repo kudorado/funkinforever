@@ -247,8 +247,6 @@ class CharacterPE extends Character
 		{
 			if (danceIdle)
 			{
-				trace("peDance idle: " + danceIdle);
-
 				danced = !danced;
 
 				if (danced)
@@ -258,8 +256,6 @@ class CharacterPE extends Character
 			}
 			else if (animation.getByName('idle' + idleSuffix) != null)
 			{
-
-				trace("peDance suffix: " + idleSuffix);
 				playAnim('idle' + idleSuffix);
 			}
 		}

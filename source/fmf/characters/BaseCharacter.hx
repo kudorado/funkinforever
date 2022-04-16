@@ -163,7 +163,9 @@ class BaseCharacter extends FlxSprite
 
 	public function recalculateDanceIdle()
 	{
-		danceIdle = (animation.getByName('danceLeft' + idleSuffix) != null && animation.getByName('danceRight' + idleSuffix) != null);
+		var danceAnim =  (animation.getByName('danceLeft' + idleSuffix) != null && animation.getByName('danceRight' + idleSuffix) != null);
+		var idleAnim = (animation.getByName('idle' + idleSuffix) != null);
+		danceIdle = !idleAnim && danceAnim; //no idle and we have dance, then fuck it yeah!
 	}
 
 	public function quickAnimAdd(name:String, anim:String)

@@ -3,31 +3,7 @@
 		"player1": "beef",
 		"player2": "eep",
 		"events": [
-			[
-				16500,
-				[
-					[
-						"Change Character",
-						"1",
-						"up"
-					],
-					[
-						"Change Character",
-						"BF",
-						"bofe"
-					],
-					[
-						"Change Character",
-						"2",
-						"girp"
-					],
-					[
-						"Play Animation",
-						"normal",
-						""
-					]
-				]
-			],
+			
 			[
 				96000,
 				[
