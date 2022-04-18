@@ -312,6 +312,7 @@ class BaseSong
 	public function createGF()
 	{
 		gf = getGFVersion();
+		gf.defaultDebugName = "GF";
 
 		if (!FlxG.save.data.showGF)
 		{
@@ -383,7 +384,8 @@ class BaseSong
 	public function createDad()
 	{
 		dad = getDadVersion();
-	
+		dad.defaultDebugName = "Dad";
+
 		//detect Psych engine character or not
 		var daPE = Type.getClassName(Type.getClass(dad));
 		var PE =  daPE.toLowerCase() == "fmf.characters.characterpe";
@@ -508,6 +510,8 @@ class BaseSong
 
 		var daPE = Type.getClassName(Type.getClass(bf));
 		var PE = daPE.toLowerCase() == "fmf.characters.characterpe";
+
+		bf.defaultDebugName = "BF";
 
 		if (!PE)
 		{

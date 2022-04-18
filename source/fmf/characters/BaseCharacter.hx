@@ -113,15 +113,9 @@ class BaseCharacter extends FlxSprite
 	function onCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 	}
-
+	
 	public function onUpdate(elapsed:Float)
 	{
-	}
-
-	// shit
-	override function update(elapsed:Float)
-	{
-		onUpdate(elapsed);
 		if (pc())
 		{
 			if (GameState.playAsDad)
@@ -133,6 +127,12 @@ class BaseCharacter extends FlxSprite
 				bfBehaviour(elapsed);
 			}
 		}
+	}
+
+	// shit
+	override function update(elapsed:Float)
+	{
+		onUpdate(elapsed);
 		super.update(elapsed);
 	}
 
@@ -165,7 +165,7 @@ class BaseCharacter extends FlxSprite
 	{
 		var danceAnim =  (animation.getByName('danceLeft' + idleSuffix) != null && animation.getByName('danceRight' + idleSuffix) != null);
 		var idleAnim = (animation.getByName('idle' + idleSuffix) != null);
-		danceIdle = !idleAnim && danceAnim; //no idle and we have dance, then fuck it yeah!
+		danceIdle = !idleAnim && danceAnim; //no idle and we have dance, then fuck it yeah!s
 	}
 
 	public function quickAnimAdd(name:String, anim:String)

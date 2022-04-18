@@ -212,7 +212,7 @@ class CharacterPE extends Character
 					heyTimer = 0;
 				}
 			}
-			else if (specialAnim && animation.curAnim.finished)
+			else if (animation.curAnim.finished)
 			{
 				specialAnim = false;
 				dance();

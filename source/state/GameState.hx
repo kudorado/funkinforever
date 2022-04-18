@@ -558,6 +558,8 @@ class GameState extends MusicBeatState
 					boyfriendMap.set(newCharacter, newBoyfriend);
 					boyfriendGroup.add(newBoyfriend);
 					startCharacterPos(newBoyfriend);
+
+					newBoyfriend.defaultDebugName = "BF (" + newCharacter + ")";
 					newBoyfriend.alpha = 0.00001;
 					newBoyfriend.alreadyLoaded = false;
 					startCharacterLua(newBoyfriend.curCharacter);
@@ -577,6 +579,8 @@ class GameState extends MusicBeatState
 					dadMap.set(newCharacter, newDad);
 					dadGroup.add(newDad);
 					startCharacterPos(newDad, true);
+
+					newDad.defaultDebugName = "Dad (" + newCharacter + ")";
 					newDad.alpha = 0.00001;
 					newDad.alreadyLoaded = false;
 					startCharacterLua(newDad.curCharacter);
@@ -597,6 +601,8 @@ class GameState extends MusicBeatState
 					gfMap.set(newCharacter, newGf);
 					gfGroup.add(newGf);
 					startCharacterPos(newGf);
+
+					newGf.defaultDebugName = "GF (" + newCharacter + ")";
 					newGf.alpha = 0.00001;
 					newGf.alreadyLoaded = false;
 					startCharacterLua(newGf.curCharacter);
@@ -617,6 +623,9 @@ class GameState extends MusicBeatState
 					player3Map.set(newCharacter, newPlayer3);
 					player3Group.add(newPlayer3);
 					startCharacterPos(newPlayer3);
+
+					newPlayer3.defaultDebugName = "Player3 (" + newCharacter + ")";
+
 					newPlayer3.alpha = 0.00001;
 					newPlayer3.alreadyLoaded = false;
 					startCharacterLua(newPlayer3.curCharacter);

@@ -233,8 +233,8 @@
 	"no_antialiasing": false,
 	"image": "characters/bofe_invert",
 	"position": [
-		0,
-		350
+		622,
+		521
 	],
 	"healthicon": "day ruined part 2",
 	"flip_x": true,
