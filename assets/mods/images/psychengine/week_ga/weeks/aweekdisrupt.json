@@ -1,0 +1,31 @@
+{
+	"songs": [
+		[
+			"disruption",
+			"disrupt",
+			[
+				0,
+				195,
+				0
+			]
+		]
+	],
+	"hideFreeplay": false,
+	"weekBackground": "disrupt",
+	"difficulties": "",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "stop.moldy hes dead",
+	"weekName": "weekdisrupt",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

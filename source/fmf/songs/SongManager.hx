@@ -12,8 +12,7 @@ class SongManager
 
 	static public var songs:Array<SongData> = 
 	[
-
-
+		
 		new SongData
 		(
 			{
@@ -29,7 +28,7 @@ class SongManager
 		(
 			{
 				folder: 'week_tgt',
-				character: 'gf',
+				character: 'tgt',
 				songTitle: 'Tails Get Trolled',
 				songList: ['talentless-fox', 'no-villains','die-batsards','high-shovel','taste-for-blood','tsuraran-fox', 'no-heroes','no-bitches-matasaki','no-bitches-penkaru','groovy-fox']
 			}

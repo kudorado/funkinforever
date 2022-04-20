@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:211afe94da294e70d2302ba1d45e834a:bb27e2e5867bda1509e62f26d6547ef0:72027c707f9e6386411f2c63ec0138ea$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="robot.png" width="3924" height="4067">
+    <sprite n="KB_DanceLeft0000.png" x="1" y="1" w="652" h="579" pX="0.559345" pY="0.838462"/>
+    <sprite n="KB_DanceLeft0001.png" x="655" y="1" w="652" h="579" pX="0.563438" pY="0.835385"/>
+    <sprite n="KB_DanceLeft0002.png" x="1309" y="1" w="652" h="579" pX="0.571623" pY="0.832308"/>
+    <sprite n="KB_DanceLeft0003.png" x="1963" y="1" w="652" h="579" pX="0.57708" pY="0.836923"/>
+    <sprite n="KB_DanceLeft0004.png" x="2617" y="1" w="652" h="579" pX="0.563438" pY="0.84"/>
+    <sprite n="KB_DanceLeft0005.png" x="3271" y="1" w="652" h="579" pX="0.572988" pY="0.836923"/>
+    <sprite n="KB_DanceLeft0006.png" x="1" y="582" w="652" h="579" pX="0.572988" pY="0.838462"/>
+    <sprite n="KB_DanceLeft0007.png" x="655" y="582" w="652" h="579" pX="0.566166" pY="0.836923"/>
+    <sprite n="KB_DanceLeft0008.png" x="1309" y="582" w="652" h="579" pX="0.566166" pY="0.836923"/>
+    <sprite n="KB_DanceLeft0009.png" x="1963" y="582" w="652" h="579" pX="0.549795" pY="0.838462"/>
+    <sprite n="KB_DanceLeft0010.png" x="2617" y="582" w="652" h="579" pX="0.533424" pY="0.84"/>
+    <sprite n="KB_DanceLeft0011.png" x="3271" y="582" w="652" h="579" pX="0.533424" pY="0.836923"/>
+    <sprite n="KB_DanceLeft0012.png" x="1" y="1163" w="652" h="579" pX="0.537517" pY="0.838462"/>
+    <sprite n="KB_DanceLeft0013.png" x="655" y="1163" w="652" h="579" pX="0.540246" pY="0.838462"/>
+    <sprite n="KB_DanceLeft0014.png" x="1309" y="1163" w="652" h="579" pX="0.544338" pY="0.836923"/>
+    <sprite n="KB_DanceLeft0015.png" x="1963" y="1163" w="652" h="579" pX="0.544338" pY="0.84"/>
+    <sprite n="KB_DanceLeft0016.png" x="2617" y="1163" w="652" h="579" pX="0.54161" pY="0.84"/>
+    <sprite n="KB_DanceLeft0017.png" x="3271" y="1163" w="652" h="579" pX="0.552524" pY="0.836923"/>
+    <sprite n="KB_DanceLeft0018.png" x="1" y="1744" w="652" h="579" pX="0.559345" pY="0.84"/>
+    <sprite n="KB_DanceLeft0019.png" x="655" y="1744" w="652" h="579" pX="0.555252" pY="0.838462"/>
+    <sprite n="KB_Down0000.png" x="1309" y="1744" w="652" h="579" pX="0.667121" pY="0.843077"/>
+    <sprite n="KB_Down0001.png" x="1963" y="1744" w="652" h="579" pX="0.657572" pY="0.838462"/>
+    <sprite n="KB_Down0002.png" x="2617" y="1744" w="652" h="579" pX="0.645293" pY="0.836923"/>
+    <sprite n="KB_Down0003.png" x="3271" y="1744" w="652" h="579" pX="0.648022" pY="0.832308"/>
+    <sprite n="KB_Down0004.png" x="1" y="2325" w="652" h="579" pX="0.643929" pY="0.827692"/>
+    <sprite n="KB_Left0000.png" x="655" y="2325" w="652" h="579" pX="0.739427" pY="0.823077"/>
+    <sprite n="KB_Left0001.png" x="1309" y="2325" w="652" h="579" pX="0.739427" pY="0.823077"/>
+    <sprite n="KB_Left0002.png" x="1963" y="2325" w="652" h="579" pX="0.744884" pY="0.826154"/>
+    <sprite n="KB_Left0003.png" x="2617" y="2325" w="652" h="579" pX="0.755798" pY="0.824615"/>
+    <sprite n="KB_Left0004.png" x="3271" y="2325" w="652" h="579" pX="0.758527" pY="0.821538"/>
+    <sprite n="KB_Right0000.png" x="1" y="2906" w="652" h="579" pX="0.442019" pY="0.835385"/>
+    <sprite n="KB_Right0001.png" x="655" y="2906" w="652" h="579" pX="0.442019" pY="0.835385"/>
+    <sprite n="KB_Right0002.png" x="1309" y="2906" w="652" h="579" pX="0.447476" pY="0.833846"/>
+    <sprite n="KB_Right0003.png" x="1963" y="2906" w="652" h="579" pX="0.452933" pY="0.833846"/>
+    <sprite n="KB_Right0004.png" x="2617" y="2906" w="652" h="579" pX="0.466576" pY="0.833846"/>
+    <sprite n="KB_Up0000.png" x="3271" y="2906" w="652" h="579" pX="0.616644" pY="0.816923"/>
+    <sprite n="KB_Up0001.png" x="1" y="3487" w="652" h="579" pX="0.613915" pY="0.816923"/>
+    <sprite n="KB_Up0002.png" x="655" y="3487" w="652" h="579" pX="0.619372" pY="0.823077"/>
+    <sprite n="KB_Up0003.png" x="1309" y="3487" w="652" h="579" pX="0.623465" pY="0.826154"/>
+    <sprite n="KB_Up0004.png" x="1963" y="3487" w="652" h="579" pX="0.616644" pY="0.826154"/>
+</TextureAtlas>

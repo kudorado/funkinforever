@@ -1,0 +1,49 @@
+{
+	"song": {
+		"speed": 3.1,
+		"stage": "q",
+		"player1": "bf",
+		"player2": "recovered project",
+		"player3": null,
+		"events": [
+			[
+				91976.0479041916,
+				[
+					[
+						"Change Character",
+						"dad",
+						"recovered project 2"
+					]
+				]
+			],
+			[
+				172455.089820359,
+				[
+					[
+						"Flash Camera",
+						"10",
+						""
+					]
+				]
+			],
+			[
+				172544.910179641,
+				[
+					[
+						"Change Character",
+						"dad",
+						"recovered project 3"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 167,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "RECOVERED-PROJECT"
+	}
+}

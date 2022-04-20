@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:3a463ee670c0d581d5dd27f14c83984b:a88243e725bbe55747a609805c8587ed:eabfea1b2f82ec976e871f8587b123f7$ -->
+<TextureAtlas imagePath="tikymask_miss.png" width="1615" height="943">
+    <SubTexture name="Sing Down instance MISS0000" x="445" y="1" width="558" height="449" frameX="0" frameY="-1" frameWidth="559" frameHeight="450"/>
+    <SubTexture name="Sing Left instance MISS0000" x="1005" y="1" width="609" height="510" frameX="0" frameY="-1" frameWidth="609" frameHeight="511"/>
+    <SubTexture name="Sing Right instance MISS0000" x="1" y="513" width="701" height="429" frameX="0" frameY="-1" frameWidth="701" frameHeight="430"/>
+    <SubTexture name="Sing Up instance MISS0000" x="1" y="1" width="442" height="510" frameX="-1" frameY="0" frameWidth="443" frameHeight="510"/>
+</TextureAtlas>

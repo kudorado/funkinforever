@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:95247b1671014f6d1fa6372395da48b1:6f42e025839bc3007a108e01231030f7:75ccaca5020dce1a226f295690caf8e8$ -->
+<TextureAtlas imagePath="selever_sheet.png" width="3372" height="3119">
+    <SubTexture name="SelDown MISS0000" x="1" y="1" width="560" height="705"/>
+    <SubTexture name="SelDown0000" x="563" y="1" width="560" height="705"/>
+    <SubTexture name="SelDown0001" x="563" y="1" width="560" height="705"/>
+    <SubTexture name="SelDown00002" x="1676" y="1" width="544" height="707"/>
+    <SubTexture name="SelDown00003" x="1676" y="1" width="544" height="707"/>
+    <SubTexture name="SelDown0004" x="1676" y="1" width="544" height="707"/>
+    <SubTexture name="SelDown0005" x="1676" y="1" width="544" height="707"/>
+    <SubTexture name="SelDown0006" x="1676" y="1" width="544" height="707"/>
+    <SubTexture name="SelDown0007" x="1676" y="1" width="544" height="707"/>
+    <SubTexture name="SelDown0008" x="1676" y="1" width="544" height="707"/>
+    <SubTexture name="SelDown0009" x="1676" y="1" width="544" height="707"/>
+    <SubTexture name="SelDown0010" x="1676" y="1" width="544" height="707"/>
+    <SubTexture name="SelDown0011" x="1676" y="1" width="544" height="707"/>
+    <SubTexture name="SelDown0012" x="1676" y="1" width="544" height="707"/>
+    <SubTexture name="SelDown0013" x="1125" y="1" width="549" height="705"/>
+    <SubTexture name="SelDown0014" x="1125" y="1" width="549" height="705"/>
+    <SubTexture name="SelHey0000" x="1798" y="1514" width="476" height="780"/>
+    <SubTexture name="SelHey0001" x="1798" y="1514" width="476" height="780"/>
+    <SubTexture name="SelHey0002" x="2276" y="1514" width="479" height="781"/>
+    <SubTexture name="SelHey0003" x="2276" y="1514" width="479" height="781"/>
+    <SubTexture name="SelHey0004" x="2276" y="1514" width="479" height="781"/>
+    <SubTexture name="SelHey0005" x="2276" y="1514" width="479" height="781"/>
+    <SubTexture name="SelHey0006" x="2276" y="1514" width="479" height="781"/>
+    <SubTexture name="SelHey0007" x="2276" y="1514" width="479" height="781"/>
+    <SubTexture name="SelHey0008" x="2276" y="1514" width="479" height="781"/>
+    <SubTexture name="SelHey0009" x="1798" y="1514" width="476" height="780"/>
+    <SubTexture name="SelIdle0000" x="1361" y="1514" width="435" height="766"/>
+    <SubTexture name="SelIdle0001" x="1361" y="1514" width="435" height="766"/>
+    <SubTexture name="SelIdle0002" x="919" y="1514" width="440" height="765"/>
+    <SubTexture name="SelIdle0003" x="1" y="1514" width="451" height="762"/>
+    <SubTexture name="SelIdle0004" x="2027" y="753" width="484" height="757"/>
+    <SubTexture name="SelIdle0005" x="2736" y="1" width="514" height="750"/>
+    <SubTexture name="SelIdle0006" x="2736" y="1" width="514" height="750"/>
+    <SubTexture name="SelIdle0007" x="2222" y="1" width="512" height="748"/>
+    <SubTexture name="SelIdle0008" x="1017" y="753" width="493" height="756"/>
+    <SubTexture name="SelIdle0009" x="454" y="1514" width="463" height="762"/>
+    <SubTexture name="SelLeft MISS0000" x="1" y="753" width="506" height="755"/>
+    <SubTexture name="SelLeft0000" x="509" y="753" width="506" height="755"/>
+    <SubTexture name="SelLeft0001" x="509" y="753" width="506" height="755"/>
+    <SubTexture name="SelLeft0002" x="2513" y="753" width="506" height="759"/>
+    <SubTexture name="SelLeft0003" x="2513" y="753" width="506" height="759"/>
+    <SubTexture name="SelLeft0004" x="1512" y="753" width="513" height="756"/>
+    <SubTexture name="SelLeft0005" x="1512" y="753" width="513" height="756"/>
+    <SubTexture name="SelLeft0006" x="1512" y="753" width="513" height="756"/>
+    <SubTexture name="SelLeft0007" x="1512" y="753" width="513" height="756"/>
+    <SubTexture name="SelLeft0008" x="1512" y="753" width="513" height="756"/>
+    <SubTexture name="SelLeft0009" x="1512" y="753" width="513" height="756"/>
+    <SubTexture name="SelLeft0010" x="1512" y="753" width="513" height="756"/>
+    <SubTexture name="SelLeft0011" x="1512" y="753" width="513" height="756"/>
+    <SubTexture name="SelRight MISS0000" x="560" y="2299" width="562" height="785"/>
+    <SubTexture name="SelRight0000" x="1124" y="2299" width="562" height="785"/>
+    <SubTexture name="SelRight0001" x="1124" y="2299" width="562" height="785"/>
+    <SubTexture name="SelRight0002" x="2757" y="1514" width="557" height="783"/>
+    <SubTexture name="SelRight0003" x="2757" y="1514" width="557" height="783"/>
+    <SubTexture name="SelRight0004" x="1" y="2299" width="557" height="784"/>
+    <SubTexture name="SelRight0005" x="1" y="2299" width="557" height="784"/>
+    <SubTexture name="SelRight0006" x="1" y="2299" width="557" height="784"/>
+    <SubTexture name="SelRight0007" x="1" y="2299" width="557" height="784"/>
+    <SubTexture name="SelRight0008" x="1" y="2299" width="557" height="784"/>
+    <SubTexture name="SelRight0009" x="1" y="2299" width="557" height="784"/>
+    <SubTexture name="SelRight0010" x="1" y="2299" width="557" height="784"/>
+    <SubTexture name="SelRight0011" x="1" y="2299" width="557" height="784"/>
+    <SubTexture name="SelUp MISS0000" x="1688" y="2299" width="555" height="818"/>
+    <SubTexture name="SelUp0000" x="2245" y="2299" width="555" height="818"/>
+    <SubTexture name="SelUp0001" x="2802" y="2299" width="569" height="819"/>
+    <SubTexture name="SelUp0002" x="2802" y="2299" width="569" height="819"/>
+    <SubTexture name="SelUp0010" x="2802" y="2299" width="569" height="819"/>
+</TextureAtlas>

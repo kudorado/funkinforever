@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-9,
+				88
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "cough left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				8,
+				26
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "cough down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-25,
+				87
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "cough up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				78,
+				86
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "cough right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "cough idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/leCough",
+	"position": [
+		-120,
+		100
+	],
+	"healthicon": "cough",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		172,
+		32
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

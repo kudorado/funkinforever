@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="charginguberkid.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="UberKidChargingUp0000" x="5" y="5" width="917" height="1055" frameX="-145" frameY="0" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0001" x="927" y="5" width="994" height="861" frameX="-325" frameY="-367" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0002" x="927" y="5" width="994" height="861" frameX="-325" frameY="-367" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0003" x="1926" y="5" width="969" height="840" frameX="-342" frameY="-356" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0004" x="1926" y="5" width="969" height="840" frameX="-342" frameY="-356" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0005" x="2900" y="5" width="977" height="855" frameX="-338" frameY="-341" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0006" x="2900" y="5" width="977" height="855" frameX="-338" frameY="-341" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0007" x="2900" y="5" width="977" height="855" frameX="-338" frameY="-341" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0008" x="5" y="1065" width="1061" height="848" frameX="-315" frameY="-458" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0009" x="1071" y="1065" width="918" height="830" frameX="-574" frameY="-328" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0010" x="1071" y="1065" width="918" height="830" frameX="-574" frameY="-328" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0011" x="1994" y="1065" width="1046" height="1090" frameX="-317" frameY="-131" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0012" x="1994" y="1065" width="1046" height="1090" frameX="-317" frameY="-131" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0013" x="5" y="2160" width="1308" height="1112" frameX="0" frameY="-45" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0014" x="5" y="2160" width="1308" height="1112" frameX="0" frameY="-45" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0015" x="1318" y="2160" width="944" height="657" frameX="-345" frameY="-87" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0016" x="1318" y="2160" width="944" height="657" frameX="-345" frameY="-87" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0017" x="2267" y="2160" width="848" height="553" frameX="-387" frameY="-205" frameWidth="1492" frameHeight="1306"/>
+	<SubTexture name="UberKidChargingUp0018" x="3120" y="2160" width="0" height="0" frameX="-367" frameY="-394" frameWidth="1492" frameHeight="1306"/>
+</TextureAtlas>

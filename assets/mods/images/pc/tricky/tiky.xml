@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:ef0ccec19e63c327cefde506d4c6302d:13f957af0cf108fdd161e9ec9b21c699:f4842dcadbf9fe83e94d854e978e7bd2$ -->
+<TextureAtlas imagePath="tiky.png" width="3592" height="3125">
+    <SubTexture name="Idle0001" x="759" y="2552" width="395" height="553" frameX="0" frameY="-19" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0002" x="799" y="1484" width="395" height="519" frameX="0" frameY="-53" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0003" x="1991" y="2010" width="398" height="534" frameX="0" frameY="-38" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0004" x="438" y="967" width="396" height="505" frameX="0" frameY="-67" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0005" x="1" y="1484" width="397" height="516" frameX="0" frameY="-56" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0006" x="2540" y="967" width="408" height="514" frameX="0" frameY="-58" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0008" x="1561" y="2552" width="397" height="560" frameX="0" frameY="-12" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0009" x="402" y="2010" width="395" height="527" frameX="0" frameY="-45" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0010" x="3190" y="2010" width="401" height="540" frameX="0" frameY="-32" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0011" x="2144" y="967" width="394" height="511" frameX="0" frameY="-61" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0012" x="2491" y="1484" width="395" height="524" frameX="0" frameY="-48" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0013" x="1196" y="1484" width="403" height="521" frameX="0" frameY="-51" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0014" x="1960" y="2552" width="403" height="560" frameX="0" frameY="-12" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0015" x="2391" y="2010" width="404" height="538" frameX="0" frameY="-34" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0016" x="400" y="1484" width="397" height="516" frameX="0" frameY="-56" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0017" x="1" y="2010" width="399" height="525" frameX="0" frameY="-47" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0018" x="799" y="2010" width="403" height="530" frameX="0" frameY="-42" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0019" x="2888" y="1484" width="405" height="524" frameX="0" frameY="-48" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0020" x="1156" y="2552" width="403" height="554" frameX="0" frameY="-18" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0021" x="1204" y="2010" width="403" height="530" frameX="0" frameY="-42" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0022" x="1285" y="967" width="405" height="506" frameX="0" frameY="-66" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Idle0023" x="2950" y="967" width="398" height="515" frameX="0" frameY="-57" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Down MISS0000" x="2065" y="1" width="399" height="449" frameX="0" frameY="-123" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Down0000" x="2466" y="1" width="399" height="449" frameX="0" frameY="-123" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Down0001" x="1269" y="1" width="407" height="445" frameX="0" frameY="-127" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Down0002" x="1" y="1" width="415" height="420" frameX="0" frameY="-152" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Down0003" x="418" y="1" width="444" height="427" frameX="0" frameY="-145" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Down0004" x="1678" y="1" width="385" height="445" frameX="0" frameY="-127" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Down0005" x="864" y="1" width="403" height="442" frameX="0" frameY="-130" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Left MISS0000" x="2764" y="2552" width="398" height="572" frameX="0" frameY="0" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Left0000" x="3164" y="2552" width="398" height="572" frameX="0" frameY="0" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Left0001" x="2365" y="2552" width="397" height="561" frameX="0" frameY="-11" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Left0002" x="1609" y="2010" width="380" height="533" frameX="0" frameY="-39" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Left0003" x="2797" y="2010" width="391" height="539" frameX="0" frameY="-33" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Left0004" x="385" y="2552" width="372" height="551" frameX="0" frameY="-21" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Left0005" x="1" y="2552" width="382" height="546" frameX="0" frameY="-26" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Right MISS0000" x="858" y="466" width="433" height="485" frameX="0" frameY="-87" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Right0000" x="1293" y="466" width="433" height="485" frameX="0" frameY="-87" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Right0001" x="1728" y="466" width="404" height="488" frameX="-1" frameY="-84" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Right0002" x="2867" y="1" width="413" height="463" frameX="0" frameY="-109" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Right0003" x="1" y="466" width="413" height="472" frameX="0" frameY="-100" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Right0004" x="2545" y="466" width="429" height="490" frameX="0" frameY="-82" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Right0005" x="2134" y="466" width="409" height="488" frameX="0" frameY="-84" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Up MISS0000" x="1601" y="1484" width="443" height="521" frameX="0" frameY="-51" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Up0000" x="2046" y="1484" width="443" height="521" frameX="0" frameY="-51" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Up0001" x="1692" y="967" width="450" height="508" frameX="0" frameY="-64" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Up0002" x="1" y="967" width="435" height="502" frameX="0" frameY="-70" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Up0003" x="416" y="466" width="440" height="484" frameX="0" frameY="-88" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Up0004" x="836" y="967" width="447" height="505" frameX="0" frameY="-67" frameWidth="450" frameHeight="572"/>
+    <SubTexture name="Proper Up0005" x="2976" y="466" width="442" height="499" frameX="0" frameY="-73" frameWidth="450" frameHeight="572"/>
+</TextureAtlas>

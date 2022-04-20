@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NoteSplashes_assets (1).png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="note impact 1 blue0000" x="8" y="8" width="176" height="240" frameX="-29" frameY="-3" frameWidth="238" frameHeight="253"/>
+	<SubTexture name="note impact 1 blue0001" x="194" y="8" width="228" height="234" frameX="0" frameY="-12" frameWidth="238" frameHeight="253"/>
+	<SubTexture name="note impact 1 blue0002" x="432" y="8" width="233" height="242" frameX="-5" frameY="-6" frameWidth="238" frameHeight="253"/>
+	<SubTexture name="note impact 1 blue0003" x="675" y="8" width="233" height="253" frameX="-5" frameY="0" frameWidth="238" frameHeight="253"/>
+	<SubTexture name="note impact 2 blue0000" x="8" y="271" width="142" height="196" frameX="-30" frameY="-26" frameWidth="203" frameHeight="239"/>
+	<SubTexture name="note impact 2 blue0001" x="160" y="271" width="176" height="206" frameX="-17" frameY="-20" frameWidth="203" frameHeight="239"/>
+	<SubTexture name="note impact 2 blue0002" x="346" y="271" width="194" height="226" frameX="-5" frameY="-7" frameWidth="203" frameHeight="239"/>
+	<SubTexture name="note impact 2 blue0003" x="550" y="271" width="203" height="239"/>
+</TextureAtlas>

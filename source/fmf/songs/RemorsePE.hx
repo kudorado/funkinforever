@@ -41,6 +41,7 @@ class RemorsePE extends SongPlayer
 	{
         super.updateCamFollowDad();
         gameState.defaultCamZoom = 0.7;
+        gameState.targetCamFollow.y += 115;
 
 	}
 

@@ -1,0 +1,31 @@
+{
+	"songs": [
+		[
+			"wireframe",
+			"decdave",
+			[
+				255,
+				0,
+				15
+			]
+		]
+	],
+	"hideFreeplay": false,
+	"weekBackground": "wireframe",
+	"difficulties": "",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "robot suit lmao",
+	"weekName": "weekwireframe",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "weekdisable",
+	"startUnlocked": true
+}

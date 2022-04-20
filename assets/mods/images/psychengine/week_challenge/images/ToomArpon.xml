@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="ToomArpon.png">
+<SubTexture name="ToomArpon0000" x="1629" y="1286" width="543" height="642" frameX="0" frameY="-2" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0001" x="1629" y="1286" width="543" height="642" frameX="0" frameY="-2" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0002" x="2172" y="0" width="543" height="642" frameX="0" frameY="-2" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0003" x="2172" y="0" width="543" height="642" frameX="0" frameY="-2" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0004" x="1629" y="1286" width="543" height="642" frameX="0" frameY="-2" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0005" x="2172" y="642" width="543" height="642" frameX="0" frameY="-2" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0006" x="2172" y="1284" width="543" height="642" frameX="0" frameY="-2" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0007" x="0" y="0" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0008" x="0" y="0" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0009" x="543" y="0" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0010" x="1086" y="0" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0011" x="0" y="643" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0012" x="543" y="643" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0013" x="1086" y="643" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0014" x="1629" y="0" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0015" x="1629" y="643" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0016" x="0" y="643" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0017" x="0" y="1286" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0018" x="543" y="1286" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0019" x="1086" y="1286" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0020" x="1086" y="1286" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+<SubTexture name="ToomArpon0021" x="543" y="1286" width="543" height="643" frameX="0" frameY="-1" frameWidth="543" frameHeight="644" />
+</TextureAtlas>

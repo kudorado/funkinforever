@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="mark.png"><SubTexture name="mark0000" x="1278" y="0" width="326" height="649" frameX="0" frameY="-13" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0001" x="1278" y="0" width="326" height="649" frameX="0" frameY="-13" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0002" x="0" y="662" width="320" height="649" frameX="-4" frameY="-14" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0003" x="0" y="662" width="320" height="649" frameX="-4" frameY="-14" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0004" x="958" y="0" width="320" height="657" frameX="-3" frameY="-5" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0005" x="958" y="0" width="320" height="657" frameX="-3" frameY="-5" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0006" x="639" y="0" width="319" height="660" frameX="-4" frameY="-3" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0007" x="639" y="0" width="319" height="660" frameX="-4" frameY="-3" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0008" x="319" y="0" width="320" height="661" frameX="-3" frameY="-1" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0009" x="319" y="0" width="320" height="661" frameX="-3" frameY="-1" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0010" x="0" y="0" width="319" height="662" frameX="-4" frameY="-1" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0011" x="0" y="0" width="319" height="662" frameX="-4" frameY="-1" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0012" x="319" y="0" width="320" height="661" frameX="-3" frameY="-1" frameWidth="326" frameHeight="663" />
+<SubTexture name="mark0013" x="319" y="0" width="320" height="661" frameX="-3" frameY="-1" frameWidth="326" frameHeight="663" />
+</TextureAtlas>

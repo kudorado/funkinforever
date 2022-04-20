@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:8e18b33d00ce3a23dec895832d1099c4:e6db6a64e8b9ac47aebfec5a9c3845d1:1d6ca1e4f1ef6605c85e35320110c0c1$ -->
+<TextureAtlas imagePath="FII_BG.png" width="4088" height="3090">
+    <SubTexture name="Sonicboppers0000" x="1" y="1" width="2042" height="1028"/>
+    <SubTexture name="Sonicboppers0001" x="2045" y="1" width="2042" height="1028"/>
+    <SubTexture name="Sonicboppers0002" x="1" y="1031" width="2042" height="1028"/>
+    <SubTexture name="Sonicboppers0003" x="2045" y="1031" width="2042" height="1028"/>
+    <SubTexture name="Sonicboppers0004" x="1" y="2061" width="2042" height="1028"/>
+    <SubTexture name="Sonicboppers0005" x="2045" y="2061" width="2042" height="1028"/>
+</TextureAtlas>

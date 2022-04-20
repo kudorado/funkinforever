@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:28000457a628dc2fc414a650e910f07b:13b3a1505851c67521eca422b7f5bd6c:d597d4a6c37ec702e7f278eaf3214dfd$ -->
+<TextureAtlas imagePath="Sanic.png" width="4096" height="4096">
+    <SubTexture name="SanicDown000" x="1" y="1" width="819" height="819"/>
+    <SubTexture name="SanicDown001" x="1" y="822" width="819" height="819"/>
+    <SubTexture name="SanicDown002" x="1" y="1643" width="819" height="819"/>
+    <SubTexture name="SanicDown003" x="1" y="2464" width="819" height="819"/>
+    <SubTexture name="SanicDown004" x="822" y="1" width="819" height="819"/>
+    <SubTexture name="SanicIdle000" x="1643" y="1" width="819" height="819"/>
+    <SubTexture name="SanicIdle001" x="2464" y="1" width="819" height="819"/>
+    <SubTexture name="SanicIdle002" x="822" y="822" width="819" height="819"/>
+    <SubTexture name="SanicIdle003" x="822" y="1643" width="819" height="819"/>
+    <SubTexture name="SanicLeft000" x="822" y="2464" width="819" height="819"/>
+    <SubTexture name="SanicLeft001" x="1643" y="822" width="819" height="819"/>
+    <SubTexture name="SanicRight000" x="2464" y="822" width="819" height="819"/>
+    <SubTexture name="SanicRight001" x="1643" y="1643" width="819" height="819"/>
+    <SubTexture name="SanicUp000" x="1643" y="2464" width="819" height="819"/>
+    <SubTexture name="SanicUp001" x="2464" y="1643" width="819" height="819"/>
+</TextureAtlas>

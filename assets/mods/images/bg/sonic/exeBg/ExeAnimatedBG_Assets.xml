@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:ddf09d96367cac6ffbb23e0b3e81b272:52115bf3d600b6d872b14f968b0063de:90245316b2c9b911e6edf3052c9af300$ -->
+<TextureAtlas imagePath="ExeAnimatedBG_Assets.png" width="4096" height="4096">
+    <SubTexture name="ExeBGAnim0000" x="1" y="1" width="2560" height="1400"/>
+    <SubTexture name="ExeBGAnim0001" x="1" y="1" width="2560" height="1400"/>
+    <SubTexture name="ExeBGAnim0002" x="1" y="1" width="2560" height="1400"/>
+    <SubTexture name="ExeBGAnim0003" x="1" y="1" width="2560" height="1400"/>
+    <SubTexture name="ExeBGAnim0004" x="2563" y="1" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0005" x="2563" y="1" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0006" x="2563" y="1" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0007" x="2563" y="1" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0008" x="2563" y="1" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0009" x="2563" y="1" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0010" x="2563" y="1" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0011" x="2563" y="1" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0012" x="1" y="1403" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0013" x="1" y="1403" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0014" x="1" y="1403" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0015" x="1" y="1403" rotated="true" width="1400" height="2560"/>
+    <SubTexture name="ExeBGAnim0016" x="1403" y="2563" width="2560" height="1400"/>
+    <SubTexture name="ExeBGAnim0017" x="1403" y="2563" width="2560" height="1400"/>
+    <SubTexture name="ExeBGAnim0018" x="1403" y="2563" width="2560" height="1400"/>
+    <SubTexture name="ExeBGAnim0019" x="1403" y="2563" width="2560" height="1400"/>
+</TextureAtlas>

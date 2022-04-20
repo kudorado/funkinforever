@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="pared2.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="wallyright0000" x="0" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0001" x="0" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0002" x="1416" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0003" x="1416" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0004" x="0" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0005" x="0" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0006" x="1416" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0007" x="1416" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0008" x="0" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0009" x="0" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0010" x="1416" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0011" x="1416" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0012" x="0" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0013" x="0" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0014" x="1416" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0015" x="1416" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0016" x="0" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0017" x="0" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0018" x="1416" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0019" x="1416" y="0" width="1416" height="1127"/>
+	<SubTexture name="wallyright0020" x="0" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0021" x="0" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0022" x="1416" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0023" x="1416" y="1127" width="1416" height="1127"/>
+	<SubTexture name="wallyright0024" x="0" y="0" width="1416" height="1127"/>
+</TextureAtlas>

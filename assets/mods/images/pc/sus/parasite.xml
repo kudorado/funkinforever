@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:906683d18d8bf1c404821c425cb406eb:0341ee0ba7019bd4eaeece43448da646:e5a7df2a1255631c7de4a64e5734e06b$ -->
+<TextureAtlas imagePath="parasite.png" width="2590" height="2590">
+    <SubTexture name="Mungus idle0000" x="1889" y="687" width="368" height="247" frameX="-48" frameY="-77" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0001" x="1" y="936" width="369" height="247" frameX="-47" frameY="-77" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0002" x="1123" y="936" width="368" height="248" frameX="-48" frameY="-76" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0003" x="1501" y="444" width="370" height="240" frameX="-46" frameY="-84" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0004" x="1157" y="1447" width="370" height="261" frameX="-46" frameY="-63" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0005" x="1909" y="1711" width="368" height="269" frameX="-48" frameY="-55" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0006" x="1140" y="1982" width="368" height="276" frameX="-48" frameY="-48" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0007" x="394" y="1447" width="368" height="260" frameX="-48" frameY="-64" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0008" x="372" y="936" width="367" height="247" frameX="-49" frameY="-77" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0009" x="767" y="687" width="367" height="244" frameX="-49" frameY="-80" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0010" x="2216" y="936" width="362" height="250" frameX="-54" frameY="-74" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0011" x="741" y="936" width="380" height="247" frameX="-36" frameY="-77" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0012" x="1" y="687" width="381" height="243" frameX="-35" frameY="-81" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0013" x="1" y="1188" width="375" height="250" frameX="-41" frameY="-74" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0014" x="1529" y="1447" width="377" height="261" frameX="-39" frameY="-63" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0015" x="1908" y="1447" width="354" height="262" frameX="-62" frameY="-62" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0016" x="761" y="1188" width="351" height="251" frameX="-65" frameY="-73" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0017" x="1493" y="936" width="344" height="249" frameX="-72" frameY="-75" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0018" x="1136" y="687" width="367" height="245" frameX="-49" frameY="-79" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0019" x="1839" y="936" width="375" height="249" frameX="-41" frameY="-75" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0020" x="384" y="687" width="381" height="243" frameX="-35" frameY="-81" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Mungus idle0021" x="1114" y="1188" width="369" height="252" frameX="-47" frameY="-72" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Paracite down0000" x="1477" y="1" width="335" height="212" frameX="-81" frameY="-112" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Paracite down0001" x="348" y="216" width="334" height="216" frameX="-82" frameY="-108" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Paracite down0002" x="1814" y="1" width="339" height="212" frameX="-77" frameY="-112" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Paracite down0003" x="766" y="1" width="353" height="207" frameX="-63" frameY="-117" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Paracite down0004" x="684" y="216" width="354" height="216" frameX="-62" frameY="-108" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Paracite down0005" x="2155" y="1" width="356" height="213" frameX="-60" frameY="-111" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Paracite down0006" x="1121" y="1" width="354" height="209" frameX="-62" frameY="-115" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Paracite down0007" x="1040" y="216" width="346" height="216" frameX="-70" frameY="-108" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Paracite down0008" x="1" y="216" width="345" height="213" frameX="-71" frameY="-111" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Paracite down0009" x="419" y="1" width="345" height="206" frameX="-71" frameY="-118" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite left0000" x="1510" y="1982" width="390" height="279" frameX="-26" frameY="-45" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite left0001" x="747" y="2265" width="392" height="287" frameX="-24" frameY="-37" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite left0002" x="1" y="1982" width="365" height="270" frameX="-51" frameY="-54" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite left0003" x="1" y="1711" width="377" height="262" frameX="-39" frameY="-62" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite left0004" x="753" y="1982" width="385" height="271" frameX="-31" frameY="-53" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite left0005" x="1146" y="1711" width="387" height="266" frameX="-29" frameY="-58" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite left0006" x="380" y="1711" width="377" height="262" frameX="-39" frameY="-62" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite left0007" x="1535" y="1711" width="372" height="266" frameX="-44" frameY="-58" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite left0008" x="1902" y="1982" width="363" height="281" frameX="-53" frameY="-43" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite left0009" x="390" y="2265" width="355" height="283" frameX="-61" frameY="-41" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite right new0000" x="1141" y="2265" width="398" height="305" frameX="-18" frameY="-19" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite right new0001" x="368" y="1982" width="383" height="270" frameX="-33" frameY="-54" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite right new0002" x="1" y="1" width="416" height="203" frameX="0" frameY="-121" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite right new0003" x="1388" y="216" width="408" height="221" frameX="-8" frameY="-103" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite right new0004" x="1798" y="216" width="378" height="222" frameX="-38" frameY="-102" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite right new0005" x="1485" y="1188" width="374" height="256" frameX="-42" frameY="-68" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite right new0006" x="764" y="1447" width="391" height="260" frameX="-25" frameY="-64" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite right new0007" x="1861" y="1188" width="386" height="257" frameX="-30" frameY="-67" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite right new0008" x="759" y="1711" width="385" height="262" frameX="-31" frameY="-62" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite right new0009" x="1" y="1447" width="391" height="259" frameX="-25" frameY="-65" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite up new0000" x="1541" y="2265" width="387" height="324" frameX="-29" frameY="0" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite up new0001" x="1" y="2265" width="387" height="281" frameX="-29" frameY="-43" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite up new0002" x="1873" y="444" width="406" height="241" frameX="-10" frameY="-83" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite up new0003" x="340" y="444" width="398" height="232" frameX="-18" frameY="-92" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite up new0004" x="740" y="444" width="373" height="233" frameX="-43" frameY="-91" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite up new0005" x="1" y="444" width="337" height="230" frameX="-79" frameY="-94" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite up new0006" x="2178" y="216" width="366" height="226" frameX="-50" frameY="-98" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite up new0007" x="1505" y="687" width="382" height="245" frameX="-34" frameY="-79" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite up new0008" x="378" y="1188" width="381" height="250" frameX="-35" frameY="-74" frameWidth="416" frameHeight="324"/>
+    <SubTexture name="Parasite up new0009" x="1115" y="444" width="384" height="239" frameX="-32" frameY="-85" frameWidth="416" frameHeight="324"/>
+</TextureAtlas>

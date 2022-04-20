@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="nene-uber.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Nene Idle0000" x="5" y="5" width="520" height="401" frameX="0" frameY="0" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0001" x="5" y="5" width="520" height="401" frameX="0" frameY="0" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0002" x="530" y="5" width="519" height="396" frameX="-1" frameY="-5" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0003" x="530" y="5" width="519" height="396" frameX="-1" frameY="-5" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0004" x="1054" y="5" width="504" height="398" frameX="-16" frameY="-4" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0005" x="1054" y="5" width="504" height="398" frameX="-16" frameY="-4" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0006" x="5" y="411" width="494" height="400" frameX="-26" frameY="-2" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0007" x="5" y="411" width="494" height="400" frameX="-26" frameY="-2" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0008" x="504" y="411" width="485" height="402" frameX="-35" frameY="0" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0009" x="504" y="411" width="485" height="402" frameX="-35" frameY="0" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0010" x="504" y="411" width="485" height="402" frameX="-35" frameY="0" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0011" x="504" y="411" width="485" height="402" frameX="-35" frameY="0" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Idle0012" x="504" y="411" width="485" height="402" frameX="-35" frameY="0" frameWidth="520" frameHeight="402"/>
+	<SubTexture name="Nene Stab0000" x="994" y="411" width="459" height="383" frameX="-90" frameY="-89" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0001" x="1458" y="411" width="524" height="472" frameX="-6" frameY="-3" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0002" x="1458" y="411" width="524" height="472" frameX="-6" frameY="-3" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0003" x="5" y="888" width="524" height="475" frameX="-5" frameY="0" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0004" x="5" y="888" width="524" height="475" frameX="-5" frameY="0" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0005" x="534" y="888" width="544" height="406" frameX="0" frameY="-69" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0006" x="1083" y="888" width="530" height="392" frameX="-8" frameY="-83" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0007" x="1083" y="888" width="530" height="392" frameX="-8" frameY="-83" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0008" x="5" y="1368" width="524" height="396" frameX="-14" frameY="-79" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0009" x="5" y="1368" width="524" height="396" frameX="-14" frameY="-79" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0010" x="534" y="1368" width="526" height="399" frameX="-10" frameY="-76" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0011" x="1065" y="1368" width="524" height="398" frameX="-13" frameY="-77" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0012" x="1065" y="1368" width="524" height="398" frameX="-13" frameY="-77" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0013" x="1065" y="1368" width="524" height="398" frameX="-13" frameY="-77" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0014" x="1065" y="1368" width="524" height="398" frameX="-13" frameY="-77" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="Nene Stab0015" x="1065" y="1368" width="524" height="398" frameX="-13" frameY="-77" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0000" x="994" y="411" width="459" height="383" frameX="-90" frameY="-89" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0001" x="1458" y="411" width="524" height="472" frameX="-6" frameY="-4" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0002" x="1458" y="411" width="524" height="472" frameX="-6" frameY="-4" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0003" x="5" y="888" width="524" height="475" frameX="-5" frameY="0" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0004" x="5" y="888" width="524" height="475" frameX="-5" frameY="0" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0005" x="534" y="888" width="544" height="406" frameX="0" frameY="-69" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0006" x="1083" y="888" width="530" height="392" frameX="-8" frameY="-82" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0007" x="1083" y="888" width="530" height="392" frameX="-8" frameY="-82" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0008" x="5" y="1368" width="524" height="396" frameX="-14" frameY="-78" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0009" x="5" y="1368" width="524" height="396" frameX="-14" frameY="-78" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0010" x="534" y="1368" width="526" height="399" frameX="-10" frameY="-76" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0011" x="1065" y="1368" width="524" height="398" frameX="-13" frameY="-77" frameWidth="549" frameHeight="475"/>
+	<SubTexture name="NeneStabbing0012" x="1065" y="1368" width="524" height="398" frameX="-13" frameY="-77" frameWidth="549" frameHeight="475"/>
+</TextureAtlas>

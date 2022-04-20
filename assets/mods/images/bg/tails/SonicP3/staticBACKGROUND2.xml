@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:3169a3e01446fb14b14bfec454938bec:442b1144c302ceaf8b0696391bd8871b:e967ea82785d254b79cdeae0012962b0$ -->
+<TextureAtlas imagePath="staticBACKGROUND2.png" width="3852" height="1448">
+    <SubTexture name="MenuSTATICNEW instance 10000" x="1" y="1" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10001" x="643" y="1" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10002" x="1285" y="1" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10003" x="1927" y="1" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10004" x="2569" y="1" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10005" x="3211" y="1" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10006" x="1" y="363" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10007" x="643" y="363" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10008" x="1285" y="363" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10009" x="1927" y="363" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10010" x="2569" y="363" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10011" x="3211" y="363" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10012" x="1" y="725" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10013" x="643" y="725" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10014" x="1285" y="725" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10015" x="1927" y="725" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10016" x="2569" y="725" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10017" x="3211" y="725" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10018" x="1" y="1087" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10019" x="643" y="1087" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10020" x="1285" y="1087" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10021" x="1927" y="1087" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10022" x="2569" y="1087" width="640" height="360"/>
+    <SubTexture name="MenuSTATICNEW instance 10023" x="3211" y="1087" width="640" height="360"/>
+</TextureAtlas>

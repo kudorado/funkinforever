@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:3201d65e516f2a2cfb934a776c212da5:b267c83f318b2e719b32691f09aaf4d1:c2b4b9d25f769d1b296dee4c736b888b$ -->
-<TextureAtlas imagePath="bgEscalator.png" width="2791" height="3892">
-    <SubTexture name="Esc00000" x="2" y="2" width="2787" height="1294"/>
-    <SubTexture name="Esc10001" x="2" y="1299" width="2787" height="1294"/>
-    <SubTexture name="Esc20002" x="2" y="2596" width="2787" height="1294"/>
-</TextureAtlas>

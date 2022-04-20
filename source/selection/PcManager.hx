@@ -780,6 +780,9 @@ class PcManager
 			case 'bf r':
 				return new BFR(850, 475);
 
+			case 'bf troll':
+				return new BFTroll(750, 475);
+
 			case 'bf fly':
 				return new BFFly(850, 425 + 350);
 

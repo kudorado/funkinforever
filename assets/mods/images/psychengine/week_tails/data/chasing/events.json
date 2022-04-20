@@ -1,0 +1,44 @@
+{
+	"song": {
+		"speed": 2.8,
+		"stage": "happy",
+		"player1": "bf",
+		"player2": "tailsHappy",
+		"player3": null,
+		"events": [
+			[
+				59104.4776119403,
+				[
+					[
+						"Image Flash",
+						"black",
+						"8.48"
+					]
+				]
+			],
+			[
+				67601.9900497512,
+				[
+					[
+						"Replace stage layer",
+						"sad",
+						"happy"
+					],
+					[
+						"Change Character",
+						"1",
+						"tails"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 134,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Chasing"
+	}
+}

@@ -114,7 +114,7 @@ class SelectionState extends MusicBeatState
 		{
 			//cut some options yah
 			// trace('story mode detected');
-			options = ['Play', "Notes", "Effects", "Scrolls" , "Play Mode"];
+			// options = ['Play', "Notes", "Effects", "Scrolls" , "Play Mode"];
 		}
 
 		AdMob.hideBanner();

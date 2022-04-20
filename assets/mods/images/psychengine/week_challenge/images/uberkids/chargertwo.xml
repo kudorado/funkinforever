@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="chargertwo.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="chargertwo0000" x="5" y="5" width="886" height="1025" frameX="-415" frameY="0" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0001" x="896" y="5" width="960" height="840" frameX="-167" frameY="-356" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0002" x="896" y="5" width="960" height="840" frameX="-167" frameY="-356" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0003" x="1861" y="5" width="939" height="819" frameX="-175" frameY="-345" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0004" x="1861" y="5" width="939" height="819" frameX="-175" frameY="-345" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0005" x="2805" y="5" width="943" height="833" frameX="-171" frameY="-331" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0006" x="2805" y="5" width="943" height="833" frameX="-171" frameY="-331" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0007" x="2805" y="5" width="943" height="833" frameX="-171" frameY="-331" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0008" x="5" y="1035" width="1033" height="827" frameX="-112" frameY="-445" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0009" x="1043" y="1035" width="886" height="810" frameX="0" frameY="-318" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0010" x="1043" y="1035" width="886" height="810" frameX="0" frameY="-318" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0011" x="1934" y="1035" width="1017" height="1062" frameX="-125" frameY="-127" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0012" x="1934" y="1035" width="1017" height="1062" frameX="-125" frameY="-127" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0013" x="5" y="2102" width="1263" height="1083" frameX="-178" frameY="-44" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0014" x="5" y="2102" width="1263" height="1083" frameX="-178" frameY="-44" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0015" x="1273" y="2102" width="911" height="639" frameX="-196" frameY="-84" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0016" x="1273" y="2102" width="911" height="639" frameX="-196" frameY="-84" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0017" x="2189" y="2102" width="818" height="538" frameX="-248" frameY="-198" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0018" x="3012" y="2102" width="0" height="0" frameX="-415" frameY="55" frameWidth="1441" frameHeight="1272"/>
+	<SubTexture name="chargertwo0019" x="3012" y="2102" width="0" height="0" frameX="-415" frameY="55" frameWidth="1441" frameHeight="1272"/>
+</TextureAtlas>

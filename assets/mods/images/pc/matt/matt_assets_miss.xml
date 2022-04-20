@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:2c14d70310651a092fbad588cb967e37:6faa3c490996574543d508ee2704ff1b:43deea26698d1f70fa51904fad6def1f$ -->
+<TextureAtlas imagePath="matt_assets_miss.png" width="709" height="866">
+    <SubTexture name="Matt down note MISS0000" x="1" y="1" width="295" height="411" frameX="-1" frameY="0" frameWidth="296" frameHeight="411"/>
+    <SubTexture name="Matt left note MISS0000" x="298" y="1" width="410" height="398" frameX="-1" frameY="0" frameWidth="411" frameHeight="398"/>
+    <SubTexture name="Matt right note MISS0000" x="1" y="414" width="379" height="413"/>
+    <SubTexture name="Matt up note MISS0000" x="382" y="414" width="311" height="451"/>
+</TextureAtlas>

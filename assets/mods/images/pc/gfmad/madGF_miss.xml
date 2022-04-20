@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:3d275d3ca6d8307634fbb422b42b061c:33a4ed08c59a74fcc2c1d34ed201f773:1516620c9197c3eca6eea1791bfe9bf0$ -->
+<TextureAtlas imagePath="madGF_miss.png" width="673" height="971">
+    <SubTexture name="Gf Down Note MISS0000" x="363" y="1" width="309" height="459" frameX="-1" frameY="-2" frameWidth="311" frameHeight="461"/>
+    <SubTexture name="Gf NOTE LEFT MISS0000" x="1" y="480" width="335" height="476" frameX="-1" frameY="-1" frameWidth="337" frameHeight="478"/>
+    <SubTexture name="Gf Note Right MISS0000" x="1" y="1" width="360" height="477" frameX="-1" frameY="-1" frameWidth="362" frameHeight="478"/>
+    <SubTexture name="Gf Up note MISS0000" x="338" y="480" width="324" height="490" frameX="-1" frameY="-1" frameWidth="325" frameHeight="491"/>
+</TextureAtlas>

@@ -1,0 +1,29 @@
+{
+	"song": {
+		"speed": 3,
+		"stage": "redtunnel",
+		"player1": "tunnel-bf",
+		"player2": "tunnel dave",
+		"player3": null,
+		"events": [
+			[
+				76800,
+				[
+					[
+						"Change Character",
+						"dad",
+						"badai"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 200,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Wireframe"
+	}
+}

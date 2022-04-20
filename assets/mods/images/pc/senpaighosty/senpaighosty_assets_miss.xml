@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:35ba1b41ada608c2bf2d89935ba43f66:8ba668441601abbe7c00fd65355cb8d1:462a970ee21c24cbc67a23eff3893060$ -->
+<TextureAtlas imagePath="senpaighosty_assets_miss.png" width="1306" height="749">
+    <SubTexture name="Garcello Sing Note DOWN MISS0000" x="1" y="1" width="299" height="675" frameX="-1" frameY="-2" frameWidth="301" frameHeight="679"/>
+    <SubTexture name="Garcello Sing Note LEFT MISS0000" x="302" y="1" width="310" height="710" frameX="-2" frameY="-1" frameWidth="313" frameHeight="713"/>
+    <SubTexture name="Garcello Sing Note RIGHT MISS0000" x="614" y="1" width="383" height="693" frameX="-1" frameY="-1" frameWidth="385" frameHeight="696"/>
+    <SubTexture name="Garcello Sing Note UP MISS0000" x="999" y="1" width="306" height="747" frameX="-1" frameY="-2" frameWidth="309" frameHeight="749"/>
+</TextureAtlas>

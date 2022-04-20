@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:3856ce9a262e73c719255d0fb4e8886a:7733eef60a3d9dedbf9be8551df0e831:3e145151bd222f1ed7a41cacc8dd7d98$ -->
+<TextureAtlas imagePath="Edd.png" width="2496" height="3982">
+    <SubTexture name="EddDown0000" x="381" y="3348" width="394" height="594"/>
+    <SubTexture name="EddDown0001" x="777" y="3365" width="394" height="594"/>
+    <SubTexture name="EddDown0002" x="888" y="1352" width="394" height="594"/>
+    <SubTexture name="EddDown0003" x="1977" y="686" width="394" height="594"/>
+    <SubTexture name="EddDown0004" x="1812" y="1977" width="394" height="594"/>
+    <SubTexture name="EddHEY!!0000" x="495" y="667" width="391" height="662"/>
+    <SubTexture name="EddHEY!!0001" x="989" y="1" width="391" height="662"/>
+    <SubTexture name="EddHEY!!0002" x="1" y="1999" width="391" height="662"/>
+    <SubTexture name="EddHEY!!0003" x="495" y="1331" width="391" height="662"/>
+    <SubTexture name="EddHEY!!0004" x="1382" y="1" width="391" height="662"/>
+    <SubTexture name="EddHEY!!0005" x="1" y="2663" width="391" height="662"/>
+    <SubTexture name="EddHEY!!0006" x="1775" y="1" width="391" height="662"/>
+    <SubTexture name="EddHEY!!0007" x="394" y="2684" width="391" height="662"/>
+    <SubTexture name="EddIdle0000" x="1" y="3327" width="378" height="654"/>
+    <SubTexture name="EddIdle0001" x="1" y="3327" width="378" height="654"/>
+    <SubTexture name="EddIdle0002" x="1217" y="665" width="378" height="654"/>
+    <SubTexture name="EddIdle0003" x="1217" y="665" width="378" height="654"/>
+    <SubTexture name="EddIdle0004" x="1597" y="665" width="378" height="654"/>
+    <SubTexture name="EddIdle0005" x="1284" y="1321" width="378" height="654"/>
+    <SubTexture name="EddIdle0006" x="1664" y="1321" width="378" height="654"/>
+    <SubTexture name="EddIdle0007" x="1052" y="1977" width="378" height="654"/>
+    <SubTexture name="EddIdle0008" x="1432" y="1977" width="378" height="654"/>
+    <SubTexture name="EddIdle0009" x="1116" y="2633" width="378" height="654"/>
+    <SubTexture name="EddIdle0010" x="1116" y="2633" width="378" height="654"/>
+    <SubTexture name="EddIdle0011" x="1432" y="1977" width="378" height="654"/>
+    <SubTexture name="EddIdle0012" x="1432" y="1977" width="378" height="654"/>
+    <SubTexture name="EddIdle0013" x="1116" y="2633" width="378" height="654"/>
+    <SubTexture name="EddLeft0000" x="2044" y="1282" width="371" height="658"/>
+    <SubTexture name="EddLeft0001" x="1496" y="2633" width="371" height="658"/>
+    <SubTexture name="EddLeft0002" x="1869" y="2573" width="371" height="658"/>
+    <SubTexture name="EddLeft0003" x="1173" y="3293" width="371" height="658"/>
+    <SubTexture name="EddLeft0004" x="1546" y="3293" width="371" height="658"/>
+    <SubTexture name="EddLeft0005" x="1919" y="3233" width="371" height="658"/>
+    <SubTexture name="EddRight0000" x="1" y="1" width="492" height="664"/>
+    <SubTexture name="EddRight0001" x="1" y="667" width="492" height="664"/>
+    <SubTexture name="EddRight0002" x="495" y="1" width="492" height="664"/>
+    <SubTexture name="EddRight0003" x="1" y="1333" width="492" height="664"/>
+    <SubTexture name="EddRight0004" x="1" y="1333" width="492" height="664"/>
+    <SubTexture name="EddRight0005" x="495" y="1" width="492" height="664"/>
+    <SubTexture name="EddUp0000" x="2168" y="1" width="327" height="683"/>
+    <SubTexture name="EddUp0001" x="394" y="1999" width="327" height="683"/>
+    <SubTexture name="EddUp0002" x="723" y="1995" width="327" height="683"/>
+    <SubTexture name="EddUp0003" x="787" y="2680" width="327" height="683"/>
+    <SubTexture name="EddUp0004" x="888" y="667" width="327" height="683"/>
+</TextureAtlas>

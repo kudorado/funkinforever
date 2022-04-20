@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:c1adb63f9e685b1ec36bc196f5fdfb30:156c62db64f14613a2b22703ed1339c9:7305c4737cbf1d5d4f7124d8df758bf8$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="Black.png" width="3263" height="2755">
+    <sprite n="Sus idle0000.png" x="1746" y="1" w="838" h="682" pX="0.582339" pY="0.822581"/>
+    <sprite n="Sus idle0001.png" x="895" y="697" w="861" h="688" pX="0.591173" pY="0.827035"/>
+    <sprite n="Sus idle0002.png" x="1" y="1393" w="886" h="692" pX="0.60158" pY="0.825145"/>
+    <sprite n="Sus idle0003.png" x="1" y="1" w="893" h="694" pX="0.608063" pY="0.82853"/>
+    <sprite n="Sus idle0004.png" x="1" y="697" w="892" h="694" pX="0.606502" pY="0.824207"/>
+    <sprite n="Sus idle0005.png" x="889" y="1393" w="880" h="688" pX="0.610227" pY="0.822674"/>
+    <sprite n="Sus idle0006.png" x="896" y="1" w="848" h="686" pX="0.604953" pY="0.8207"/>
+    <sprite n="Sus idle0007.png" x="1758" y="685" w="803" h="678" pX="0.596513" pY="0.820059"/>
+    <sprite n="Sus idle0008.png" x="1771" y="1365" w="765" h="675" pX="0.585621" pY="0.825185"/>
+    <sprite n="Sus idle0009.png" x="1" y="2087" w="728" h="667" pX="0.583791" pY="0.823088"/>
+    <sprite n="Sus idle0010.png" x="731" y="2087" w="704" h="662" pX="0.579545" pY="0.821752"/>
+    <sprite n="Sus idle0011.png" x="2563" y="685" w="699" h="662" pX="0.576538" pY="0.824773"/>
+    <sprite n="Sus idle0012.png" x="2538" y="1365" w="709" h="669" pX="0.569817" pY="0.828102"/>
+    <sprite n="Sus idle0013.png" x="1437" y="2083" w="750" h="671" pX="0.562667" pY="0.821162"/>
+    <sprite n="Sus idle0014.png" x="2189" y="2042" w="799" h="670" pX="0.571965" pY="0.828358"/>
+</TextureAtlas>

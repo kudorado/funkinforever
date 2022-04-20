@@ -1,0 +1,83 @@
+{
+	"song": {
+		"speed": 3.2,
+		"stage": "hi",
+		"player1": "bf",
+		"player2": "bandu",
+		"player3": null,
+		"events": [
+			[
+				73798.0769230769,
+				[
+					[
+						"Play Animation",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				73846.1538461538,
+				[
+					[
+						"Change Character",
+						"dad",
+						"disruption bambi"
+					]
+				]
+			],
+			[
+				73846.1538461538,
+				[
+					[
+						"Change Character",
+						"gf",
+						"bandu"
+					]
+				],
+				null,
+				"GF Sing"
+			],
+			[
+				175548.076923076,
+				[
+					[
+						"Play Animation",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				175589.743589743,
+				[
+					[
+						"Change Character",
+						"dad",
+						"unfairness bambi front facing"
+					]
+				],
+				null,
+				""
+			],
+			[
+				175756.41025641,
+				[
+					[
+						"Change Character",
+						"gf",
+						"gf"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 156,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "AppleCore"
+	}
+}

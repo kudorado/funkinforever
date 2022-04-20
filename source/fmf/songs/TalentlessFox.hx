@@ -15,116 +15,112 @@ import flixel.tweens.FlxTween;
 
 class TalentlessFox extends SongPlayer
 {
-	var cameraTwn:FlxTween;
-	var bg: FlxSprite;
-	override function loadLua()
+
+	override function getGFTex()
 	{
+		var tex = Paths.getSparrowAtlas('psychengine/week_tgt/images/minusGF_ass_sets', 'mods');
+		gf.frames = tex;
+	}
+
+	override function getDadTex()
+	{
+		var tex = Paths.getSparrowAtlas('psychengine/week_tgt/images/tails', 'mods');
+		dad.frames = tex;
 	}
 
 	override function loadMap()
-	{	
-        gameState.defaultCamZoom = 1;
-
-		bg = new FlxSprite(0, 0);
-		bg.frames = Paths.getSparrowAtlas('bg/week_hd/week2/halloween_bg', 'mods');
-		
-		bg.animation.addByPrefix('lightning', 'Halloweem bg lightning strike00', 18, false);
-		bg.animation.addByPrefix('idle', 'Halloweem bg0000', 18, false);
-		bg.animation.play('idle');
+	{
+		gameState.defaultCamZoom = 0.75;
+		var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('psychengine/week_tgt/images/chapter1/images/sky', 'mods'));
 		bg.antialiasing = true;
+		bg.scrollFactor.set(0.9, 0.9);
+		bg.active = false;
+		gameState.add(bg);
 
-		bg.scale.x = 3.6;
-		bg.scale.y = 3.6;
-		
-		bg.x = 236;
-		bg.y = 143;
-
-		if (FlxG.save.data.distractions)
-		{
-			gameState.add(bg);
-		}
-	}
-
-	override function midSongEventUpdate(curBeat:Int):Void
-	{
-		updateBG(curBeat);
-	}
-
-	function updateBG(curBeat:Int)
-	{
-		if (curBeat % 32 == 0)
-		{
-			bg.animation.play('lightning');
-		}
-	}
-
-	function createOverlay()
-	{
-		var stageFront:FlxSprite = new FlxSprite(-400, 569).loadGraphic(Paths.image('bg/week_hd/week2/overlay', 'mods'));
+		var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('psychengine/week_tgt/images/chapter1/images/grass', 'mods'));
+		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+		stageFront.updateHitbox();
 		stageFront.antialiasing = true;
-		stageFront.scale.x = 3;
-		stageFront.scale.y = 3;
+		stageFront.scrollFactor.set(0.9, 0.9);
+		stageFront.active = false;
 		gameState.add(stageFront);
+
+
+		var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('psychengine/week_tgt/images/chapter1/images/foreground', 'mods'));
+		stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+		stageCurtains.updateHitbox();
+		stageCurtains.antialiasing = true;
+		stageCurtains.scrollFactor.set(1.3, 1.3);
+		stageCurtains.active = false;
+
 	}
 
-	override function createCharacters() {
-		super.createCharacters();
-		createOverlay();
+	override function createDadAnimations():Void
+	{
+		var animation = dad.animation;
+
+		animation.addByPrefix('idle', 'idle0', 24, false);
+		animation.addByPrefix('singUP', 'up0', 24, false);
+		animation.addByPrefix('singRIGHT', 'right0', 24, false);
+		animation.addByPrefix('singLEFT', 'left0', 24, false);
+		animation.addByPrefix('singDOWN', 'down0', 24, false);
+
+		dad.animation = animation;
 	}
 
-    private override function getVersion():Character
-    {
-        return new CharacterPE('bf');
-    }
-
-    override function getGFVersion()
-    {
-        return new CharacterPE('gf');
-    }
-
-    override function createStoryBF()
-    { 
-        var newPc = new CharacterPE('bf');
-        changeCharacter(newPc);
-    }
+	override function createDadAnimationOffsets():Void
+	{
+		dad.addOffset('idle', 0, 0);
+		dad.addOffset('singUP', 0, 0);
+		dad.addOffset('singRIGHT', 0, 0);
+		dad.addOffset('singLEFT', 0, 0);
+		dad.addOffset('singDOWN', 0, 0);
+		dad.dance();
+	}
 
 
-    override function getDadVersion()
-    {
-        return new CharacterPE('tails');
-    }
+	override function createStoryBF()
+	{
+		
+	}
+
+
+	override function createGF()
+	{
+		super.createGF();
+		gf.x = 400;
+		gf.y = 200;
+	}
 
 	override function createDad()
 	{
 		super.createDad();
+		dad.x = 2;
+		dad.y = 56;
 	}
+
+	override function createBF()
+	{
+		super.createBF();
+		bf.x = 854;
+		bf.y = 578;
+	}
+
+	override function getVersion()
+	{
+		return new BFTroll();
+	}
+
 
 
 	override function updateCamFollowDad()
 	{
 		super.updateCamFollowDad();
-		gameState.targetCamFollow.x -= 100;
-		gameState.defaultCamZoom = 1;
-
-		gameState.targetCamFollow.y -= 100;
-
-		
-
 	}
 
 	override function updateCamFollowBF()
 	{
 		super.updateCamFollowBF();
-		gameState.targetCamFollow.x += 100;
-		gameState.defaultCamZoom = 1.35;
-		gameState.targetCamFollow.y -= 200;
-
 	}
 
-	public override function getDadIcon(icon:Icon)
-	{
-		icon.loadGraphic(Paths.image('health_icon/week_hd/icons/icon-spooky', 'mods'), true, 150, 150);
-		icon.animation.add('dad', [0, 1], 0, false, false);
-		icon.animation.play("dad");
-	}
 }

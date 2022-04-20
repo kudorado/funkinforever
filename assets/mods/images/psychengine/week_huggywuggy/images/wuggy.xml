@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="wuggy.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="huggyhurty0000" x="0" y="0" width="687" height="668" frameX="-42" frameY="0" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0001" x="687" y="0" width="630" height="645" frameX="-48" frameY="-5" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0002" x="687" y="0" width="630" height="645" frameX="-48" frameY="-5" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0003" x="1317" y="0" width="569" height="618" frameX="-59" frameY="-18" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0004" x="1317" y="0" width="569" height="618" frameX="-59" frameY="-18" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0005" x="1886" y="0" width="542" height="570" frameX="-49" frameY="-39" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0006" x="1886" y="0" width="542" height="570" frameX="-49" frameY="-39" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0007" x="2428" y="0" width="557" height="539" frameX="0" frameY="-60" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0008" x="2428" y="0" width="557" height="539" frameX="0" frameY="-60" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0009" x="2985" y="0" width="457" height="509" frameX="-64" frameY="-77" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0010" x="2985" y="0" width="457" height="509" frameX="-64" frameY="-77" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0011" x="3442" y="0" width="397" height="482" frameX="-87" frameY="-94" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0012" x="3442" y="0" width="397" height="482" frameX="-87" frameY="-94" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0013" x="0" y="668" width="362" height="523" frameX="-87" frameY="-113" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0014" x="0" y="668" width="362" height="523" frameX="-87" frameY="-113" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0015" x="362" y="668" width="449" height="563" frameX="-91" frameY="-127" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0016" x="362" y="668" width="449" height="563" frameX="-91" frameY="-127" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0017" x="811" y="668" width="362" height="523" frameX="-87" frameY="-113" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0018" x="811" y="668" width="362" height="523" frameX="-87" frameY="-113" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0019" x="1173" y="668" width="448" height="575" frameX="-73" frameY="-77" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0020" x="1173" y="668" width="448" height="575" frameX="-73" frameY="-77" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0021" x="1621" y="668" width="542" height="570" frameX="-49" frameY="-39" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0022" x="1621" y="668" width="542" height="570" frameX="-49" frameY="-39" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyhurty0023" x="2163" y="668" width="542" height="570" frameX="-49" frameY="-39" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0000" x="0" y="0" width="687" height="668" frameX="-42" frameY="0" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0001" x="0" y="0" width="687" height="668" frameX="-42" frameY="0" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0002" x="687" y="0" width="630" height="645" frameX="-48" frameY="-5" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0003" x="687" y="0" width="630" height="645" frameX="-48" frameY="-5" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0004" x="1317" y="0" width="569" height="618" frameX="-59" frameY="-18" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0005" x="1317" y="0" width="569" height="618" frameX="-59" frameY="-18" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0006" x="2705" y="668" width="542" height="570" frameX="-49" frameY="-39" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0007" x="2705" y="668" width="542" height="570" frameX="-49" frameY="-39" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0008" x="3247" y="668" width="557" height="538" frameX="0" frameY="-60" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0009" x="3247" y="668" width="557" height="538" frameX="0" frameY="-60" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0010" x="0" y="1243" width="457" height="509" frameX="-64" frameY="-77" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0011" x="0" y="1243" width="457" height="509" frameX="-64" frameY="-77" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0012" x="457" y="1243" width="397" height="481" frameX="-87" frameY="-94" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0013" x="457" y="1243" width="397" height="481" frameX="-87" frameY="-94" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0014" x="854" y="1243" width="362" height="523" frameX="-87" frameY="-113" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0015" x="854" y="1243" width="362" height="523" frameX="-87" frameY="-113" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0016" x="1216" y="1243" width="348" height="563" frameX="-80" frameY="-127" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0017" x="1216" y="1243" width="348" height="563" frameX="-80" frameY="-127" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0018" x="1564" y="1243" width="362" height="522" frameX="-87" frameY="-113" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0019" x="1564" y="1243" width="362" height="522" frameX="-87" frameY="-113" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0020" x="1926" y="1243" width="447" height="574" frameX="-73" frameY="-77" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0021" x="1926" y="1243" width="447" height="574" frameX="-73" frameY="-77" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0022" x="2373" y="1243" width="543" height="570" frameX="-48" frameY="-39" frameWidth="729" frameHeight="690"/>
+	<SubTexture name="huggyruny0023" x="2373" y="1243" width="543" height="570" frameX="-48" frameY="-39" frameWidth="729" frameHeight="690"/>
+</TextureAtlas>
