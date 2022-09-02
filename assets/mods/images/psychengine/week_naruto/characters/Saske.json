@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				-160
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Sasuke Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				150,
+				-432
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Sasuke Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				55,
+				-120
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Sasuke Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				4,
+				-527
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Sasuke Left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				391,
+				-292
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Sasuke Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Saske",
+	"position": [
+		700,
+		-70
+	],
+	"healthicon": "sasuke",
+	"flip_x": false,
+	"healthbar_colors": [
+		32,
+		56,
+		84
+	],
+	"camera_position": [
+		-530,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

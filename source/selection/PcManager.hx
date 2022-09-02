@@ -795,6 +795,9 @@ class PcManager
 			case 'bf ssj':
 				return new BFSSJ(700 + 2100, 425);
 
+			case 'bf 204':
+				return new BF204();
+
 		}
 
 		return new Boyfriend(700, 425); 

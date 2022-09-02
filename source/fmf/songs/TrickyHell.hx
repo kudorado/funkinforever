@@ -70,10 +70,9 @@ class TrickyHell extends TrickyMask
 		dad.addOffset('singDOWN', 70, 10);
 
 		dad.dance();
-
+		
 		dad.scale.x = 4;
 		dad.scale.y = 4;
-
 
 		dad.x = -272;
 		dad.y = 100;

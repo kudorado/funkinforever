@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ink.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ink0000" x="0" y="0" width="1123" height="588" frameX="-22" frameY="-81" frameWidth="1248" frameHeight="669"/>
+	<SubTexture name="ink0001" x="1123" y="0" width="1135" height="560" frameX="0" frameY="-77" frameWidth="1248" frameHeight="669"/>
+	<SubTexture name="ink0002" x="2258" y="0" width="1106" height="563" frameX="-32" frameY="-69" frameWidth="1248" frameHeight="669"/>
+	<SubTexture name="ink0003" x="3364" y="0" width="1143" height="575" frameX="-24" frameY="-65" frameWidth="1248" frameHeight="669"/>
+	<SubTexture name="ink0004" x="0" y="588" width="1139" height="537" frameX="-33" frameY="-102" frameWidth="1248" frameHeight="669"/>
+	<SubTexture name="ink0005" x="1139" y="588" width="1157" height="549" frameX="-25" frameY="-86" frameWidth="1248" frameHeight="669"/>
+	<SubTexture name="ink0006" x="2296" y="588" width="1219" height="637" frameX="-29" frameY="0" frameWidth="1248" frameHeight="669"/>
+	<SubTexture name="ink0007" x="3515" y="588" width="1187" height="596" frameX="-30" frameY="-44" frameWidth="1248" frameHeight="669"/>
+	<SubTexture name="ink0008" x="0" y="1225" width="1144" height="595" frameX="-22" frameY="-56" frameWidth="1248" frameHeight="669"/>
+	<SubTexture name="ink0009" x="1144" y="1225" width="1089" height="553" frameX="-23" frameY="-85" frameWidth="1248" frameHeight="669"/>
+</TextureAtlas>

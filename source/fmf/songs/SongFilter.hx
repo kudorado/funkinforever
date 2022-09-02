@@ -1,4 +1,5 @@
 package fmf.songs;
+import fmf.songs.SongFilterData;
 import reactor.*;
 import ui.*;
 
@@ -71,6 +72,11 @@ class SongFilter
 				replace: 'Sunshine'
 			}
 		),
+
+		new SongFilterData({
+			key: 'Guns[tankman]',
+			replace: 'Guns'
+		}),
 
 		new SongFilterData(
 			{

@@ -1674,6 +1674,8 @@ class GameState extends MusicBeatState
 
 	public static var campaignScore:Int = 0;
 
+
+	public var initCamZoom:Float = 0.85;
 	public var defaultCamZoom:Float = 0.85;
 	public var camZoomShit(get, never):Float;
 
@@ -1828,11 +1830,13 @@ class GameState extends MusicBeatState
 
 		if (CURRENT_SONG == 'thorns')
 			curStage = 'schoolEvil';
-
+		
 
 		initCharacterGroups();
 
 		songPlayer.init();
+		initCamZoom = defaultCamZoom;
+		trace("init cam zoom: " + initCamZoom);
 
 		// no need create dialogue shit in freeplay, yay
 		// if (isStoryMode)
@@ -2872,6 +2876,18 @@ class GameState extends MusicBeatState
 		FlxTween.tween(FlxG.camera, {zoom: 1.3}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
 	}
 
+	var debugCam:Bool;	
+	function camDebug()
+	{
+		if (FlxG.keys.justPressed.O)
+		{
+			debugCam = !debugCam;
+			defaultCamZoom = debugCam ? 0.1 : initCamZoom;
+
+			trace("debug: " + debugCam + ", zoom: " + defaultCamZoom);
+		}
+	}
+
 	override function openSubState(SubState:FlxSubState)
 	{
 		if (paused)
@@ -3376,6 +3392,9 @@ class GameState extends MusicBeatState
 			// 	trace('ES Offset Y: ' + esNoteOffsetY);
 			// }
 		#end
+
+		camDebug();
+
 		super.update(elapsed);
 
 		gfTimer += elapsed;
@@ -3491,6 +3510,11 @@ class GameState extends MusicBeatState
 
 		#if !mobile
 		#if debug
+		if (FlxG.keys.justPressed.SEVEN)
+		{
+			FlxG.switchState(new AnimationState(DAD, true));
+		}
+
 		if (FlxG.keys.justPressed.EIGHT)
 		{
 			FlxG.switchState(new AnimationState(DAD));
@@ -3506,7 +3530,11 @@ class GameState extends MusicBeatState
 			FlxG.switchState(new AnimationState(BF, true));
 		}
 
-		if (FlxG.keys.justPressed.SEVEN)
+		if (FlxG.keys.justPressed.FIVE)
+		{
+			FlxG.switchState(new AnimationState(GF));
+		}
+		if (FlxG.keys.justPressed.SIX)
 		{
 			FlxG.switchState(new AnimationState(GF, true));
 		}

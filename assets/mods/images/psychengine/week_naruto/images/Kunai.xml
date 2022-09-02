@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Kunai.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blue0000" x="0" y="0" width="147" height="193"/>
+	<SubTexture name="blue hold end0000" x="147" y="0" width="54" height="69"/>
+	<SubTexture name="blue hold piece0000" x="201" y="0" width="53" height="47"/>
+	<SubTexture name="green0000" x="254" y="0" width="146" height="193"/>
+	<SubTexture name="green hold end0000" x="400" y="0" width="54" height="68"/>
+	<SubTexture name="green hold piece0000" x="454" y="0" width="53" height="47"/>
+	<SubTexture name="pruple end hold0000" x="0" y="193" width="54" height="68"/>
+	<SubTexture name="purple0000" x="54" y="193" width="193" height="146"/>
+	<SubTexture name="purple hold piece0000" x="454" y="0" width="53" height="47"/>
+	<SubTexture name="red0000" x="247" y="193" width="193" height="146"/>
+	<SubTexture name="red hold end0000" x="0" y="193" width="54" height="68"/>
+	<SubTexture name="red hold piece0000" x="454" y="0" width="53" height="47"/>
+</TextureAtlas>

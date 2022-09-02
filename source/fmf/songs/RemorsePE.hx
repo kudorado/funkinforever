@@ -33,6 +33,7 @@ class RemorsePE extends SongPlayer
 
     override function updateCamFollowBF()
 	{
+		
         super.updateCamFollowBF();
         gameState.defaultCamZoom = 1;
 	}

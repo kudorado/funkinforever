@@ -30,7 +30,7 @@ class SongPlayerManager
 
 	public static function getCurrentSong(songName:String):SongPlayer
 	{
-		var songPlayer:SongPlayer = new TutorialHD();
+		var songPlayer:SongPlayer = new Tutorial();
 
 		switch (songName.toLowerCase())
 		{
@@ -726,7 +726,22 @@ class SongPlayerManager
 
 			case 'remorse[fatman]':
 				songPlayer = new RemorsePE();
+
+			case 'phantasm':
+				songPlayer = new Phantasm();
+
+			case 'fandomania':
+				songPlayer = new Fandomania();
+
+			case 'nine-tails-to-remember'  | 'nine tails to remember':
+				songPlayer = new NineTailsToRemember();
+
+			case 'guns[tankman]':
+				songPlayer = new Guns();
+
 		}
+
+		trace(songPlayer);
 
 		return songPlayer;
 	}

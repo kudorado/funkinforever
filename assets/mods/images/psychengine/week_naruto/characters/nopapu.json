@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				94,
+				7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "boyfriend dodge"
+		},
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "no papu"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/no papu",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bXs",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		210,
+		-90
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

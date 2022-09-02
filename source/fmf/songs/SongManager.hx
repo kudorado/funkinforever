@@ -12,6 +12,39 @@ class SongManager
 
 	static public var songs:Array<SongData> = 
 	[
+
+		new SongData
+		(
+			{
+				folder: 'week7',
+				character: 'week7',
+				songTitle: 'Week7',
+				songList: ['Guns[tankman]']
+			}
+		),
+
+
+		new SongData
+		(
+			{
+				folder: 'week_204',
+				character: '204',
+				songTitle: 'Hotline 204 Medley',
+				songList: ['Fandomania']
+			}
+		),
+
+			
+		new SongData
+		(
+			{
+				folder: 'week_fleetway',
+				character: 'fleetway',
+				songTitle: 'Sonic Vs. Fleetway',
+				songList: ['Phantasm']
+			}
+		),
+
 		
 		new SongData
 		(

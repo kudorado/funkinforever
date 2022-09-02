@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Attack.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="WARNING0000" x="0" y="0" width="592" height="229" frameX="-214" frameY="-238" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0001" x="592" y="0" width="913" height="420" frameX="-97" frameY="-71" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0002" x="1505" y="0" width="1383" height="537" frameX="0" frameY="0" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0003" x="0" y="537" width="1338" height="502" frameX="-64" frameY="-10" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0004" x="1338" y="537" width="1319" height="484" frameX="-302" frameY="-29" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0005" x="2657" y="537" width="1260" height="380" frameX="-353" frameY="-77" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0006" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0007" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0008" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0009" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0010" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0011" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0012" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0013" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0014" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0015" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0016" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0017" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+	<SubTexture name="WARNING0018" x="3917" y="537" width="0" height="0" frameX="-810" frameY="-268" frameWidth="1621" frameHeight="537"/>
+</TextureAtlas>

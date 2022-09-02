@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BFconfused.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF idle dance0000" x="0" y="0" width="364" height="398" frameX="0" frameY="-13" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0001" x="0" y="0" width="364" height="398" frameX="0" frameY="-13" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0002" x="364" y="0" width="363" height="398" frameX="-1" frameY="-13" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0003" x="364" y="0" width="363" height="398" frameX="-1" frameY="-13" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0004" x="727" y="0" width="361" height="400" frameX="-3" frameY="-11" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0005" x="727" y="0" width="361" height="400" frameX="-3" frameY="-11" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0006" x="1088" y="0" width="367" height="411" frameX="-3" frameY="0" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0007" x="1088" y="0" width="367" height="411" frameX="-3" frameY="0" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0008" x="1455" y="0" width="366" height="411" frameX="-3" frameY="0" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0009" x="1455" y="0" width="366" height="411" frameX="-3" frameY="0" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0010" x="1455" y="0" width="366" height="411" frameX="-3" frameY="0" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0011" x="1455" y="0" width="366" height="411" frameX="-3" frameY="0" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0012" x="1455" y="0" width="366" height="411" frameX="-3" frameY="0" frameWidth="370" frameHeight="411"/>
+	<SubTexture name="BF idle dance0013" x="1455" y="0" width="366" height="411" frameX="-3" frameY="0" frameWidth="370" frameHeight="411"/>
+</TextureAtlas>

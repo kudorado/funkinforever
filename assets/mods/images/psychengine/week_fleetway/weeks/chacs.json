@@ -1,0 +1,25 @@
+{
+	"storyName": "inner demons",
+	"hideFreeplay": false,
+	"weekBackground": "bruh",
+	"weekBefore": "",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"himura",
+		""
+	],
+	"songs": [
+		[
+			"phantasm",
+			"fleetway icons",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "chachs"
+}

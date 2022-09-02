@@ -73,7 +73,9 @@ class AnimationState extends FlxState
 			add(dad);
 
 			char = dad;
-			char.flipX = false;
+			char.flipX = flipBF;
+
+			
 		}
 		else if(debugCharacter == BF)
 		{
@@ -105,6 +107,8 @@ class AnimationState extends FlxState
 			gf.screenCenter();
 			add(gf);
 			char = gf;
+			char.flipX = !flipBF;
+
 		}
 
 		dumbTexts = new FlxTypedGroup<FlxText>();

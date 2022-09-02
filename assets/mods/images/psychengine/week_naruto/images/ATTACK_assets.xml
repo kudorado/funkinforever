@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ATTACK_assets.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blue hold end0000" x="4" y="322" width="51" height="64"/>
+	<SubTexture name="blue hold piece0000" x="60" y="322" width="51" height="44"/>
+	<SubTexture name="blue0000" x="4" y="4" width="158" height="154"/>
+	<SubTexture name="green hold end0000" x="4" y="322" width="51" height="64"/>
+	<SubTexture name="green hold piece0000" x="60" y="322" width="51" height="44"/>
+	<SubTexture name="green0000" x="4" y="163" width="157" height="154"/>
+	<SubTexture name="pruple end hold0000" x="4" y="322" width="51" height="64"/>
+	<SubTexture name="purple hold piece0000" x="60" y="322" width="51" height="44"/>
+	<SubTexture name="purple0000" x="166" y="166" width="154" height="157"/>
+	<SubTexture name="red hold end0000" x="4" y="322" width="51" height="64"/>
+	<SubTexture name="red hold piece0000" x="60" y="322" width="51" height="44"/>
+	<SubTexture name="red0000" x="167" y="4" width="154" height="157"/>
+</TextureAtlas>

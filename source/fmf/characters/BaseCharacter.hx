@@ -113,7 +113,7 @@ class BaseCharacter extends FlxSprite
 	function onCreate(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 	}
-	
+
 	public function onUpdate(elapsed:Float)
 	{
 		if (pc())

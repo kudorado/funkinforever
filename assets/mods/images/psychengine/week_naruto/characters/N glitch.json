@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				50,
+				-442
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "N glitch down"
+		},
+		{
+			"offsets": [
+				-45,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "N glitch Up"
+		},
+		{
+			"offsets": [
+				-26,
+				-129
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "N glitch right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				91,
+				-62
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "N glitch left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				7,
+				-253
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "naruto slash"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				7,
+				-160
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "N glitch idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				49,
+				-439
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "alt1"
+		},
+		{
+			"offsets": [
+				120,
+				-60
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "alt2"
+		},
+		{
+			"offsets": [
+				-26,
+				-132
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "alt3"
+		},
+		{
+			"offsets": [
+				-46,
+				1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "alt4"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/N glitch",
+	"position": [
+		-80,
+		-40
+	],
+	"healthicon": "narutoC",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		40,
+		10
+	],
+	"sing_duration": 6.1,
+	"scale": 1.3
+}

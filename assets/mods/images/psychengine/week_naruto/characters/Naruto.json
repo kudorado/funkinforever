@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				7,
+				-160
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Naruto Idle"
+		},
+		{
+			"offsets": [
+				50,
+				-382
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Naruto Down"
+		},
+		{
+			"offsets": [
+				-45,
+				70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Naruto Up"
+		},
+		{
+			"offsets": [
+				-16,
+				-287
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Naruto Right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				61,
+				-2
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Naruto Left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Naruto",
+	"position": [
+		-70,
+		-10
+	],
+	"healthicon": "naruto",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		-20,
+		10
+	],
+	"sing_duration": 6.1,
+	"scale": 1.3
+}
