@@ -67,14 +67,17 @@ class Guns extends SongPlayer
 		dad.addOffset('singUP', 55, 53);
 		dad.addOffset('singRIGHT', 85, -12);
 		dad.addOffset('singLEFT', -28, -25);
-		dad.addOffset('singDOWN', 56, -104);
+		dad.addOffset('singDOWN', 54, -108);
+		dad.addOffset('prettyGood', 0, 0);
+		dad.addOffset('ugh', 0, 0);
+
 		dad.dance();
 	}
 
 	override function loadMap()
 	{
 
-		gameState.defaultCamZoom = 1;
+		gameState.defaultCamZoom = 0.9;
 
 		var subDirectory = "psychengine/week7/";
 
@@ -177,8 +180,8 @@ class Guns extends SongPlayer
 	override function createDad()
 	{
 		super.createDad();
-		dad.x = 78;
-		dad.y = 324;
+		dad.x = 60;
+		dad.y = 296;
 		dad.flipX = !dad.flipX;
 	}
 
@@ -186,8 +189,8 @@ class Guns extends SongPlayer
 	override function createGF()
 	{
 		super.createGF();
-		gf.x = 278;
-		gf.y = 188;
+		gf.x = 314;
+		gf.y = 172;
 	}
 
 	override function createBF()

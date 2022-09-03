@@ -19,7 +19,7 @@ class SongManager
 				folder: 'week7',
 				character: 'week7',
 				songTitle: 'Week7',
-				songList: ['Guns[tankman]']
+				songList: ['Stress','Guns[tankman]']
 			}
 		),
 

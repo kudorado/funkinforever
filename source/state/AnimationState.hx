@@ -161,7 +161,10 @@ class AnimationState extends FlxState
 	override function update(elapsed:Float)
 	{
 		if (char.animation.curAnim == null)
+		{
+			char.dance();
 			return;
+		}
 
 		textAnim.text = char.animation.curAnim.name;
 
