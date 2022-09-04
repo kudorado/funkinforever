@@ -739,6 +739,9 @@ class SongPlayerManager
 			case 'guns[tankman]':
 				songPlayer = new Guns();
 
+			case 'ugh':
+				songPlayer = new Ugh();
+
 			case 'stress':
 				songPlayer = new Stress();
 

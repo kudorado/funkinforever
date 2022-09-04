@@ -69,7 +69,7 @@ class Guns extends SongPlayer
 		dad.addOffset('singLEFT', -28, -25);
 		dad.addOffset('singDOWN', 54, -108);
 		dad.addOffset('prettyGood', 0, 0);
-		dad.addOffset('ugh', 0, 0);
+		dad.addOffset('ugh', -13, -11);
 
 		dad.dance();
 	}
