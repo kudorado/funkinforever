@@ -1,0 +1,289 @@
+{
+	"song": {
+		"speed": 3.3,
+		"stage": "Dbackground",
+		"player1": "pico-player",
+		"player2": "darnelltest",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnellhaha"
+					]
+				]
+			],
+			[
+				750,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnelltest"
+					]
+				]
+			],
+			[
+				2666.66666666667,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnellhaha"
+					]
+				]
+			],
+			[
+				3416.66666666667,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnelltest"
+					]
+				]
+			],
+			[
+				5333.33333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"0.40",
+						""
+					]
+				]
+			],
+			[
+				8000,
+				[
+					[
+						"Add Camera Zoom",
+						"0.40",
+						""
+					]
+				]
+			],
+			[
+				10666.6666666667,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnellhaha"
+					]
+				]
+			],
+			[
+				11416.6666666667,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnelltest"
+					]
+				]
+			],
+			[
+				13333.3333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"0.40",
+						""
+					]
+				]
+			],
+			[
+				13333.3333333333,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnellhaha"
+					]
+				]
+			],
+			[
+				14083.3333333333,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnelltest"
+					]
+				]
+			],
+			[
+				16000,
+				[
+					[
+						"Add Camera Zoom",
+						"0.40",
+						""
+					]
+				]
+			],
+			[
+				18666.6666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"0.40",
+						""
+					]
+				]
+			],
+			[
+				45333.3333333333,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnellhaha"
+					]
+				]
+			],
+			[
+				46083.3333333333,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnelltest"
+					]
+				]
+			],
+			[
+				48000,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnellhaha"
+					]
+				]
+			],
+			[
+				48750,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnelltest"
+					]
+				]
+			],
+			[
+				56000,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnellhaha"
+					]
+				]
+			],
+			[
+				56750,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnelltest"
+					]
+				]
+			],
+			[
+				58666.6666666667,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnellhaha"
+					]
+				]
+			],
+			[
+				59416.6666666667,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnelltest"
+					]
+				]
+			],
+			[
+				64000,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnellhaha"
+					]
+				]
+			],
+			[
+				64750,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnelltest"
+					]
+				]
+			],
+			[
+				98666.6666666666,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnellhaha"
+					]
+				]
+			],
+			[
+				99416.6666666666,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnelltest"
+					]
+				]
+			],
+			[
+				101333.333333333,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnellhaha"
+					]
+				]
+			],
+			[
+				102083.333333333,
+				[
+					[
+						"Change Character",
+						"1",
+						"darnelltest"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "nene",
+		"bpm": 180,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "testsong"
+	}
+}

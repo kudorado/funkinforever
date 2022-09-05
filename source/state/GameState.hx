@@ -95,6 +95,9 @@ class GameState extends MusicBeatState
 	// Lua and Psych engine friends
 	//-------------------------------------------------
 	var debugNum:Int = 0;
+
+	public var blammedLightDuration:Float = 1;
+	
 	private var noteTypeMap:Map<String, Bool> = new Map<String, Bool>();
 	private var eventPushedMap:Map<String, Bool> = new Map<String, Bool>();
 
@@ -105,7 +108,115 @@ class GameState extends MusicBeatState
 		return FlxSort.byValues(FlxSort.ASCENDING, Obj1[0] - earlyTime1, Obj2[0] - earlyTime2);
 	}
 
-	function lightsEvent(value1:String)
+
+	public function lightOff(value1:String)
+	{
+		if (blammedLightsBlack.alpha != 0)
+		{
+			if (blammedLightsBlackTween != null)
+			{
+				blammedLightsBlackTween.cancel();
+			}
+			blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 0}, blammedLightDuration, {
+				ease: FlxEase.quadInOut,
+				onComplete: function(twn:FlxTween)
+				{
+					blammedLightsBlackTween = null;
+				}
+			});
+		}
+
+		var chars:Array<Character> = [dadPE, gfPE, bfPE, player3, bfFE(), dadFE(), gfFE()];
+		for (i in 0...chars.length)
+		{
+			if (chars[i] == null)
+				continue;
+
+			if (chars[i].colorTween != null)
+			{
+				chars[i].colorTween.cancel();
+			}
+			chars[i].colorTween = FlxTween.color(chars[i], blammedLightDuration, chars[i].color, FlxColor.WHITE, {
+				onComplete: function(twn:FlxTween)
+				{
+					chars[i].colorTween = null;
+				},
+				ease: FlxEase.quadInOut
+			});
+		}
+
+		curLight = 0;
+		curLightEvent = 0;
+	}
+
+
+
+	public function lightOn(value1:String)
+	{
+		var lightId:Int = Std.parseInt(value1);
+		if (Math.isNaN(lightId))
+			lightId = 0;
+
+		if (lightId > 0)
+		{
+			if (lightId > 5)
+				lightId = FlxG.random.int(1, 5, [curLightEvent]);
+
+			var color:Int = 0xffffffff;
+			switch (lightId)
+			{
+				case 1: // Blue
+					color = 0xff31a2fd;
+				case 2: // Green
+					color = 0xff31fd8c;
+				case 3: // Pink
+					color = 0xfff794f7;
+				case 4: // Red
+					color = 0xfff96d63;
+				case 5: // Orange
+					color = 0xfffba633;
+			}
+			curLightEvent = lightId;
+
+			if (blammedLightsBlack.alpha == 0)
+			{
+				if (blammedLightsBlackTween != null)
+				{
+					blammedLightsBlackTween.cancel();
+				}
+
+				blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 1}, blammedLightDuration, {
+					ease: FlxEase.quadInOut,
+					onComplete: function(twn:FlxTween)
+					{
+						blammedLightsBlackTween = null;
+					}
+				});
+
+				var chars:Array<Character> = [dadPE, gfPE, player3, bfPE, bfFE(), dadFE(), gfFE()];
+
+				for (i in 0...chars.length)
+				{
+					if (chars[i] == null)
+						continue;
+
+					if (chars[i].colorTween != null)
+					{
+						chars[i].colorTween.cancel();
+					}
+					chars[i].colorTween = FlxTween.color(chars[i], blammedLightDuration, FlxColor.WHITE, color, {
+						onComplete: function(twn:FlxTween)
+						{
+							chars[i].colorTween = null;
+						},
+						ease: FlxEase.quadInOut
+					});
+				}
+			}
+		}
+	}
+
+	public function lightsEvent(value1:String)
 	{
 		var lightId:Int = Std.parseInt(value1);
 		if(Math.isNaN(lightId)) lightId = 0;
@@ -134,7 +245,8 @@ class GameState extends MusicBeatState
 				{
 					blammedLightsBlackTween.cancel();
 				}
-				blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 1}, 1, {
+
+				blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 1}, blammedLightDuration, {
 					ease: FlxEase.quadInOut,
 					onComplete: function(twn:FlxTween)
 					{
@@ -153,7 +265,7 @@ class GameState extends MusicBeatState
 						{
 							chars[i].colorTween.cancel();
 						}
-						chars[i].colorTween = FlxTween.color(chars[i], 1, FlxColor.WHITE, color, {
+						chars[i].colorTween = FlxTween.color(chars[i], blammedLightDuration, FlxColor.WHITE, color, {
 							onComplete: function(twn:FlxTween)
 							{
 								chars[i].colorTween = null;
@@ -219,7 +331,7 @@ class GameState extends MusicBeatState
 				{
 					blammedLightsBlackTween.cancel();
 				}
-				blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 0}, 1, {
+				blammedLightsBlackTween = FlxTween.tween(blammedLightsBlack, {alpha: 0}, blammedLightDuration, {
 					ease: FlxEase.quadInOut,
 					onComplete: function(twn:FlxTween)
 					{
@@ -259,7 +371,7 @@ class GameState extends MusicBeatState
 				{
 					chars[i].colorTween.cancel();
 				}
-				chars[i].colorTween = FlxTween.color(chars[i], 1, chars[i].color, FlxColor.WHITE, {onComplete: function(twn:FlxTween) {
+				chars[i].colorTween = FlxTween.color(chars[i], blammedLightDuration, chars[i].color, FlxColor.WHITE, {onComplete: function(twn:FlxTween) {
 					chars[i].colorTween = null;
 				}, ease: FlxEase.quadInOut});
 			}

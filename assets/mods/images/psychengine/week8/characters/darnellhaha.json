@@ -1,0 +1,64 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "darnell haha",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-7,
+				0
+			],
+			"indices": [
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"fps": 1,
+			"anim": "idle",
+			"loop": false,
+			"name": "darnell haha"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/darnellhaha",
+	"position": [
+		-10,
+		310
+	],
+	"healthicon": "icon_darnell",
+	"flip_x": false,
+	"healthbar_colors": [
+		135,
+		75,
+		235
+	],
+	"camera_position": [
+		60,
+		-10
+	],
+	"sing_duration": 2.5,
+	"scale": 1
+}

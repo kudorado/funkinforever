@@ -745,6 +745,9 @@ class SongPlayerManager
 			case 'stress':
 				songPlayer = new Stress();
 
+			case '2hot':
+				songPlayer = new TooHot();
+
 		}
 
 		trace(songPlayer);

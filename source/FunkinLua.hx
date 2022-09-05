@@ -1836,7 +1836,7 @@ class FunkinLua {
 			var conv:Dynamic = Convert.fromLua(lua, result);
 			return conv;
 		}
-		#end
+		#end	
 		return Function_Continue;
 	}
 
@@ -1941,11 +1941,11 @@ class FunkinLua {
 	{
 		var shit:ModchartSprite = GameState.instance.modchartSprites.get(tag);
 		if (!shit.wasAdded)
-	{
+		{
 			if (front || !GameState.songPlayer.mapLoaded)
 			{
 				getInstance().add(shit);
-				trace("Add luaSprite: " + tag);
+				// trace("Add luaSprite: " + tag);
 			}
 			else
 			{

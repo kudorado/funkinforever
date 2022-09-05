@@ -1,0 +1,9 @@
+{
+	"directory": "Dbackground",
+	"defaultZoom": 1.0,
+	"isPixelStage": false,
+
+	"boyfriend": [380, 10],
+	"girlfriend": [220, 30],
+	"opponent": [-270, -70]
+}

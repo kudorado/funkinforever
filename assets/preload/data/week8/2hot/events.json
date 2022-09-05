@@ -1,0 +1,29 @@
+{
+	"song": {
+		"speed": 4,
+		"stage": "Dbackground",
+		"player1": "pico",
+		"player2": "darnelltest",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Add Camera Zoom",
+						"0.50",
+						"0.10"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "nene",
+		"bpm": 182,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "2HOT"
+	}
+}

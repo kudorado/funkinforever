@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="darnell.png"><SubTexture name="darnell haha0000" x="384" y="486" width="389" height="479" frameX="0" frameY="-6" frameWidth="389" frameHeight="487" />
+<SubTexture name="darnell haha0001" x="768" y="0" width="384" height="484" frameX="-2" frameY="-2" frameWidth="389" frameHeight="487" />
+<SubTexture name="darnell haha0002" x="0" y="486" width="384" height="484" frameX="-2" frameY="-2" frameWidth="389" frameHeight="487" />
+<SubTexture name="darnell haha0003" x="0" y="0" width="384" height="486" frameX="-2" frameY="0" frameWidth="389" frameHeight="487" />
+<SubTexture name="darnell haha0004" x="384" y="0" width="384" height="486" frameX="-2" frameY="0" frameWidth="389" frameHeight="487" />
+</TextureAtlas>

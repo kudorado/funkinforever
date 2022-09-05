@@ -1,0 +1,50 @@
+{
+	"storyName": "darnell",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "darnell",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"darnell",
+			"icon_darnell",
+			[
+				146,
+				13,
+				255
+			]
+		],
+		[
+			"lit-up",
+			"icon_darnell",
+			[
+				146,
+				13,
+				215
+			]
+		],
+		[
+			"2hot",
+			"icon_darnell",
+			[
+				146,
+				13,
+				195
+			]
+		]
+	],
+	"weekCharacters": [
+		"menu_darnell",
+		"menu_nene",
+		"menu_pico"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
+}

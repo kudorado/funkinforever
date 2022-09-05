@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="nene.png"><SubTexture name="nene normal0000" x="0" y="0" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0001" x="811" y="0" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0002" x="0" y="668" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0003" x="811" y="668" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0004" x="814" y="3335" width="811" height="651" frameX="-3" frameY="-18" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0005" x="1625" y="3335" width="811" height="651" frameX="-3" frameY="-18" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0006" x="2436" y="3335" width="814" height="651" frameX="0" frameY="-19" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0007" x="4055" y="0" width="814" height="651" frameX="0" frameY="-19" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0008" x="0" y="3335" width="814" height="652" frameX="0" frameY="-18" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0009" x="4055" y="651" width="811" height="651" frameX="-3" frameY="-18" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0010" x="2439" y="2672" width="811" height="654" frameX="-3" frameY="-15" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0011" x="811" y="2004" width="811" height="667" frameX="-3" frameY="-2" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0012" x="1622" y="2004" width="811" height="667" frameX="-3" frameY="-2" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0013" x="2433" y="2004" width="811" height="667" frameX="-3" frameY="-2" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0014" x="1622" y="0" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0015" x="1622" y="668" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0016" x="0" y="1336" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0017" x="811" y="1336" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0018" x="1622" y="1336" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0019" x="1628" y="2672" width="811" height="661" frameX="-3" frameY="-8" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0020" x="814" y="2672" width="814" height="662" frameX="0" frameY="-8" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0021" x="0" y="2672" width="814" height="663" frameX="0" frameY="-7" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0022" x="3244" y="1991" width="811" height="662" frameX="-3" frameY="-7" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0023" x="3244" y="665" width="811" height="663" frameX="-3" frameY="-6" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0024" x="3244" y="1328" width="811" height="663" frameX="-3" frameY="-6" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0025" x="3244" y="0" width="811" height="665" frameX="-3" frameY="-4" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0026" x="2433" y="0" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0027" x="2433" y="668" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0028" x="2433" y="1336" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+<SubTexture name="nene normal0029" x="0" y="2004" width="811" height="668" frameX="-3" frameY="-1" frameWidth="815" frameHeight="670" />
+</TextureAtlas>
