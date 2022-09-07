@@ -3899,7 +3899,7 @@
 		"player3": null,
 		"song": "5UREFIRE",
 		"stage": "Dbackground",
-		"needsVoices": true,
+		"needsVoices": false,
 		"validScore": true,
 		"arrowSkin": "",
 		"bpm": 160,

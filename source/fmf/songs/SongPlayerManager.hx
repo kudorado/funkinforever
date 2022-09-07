@@ -748,6 +748,14 @@ class SongPlayerManager
 			case '2hot':
 				songPlayer = new TooHot();
 
+			case '5urefire':
+				songPlayer = new TooHot();
+			
+			case 'darnell':
+				songPlayer = new TooHot();
+
+			case 'lit-up' | 'lit up':
+				songPlayer = new TooHot();
 		}
 
 		trace(songPlayer);

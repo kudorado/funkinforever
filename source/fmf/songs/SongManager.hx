@@ -20,7 +20,7 @@ class SongManager
 				folder: 'week8',
 				character: 'week8',
 				songTitle: 'Week8',
-				songList: ['2Hot']
+				songList: ['darnell', 'lit-up', '2Hot', '5urefire']
 			}
 		),
 
@@ -31,7 +31,7 @@ class SongManager
 				folder: 'week7',
 				character: 'week7',
 				songTitle: 'Week7',
-				songList: ['Ugh', 'Stress','Guns[tankman]']
+				songList: ['Guns[tankman]', 'Ugh', 'Stress']
 			}
 		),
 
