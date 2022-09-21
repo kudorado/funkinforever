@@ -1,0 +1,5 @@
+Simple Camera Fade made in Psych Engine.
+(AFAIK you cant get rid of it so try mainly using it at the end of a song)
+
+Value 1: Duration to fade (in seconds).
+Value 2: Color in hex (Example: 9DCFED)

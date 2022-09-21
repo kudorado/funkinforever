@@ -756,6 +756,9 @@ class SongPlayerManager
 
 			case 'lit-up' | 'lit up':
 				songPlayer = new TooHot();
+
+			case 'sansational':
+				songPlayer = new Sansational();
 		}
 
 		trace(songPlayer);

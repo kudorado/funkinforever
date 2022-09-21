@@ -5741,7 +5741,11 @@ class GameState extends MusicBeatState
 		if (dadFE() != null && dadFE().visible)
 		{
 			if (dadFE().animation.getByName(anim) == null)
+			{
+				//dance instead 
+				dadFE().dance();
 				return;
+			}
 		
 			var d = dadFE().animation.getByName(anim);
 			var fps = d.frameRate;

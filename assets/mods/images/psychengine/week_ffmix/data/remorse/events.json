@@ -1,0 +1,204 @@
+{
+	"song": {
+		"speed": 2.5,
+		"stage": "You'reMomHouselol",
+		"player1": "beef",
+		"player2": "eep",
+		"player3": null,
+		"events": [
+			[
+				16500,
+				[
+					[
+						"Change Character",
+						"1",
+						"up"
+					],
+					[
+						"Change Character",
+						"BF",
+						"bofe"
+					],
+					[
+						"Change Character",
+						"2",
+						"girp"
+					],
+					[
+						"Play Animation",
+						"normal",
+						""
+					]
+				]
+			],
+			[
+				96000,
+				[
+					[
+						"Change Scroll Speed",
+						"1.3",
+						"0.1"
+					]
+				]
+			],
+			[
+				111988.28125,
+				[
+					[
+						"Flash Event",
+						"2",
+						"ffffff"
+					]
+				]
+			],
+			[
+				112000,
+				[
+					[
+						"Change Scroll Speed",
+						"0.8",
+						"0.1"
+					],
+					[
+						"Change Character",
+						"1",
+						"fuck-you"
+					],
+					[
+						"Change Character",
+						"BF",
+						"bofe-cool"
+					],
+					[
+						"Change Character",
+						"2",
+						"girp-swag"
+					],
+					[
+						"Play Animation",
+						"black",
+						""
+					]
+				]
+			],
+			[
+				127250,
+				[
+					[
+						"Change Scroll Speed",
+						"1.1",
+						"0.1"
+					]
+				]
+			],
+			[
+				128000,
+				[
+					[
+						"Change Character",
+						"BF",
+						"efob"
+					]
+				]
+			],
+			[
+				136000,
+				[
+					[
+						"Change Character",
+						"BF",
+						"bofe-cool"
+					],
+					[
+						"Change Character",
+						"1",
+						"pu"
+					]
+				]
+			],
+			[
+				143250,
+				[
+					[
+						"Change Scroll Speed",
+						"1.1",
+						"0.1"
+					]
+				]
+			],
+			[
+				143875,
+				[
+					[
+						"Flash Event",
+						"1",
+						"ffffff"
+					]
+				]
+			],
+			[
+				144000,
+				[
+					[
+						"Change Character",
+						"2",
+						"girp"
+					],
+					[
+						"Change Character",
+						"BF",
+						"bofe"
+					],
+					[
+						"Change Character",
+						"1",
+						"up"
+					],
+					[
+						"Play Animation",
+						"normal",
+						""
+					]
+				]
+			],
+			[
+				175875,
+				[
+					[
+						"Change Scroll Speed",
+						"1",
+						"0.1"
+					]
+				]
+			],
+			[
+				184500,
+				[
+					[
+						"Change Scroll Speed",
+						"0.6",
+						"2"
+					]
+				]
+			],
+			[
+				192375,
+				[
+					[
+						"Fade Event",
+						"1",
+						"000000"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "geef",
+		"bpm": 120,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "remorse"
+	}
+}
