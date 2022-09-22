@@ -2296,6 +2296,7 @@ class GameState extends MusicBeatState
 		AdMob.hideBanner();
 
 		createBlackFadeOut();
+		defaultHUDZoom = camHUD.zoom;
 
 		if (es)
 		{
@@ -2326,6 +2327,8 @@ class GameState extends MusicBeatState
 	static public var esNoteScale:Float = 0.5;
 	public var esNoteOffsetX:Int = -13;
 	public var esNoteOffsetY:Int = -1;
+
+	var defaultHUDZoom:Float;
 
 	var mcontrolsArray:Array<FlxSprite>;
 
@@ -3659,6 +3662,7 @@ class GameState extends MusicBeatState
 		if (camZooming)
 		{
 			camGame.zoom = FlxMath.lerp(camZoomShit, camGame.zoom, 0.95);
+			camHUD.zoom = FlxMath.lerp(defaultHUDZoom, camHUD.zoom, 0.95);
 		}
 
 		FlxG.watch.addQuick("beatShit", curBeat);
@@ -5665,7 +5669,7 @@ class GameState extends MusicBeatState
 		if (camZooming && camGame.zoom < 1.25 && curBeat % 4 == 0)
 		{
 			camGame.zoom += 0.0075;
-			// camHUD.zoom += 0.015;
+			camHUD.zoom += 0.015;
 			songPlayer.playBeatEvent();
 		}
 
@@ -5677,12 +5681,12 @@ class GameState extends MusicBeatState
 
 		// if (playAsDad)
 		// {
-		if (!dadFE().animation.curAnim.name.startsWith("idle") && dadFE().animation.curAnim.finished)
+		if (!dadFE().animation.curAnim.name.startsWith("idle") && dadFE().animation.curAnim.curFrame >= (dadFE().animation.curAnim.frames.length / 2))
 		{
 			playAnimAllDad('idle');
 		}
 
-		if (!bfFE().animation.curAnim.name.startsWith("idle") && bfFE().animation.curAnim.finished)
+		if (!bfFE().animation.curAnim.name.startsWith("idle") && bfFE().animation.curAnim.curFrame >= (bfFE().animation.curAnim.frames.length / 2))
 		{
 			playAnimAllBF('idle');
 		}

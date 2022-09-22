@@ -364,7 +364,7 @@ class BaseCharacter extends FlxSprite
 		else
 			holdTimer = 0;
 
-		if (animation.curAnim.name.endsWith('miss') && animation.curAnim.finished && !debugMode)
+		if (animation.curAnim.name.endsWith('miss') && (animation.curAnim.curFrame >= (animation.curAnim.frames.length / 2)) && !debugMode)
 		{
 			playAnim('idle'); // , true, false, 10);
 		}

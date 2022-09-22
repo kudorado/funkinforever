@@ -119,6 +119,8 @@ class AnimationState extends FlxState
 		textAnim.scrollFactor.set();
 		add(textAnim);
 
+		trace(char.animOffsets);
+
 		genBoyOffsets();
 
 		camFollow = new FlxObject(0, 0, 2, 2);

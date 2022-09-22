@@ -759,6 +759,13 @@ class SongPlayerManager
 
 			case 'sansational':
 				songPlayer = new Sansational();
+
+			case 'remorse[ffmix]':
+				songPlayer = new RemorseFF();
+
+			case 'talentless-fox[ffmix]':
+				songPlayer = new TalentlessFoxFF();
+
 		}
 
 		trace(songPlayer);

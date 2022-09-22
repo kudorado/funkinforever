@@ -13,7 +13,6 @@ import MenuCharacter.CharacterSetting;
 
 class Fandomania extends SongPlayer
 {	
-
 	override function getGFTex()
 	{
 		var tex = Paths.getSparrowAtlas('psychengine/week_204/images/characters/GF_assets', 'mods');

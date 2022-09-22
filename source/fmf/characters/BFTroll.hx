@@ -37,15 +37,15 @@ class BFTroll extends Boyfriend
 	public override function createAnimationOffsets():Void
 	{
 		addOffset('idle', -6, -6);
-		addOffset('singUP', -53, 22);
-		addOffset('singRIGHT', -46, -5);
-		addOffset('singLEFT', 6, -5);
+		addOffset('singUP', -104, 29);
+		addOffset('singRIGHT', -51, -11);
+		addOffset('singLEFT', 7, -16);
 		addOffset('singDOWN', -10, -57);
 
-		addOffset('singUPmiss', -40, 15);
-		addOffset('singRIGHTmiss', -40, 15);
-		addOffset('singLEFTmiss', 4, 17);
-		addOffset('singDOWNmiss', -10, -25);
+		addOffset('singUPmiss', -20, 75);
+		addOffset('singRIGHTmiss', -46, 32);
+		addOffset('singLEFTmiss', 6, 20);
+		addOffset('singDOWNmiss', -20, -21);
 		playAnim('idle');
 
 	}

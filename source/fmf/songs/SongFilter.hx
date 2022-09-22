@@ -34,6 +34,11 @@ class SongFilter
 			}
 		),
 
+		new SongFilterData	
+		({
+			key: '[ffmix]',
+			replace: ''
+		}),
 
 		new SongFilterData	
 		(
