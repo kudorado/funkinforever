@@ -17,466 +17,466 @@ class PcManager
 			cost: 0
 		}),
 		
-		new PcData
-		({
-			name: 'pico',
-			cost: 0
-		}),
+		// new PcData
+		// ({
+		// 	name: 'pico',
+		// 	cost: 0
+		// }),
 
-		new PcData
-		({
-			name: 'spooky',
-			cost: 0
-		}),
+		// new PcData
+		// ({
+		// 	name: 'spooky',
+		// 	cost: 0
+		// }),
 		
-		new PcData
-		({
-			name: 'mom',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'mom',
+		// 	cost: 1
+		// }),
 		
-		new PcData
-		({
-			name: 'dad',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'dad',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'little man',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'little man',
+		// 	cost: 1
+		// }),
 		
-		new PcData
-		({
-			name: 'iimarky',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'iimarky',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'kaique',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'kaique',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'garcello',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'garcello',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'garcello tired',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'garcello tired',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'garcello dead',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'garcello dead',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'garcello ghosty',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'garcello ghosty',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'tricky mask',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'tricky mask',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'tricky', 
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'tricky', 
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'tricky hell',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'tricky hell',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'tricky ex',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'tricky ex',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'tricky ben',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'tricky ben',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'agoti',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'agoti',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'agoti crazy',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'agoti crazy',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'whitty',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'whitty',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'whitty crazy',
-			cost: 1
-		}),
-
-
-		new PcData
-		({
-			name: 'gs boyfriend',
-			cost: 1
-		}),
-
-		new PcData
-		({
-			name: 'kaity',
-			cost: 1
-		}),
-
-		new PcData
-		({
-			name: 'gs pico',
-			cost: 1
-		}),
-
-		new PcData
-		({
-			name: 'dad angel',
-			cost: 1
-		}),
-
-		new PcData
-		({
-			name: 'mom angel',
-			cost: 1
-		}),
-
-		new PcData
-		({
-			name: 'corrupted lemon',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'whitty crazy',
+		// 	cost: 1
+		// }),
 
 
-		new PcData
-		({
-			name: 'mom christmas',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'gs boyfriend',
+		// 	cost: 1
+		// }),
+
+		// new PcData
+		// ({
+		// 	name: 'kaity',
+		// 	cost: 1
+		// }),
+
+		// new PcData
+		// ({
+		// 	name: 'gs pico',
+		// 	cost: 1
+		// }),
+
+		// new PcData
+		// ({
+		// 	name: 'dad angel',
+		// 	cost: 1
+		// }),
+
+		// new PcData
+		// ({
+		// 	name: 'mom angel',
+		// 	cost: 1
+		// }),
+
+		// new PcData
+		// ({
+		// 	name: 'corrupted lemon',
+		// 	cost: 1
+		// }),
+
+
+		// new PcData
+		// ({
+		// 	name: 'mom christmas',
+		// 	cost: 1
+		// }),
 		
-		new PcData
-		({
-			name: 'dad christmas',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'dad christmas',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'tabi',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'tabi',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'tabi mad',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'tabi mad',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'sarvente',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'sarvente',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'ruv',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'ruv',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'luci sarv',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'luci sarv',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'selever',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'selever',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'playable gf',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'playable gf',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'mad gf',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'mad gf',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'ex gf',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'ex gf',
+		// 	cost: 1
+		// }),
 
 		
-		new PcData
-		({
-			name: 'nene',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'nene',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'liz',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'liz',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'tankman',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'tankman',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'annie',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'annie',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'drunk annie',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'drunk annie',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'tom',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'tom',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'tord',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'tord',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'miku',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'miku',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'miku mad',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'miku mad',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'sky',
-			cost: 1
-		}),
-
-
-		new PcData
-		({
-			name: 'sky tired',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'sky',
+		// 	cost: 1
+		// }),
 
 
-		new PcData
-		({
-			name: 'sky angry',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'sky tired',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'sky mad',
-			cost: 1
-		}),
 
-		new PcData
-		({
-			name: 'monika',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'sky angry',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'hd senpai',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'sky mad',
+		// 	cost: 1
+		// }),
+
+		// new PcData
+		// ({
+		// 	name: 'monika',
+		// 	cost: 1
+		// }),
+
+		// new PcData
+		// ({
+		// 	name: 'hd senpai',
+		// 	cost: 1
+		// }),
 		
-		new PcData
-		({
-			name: 'senpai ghosty',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'senpai ghosty',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'common',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'common',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'tired',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'tired',
+		// 	cost: 1
+		// }),
 
-		new PcData({
-			name: 'angry',
-			cost: 1
-		}),
+		// new PcData({
+		// 	name: 'angry',
+		// 	cost: 1
+		// }),
 
-		new PcData({
-			name: 'mad',
-			cost: 1
-		}),
+		// new PcData({
+		// 	name: 'mad',
+		// 	cost: 1
+		// }),
 
-		new PcData({
-			name: 'nonsense',
-			cost: 1
-		}),
+		// new PcData({
+		// 	name: 'nonsense',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'carol',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'carol',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'sunday',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'sunday',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'gura amelia',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'gura amelia',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'botan',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'botan',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'pompom',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'pompom',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'roro',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'roro',
+		// 	cost: 1
+		// }),
 
 				
-		new PcData
-		({
-			name: 'anchor',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'anchor',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'kapi',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'kapi',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'hex',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'hex',
+		// 	cost: 1
+		// }),
 		
-		new PcData
-		({
-			name: 'blantad',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'blantad',
+		// 	cost: 1
+		// }),
 		
-		new PcData
-		({
-			name: 'lila',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'lila',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'brother',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'brother',
+		// 	cost: 1
+		// }),
 
-		new PcData
-		({
-			name: 'monster',
-			cost: 1
-		}),
-
-
-		new PcData
-		({
-			name: 'frisk',
-			cost: 1
-		}),
-
-		new PcData
-		({
-			name: 'matt',
-			cost: 1
-		}),
-
-		new PcData
-		({
-			name: 'chara',
-			cost: 1
-		}),
-
-		new PcData
-		({
-			name: 'sans',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'monster',
+		// 	cost: 1
+		// }),
 
 
-		new PcData
-		({
-			name: 'bf pibby',
-			cost: 1
-		}),
+		// new PcData
+		// ({
+		// 	name: 'frisk',
+		// 	cost: 1
+		// }),
+
+		// new PcData
+		// ({
+		// 	name: 'matt',
+		// 	cost: 1
+		// }),
+
+		// new PcData
+		// ({
+		// 	name: 'chara',
+		// 	cost: 1
+		// }),
+
+		// new PcData
+		// ({
+		// 	name: 'sans',
+		// 	cost: 1
+		// }),
+
+
+		// new PcData
+		// ({
+		// 	name: 'bf pibby',
+		// 	cost: 1
+		// }),
 
 
 

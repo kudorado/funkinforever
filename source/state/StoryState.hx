@@ -52,7 +52,7 @@ class StoryState extends MusicBeatState
 	];
 
 
-	public static var curDifficulty:Int = 0;
+	public static var curDifficulty:Int = 1;
 
 	public static var weekUnlocked:Array<Bool> = 
 	[
@@ -415,9 +415,8 @@ class StoryState extends MusicBeatState
 			else
 			{
 				//reset diff
-				curDifficulty = 0;
+				curDifficulty = 1;
 				GameState.storyCompleted = false;
-
 				trace('Continue story: ' + SongManager.songs[curWeek].songTitle);
 			}
 			
@@ -690,7 +689,7 @@ class StoryState extends MusicBeatState
 	function isUnlocked():Bool
 	{
 		return (curWeek + 1 >= weekUnlocked.length && FlxG.save.data.unlockedAllWeekShit)
-			|| (weekUnlocked[curWeek + 1]);
+			|| (weekUnlocked[curWeek]);
 	}
 	
 

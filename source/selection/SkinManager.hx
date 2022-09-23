@@ -62,197 +62,191 @@ class SkinManager
 			name: 'agoti',
 			cost: 5
 		}),
+		// new SkinData
+		// ({
+		// 	name: 'aberration',
+		// 	cost: 3
+		// }),
+
+		// new SkinData
+		// ({
+		// 	name: 'circle_classic',
+		// 	cost: 5
+		// }),
+
+		// new SkinData
+		// ({
+		// 	name: 'circle',
+		// 	cost: 5
+		// }),
 	
+		// new SkinData
+		// ({
+		// 	name: 'dark',
+		// 	cost: 5
+		// }),
+		// new SkinData
+		// ({
+		// 	name: 'freezing',
+		// 	cost: 3
+		// }),
 
-		new SkinData
-		({
-			name: 'aberration',
-			cost: 3
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'glow_splash',
+		// 	cost: 5
+		// }),
+		// new SkinData
+		// ({
+		// 	name: 'hellbeats',
+		// 	cost: 3
+		// }),
 
-		new SkinData
-		({
-			name: 'circle_classic',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'low_contrast',
+		// 	cost: 5
+		// }),
 
-		new SkinData
-		({
-			name: 'circle',
-			cost: 5
-		}),
-	
-		new SkinData
-		({
-			name: 'dark',
-			cost: 5
-		}),
-		new SkinData
-		({
-			name: 'freezing',
-			cost: 3
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'shadow',
+		// 	cost: 5
+		// }),
 
-		new SkinData
-		({
-			name: 'glow_splash',
-			cost: 5
-		}),
-		new SkinData
-		({
-			name: 'hellbeats',
-			cost: 3
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'shinning_metal',
+		// 	cost: 5
+		// }),
 
-		new SkinData
-		({
-			name: 'low_contrast',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'synthwave',
+		// 	cost: 5
+		// }),
+		// new SkinData
+		// ({
+		// 	name: 'transparent',
+		// 	cost: 3
+		// }),
 
-		new SkinData
-		({
-			name: 'shadow',
-			cost: 5
-		}),
-
-		new SkinData
-		({
-			name: 'shinning_metal',
-			cost: 5
-		}),
-
-		new SkinData
-		({
-			name: 'synthwave',
-			cost: 5
-		}),
-		new SkinData
-		({
-			name: 'transparent',
-			cost: 3
-		}),
-
-		new SkinData
-		({
-			name: 'triangle',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'triangle',
+		// 	cost: 5
+		// }),
 		
-		new SkinData
-		({
-			name: 'variant',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'variant',
+		// 	cost: 5
+		// }),
 
-		new SkinData
-		({
-			name: 'blood',
-			cost: 5
-		}),
-		new SkinData
-		({
-			name: 'bob',
-			cost: 3
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'blood',
+		// 	cost: 5
+		// }),
+		// new SkinData
+		// ({
+		// 	name: 'bob',
+		// 	cost: 3
+		// }),
 
-		new SkinData
-		({
-			name: 'bobonslaught',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'bobonslaught',
+		// 	cost: 5
+		// }),
 		
-		new SkinData
-		({
-			name: 'chasm',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'chasm',
+		// 	cost: 5
+		// }),
 		
-		new SkinData
-		({
-			name: 'garcello',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'garcello',
+		// 	cost: 5
+		// }),
 		
-		new SkinData
-		({
-			name: 'grunt',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'grunt',
+		// 	cost: 5
+		// }),
 		
-		new SkinData
-		({
-			name: 'hellfire',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'hellfire',
+		// 	cost: 5
+		// }),
 		
-		new SkinData({
-			name: 'matt',
-			cost: 5
-		}),
+		// new SkinData({
+		// 	name: 'matt',
+		// 	cost: 5
+		// }),
 
-		new SkinData({
-			name: 'ron',
-			cost: 5
-		}),
+		// new SkinData({
+		// 	name: 'ron',
+		// 	cost: 5
+		// }),
 
-		new SkinData({
-			name: 'whitty',
-			cost: 5
-		}),
+		// new SkinData({
+		// 	name: 'whitty',
+		// 	cost: 5
+		// }),
 		
-		new SkinData
-		({
-			name: 'whitty_crazy',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'whitty_crazy',
+		// 	cost: 5
+		// }),
 		
-		new SkinData
-		({
-			name: 'ng',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'ng',
+		// 	cost: 5
+		// }),
 
-		new SkinData
-		({
-			name: 'sadness',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'sadness',
+		// 	cost: 5
+		// }),
 			
-		new SkinData
-		({
-			name: 'little smol',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'little smol',
+		// 	cost: 5
+		// }),
 		
-		new SkinData
-		({
-			name: 'tiky angry',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'tiky angry',
+		// 	cost: 5
+		// }),
 
-		new SkinData
-		({
-			name: 'tiky hell',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'tiky hell',
+		// 	cost: 5
+		// }),
 
-		new SkinData
-		({
-			name: 'tiky ex',
-			cost: 5
-		}),
+		// new SkinData
+		// ({
+		// 	name: 'tiky ex',
+		// 	cost: 5
+		// }),
 
 	
-		new SkinData
-		({
-			name: 'sussy',
-			cost: 5
-		})
-	
-
-
-		
+		// new SkinData
+		// ({
+		// 	name: 'sussy',
+		// 	cost: 5
+		// })
 	];
 
 	

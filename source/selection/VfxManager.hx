@@ -33,12 +33,7 @@ class VfxManager
 			cost: 1
 		}),
 		
-		new VfxData
-		({
-			name: 'agoti',
-			cost: 2
-		}),
-
+	
 		new VfxData
 		({
 			name: 'raizen',
@@ -211,6 +206,7 @@ class VfxManager
 			name: 'void',
 			cost: 5
 		}),
+
 	];
 
 
