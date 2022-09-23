@@ -6,9 +6,9 @@ function onCreate()
         addLuaSprite('the_cool_place', false);
         setProperty('the_cool_place.visible', false);
 
-        makeLuaSprite('the_place', 'the_place', -600, -290);
+        makeLuaSprite('the_place', 'the_place', -600, -875);
 	setScrollFactor('the_place', 1.0, 1.0);
-        scaleObject('the_place', 1.0, 1.0);
+        scaleObject('the_place', 1.525, 1.525);
 	addLuaSprite('the_place', false);
         setProperty('the_cool_place.visible', false);
 	

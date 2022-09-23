@@ -2,64 +2,64 @@
 <!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
 <!-- $TexturePacker:SmartUpdate:1ad3deab62db79382b49ca968d11bde2:e57a0708bc1df7bf288ae046255626e0:58b241f4b2979a7d16fa81149c72b7e6$ -->
 <TextureAtlas imagePath="girp_cool.png" width="3968" height="4085">
-    <SubTexture name="Girp sad0000" x="3202" y="2299" rotated="true" width="765" height="888"/>
-    <SubTexture name="Girp sad0001" x="1" y="1533" width="888" height="764"/>
-    <SubTexture name="Girp sad0002" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0003" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0004" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0005" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0006" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0007" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0008" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0009" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0010" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0011" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0012" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0013" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0014" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0015" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0016" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0017" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0018" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0019" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0020" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0021" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0022" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0023" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0024" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0025" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0026" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0027" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp sad0028" x="2311" y="3069" width="886" height="768"/>
-    <SubTexture name="Girp sad0029" x="3199" y="3189" rotated="true" width="768" height="886"/>
-    <SubTexture name="Girp swangin0000" x="1795" y="1" width="895" height="762" frameX="0" frameY="-3" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0001" x="2692" y="1" width="895" height="762" frameX="0" frameY="-3" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0002" x="1" y="1" width="895" height="764" frameX="0" frameY="-2" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0003" x="1" y="767" width="894" height="764" frameX="0" frameY="-2" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0004" x="1793" y="1529" width="891" height="768" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0005" x="2686" y="1529" width="891" height="768" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0006" x="891" y="1533" width="890" height="768" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0007" x="771" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0008" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0009" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0010" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0011" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0012" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0013" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0014" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0015" x="1795" y="765" width="895" height="762" frameX="0" frameY="-3" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0016" x="2692" y="765" width="895" height="762" frameX="0" frameY="-3" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0017" x="898" y="1" width="895" height="764" frameX="0" frameY="-2" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0018" x="897" y="767" width="894" height="764" frameX="0" frameY="-2" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0019" x="1" y="2299" rotated="true" width="768" height="891" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0020" x="1" y="3192" rotated="true" width="768" height="891" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0021" x="1541" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0022" x="2311" y="2299" width="889" height="768" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0023" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0024" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0025" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0026" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0027" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0028" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
-    <SubTexture name="Girp swangin0029" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp sad0000" x="3202" y="2299" rotated="true" width="765" height="888"/>
+    <SubTexture name="girp sad0001" x="1" y="1533" width="888" height="764"/>
+    <SubTexture name="girp sad0002" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0003" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0004" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0005" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0006" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0007" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0008" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0009" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0010" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0011" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0012" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0013" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0014" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0015" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0016" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0017" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0018" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0019" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0020" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0021" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0022" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0023" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0024" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0025" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0026" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0027" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp sad0028" x="2311" y="3069" width="886" height="768"/>
+    <SubTexture name="girp sad0029" x="3199" y="3189" rotated="true" width="768" height="886"/>
+    <SubTexture name="girp swangin0000" x="1795" y="1" width="895" height="762" frameX="0" frameY="-3" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0001" x="2692" y="1" width="895" height="762" frameX="0" frameY="-3" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0002" x="1" y="1" width="895" height="764" frameX="0" frameY="-2" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0003" x="1" y="767" width="894" height="764" frameX="0" frameY="-2" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0004" x="1793" y="1529" width="891" height="768" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0005" x="2686" y="1529" width="891" height="768" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0006" x="891" y="1533" width="890" height="768" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0007" x="771" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0008" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0009" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0010" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0011" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0012" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0013" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0014" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0015" x="1795" y="765" width="895" height="762" frameX="0" frameY="-3" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0016" x="2692" y="765" width="895" height="762" frameX="0" frameY="-3" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0017" x="898" y="1" width="895" height="764" frameX="0" frameY="-2" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0018" x="897" y="767" width="894" height="764" frameX="0" frameY="-2" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0019" x="1" y="2299" rotated="true" width="768" height="891" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0020" x="1" y="3192" rotated="true" width="768" height="891" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0021" x="1541" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0022" x="2311" y="2299" width="889" height="768" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0023" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0024" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0025" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0026" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0027" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0028" x="1541" y="3195" rotated="true" width="768" height="889" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
+    <SubTexture name="girp swangin0029" x="771" y="2303" rotated="true" width="768" height="890" frameX="-2" frameY="0" frameWidth="895" frameHeight="768"/>
 </TextureAtlas>

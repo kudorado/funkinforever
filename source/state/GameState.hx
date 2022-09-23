@@ -574,11 +574,11 @@ class GameState extends MusicBeatState
 			return;
 		}
 
-		if (gfCheck && char.curCharacter.startsWith('gf'))
-		{ // IF DAD IS GIRLFRIEND, HE GOES TO HER POSITION
-			char.setPosition(GF_X, GF_Y);
-			char.scrollFactor.set(0.95, 0.95);
-		}
+		// if (gfCheck && char.curCharacter.startsWith('gf'))
+		// { // IF DAD IS GIRLFRIEND, HE GOES TO HER POSITION
+		// 	char.setPosition(GF_X, GF_Y);
+		// 	char.scrollFactor.set(0.95, 0.95);
+		// }
 
 		char.x = char.positionArray[0];
 		char.y = char.positionArray[1];
@@ -3202,7 +3202,7 @@ class GameState extends MusicBeatState
 		FlxG.sound.music.play();
 		#if debug
 		//no sync 
-		// Conductor.songPosition = FlxG.sound.music.time * FlxG.timeScale;
+		// Conductor.songPosition = FlxG.sound.music.time * caddCharacterToList;
 		#else
 		Conductor.songPosition = FlxG.sound.music.time;
 		#end

@@ -27,14 +27,14 @@ class RemorseFF extends SongPlayer
 	{
 		
         super.updateCamFollowBF();
-        gameState.defaultCamZoom = 1;
+        gameState.defaultCamZoom = 0.75;
+		gameState.targetCamFollow.y -= 150;
 	}
 
 	override function updateCamFollowDad()
 	{
         super.updateCamFollowDad();
         gameState.defaultCamZoom = 0.7;
-        gameState.targetCamFollow.y += 115;
 
 	}
 

@@ -77,8 +77,8 @@
 	"no_antialiasing": false,
 	"image": "characters/up_invert",
 	"position": [
-		0,
-		0
+		-12,
+		-50
 	],
 	"healthicon": "day-ruined",
 	"flip_x": false,

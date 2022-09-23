@@ -77,8 +77,8 @@
 	"no_antialiasing": false,
 	"image": "characters/up_normal",
 	"position": [
-		-182,
-		-40
+		36,
+		54
 	],
 	"healthicon": "day-ruined",
 	"flip_x": false,
