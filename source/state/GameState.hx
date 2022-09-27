@@ -4524,6 +4524,14 @@ class GameState extends MusicBeatState
 		healthRating.setBorderStyle(OUTLINE, 0xFF000000, 1, 1);
 		healthRating.text = rating == 0 ? "" : (rating > 0 ? "+" : "") + (rating * 50);
 
+
+		//bugggggs
+		if (healthBarShitBG == null)
+		{
+			trace('heathbar not initialize yet, return');
+			return;
+		}
+
 		healthRating.x = healthBarShitBG.x - 5;
 
 		if (FlxG.save.data.downscroll)

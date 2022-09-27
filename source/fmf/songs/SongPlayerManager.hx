@@ -766,6 +766,9 @@ class SongPlayerManager
 			case 'talentless-fox[ffmix]':
 				songPlayer = new TalentlessFoxFF();
 
+			case 'phantasm[ffmix]':
+				songPlayer = new PhantasmFF();
+
 		}
 
 		trace(songPlayer);
