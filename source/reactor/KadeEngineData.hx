@@ -19,7 +19,7 @@ class KadeEngineData
 
 		if (FlxG.save.data.scrollId == null)
 		{
-			FlxG.save.data.scrollId = 1;
+			FlxG.save.data.scrollId = 0;
 		}
 
 		if (FlxG.save.data.handsome == null)

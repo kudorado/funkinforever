@@ -13,10 +13,21 @@ import fmf.characters.*;
 
 class RemorseFF extends SongPlayer
 {
+	
 	override function getDadVersion()
 	{
 		return new CharacterPE(400, 400, "eep");
+		// return new CharacterPE(400, 400, "pu");
+
 	}
+
+	override function createStoryBF()
+	{
+		// var newPc = new CharacterPE('bofe-cool');
+		var newPc = new CharacterPE('beef');
+		changeCharacter(newPc);
+	}
+	
 
 	override function loadMap()
 	{
@@ -36,12 +47,6 @@ class RemorseFF extends SongPlayer
         super.updateCamFollowDad();
         gameState.defaultCamZoom = 0.7;
 
-	}
-
-	override function createStoryBF()
-	{
-		var newPc = new CharacterPE('beef');
-		changeCharacter(newPc);
 	}
 
 	override function createDad()

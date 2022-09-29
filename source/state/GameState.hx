@@ -4526,9 +4526,9 @@ class GameState extends MusicBeatState
 
 
 		//bugggggs
-		if (healthBarShitBG == null)
+		if (healthBarShitBG == null || healthRating == null)
 		{
-			trace('heathbar not initialize yet, return');
+			trace('error heathbar not initialize yet, return');
 			return;
 		}
 

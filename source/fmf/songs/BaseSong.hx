@@ -398,7 +398,6 @@ class BaseSong
 			return;
 		}
 
-
 		if (!PE) // if psych engine character, just ignore.
 		{
 			dad.setPosition(400, 250);

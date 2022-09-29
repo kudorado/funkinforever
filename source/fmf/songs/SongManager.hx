@@ -9,7 +9,6 @@ import state.*;
 class SongManager
 {
 
-
 	static public var songs:Array<SongData> = 
 	[
 		new SongData

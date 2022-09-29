@@ -801,6 +801,12 @@ class PcManager
 			case 'bf cr':
 				return new BFCR();
 
+			case 'bf 204ff':
+				return new BF204FF();
+
+			case 'bf crff':
+				return new BFCRFF();
+
 		}
 
 		return new Boyfriend(700, 425); 
