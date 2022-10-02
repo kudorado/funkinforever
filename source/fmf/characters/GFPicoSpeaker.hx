@@ -77,7 +77,9 @@ class GFPicoSpeaker extends Character
 		var songLowercase = songName;
 
 		#if android
-		return loadDataFileAndroid(songName, forceRestartScene);
+		return loadDataFileAndroid(songName);
+
+		// return loadDataFileAndroid(songName, forceRestartScene);
 		//holy shit android suck.	
 		#end
 

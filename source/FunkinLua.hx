@@ -1048,6 +1048,7 @@ class FunkinLua {
 		{
 			addLuaSpriteGroup(group, front);
 		});
+	
 
 
 		Lua_helper.add_callback(lua, "setGraphicSize", function(obj:String, x:Int, y:Int = 0) {
