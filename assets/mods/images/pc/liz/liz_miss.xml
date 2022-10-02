@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:f4d26ff226c4cbd00d0152556bb259f0:17a52136b3e4e2b68c3d4f287acff8bd:e27b5a9d655ed05f430de353b6852d41$ -->
-<TextureAtlas imagePath="liz_miss.png" width="764" height="890">
-    <SubTexture name="Liz down pose MISS0000" x="1" y="1" width="393" height="453"/>
-    <SubTexture name="Liz left pose MISS0000" x="396" y="1" width="367" height="454"/>
-    <SubTexture name="Liz right pose MISS0000" x="1" y="457" width="350" height="428"/>
-    <SubTexture name="Liz up pose MISS0000" x="353" y="457" width="383" height="432"/>
-</TextureAtlas>

@@ -1,2 +1,0 @@
-Vlaue 1: Sound File Name (in the sounds/ folder)
-Value 2: Volume (0 - 1)

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
-<!-- $TexturePacker:SmartUpdate:c07c2e9eebe9f4d46b4eca990c4349a2:7f3ff313af0ad894a1d68ed7429aa631:e502c93e709fc6665c5b14900491d259$ -->
-<TextureAtlas imagePath="blantad_miss.png" width="1549" height="748">
-    <SubTexture name="BF NOTE DOWN MISS0000" x="1" y="1" width="420" height="700" frameX="-1" frameY="-1" frameWidth="422" frameHeight="702"/>
-    <SubTexture name="BF NOTE LEFT MISS0000" x="423" y="1" width="405" height="738" frameX="-1" frameY="-1" frameWidth="408" frameHeight="740"/>
-    <SubTexture name="BF NOTE RIGHT MISS0000" x="830" y="1" width="369" height="745" frameX="-1" frameY="-1" frameWidth="371" frameHeight="747"/>
-    <SubTexture name="BF NOTE UP MISS0000" x="1201" y="1" width="347" height="746" frameX="-1" frameY="-1" frameWidth="350" frameHeight="748"/>
-</TextureAtlas>
