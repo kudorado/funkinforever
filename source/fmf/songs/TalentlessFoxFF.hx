@@ -107,7 +107,7 @@ class TalentlessFoxFF extends SongPlayer
 
 	override function getVersion()
 	{
-		return new BFTroll();
+		return new BFTrollFF();
 	}
 
 

@@ -67,23 +67,22 @@ class PhantasmFF extends SongPlayer
 		return new CharacterPE('sonic');
 	}
 	
-
 	override function createDad()
 	{
 		super.createDad();
-		dad.visible = false;
-		if (bf != null)
-		{
-			dad.x = bf.x;
-			dad.y = bf.y;
-		}
+		// dad.visible = false;
+		// if (bf != null)
+		// {
+		// 	dad.x = bf.x;
+		// 	dad.y = bf.y;
+		// }
 	}
 
 
 	override function createGF()
 	{
 		super.createGF();
-		gf.visible = false;
+		// gf.visible = false;
 	}
 
 	override function createBF()
