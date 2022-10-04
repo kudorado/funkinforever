@@ -75,18 +75,18 @@ class SansationalFF extends SongPlayer
 
 	override function createDadAnimationOffsets():Void
 	{
-		dad.addOffset('idleLeft', -5, 0);
+		dad.addOffset('idleLeft');
 		dad.addOffset('idleRight');
-		dad.addOffset("singUP", -6, 1);
-		dad.addOffset("singRIGHT", -7, 2);
-		dad.addOffset("singLEFT", -5, 2);
-		dad.addOffset("singDOWN", -6, 1);
-		dad.addOffset("singUP-alt", -5, 4);
-		dad.addOffset("singRIGHT-alt", -7, -1);
-		dad.addOffset("singLEFT-alt", -5, 1);
-		dad.addOffset("singDOWN-alt", -5, 0);
+		dad.addOffset("singUP", -8, 27);
+		dad.addOffset("singRIGHT", -14, 2);
+		dad.addOffset("singLEFT", 49, 2);
+		dad.addOffset("singDOWN", -4, -10);
+		dad.addOffset("singUP-alt", 41, 24);
+		dad.addOffset("singRIGHT-alt", -17, -1);
+		dad.addOffset("singLEFT-alt", 47, 2);
+		dad.addOffset("singDOWN-alt", -4, -13);
 		dad.addOffset("miss", 39, 3);
-		dad.addOffset('snap', 10, 0);
+		dad.addOffset('snap', 17, 3);
 
 		dad.dance();
 	}

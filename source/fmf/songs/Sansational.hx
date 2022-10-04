@@ -77,16 +77,16 @@ class Sansational extends SongPlayer
 	{
 		dad.addOffset('idleLeft');
 		dad.addOffset('idleRight');
-		dad.addOffset("singUP", -16, 28);
-		dad.addOffset("singRIGHT", -18, -1);
-		dad.addOffset("singLEFT", 48, 1);
-		dad.addOffset("singDOWN", -12, -15);
-		dad.addOffset("singUP-alt", 36, 28);
+		dad.addOffset("singUP", -8, 27);
+		dad.addOffset("singRIGHT", -14, 2);
+		dad.addOffset("singLEFT", 49, 2);
+		dad.addOffset("singDOWN", -4, -10);
+		dad.addOffset("singUP-alt", 41, 24);
 		dad.addOffset("singRIGHT-alt", -17, -1);
-		dad.addOffset("singLEFT-alt", 46, 1);
-		dad.addOffset("singDOWN-alt", -11, -15);
-		dad.addOffset("miss", 76, 35);
-		dad.addOffset('snap', 20, 0);
+		dad.addOffset("singLEFT-alt", 47, 2);
+		dad.addOffset("singDOWN-alt", -4, -13);
+		dad.addOffset("miss", 39, 3);
+		dad.addOffset('snap', 17, 3);
 
 		dad.dance();
 	}
