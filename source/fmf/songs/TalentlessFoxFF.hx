@@ -80,7 +80,7 @@ class TalentlessFoxFF extends SongPlayer
 
 	override function createStoryBF()
 	{
-		
+		changePc('bf trollff');
 	}
 
 

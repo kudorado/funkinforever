@@ -807,6 +807,9 @@ class PcManager
 			case 'bf crff':
 				return new BFCRFF();
 
+			case 'bf trollff':
+				return new BFTrollFF();
+
 		}
 
 		return new Boyfriend(700, 425); 
