@@ -81,6 +81,8 @@ class TalentlessFoxFF extends SongPlayer
 	override function createStoryBF()
 	{
 		changePc('bf trollff');
+		bf.x = 854;
+		bf.y = 578;
 	}
 
 
@@ -101,8 +103,6 @@ class TalentlessFoxFF extends SongPlayer
 	override function createBF()
 	{
 		super.createBF();
-		bf.x = 854;
-		bf.y = 578;
 	}
 
 	override function getVersion()

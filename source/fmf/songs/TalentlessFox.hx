@@ -81,7 +81,9 @@ class TalentlessFox extends SongPlayer
 
 	override function createStoryBF()
 	{
-		
+		changePc('bf troll');
+		bf.x = 854;
+		bf.y = 578;
 	}
 
 
