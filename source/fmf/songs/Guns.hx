@@ -220,6 +220,14 @@ class Guns extends SongPlayer
 		// 	}
 		// }
 	}
+
+	public override function getDadIcon(icon:Icon)
+	{
+		icon.loadGraphic(Paths.image('health_icon/icon-tankman', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [0, 1], 0, false, false);
+		icon.animation.play("dad");
+	}
+		
 	
 
 }

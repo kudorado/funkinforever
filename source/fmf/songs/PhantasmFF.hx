@@ -90,4 +90,12 @@ class PhantasmFF extends SongPlayer
 		super.createBF();
 	}
 
+	public override function getDadIcon(icon:Icon)
+	{
+		icon.loadGraphic(Paths.image('health_icon/sonic icons', 'mods'), true, 150, 150);
+		icon.animation.add('dad', [0, 1], 0, false, false);
+		icon.animation.play("dad");
+	}
+
+
 }
