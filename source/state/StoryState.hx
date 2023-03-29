@@ -56,14 +56,23 @@ class StoryState extends MusicBeatState
 
 	public static var weekUnlocked:Array<Bool> = 
 	[
-		true, false, false, false, false, false, false,
-		false, false, false, false, false, false, false,
-		false, false, false, false, false, false, false,
-		false, false, false, false, false, false, false,
-		false, false, false, false, false, false, false,
-		false, false, false, false, false, false, false,
-		false, false, false, false, false, false, false,
-		false, false, false, false, false, false, false
+		// true, false, false, false, false, false, false,
+		// false, false, false, false, false, false, false,
+		// false, false, false, false, false, false, false,
+		// false, false, false, false, false, false, false,
+		// false, false, false, false, false, false, false,
+		// false, false, false, false, false, false, false,
+		// false, false, false, false, false, false, false,
+		// false, false, false, false, false, false, false
+
+		true, true, true, true, true, true, true,
+		true, true, true, true, true, true, true,
+		true, true, true, true, true, true, true,
+		true, true, true, true, true, true, true,
+		true, true, true, true, true, true, true,
+		true, true, true, true, true, true, true,
+		true, true, true, true, true, true, true,
+		true, true, true, true, true, true, true,
 	];
 
 	var txtWeekTitle:FlxText;
