@@ -2112,7 +2112,7 @@ class GameState extends MusicBeatState
 		songName.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
 		songName.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 		songName.scrollFactor.set();
-		add(songName);
+		// add(songName);
 
 		scoreTxt = new FlxText(songName.x, songName.y - 26, 0, "", 20);
 		if (FlxG.save.data.downscroll)
@@ -2431,7 +2431,7 @@ class GameState extends MusicBeatState
 		// botPlayShit = true;
 		#end
 
-		if (musicListeningShit)
+		// if (musicListeningShit)
 		{
 			effectStrums.visible = false;
 			strumLineNotes.visible = false;
@@ -3123,7 +3123,7 @@ class GameState extends MusicBeatState
 		else
 			songPosBG.y -= 40;
 
-		add(songPosBG);
+		// add(songPosBG);
 
 		songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4, BOTTOM_TO_TOP, Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
 			'songPositionBar', 0, Math.max(songLength - 1000, 30));
@@ -3132,7 +3132,7 @@ class GameState extends MusicBeatState
 		songPosBar.scrollFactor.set(1, 1);
 
 		songPosBar.createFilledBar(FlxColor.TRANSPARENT, FlxColor.WHITE);
-		add(songPosBar);
+		// add(songPosBar);
 
 		songPosBG.cameras = [camHUD];
 		songPosBar.cameras = [camHUD];
@@ -3167,14 +3167,14 @@ class GameState extends MusicBeatState
 			healthBarShitBG.y -= 40;
 
 		healthBarShitBG.scrollFactor.set();
-		add(healthBarShitBG);
+		// add(healthBarShitBG);
 
 		healthBarShitBG.cameras = [camHUD];
 		healthBarShit = new FlxBar(healthBarShitBG.x + 4, healthBarShitBG.y + 4, BOTTOM_TO_TOP, Std.int(healthBarShitBG.width - 8),
 			Std.int(healthBarShitBG.height - 8), this, 'health', 0, 2);
 		healthBarShit.scrollFactor.set();
 		healthBarShit.createFilledBar(FlxColor.TRANSPARENT, FlxColor.RED);
-		add(healthBarShit);
+		// add(healthBarShit);
 		healthBarShit.cameras = [camHUD];
 
 		healthBarShitBG.setGraphicSize(Std.int(healthBarShitBG.width * 0.5), Std.int(healthBarShitBG.height * 0.2));
